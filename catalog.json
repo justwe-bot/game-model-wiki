@@ -1,0 +1,3801 @@
+[
+  {
+    "slug": "beetle",
+    "name": "甲壳虫",
+    "nameEn": "Beetle",
+    "tier": "普通",
+    "summary": "近距离扑击型敌人，以头槌和跳斩快速贴近目标。",
+    "models": {
+      "original": "models/beetle-original.glb",
+      "low": "models/beetle-low.glb"
+    },
+    "textures": {
+      "original": "textures/beetle-original.png",
+      "low": "textures/beetle-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texBeetleDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlBeetle.fbx",
+    "sourceTriangles": 4560,
+    "lowTriangles": 2566,
+    "sourceSizeKB": 862,
+    "lowSizeKB": 434,
+    "animations": [
+      {
+        "name": "IdleLoop",
+        "clip": "BeetleArmature|IdleLoop",
+        "kind": "idle"
+      },
+      {
+        "name": "WalkForwardRM",
+        "clip": "BeetleArmature|WalkForwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "BeetleArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "BeetleArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Spawn1",
+        "clip": "BeetleArmature|Spawn1",
+        "kind": "spawn"
+      },
+      {
+        "name": "IdleSearch",
+        "clip": "BeetleArmature|IdleSearch",
+        "kind": "idle"
+      },
+      {
+        "name": "RunLeftRM",
+        "clip": "BeetleArmature|RunLeftRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "BeetleArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "SlashJumpRM",
+        "clip": "BeetleArmature|SlashJumpRM",
+        "kind": "attack"
+      },
+      {
+        "name": "aimVertical",
+        "clip": "BeetleArmature|aimVertical",
+        "kind": "other"
+      },
+      {
+        "name": "Death",
+        "clip": "BeetleArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "airLoopDown",
+        "clip": "BeetleArmature|airLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "aimHorizontal",
+        "clip": "BeetleArmature|aimHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "RunRightRM",
+        "clip": "BeetleArmature|RunRightRM",
+        "kind": "movement"
+      },
+      {
+        "name": "RunForwardRM",
+        "clip": "BeetleArmature|RunForwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Hurt2",
+        "clip": "BeetleArmature|Hurt2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Headbutt",
+        "clip": "BeetleArmature|Headbutt",
+        "kind": "attack"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "BeetleArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "BeetleArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "T-Pose",
+        "clip": "BeetleArmature|T-Pose",
+        "kind": "idle"
+      },
+      {
+        "name": "Surprise",
+        "clip": "BeetleArmature|Surprise",
+        "kind": "other"
+      },
+      {
+        "name": "airLoopUp",
+        "clip": "BeetleArmature|airLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Sleep",
+        "clip": "BeetleArmature|Sleep",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "BeetleArmature|Flinch1",
+        "kind": "hurt"
+      }
+    ],
+    "defaultClip": "BeetleArmature|IdleLoop",
+    "skills": [
+      {
+        "name": "头槌",
+        "clip": "BeetleArmature|Headbutt",
+        "attackType": "近战",
+        "range": "贴身",
+        "description": "向前猛撞，以头部和甲壳打出短距离冲击。"
+      },
+      {
+        "name": "跳斩",
+        "clip": "BeetleArmature|SlashJumpRM",
+        "attackType": "跃击",
+        "range": "中近距",
+        "description": "跃向目标并在落点完成爪击，兼具追击与位移。"
+      }
+    ]
+  },
+  {
+    "slug": "lemurian",
+    "name": "利莫里亚",
+    "nameEn": "Lemurian",
+    "tier": "普通",
+    "summary": "兼具近战撕咬与中距离火球的基础爬行类敌人。",
+    "models": {
+      "original": "models/lemurian-original.glb",
+      "low": "models/lemurian-low.glb"
+    },
+    "textures": {
+      "original": "textures/lemurian-original.png",
+      "low": "textures/lemurian-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texLemurianDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlLemurian.fbx",
+    "sourceTriangles": 3586,
+    "lowTriangles": 2836,
+    "sourceSizeKB": 923,
+    "lowSizeKB": 560,
+    "animations": [
+      {
+        "name": "Hit1",
+        "clip": "LemurianArm|Hit1",
+        "kind": "other"
+      },
+      {
+        "name": "bite",
+        "clip": "LemurianArm|bite",
+        "kind": "attack"
+      },
+      {
+        "name": "RunToIdle",
+        "clip": "LemurianBruiserArmature|RunToIdle",
+        "kind": "movement"
+      },
+      {
+        "name": "leapAttack",
+        "clip": "LemurianArm|leapAttack",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, Additive Lopo",
+        "clip": "LemurianBruiserArmature|Idle, Additive Lopo",
+        "kind": "idle"
+      },
+      {
+        "name": "ExitFlamebreath, Override",
+        "clip": "LemurianBruiserArmature|ExitFlamebreath, Override",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "LemurianArm|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "LemurianBruiserArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "LemurianBruiserArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flamebreath, Override",
+        "clip": "LemurianBruiserArmature|Flamebreath, Override",
+        "kind": "other"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "LemurianBruiserArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "RunRightRM",
+        "clip": "LemurianArm|RunRightRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Surprise",
+        "clip": "LemurianArm|Surprise",
+        "kind": "other"
+      },
+      {
+        "name": "aimPitch",
+        "clip": "LemurianBruiserArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "LemurianArm|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "RunBackwardRM",
+        "clip": "LemurianArm|RunBackwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "ChargeFireball",
+        "clip": "LemurianArm|ChargeFireball",
+        "kind": "attack"
+      },
+      {
+        "name": "RunInPlace",
+        "clip": "LemurianBruiserArmature|RunInPlace",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "LemurianBruiserArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "DuckLeft",
+        "clip": "LemurianArm|DuckLeft",
+        "kind": "other"
+      },
+      {
+        "name": "FireMegaFireball, Additive",
+        "clip": "LemurianBruiserArmature|FireMegaFireball, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Jump",
+        "clip": "LemurianBruiserArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "LemurianBruiserArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunLeft",
+        "clip": "LemurianBruiserArmature|RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "aimVertical",
+        "clip": "LemurianArm|aimVertical",
+        "kind": "other"
+      },
+      {
+        "name": "RunBackward",
+        "clip": "LemurianBruiserArmature|RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "RunForward",
+        "clip": "LemurianBruiserArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "LemurianBruiserArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Turn-40",
+        "clip": "LemurianBruiserArmature|Turn-40",
+        "kind": "movement"
+      },
+      {
+        "name": "Spawn",
+        "clip": "LemurianBruiserArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "LemurianArm|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireFireball",
+        "clip": "LemurianArm|FireFireball",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "LemurianArm|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunLeftRM",
+        "clip": "LemurianArm|RunLeftRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Spawn",
+        "clip": "LemurianArm|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "RunRight",
+        "clip": "LemurianBruiserArmature|RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "aimHorizontal",
+        "clip": "LemurianArm|aimHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "Tpose",
+        "clip": "LemurianArm|Tpose",
+        "kind": "idle"
+      },
+      {
+        "name": "airLoopDown",
+        "clip": "LemurianBruiserArmature|airLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Additive Loop",
+        "clip": "LemurianArm|Idle, Additive Loop",
+        "kind": "idle"
+      },
+      {
+        "name": "airLoopUp",
+        "clip": "LemurianBruiserArmature|airLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "LemurianArm|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunToWalk",
+        "clip": "LemurianArm|RunToWalk",
+        "kind": "movement"
+      },
+      {
+        "name": "ChargeMegaFireball, Additive",
+        "clip": "LemurianBruiserArmature|ChargeMegaFireball, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "LemurianBruiserArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Jump",
+        "clip": "LemurianArm|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "Turn40",
+        "clip": "LemurianBruiserArmature|Turn40",
+        "kind": "movement"
+      },
+      {
+        "name": "DuckRight",
+        "clip": "LemurianArm|DuckRight",
+        "kind": "other"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "LemurianArm|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "LemurianArm|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "TurnInPlace",
+        "clip": "LemurianBruiserArmature|TurnInPlace",
+        "kind": "movement"
+      },
+      {
+        "name": "RunForwardRM",
+        "clip": "LemurianArm|RunForwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "LemurianBruiserArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "PrepFlamebreath, Override",
+        "clip": "LemurianBruiserArmature|PrepFlamebreath, Override",
+        "kind": "other"
+      },
+      {
+        "name": "RunBackwardsTurned",
+        "clip": "LemurianBruiserArmature|RunBackwardsTurned",
+        "kind": "movement"
+      },
+      {
+        "name": "Death2",
+        "clip": "LemurianArm|Death2",
+        "kind": "death"
+      },
+      {
+        "name": "Ping",
+        "clip": "LemurianArm|Ping",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "LemurianBruiserArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "TPose",
+        "clip": "LemurianBruiserArmature|TPose",
+        "kind": "idle"
+      }
+    ],
+    "defaultClip": "LemurianArm|Idle, Single",
+    "skills": [
+      {
+        "name": "撕咬",
+        "clip": "LemurianArm|bite",
+        "attackType": "近战",
+        "range": "贴身",
+        "description": "快速咬击面前目标，是最常见的近距离攻击。"
+      },
+      {
+        "name": "火球",
+        "clip": "LemurianArm|FireFireball",
+        "attackType": "弹体",
+        "range": "中距离",
+        "description": "短暂抬头蓄力后发射直线火球。"
+      },
+      {
+        "name": "跃击",
+        "clip": "LemurianArm|leapAttack",
+        "attackType": "跃击",
+        "range": "中近距",
+        "description": "跳向目标并用身体与利爪压迫落点。"
+      }
+    ]
+  },
+  {
+    "slug": "golem",
+    "name": "石傀儡",
+    "nameEn": "Stone Golem",
+    "tier": "精英体型",
+    "summary": "动作缓慢但冲击力强，能够挥击并发射高伤害激光。",
+    "emissiveColor": "#ff9f9f",
+    "emissiveIntensity": 1.2,
+    "models": {
+      "original": "models/golem-original.glb",
+      "low": "models/golem-low.glb"
+    },
+    "textures": {
+      "original": "textures/golem-original.png",
+      "low": "textures/golem-low.png"
+    },
+    "emissiveTextures": {
+      "original": "textures/golem-emissive-original.png",
+      "low": "textures/golem-emissive-low.png"
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texGolemDiffuse.png",
+    "emissiveTextureSource": "texGolemEmission.png",
+    "normalTextureSource": null,
+    "modelSource": "mdlGolem.fbx",
+    "sourceTriangles": 4048,
+    "lowTriangles": 2674,
+    "sourceSizeKB": 890,
+    "lowSizeKB": 461,
+    "animations": [
+      {
+        "name": "lightImpact",
+        "clip": "GolemArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "GolemArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Spawn",
+        "clip": "GolemArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Smack",
+        "clip": "GolemArmature|Smack",
+        "kind": "other"
+      },
+      {
+        "name": "Death",
+        "clip": "GolemArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Idle, Additive",
+        "clip": "GolemArmature|Idle, Additive",
+        "kind": "idle"
+      },
+      {
+        "name": "lookVertical",
+        "clip": "GolemArmature|lookVertical",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "GolemArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "GolemArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "RunBackwardRM",
+        "clip": "GolemArmature|RunBackwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Jump",
+        "clip": "GolemArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "RunToIdleLeft",
+        "clip": "GolemArmature|RunToIdleLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "RunLeftRM",
+        "clip": "GolemArmature|RunLeftRM",
+        "kind": "movement"
+      },
+      {
+        "name": "RunForwardRM",
+        "clip": "GolemArmature|RunForwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkRM",
+        "clip": "GolemArmature|WalkRM",
+        "kind": "movement"
+      },
+      {
+        "name": "RunToIdleRight",
+        "clip": "GolemArmature|RunToIdleRight",
+        "kind": "movement"
+      },
+      {
+        "name": "lookHorizontal",
+        "clip": "GolemArmature|lookHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "FireLaser",
+        "clip": "GolemArmature|FireLaser",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "GolemArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "GolemArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "tpose",
+        "clip": "GolemArmature|tpose",
+        "kind": "idle"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "GolemArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunRightRM",
+        "clip": "GolemArmature|RunRightRM",
+        "kind": "movement"
+      }
+    ],
+    "defaultClip": "GolemArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "巨力挥击",
+        "clip": "GolemArmature|Smack",
+        "attackType": "近战",
+        "range": "贴身",
+        "description": "挥动石臂横扫前方，动作明显但冲击力很高。"
+      },
+      {
+        "name": "石眼激光",
+        "clip": "GolemArmature|FireLaser",
+        "attackType": "光束",
+        "range": "远距离",
+        "description": "锁定后从头部发射直线高伤害激光。"
+      }
+    ]
+  },
+  {
+    "slug": "imp",
+    "name": "小恶魔",
+    "nameEn": "Imp",
+    "tier": "普通",
+    "summary": "高速近战单位，可瞬移贴近目标并用利爪连续攻击。",
+    "models": {
+      "original": "models/imp-original.glb",
+      "low": "models/imp-low.glb"
+    },
+    "textures": {
+      "original": "textures/imp-original.png",
+      "low": "textures/imp-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texImpDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlImp.fbx",
+    "sourceTriangles": 2436,
+    "lowTriangles": 1362,
+    "sourceSizeKB": 682,
+    "lowSizeKB": 422,
+    "animations": [
+      {
+        "name": "Idle, Additive",
+        "clip": "ImpArmature|Idle, Additive",
+        "kind": "idle"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "ImpArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunForward",
+        "clip": "ImpBossArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "FireVoidspikesR, Override + Curves",
+        "clip": "ImpBossArmature|FireVoidspikesR, Override + Curves",
+        "kind": "attack"
+      },
+      {
+        "name": "RunBackwards",
+        "clip": "ImpBossArmature|RunBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "RunLeft",
+        "clip": "ImpBossArmature|RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "ImpBossArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Blink, Override",
+        "clip": "ImpArmature|Blink, Override",
+        "kind": "other"
+      },
+      {
+        "name": "FireVoidspikesL, Additive",
+        "clip": "ImpBossArmature|FireVoidspikesL, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "ImpArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "ImpBossArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "BlinkEye3",
+        "clip": "ImpBossArmature|BlinkEye3",
+        "kind": "other"
+      },
+      {
+        "name": "RunRight",
+        "clip": "ImpArmature|RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "ImpBossArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "ImpBossArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireVoidspikesL, Override + Curves",
+        "clip": "ImpBossArmature|FireVoidspikesL, Override + Curves",
+        "kind": "attack"
+      },
+      {
+        "name": "RunForward",
+        "clip": "ImpArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "ImpArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "ImpBossArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Jump",
+        "clip": "ImpArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "ImpArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "RunLeft",
+        "clip": "ImpArmature|RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "GroundPound, Override",
+        "clip": "ImpBossArmature|GroundPound, Override",
+        "kind": "attack"
+      },
+      {
+        "name": "Spawn",
+        "clip": "ImpArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "BlinkEye2",
+        "clip": "ImpBossArmature|BlinkEye2",
+        "kind": "other"
+      },
+      {
+        "name": "ExitBlink",
+        "clip": "ImpBossArmature|ExitBlink",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "ImpBossArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "DoubleSlash, Override",
+        "clip": "ImpArmature|DoubleSlash, Override",
+        "kind": "attack"
+      },
+      {
+        "name": "Pain",
+        "clip": "ImpArmature|Pain",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "ImpArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "ImpArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "DoubleSlash, Additive and Curve",
+        "clip": "ImpArmature|DoubleSlash, Additive and Curve",
+        "kind": "attack"
+      },
+      {
+        "name": "turn",
+        "clip": "ImpArmature|turn",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "ImpArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireVoidspikesR, Additive",
+        "clip": "ImpBossArmature|FireVoidspikesR, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "ImpBossArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "RunRight",
+        "clip": "ImpBossArmature|RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "ImpArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "ImpArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "BlinkEye5",
+        "clip": "ImpBossArmature|BlinkEye5",
+        "kind": "other"
+      },
+      {
+        "name": "BlinkEye4",
+        "clip": "ImpBossArmature|BlinkEye4",
+        "kind": "other"
+      },
+      {
+        "name": "BlinkBegin, Additive",
+        "clip": "ImpArmature|BlinkBegin, Additive",
+        "kind": "other"
+      },
+      {
+        "name": "RunBackward",
+        "clip": "ImpArmature|RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "ImpArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "BlinkEnd, Additive",
+        "clip": "ImpArmature|BlinkEnd, Additive",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, AdditiveLoop",
+        "clip": "ImpBossArmature|Idle, AdditiveLoop",
+        "kind": "idle"
+      }
+    ],
+    "defaultClip": "ImpArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "双重爪击",
+        "clip": "ImpArmature|DoubleSlash, Override",
+        "attackType": "近战连击",
+        "range": "贴身",
+        "description": "左右利爪连续横扫，快速完成两段伤害。"
+      },
+      {
+        "name": "瞬移",
+        "clip": "ImpArmature|Blink, Override",
+        "attackType": "位移",
+        "range": "机动",
+        "description": "短暂消失并重新出现，用于接近或绕到目标侧后方。"
+      }
+    ]
+  },
+  {
+    "slug": "bison",
+    "name": "巨角野牛",
+    "nameEn": "Bighorn Bison",
+    "tier": "大型",
+    "summary": "依靠高速冲锋和身体撞击打断目标站位。",
+    "models": {
+      "original": "models/bison-original.glb",
+      "low": "models/bison-low.glb"
+    },
+    "textures": {
+      "original": "textures/bison-original.png",
+      "low": "textures/bison-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texBisonDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlBison.fbx",
+    "sourceTriangles": 6864,
+    "lowTriangles": 5358,
+    "sourceSizeKB": 917,
+    "lowSizeKB": 569,
+    "animations": [
+      {
+        "name": "DeathCharge",
+        "clip": "BisonArmature|DeathCharge",
+        "kind": "attack"
+      },
+      {
+        "name": "WalkLeft",
+        "clip": "BisonArmature|WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Additive Loop",
+        "clip": "BisonArmature|Idle, Additive Loop",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "BisonArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "WalkRight",
+        "clip": "BisonArmature|WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "BisonArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "airLoopDown",
+        "clip": "BisonArmature|airLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "BisonArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Turn-45",
+        "clip": "BisonArmature|Turn-45",
+        "kind": "movement"
+      },
+      {
+        "name": "PrepCharge",
+        "clip": "BisonArmature|PrepCharge",
+        "kind": "attack"
+      },
+      {
+        "name": "aimPitch",
+        "clip": "BisonArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "BisonArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "BisonArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "Turn45",
+        "clip": "BisonArmature|Turn45",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkBackward",
+        "clip": "BisonArmature|WalkBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "Turn0",
+        "clip": "BisonArmature|Turn0",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "BisonArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "SprintForward",
+        "clip": "BisonArmature|SprintForward",
+        "kind": "other"
+      },
+      {
+        "name": "Spawn",
+        "clip": "BisonArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "BisonArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "Headbutt",
+        "clip": "BisonArmature|Headbutt",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "BisonArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "airLoopUp",
+        "clip": "BisonArmature|airLoopUp",
+        "kind": "movement"
+      }
+    ],
+    "defaultClip": "BisonArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "蓄力冲锋",
+        "clip": "BisonArmature|PrepCharge",
+        "attackType": "冲锋",
+        "range": "直线中距",
+        "description": "压低身体锁定方向，随后高速冲向目标。"
+      },
+      {
+        "name": "巨角顶撞",
+        "clip": "BisonArmature|Headbutt",
+        "attackType": "近战",
+        "range": "贴身",
+        "description": "用头部和巨角向前顶撞，适合打断站位。"
+      }
+    ]
+  },
+  {
+    "slug": "greaterwisp",
+    "name": "巨型幽魂",
+    "nameEn": "Greater Wisp",
+    "tier": "大型飞行",
+    "summary": "大型空中火力单位，蓄力后发射范围爆炸火球。",
+    "framingScale": 0.6,
+    "cameraTargetY": 1.75,
+    "models": {
+      "original": "models/greaterwisp-original.glb",
+      "low": "models/greaterwisp-low.glb"
+    },
+    "textures": {
+      "original": "textures/greaterwisp-original.png",
+      "low": "textures/greaterwisp-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texGreaterWispDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlGreaterWisp.fbx",
+    "sourceTriangles": 2508,
+    "lowTriangles": 1930,
+    "sourceSizeKB": 356,
+    "lowSizeKB": 237,
+    "animations": [
+      {
+        "name": "Flinch1",
+        "clip": "GreaterWispArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "ChargeAttack",
+        "clip": "GreaterWispArmature|ChargeAttack",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "GreaterWispArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Death",
+        "clip": "GreaterWispArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "FireAttack",
+        "clip": "GreaterWispArmature|FireAttack",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "GreaterWispArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Stunned",
+        "clip": "GreaterWisp|Stunned",
+        "kind": "other"
+      },
+      {
+        "name": "aimHorizontal",
+        "clip": "GreaterWispArmature|aimHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "Spawn2",
+        "clip": "GreaterWispArmature|Spawn2",
+        "kind": "spawn"
+      },
+      {
+        "name": "Death2",
+        "clip": "GreaterWispArmature|Death2",
+        "kind": "death"
+      },
+      {
+        "name": "Idle",
+        "clip": "GreaterWispArmature|Idle",
+        "kind": "idle"
+      },
+      {
+        "name": "FireAttackRight",
+        "clip": "GreaterWispArmature|FireAttackRight",
+        "kind": "attack"
+      },
+      {
+        "name": "aimVertical",
+        "clip": "GreaterWispArmature|aimVertical",
+        "kind": "other"
+      }
+    ],
+    "defaultClip": "GreaterWispArmature|Idle",
+    "skills": [
+      {
+        "name": "火球蓄力",
+        "clip": "GreaterWispArmature|ChargeAttack",
+        "attackType": "蓄力",
+        "range": "远距离",
+        "description": "双臂聚集火焰能量，攻击前摇清晰。"
+      },
+      {
+        "name": "爆裂火球",
+        "clip": "GreaterWispArmature|FireAttack",
+        "attackType": "爆炸弹体",
+        "range": "远距离",
+        "description": "释放大范围火焰弹，在命中位置造成爆炸。"
+      },
+      {
+        "name": "侧向射击",
+        "clip": "GreaterWispArmature|FireAttackRight",
+        "attackType": "弹体",
+        "range": "中远距",
+        "description": "从侧手快速发射火球，动作时间更短。"
+      }
+    ]
+  },
+  {
+    "slug": "beetlequeen",
+    "name": "甲壳虫女王",
+    "nameEn": "Beetle Queen",
+    "tier": "Boss",
+    "summary": "能够吐出腐蚀性弹体、召唤甲壳虫并用巨体进行近战压制。",
+    "models": {
+      "original": "models/beetlequeen-original.glb",
+      "low": "models/beetlequeen-low.glb"
+    },
+    "textures": {
+      "original": "textures/beetlequeen-original.png",
+      "low": "textures/beetlequeen-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texBeetleQueenDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlBeetleQueen.fbx",
+    "sourceTriangles": 17944,
+    "lowTriangles": 5317,
+    "sourceSizeKB": 2379,
+    "lowSizeKB": 1032,
+    "animations": [
+      {
+        "name": "TurnLeft135",
+        "clip": "BeetleQueenArmature|TurnLeft135",
+        "kind": "movement"
+      },
+      {
+        "name": "WeakStateBreathe",
+        "clip": "BeetleQueenArmature|WeakStateBreathe",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "BeetleQueenArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "walkForward",
+        "clip": "BeetleQueenArmature|walkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "SpawnWards",
+        "clip": "BeetleQueenArmature|SpawnWards",
+        "kind": "spawn"
+      },
+      {
+        "name": "warcry",
+        "clip": "BeetleQueenArmature|warcry",
+        "kind": "other"
+      },
+      {
+        "name": "IdleToWalk",
+        "clip": "BeetleQueenArmature|IdleToWalk",
+        "kind": "movement"
+      },
+      {
+        "name": "TurnRight135",
+        "clip": "BeetleQueenArmature|TurnRight135",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "BeetleQueenArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "BeetleQueenArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "aimVertical",
+        "clip": "BeetleQueenArmature|aimVertical",
+        "kind": "other"
+      },
+      {
+        "name": "WeakStateEnter",
+        "clip": "BeetleQueenArmature|WeakStateEnter",
+        "kind": "other"
+      },
+      {
+        "name": "TurnRight45",
+        "clip": "BeetleQueenArmature|TurnRight45",
+        "kind": "movement"
+      },
+      {
+        "name": "TurnRight90",
+        "clip": "BeetleQueenArmature|TurnRight90",
+        "kind": "movement"
+      },
+      {
+        "name": "spawn",
+        "clip": "BeetleQueenArmature|spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "fireSpit",
+        "clip": "BeetleQueenArmature|fireSpit",
+        "kind": "attack"
+      },
+      {
+        "name": "aimHorizontal",
+        "clip": "BeetleQueenArmature|aimHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "Death",
+        "clip": "BeetleQueenArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "BeetleQueenArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "BeetleQueenArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "WeakStateLeave",
+        "clip": "BeetleQueenArmature|WeakStateLeave",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "BeetleQueenArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "TurnLeft90",
+        "clip": "BeetleQueenArmature|TurnLeft90",
+        "kind": "movement"
+      },
+      {
+        "name": "chargeSpit",
+        "clip": "BeetleQueenArmature|chargeSpit",
+        "kind": "attack"
+      },
+      {
+        "name": "TurnLeft45",
+        "clip": "BeetleQueenArmature|TurnLeft45",
+        "kind": "movement"
+      }
+    ],
+    "defaultClip": "BeetleQueenArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "腐蚀吐息",
+        "clip": "BeetleQueenArmature|fireSpit",
+        "attackType": "范围弹体",
+        "range": "中距离",
+        "description": "向目标方向吐出腐蚀性物质，覆盖落点周围区域。"
+      },
+      {
+        "name": "召唤甲壳虫",
+        "clip": "BeetleQueenArmature|SpawnWards",
+        "attackType": "召唤",
+        "range": "战场控制",
+        "description": "呼唤甲壳虫加入战斗，迫使玩家分散火力。"
+      },
+      {
+        "name": "战吼",
+        "clip": "BeetleQueenArmature|warcry",
+        "attackType": "强化动作",
+        "range": "自身周围",
+        "description": "抬起身体发出战吼，作为攻击阶段和状态变化的明显提示。"
+      }
+    ]
+  },
+  {
+    "slug": "clayboss",
+    "name": "黏土沙丘行者",
+    "nameEn": "Clay Dunestrider",
+    "tier": "Boss",
+    "summary": "利用黏土弹幕、吸取生命和大范围砸击控制战场。",
+    "framingScale": 0.68,
+    "cameraTargetY": 1.7,
+    "models": {
+      "original": "models/clayboss-original.glb",
+      "low": "models/clayboss-low.glb"
+    },
+    "textures": {
+      "original": "textures/clayboss-original.png",
+      "low": "textures/clayboss-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texClayBossDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlClayBoss.fbx",
+    "sourceTriangles": 12104,
+    "lowTriangles": 9492,
+    "sourceSizeKB": 985,
+    "lowSizeKB": 603,
+    "animations": [
+      {
+        "name": "ChannelSiphon",
+        "clip": "ClayBossArmature|ChannelSiphon",
+        "kind": "other"
+      },
+      {
+        "name": "FireTarBall",
+        "clip": "ClayBossArmature|FireTarBall",
+        "kind": "attack"
+      },
+      {
+        "name": "ChargeBombardment",
+        "clip": "ClayBossArmature|ChargeBombardment",
+        "kind": "attack"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "ClayBossArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, Additive Loop",
+        "clip": "ClayBossArmature|Idle, Additive Loop",
+        "kind": "idle"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "ClayBossArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "ClayBossArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "WalkBackward",
+        "clip": "ClayBossArmature|WalkBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkLeft",
+        "clip": "ClayBossArmature|WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "EndBombardment",
+        "clip": "ClayBossArmature|EndBombardment",
+        "kind": "attack"
+      },
+      {
+        "name": "PrepSiphon",
+        "clip": "ClayBossArmature|PrepSiphon",
+        "kind": "other"
+      },
+      {
+        "name": "FireBombardment",
+        "clip": "ClayBossArmature|FireBombardment",
+        "kind": "attack"
+      },
+      {
+        "name": "ExitTarBall",
+        "clip": "ClayBossArmature|ExitTarBall",
+        "kind": "other"
+      },
+      {
+        "name": "Spawn",
+        "clip": "ClayBossArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "ClayBossArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "WalkRight",
+        "clip": "ClayBossArmature|WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "ClayBossArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "PrepTarBall",
+        "clip": "ClayBossArmature|PrepTarBall",
+        "kind": "other"
+      },
+      {
+        "name": "BeginBombardment",
+        "clip": "ClayBossArmature|BeginBombardment",
+        "kind": "attack"
+      },
+      {
+        "name": "ExitSiphon",
+        "clip": "ClayBossArmature|ExitSiphon",
+        "kind": "other"
+      }
+    ],
+    "defaultClip": "ClayBossArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "焦油弹",
+        "clip": "ClayBossArmature|FireTarBall",
+        "attackType": "黏土弹体",
+        "range": "中远距",
+        "description": "抛射黏土弹，在落点形成持续威胁。"
+      },
+      {
+        "name": "迫击炮击",
+        "clip": "ClayBossArmature|FireBombardment",
+        "attackType": "范围轰炸",
+        "range": "远距离",
+        "description": "连续向多个落点抛射弹体，覆盖较大区域。"
+      },
+      {
+        "name": "生命虹吸",
+        "clip": "ClayBossArmature|ChannelSiphon",
+        "attackType": "持续吸取",
+        "range": "自身周围",
+        "description": "进入持续施法状态，吸取附近单位的生命。"
+      }
+    ]
+  },
+  {
+    "slug": "beetleguard",
+    "name": "甲壳虫守卫",
+    "nameEn": "Beetle Guard",
+    "tier": "大型",
+    "summary": "装甲厚重的近战单位，能够砸击地面、释放岩刺震波并强化自身防御。",
+    "models": {
+      "original": "models/beetleguard-original.glb",
+      "low": "models/beetleguard-low.glb"
+    },
+    "textures": {
+      "original": "textures/beetleguard-original.png",
+      "low": "textures/beetleguard-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texSulfurBeetleGuardDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlBeetleGuard.fbx",
+    "sourceTriangles": 13080,
+    "lowTriangles": 4298,
+    "sourceSizeKB": 1133,
+    "lowSizeKB": 424,
+    "animations": [
+      {
+        "name": "BuffSelf",
+        "clip": "BeetleGuardArmature|BuffSelf",
+        "kind": "other"
+      },
+      {
+        "name": "RunLeftBackwards",
+        "clip": "BeetleGuardArmature|RunLeftBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "Spawn",
+        "clip": "BeetleGuardArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "BeetleGuardArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "BeetleGuardArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "BeetleGuardArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "FireSunder",
+        "clip": "BeetleGuardArmature|FireSunder",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "BeetleGuardArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "BeetleGuardArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "RunRightForward",
+        "clip": "BeetleGuardArmature|RunRightForward",
+        "kind": "movement"
+      },
+      {
+        "name": "RunLeftForward",
+        "clip": "BeetleGuardArmature|RunLeftForward",
+        "kind": "movement"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "BeetleGuardArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "BeetleGuardArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "IdleAdditive",
+        "clip": "BeetleGuardArmature|IdleAdditive",
+        "kind": "idle"
+      },
+      {
+        "name": "IdleSingle",
+        "clip": "BeetleGuardArmature|IdleSingle",
+        "kind": "idle"
+      },
+      {
+        "name": "RunBackwards",
+        "clip": "BeetleGuardArmature|RunBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "BeetleGuardArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "BeetleGuardArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "RunRightBackwards",
+        "clip": "BeetleGuardArmature|RunRightBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "GroundSmash",
+        "clip": "BeetleGuardArmature|GroundSmash",
+        "kind": "other"
+      },
+      {
+        "name": "RunForward",
+        "clip": "BeetleGuardArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Death2",
+        "clip": "BeetleGuardArmature|Death2",
+        "kind": "death"
+      },
+      {
+        "name": "Jump",
+        "clip": "BeetleGuardArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "BeetleGuardArmature|Flinch3",
+        "kind": "hurt"
+      }
+    ],
+    "defaultClip": "BeetleGuardArmature|IdleSingle",
+    "skills": [
+      {
+        "name": "地面重击",
+        "clip": "BeetleGuardArmature|GroundSmash",
+        "attackType": "范围近战",
+        "range": "自身前方",
+        "description": "抬起双臂重砸地面，对近距离目标造成强力冲击。"
+      },
+      {
+        "name": "岩刺震波",
+        "clip": "BeetleGuardArmature|FireSunder",
+        "attackType": "地面震波",
+        "range": "中距离",
+        "description": "沿地面向前释放岩石冲击，压制直线方向上的目标。"
+      },
+      {
+        "name": "防御强化",
+        "clip": "BeetleGuardArmature|BuffSelf",
+        "attackType": "防御增益",
+        "range": "自身",
+        "description": "进入防御姿态，短时间强化自身并提供明显的动作提示。"
+      }
+    ]
+  },
+  {
+    "slug": "lemurianbruiser",
+    "name": "远古利莫里亚",
+    "nameEn": "Elder Lemurian",
+    "tier": "大型",
+    "summary": "大型火焰敌人，能够持续喷吐火焰并发射高威力巨型火球。",
+    "models": {
+      "original": "models/lemurianbruiser-original.glb",
+      "low": "models/lemurianbruiser-low.glb"
+    },
+    "textures": {
+      "original": "textures/lemurianbruiser-original.png",
+      "low": "textures/lemurianbruiser-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texLemurianBruiserDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlLemurianBruiser.fbx",
+    "sourceTriangles": 8808,
+    "lowTriangles": 5147,
+    "sourceSizeKB": 1378,
+    "lowSizeKB": 770,
+    "animations": [
+      {
+        "name": "Hit1",
+        "clip": "LemurianArm|Hit1",
+        "kind": "other"
+      },
+      {
+        "name": "bite",
+        "clip": "LemurianArm|bite",
+        "kind": "attack"
+      },
+      {
+        "name": "RunToIdle",
+        "clip": "LemurianBruiserArmature|RunToIdle",
+        "kind": "movement"
+      },
+      {
+        "name": "leapAttack",
+        "clip": "LemurianArm|leapAttack",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, Additive Lopo",
+        "clip": "LemurianBruiserArmature|Idle, Additive Lopo",
+        "kind": "idle"
+      },
+      {
+        "name": "ExitFlamebreath, Override",
+        "clip": "LemurianBruiserArmature|ExitFlamebreath, Override",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "LemurianArm|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "LemurianBruiserArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "LemurianBruiserArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flamebreath, Override",
+        "clip": "LemurianBruiserArmature|Flamebreath, Override",
+        "kind": "other"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "LemurianBruiserArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "RunRightRM",
+        "clip": "LemurianArm|RunRightRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Surprise",
+        "clip": "LemurianArm|Surprise",
+        "kind": "other"
+      },
+      {
+        "name": "aimPitch",
+        "clip": "LemurianBruiserArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "LemurianArm|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "RunBackwardRM",
+        "clip": "LemurianArm|RunBackwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "ChargeFireball",
+        "clip": "LemurianArm|ChargeFireball",
+        "kind": "attack"
+      },
+      {
+        "name": "RunInPlace",
+        "clip": "LemurianBruiserArmature|RunInPlace",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "LemurianBruiserArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "DuckLeft",
+        "clip": "LemurianArm|DuckLeft",
+        "kind": "other"
+      },
+      {
+        "name": "FireMegaFireball, Additive",
+        "clip": "LemurianBruiserArmature|FireMegaFireball, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Jump",
+        "clip": "LemurianBruiserArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "LemurianBruiserArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunLeft",
+        "clip": "LemurianBruiserArmature|RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "aimVertical",
+        "clip": "LemurianArm|aimVertical",
+        "kind": "other"
+      },
+      {
+        "name": "RunBackward",
+        "clip": "LemurianBruiserArmature|RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "RunForward",
+        "clip": "LemurianBruiserArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "LemurianBruiserArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Turn-40",
+        "clip": "LemurianBruiserArmature|Turn-40",
+        "kind": "movement"
+      },
+      {
+        "name": "Spawn",
+        "clip": "LemurianBruiserArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "LemurianArm|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireFireball",
+        "clip": "LemurianArm|FireFireball",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "LemurianArm|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunLeftRM",
+        "clip": "LemurianArm|RunLeftRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Spawn",
+        "clip": "LemurianArm|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "RunRight",
+        "clip": "LemurianBruiserArmature|RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "aimHorizontal",
+        "clip": "LemurianArm|aimHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "Tpose",
+        "clip": "LemurianArm|Tpose",
+        "kind": "idle"
+      },
+      {
+        "name": "airLoopDown",
+        "clip": "LemurianBruiserArmature|airLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Additive Loop",
+        "clip": "LemurianArm|Idle, Additive Loop",
+        "kind": "idle"
+      },
+      {
+        "name": "airLoopUp",
+        "clip": "LemurianBruiserArmature|airLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "LemurianArm|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunToWalk",
+        "clip": "LemurianArm|RunToWalk",
+        "kind": "movement"
+      },
+      {
+        "name": "ChargeMegaFireball, Additive",
+        "clip": "LemurianBruiserArmature|ChargeMegaFireball, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "LemurianBruiserArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Jump",
+        "clip": "LemurianArm|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "Turn40",
+        "clip": "LemurianBruiserArmature|Turn40",
+        "kind": "movement"
+      },
+      {
+        "name": "DuckRight",
+        "clip": "LemurianArm|DuckRight",
+        "kind": "other"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "LemurianArm|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "LemurianArm|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "TurnInPlace",
+        "clip": "LemurianBruiserArmature|TurnInPlace",
+        "kind": "movement"
+      },
+      {
+        "name": "RunForwardRM",
+        "clip": "LemurianArm|RunForwardRM",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "LemurianBruiserArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "PrepFlamebreath, Override",
+        "clip": "LemurianBruiserArmature|PrepFlamebreath, Override",
+        "kind": "other"
+      },
+      {
+        "name": "RunBackwardsTurned",
+        "clip": "LemurianBruiserArmature|RunBackwardsTurned",
+        "kind": "movement"
+      },
+      {
+        "name": "Death2",
+        "clip": "LemurianArm|Death2",
+        "kind": "death"
+      },
+      {
+        "name": "Ping",
+        "clip": "LemurianArm|Ping",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "LemurianBruiserArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "TPose",
+        "clip": "LemurianBruiserArmature|TPose",
+        "kind": "idle"
+      }
+    ],
+    "defaultClip": "LemurianBruiserArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "火焰吐息",
+        "clip": "LemurianBruiserArmature|ExitFlamebreath, Override",
+        "attackType": "持续喷射",
+        "range": "近中距离",
+        "description": "朝前方持续喷出火焰，覆盖较宽的扇形区域。"
+      },
+      {
+        "name": "巨型火球",
+        "clip": "LemurianBruiserArmature|FireMegaFireball, Additive",
+        "attackType": "爆炸弹体",
+        "range": "远距离",
+        "description": "蓄力后发射大型火球，在命中位置造成高伤害爆炸。"
+      },
+      {
+        "name": "火球蓄力",
+        "clip": "LemurianBruiserArmature|ChargeMegaFireball, Additive",
+        "attackType": "蓄力",
+        "range": "远距离",
+        "description": "抬起头部聚集火焰，为巨型火球提供清晰的攻击前摇。"
+      }
+    ]
+  },
+  {
+    "slug": "claybruiser",
+    "name": "黏土圣堂武士",
+    "nameEn": "Clay Templar",
+    "tier": "大型",
+    "summary": "使用重型连射武器压制目标，并以音爆攻击打断近距离接敌。",
+    "models": {
+      "original": "models/claybruiser-original.glb",
+      "low": "models/claybruiser-low.glb"
+    },
+    "textures": {
+      "original": "textures/claybruiser-original.png",
+      "low": "textures/claybruiser-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": "textures/claybruiser-normal-original.png",
+      "low": "textures/claybruiser-normal-low.png"
+    },
+    "textureSource": "texClayBruiserDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": "texClayBruiserNormal.png",
+    "modelSource": "mdlClayBruiser.fbx",
+    "sourceTriangles": 9928,
+    "lowTriangles": 6978,
+    "sourceSizeKB": 1220,
+    "lowSizeKB": 671,
+    "animations": [
+      {
+        "name": "Flinch3",
+        "clip": "ClayBruiserArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "ClayBruiserArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "FireSonicBoom, Additive",
+        "clip": "ClayBruiserArmature|FireSonicBoom, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "ClayBruiserArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "ClayBruiserArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "ClayBruiserArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "ClayBruiserArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Spawn",
+        "clip": "ClayBruiserArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "RunToIdle",
+        "clip": "ClayBruiserArmature|RunToIdle",
+        "kind": "movement"
+      },
+      {
+        "name": "Jump",
+        "clip": "ClayBruiserArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "aimPitch",
+        "clip": "ClayBruiserArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "ClayBruiserArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkBackwards",
+        "clip": "ClayBruiserArmature|WalkBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "WeaponUnready",
+        "clip": "ClayBruiserArmature|WeaponUnready",
+        "kind": "other"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "ClayBruiserArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "WalkRight",
+        "clip": "ClayBruiserArmature|WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "ClayBruiserArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "ClayBruiserArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "WalkLeft",
+        "clip": "ClayBruiserArmature|WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "ClayBruiserArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireGatling, Additive",
+        "clip": "ClayBruiserArmature|FireGatling, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, Additive Loop",
+        "clip": "ClayBruiserArmature|Idle, Additive Loop",
+        "kind": "idle"
+      },
+      {
+        "name": "WeaponReady",
+        "clip": "ClayBruiserArmature|WeaponReady",
+        "kind": "other"
+      }
+    ],
+    "defaultClip": "ClayBruiserArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "加特林扫射",
+        "clip": "ClayBruiserArmature|FireGatling, Additive",
+        "attackType": "持续射击",
+        "range": "中远距离",
+        "description": "举起重型武器连续扫射，迫使目标持续移动。"
+      },
+      {
+        "name": "音爆冲击",
+        "clip": "ClayBruiserArmature|FireSonicBoom, Additive",
+        "attackType": "冲击波",
+        "range": "近中距离",
+        "description": "向前释放强力音爆，用于击退或打断靠近的目标。"
+      },
+      {
+        "name": "武器就绪",
+        "clip": "ClayBruiserArmature|WeaponReady",
+        "attackType": "准备动作",
+        "range": "自身",
+        "description": "抬起武器进入射击姿态，提示持续火力即将开始。"
+      }
+    ]
+  },
+  {
+    "slug": "hermitcrab",
+    "name": "寄居蟹",
+    "nameEn": "Hermit Crab",
+    "tier": "普通",
+    "summary": "会潜入地下躲避近战压力，并从远处向目标抛射迫击弹。",
+    "models": {
+      "original": "models/hermitcrab-original.glb",
+      "low": "models/hermitcrab-low.glb"
+    },
+    "textures": {
+      "original": "textures/hermitcrab-original.png",
+      "low": "textures/hermitcrab-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texHermitCrabDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlHermitCrab.fbx",
+    "sourceTriangles": 9034,
+    "lowTriangles": 5718,
+    "sourceSizeKB": 853,
+    "lowSizeKB": 434,
+    "animations": [
+      {
+        "name": "Flinch2",
+        "clip": "HermitCrabArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "HermitCrabArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Burrowed",
+        "clip": "HermitCrabArmature|Burrowed",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "HermitCrabArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Spawn",
+        "clip": "HermitCrabArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "BurrowIn",
+        "clip": "HermitCrabArmature|BurrowIn",
+        "kind": "other"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "HermitCrabArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "BurrowOut",
+        "clip": "HermitCrabArmature|BurrowOut",
+        "kind": "other"
+      },
+      {
+        "name": "Death",
+        "clip": "HermitCrabArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Idle, AdditiveLoop",
+        "clip": "HermitCrabArmature|Idle, AdditiveLoop",
+        "kind": "idle"
+      },
+      {
+        "name": "RunForward",
+        "clip": "HermitCrabArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "HermitCrabArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "HermitCrabArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "BurrowFire",
+        "clip": "HermitCrabArmature|BurrowFire",
+        "kind": "attack"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "HermitCrabArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "HermitCrabArmature|Idle, Single",
+        "kind": "idle"
+      }
+    ],
+    "defaultClip": "HermitCrabArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "迫击弹",
+        "clip": "HermitCrabArmature|BurrowFire",
+        "attackType": "抛射弹体",
+        "range": "远距离",
+        "description": "从地下姿态发射高抛弹体，攻击远处目标所在区域。"
+      },
+      {
+        "name": "潜入地下",
+        "clip": "HermitCrabArmature|BurrowIn",
+        "attackType": "位移准备",
+        "range": "自身",
+        "description": "快速钻入地下，隐藏身体并准备转移攻击位置。"
+      },
+      {
+        "name": "钻出地面",
+        "clip": "HermitCrabArmature|BurrowOut",
+        "attackType": "出现动作",
+        "range": "自身周围",
+        "description": "从新的位置钻出地面并重新进入战斗。"
+      }
+    ]
+  },
+  {
+    "slug": "jellyfish",
+    "name": "水母",
+    "nameEn": "Jellyfish",
+    "tier": "普通飞行",
+    "summary": "缓慢接近目标后释放高伤害电击爆炸，是需要优先处理的自爆型敌人。",
+    "cameraTargetY": 1.55,
+    "transparent": true,
+    "alphaTest": 0.08,
+    "doubleSided": true,
+    "tint": "#e28b9c",
+    "emissiveColor": "#4a1722",
+    "emissiveIntensity": 0.7,
+    "models": {
+      "original": "models/jellyfish-original.glb",
+      "low": "models/jellyfish-low.glb"
+    },
+    "textures": {
+      "original": "textures/jellyfish-original.png",
+      "low": "textures/jellyfish-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texJellyfishDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlJellyfish.fbx",
+    "sourceTriangles": 1518,
+    "lowTriangles": 1166,
+    "sourceSizeKB": 371,
+    "lowSizeKB": 192,
+    "animations": [
+      {
+        "name": "aimPitch",
+        "clip": "JellyfishArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "aimRoll",
+        "clip": "JellyfishArmature|aimRoll",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "JellyfishArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "JellyfishArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Twirl",
+        "clip": "JellyfishArmature|Twirl",
+        "kind": "other"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "JellyfishArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "Swim",
+        "clip": "JellyfishArmature|Swim",
+        "kind": "other"
+      },
+      {
+        "name": "Hurt1",
+        "clip": "JellyfishArmature|Hurt1",
+        "kind": "hurt"
+      },
+      {
+        "name": "SpawnTwirl",
+        "clip": "JellyfishArmature|SpawnTwirl",
+        "kind": "spawn"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "JellyfishArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "Detonate",
+        "clip": "JellyfishArmature|Detonate",
+        "kind": "other"
+      }
+    ],
+    "defaultClip": "JellyfishArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "电击自爆",
+        "clip": "JellyfishArmature|Detonate",
+        "attackType": "范围爆炸",
+        "range": "自身周围",
+        "description": "接近目标后释放电能爆炸，对周围单位造成高额伤害。"
+      },
+      {
+        "name": "旋转接近",
+        "clip": "JellyfishArmature|Twirl",
+        "attackType": "接近动作",
+        "range": "近距离",
+        "description": "旋转身体调整姿态，并继续向目标靠近。"
+      },
+      {
+        "name": "生成旋转",
+        "clip": "JellyfishArmature|SpawnTwirl",
+        "attackType": "出现动作",
+        "range": "自身",
+        "description": "进入战场时快速旋转，随后稳定悬浮。"
+      }
+    ]
+  },
+  {
+    "slug": "vagrant",
+    "name": "游荡者",
+    "nameEn": "Wandering Vagrant",
+    "tier": "Boss",
+    "summary": "大型空中首领，使用追踪弹、水母弹幕和高威力超级新星控制战场。",
+    "framingScale": 1.05,
+    "cameraTargetY": 1.65,
+    "models": {
+      "original": "models/vagrant-original.glb",
+      "low": "models/vagrant-low.glb"
+    },
+    "textures": {
+      "original": "textures/vagrant-original.png",
+      "low": "textures/vagrant-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texVagrantDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlVagrant.fbx",
+    "sourceTriangles": 7270,
+    "lowTriangles": 3620,
+    "sourceSizeKB": 816,
+    "lowSizeKB": 445,
+    "animations": [
+      {
+        "name": "PullUpFeet",
+        "clip": "VagrantArmature|PullUpFeet",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "VagrantArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "PostNova",
+        "clip": "VagrantArmature|PostNova",
+        "kind": "other"
+      },
+      {
+        "name": "Spawn",
+        "clip": "VagrantArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "VagrantArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "VagrantArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Storm",
+        "clip": "VagrantArmature|Storm",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "VagrantArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "StormEnter",
+        "clip": "VagrantArmature|StormEnter",
+        "kind": "other"
+      },
+      {
+        "name": "Idle Legs, Additive",
+        "clip": "VagrantArmature|Idle Legs, Additive",
+        "kind": "idle"
+      },
+      {
+        "name": "PreNova",
+        "clip": "VagrantArmature|PreNova",
+        "kind": "other"
+      },
+      {
+        "name": "StormExit",
+        "clip": "VagrantArmature|StormExit",
+        "kind": "other"
+      },
+      {
+        "name": "FireTrackingBomb",
+        "clip": "VagrantArmature|FireTrackingBomb",
+        "kind": "attack"
+      },
+      {
+        "name": "ChargeTrackingBomb",
+        "clip": "VagrantArmature|ChargeTrackingBomb",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle Hull, Additive",
+        "clip": "VagrantArmature|Idle Hull, Additive",
+        "kind": "idle"
+      }
+    ],
+    "defaultClip": "VagrantArmature|Idle Hull, Additive",
+    "skills": [
+      {
+        "name": "追踪弹",
+        "clip": "VagrantArmature|FireTrackingBomb",
+        "attackType": "追踪弹体",
+        "range": "远距离",
+        "description": "发射会追踪目标的能量弹，持续压迫移动路线。"
+      },
+      {
+        "name": "水母弹幕",
+        "clip": "VagrantArmature|Storm",
+        "attackType": "范围弹幕",
+        "range": "中远距离",
+        "description": "进入风暴姿态并释放多方向弹幕，覆盖较大的战斗区域。"
+      },
+      {
+        "name": "超级新星",
+        "clip": "VagrantArmature|PreNova",
+        "attackType": "范围爆发",
+        "range": "全场威胁",
+        "description": "收拢肢体并开始蓄力，随后释放极高伤害的能量爆发。"
+      }
+    ]
+  },
+  {
+    "slug": "impboss",
+    "name": "小恶魔霸主",
+    "nameEn": "Imp Overlord",
+    "tier": "Boss",
+    "summary": "大型虚空首领，使用双向尖刺、重砸和瞬移持续压迫目标。",
+    "framingScale": 0.92,
+    "models": {
+      "original": "models/impboss-original.glb",
+      "low": "models/impboss-low.glb"
+    },
+    "textures": {
+      "original": "textures/impboss-original.png",
+      "low": "textures/impboss-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texImpBossDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlImpBoss.fbx",
+    "sourceTriangles": 8904,
+    "lowTriangles": 4461,
+    "sourceSizeKB": 1966,
+    "lowSizeKB": 1214,
+    "animations": [
+      {
+        "name": "Idle, Additive",
+        "clip": "ImpArmature|Idle, Additive",
+        "kind": "idle"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "ImpArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "RunForward",
+        "clip": "ImpBossArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "FireVoidspikesR, Override + Curves",
+        "clip": "ImpBossArmature|FireVoidspikesR, Override + Curves",
+        "kind": "attack"
+      },
+      {
+        "name": "RunBackwards",
+        "clip": "ImpBossArmature|RunBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "RunLeft",
+        "clip": "ImpBossArmature|RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "ImpBossArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Blink, Override",
+        "clip": "ImpArmature|Blink, Override",
+        "kind": "other"
+      },
+      {
+        "name": "FireVoidspikesL, Additive",
+        "clip": "ImpBossArmature|FireVoidspikesL, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "ImpArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "ImpBossArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "BlinkEye3",
+        "clip": "ImpBossArmature|BlinkEye3",
+        "kind": "other"
+      },
+      {
+        "name": "RunRight",
+        "clip": "ImpArmature|RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "ImpBossArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "ImpBossArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireVoidspikesL, Override + Curves",
+        "clip": "ImpBossArmature|FireVoidspikesL, Override + Curves",
+        "kind": "attack"
+      },
+      {
+        "name": "RunForward",
+        "clip": "ImpArmature|RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "ImpArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "ImpBossArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Jump",
+        "clip": "ImpArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "Death",
+        "clip": "ImpArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "RunLeft",
+        "clip": "ImpArmature|RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "GroundPound, Override",
+        "clip": "ImpBossArmature|GroundPound, Override",
+        "kind": "attack"
+      },
+      {
+        "name": "Spawn",
+        "clip": "ImpArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "BlinkEye2",
+        "clip": "ImpBossArmature|BlinkEye2",
+        "kind": "other"
+      },
+      {
+        "name": "ExitBlink",
+        "clip": "ImpBossArmature|ExitBlink",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "ImpBossArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "DoubleSlash, Override",
+        "clip": "ImpArmature|DoubleSlash, Override",
+        "kind": "attack"
+      },
+      {
+        "name": "Pain",
+        "clip": "ImpArmature|Pain",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "ImpArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "ImpArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "DoubleSlash, Additive and Curve",
+        "clip": "ImpArmature|DoubleSlash, Additive and Curve",
+        "kind": "attack"
+      },
+      {
+        "name": "turn",
+        "clip": "ImpArmature|turn",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "ImpArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireVoidspikesR, Additive",
+        "clip": "ImpBossArmature|FireVoidspikesR, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "ImpBossArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "RunRight",
+        "clip": "ImpBossArmature|RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "ImpArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "ImpArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "BlinkEye5",
+        "clip": "ImpBossArmature|BlinkEye5",
+        "kind": "other"
+      },
+      {
+        "name": "BlinkEye4",
+        "clip": "ImpBossArmature|BlinkEye4",
+        "kind": "other"
+      },
+      {
+        "name": "BlinkBegin, Additive",
+        "clip": "ImpArmature|BlinkBegin, Additive",
+        "kind": "other"
+      },
+      {
+        "name": "RunBackward",
+        "clip": "ImpArmature|RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "ImpArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "BlinkEnd, Additive",
+        "clip": "ImpArmature|BlinkEnd, Additive",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, AdditiveLoop",
+        "clip": "ImpBossArmature|Idle, AdditiveLoop",
+        "kind": "idle"
+      }
+    ],
+    "defaultClip": "ImpBossArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "虚空尖刺",
+        "clip": "ImpBossArmature|FireVoidspikesR, Override + Curves",
+        "attackType": "扇形弹体",
+        "range": "中距离",
+        "description": "挥动手臂释放多枚虚空尖刺，覆盖目标周围区域。"
+      },
+      {
+        "name": "地面重砸",
+        "clip": "ImpBossArmature|GroundPound, Override",
+        "attackType": "范围砸击",
+        "range": "自身周围",
+        "description": "跃起后重砸地面，对近距离目标造成范围冲击。"
+      },
+      {
+        "name": "虚空瞬移",
+        "clip": "ImpBossArmature|ExitBlink",
+        "attackType": "位移",
+        "range": "战场机动",
+        "description": "短暂消失并在新的位置现身，快速改变攻击方向。"
+      }
+    ]
+  },
+  {
+    "slug": "titan",
+    "name": "石巨人",
+    "nameEn": "Stone Titan",
+    "tier": "Boss",
+    "summary": "巨型石质首领，能够发射石拳、持续激光并从地面补充岩石护甲。",
+    "framingScale": 0.78,
+    "cameraTargetY": 1.55,
+    "models": {
+      "original": "models/titan-original.glb",
+      "low": "models/titan-low.glb"
+    },
+    "textures": {
+      "original": "textures/titan-original.png",
+      "low": "textures/titan-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texTitanDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlTitan.fbx",
+    "sourceTriangles": 15526,
+    "lowTriangles": 9560,
+    "sourceSizeKB": 1792,
+    "lowSizeKB": 984,
+    "animations": [
+      {
+        "name": "FireFist",
+        "clip": "TitanArmature|FireFist",
+        "kind": "attack"
+      },
+      {
+        "name": "RetractFist",
+        "clip": "TitanArmature|RetractFist",
+        "kind": "other"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "TitanArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkBackwards",
+        "clip": "TitanArmature|WalkBackwards",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "TitanArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "TitanArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "TitanArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "AimPitch",
+        "clip": "TitanArmature|AimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "Crouch",
+        "clip": "TitanArmature|Crouch",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "TitanArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "AimYaw",
+        "clip": "TitanArmature|AimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "FireLaserLoop",
+        "clip": "TitanArmature|FireLaserLoop",
+        "kind": "attack"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "TitanArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkRight",
+        "clip": "TitanArmature|WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "Landing",
+        "clip": "TitanArmature|Landing",
+        "kind": "other"
+      },
+      {
+        "name": "RechargeRocks",
+        "clip": "TitanArmature|RechargeRocks",
+        "kind": "attack"
+      },
+      {
+        "name": "WalkLeft",
+        "clip": "TitanArmature|WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "PrepFist",
+        "clip": "TitanArmature|PrepFist",
+        "kind": "other"
+      },
+      {
+        "name": "Spawn",
+        "clip": "TitanArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "FireLaserEnd",
+        "clip": "TitanArmature|FireLaserEnd",
+        "kind": "attack"
+      },
+      {
+        "name": "Idle, AdditiveLoop",
+        "clip": "TitanArmature|Idle, AdditiveLoop",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "TitanArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Death",
+        "clip": "TitanArmature|Death",
+        "kind": "death"
+      }
+    ],
+    "defaultClip": "TitanArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "巨石飞拳",
+        "clip": "TitanArmature|FireFist",
+        "attackType": "追踪重击",
+        "range": "中远距离",
+        "description": "将石拳射向目标，命中后再收回手臂。"
+      },
+      {
+        "name": "石眼激光",
+        "clip": "TitanArmature|FireLaserLoop",
+        "attackType": "持续光束",
+        "range": "远距离",
+        "description": "从头部持续发射激光，并追踪目标移动方向。"
+      },
+      {
+        "name": "岩石补充",
+        "clip": "TitanArmature|RechargeRocks",
+        "attackType": "恢复动作",
+        "range": "自身",
+        "description": "从地面聚集岩石，恢复手臂和身体上的石质结构。"
+      }
+    ]
+  },
+  {
+    "slug": "vulture",
+    "name": "合金秃鹫",
+    "nameEn": "Alloy Vulture",
+    "tier": "普通飞行",
+    "summary": "高速飞行敌人，会在空中蓄力并释放远距离风刃。",
+    "cameraTargetY": 1.55,
+    "models": {
+      "original": "models/vulture-original.glb",
+      "low": "models/vulture-low.glb"
+    },
+    "textures": {
+      "original": "textures/vulture-original.png",
+      "low": "textures/vulture-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texVultureDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlVulture.fbx",
+    "sourceTriangles": 8146,
+    "lowTriangles": 1876,
+    "sourceSizeKB": 1804,
+    "lowSizeKB": 770,
+    "animations": [
+      {
+        "name": "Spawn2",
+        "clip": "VultureArmature|Spawn2",
+        "kind": "spawn"
+      },
+      {
+        "name": "AirDeathLoop",
+        "clip": "VultureArmature|AirDeathLoop",
+        "kind": "movement"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "VultureArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "FlyLeft",
+        "clip": "VultureArmature|FlyLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "Stunned",
+        "clip": "VultureArmature|Stunned",
+        "kind": "other"
+      },
+      {
+        "name": "Jump",
+        "clip": "VultureArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "VultureArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkBackward",
+        "clip": "VultureArmature|WalkBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Single, Ground",
+        "clip": "VultureArmature|Idle, Single, Ground",
+        "kind": "idle"
+      },
+      {
+        "name": "FlyIdle",
+        "clip": "VultureArmature|FlyIdle",
+        "kind": "movement"
+      },
+      {
+        "name": "aimPitch",
+        "clip": "VultureArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "FlyRight",
+        "clip": "VultureArmature|FlyRight",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkRight",
+        "clip": "VultureArmature|WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "VultureArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "VultureArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "AirDeathImpact",
+        "clip": "VultureArmature|AirDeathImpact",
+        "kind": "movement"
+      },
+      {
+        "name": "ChargeWindblade, Additive",
+        "clip": "VultureArmature|ChargeWindblade, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "VultureArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "VultureArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "VultureArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "VultureArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireWindblade, Additive",
+        "clip": "VultureArmature|FireWindblade, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "AirDeathBegin",
+        "clip": "VultureArmature|AirDeathBegin",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Additive Lop",
+        "clip": "VultureArmature|Idle, Additive Lop",
+        "kind": "idle"
+      },
+      {
+        "name": "WalkLeft",
+        "clip": "VultureArmature|WalkLeft",
+        "kind": "movement"
+      }
+    ],
+    "defaultClip": "VultureArmature|FlyIdle",
+    "skills": [
+      {
+        "name": "风刃蓄力",
+        "clip": "VultureArmature|ChargeWindblade, Additive",
+        "attackType": "蓄力",
+        "range": "远距离",
+        "description": "在空中收拢身体并积蓄风能，提示风刃即将释放。"
+      },
+      {
+        "name": "风刃射击",
+        "clip": "VultureArmature|FireWindblade, Additive",
+        "attackType": "直线弹体",
+        "range": "远距离",
+        "description": "向目标发射高速风刃，适合远程骚扰。"
+      },
+      {
+        "name": "空中转向",
+        "clip": "VultureArmature|FlyLeft",
+        "attackType": "飞行机动",
+        "range": "空中",
+        "description": "侧向调整飞行轨迹，避开攻击并重新寻找射击角度。"
+      }
+    ]
+  },
+  {
+    "slug": "bell",
+    "name": "黄铜装置",
+    "nameEn": "Brass Contraption",
+    "tier": "大型飞行",
+    "summary": "悬浮机械敌人，会从多个方向发射高伤害黄铜尖刺。",
+    "cameraTargetY": 1.65,
+    "models": {
+      "original": "models/bell-original.glb",
+      "low": "models/bell-low.glb"
+    },
+    "textures": {
+      "original": "textures/bell-original.png",
+      "low": "textures/bell-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texBellDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlBell.fbx",
+    "sourceTriangles": 2742,
+    "lowTriangles": 2162,
+    "sourceSizeKB": 202,
+    "lowSizeKB": 129,
+    "animations": [
+      {
+        "name": "Flinch3",
+        "clip": "BellArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "GasBackwards",
+        "clip": "BellArmature|GasBackwards",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "BellArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "GasForward",
+        "clip": "BellArmature|GasForward",
+        "kind": "other"
+      },
+      {
+        "name": "aimRoll",
+        "clip": "BellArmature|aimRoll",
+        "kind": "other"
+      },
+      {
+        "name": "Spawn",
+        "clip": "BellArmature|Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Idle, Additive",
+        "clip": "BellArmature|Idle, Additive",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "BellArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "Death",
+        "clip": "BellArmature|Death",
+        "kind": "death"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "BellArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "BellArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "GasRight",
+        "clip": "BellArmature|GasRight",
+        "kind": "other"
+      },
+      {
+        "name": "GasLeft",
+        "clip": "BellArmature|GasLeft",
+        "kind": "other"
+      }
+    ],
+    "defaultClip": "BellArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "前向尖刺",
+        "clip": "BellArmature|GasForward",
+        "attackType": "爆炸弹体",
+        "range": "中远距离",
+        "description": "从正面装置释放黄铜尖刺，命中位置会产生爆炸。"
+      },
+      {
+        "name": "侧向齐射",
+        "clip": "BellArmature|GasLeft",
+        "attackType": "侧向弹体",
+        "range": "中距离",
+        "description": "转动悬浮装置，从侧面连续发射尖刺。"
+      },
+      {
+        "name": "反向射击",
+        "clip": "BellArmature|GasBackwards",
+        "attackType": "后向弹体",
+        "range": "中距离",
+        "description": "向身后释放尖刺，应对绕到背面的目标。"
+      }
+    ]
+  },
+  {
+    "slug": "lunargolem",
+    "name": "月球傀儡",
+    "nameEn": "Lunar Golem",
+    "tier": "大型",
+    "summary": "月球阵营的重型机械守卫，使用双联能量炮和跃击压制目标。",
+    "framingScale": 0.84,
+    "cameraTargetY": 1.55,
+    "emissiveColor": "#173952",
+    "emissiveIntensity": 0.25,
+    "models": {
+      "original": "models/lunargolem-original.glb",
+      "low": "models/lunargolem-low.glb"
+    },
+    "textures": {
+      "original": "textures/lunargolem-original.png",
+      "low": "textures/lunargolem-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texLunarGolemDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlLunarGolem.fbx",
+    "sourceTriangles": 9118,
+    "lowTriangles": 5270,
+    "sourceSizeKB": 1176,
+    "lowSizeKB": 624,
+    "animations": [
+      {
+        "name": "SprintBankLeft",
+        "clip": "LunarGolemArmature|SprintBankLeft",
+        "kind": "other"
+      },
+      {
+        "name": "Stun",
+        "clip": "LunarGolemArmature|Stun",
+        "kind": "other"
+      },
+      {
+        "name": "SprintBankRight",
+        "clip": "LunarGolemArmature|SprintBankRight",
+        "kind": "other"
+      },
+      {
+        "name": "lightImpact",
+        "clip": "LunarGolemArmature|lightImpact",
+        "kind": "hurt"
+      },
+      {
+        "name": "FireLeftShot, Additive",
+        "clip": "LunarGolemArmature|FireLeftShot, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "LunarGolemArmature|Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "LunarGolemArmature|Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "AirLoopDown",
+        "clip": "LunarGolemArmature|AirLoopDown",
+        "kind": "movement"
+      },
+      {
+        "name": "Idle, Additive",
+        "clip": "LunarGolemArmature|Idle, Additive",
+        "kind": "idle"
+      },
+      {
+        "name": "aimPitch",
+        "clip": "LunarGolemArmature|aimPitch",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "LunarGolemArmature|Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "FinishLeap",
+        "clip": "LunarGolemArmature|FinishLeap",
+        "kind": "other"
+      },
+      {
+        "name": "FireTwinShot, Additive",
+        "clip": "LunarGolemArmature|FireTwinShot, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Crouch",
+        "clip": "LunarGolemArmature|Crouch",
+        "kind": "other"
+      },
+      {
+        "name": "FireRightShot, Additive",
+        "clip": "LunarGolemArmature|FireRightShot, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "BeginLeap",
+        "clip": "LunarGolemArmature|BeginLeap",
+        "kind": "other"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "LunarGolemArmature|Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "SprintForward",
+        "clip": "LunarGolemArmature|SprintForward",
+        "kind": "other"
+      },
+      {
+        "name": "Jump",
+        "clip": "LunarGolemArmature|Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "ChargeTwinShot, Additive",
+        "clip": "LunarGolemArmature|ChargeTwinShot, Additive",
+        "kind": "attack"
+      },
+      {
+        "name": "Death2",
+        "clip": "LunarGolemArmature|Death2",
+        "kind": "death"
+      },
+      {
+        "name": "WalkForward",
+        "clip": "LunarGolemArmature|WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkBackward",
+        "clip": "LunarGolemArmature|WalkBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "AirLoopUp",
+        "clip": "LunarGolemArmature|AirLoopUp",
+        "kind": "movement"
+      },
+      {
+        "name": "aimYaw",
+        "clip": "LunarGolemArmature|aimYaw",
+        "kind": "other"
+      },
+      {
+        "name": "WalkLeft",
+        "clip": "LunarGolemArmature|WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "WalkRight",
+        "clip": "LunarGolemArmature|WalkRight",
+        "kind": "movement"
+      }
+    ],
+    "defaultClip": "LunarGolemArmature|Idle, Single",
+    "skills": [
+      {
+        "name": "双联射击",
+        "clip": "LunarGolemArmature|FireTwinShot, Additive",
+        "attackType": "双炮弹体",
+        "range": "中远距离",
+        "description": "双臂炮口同时开火，向目标释放一轮高能弹体。"
+      },
+      {
+        "name": "双炮蓄力",
+        "clip": "LunarGolemArmature|ChargeTwinShot, Additive",
+        "attackType": "蓄力",
+        "range": "中远距离",
+        "description": "举起双臂锁定目标并积蓄能量，为双联射击提供清晰前摇。"
+      },
+      {
+        "name": "跃击",
+        "clip": "LunarGolemArmature|BeginLeap",
+        "attackType": "跃击",
+        "range": "中近距离",
+        "description": "启动推进结构跃向目标，并在落点造成近距离冲击。"
+      }
+    ]
+  },
+  {
+    "slug": "lunarwisp",
+    "name": "月球幽魂",
+    "nameEn": "Lunar Wisp",
+    "tier": "大型飞行",
+    "summary": "月球阵营的重型空中单位，使用持续机枪火力和追踪炸弹压制目标。",
+    "cameraTargetY": 1.65,
+    "emissiveColor": "#385c4a",
+    "emissiveIntensity": 0.75,
+    "models": {
+      "original": "models/lunarwisp-original.glb",
+      "low": "models/lunarwisp-low.glb"
+    },
+    "textures": {
+      "original": "textures/lunarwisp-original.png",
+      "low": "textures/lunarwisp-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texLunarWispDiffuse.png",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlLunarWisp.fbx",
+    "sourceTriangles": 2852,
+    "lowTriangles": 2100,
+    "sourceSizeKB": 494,
+    "lowSizeKB": 318,
+    "animations": [
+      {
+        "name": "Idle",
+        "clip": "Idle",
+        "kind": "idle"
+      },
+      {
+        "name": "Flinch3",
+        "clip": "Flinch3",
+        "kind": "hurt"
+      },
+      {
+        "name": "Bomb_Fire",
+        "clip": "Bomb_Fire",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch2",
+        "clip": "Flinch2",
+        "kind": "hurt"
+      },
+      {
+        "name": "BombStart",
+        "clip": "BombStart",
+        "kind": "attack"
+      },
+      {
+        "name": "AimHorizontal",
+        "clip": "AimHorizontal",
+        "kind": "other"
+      },
+      {
+        "name": "MASTER",
+        "clip": "MASTER",
+        "kind": "other"
+      },
+      {
+        "name": "BombStop",
+        "clip": "BombStop",
+        "kind": "attack"
+      },
+      {
+        "name": "Flinch1",
+        "clip": "Flinch1",
+        "kind": "hurt"
+      },
+      {
+        "name": "AimVertical",
+        "clip": "AimVertical",
+        "kind": "other"
+      },
+      {
+        "name": "Idle, Single",
+        "clip": "Idle, Single",
+        "kind": "idle"
+      },
+      {
+        "name": "MinigunStop",
+        "clip": "MinigunStop",
+        "kind": "attack"
+      },
+      {
+        "name": "Spawn",
+        "clip": "Spawn",
+        "kind": "spawn"
+      },
+      {
+        "name": "Death",
+        "clip": "Death",
+        "kind": "death"
+      },
+      {
+        "name": "BombLoop",
+        "clip": "BombLoop",
+        "kind": "attack"
+      },
+      {
+        "name": "MinigunStart",
+        "clip": "MinigunStart",
+        "kind": "attack"
+      },
+      {
+        "name": "MinigunLoop",
+        "clip": "MinigunLoop",
+        "kind": "attack"
+      }
+    ],
+    "defaultClip": "Idle",
+    "skills": [
+      {
+        "name": "月球机枪",
+        "clip": "MinigunLoop",
+        "attackType": "持续射击",
+        "range": "中远距离",
+        "description": "双臂持续倾泻高速弹幕，迫使目标不断改变站位。"
+      },
+      {
+        "name": "追踪炸弹",
+        "clip": "Bomb_Fire",
+        "attackType": "追踪弹体",
+        "range": "远距离",
+        "description": "释放大型月球能量弹，持续追踪目标并在命中时爆炸。"
+      },
+      {
+        "name": "炸弹蓄力",
+        "clip": "BombStart",
+        "attackType": "蓄力",
+        "range": "远距离",
+        "description": "收拢机体并积蓄能量，为追踪炸弹提供明显的攻击前摇。"
+      }
+    ]
+  }
+]

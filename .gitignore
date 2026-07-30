@@ -1,0 +1,22 @@
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+
+# Never commit extraction inputs or local build caches.
+AssetBundles/
+raw/
+work/
+*.bundle
+*.fbx
+
+# Early local experiments that are not used by the current catalog.
+models.json
+models/beetle.glb
+models/commando.glb
+models/parent-*.glb
+models/roboballboss-*.glb
+models/wisp-*.glb
+textures/parent-*.png
+textures/roboballboss-*.png
+textures/wisp-*.png
