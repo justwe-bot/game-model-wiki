@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101513">
+  <title>雨中冒险 2 · 怪物 3D 图鉴</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101513;
+      --side: #151c19;
+      --surface: #1a231f;
+      --surface-2: #202b26;
+      --line: #34413b;
+      --line-soft: #27322d;
+      --text: #f1f4ec;
+      --muted: #a7b1aa;
+      --faint: #748078;
+      --lime: #bddb6b;
+      --coral: #f08366;
+      --amber: #efbb61;
+      font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
+    body { min-height: 100vh; }
+    button, input, select { font: inherit; }
+    button { color: inherit; }
+    .app { min-height: 100vh; display: grid; grid-template-columns: 292px minmax(0, 1fr); }
+    .catalog { min-width: 0; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; }
+    .catalog-head { padding: 20px 16px 14px; border-bottom: 1px solid var(--line-soft); }
+    .brand { margin: 0; font-size: 19px; font-weight: 800; letter-spacing: 0; }
+    .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+    .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
+    .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
+    .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
+    .search input::placeholder { color: var(--faint); }
+    .tier-filters { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
+    .tier-filters::-webkit-scrollbar { display: none; }
+    .tier-filter { flex: 0 0 auto; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); padding: 6px 9px; cursor: pointer; font-size: 12px; }
+    .tier-filter.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .monster-list { padding: 10px; display: grid; align-content: start; gap: 5px; overflow-y: auto; }
+    .monster-entry { min-height: 58px; width: 100%; border: 1px solid transparent; border-radius: 6px; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; align-items: center; padding: 9px 10px; text-align: left; cursor: pointer; }
+    .monster-entry:hover { background: var(--surface); }
+    .monster-entry.active { background: var(--surface-2); border-color: var(--line); }
+    .monster-entry strong { font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .monster-entry small { grid-column: 1; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .monster-entry span { grid-column: 2; grid-row: 1 / span 2; color: var(--lime); font-size: 11px; }
+    .empty { color: var(--muted); padding: 20px 10px; font-size: 13px; }
+    .workspace { min-width: 0; display: grid; grid-template-rows: minmax(470px, 66vh) auto; }
+    .stage { min-height: 470px; position: relative; overflow: hidden; background: #0a100e; }
+    #canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+    .stage-head { position: absolute; z-index: 3; top: 18px; left: 20px; right: 20px; display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; pointer-events: none; }
+    .identity h1 { margin: 0; max-width: min(62vw, 780px); font-size: clamp(30px, 4.5vw, 56px); line-height: 1; letter-spacing: 0; overflow-wrap: anywhere; }
+    .identity p { margin: 7px 0 0; color: var(--muted); font-size: 14px; }
+    .tier-badge { padding: 7px 10px; border: 1px solid var(--line); border-radius: 5px; background: rgba(16, 21, 19, .86); color: var(--lime); backdrop-filter: blur(8px); font-size: 12px; }
+    .stage-tools { position: absolute; z-index: 4; left: 20px; right: 20px; bottom: 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .segmented, .icon-tools { padding: 4px; border: 1px solid var(--line); border-radius: 6px; background: rgba(16, 21, 19, .88); backdrop-filter: blur(10px); display: flex; gap: 3px; }
+    .mode-button { height: 34px; border: 0; border-radius: 4px; background: transparent; color: var(--muted); padding: 0 11px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+    .mode-button svg { width: 15px; height: 15px; }
+    .mode-button.active { color: #17200e; background: var(--lime); font-weight: 800; }
+    .icon-button { width: 34px; height: 34px; padding: 0; border: 0; border-radius: 4px; background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--muted); }
+    .icon-button:hover, .icon-button.active { background: var(--surface-2); color: var(--text); }
+    .icon-button svg { width: 17px; height: 17px; }
+    .compare-labels { position: absolute; z-index: 2; inset: 104px 7% auto; display: none; grid-template-columns: 1fr 1fr; text-align: center; color: var(--muted); font-size: 12px; pointer-events: none; }
+    .compare-labels.visible { display: grid; }
+    .compare-labels span { justify-self: center; padding: 5px 8px; border-radius: 4px; border: 1px solid var(--line-soft); background: rgba(10, 16, 14, .72); }
+    .loading { position: absolute; z-index: 5; inset: 0; display: grid; place-items: center; color: var(--muted); background: rgba(10, 16, 14, .72); pointer-events: none; }
+    .loading.hidden { display: none; }
+    .details { border-top: 1px solid var(--line); padding: 24px clamp(20px, 3.5vw, 48px) 38px; display: grid; grid-template-columns: minmax(270px, .8fr) minmax(420px, 1.2fr); gap: 38px 50px; }
+    .summary h2, .skills h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
+    .summary p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .stats { margin-top: 20px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); display: grid; grid-template-columns: repeat(3, 1fr); }
+    .stat { padding: 14px 10px 14px 0; min-width: 0; }
+    .stat b { display: block; font-size: 19px; color: var(--text); overflow: hidden; text-overflow: ellipsis; }
+    .stat span { display: block; margin-top: 3px; color: var(--faint); font-size: 11px; }
+    .animation-row { margin-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+    .animation-row select { min-width: 0; height: 38px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--text); padding: 0 9px; outline: 0; }
+    .animation-row .icon-button { border: 1px solid var(--line); background: var(--surface); }
+    .skill-list { display: grid; gap: 8px; }
+    .skill { width: 100%; min-height: 82px; padding: 12px 14px; border: 1px solid var(--line-soft); border-radius: 6px; background: transparent; cursor: pointer; text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 16px; }
+    .skill:hover { border-color: var(--line); background: var(--surface); }
+    .skill.active { border-color: var(--coral); background: #261f1c; }
+    .skill-name { font-size: 15px; font-weight: 800; }
+    .skill-meta { color: var(--amber); font-size: 11px; align-self: center; }
+    .skill-description { grid-column: 1 / -1; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
+    @media (max-width: 900px) {
+      .app { display: block; }
+      .catalog { border-right: 0; border-bottom: 1px solid var(--line); }
+      .catalog-head { padding: 13px 12px 10px; }
+      .edition { display: none; }
+      .brand { font-size: 17px; }
+      .search { margin-top: 10px; }
+      .monster-list { display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
+      .monster-list::-webkit-scrollbar { display: none; }
+      .monster-entry { min-width: 176px; }
+      .workspace { grid-template-rows: minmax(430px, 60vh) auto; }
+      .stage { min-height: 430px; }
+      .details { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 560px) {
+      .workspace { grid-template-rows: minmax(420px, 58vh) auto; }
+      .stage { min-height: 420px; }
+      .stage-head { top: 14px; left: 14px; right: 14px; }
+      .identity h1 { max-width: 72vw; font-size: 31px; }
+      .stage-tools { left: 10px; right: 10px; bottom: 10px; gap: 6px; }
+      .mode-button { width: 37px; padding: 0; justify-content: center; }
+      .mode-button span { display: none; }
+      .details { padding: 20px 15px 30px; }
+      .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .stat b { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="catalog">
+      <div class="catalog-head">
+        <h1 class="brand">雨中冒险 2 · 怪物图鉴</h1>
+        <p class="edition">原始模型 / 移动低模 / 攻击动作</p>
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="搜索怪物" autocomplete="off">
+        </label>
+        <div class="tier-filters" id="tierFilters">
+          <button class="tier-filter active" data-tier="全部">全部</button>
+          <button class="tier-filter" data-tier="普通">普通</button>
+          <button class="tier-filter" data-tier="大型">大型</button>
+          <button class="tier-filter" data-tier="Boss">Boss</button>
+        </div>
+      </div>
+      <div class="monster-list" id="monsterList"></div>
+    </aside>
+
+    <main class="workspace">
+      <section class="stage" id="stage">
+        <div class="stage-head">
+          <div class="identity"><h1 id="monsterName">加载中</h1><p id="monsterNameEn"></p></div>
+          <div class="tier-badge" id="tierBadge">3D</div>
+        </div>
+        <div class="compare-labels" id="compareLabels"><span>原始模型</span><span>移动低模</span></div>
+        <canvas id="canvas"></canvas>
+        <div class="loading" id="loading">正在载入模型…</div>
+        <div class="stage-tools">
+          <div class="segmented" aria-label="模型精度">
+            <button class="mode-button active" data-mode="original" title="原始模型"><i data-lucide="box"></i><span>原模</span></button>
+            <button class="mode-button" data-mode="low" title="移动低模"><i data-lucide="box-select"></i><span>低模</span></button>
+            <button class="mode-button" data-mode="compare" title="并排对比"><i data-lucide="columns-2"></i><span>对比</span></button>
+          </div>
+          <div class="icon-tools">
+            <button class="icon-button active" id="rotateButton" title="自动旋转"><i data-lucide="rotate-3d"></i></button>
+            <button class="icon-button" id="pauseButton" title="暂停动作"><i data-lucide="pause"></i></button>
+            <button class="icon-button" id="resetButton" title="重置视角"><i data-lucide="rotate-ccw"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="details">
+        <div class="summary">
+          <h2>建模信息</h2>
+          <p id="summaryText"></p>
+          <div class="stats">
+            <div class="stat"><b id="sourceTriangles">—</b><span>原模三角面</span></div>
+            <div class="stat"><b id="lowTriangles">—</b><span>低模三角面</span></div>
+            <div class="stat"><b id="reduction">—</b><span>低模保留比例</span></div>
+          </div>
+          <div class="animation-row">
+            <select id="animationSelect" aria-label="动作选择"></select>
+            <button class="icon-button" id="playSelectedButton" title="播放所选动作"><i data-lucide="play"></i></button>
+          </div>
+        </div>
+        <div class="skills">
+          <h2>技能与攻击形式</h2>
+          <div class="skill-list" id="skillList"></div>
+        </div>
+        <div class="notice">模型和贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle 或 FBX。</div>
+      </section>
+    </main>
+  </div>
+
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/","lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2 } from 'lucide';
+
+    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2 };
+    const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
+    refreshIcons();
+
+    const assetRevision = '20260728-15';
+    const catalog = await fetch(`./catalog.json?v=${assetRevision}`, { cache: 'no-store' })
+      .then(response => response.json());
+    const canvas = document.querySelector('#canvas');
+    const stage = document.querySelector('#stage');
+    const loading = document.querySelector('#loading');
+    const loader = new GLTFLoader();
+    const textureLoader = new THREE.TextureLoader();
+
+    const isCompactViewport = window.matchMedia('(max-width: 900px)').matches;
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isCompactViewport });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, isCompactViewport ? 1 : 1.5));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x0a100e, 1);
+    renderer.shadowMap.enabled = false;
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x0a100e, 8, 18);
+    const camera = new THREE.PerspectiveCamera(32, 1, 0.01, 100);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.minDistance = 3.2;
+    controls.maxDistance = 14;
+    controls.autoRotate = false;
+
+    scene.add(new THREE.HemisphereLight(0xe6f0cc, 0x23332d, 2.45));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+    const key = new THREE.DirectionalLight(0xffd5b0, 2.8);
+    key.position.set(5, 7, 5);
+    scene.add(key);
+    const fill = new THREE.DirectionalLight(0xdde8ff, 1.35);
+    fill.position.set(-5, 3, 6);
+    scene.add(fill);
+    const rim = new THREE.DirectionalLight(0x72b9aa, 2.0);
+    rim.position.set(-5, 4, -5);
+    scene.add(rim);
+    const floor = new THREE.Mesh(
+      new THREE.CircleGeometry(4.4, 64),
+      new THREE.MeshStandardMaterial({ color: 0x1c2822, roughness: 1, metalness: 0 })
+    );
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -0.02;
+    scene.add(floor);
+
+    let activeEntry = catalog[0];
+    let activeMode = isCompactViewport ? 'low' : 'original';
+    let activeTier = '全部';
+    let activeSlots = [];
+    let paused = false;
+    let rotating = true;
+    let currentSkillClip = null;
+    let stageVisible = true;
+
+    document.querySelectorAll('.mode-button').forEach(button => {
+      button.classList.toggle('active', button.dataset.mode === activeMode);
+    });
+
+    new IntersectionObserver(([entry]) => {
+      stageVisible = entry.isIntersecting;
+    }, { threshold: 0.05 }).observe(stage);
+
+    function resize() {
+      const width = stage.clientWidth;
+      const height = stage.clientHeight;
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+
+    function disposeSlot(slot) {
+      scene.remove(slot.wrapper);
+      slot.wrapper.traverse(object => {
+        if (!object.isMesh) return;
+        object.geometry?.dispose();
+        const materials = Array.isArray(object.material) ? object.material : [object.material];
+        materials.forEach(material => material?.dispose());
+      });
+      slot.texture?.dispose();
+      slot.emissiveTexture?.dispose();
+      slot.normalTexture?.dispose();
+    }
+
+    function clearModels() {
+      activeSlots.forEach(disposeSlot);
+      activeSlots = [];
+    }
+
+    function configureTexture(texture, lowQuality, colorTexture) {
+      if (!texture) return;
+      if (colorTexture) texture.colorSpace = THREE.SRGBColorSpace;
+      texture.flipY = false;
+      texture.wrapS = THREE.RepeatWrapping;
+      texture.wrapT = THREE.RepeatWrapping;
+      if (lowQuality) {
+        texture.magFilter = THREE.NearestFilter;
+        texture.minFilter = THREE.NearestFilter;
+        texture.generateMipmaps = false;
+      }
+    }
+
+    function applyTexture(root, texture, emissiveTexture, normalTexture, lowQuality) {
+      configureTexture(texture, lowQuality, true);
+      configureTexture(emissiveTexture, lowQuality, true);
+      configureTexture(normalTexture, lowQuality, false);
+      root.traverse(object => {
+        if (!object.isMesh) return;
+        const isClayCannon = activeEntry.slug === 'claybruiser' && object.name.includes('Cannon');
+        const source = Array.isArray(object.material) ? object.material : [object.material];
+        const materials = source.map(material => {
+          const materialOptions = {
+            color: new THREE.Color(activeEntry.tint ?? '#ffffff'),
+            map: texture,
+            emissive: new THREE.Color(activeEntry.emissiveColor ?? '#000000'),
+            emissiveMap: emissiveTexture,
+            emissiveIntensity: activeEntry.emissiveIntensity ?? 1,
+            roughness: isClayCannon ? (lowQuality ? 0.78 : 0.62) : (lowQuality ? 0.95 : 0.78),
+            metalness: isClayCannon ? 0.08 : 0.02,
+            flatShading: lowQuality,
+            transparent: activeEntry.transparent ?? false,
+            alphaTest: activeEntry.alphaTest ?? 0,
+            depthWrite: activeEntry.transparent ? false : true,
+            side: activeEntry.doubleSided ? THREE.DoubleSide : THREE.FrontSide,
+          };
+          if (normalTexture) {
+            const normalStrength = lowQuality ? 0.45 : 0.72;
+            materialOptions.normalMap = normalTexture;
+            materialOptions.normalScale = new THREE.Vector2(normalStrength, normalStrength);
+          }
+          const next = new THREE.MeshStandardMaterial(materialOptions);
+          next.name = material?.name || 'WikiMaterial';
+          return next;
+        });
+        object.material = Array.isArray(object.material) ? materials : materials[0];
+        object.frustumCulled = false;
+      });
+    }
+
+    function fitModel(model, wrapper, targetHeight, targetWidth, x) {
+      const firstBox = new THREE.Box3().setFromObject(model);
+      const size = firstBox.getSize(new THREE.Vector3());
+      const horizontalSize = Math.max(size.x, size.z);
+      const scale = Math.min(
+        targetHeight / Math.max(size.y, 0.001),
+        targetWidth / Math.max(horizontalSize, 0.001)
+      ) * (activeEntry.framingScale ?? 1);
+      model.scale.setScalar(scale);
+      const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+      model.position.x -= center.x;
+      model.position.z -= center.z;
+      model.position.y -= box.min.y;
+      wrapper.position.x = x;
+    }
+
+    function findClip(slot, clipName) {
+      if (!clipName) return null;
+      return slot.clips.find(clip => clip.name === clipName) || slot.clips.find(clip => clip.name.endsWith(clipName));
+    }
+
+    function playOnSlot(slot, clipName, loop = false) {
+      const clip = findClip(slot, clipName);
+      if (!clip) return false;
+      slot.mixer.stopAllAction();
+      const action = slot.mixer.clipAction(clip);
+      action.reset();
+      action.enabled = true;
+      action.setEffectiveTimeScale(1);
+      action.setEffectiveWeight(1);
+      action.clampWhenFinished = !loop;
+      action.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, loop ? Infinity : 1);
+      action.play();
+      slot.action = action;
+      slot.playingDefault = loop;
+      return true;
+    }
+
+    function playDefault() {
+      currentSkillClip = null;
+      document.querySelectorAll('.skill').forEach(button => button.classList.remove('active'));
+      activeSlots.forEach(slot => playOnSlot(slot, activeEntry.defaultClip, true));
+    }
+
+    function playClip(clipName, loop = false) {
+      currentSkillClip = clipName;
+      activeSlots.forEach(slot => playOnSlot(slot, clipName, loop));
+    }
+
+    async function loadSlot(variant, x, targetHeight, targetWidth) {
+      const emissivePath = activeEntry.emissiveTextures?.[variant];
+      const normalPath = activeEntry.normalTextures?.[variant];
+      const [gltf, texture, emissiveTexture, normalTexture] = await Promise.all([
+        loader.loadAsync(`${activeEntry.models[variant]}?v=${assetRevision}`),
+        textureLoader.loadAsync(`${activeEntry.textures[variant]}?v=${assetRevision}`),
+        emissivePath ? textureLoader.loadAsync(`${emissivePath}?v=${assetRevision}`) : Promise.resolve(null),
+        normalPath ? textureLoader.loadAsync(`${normalPath}?v=${assetRevision}`) : Promise.resolve(null),
+      ]);
+      const wrapper = new THREE.Group();
+      const model = gltf.scene;
+      applyTexture(model, texture, emissiveTexture, normalTexture, variant === 'low');
+      wrapper.add(model);
+      scene.add(wrapper);
+      const mixer = new THREE.AnimationMixer(model);
+      const previewClip = gltf.animations.find(clip => clip.name === activeEntry.defaultClip);
+      if (previewClip) {
+        mixer.clipAction(previewClip).play();
+        mixer.update(0);
+      }
+      model.updateMatrixWorld(true);
+      fitModel(model, wrapper, targetHeight, targetWidth, x);
+      mixer.stopAllAction();
+      const slot = {
+        variant, wrapper, model, mixer, clips: gltf.animations,
+        texture, emissiveTexture, normalTexture, action: null, playingDefault: false
+      };
+      mixer.addEventListener('finished', () => {
+        if (!slot.playingDefault && slot === activeSlots[0]) playDefault();
+      });
+      return slot;
+    }
+
+    function resetCamera() {
+      activeSlots.forEach(slot => slot.wrapper.rotation.set(0, 0, 0));
+      controls.target.set(0, activeEntry.cameraTargetY ?? (activeMode === 'compare' ? 1.15 : 1.35), 0);
+      camera.position.set(activeMode === 'compare' ? 0 : 5.6, 3.3, activeMode === 'compare' ? 10.8 : 6.8);
+      controls.update();
+    }
+
+    async function loadActiveModels() {
+      loading.textContent = '正在载入模型…';
+      loading.classList.remove('hidden');
+      clearModels();
+      canvas.dataset.loadedModelCount = '0';
+      document.querySelector('#compareLabels').classList.toggle('visible', activeMode === 'compare');
+      try {
+        const narrowStage = stage.clientWidth <= 560;
+        if (activeMode === 'compare') {
+          activeSlots.push(await loadSlot('original', narrowStage ? -0.9 : -1.7, narrowStage ? 2.25 : 2.55, narrowStage ? 1.45 : 2.65));
+          activeSlots.push(await loadSlot('low', narrowStage ? 0.9 : 1.7, narrowStage ? 2.25 : 2.55, narrowStage ? 1.45 : 2.65));
+        } else {
+          activeSlots.push(await loadSlot(activeMode, 0, narrowStage ? 2.85 : 3.2, narrowStage ? 3.0 : 4.8));
+        }
+      } catch (error) {
+        console.error(error);
+        clearModels();
+        loading.textContent = '模型载入失败，请切换条目重试';
+        return;
+      }
+      activeSlots.forEach(slot => { slot.mixer.timeScale = paused ? 0 : 1; });
+      canvas.dataset.activeMode = activeMode;
+      canvas.dataset.loadedModelCount = String(activeSlots.length);
+      canvas.dataset.loadedVariants = activeSlots.map(slot => slot.variant).join(',');
+      resetCamera();
+      playDefault();
+      loading.classList.add('hidden');
+    }
+
+    function compatibleAnimations(entry) {
+      const prefix = entry.defaultClip?.includes('|') ? entry.defaultClip.split('|')[0] : null;
+      const items = prefix ? entry.animations.filter(animation => animation.clip.startsWith(`${prefix}|`)) : entry.animations;
+      const priority = { attack: 0, movement: 1, idle: 2, spawn: 3, hurt: 4, death: 5, other: 6 };
+      return items.sort((a, b) => (priority[a.kind] ?? 9) - (priority[b.kind] ?? 9) || a.name.localeCompare(b.name));
+    }
+
+    function renderDetails(entry) {
+      document.querySelector('#monsterName').textContent = entry.name;
+      document.querySelector('#monsterNameEn').textContent = entry.nameEn;
+      document.querySelector('#tierBadge').textContent = entry.tier;
+      document.querySelector('#summaryText').textContent = entry.summary;
+      document.querySelector('#sourceTriangles').textContent = entry.sourceTriangles.toLocaleString();
+      document.querySelector('#lowTriangles').textContent = entry.lowTriangles.toLocaleString();
+      const retained = entry.sourceTriangles
+        ? Math.round((entry.lowTriangles / entry.sourceTriangles) * 100)
+        : 0;
+      document.querySelector('#reduction').textContent = entry.sourceTriangles ? `${retained}%` : '—';
+
+      const select = document.querySelector('#animationSelect');
+      select.innerHTML = '';
+      compatibleAnimations(entry).forEach(animation => {
+        const option = document.createElement('option');
+        option.value = animation.clip;
+        option.textContent = animation.name;
+        select.appendChild(option);
+      });
+
+      const list = document.querySelector('#skillList');
+      list.innerHTML = '';
+      entry.skills.forEach(skill => {
+        const button = document.createElement('button');
+        button.className = 'skill';
+        button.disabled = !skill.clip;
+        button.dataset.clip = skill.clip || '';
+        button.innerHTML = `<span class="skill-name">${skill.name}</span><span class="skill-meta">${skill.attackType} · ${skill.range}</span><span class="skill-description">${skill.description}</span>`;
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.skill').forEach(item => item.classList.toggle('active', item === button));
+          playClip(skill.clip, false);
+        });
+        list.appendChild(button);
+      });
+    }
+
+    function filteredCatalog() {
+      const query = document.querySelector('#searchInput').value.trim().toLowerCase();
+      return catalog.filter(entry => {
+        const tierMatch = activeTier === '全部' || entry.tier.includes(activeTier);
+        const queryMatch = !query || entry.name.toLowerCase().includes(query) || entry.nameEn.toLowerCase().includes(query);
+        return tierMatch && queryMatch;
+      });
+    }
+
+    function renderMonsterList() {
+      const list = document.querySelector('#monsterList');
+      list.innerHTML = '';
+      const entries = filteredCatalog();
+      if (!entries.length) {
+        list.innerHTML = '<div class="empty">没有匹配条目</div>';
+        return;
+      }
+      entries.forEach(entry => {
+        const button = document.createElement('button');
+        button.className = `monster-entry${entry.slug === activeEntry.slug ? ' active' : ''}`;
+        button.innerHTML = `<strong>${entry.name}</strong><small>${entry.nameEn}</small><span>${entry.tier}</span>`;
+        button.addEventListener('click', async () => {
+          activeEntry = entry;
+          currentSkillClip = null;
+          renderMonsterList();
+          renderDetails(entry);
+          await loadActiveModels();
+        });
+        list.appendChild(button);
+      });
+    }
+
+    document.querySelector('#searchInput').addEventListener('input', renderMonsterList);
+    document.querySelectorAll('.tier-filter').forEach(button => {
+      button.addEventListener('click', () => {
+        activeTier = button.dataset.tier;
+        document.querySelectorAll('.tier-filter').forEach(item => item.classList.toggle('active', item === button));
+        renderMonsterList();
+      });
+    });
+    document.querySelectorAll('.mode-button').forEach(button => {
+      button.addEventListener('click', async () => {
+        activeMode = button.dataset.mode;
+        document.querySelectorAll('.mode-button').forEach(item => item.classList.toggle('active', item === button));
+        await loadActiveModels();
+      });
+    });
+    document.querySelector('#rotateButton').addEventListener('click', event => {
+      rotating = !rotating;
+      event.currentTarget.classList.toggle('active', rotating);
+    });
+    document.querySelector('#pauseButton').addEventListener('click', event => {
+      paused = !paused;
+      activeSlots.forEach(slot => { slot.mixer.timeScale = paused ? 0 : 1; });
+      event.currentTarget.innerHTML = `<i data-lucide="${paused ? 'play' : 'pause'}"></i>`;
+      event.currentTarget.title = paused ? '继续动作' : '暂停动作';
+      event.currentTarget.classList.toggle('active', paused);
+      refreshIcons();
+    });
+    document.querySelector('#resetButton').addEventListener('click', resetCamera);
+    document.querySelector('#playSelectedButton').addEventListener('click', () => {
+      const clip = document.querySelector('#animationSelect').value;
+      const animation = activeEntry.animations.find(item => item.clip === clip);
+      playClip(clip, animation?.kind === 'idle' || animation?.kind === 'movement');
+    });
+
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!stageVisible || document.hidden) {
+        clock.getDelta();
+        return;
+      }
+      const delta = Math.min(clock.getDelta(), 0.05);
+      activeSlots.forEach(slot => slot.mixer.update(delta));
+      if (rotating) activeSlots.forEach(slot => { slot.wrapper.rotation.y += delta * 0.38; });
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    new ResizeObserver(resize).observe(stage);
+    resize();
+    renderMonsterList();
+    renderDetails(activeEntry);
+    await loadActiveModels();
+    animate();
+  </script>
+</body>
+</html>
