@@ -32,6 +32,10 @@
     .catalog { min-width: 0; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; }
     .catalog-head { padding: 20px 16px 14px; border-bottom: 1px solid var(--line-soft); }
     .brand { margin: 0; font-size: 19px; font-weight: 800; letter-spacing: 0; }
+    .view-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 12px 0; }
+    .view-tab { height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
+    .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .view-tab svg { width: 15px; height: 15px; }
     .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
     .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
     .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
@@ -93,6 +97,7 @@
       .catalog-head { padding: 13px 12px 10px; }
       .edition { display: none; }
       .brand { font-size: 17px; }
+      .view-tabs { margin: 9px 0; }
       .search { margin-top: 10px; }
       .monster-list { display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
       .monster-list::-webkit-scrollbar { display: none; }
@@ -121,6 +126,10 @@
       <div class="catalog-head">
         <h1 class="brand">雨中冒险 2 · 怪物图鉴</h1>
         <p class="edition">原始模型 / 移动低模 / 攻击动作</p>
+        <nav class="view-tabs" aria-label="图鉴类型">
+          <a class="view-tab active" href="./index.html"><i data-lucide="skull"></i>生物</a>
+          <a class="view-tab" href="./maps.html"><i data-lucide="map"></i>地图</a>
+        </nav>
         <label class="search">
           <i data-lucide="search"></i>
           <input id="searchInput" type="search" placeholder="搜索怪物" autocomplete="off">
@@ -188,9 +197,9 @@
     import * as THREE from 'three';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2 } from 'lucide';
+    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, Map, Skull } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2 };
+    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, Map, Skull };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 

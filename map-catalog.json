@@ -1,0 +1,692 @@
+[
+  {
+    "slug": "titanic-plains",
+    "scene": "golemplains",
+    "name": "泰坦平原",
+    "nameEn": "Titanic Plains",
+    "expansion": "基础游戏",
+    "stage": "第一关",
+    "summary": "开阔草原与巨型石拱构成的早期关卡。",
+    "model": "maps/titanic-plains.glb",
+    "sourceTriangles": 111171,
+    "mapTriangles": 19670,
+    "sizeKB": 223,
+    "meshCount": 2,
+    "bounds": {
+      "min": [
+        -554.812,
+        -1065.883,
+        -455.113
+      ],
+      "max": [
+        212.041,
+        -48.299,
+        243.338
+      ]
+    },
+    "palette": {
+      "low": "#264c42",
+      "high": "#b9a76b"
+    }
+  },
+  {
+    "slug": "titanic-plains-variant",
+    "scene": "golemplains2",
+    "name": "泰坦平原：变体",
+    "nameEn": "Titanic Plains Variant",
+    "expansion": "基础游戏",
+    "stage": "第一关",
+    "summary": "泰坦平原的替代布局。",
+    "model": "maps/titanic-plains-variant.glb",
+    "sourceTriangles": 82868,
+    "mapTriangles": 14756,
+    "sizeKB": 171,
+    "meshCount": 4,
+    "bounds": {
+      "min": [
+        -1185.226,
+        -325.104,
+        -281.374
+      ],
+      "max": [
+        551.54,
+        333.197,
+        995.162
+      ]
+    },
+    "palette": {
+      "low": "#294b41",
+      "high": "#c3ad6d"
+    }
+  },
+  {
+    "slug": "distant-roost",
+    "scene": "blackbeach",
+    "name": "遥远栖木",
+    "nameEn": "Distant Roost",
+    "expansion": "基础游戏",
+    "stage": "第一关",
+    "summary": "由断崖、洞穴和石桥组成的垂直关卡。",
+    "model": "maps/distant-roost.glb",
+    "sourceTriangles": 51352,
+    "mapTriangles": 9206,
+    "sizeKB": 118,
+    "meshCount": 4,
+    "bounds": {
+      "min": [
+        -234.366,
+        -259.939,
+        -391.258
+      ],
+      "max": [
+        292.438,
+        -95.029,
+        198.883
+      ]
+    },
+    "palette": {
+      "low": "#273d39",
+      "high": "#b88762"
+    }
+  },
+  {
+    "slug": "distant-roost-variant",
+    "scene": "blackbeach2",
+    "name": "遥远栖木：变体",
+    "nameEn": "Distant Roost Variant",
+    "expansion": "基础游戏",
+    "stage": "第一关",
+    "summary": "遥远栖木的替代布局。",
+    "model": "maps/distant-roost-variant.glb",
+    "sourceTriangles": 31304,
+    "mapTriangles": 5626,
+    "sizeKB": 83,
+    "meshCount": 3,
+    "bounds": {
+      "min": [
+        -507.559,
+        -166.147,
+        -825.916
+      ],
+      "max": [
+        1820.559,
+        576.378,
+        1288.083
+      ]
+    },
+    "palette": {
+      "low": "#263d3a",
+      "high": "#b98e67"
+    }
+  },
+  {
+    "slug": "abandoned-aqueduct",
+    "scene": "goolake",
+    "name": "废弃渡槽",
+    "nameEn": "Abandoned Aqueduct",
+    "expansion": "基础游戏",
+    "stage": "第二关",
+    "summary": "沙漠水道、遗迹和封闭洞室交错的地图。",
+    "model": "maps/abandoned-aqueduct.glb",
+    "sourceTriangles": 119005,
+    "mapTriangles": 21323,
+    "sizeKB": 268,
+    "meshCount": 7,
+    "bounds": {
+      "min": [
+        -460.008,
+        -204.678,
+        -667.692
+      ],
+      "max": [
+        240.746,
+        154.499,
+        459.736
+      ]
+    },
+    "palette": {
+      "low": "#59412f",
+      "high": "#d2aa64"
+    }
+  },
+  {
+    "slug": "wetland-aspect",
+    "scene": "foggyswamp",
+    "name": "湿地景观",
+    "nameEn": "Wetland Aspect",
+    "expansion": "基础游戏",
+    "stage": "第二关",
+    "summary": "低洼沼泽、巨树与遗迹构成的潮湿区域。",
+    "model": "maps/wetland-aspect.glb",
+    "sourceTriangles": 102638,
+    "mapTriangles": 18473,
+    "sizeKB": 223,
+    "meshCount": 2,
+    "bounds": {
+      "min": [
+        -600.495,
+        -988.73,
+        -626.87
+      ],
+      "max": [
+        388.028,
+        111.195,
+        347.551
+      ]
+    },
+    "palette": {
+      "low": "#28433a",
+      "high": "#8ba76c"
+    }
+  },
+  {
+    "slug": "rallypoint-delta",
+    "scene": "frozenwall",
+    "name": "集结点 Delta",
+    "nameEn": "Rallypoint Delta",
+    "expansion": "基础游戏",
+    "stage": "第三关",
+    "summary": "冰雪覆盖的集装箱与悬崖战场。",
+    "model": "maps/rallypoint-delta.glb",
+    "sourceTriangles": 38482,
+    "mapTriangles": 6922,
+    "sizeKB": 90,
+    "meshCount": 3,
+    "bounds": {
+      "min": [
+        -311.417,
+        -14.251,
+        -1140.358
+      ],
+      "max": [
+        1457.636,
+        132.647,
+        188.849
+      ]
+    },
+    "palette": {
+      "low": "#34454d",
+      "high": "#b7ced0"
+    }
+  },
+  {
+    "slug": "scorched-acres",
+    "scene": "wispgraveyard",
+    "name": "灼热之地",
+    "nameEn": "Scorched Acres",
+    "expansion": "基础游戏",
+    "stage": "第三关",
+    "summary": "多层平台、断桥和炽热地表组成的关卡。",
+    "model": "maps/scorched-acres.glb",
+    "sourceTriangles": 245513,
+    "mapTriangles": 44036,
+    "sizeKB": 563,
+    "meshCount": 6,
+    "bounds": {
+      "min": [
+        -198.928,
+        -792.374,
+        -287.052
+      ],
+      "max": [
+        651.225,
+        193.838,
+        344.97
+      ]
+    },
+    "palette": {
+      "low": "#4a322c",
+      "high": "#d18b54"
+    }
+  },
+  {
+    "slug": "abyssal-depths",
+    "scene": "dampcavesimple",
+    "name": "深渊深处",
+    "nameEn": "Abyssal Depths",
+    "expansion": "基础游戏",
+    "stage": "第四关",
+    "summary": "地下岩洞、锁链与岩浆区域形成的大型洞穴。",
+    "model": "maps/abyssal-depths.glb",
+    "sourceTriangles": 548845,
+    "mapTriangles": 98771,
+    "sizeKB": 1195,
+    "meshCount": 14,
+    "bounds": {
+      "min": [
+        -1502.096,
+        -727.765,
+        -1050.254
+      ],
+      "max": [
+        818.445,
+        1113.329,
+        299.197
+      ]
+    },
+    "palette": {
+      "low": "#352c31",
+      "high": "#c96942"
+    }
+  },
+  {
+    "slug": "sirens-call",
+    "scene": "shipgraveyard",
+    "name": "塞壬召唤",
+    "nameEn": "Siren's Call",
+    "expansion": "基础游戏",
+    "stage": "第四关",
+    "summary": "船骸、岩柱与高低差明显的荒凉区域。",
+    "model": "maps/sirens-call.glb",
+    "sourceTriangles": 690354,
+    "mapTriangles": 124153,
+    "sizeKB": 1545,
+    "meshCount": 11,
+    "bounds": {
+      "min": [
+        -578.367,
+        -1054.947,
+        -633.006
+      ],
+      "max": [
+        480.69,
+        636.938,
+        729.786
+      ]
+    },
+    "palette": {
+      "low": "#2d4144",
+      "high": "#a5a37b"
+    }
+  },
+  {
+    "slug": "sky-meadow",
+    "scene": "skymeadow",
+    "name": "空中草原",
+    "nameEn": "Sky Meadow",
+    "expansion": "基础游戏",
+    "stage": "第五关",
+    "summary": "漂浮平台与环形遗迹组成的高空区域。",
+    "model": "maps/sky-meadow.glb",
+    "sourceTriangles": 145600,
+    "mapTriangles": 26086,
+    "sizeKB": 320,
+    "meshCount": 2,
+    "bounds": {
+      "min": [
+        -295.301,
+        -120.485,
+        -267.224
+      ],
+      "max": [
+        257.956,
+        128.665,
+        275.738
+      ]
+    },
+    "palette": {
+      "low": "#34433e",
+      "high": "#c0a76f"
+    }
+  },
+  {
+    "slug": "commencement",
+    "scene": "moon2",
+    "name": "月球：开端",
+    "nameEn": "Commencement",
+    "expansion": "基础游戏",
+    "stage": "最终关",
+    "summary": "通往最终战场的月球平台与长距离通道。",
+    "model": "maps/commencement.glb",
+    "sourceTriangles": 298577,
+    "mapTriangles": 53271,
+    "sizeKB": 695,
+    "meshCount": 15,
+    "bounds": {
+      "min": [
+        -932.652,
+        -1051.369,
+        -389.423
+      ],
+      "max": [
+        643.248,
+        721.304,
+        1033.496
+      ]
+    },
+    "palette": {
+      "low": "#303545",
+      "high": "#9da9bf"
+    }
+  },
+  {
+    "slug": "bazaar",
+    "scene": "bazaar",
+    "name": "时光之间的市集",
+    "nameEn": "Bazaar Between Time",
+    "expansion": "基础游戏",
+    "stage": "隐藏区域",
+    "summary": "连接关卡路线的蓝色时空市集。",
+    "model": "maps/bazaar.glb",
+    "sourceTriangles": 105914,
+    "mapTriangles": 18976,
+    "sizeKB": 238,
+    "meshCount": 5,
+    "bounds": {
+      "min": [
+        -329.894,
+        -484.034,
+        -176.906
+      ],
+      "max": [
+        181.64,
+        3.484,
+        66.704
+      ]
+    },
+    "palette": {
+      "low": "#263c47",
+      "high": "#6eb5bd"
+    }
+  },
+  {
+    "slug": "gilded-coast",
+    "scene": "goldshores",
+    "name": "镀金海岸",
+    "nameEn": "Gilded Coast",
+    "expansion": "基础游戏",
+    "stage": "隐藏区域",
+    "summary": "金色石柱、祭坛与环形海岸构成的隐藏地图。",
+    "model": "maps/gilded-coast.glb",
+    "sourceTriangles": 52326,
+    "mapTriangles": 9414,
+    "sizeKB": 112,
+    "meshCount": 1,
+    "bounds": {
+      "min": [
+        -819.735,
+        -256.274,
+        -1300.388
+      ],
+      "max": [
+        1066.962,
+        1981.787,
+        1008.826
+      ]
+    },
+    "palette": {
+      "low": "#4f3d24",
+      "high": "#dfbb58"
+    }
+  },
+  {
+    "slug": "bulwarks-ambry",
+    "scene": "artifactworld",
+    "name": "Bulwark's Ambry",
+    "nameEn": "Bulwark's Ambry",
+    "expansion": "基础游戏",
+    "stage": "隐藏区域",
+    "summary": "用于解锁神器的独立挑战空间。",
+    "model": "maps/bulwarks-ambry.glb",
+    "sourceTriangles": 22376,
+    "mapTriangles": 4016,
+    "sizeKB": 56,
+    "meshCount": 1,
+    "bounds": {
+      "min": [
+        -123.086,
+        -54.3,
+        -106.2
+      ],
+      "max": [
+        73.257,
+        134.523,
+        280.875
+      ]
+    },
+    "palette": {
+      "low": "#303943",
+      "high": "#a6b2ad"
+    }
+  },
+  {
+    "slug": "a-moment-fractured",
+    "scene": "mysteryspace",
+    "name": "时光裂隙",
+    "nameEn": "A Moment, Fractured",
+    "expansion": "基础游戏",
+    "stage": "隐藏区域",
+    "summary": "漂浮岩块与方尖碑构成的时间裂隙。",
+    "model": "maps/a-moment-fractured.glb",
+    "sourceTriangles": 22496,
+    "mapTriangles": 4038,
+    "sizeKB": 66,
+    "meshCount": 3,
+    "bounds": {
+      "min": [
+        -405.664,
+        -781.392,
+        -11.749
+      ],
+      "max": [
+        769.657,
+        300.5,
+        1493.303
+      ]
+    },
+    "palette": {
+      "low": "#333341",
+      "high": "#aaa2bd"
+    }
+  },
+  {
+    "slug": "siphoned-forest",
+    "scene": "snowyforest",
+    "name": "虹吸森林",
+    "nameEn": "Siphoned Forest",
+    "expansion": "虚空幸存者",
+    "stage": "第一关",
+    "summary": "积雪森林、洞穴与冰封高地组成的关卡。",
+    "model": "maps/siphoned-forest.glb",
+    "sourceTriangles": 47431,
+    "mapTriangles": 8488,
+    "sizeKB": 130,
+    "meshCount": 8,
+    "bounds": {
+      "min": [
+        -915.239,
+        -23.396,
+        -756.826
+      ],
+      "max": [
+        576.699,
+        1070.019,
+        1084.83
+      ]
+    },
+    "palette": {
+      "low": "#29433f",
+      "high": "#aec6bd"
+    }
+  },
+  {
+    "slug": "aphelian-sanctuary",
+    "scene": "ancientloft",
+    "name": "远地点圣所",
+    "nameEn": "Aphelian Sanctuary",
+    "expansion": "虚空幸存者",
+    "stage": "第二关",
+    "summary": "古代石构建筑与多层平台组成的圣所。",
+    "model": "maps/aphelian-sanctuary.glb",
+    "sourceTriangles": 37438,
+    "mapTriangles": 6729,
+    "sizeKB": 110,
+    "meshCount": 10,
+    "bounds": {
+      "min": [
+        -282.101,
+        1.051,
+        -289.795
+      ],
+      "max": [
+        139.224,
+        253.769,
+        289.923
+      ]
+    },
+    "palette": {
+      "low": "#413a42",
+      "high": "#c49d83"
+    }
+  },
+  {
+    "slug": "sulfur-pools",
+    "scene": "sulfurpools",
+    "name": "硫磺池",
+    "nameEn": "Sulfur Pools",
+    "expansion": "虚空幸存者",
+    "stage": "第三关",
+    "summary": "硫磺湖、矿洞和高耸岩柱形成的黄色地貌。",
+    "model": "maps/sulfur-pools.glb",
+    "sourceTriangles": 205978,
+    "mapTriangles": 37011,
+    "sizeKB": 448,
+    "meshCount": 6,
+    "bounds": {
+      "min": [
+        -730.012,
+        -374.446,
+        -349.887
+      ],
+      "max": [
+        751.166,
+        231.307,
+        541.799
+      ]
+    },
+    "palette": {
+      "low": "#45442b",
+      "high": "#c9c45b"
+    }
+  },
+  {
+    "slug": "planetarium",
+    "scene": "voidraid",
+    "name": "天文馆",
+    "nameEn": "The Planetarium",
+    "expansion": "虚空幸存者",
+    "stage": "最终关",
+    "summary": "虚空阵营最终战斗所在的封闭空间。",
+    "model": "maps/planetarium.glb",
+    "sourceTriangles": 156400,
+    "mapTriangles": 27626,
+    "sizeKB": 331,
+    "meshCount": 17,
+    "bounds": {
+      "min": [
+        -194.617,
+        -19.093,
+        -4199.793
+      ],
+      "max": [
+        4198.852,
+        63.899,
+        4191.322
+      ]
+    },
+    "palette": {
+      "low": "#24283e",
+      "high": "#7c88c8"
+    }
+  },
+  {
+    "slug": "iron-alluvium",
+    "scene": "ironalluvium",
+    "name": "铁质冲积地",
+    "nameEn": "Iron Alluvium",
+    "expansion": "DLC3",
+    "stage": "扩展地图",
+    "summary": "当前安装版本中的 DLC3 场景。",
+    "model": "maps/iron-alluvium.glb",
+    "sourceTriangles": 390966,
+    "mapTriangles": 70246,
+    "sizeKB": 902,
+    "meshCount": 14,
+    "bounds": {
+      "min": [
+        -320.741,
+        -221.973,
+        -389.109
+      ],
+      "max": [
+        355.582,
+        371.16,
+        506.019
+      ]
+    },
+    "palette": {
+      "low": "#343a39",
+      "high": "#9c9b7c"
+    }
+  },
+  {
+    "slug": "iron-alluvium-variant",
+    "scene": "ironalluvium2",
+    "name": "铁质冲积地：变体",
+    "nameEn": "Iron Alluvium Variant",
+    "expansion": "DLC3",
+    "stage": "扩展地图",
+    "summary": "铁质冲积地的替代布局。",
+    "model": "maps/iron-alluvium-variant.glb",
+    "sourceTriangles": 445482,
+    "mapTriangles": 80002,
+    "sizeKB": 1042,
+    "meshCount": 17,
+    "bounds": {
+      "min": [
+        -318.107,
+        -220.767,
+        -389.24
+      ],
+      "max": [
+        350.308,
+        370.446,
+        516.306
+      ]
+    },
+    "palette": {
+      "low": "#343a39",
+      "high": "#a69e79"
+    }
+  },
+  {
+    "slug": "repurposed-crater",
+    "scene": "repurposedcrater",
+    "name": "再利用环形坑",
+    "nameEn": "Repurposed Crater",
+    "expansion": "DLC3",
+    "stage": "扩展地图",
+    "summary": "当前安装版本中的 DLC3 环形坑场景。",
+    "model": "maps/repurposed-crater.glb",
+    "sourceTriangles": 556783,
+    "mapTriangles": 97289,
+    "sizeKB": 1297,
+    "meshCount": 25,
+    "bounds": {
+      "min": [
+        -285.366,
+        -66.24,
+        -408.526
+      ],
+      "max": [
+        565.937,
+        380.012,
+        442.777
+      ]
+    },
+    "palette": {
+      "low": "#3a3535",
+      "high": "#ad8472"
+    }
+  }
+]
