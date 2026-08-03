@@ -1,0 +1,334 @@
+[
+  {
+    "slug": "commando",
+    "name": "突击兵",
+    "nameEn": "Commando",
+    "bundle": "base-commando",
+    "root": "mdlCommandoDualies",
+    "meshes": [
+      "CommandoMesh"
+    ],
+    "texture": "texCommandoPaletteDiffuse",
+    "summary": "基础远程英雄。展示从默认角色 prefab 烘焙的完整静态模型与双枪。",
+    "prefab": "mdlCommandoDualies",
+    "rendererCount": 3,
+    "bakedTriangles": 7432,
+    "sourceTriangles": 7432,
+    "lowTriangles": 3715,
+    "sourceSizeKB": 252,
+    "lowSizeKB": 150
+  },
+  {
+    "slug": "huntress",
+    "name": "女猎人",
+    "nameEn": "Huntress",
+    "bundle": "base-huntress",
+    "root": "mdlHuntress",
+    "meshes": [
+      "HuntressMesh"
+    ],
+    "transparentRenderers": [
+      "HuntressScarfMesh"
+    ],
+    "texture": "texHuntressDiffuse",
+    "summary": "高机动追踪射手。展示从默认角色 prefab 烘焙的完整静态模型与弓。",
+    "prefab": "mdlHuntress",
+    "rendererCount": 3,
+    "bakedTriangles": 10154,
+    "sourceTriangles": 10154,
+    "lowTriangles": 5077,
+    "sourceSizeKB": 481,
+    "lowSizeKB": 363
+  },
+  {
+    "slug": "bandit",
+    "name": "盗贼",
+    "nameEn": "Bandit",
+    "bundle": "base-bandit2",
+    "root": "mdlBandit2@MasterAnims",
+    "poseClip": "RoR2\\Base\\Characters\\Bandit2\\Animations\\Bandit_SelectPoseIdle.anim",
+    "meshes": [
+      "Bandit2BodyMesh"
+    ],
+    "excludeRenderers": [
+      "BanditShotgunMesh",
+      "BanditPistolMesh"
+    ],
+    "texture": "texBandit2Diffuse",
+    "summary": "擅长背刺与连招的枪手。展示完整静态人物模型、披风与帽子，枪械已隐藏。",
+    "prefab": "mdlBandit2@MasterAnims",
+    "rendererCount": 5,
+    "bakedTriangles": 20700,
+    "sourceTriangles": 20700,
+    "lowTriangles": 10349,
+    "sourceSizeKB": 711,
+    "lowSizeKB": 481
+  },
+  {
+    "slug": "mul-t",
+    "name": "多功能枪兵",
+    "nameEn": "MUL-T",
+    "bundle": "base-toolbot",
+    "root": "mdlToolbot",
+    "meshes": [
+      "ToolbotMesh"
+    ],
+    "poseRoot": "mdlToolbot@MasterAnims",
+    "texture": "texTrimSheetConstruction2",
+    "summary": "可切换装备的重型机器人。展示默认角色 prefab 的完整静态模型。",
+    "prefab": "mdlToolbot",
+    "rendererCount": 1,
+    "bakedTriangles": 12622,
+    "sourceTriangles": 12622,
+    "lowTriangles": 6311,
+    "sourceSizeKB": 587,
+    "lowSizeKB": 387
+  },
+  {
+    "slug": "engineer",
+    "name": "工程师",
+    "nameEn": "Engineer",
+    "bundle": "base-engi",
+    "root": "mdlEngi",
+    "meshes": [
+      "EngiMesh"
+    ],
+    "texture": "texEngiDiffuse",
+    "summary": "以炮塔和区域控制作战的英雄。当前展示工程师本体，不重复附带独立炮塔单位。",
+    "prefab": "mdlEngi",
+    "rendererCount": 1,
+    "bakedTriangles": 6990,
+    "sourceTriangles": 6990,
+    "lowTriangles": 3495,
+    "sourceSizeKB": 787,
+    "lowSizeKB": 665
+  },
+  {
+    "slug": "artificer",
+    "name": "工匠",
+    "nameEn": "Artificer",
+    "bundle": "base-mage",
+    "root": "mdlMage",
+    "meshes": [
+      "MageMesh"
+    ],
+    "texture": "texMageDiffuse",
+    "summary": "使用元素技能的爆发型英雄。展示默认角色 prefab 的完整静态模型。",
+    "prefab": "mdlMage",
+    "rendererCount": 2,
+    "bakedTriangles": 13606,
+    "sourceTriangles": 13606,
+    "lowTriangles": 6803,
+    "sourceSizeKB": 490,
+    "lowSizeKB": 315
+  },
+  {
+    "slug": "mercenary",
+    "name": "佣兵",
+    "nameEn": "Mercenary",
+    "bundle": "base-merc",
+    "root": "mdlMerc",
+    "meshes": [
+      "MercMesh"
+    ],
+    "texture": "texMercDiffuse",
+    "summary": "依靠近战连击和位移作战的剑士。展示完整静态模型与武器。",
+    "prefab": "mdlMerc",
+    "rendererCount": 2,
+    "bakedTriangles": 7610,
+    "sourceTriangles": 7610,
+    "lowTriangles": 3805,
+    "sourceSizeKB": 1321,
+    "lowSizeKB": 1230
+  },
+  {
+    "slug": "rex",
+    "name": "雷克斯",
+    "nameEn": "REX",
+    "bundle": "base-treebot",
+    "root": "mdlTreebot",
+    "meshes": [
+      "TreebotBotMesh"
+    ],
+    "texture": "texTreebotTreeBarkDiffuse",
+    "summary": "机械与植物共生的远程英雄。展示默认形态的机械与植物分件模型。",
+    "prefab": "mdlTreebot",
+    "rendererCount": 4,
+    "bakedTriangles": 26631,
+    "sourceTriangles": 26631,
+    "lowTriangles": 13315,
+    "sourceSizeKB": 962,
+    "lowSizeKB": 608
+  },
+  {
+    "slug": "loader",
+    "name": "装卸工",
+    "nameEn": "Loader",
+    "bundle": "base-loader",
+    "root": "mdlLoader",
+    "meshes": [
+      "LoaderMechMesh"
+    ],
+    "texture": "texLoaderPilotDiffuse",
+    "summary": "使用抓钩和动力拳套的近战英雄。展示默认角色 prefab 的完整静态模型。",
+    "prefab": "mdlLoader",
+    "rendererCount": 3,
+    "bakedTriangles": 11631,
+    "sourceTriangles": 11608,
+    "lowTriangles": 5804,
+    "sourceSizeKB": 421,
+    "lowSizeKB": 269
+  },
+  {
+    "slug": "acrid",
+    "name": "阿克里德",
+    "nameEn": "Acrid",
+    "bundle": "base-croco",
+    "root": "mdlCroco",
+    "meshes": [
+      "CrocoMesh"
+    ],
+    "texture": "texCrocoDiffuse",
+    "summary": "以毒素和近战撕咬作战的实验生物。展示默认角色 prefab 的完整静态模型。",
+    "prefab": "mdlCroco",
+    "rendererCount": 2,
+    "bakedTriangles": 10600,
+    "sourceTriangles": 10600,
+    "lowTriangles": 5299,
+    "sourceSizeKB": 612,
+    "lowSizeKB": 490
+  },
+  {
+    "slug": "captain",
+    "name": "船长",
+    "nameEn": "Captain",
+    "bundle": "base-captain",
+    "root": "mdlCaptain",
+    "meshes": [
+      "Captain"
+    ],
+    "texture": "texCaptainPalette",
+    "summary": "通过轨道支援与信标控制战场的指挥官。展示完整静态模型与随身装备。",
+    "prefab": "mdlCaptain",
+    "rendererCount": 7,
+    "bakedTriangles": 15999,
+    "sourceTriangles": 15999,
+    "lowTriangles": 7998,
+    "sourceSizeKB": 486,
+    "lowSizeKB": 284
+  },
+  {
+    "slug": "railgunner",
+    "name": "磁轨炮手",
+    "nameEn": "Railgunner",
+    "bundle": "dlc1-railgunner",
+    "root": "mdlRailGunner",
+    "meshes": [
+      "mdlRailGunnerBase"
+    ],
+    "texture": "texRailGunnerDiffuse",
+    "summary": "《虚空幸存者》扩展中的精准射手。展示完整静态模型与磁轨步枪。",
+    "prefab": "mdlRailGunner",
+    "rendererCount": 5,
+    "bakedTriangles": 12758,
+    "sourceTriangles": 12758,
+    "lowTriangles": 6379,
+    "sourceSizeKB": 1009,
+    "lowSizeKB": 820
+  },
+  {
+    "slug": "void-fiend",
+    "name": "虚空恶鬼",
+    "nameEn": "Void Fiend",
+    "bundle": "dlc1-voidsurvivor",
+    "root": "mdlVoidSurvivor",
+    "meshes": [
+      "mdlVoidSurvivorBody"
+    ],
+    "texture": "texVoidSurvivorFleshDiffuse",
+    "summary": "会在受控与腐化形态间切换的虚空英雄。展示默认受控形态的完整静态模型。",
+    "prefab": "mdlVoidSurvivor",
+    "rendererCount": 4,
+    "bakedTriangles": 12284,
+    "sourceTriangles": 12284,
+    "lowTriangles": 6141,
+    "sourceSizeKB": 872,
+    "lowSizeKB": 733
+  },
+  {
+    "slug": "seeker",
+    "name": "探寻者",
+    "nameEn": "Seeker",
+    "bundle": "dlc2-seeker",
+    "root": "mdlSeeker",
+    "meshes": [
+      "meshSeekerBody"
+    ],
+    "texture": "texSeekerDiffuse",
+    "summary": "《风暴探寻者》扩展中的灵魂操控者。展示默认角色 prefab 的完整静态模型。",
+    "prefab": "mdlSeeker",
+    "rendererCount": 3,
+    "bakedTriangles": 14208,
+    "sourceTriangles": 14208,
+    "lowTriangles": 7103,
+    "sourceSizeKB": 1116,
+    "lowSizeKB": 950
+  },
+  {
+    "slug": "chef",
+    "name": "大厨",
+    "nameEn": "CHEF",
+    "bundle": "dlc2-chef",
+    "root": "mdlChef",
+    "meshes": [
+      "meshChef"
+    ],
+    "texture": "texChefDiffuse",
+    "summary": "以厨具发动连锁攻击的机器人英雄。展示完整静态模型与厨具分件。",
+    "prefab": "mdlChef",
+    "rendererCount": 5,
+    "bakedTriangles": 18770,
+    "sourceTriangles": 18718,
+    "lowTriangles": 9359,
+    "sourceSizeKB": 1251,
+    "lowSizeKB": 1030
+  },
+  {
+    "slug": "false-son",
+    "name": "伪子",
+    "nameEn": "False Son",
+    "bundle": "dlc2-falseson",
+    "root": "mdlFalseSon",
+    "meshes": [
+      "FalseSon_Body"
+    ],
+    "texture": "texFalseSonDiffuse",
+    "summary": "《风暴探寻者》扩展中的可解锁近战英雄。展示完整石质静态模型与武器。",
+    "prefab": "mdlFalseSon",
+    "rendererCount": 3,
+    "bakedTriangles": 11541,
+    "sourceTriangles": 11541,
+    "lowTriangles": 5769,
+    "sourceSizeKB": 1045,
+    "lowSizeKB": 909
+  },
+  {
+    "slug": "drifter",
+    "name": "漂泊者",
+    "nameEn": "Drifter",
+    "bundle": "dlc3-drifter",
+    "root": "mdlDrifter",
+    "meshes": [
+      "meshDrifter"
+    ],
+    "texture": "texDrifterDiffuse",
+    "summary": "使用废料袋与临时物品作战的英雄。展示当前本机 DLC3 prefab 的完整静态模型。",
+    "prefab": "mdlDrifter",
+    "rendererCount": 3,
+    "bakedTriangles": 18662,
+    "sourceTriangles": 18662,
+    "lowTriangles": 9331,
+    "sourceSizeKB": 1436,
+    "lowSizeKB": 1121
+  }
+]
