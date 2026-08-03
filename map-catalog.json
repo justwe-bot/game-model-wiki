@@ -8,25 +8,32 @@
     "stage": "第一关",
     "summary": "开阔草原与巨型石拱构成的早期关卡。",
     "model": "maps/titanic-plains.glb",
-    "sourceTriangles": 111171,
-    "mapTriangles": 19670,
-    "sizeKB": 223,
-    "meshCount": 2,
+    "sourceTriangles": 80400,
+    "mapTriangles": 26853,
+    "sizeKB": 447,
+    "meshCount": 5,
     "bounds": {
       "min": [
-        -554.812,
-        -1065.883,
-        -455.113
+        -16.917,
+        -15.748,
+        -21.229
       ],
       "max": [
-        212.041,
-        -48.299,
-        243.338
+        21.069,
+        3.547,
+        17.132
       ]
     },
     "palette": {
       "low": "#264c42",
       "high": "#b9a76b"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-gameobject-hierarchy",
+    "textures": {
+      "rock": "maps/textures/titanic-plains/rock.png",
+      "grass": "maps/textures/titanic-plains/grass.png",
+      "lichen": "maps/textures/titanic-plains/lichen.png"
     }
   },
   {
@@ -68,25 +75,35 @@
     "stage": "第一关",
     "summary": "由断崖、洞穴和石桥组成的垂直关卡。",
     "model": "maps/distant-roost.glb",
-    "sourceTriangles": 51352,
-    "mapTriangles": 9206,
-    "sizeKB": 118,
-    "meshCount": 4,
+    "sourceTriangles": 51233,
+    "mapTriangles": 17999,
+    "sizeKB": 247,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -234.366,
-        -259.939,
-        -391.258
+        -0.59534,
+        -0.44835,
+        -1.36694
       ],
       "max": [
-        292.438,
-        -95.029,
-        198.883
+        0.43726,
+        0.5209,
+        0.26576
       ]
     },
     "palette": {
       "low": "#273d39",
       "high": "#b88762"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/distant-roost/rockSide.png",
+      "rockTop": "maps/textures/distant-roost/rockTop.png",
+      "grass": "maps/textures/distant-roost/grass.png",
+      "dirt": "maps/textures/distant-roost/dirt.png",
+      "rock": "maps/textures/distant-roost/rockSide.png",
+      "lichen": "maps/textures/distant-roost/dirt.png"
     }
   },
   {
@@ -128,25 +145,35 @@
     "stage": "第二关",
     "summary": "沙漠水道、遗迹和封闭洞室交错的地图。",
     "model": "maps/abandoned-aqueduct.glb",
-    "sourceTriangles": 119005,
-    "mapTriangles": 21323,
-    "sizeKB": 268,
-    "meshCount": 7,
+    "sourceTriangles": 52945,
+    "mapTriangles": 19999,
+    "sizeKB": 287,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -460.008,
-        -204.678,
-        -667.692
+        -0.0011,
+        -0.00012,
+        -0.00084
       ],
       "max": [
-        240.746,
-        154.499,
-        459.736
+        0.00114,
+        0.00033,
+        0.0008
       ]
     },
     "palette": {
       "low": "#59412f",
       "high": "#d2aa64"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/abandoned-aqueduct/rockSide.png",
+      "rockTop": "maps/textures/abandoned-aqueduct/rockTop.png",
+      "grass": "maps/textures/abandoned-aqueduct/grass.png",
+      "dirt": "maps/textures/abandoned-aqueduct/dirt.png",
+      "rock": "maps/textures/abandoned-aqueduct/rockSide.png",
+      "lichen": "maps/textures/abandoned-aqueduct/dirt.png"
     }
   },
   {
@@ -158,25 +185,35 @@
     "stage": "第二关",
     "summary": "低洼沼泽、巨树与遗迹构成的潮湿区域。",
     "model": "maps/wetland-aspect.glb",
-    "sourceTriangles": 102638,
-    "mapTriangles": 18473,
-    "sizeKB": 223,
-    "meshCount": 2,
+    "sourceTriangles": 115130,
+    "mapTriangles": 27998,
+    "sizeKB": 444,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -600.495,
-        -988.73,
-        -626.87
+        -10.97607,
+        -10.79053,
+        -10.48242
       ],
       "max": [
-        388.028,
-        111.195,
-        347.551
+        10.3291,
+        1.11194,
+        11.92383
       ]
     },
     "palette": {
       "low": "#28433a",
       "high": "#8ba76c"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/wetland-aspect/rockSide.png",
+      "rockTop": "maps/textures/wetland-aspect/rockTop.png",
+      "grass": "maps/textures/wetland-aspect/grass.png",
+      "dirt": "maps/textures/wetland-aspect/dirt.png",
+      "rock": "maps/textures/wetland-aspect/rockSide.png",
+      "lichen": "maps/textures/wetland-aspect/dirt.png"
     }
   },
   {
@@ -188,25 +225,35 @@
     "stage": "第三关",
     "summary": "冰雪覆盖的集装箱与悬崖战场。",
     "model": "maps/rallypoint-delta.glb",
-    "sourceTriangles": 38482,
-    "mapTriangles": 6922,
-    "sizeKB": 90,
-    "meshCount": 3,
+    "sourceTriangles": 50250,
+    "mapTriangles": 18000,
+    "sizeKB": 247,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -311.417,
-        -14.251,
-        -1140.358
+        -6.10181,
+        -4.17407,
+        -4.646
       ],
       "max": [
-        1457.636,
-        132.647,
-        188.849
+        4.12451,
+        5.78052,
+        5.45386
       ]
     },
     "palette": {
       "low": "#34454d",
       "high": "#b7ced0"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/rallypoint-delta/rockSide.png",
+      "rockTop": "maps/textures/rallypoint-delta/rockTop.png",
+      "grass": "maps/textures/rallypoint-delta/grass.png",
+      "dirt": "maps/textures/rallypoint-delta/dirt.png",
+      "rock": "maps/textures/rallypoint-delta/rockSide.png",
+      "lichen": "maps/textures/rallypoint-delta/dirt.png"
     }
   },
   {
@@ -218,25 +265,35 @@
     "stage": "第三关",
     "summary": "多层平台、断桥和炽热地表组成的关卡。",
     "model": "maps/scorched-acres.glb",
-    "sourceTriangles": 245513,
-    "mapTriangles": 44036,
-    "sizeKB": 563,
-    "meshCount": 6,
+    "sourceTriangles": 28892,
+    "mapTriangles": 16000,
+    "sizeKB": 254,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -198.928,
-        -792.374,
-        -287.052
+        -4.78076,
+        -6.25391,
+        -7.00562
       ],
       "max": [
-        651.225,
-        193.838,
-        344.97
+        7.27051,
+        3.50696,
+        3.4762
       ]
     },
     "palette": {
       "low": "#4a322c",
       "high": "#d18b54"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/scorched-acres/rockSide.png",
+      "rockTop": "maps/textures/scorched-acres/rockTop.png",
+      "grass": "maps/textures/scorched-acres/grass.png",
+      "dirt": "maps/textures/scorched-acres/dirt.png",
+      "rock": "maps/textures/scorched-acres/rockSide.png",
+      "lichen": "maps/textures/scorched-acres/dirt.png"
     }
   },
   {
@@ -279,8 +336,8 @@
     "summary": "船骸、岩柱与高低差明显的荒凉区域。",
     "model": "maps/sirens-call.glb",
     "sourceTriangles": 690354,
-    "mapTriangles": 124153,
-    "sizeKB": 1545,
+    "mapTriangles": 68186,
+    "sizeKB": 1030,
     "meshCount": 11,
     "bounds": {
       "min": [
@@ -308,25 +365,35 @@
     "stage": "第五关",
     "summary": "漂浮平台与环形遗迹组成的高空区域。",
     "model": "maps/sky-meadow.glb",
-    "sourceTriangles": 145600,
-    "mapTriangles": 26086,
-    "sizeKB": 320,
-    "meshCount": 2,
+    "sourceTriangles": 155117,
+    "mapTriangles": 31998,
+    "sizeKB": 547,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -295.301,
-        -120.485,
-        -267.224
+        -3.20117,
+        -5.68726,
+        -3.25928
       ],
       "max": [
-        257.956,
-        128.665,
-        275.738
+        2.76306,
+        1.2868,
+        2.95288
       ]
     },
     "palette": {
       "low": "#34433e",
       "high": "#c0a76f"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/sky-meadow/rockSide.png",
+      "rockTop": "maps/textures/sky-meadow/rockTop.png",
+      "grass": "maps/textures/sky-meadow/grass.png",
+      "dirt": "maps/textures/sky-meadow/dirt.png",
+      "rock": "maps/textures/sky-meadow/rockSide.png",
+      "lichen": "maps/textures/sky-meadow/dirt.png"
     }
   },
   {
@@ -368,25 +435,35 @@
     "stage": "隐藏区域",
     "summary": "连接关卡路线的蓝色时空市集。",
     "model": "maps/bazaar.glb",
-    "sourceTriangles": 105914,
-    "mapTriangles": 18976,
-    "sizeKB": 238,
-    "meshCount": 5,
+    "sourceTriangles": 59548,
+    "mapTriangles": 19999,
+    "sizeKB": 356,
+    "meshCount": 1,
     "bounds": {
       "min": [
-        -329.894,
-        -484.034,
-        -176.906
+        -0.39276,
+        -1.68842,
+        -0.95276
       ],
       "max": [
-        181.64,
-        3.484,
-        66.704
+        0.67123,
+        0.29251,
+        0.35883
       ]
     },
     "palette": {
       "low": "#263c47",
       "high": "#6eb5bd"
+    },
+    "materialMode": "triplanar-game-textures",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/bazaar/rockSide.png",
+      "rockTop": "maps/textures/bazaar/rockTop.png",
+      "grass": "maps/textures/bazaar/grass.png",
+      "dirt": "maps/textures/bazaar/dirt.png",
+      "rock": "maps/textures/bazaar/rockSide.png",
+      "lichen": "maps/textures/bazaar/dirt.png"
     }
   },
   {
@@ -398,25 +475,36 @@
     "stage": "隐藏区域",
     "summary": "金色石柱、祭坛与环形海岸构成的隐藏地图。",
     "model": "maps/gilded-coast.glb",
-    "sourceTriangles": 52326,
-    "mapTriangles": 9414,
-    "sizeKB": 112,
+    "sourceTriangles": 15002,
+    "mapTriangles": 10000,
+    "sizeKB": 158,
     "meshCount": 1,
     "bounds": {
       "min": [
-        -819.735,
-        -256.274,
-        -1300.388
+        -0.10894,
+        -0.381,
+        -0.11852
       ],
       "max": [
-        1066.962,
-        1981.787,
-        1008.826
+        0.48347,
+        0.01351,
+        0.13326
       ]
     },
     "palette": {
       "low": "#4f3d24",
       "high": "#dfbb58"
+    },
+    "materialMode": "triplanar-game-textures",
+    "textureMode": "dirt-only",
+    "assemblyMode": "unity-terrain-prefab",
+    "textures": {
+      "rockSide": "maps/textures/gilded-coast/rockSide.png",
+      "rockTop": "maps/textures/gilded-coast/rockTop.png",
+      "grass": "maps/textures/gilded-coast/grass.png",
+      "dirt": "maps/textures/gilded-coast/dirt.png",
+      "rock": "maps/textures/gilded-coast/rockSide.png",
+      "lichen": "maps/textures/gilded-coast/dirt.png"
     }
   },
   {

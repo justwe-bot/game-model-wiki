@@ -3797,5 +3797,685 @@
         "description": "收拢机体并积蓄能量，为追踪炸弹提供明显的攻击前摇。"
       }
     ]
+  },
+  {
+    "slug": "commando",
+    "name": "突击兵",
+    "nameEn": "Commando",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "基础远程英雄。展示从默认角色 prefab 烘焙的完整静态模型与双枪。",
+    "models": {
+      "original": "models/survivors/commando-original.glb",
+      "low": "models/survivors/commando-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texCommandoPaletteDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "CommandoMesh",
+    "prefabSource": "mdlCommandoDualies",
+    "rendererCount": 3,
+    "bakedTriangles": 7432,
+    "sourceTriangles": 7432,
+    "lowTriangles": 3715,
+    "sourceSizeKB": 252,
+    "lowSizeKB": 150,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "huntress",
+    "name": "女猎人",
+    "nameEn": "Huntress",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "高机动追踪射手。展示从默认角色 prefab 烘焙的完整静态模型与弓。",
+    "models": {
+      "original": "models/survivors/huntress-original.glb",
+      "low": "models/survivors/huntress-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texHuntressDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "HuntressMesh",
+    "prefabSource": "mdlHuntress",
+    "rendererCount": 3,
+    "bakedTriangles": 10154,
+    "sourceTriangles": 10154,
+    "lowTriangles": 5077,
+    "sourceSizeKB": 481,
+    "lowSizeKB": 363,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "bandit",
+    "name": "盗贼",
+    "nameEn": "Bandit",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "擅长背刺与连招的枪手。展示完整静态人物模型、披风与帽子，枪械已隐藏。",
+    "models": {
+      "original": "models/survivors/bandit-original.glb",
+      "low": "models/survivors/bandit-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texBandit2Diffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "Bandit2BodyMesh",
+    "prefabSource": "mdlBandit2@MasterAnims",
+    "rendererCount": 5,
+    "bakedTriangles": 20700,
+    "sourceTriangles": 20700,
+    "lowTriangles": 10349,
+    "sourceSizeKB": 711,
+    "lowSizeKB": 481,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "mul-t",
+    "name": "多功能枪兵",
+    "nameEn": "MUL-T",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "可切换装备的重型机器人。展示默认角色 prefab 的完整静态模型。",
+    "models": {
+      "original": "models/survivors/mul-t-original.glb",
+      "low": "models/survivors/mul-t-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texTrimSheetConstruction2",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "ToolbotMesh",
+    "prefabSource": "mdlToolbot",
+    "rendererCount": 1,
+    "bakedTriangles": 12622,
+    "sourceTriangles": 12622,
+    "lowTriangles": 6311,
+    "sourceSizeKB": 587,
+    "lowSizeKB": 387,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "engineer",
+    "name": "工程师",
+    "nameEn": "Engineer",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "以炮塔和区域控制作战的英雄。当前展示工程师本体，不重复附带独立炮塔单位。",
+    "models": {
+      "original": "models/survivors/engineer-original.glb",
+      "low": "models/survivors/engineer-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texEngiDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "EngiMesh",
+    "prefabSource": "mdlEngi",
+    "rendererCount": 1,
+    "bakedTriangles": 6990,
+    "sourceTriangles": 6990,
+    "lowTriangles": 3495,
+    "sourceSizeKB": 787,
+    "lowSizeKB": 665,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "artificer",
+    "name": "工匠",
+    "nameEn": "Artificer",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "使用元素技能的爆发型英雄。展示默认角色 prefab 的完整静态模型。",
+    "models": {
+      "original": "models/survivors/artificer-original.glb",
+      "low": "models/survivors/artificer-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texMageDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "MageMesh",
+    "prefabSource": "mdlMage",
+    "rendererCount": 2,
+    "bakedTriangles": 13606,
+    "sourceTriangles": 13606,
+    "lowTriangles": 6803,
+    "sourceSizeKB": 490,
+    "lowSizeKB": 315,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "mercenary",
+    "name": "佣兵",
+    "nameEn": "Mercenary",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "依靠近战连击和位移作战的剑士。展示完整静态模型与武器。",
+    "models": {
+      "original": "models/survivors/mercenary-original.glb",
+      "low": "models/survivors/mercenary-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texMercDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "MercMesh",
+    "prefabSource": "mdlMerc",
+    "rendererCount": 2,
+    "bakedTriangles": 7610,
+    "sourceTriangles": 7610,
+    "lowTriangles": 3805,
+    "sourceSizeKB": 1321,
+    "lowSizeKB": 1230,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "rex",
+    "name": "雷克斯",
+    "nameEn": "REX",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "机械与植物共生的远程英雄。展示默认形态的机械与植物分件模型。",
+    "models": {
+      "original": "models/survivors/rex-original.glb",
+      "low": "models/survivors/rex-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texTreebotTreeBarkDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "TreebotBotMesh",
+    "prefabSource": "mdlTreebot",
+    "rendererCount": 4,
+    "bakedTriangles": 26631,
+    "sourceTriangles": 26631,
+    "lowTriangles": 13315,
+    "sourceSizeKB": 962,
+    "lowSizeKB": 608,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "loader",
+    "name": "装卸工",
+    "nameEn": "Loader",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "使用抓钩和动力拳套的近战英雄。展示默认角色 prefab 的完整静态模型。",
+    "models": {
+      "original": "models/survivors/loader-original.glb",
+      "low": "models/survivors/loader-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texLoaderPilotDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "LoaderMechMesh",
+    "prefabSource": "mdlLoader",
+    "rendererCount": 3,
+    "bakedTriangles": 11631,
+    "sourceTriangles": 11608,
+    "lowTriangles": 5804,
+    "sourceSizeKB": 421,
+    "lowSizeKB": 269,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "acrid",
+    "name": "阿克里德",
+    "nameEn": "Acrid",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "以毒素和近战撕咬作战的实验生物。展示默认角色 prefab 的完整静态模型。",
+    "models": {
+      "original": "models/survivors/acrid-original.glb",
+      "low": "models/survivors/acrid-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texCrocoDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "CrocoMesh",
+    "prefabSource": "mdlCroco",
+    "rendererCount": 2,
+    "bakedTriangles": 10600,
+    "sourceTriangles": 10600,
+    "lowTriangles": 5299,
+    "sourceSizeKB": 612,
+    "lowSizeKB": 490,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "captain",
+    "name": "船长",
+    "nameEn": "Captain",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "通过轨道支援与信标控制战场的指挥官。展示完整静态模型与随身装备。",
+    "models": {
+      "original": "models/survivors/captain-original.glb",
+      "low": "models/survivors/captain-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texCaptainPalette",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "Captain",
+    "prefabSource": "mdlCaptain",
+    "rendererCount": 7,
+    "bakedTriangles": 15999,
+    "sourceTriangles": 15999,
+    "lowTriangles": 7998,
+    "sourceSizeKB": 486,
+    "lowSizeKB": 284,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "railgunner",
+    "name": "磁轨炮手",
+    "nameEn": "Railgunner",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "《虚空幸存者》扩展中的精准射手。展示完整静态模型与磁轨步枪。",
+    "models": {
+      "original": "models/survivors/railgunner-original.glb",
+      "low": "models/survivors/railgunner-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texRailGunnerDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlRailGunnerBase",
+    "prefabSource": "mdlRailGunner",
+    "rendererCount": 5,
+    "bakedTriangles": 12758,
+    "sourceTriangles": 12758,
+    "lowTriangles": 6379,
+    "sourceSizeKB": 1009,
+    "lowSizeKB": 820,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "void-fiend",
+    "name": "虚空恶鬼",
+    "nameEn": "Void Fiend",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "会在受控与腐化形态间切换的虚空英雄。展示默认受控形态的完整静态模型。",
+    "models": {
+      "original": "models/survivors/void-fiend-original.glb",
+      "low": "models/survivors/void-fiend-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texVoidSurvivorFleshDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "mdlVoidSurvivorBody",
+    "prefabSource": "mdlVoidSurvivor",
+    "rendererCount": 4,
+    "bakedTriangles": 12284,
+    "sourceTriangles": 12284,
+    "lowTriangles": 6141,
+    "sourceSizeKB": 872,
+    "lowSizeKB": 733,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "seeker",
+    "name": "探寻者",
+    "nameEn": "Seeker",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "《风暴探寻者》扩展中的灵魂操控者。展示默认角色 prefab 的完整静态模型。",
+    "models": {
+      "original": "models/survivors/seeker-original.glb",
+      "low": "models/survivors/seeker-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texSeekerDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "meshSeekerBody",
+    "prefabSource": "mdlSeeker",
+    "rendererCount": 3,
+    "bakedTriangles": 14208,
+    "sourceTriangles": 14208,
+    "lowTriangles": 7103,
+    "sourceSizeKB": 1116,
+    "lowSizeKB": 950,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "chef",
+    "name": "大厨",
+    "nameEn": "CHEF",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "以厨具发动连锁攻击的机器人英雄。展示完整静态模型与厨具分件。",
+    "models": {
+      "original": "models/survivors/chef-original.glb",
+      "low": "models/survivors/chef-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texChefDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "meshChef",
+    "prefabSource": "mdlChef",
+    "rendererCount": 5,
+    "bakedTriangles": 18770,
+    "sourceTriangles": 18718,
+    "lowTriangles": 9359,
+    "sourceSizeKB": 1251,
+    "lowSizeKB": 1030,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "false-son",
+    "name": "伪子",
+    "nameEn": "False Son",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "《风暴探寻者》扩展中的可解锁近战英雄。展示完整石质静态模型与武器。",
+    "models": {
+      "original": "models/survivors/false-son-original.glb",
+      "low": "models/survivors/false-son-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texFalseSonDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "FalseSon_Body",
+    "prefabSource": "mdlFalseSon",
+    "rendererCount": 3,
+    "bakedTriangles": 11541,
+    "sourceTriangles": 11541,
+    "lowTriangles": 5769,
+    "sourceSizeKB": 1045,
+    "lowSizeKB": 909,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
+  },
+  {
+    "slug": "drifter",
+    "name": "漂泊者",
+    "nameEn": "Drifter",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "静态模型",
+    "summary": "使用废料袋与临时物品作战的英雄。展示当前本机 DLC3 prefab 的完整静态模型。",
+    "models": {
+      "original": "models/survivors/drifter-original.glb",
+      "low": "models/survivors/drifter-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "texDrifterDiffuse",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "meshDrifter",
+    "prefabSource": "mdlDrifter",
+    "rendererCount": 3,
+    "bakedTriangles": 18662,
+    "sourceTriangles": 18662,
+    "lowTriangles": 9331,
+    "sourceSizeKB": 1436,
+    "lowSizeKB": 1121,
+    "preserveMaterials": true,
+    "animations": [],
+    "defaultClip": null,
+    "skills": []
   }
 ]

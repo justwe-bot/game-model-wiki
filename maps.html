@@ -94,7 +94,7 @@
       <div class="catalog-head">
         <h1 class="brand">雨中冒险 2 · 3D 图鉴</h1>
         <nav class="view-tabs" aria-label="图鉴类型">
-          <a class="view-tab" href="./index.html"><i data-lucide="skull"></i>生物</a>
+          <a class="view-tab" href="./index.html?game=risk-of-rain-2"><i data-lucide="skull"></i>生物</a>
           <a class="view-tab active" href="./maps.html"><i data-lucide="map"></i>地图</a>
         </nav>
         <label class="search"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="搜索地图" autocomplete="off"></label>
@@ -127,8 +127,8 @@
           </div>
         </div>
         <div class="method">
-          <strong>结构预览模式</strong>
-          <p>从 Unity 关卡场景的静态组合网格生成，只收录结构可辨认的场景，并保留真实布局和高度顺序；极端纵深会为展示适度压缩。运行时拼装地图、天空盒、粒子、动态机关、植被实例与烘焙光照暂不包含。</p>
+          <strong id="methodTitle">结构预览模式</strong>
+          <p id="methodText">从 Unity 关卡场景的静态组合网格生成，只收录结构可辨认的场景，并保留真实布局和高度顺序；极端纵深会为展示适度压缩。运行时拼装地图、天空盒、粒子、动态机关、植被实例与烘焙光照暂不包含。</p>
         </div>
         <div class="notice">地图与模型来自你本机的游戏安装，仅用于个人研究和 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle、OBJ 或完整场景资源。</div>
       </section>
@@ -143,7 +143,7 @@
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
     import { createIcons, Map, Skull, Search, Rotate3d, RotateCcw, MoveUp } from 'lucide';
 
-    const assetRevision = '20260731-3';
+    const assetRevision = '20260731-27';
     const catalog = await fetch(`./map-catalog.json?v=${assetRevision}`, { cache: 'no-store' }).then(response => response.json());
     const canvas = document.querySelector('#mapCanvas');
     const stage = document.querySelector('#stage');
@@ -166,6 +166,8 @@
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true; controls.enablePan = false; controls.minDistance = 4; controls.maxDistance = 24;
     const loader = new GLTFLoader();
+    const textureLoader = new THREE.TextureLoader();
+    const terrainTextureCache = new globalThis.Map();
     const clock = new THREE.Clock();
     let activeEntry = catalog[0];
     let activeExpansion = '全部';
@@ -215,7 +217,7 @@
 
     function resetCamera() {
       if (activeRoot) activeRoot.rotation.set(0, 0, 0);
-      const distance = fitDistance(compact ? 1.28 : 1.18);
+      const distance = fitDistance(compact ? 1.0 : 0.88);
       const direction = new THREE.Vector3(1, compact ? 0.72 : 0.64, 1).normalize();
       controls.target.copy(mapView.center);
       camera.position.copy(mapView.center).addScaledVector(direction, distance);
@@ -225,7 +227,7 @@
 
     function topView() {
       if (activeRoot) activeRoot.rotation.set(0, 0, 0);
-      const distance = fitDistance(compact ? 1.32 : 1.2);
+      const distance = fitDistance(compact ? 1.08 : 0.96);
       controls.target.copy(mapView.center);
       camera.position.copy(mapView.center).add(new THREE.Vector3(0.01, distance, 0.01));
       applyCameraRange(distance);
@@ -250,21 +252,153 @@
       mapView.radius = Math.max(sphere.radius, 1);
     }
 
+    async function loadTerrainTextures(entry) {
+      if (terrainTextureCache.has(entry.slug)) return terrainTextureCache.get(entry.slug);
+      const texturePaths = entry.textures.rockSide
+        ? {
+            rockSide: entry.textures.rockSide,
+            rockTop: entry.textures.rockTop,
+            grass: entry.textures.grass,
+            dirt: entry.textures.dirt,
+          }
+        : {
+            rockSide: entry.textures.rock,
+            rockTop: entry.textures.rock,
+            grass: entry.textures.grass,
+            dirt: entry.textures.lichen,
+          };
+      const promise = Promise.all(Object.entries(texturePaths).map(async ([key, path]) => {
+        const texture = await textureLoader.loadAsync(`${path}?v=${assetRevision}`);
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = compact ? 2 : 4;
+        texture.needsUpdate = true;
+        return [key, texture];
+      })).then(pairs => Object.fromEntries(pairs));
+      terrainTextureCache.set(entry.slug, promise);
+      return promise;
+    }
+
+    function createTerrainMaterial(textures, entry) {
+      const material = new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        side: THREE.DoubleSide,
+        toneMapped: false,
+      });
+      material.onBeforeCompile = shader => {
+        shader.uniforms.terrainRockSide = { value: textures.rockSide };
+        shader.uniforms.terrainRockTop = { value: textures.rockTop };
+        shader.uniforms.terrainGrass = { value: textures.grass };
+        shader.uniforms.terrainDirt = { value: textures.dirt };
+        shader.uniforms.terrainSingleLayer = { value: entry.textureMode === 'dirt-only' ? 1 : 0 };
+        shader.vertexShader = shader.vertexShader
+          .replace('#include <common>', `#include <common>
+attribute vec4 color;
+varying vec3 vTerrainBlend;
+varying vec3 vTerrainPosition;
+varying vec3 vTerrainNormal;`)
+          .replace('#include <begin_vertex>', `#include <begin_vertex>
+vTerrainBlend = color.rgb;
+vTerrainPosition = position;
+vTerrainNormal = normal;`);
+        shader.fragmentShader = shader.fragmentShader
+          .replace('#include <common>', `#include <common>
+uniform sampler2D terrainRockSide;
+uniform sampler2D terrainRockTop;
+uniform sampler2D terrainGrass;
+uniform sampler2D terrainDirt;
+uniform float terrainSingleLayer;
+varying vec3 vTerrainBlend;
+varying vec3 vTerrainPosition;
+varying vec3 vTerrainNormal;
+
+vec3 sampleTerrainTriplanar(sampler2D terrainTexture, vec3 position, vec3 normal, float scale) {
+  vec3 projection = pow(abs(normalize(normal)), vec3(4.0));
+  projection /= max(projection.x + projection.y + projection.z, 0.0001);
+  vec3 alongX = texture2D(terrainTexture, fract(position.zy * scale)).rgb;
+  vec3 alongY = texture2D(terrainTexture, fract(position.xz * scale)).rgb;
+  vec3 alongZ = texture2D(terrainTexture, fract(position.xy * scale)).rgb;
+  return alongX * projection.x + alongY * projection.y + alongZ * projection.z;
+}
+
+vec3 sampleTerrainLayer(sampler2D terrainTexture, vec3 position, vec3 normal, float scale) {
+  vec3 primary = sampleTerrainTriplanar(terrainTexture, position, normal, scale);
+#ifdef MOBILE_TERRAIN
+  return primary;
+#else
+  vec3 secondary = sampleTerrainTriplanar(
+    terrainTexture,
+    position + vec3(1.73, 0.61, 2.19),
+    normal,
+    scale * 2.65
+  );
+  float secondaryValue = dot(secondary, vec3(0.2126, 0.7152, 0.0722));
+  return clamp(primary * mix(0.9, 1.12, secondaryValue), 0.0, 1.0);
+#endif
+}`)
+          .replace('#include <color_fragment>', `#include <color_fragment>
+vec3 terrainWeights = max(vTerrainBlend, vec3(0.0));
+float terrainWeightSum = terrainWeights.r + terrainWeights.g + terrainWeights.b;
+if (terrainWeightSum < 0.001) {
+  float upwardFacing = clamp(abs(normalize(vTerrainNormal).y), 0.0, 1.0);
+  float fallbackGrass = smoothstep(0.48, 0.78, upwardFacing);
+  terrainWeights = vec3(1.0 - fallbackGrass, fallbackGrass, 0.0);
+} else {
+  terrainWeights /= terrainWeightSum;
+}
+float rockTopWeight = pow(clamp(abs(normalize(vTerrainNormal).y), 0.0, 1.0), 3.0);
+vec3 rockSideColor = sampleTerrainLayer(terrainRockSide, vTerrainPosition, vTerrainNormal, 0.24);
+vec3 rockTopColor = sampleTerrainLayer(terrainRockTop, vTerrainPosition, vTerrainNormal, 0.24);
+vec3 rockColor = mix(rockSideColor, rockTopColor, rockTopWeight) * 1.12;
+vec3 grassColor = sampleTerrainLayer(terrainGrass, vTerrainPosition, vTerrainNormal, 0.38) * 1.08;
+vec3 dirtColor = sampleTerrainLayer(terrainDirt, vTerrainPosition, vTerrainNormal, 0.22) * 0.96;
+vec3 terrainColor = rockColor * terrainWeights.r + grassColor * terrainWeights.g + dirtColor * terrainWeights.b;
+terrainColor = mix(terrainColor, dirtColor, terrainSingleLayer);
+#ifndef MOBILE_TERRAIN
+vec3 surfaceDetail = sampleTerrainTriplanar(
+  terrainDirt,
+  vTerrainPosition + vec3(3.17, 1.29, 0.83),
+  vTerrainNormal,
+  0.82
+);
+float detailValue = dot(surfaceDetail, vec3(0.2126, 0.7152, 0.0722));
+terrainColor *= mix(0.92, 1.12, smoothstep(0.08, 0.72, detailValue));
+#endif
+diffuseColor.rgb = terrainColor * 1.28;`);
+      };
+      if (compact) material.defines = { MOBILE_TERRAIN: 1 };
+      material.customProgramCacheKey = () => `ror2-terrain-triplanar-v9-${compact ? 'mobile' : 'desktop'}`;
+      return material;
+    }
+
     async function loadMap(entry) {
       loading.textContent = '正在载入地图结构…';
       loading.classList.remove('hidden');
       disposeRoot();
       try {
-        const gltf = await loader.loadAsync(`${entry.model}?v=${assetRevision}`);
+        const texturePromise = entry.materialMode?.startsWith('triplanar-game-textures')
+          ? loadTerrainTextures(entry)
+          : Promise.resolve(null);
+        const [gltf, terrainTextures] = await Promise.all([
+          loader.loadAsync(`${entry.model}?v=${assetRevision}`),
+          texturePromise,
+        ]);
         const root = gltf.scene;
+        const terrainMaterial = terrainTextures ? createTerrainMaterial(terrainTextures, entry) : null;
         root.traverse(object => {
           if (!object.isMesh) return;
-          object.material = new THREE.MeshBasicMaterial({
-            vertexColors: Boolean(object.geometry.getAttribute('color')),
-            color: 0xffffff,
-            side: THREE.DoubleSide,
-            toneMapped: false,
-          });
+          if (!object.geometry.getAttribute('normal')) object.geometry.computeVertexNormals();
+          if (terrainMaterial) {
+            object.material = terrainMaterial;
+          } else {
+            object.material = new THREE.MeshStandardMaterial({
+              color: entry.palette.high,
+              roughness: 0.92,
+              metalness: 0,
+              side: THREE.DoubleSide,
+            });
+          }
           object.frustumCulled = false;
         });
         fitMap(root);
@@ -272,6 +406,7 @@
         activeRoot = root;
         canvas.dataset.loadedMap = entry.slug;
         resetCamera();
+        renderer.render(scene, camera);
         loading.classList.add('hidden');
       } catch (error) {
         console.error(error);
@@ -287,6 +422,11 @@
       document.querySelector('#sourceTriangles').textContent = entry.sourceTriangles.toLocaleString();
       document.querySelector('#mapTriangles').textContent = entry.mapTriangles.toLocaleString();
       document.querySelector('#mapSize').textContent = `${entry.sizeKB.toLocaleString()} KB`;
+      const restored = entry.materialMode?.startsWith('triplanar-game-textures');
+      document.querySelector('#methodTitle').textContent = restored ? '主题材质还原' : '结构预览模式';
+      document.querySelector('#methodText').textContent = restored
+        ? '从本机 Unity 地形预制体重建，并实时混合岩石侧面、岩石顶面、草地和泥土原始纹理；保留完整地形轮廓，单次只加载当前地图。'
+        : '从 Unity 关卡场景的静态组合网格生成，只收录结构可辨认的场景，并保留真实布局和高度顺序；极端纵深会为展示适度压缩。运行时拼装地图、天空盒、粒子、动态机关、植被实例与烘焙光照暂不包含。';
     }
 
     function filteredCatalog() {

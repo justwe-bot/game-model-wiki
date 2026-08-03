@@ -1,0 +1,1010 @@
+[
+  {
+    "slug": "crawler",
+    "name": "鼠兽",
+    "nameEn": "Crawler",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "从本机 Hades II Packfile 重建的鼠兽模型，保留主身体网格、87 根骨骼和 13 组动作；原包中的 Outline 外壳与 ShadowMesh 投影代理不作为实体模型展示。移动低模采用受 UV、材质边界和接缝约束的保形减面，并将动作采样降为 15 FPS 以控制手机端负载。",
+    "models": {
+      "original": "models/hades2-crawler-original.glb",
+      "low": "models/hades2-crawler-low.glb"
+    },
+    "textures": {
+      "original": "textures/hades2/crawler-original.png",
+      "low": "textures/hades2/crawler-low.png"
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "materialProfiles": {
+      "Mat_RatThugGiant": {
+        "color": "#ffffff",
+        "roughness": 0.9,
+        "metalness": 0.0
+      }
+    },
+    "materialSources": {
+      "Mat_RatThugGiant": {
+        "color": "Raw/3D/Enemy/RatThugGiant/Model/RatThugGiant_Color.png"
+      }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.75,
+    "modelSource": "RatThugGiant_Mesh",
+    "packSource": "Content/GR2/_Optimized/RatThugGiant.gpk",
+    "packSizeKB": 578,
+    "sourceTriangles": 3686,
+    "lowTriangles": 2136,
+    "sourceSizeKB": 1856,
+    "lowSizeKB": 1499,
+    "defaultClip": "Crawler_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "Crawler_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "Crawler_Base_Move_C_00", "kind": "movement" },
+      { "name": "冲撞蓄力", "clip": "Crawler_Base_AttackRushAntic_C_02", "kind": "attack" },
+      { "name": "冲撞", "clip": "Crawler_Base_AttackRushFire_C_02", "kind": "attack" },
+      { "name": "冲撞收招", "clip": "Crawler_Base_AttackRushReturnToIdle_C_02", "kind": "attack" },
+      { "name": "砸地蓄力", "clip": "Crawler_Base_AttackGroundPoundAntic_C_01", "kind": "attack" },
+      { "name": "砸地", "clip": "Crawler_Base_AttackGroundPoundFire_C_01", "kind": "attack" },
+      { "name": "砸地收招", "clip": "Crawler_Base_AttackGroundPoundReturnToIdle_C_01", "kind": "attack" },
+      { "name": "钻地", "clip": "Crawler_Base_BurrowIntoGround_C_00", "kind": "movement" },
+      { "name": "出土", "clip": "Crawler_Base_BurrowOutOfGround_C_00", "kind": "movement" },
+      { "name": "咆哮蓄力", "clip": "Crawler_Base_RoarAntic_C_00", "kind": "attack" },
+      { "name": "咆哮", "clip": "Crawler_Base_RoarLoop_C_00", "kind": "attack" },
+      { "name": "咆哮收招", "clip": "Crawler_Base_RoarReturnToIdle_C_00", "kind": "attack" }
+    ],
+    "skills": [
+      {
+        "name": "冲撞",
+        "attackType": "位移攻击",
+        "range": "近距离",
+        "description": "蓄力后向目标方向冲撞，动作由蓄力、命中段和收招三段组成。",
+        "clip": "Crawler_Base_AttackRushFire_C_02"
+      },
+      {
+        "name": "砸地",
+        "attackType": "范围攻击",
+        "range": "近距离",
+        "description": "前肢抬起后重击地面，完整动作包含明显的重心变化和落地阶段。",
+        "clip": "Crawler_Base_AttackGroundPoundFire_C_01"
+      },
+      {
+        "name": "咆哮",
+        "attackType": "召唤动作",
+        "range": "自身周围",
+        "description": "小头目版本使用的持续咆哮动作，可与召唤表现和音效事件配合。",
+        "clip": "Crawler_Base_RoarLoop_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "fish-swarmer",
+    "name": "鱼群怪",
+    "nameEn": "Fish Swarmer",
+    "tier": "普通飞行",
+    "status": "已转换",
+    "available": true,
+    "summary": "来自 Oceanus 区域的小型飞行鱼怪。实体网格保留头部、上下颚、双侧胸鳍和尾鳍，Outline 外壳与 ShadowMesh 投影代理不作为实体展示。移动低模采用 72% 的保守保形比例，避免不足千面的源模型在手机优化中丢失薄鳍和嘴部轮廓。",
+    "models": {
+      "original": "models/hades2-fish-swarmer-original.glb",
+      "low": "models/hades2-fish-swarmer-low.glb"
+    },
+    "textures": { "original": "textures/hades2/fish-swarmer-original.png", "low": "textures/hades2/fish-swarmer-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_FishSwarmer": {
+        "color": "#ffffff",
+        "roughness": 0.58,
+        "metalness": 0.0
+      }
+    },
+    "materialSources": {
+      "Mat_FishSwarmer": {
+        "color": "Raw/3D/Enemy/FishSwarmer/Model/FishSwarmer_Color.png"
+      }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "modelRotationDeg": [90, 0, 0],
+    "framingScale": 0.92,
+    "modelSource": "FishSwarmer_Mesh",
+    "packSource": "Content/GR2/_Optimized/FishSwarmer.gpk",
+    "packSizeKB": 136,
+    "sourceTriangles": 906,
+    "lowTriangles": 652,
+    "sourceSizeKB": 248,
+    "lowSizeKB": 216,
+    "defaultClip": "FishSwarmer_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "FishSwarmer_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "FishSwarmer_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "FishSwarmer_Base_MoveStart_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "FishSwarmer_Base_MoveStop_C_00", "kind": "movement" },
+      { "name": "撕咬蓄力", "clip": "FishSwarmer_Base_BiteAntic_C_00", "kind": "attack" },
+      { "name": "撕咬", "clip": "FishSwarmer_Base_BiteFire_C_00", "kind": "attack" },
+      { "name": "撕咬收招", "clip": "FishSwarmer_Base_BiteReturnToIdle_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "FishSwarmer_Base_GetHit_C_00", "kind": "hurt" },
+      { "name": "生成", "clip": "FishSwarmer_Base_Spawn_C_00", "kind": "spawn" }
+    ],
+    "skills": [
+      {
+        "name": "撕咬",
+        "attackType": "近战突袭",
+        "range": "贴身",
+        "description": "张开上下颚后向目标快速咬合，鳍和尾部在蓄力与收招阶段保持连续摆动。",
+        "clip": "FishSwarmer_Base_BiteFire_C_00"
+      },
+      {
+        "name": "快速游动",
+        "attackType": "飞行位移",
+        "range": "中距离",
+        "description": "使用连续摆尾动作追踪目标，Wiki 中以循环移动片段展示完整身体轮廓。",
+        "clip": "FishSwarmer_Base_Move_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "jellyfish",
+    "name": "水母",
+    "nameEn": "Jellyfish",
+    "tier": "普通飞行",
+    "status": "已转换",
+    "available": true,
+    "summary": "保留伞体、中央触手和四组外侧触手的悬浮敌人，共 18 根骨骼和 10 组动作。移动低模保留 75% 三角面，并保护 UV、接缝和材质边界，优先保证所有细触手在待机、游动和刺击极端姿态下连续。",
+    "models": {
+      "original": "models/hades2-jellyfish-original.glb",
+      "low": "models/hades2-jellyfish-low.glb"
+    },
+    "textures": { "original": "textures/hades2/jellyfish-original.png", "low": "textures/hades2/jellyfish-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_JellyFish": {
+        "color": "#ffffff",
+        "emissiveColor": "#0b3b33",
+        "emissiveIntensity": 0.28,
+        "lowEmissiveIntensity": 0.16,
+        "roughness": 0.34,
+        "metalness": 0.0,
+        "transparent": true,
+        "opacity": 0.78,
+        "depthWrite": false,
+        "doubleSided": true
+      }
+    },
+    "materialSources": {
+      "Mat_JellyFish": {
+        "color": "Raw/3D/Enemy/JellyFish/Model/JellyFish_Color.png",
+        "transparency": "Raw/3D/Enemy/JellyFish/Model/JellyFish_Color.png"
+      }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.84,
+    "modelSource": "JellyFish_Mesh",
+    "packSource": "Content/GR2/_Optimized/JellyFish.gpk",
+    "packSizeKB": 156,
+    "sourceTriangles": 1134,
+    "lowTriangles": 850,
+    "sourceSizeKB": 442,
+    "lowSizeKB": 354,
+    "defaultClip": "JellyFish_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "JellyFish_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "JellyFish_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "JellyFish_Base_Move_Start_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "JellyFish_Base_Move_Stop_C_00", "kind": "movement" },
+      { "name": "刺击蓄力", "clip": "JellyFish_Base_StingPreFire_C_00", "kind": "attack" },
+      { "name": "刺击", "clip": "JellyFish_Base_StingFire_C_00", "kind": "attack" },
+      { "name": "刺击收招", "clip": "JellyFish_Base_StingPostFire_C_00", "kind": "attack" },
+      { "name": "格挡", "clip": "JellyFish_Base_Deflect_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "JellyFish_Base_OnHit_C_00", "kind": "hurt" },
+      { "name": "生成", "clip": "JellyFish_Base_Spawn_C_00", "kind": "spawn" }
+    ],
+    "skills": [
+      {
+        "name": "触手刺击",
+        "attackType": "定向攻击",
+        "range": "近距离",
+        "description": "伞体收缩蓄力后驱动触手向目标刺出，攻击前后均保留多条触手的独立摆动。",
+        "clip": "JellyFish_Base_StingFire_C_00"
+      },
+      {
+        "name": "偏转",
+        "attackType": "防御动作",
+        "range": "自身",
+        "description": "收拢伞体和触手形成短暂防御姿态，用于检查低模在紧缩动作中的穿插与轮廓完整性。",
+        "clip": "JellyFish_Base_Deflect_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "automaton-beamer",
+    "name": "自动机射手",
+    "nameEn": "Automaton Beamer",
+    "tier": "大型",
+    "status": "已转换",
+    "available": true,
+    "summary": "机械悬浮敌人，实体网格包含头部、核心球体与多组可开合装甲面板，共 13 根骨骼和 12 组动作。移动低模保留 65% 三角面，重点约束面板边界、硬表面接缝与核心轮廓，避免机械结构在手机端减面后粘连。",
+    "models": {
+      "original": "models/hades2-automaton-beamer-original.glb",
+      "low": "models/hades2-automaton-beamer-low.glb"
+    },
+    "textures": { "original": "textures/hades2/automaton-beamer-original.png", "low": "textures/hades2/automaton-beamer-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "MAT_AutomatonBeamer": {
+        "color": "#ffffff",
+        "emissiveColor": "#21484e",
+        "emissiveIntensity": 0.17,
+        "lowEmissiveIntensity": 0.1,
+        "roughness": 0.48,
+        "metalness": 0.68
+      }
+    },
+    "materialSources": {
+      "MAT_AutomatonBeamer": {
+        "color": "Raw/3D/Enemy/AutomantonBeamer/Model/AutomatonBeamer_Color.png"
+      }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.88,
+    "modelSource": "AutomatonBeamer_Mesh",
+    "packSource": "Content/GR2/_Optimized/AutomatonBeamer.gpk",
+    "packSizeKB": 237,
+    "sourceTriangles": 2245,
+    "lowTriangles": 1459,
+    "sourceSizeKB": 624,
+    "lowSizeKB": 465,
+    "defaultClip": "AutomatonBeamer_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "AutomatonBeamer_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "AutomatonBeamer_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "AutomatonBeamer_Base_Move_Start_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "AutomatonBeamer_Base_Move_Stop_C_00", "kind": "movement" },
+      { "name": "防御展开", "clip": "AutomatonBeamer_Base_DefenseEnter_C_00", "kind": "attack" },
+      { "name": "防御循环", "clip": "AutomatonBeamer_Base_DefenseLoop_C_00", "kind": "idle" },
+      { "name": "防御收起", "clip": "AutomatonBeamer_Base_DefenseExit_C_00", "kind": "attack" },
+      { "name": "射线蓄力", "clip": "AutomatonBeamer_Base_RailPreFire_C_00", "kind": "attack" },
+      { "name": "射线持续", "clip": "AutomatonBeamer_Base_RailFireLoop_C_00", "kind": "attack" },
+      { "name": "射线收招", "clip": "AutomatonBeamer_Base_RailPostFire_C_00", "kind": "attack" },
+      { "name": "扫描", "clip": "AutomatonBeamer_Base_Scan_C_00", "kind": "other" },
+      { "name": "受击", "clip": "AutomatonBeamer_Base_OnHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "轨道射线",
+        "attackType": "持续远程",
+        "range": "远距离",
+        "description": "装甲面板打开并持续引导射线；角色 GLB 保留机械蓄力动作，不包含独立光束 VFX。",
+        "clip": "AutomatonBeamer_Base_RailFireLoop_C_00"
+      },
+      {
+        "name": "装甲防御",
+        "attackType": "防御姿态",
+        "range": "自身",
+        "description": "多组面板围绕核心闭合，适合检查低模面板间隙和硬表面轮廓是否完整。",
+        "clip": "AutomatonBeamer_Base_DefenseLoop_C_00"
+      },
+      {
+        "name": "扫描",
+        "attackType": "索敌动作",
+        "range": "周围",
+        "description": "旋转头部和面板寻找目标，为射线攻击建立方向。",
+        "clip": "AutomatonBeamer_Base_Scan_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "assassin",
+    "name": "割喉者",
+    "nameEn": "Assassin",
+    "tier": "精英",
+    "status": "已转换",
+    "available": true,
+    "summary": "冥界近战刺客。导出的可见身体网格保留 3,685 个三角面、骨骼蒙皮和隐匿、冲刺、连刺等 11 组动作；移动低模在保留双刀、四肢和披挂轮廓的前提下压缩至 2,284 面。",
+    "models": {
+      "original": "models/hades2-assassin-original.glb",
+      "low": "models/hades2-assassin-low.glb"
+    },
+    "textures": { "original": "textures/hades2/assassin-original.png", "low": "textures/hades2/assassin-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_Assassin": {
+        "color": "#ffffff",
+        "roughness": 0.72,
+        "metalness": 0.05
+      }
+    },
+    "materialSources": {
+      "Mat_Assassin": { "binding": "GR2 material: Mat_Assassin" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.84,
+    "modelSource": "Assassin_Mesh",
+    "packSource": "Content/GR2/_Optimized/Assassin.gpk",
+    "packSizeKB": 548,
+    "sourceTriangles": 3685,
+    "lowTriangles": 2284,
+    "sourceSizeKB": 1193,
+    "lowSizeKB": 988,
+    "defaultClip": "Assassin_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "Assassin_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "Assassin_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "Assassin_Base_MoveStart_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "Assassin_Base_MoveStop_C_00", "kind": "movement" },
+      { "name": "冲刺", "clip": "Assassin_Base_Dash_C_00", "kind": "movement" },
+      { "name": "连刺蓄力", "clip": "Assassin_Base_MultiStabPreFire_C_00", "kind": "attack" },
+      { "name": "连刺", "clip": "Assassin_Base_MultiStabFire_C_00", "kind": "attack" },
+      { "name": "连刺收招", "clip": "Assassin_Base_MultiStabPreReturnToIdle_C_00", "kind": "attack" },
+      { "name": "隐匿", "clip": "Assassin_Base_StalkEntrance_C_00", "kind": "other" },
+      { "name": "显形", "clip": "Assassin_Base_StalkExit_C_00", "kind": "other" },
+      { "name": "受击", "clip": "Assassin_Base_GetHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "多段连刺",
+        "attackType": "近战连击",
+        "range": "贴身",
+        "description": "双刀前探后连续刺击。低模保留刀刃、手臂与躯干之间的分离轮廓，适合与原模并排检查。",
+        "clip": "Assassin_Base_MultiStabFire_C_00"
+      },
+      {
+        "name": "冲刺",
+        "attackType": "快速位移",
+        "range": "中距离",
+        "description": "高速切入动作；查看器跟随根骨骼位移，使模型始终保持在镜头内。",
+        "clip": "Assassin_Base_Dash_C_00"
+      },
+      {
+        "name": "隐匿",
+        "attackType": "潜行姿态",
+        "range": "自身",
+        "description": "游戏内透明与特效由运行时处理，Wiki 保留本体姿态和显形骨骼动作。",
+        "clip": "Assassin_Base_StalkEntrance_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "fishman-melee",
+    "name": "潜伏者",
+    "nameEn": "Fishman Melee",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "俄刻阿诺斯的近战鱼人，保留躯干、鳍、手持长柄武器和完整骨架。原模 8,316 面，低模 5,320 面；减面受 UV、材质边界、硬边和蒙皮权重约束，不以固定比例牺牲武器或肢体。",
+    "models": {
+      "original": "models/hades2-fishman-melee-original.glb",
+      "low": "models/hades2-fishman-melee-low.glb"
+    },
+    "textures": { "original": null, "low": null },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_FishmanMelee": {
+        "color": "#376f69",
+        "roughness": 0.64,
+        "metalness": 0.1
+      }
+    },
+    "materialSources": {
+      "Mat_FishmanMelee": { "binding": "GR2 material: Mat_FishmanMelee" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.8,
+    "modelSource": "FishmanMelee_Mesh",
+    "packSource": "Content/GR2/_Optimized/FishmanMelee.gpk",
+    "packSizeKB": 644,
+    "sourceTriangles": 8316,
+    "lowTriangles": 5320,
+    "sourceSizeKB": 1971,
+    "lowSizeKB": 1657,
+    "defaultClip": "FishmanMelee_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "FishmanMelee_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "FishmanMelee_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "FishmanMelee_Base_MoveStop_C_00", "kind": "movement" },
+      { "name": "贯刺蓄力", "clip": "FishmanMelee_Base_ImpaleAntic_C_00", "kind": "attack" },
+      { "name": "贯刺", "clip": "FishmanMelee_Base_ImpaleFire_C_00", "kind": "attack" },
+      { "name": "贯刺收招", "clip": "FishmanMelee_Base_ImpaleReturnToIdle_C_00", "kind": "attack" },
+      { "name": "勾拉挥砍", "clip": "FishmanMelee_Base_PullSwingFire_C_00", "kind": "attack" },
+      { "name": "挥砍收招", "clip": "FishmanMelee_Base_PullSwingReturnToIdle_C_00", "kind": "attack" },
+      { "name": "生成", "clip": "FishmanMelee_Base_Spawn_C_00", "kind": "spawn" },
+      { "name": "受击", "clip": "FishmanMelee_Base_GetHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "贯刺",
+        "attackType": "近战突刺",
+        "range": "近距离",
+        "description": "长柄武器向前贯刺。动作极限帧仍保留武器与手部连接，作为低模完整性检查点。",
+        "clip": "FishmanMelee_Base_ImpaleFire_C_00"
+      },
+      {
+        "name": "勾拉挥砍",
+        "attackType": "近战横扫",
+        "range": "近距离",
+        "description": "先拉回武器再完成横向挥砍，展示鳍、手臂和武器的复合蒙皮。",
+        "clip": "FishmanMelee_Base_PullSwingFire_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "fishman-ranged",
+    "name": "海河马",
+    "nameEn": "Fishman Ranged",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "俄刻阿诺斯的远程鱼人。该模型含 14 组动作，覆盖常规射击、连续喷吐和自毁；低模从 4,050 面降至 2,589 面，保留头部、躯干、鳍和攻击姿态的外轮廓。",
+    "models": {
+      "original": "models/hades2-fishman-ranged-original.glb",
+      "low": "models/hades2-fishman-ranged-low.glb"
+    },
+    "textures": { "original": "textures/hades2/fishman-ranged-original.png", "low": "textures/hades2/fishman-ranged-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_FishmanRanged": {
+        "color": "#ffffff",
+        "roughness": 0.68,
+        "metalness": 0.04
+      }
+    },
+    "materialSources": {
+      "Mat_FishmanRanged": { "binding": "GR2 material: Mat_FishmanRanged" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.86,
+    "modelSource": "FishmanRanged_Mesh",
+    "packSource": "Content/GR2/_Optimized/FishmanRanged.gpk",
+    "packSizeKB": 559,
+    "sourceTriangles": 4050,
+    "lowTriangles": 2589,
+    "sourceSizeKB": 1887,
+    "lowSizeKB": 1470,
+    "defaultClip": "FishmanRanged_Base_Idle_01",
+    "animations": [
+      { "name": "待机", "clip": "FishmanRanged_Base_Idle_01", "kind": "idle" },
+      { "name": "移动", "clip": "FishmanRanged_Base_Move_01", "kind": "movement" },
+      { "name": "移动起步", "clip": "FishmanRanged_Base_MoveStart_01", "kind": "movement" },
+      { "name": "移动停止", "clip": "FishmanRanged_Base_MoveStop_01", "kind": "movement" },
+      { "name": "射击蓄力", "clip": "FishmanRanged_Base_AttackCharge_01", "kind": "attack" },
+      { "name": "射击持续", "clip": "FishmanRanged_Base_AttackFireLoop_01", "kind": "attack" },
+      { "name": "射击收招", "clip": "FishmanRanged_Base_AttackReturnToIdle_01", "kind": "attack" },
+      { "name": "喷吐蓄力", "clip": "FishmanRanged_Base_AttackSpitCharge_00", "kind": "attack" },
+      { "name": "喷吐起始", "clip": "FishmanRanged_Base_AttackSpitFireInitial_00", "kind": "attack" },
+      { "name": "连续喷吐", "clip": "FishmanRanged_Base_AttackSpitFireLoop_00", "kind": "attack" },
+      { "name": "喷吐收招", "clip": "FishmanRanged_Base_AttackSpitReturnToIdle_00", "kind": "attack" },
+      { "name": "自毁", "clip": "FishmanRanged_Base_SelfDestruct_01", "kind": "death" },
+      { "name": "生成", "clip": "FishmanRanged_Base_Spawn_01", "kind": "spawn" },
+      { "name": "受击", "clip": "FishmanRanged_Base_GetHit_01", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "连续喷吐",
+        "attackType": "持续远程",
+        "range": "中距离",
+        "description": "骨骼动作保留连续喷吐姿态；弹体和液体粒子属于独立 VFX，不包含在角色 GLB 内。",
+        "clip": "FishmanRanged_Base_AttackSpitFireLoop_00"
+      },
+      {
+        "name": "自毁",
+        "attackType": "爆发动作",
+        "range": "自身周围",
+        "description": "展示最终收缩姿态，便于检查低模在强形变下的轮廓连续性。",
+        "clip": "FishmanRanged_Base_SelfDestruct_01"
+      }
+    ]
+  },
+  {
+    "slug": "harpy-talon-cutter",
+    "name": "利爪鹰身女妖",
+    "nameEn": "Harpy Talon Cutter",
+    "tier": "普通飞行",
+    "status": "已转换",
+    "available": true,
+    "summary": "高速飞行的鹰身女妖。原模含 4,822 个三角面，以及完整的翅膀、躯干和利爪蒙皮；移动版保留完整网格并通过动作数据压缩降低体积。当前图鉴使用稳定的绑定姿态展示，避免原始动作骨架重定向造成身体部件分离。",
+    "models": {
+      "original": "models/hades2-harpy-talon-cutter-original.glb",
+      "low": "models/hades2-harpy-talon-cutter-low.glb"
+    },
+    "textures": { "original": "textures/hades2/harpy-talon-cutter-original.png", "low": "textures/hades2/harpy-talon-cutter-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_HarpyTalonCutter": {
+        "color": "#ffffff",
+        "roughness": 0.7,
+        "metalness": 0.03
+      }
+    },
+    "materialSources": {
+      "Mat_HarpyTalonCutter": { "binding": "GR2 material: Mat_HarpyTalonCutter" }
+    },
+    "preserveMaterials": true,
+    "animationPreviewDisabled": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "modelRotationDeg": [0, -90, 0],
+    "framingScale": 0.78,
+    "modelSource": "HarpyTalonCutter_Mesh",
+    "packSource": "Content/GR2/_Optimized/HarpyTalonCutter.gpk",
+    "packSizeKB": 782,
+    "sourceTriangles": 4822,
+    "lowTriangles": 4822,
+    "sourceSizeKB": 1511,
+    "lowSizeKB": 1197,
+    "defaultClip": "HarpyTalonCutter_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "HarpyTalonCutter_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "HarpyTalonCutter_Base_Move_C_00", "kind": "movement" },
+      { "name": "左冲", "clip": "HarpyTalonCutter_Base_DashLeft_C_00", "kind": "movement" },
+      { "name": "右冲", "clip": "HarpyTalonCutter_Base_DashRight_C_00", "kind": "movement" },
+      { "name": "俯冲", "clip": "HarpyTalonCutter_Base_Swoop_C_00", "kind": "movement" },
+      { "name": "切割蓄力", "clip": "HarpyTalonCutter_Base_SlicePreFire_C_00", "kind": "attack" },
+      { "name": "切割", "clip": "HarpyTalonCutter_Base_SliceFire_C_00", "kind": "attack" },
+      { "name": "切割收招", "clip": "HarpyTalonCutter_Base_SlicePostFire_C_00", "kind": "attack" },
+      { "name": "振翅蓄力", "clip": "HarpyTalonCutter_Base_FlapPreFire_C_00", "kind": "attack" },
+      { "name": "振翅", "clip": "HarpyTalonCutter_Base_FlapFire_C_00", "kind": "attack" },
+      { "name": "振翅收招", "clip": "HarpyTalonCutter_Base_FlapPostFire_C_00", "kind": "attack" },
+      { "name": "替代振翅蓄力", "clip": "HarpyTalonCutter_Base_FlapPreFire_Alt_C_00", "kind": "attack" },
+      { "name": "替代振翅", "clip": "HarpyTalonCutter_Base_FlapFire_Alt_C_00", "kind": "attack" },
+      { "name": "替代振翅收招", "clip": "HarpyTalonCutter_Base_FlapPostFire_Alt_C_00", "kind": "attack" },
+      { "name": "投掷风环蓄力", "clip": "HarpyDropper_Base_WindPreFire_C_00", "kind": "attack" },
+      { "name": "投掷风环持续", "clip": "HarpyDropper_Base_WindFireLoop_C_00", "kind": "attack" },
+      { "name": "投掷风环收招", "clip": "HarpyDropper_Base_WindPostFire_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "HarpyTalonCutter_Base_GetHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "利爪切割",
+        "attackType": "飞行近战",
+        "range": "近距离",
+        "description": "张开羽翼并挥动利爪切割目标。低模保留翼尖、腿爪和羽翼边缘的独立轮廓。",
+        "clip": "HarpyTalonCutter_Base_SliceFire_C_00"
+      },
+      {
+        "name": "俯冲",
+        "attackType": "空中位移",
+        "range": "中距离",
+        "description": "快速向目标俯冲，适合比较两档模型在飞行姿态中的翼面完整性。",
+        "clip": "HarpyTalonCutter_Base_Swoop_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "screamer",
+    "name": "哀嚎者",
+    "nameEn": "Screamer",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "冥界地表的重型人形敌人，原模 7,988 面，低模 5,111 面。动作包包含吼叫蓄力、释放、收招以及转向动作；低模在肢体、头部和躯干的强形变位置保留足够面数。",
+    "models": {
+      "original": "models/hades2-screamer-original.glb",
+      "low": "models/hades2-screamer-low.glb"
+    },
+    "textures": { "original": "textures/hades2/screamer-original.png", "low": "textures/hades2/screamer-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_Screamer": {
+        "color": "#ffffff",
+        "emissiveColor": "#2c1116",
+        "emissiveIntensity": 0.1,
+        "lowEmissiveIntensity": 0.06,
+        "roughness": 0.76,
+        "metalness": 0.02
+      }
+    },
+    "materialSources": {
+      "Mat_Screamer": { "binding": "GR2 material: Mat_Screamer" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.76,
+    "modelSource": "Screamer_Mesh",
+    "packSource": "Content/GR2/_Optimized/Screamer.gpk",
+    "packSizeKB": 1059,
+    "sourceTriangles": 7988,
+    "lowTriangles": 5111,
+    "sourceSizeKB": 1566,
+    "lowSizeKB": 1411,
+    "defaultClip": "Screamer_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "Screamer_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "Screamer_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "Screamer_Base_MoveStart_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "Screamer_Base_MoveStop_C_00", "kind": "movement" },
+      { "name": "左转", "clip": "Screamer_Base_MoveTurnE90_C_00", "kind": "movement" },
+      { "name": "右转", "clip": "Screamer_Base_MoveTurnW90_C_00", "kind": "movement" },
+      { "name": "掉头", "clip": "Screamer_Base_MoveTurn180_C_00", "kind": "movement" },
+      { "name": "吼叫蓄力", "clip": "Screamer_Base_PreFire_C_00", "kind": "attack" },
+      { "name": "吼叫", "clip": "Screamer_Base_ScreamFire_C_00", "kind": "attack" },
+      { "name": "吼叫收招", "clip": "Screamer_Base_EndFire_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "Screamer_Base_GetHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "哀嚎",
+        "attackType": "范围攻击",
+        "range": "自身周围",
+        "description": "本体动作完整保留蓄力到释放的头部和躯干形变；声波与其它独立效果不包含在 GLB 中。",
+        "clip": "Screamer_Base_ScreamFire_C_00"
+      },
+      {
+        "name": "掉头",
+        "attackType": "移动转向",
+        "range": "自身",
+        "description": "180 度转向展示下肢和躯干的蒙皮连续性。",
+        "clip": "Screamer_Base_MoveTurn180_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "water-elemental",
+    "name": "进水骷髅头",
+    "nameEn": "Water Elemental",
+    "tier": "普通飞行",
+    "status": "已转换",
+    "available": true,
+    "summary": "水元素敌人。原模 1,555 面、低模 1,057 面，保留完整实体轮廓、UV、蒙皮和撕咬、水爆、复制等 12 组动作；低模采用半透明水体材质并降低发光强度，以适配手机端。",
+    "models": {
+      "original": "models/hades2-water-elemental-original.glb",
+      "low": "models/hades2-water-elemental-low.glb"
+    },
+    "textures": { "original": "textures/hades2/water-elemental-original.png", "low": "textures/hades2/water-elemental-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "MAT_WaterElemental": {
+        "color": "#ffffff",
+        "emissiveColor": "#0d4857",
+        "emissiveIntensity": 0.36,
+        "lowEmissiveIntensity": 0.2,
+        "roughness": 0.3,
+        "metalness": 0.0,
+        "transparent": true,
+        "opacity": 0.84,
+        "depthWrite": false,
+        "doubleSided": true
+      }
+    },
+    "materialSources": {
+      "MAT_WaterElemental": { "binding": "GR2 material: MAT_WaterElemental" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.92,
+    "modelSource": "WaterElemental_Mesh",
+    "packSource": "Content/GR2/_Optimized/WaterElemental.gpk",
+    "packSizeKB": 116,
+    "sourceTriangles": 1555,
+    "lowTriangles": 1057,
+    "sourceSizeKB": 280,
+    "lowSizeKB": 268,
+    "defaultClip": "WaterElemental_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "WaterElemental_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "WaterElemental_Base_Walk_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "WaterElemental_Base_WalkStart_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "WaterElemental_Base_WalkStop_C_00", "kind": "movement" },
+      { "name": "撕咬蓄力", "clip": "WaterElemental_Base_BitePreFire_C_00", "kind": "attack" },
+      { "name": "撕咬", "clip": "WaterElemental_Base_Bite_C_00", "kind": "attack" },
+      { "name": "撕咬收招", "clip": "WaterElemental_Base_BiteReturnToIdle_C_00", "kind": "attack" },
+      { "name": "水爆蓄力", "clip": "WaterElemental_Base_WaterburstPreFire_C_00", "kind": "attack" },
+      { "name": "水爆", "clip": "WaterElemental_Base_Waterburst_C_00", "kind": "attack" },
+      { "name": "水爆收招", "clip": "WaterElemental_Base_WaterburstReturnToIdle_C_00", "kind": "attack" },
+      { "name": "复制", "clip": "WaterElemental_Base_Duplicate_C_00", "kind": "other" },
+      { "name": "受击", "clip": "WaterElemental_Base_OnHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "水爆",
+        "attackType": "范围攻击",
+        "range": "近距离",
+        "description": "水体收缩后释放。两档模型均使用半透明和低强度发光材质，低模不会退回为无色实体。",
+        "clip": "WaterElemental_Base_Waterburst_C_00"
+      },
+      {
+        "name": "复制",
+        "attackType": "特殊动作",
+        "range": "自身",
+        "description": "保留本体复制动作；额外生成的单位与水花特效属于游戏运行时效果。",
+        "clip": "WaterElemental_Base_Duplicate_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "water-unit",
+    "name": "海蛇",
+    "nameEn": "Water Unit",
+    "tier": "大型",
+    "status": "已转换",
+    "available": true,
+    "summary": "海蛇及其大型变体共用的一组骨骼资源。GLB 保留常规海蛇与 MegaWaterUnit 的攻击动作，原模 3,808 面、低模 2,513 面；低模在保留头部、脊刺和长躯干分段的前提下压缩。",
+    "models": {
+      "original": "models/hades2-water-unit-original.glb",
+      "low": "models/hades2-water-unit-low.glb"
+    },
+    "textures": { "original": "textures/hades2/water-unit-original.png", "low": "textures/hades2/water-unit-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_WaterUnit": {
+        "color": "#ffffff",
+        "emissiveColor": "#103f4f",
+        "emissiveIntensity": 0.18,
+        "lowEmissiveIntensity": 0.1,
+        "roughness": 0.4,
+        "metalness": 0.0
+      }
+    },
+    "materialSources": {
+      "Mat_WaterUnit": { "binding": "GR2 material: Mat_WaterUnit" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.7,
+    "modelSource": "WaterUnit_Mesh / MegaWaterUnit_Mesh",
+    "packSource": "Content/GR2/_Optimized/WaterUnit.gpk",
+    "packSizeKB": 716,
+    "sourceTriangles": 3808,
+    "lowTriangles": 2513,
+    "sourceSizeKB": 1119,
+    "lowSizeKB": 954,
+    "defaultClip": "WaterUnit_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "WaterUnit_Base_Idle_C_00", "kind": "idle" },
+      { "name": "下潜", "clip": "WaterUnit_Base_Dive_C_00", "kind": "movement" },
+      { "name": "上浮", "clip": "WaterUnit_Base_DiveResurface_C_00", "kind": "movement" },
+      { "name": "投掷蓄力", "clip": "WaterUnit_Base_LobAttackAntic_C_00", "kind": "attack" },
+      { "name": "投掷", "clip": "WaterUnit_Base_LobAttackFire_C_00", "kind": "attack" },
+      { "name": "投掷收招", "clip": "WaterUnit_Base_LobAttackReturnToIdle_C_00", "kind": "attack" },
+      { "name": "喷吐蓄力", "clip": "WaterUnit_Base_SpitAttackAntic_C_00", "kind": "attack" },
+      { "name": "喷吐起始", "clip": "WaterUnit_Base_SpitAttackFireInitial_C_00", "kind": "attack" },
+      { "name": "连续喷吐", "clip": "WaterUnit_Base_SpitAttackFireLoop_C_00", "kind": "attack" },
+      { "name": "喷吐收招", "clip": "WaterUnit_Base_SpitAttackReturnToIdle_C_00", "kind": "attack" },
+      { "name": "大型缠绕蓄力", "clip": "MegaWaterUnit_Base_CoilAntic_C_00", "kind": "attack" },
+      { "name": "大型缠绕", "clip": "MegaWaterUnit_Base_CoilFire_C_00", "kind": "attack" },
+      { "name": "大型缠绕收招", "clip": "MegaWaterUnit_Base_CoilReturnToIdle_C_00", "kind": "attack" },
+      { "name": "大型咆哮起始", "clip": "MegaWaterUnit_Base_RoarIntro_C_00", "kind": "attack" },
+      { "name": "大型咆哮", "clip": "MegaWaterUnit_Base_Roar_C_00", "kind": "attack" },
+      { "name": "大型咆哮收招", "clip": "MegaWaterUnit_Base_RoarReturnToIdle_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "WaterUnit_Base_GetHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "连续喷吐",
+        "attackType": "持续远程",
+        "range": "中距离",
+        "description": "海蛇持续喷吐的骨骼动作。投射物与水流粒子不在模型文件中，角色轮廓和材质发光完整保留。",
+        "clip": "WaterUnit_Base_SpitAttackFireLoop_C_00"
+      },
+      {
+        "name": "大型缠绕",
+        "attackType": "范围攻击",
+        "range": "近距离",
+        "description": "大型变体的缠绕动作，用于检查长躯干低模在极端卷曲下的分段与蒙皮连续性。",
+        "clip": "MegaWaterUnit_Base_CoilFire_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "brawler",
+    "name": "蹉跎者",
+    "nameEn": "Brawler",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "厄瑞玻斯区域的近战敌人，以拖曳身体后的大范围挥击压迫近身空间。模型保留完整躯干、手臂和尾部轮廓，共 75 根骨骼和 7 组动作；游戏运行时也使用移动循环作为待机表现。",
+    "models": {
+      "original": "models/hades2-brawler-original.glb",
+      "low": "models/hades2-brawler-low.glb"
+    },
+    "textures": { "original": "textures/hades2/brawler-original.png", "low": "textures/hades2/brawler-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_Brawler": {
+        "color": "#ffffff",
+        "roughness": 0.72,
+        "metalness": 0.0
+      }
+    },
+    "materialSources": {
+      "Mat_Brawler": { "color": "Content/Packages/1080p/BiomeF.pkg: GR2/Brawler_Color" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.82,
+    "modelSource": "Brawler_Mesh",
+    "packSource": "Content/GR2/_Optimized/Brawler.gpk",
+    "packSizeKB": 367,
+    "sourceTriangles": 4001,
+    "lowTriangles": 2719,
+    "sourceSizeKB": 1426,
+    "lowSizeKB": 1140,
+    "defaultClip": "Brawler_Base_Move_C_00",
+    "animations": [
+      { "name": "待机 / 移动", "clip": "Brawler_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "Brawler_Base_MoveStart_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "Brawler_Base_MoveStop_C_00", "kind": "movement" },
+      { "name": "挥击蓄力", "clip": "Brawler_Base_AttackAntic_C_00", "kind": "attack" },
+      { "name": "挥击", "clip": "Brawler_Base_Attack_C_00", "kind": "attack" },
+      { "name": "挥击收招", "clip": "Brawler_Base_AttackToIdle_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "Brawler_Base_HitStun_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "横扫挥击",
+        "attackType": "近战范围",
+        "range": "近距离",
+        "description": "先明显后仰蓄力，再以长臂横扫前方区域；目录保留蓄力、命中和收招三个阶段。",
+        "clip": "Brawler_Base_Attack_C_00"
+      },
+      {
+        "name": "重击硬直",
+        "attackType": "受击动作",
+        "range": "自身",
+        "description": "展示躯干和长臂在受击时的大幅摆动，用于检查移动低模蒙皮的稳定性。",
+        "clip": "Brawler_Base_HitStun_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "lamia",
+    "name": "拉米亚",
+    "nameEn": "Lamia",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "哀悼原野中的蛇发施法者，能够向前、向下和向空中释放法术。模型保留蛇形下身、头部蛇发和施法手势，共 64 根骨骼和 13 组动作；独立法术粒子不包含在 GLB 中。",
+    "models": {
+      "original": "models/hades2-lamia-original.glb",
+      "low": "models/hades2-lamia-low.glb"
+    },
+    "textures": { "original": "textures/hades2/lamia-original.png", "low": "textures/hades2/lamia-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_Lamia": {
+        "color": "#ffffff",
+        "roughness": 0.62,
+        "metalness": 0.0
+      }
+    },
+    "materialSources": {
+      "Mat_Lamia": { "color": "Content/Packages/1080p/BiomeH.pkg: GR2/Lamia_Color" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.78,
+    "modelSource": "Lamia_Mesh",
+    "packSource": "Content/GR2/_Optimized/Lamia.gpk",
+    "packSizeKB": 1275,
+    "sourceTriangles": 8280,
+    "lowTriangles": 5464,
+    "sourceSizeKB": 2277,
+    "lowSizeKB": 1811,
+    "defaultClip": "Lamia_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "Lamia_Base_Idle_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "Lamia_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "Lamia_Base_Move_Start_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "Lamia_Base_Move_Stop_C_00", "kind": "movement" },
+      { "name": "前方法术蓄力", "clip": "Lamia_Base_ForwardCastPreFire_C_00", "kind": "attack" },
+      { "name": "前方法术", "clip": "Lamia_Base_ForwardCastFire_C_00", "kind": "attack" },
+      { "name": "前方法术收招", "clip": "Lamia_Base_ForwardCastPostFire_C_00", "kind": "attack" },
+      { "name": "下方法术", "clip": "Lamia_Base_DownCastFire_C_00", "kind": "attack" },
+      { "name": "下方法术收招", "clip": "Lamia_Base_DownCastPostFire_C_00", "kind": "attack" },
+      { "name": "天空法术蓄力", "clip": "Lamia_Base_SkyCastPreFire_C_00", "kind": "attack" },
+      { "name": "天空法术循环", "clip": "Lamia_Base_SkyCastFireLoop_C_00", "kind": "attack" },
+      { "name": "天空法术收招", "clip": "Lamia_Base_SkyCastPostFire_C_00", "kind": "attack" },
+      { "name": "受击", "clip": "Lamia_Base_OnHit_C_00", "kind": "hurt" }
+    ],
+    "skills": [
+      {
+        "name": "前方法术",
+        "attackType": "定向远程",
+        "range": "中距离",
+        "description": "抬臂聚集力量后向正前方施法，保留完整的蓄力、释放与回正动作。",
+        "clip": "Lamia_Base_ForwardCastFire_C_00"
+      },
+      {
+        "name": "天空法术",
+        "attackType": "持续施法",
+        "range": "远距离",
+        "description": "仰身维持施法循环；法术弹体属于游戏运行时特效，模型动作和蛇发摆动完整保留。",
+        "clip": "Lamia_Base_SkyCastFireLoop_C_00"
+      }
+    ]
+  },
+  {
+    "slug": "zombie",
+    "name": "蹒跚者",
+    "nameEn": "Zombie",
+    "tier": "普通",
+    "status": "已转换",
+    "available": true,
+    "summary": "埃费拉区域的基础亡魂敌人，能够蹒跚移动、扑击并在重击后倒地。模型保留头部、手臂和破损衣物轮廓，共 23 根骨骼和 16 组动作，包含完整的仰倒、趴倒和起身序列。",
+    "models": {
+      "original": "models/hades2-zombie-original.glb",
+      "low": "models/hades2-zombie-low.glb"
+    },
+    "textures": { "original": "textures/hades2/zombie-original.png", "low": "textures/hades2/zombie-low.png" },
+    "emissiveTextures": { "original": null, "low": null },
+    "normalTextures": { "original": null, "low": null },
+    "materialProfiles": {
+      "Mat_Zombie": {
+        "color": "#ffffff",
+        "roughness": 0.78,
+        "metalness": 0.0
+      }
+    },
+    "materialSources": {
+      "Mat_Zombie": { "color": "Content/Packages/1080p/BiomeN.pkg: GR2/Zombie_Color" }
+    },
+    "preserveMaterials": true,
+    "motionAnchorBone": "root_00_M_JNT",
+    "framingScale": 0.86,
+    "modelSource": "Zombie_Mesh",
+    "packSource": "Content/GR2/_Optimized/Zombie.gpk",
+    "packSizeKB": 375,
+    "sourceTriangles": 1694,
+    "lowTriangles": 1151,
+    "sourceSizeKB": 1031,
+    "lowSizeKB": 734,
+    "defaultClip": "Zombie_Base_Idle_C_00",
+    "animations": [
+      { "name": "待机", "clip": "Zombie_Base_Idle_C_00", "kind": "idle" },
+      { "name": "低头待机", "clip": "Zombie_Base_IdleLookingDown_C_00", "kind": "idle" },
+      { "name": "抬头待机", "clip": "Zombie_Base_IdleLookingUp_C_00", "kind": "idle" },
+      { "name": "移动", "clip": "Zombie_Base_Move_C_00", "kind": "movement" },
+      { "name": "移动起步", "clip": "Zombie_Base_MoveStart_C_00", "kind": "movement" },
+      { "name": "移动停止", "clip": "Zombie_Base_MoveStop_C_00", "kind": "movement" },
+      { "name": "扑击蓄力", "clip": "Zombie_Base_AttackAntic_C_00", "kind": "attack" },
+      { "name": "扑击", "clip": "Zombie_Base_AttackFire_C_00", "kind": "attack" },
+      { "name": "扑击收招", "clip": "Zombie_Base_AttackReturnToIdle_C_00", "kind": "attack" },
+      { "name": "向后倒地", "clip": "Zombie_Base_GetHitToBack_C_00", "kind": "hurt" },
+      { "name": "仰倒待机", "clip": "Zombie_Base_GetHitToBackIdle_C_00", "kind": "hurt" },
+      { "name": "仰倒起身", "clip": "Zombie_Base_GetHitToBackReturnToIdle_C_00", "kind": "hurt" },
+      { "name": "向前倒地", "clip": "Zombie_Base_GetHitToProne_C_00", "kind": "hurt" },
+      { "name": "趴倒待机", "clip": "Zombie_Base_GetHitProneIdle_C_00", "kind": "hurt" },
+      { "name": "趴倒起身", "clip": "Zombie_Base_GetHitProneReturnToIdle_C_00", "kind": "hurt" },
+      { "name": "生成", "clip": "Zombie_Base_Spawn_C_00", "kind": "spawn" }
+    ],
+    "skills": [
+      {
+        "name": "蹒跚扑击",
+        "attackType": "近战突击",
+        "range": "近距离",
+        "description": "短暂后仰后向目标伸臂扑击，目录保留蓄力、命中和恢复三个阶段。",
+        "clip": "Zombie_Base_AttackFire_C_00"
+      },
+      {
+        "name": "倒地起身",
+        "attackType": "受击恢复",
+        "range": "自身",
+        "description": "从仰倒状态重新撑起身体，展示四肢在大幅度姿态变化下的低模蒙皮连续性。",
+        "clip": "Zombie_Base_GetHitToBackReturnToIdle_C_00"
+      }
+    ]
+  }
+]

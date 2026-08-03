@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101513">
-  <title>雨中冒险 2 · 怪物 3D 图鉴</title>
+  <title>游戏怪物 3D 图鉴</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <style>
     :root {
@@ -24,6 +24,7 @@
       font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
     html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
     body { min-height: 100vh; }
     button, input, select { font: inherit; }
@@ -32,11 +33,16 @@
     .catalog { min-width: 0; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; }
     .catalog-head { padding: 20px 16px 14px; border-bottom: 1px solid var(--line-soft); }
     .brand { margin: 0; font-size: 19px; font-weight: 800; letter-spacing: 0; }
-    .view-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 12px 0; }
+    .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+    .game-switcher { position: relative; margin: 14px 0 10px; }
+    .game-switcher select { width: 100%; height: 38px; appearance: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 34px 0 11px; outline: 0; cursor: pointer; }
+    .game-switcher svg { position: absolute; right: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
+    .view-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 0 0 10px; }
     .view-tab { height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
     .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
     .view-tab svg { width: 15px; height: 15px; }
-    .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+    .view-tabs.maps-unavailable { grid-template-columns: 1fr; }
+    .view-tabs.maps-unavailable #mapsLink { display: none; }
     .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
     .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
     .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
@@ -73,6 +79,7 @@
     .compare-labels span { justify-self: center; padding: 5px 8px; border-radius: 4px; border: 1px solid var(--line-soft); background: rgba(10, 16, 14, .72); }
     .loading { position: absolute; z-index: 5; inset: 0; display: grid; place-items: center; color: var(--muted); background: rgba(10, 16, 14, .72); pointer-events: none; }
     .loading.hidden { display: none; }
+    .loading.analysis { padding: 24px; text-align: center; line-height: 1.7; background: rgba(10, 16, 14, .88); }
     .details { border-top: 1px solid var(--line); padding: 24px clamp(20px, 3.5vw, 48px) 38px; display: grid; grid-template-columns: minmax(270px, .8fr) minmax(420px, 1.2fr); gap: 38px 50px; }
     .summary h2, .skills h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
     .summary p { margin: 0; color: var(--muted); line-height: 1.7; }
@@ -97,8 +104,7 @@
       .catalog-head { padding: 13px 12px 10px; }
       .edition { display: none; }
       .brand { font-size: 17px; }
-      .view-tabs { margin: 9px 0; }
-      .search { margin-top: 10px; }
+      .game-switcher { margin: 10px 0 8px; }
       .monster-list { display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
       .monster-list::-webkit-scrollbar { display: none; }
       .monster-entry { min-width: 176px; }
@@ -124,18 +130,23 @@
   <div class="app">
     <aside class="catalog">
       <div class="catalog-head">
-        <h1 class="brand">雨中冒险 2 · 怪物图鉴</h1>
-        <p class="edition">原始模型 / 移动低模 / 攻击动作</p>
-        <nav class="view-tabs" aria-label="图鉴类型">
-          <a class="view-tab active" href="./index.html"><i data-lucide="skull"></i>生物</a>
-          <a class="view-tab" href="./maps.html"><i data-lucide="map"></i>地图</a>
+        <h1 class="brand" id="brand">游戏角色 3D 图鉴</h1>
+        <div class="game-switcher">
+          <select id="gameSelect" aria-label="游戏选择"></select>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <nav class="view-tabs" id="viewTabs" aria-label="图鉴类型">
+          <a class="view-tab active" id="creaturesLink" href="./index.html"><i data-lucide="users"></i>角色</a>
+          <a class="view-tab" id="mapsLink" href="./maps.html"><i data-lucide="map"></i>地图</a>
         </nav>
+        <p class="edition" id="edition"></p>
         <label class="search">
           <i data-lucide="search"></i>
-          <input id="searchInput" type="search" placeholder="搜索怪物" autocomplete="off">
+          <input id="searchInput" type="search" placeholder="搜索角色" autocomplete="off">
         </label>
         <div class="tier-filters" id="tierFilters">
           <button class="tier-filter active" data-tier="全部">全部</button>
+          <button class="tier-filter" data-tier="英雄">英雄</button>
           <button class="tier-filter" data-tier="普通">普通</button>
           <button class="tier-filter" data-tier="大型">大型</button>
           <button class="tier-filter" data-tier="Boss">Boss</button>
@@ -197,15 +208,19 @@
     import * as THREE from 'three';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, Map, Skull } from 'lucide';
+    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, Map, Skull };
+    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
-    const assetRevision = '20260728-15';
-    const catalog = await fetch(`./catalog.json?v=${assetRevision}`, { cache: 'no-store' })
-      .then(response => response.json());
+    const games = await fetch('./games.json', { cache: 'no-store' }).then(response => response.json());
+    const initialParams = new URLSearchParams(location.search);
+    const requestedGame = initialParams.get('game');
+    const requestedMonster = initialParams.get('monster');
+    let activeGame = games.find(game => game.slug === requestedGame) ?? games[0];
+    let assetRevision = activeGame.assetRevision;
+    let catalog = await fetch(`./${activeGame.catalog}?v=${assetRevision}`, { cache: 'no-store' }).then(response => response.json());
     const canvas = document.querySelector('#canvas');
     const stage = document.querySelector('#stage');
     const loading = document.querySelector('#loading');
@@ -248,7 +263,7 @@
     floor.position.y = -0.02;
     scene.add(floor);
 
-    let activeEntry = catalog[0];
+    let activeEntry = catalog.find(entry => entry.slug === requestedMonster) ?? catalog[0] ?? null;
     let activeMode = isCompactViewport ? 'low' : 'original';
     let activeTier = '全部';
     let activeSlots = [];
@@ -291,49 +306,78 @@
       activeSlots = [];
     }
 
-    function configureTexture(texture, lowQuality, colorTexture) {
+    function configureTexture(texture, lowQuality, usage) {
       if (!texture) return;
-      if (colorTexture) texture.colorSpace = THREE.SRGBColorSpace;
+      texture.colorSpace = usage === 'color' ? THREE.SRGBColorSpace : THREE.NoColorSpace;
       texture.flipY = false;
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
+      texture.generateMipmaps = true;
       if (lowQuality) {
         texture.magFilter = THREE.NearestFilter;
-        texture.minFilter = THREE.NearestFilter;
-        texture.generateMipmaps = false;
+        texture.minFilter = THREE.NearestMipmapNearestFilter;
+        texture.anisotropy = 1;
+      } else {
+        texture.magFilter = THREE.LinearFilter;
+        texture.minFilter = THREE.LinearMipmapLinearFilter;
+        texture.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
       }
+      texture.needsUpdate = true;
     }
 
     function applyTexture(root, texture, emissiveTexture, normalTexture, lowQuality) {
-      configureTexture(texture, lowQuality, true);
-      configureTexture(emissiveTexture, lowQuality, true);
-      configureTexture(normalTexture, lowQuality, false);
+      configureTexture(texture, lowQuality, 'color');
+      configureTexture(emissiveTexture, lowQuality, 'color');
+      configureTexture(normalTexture, lowQuality, 'data');
       root.traverse(object => {
         if (!object.isMesh) return;
-        const isClayCannon = activeEntry.slug === 'claybruiser' && object.name.includes('Cannon');
         const source = Array.isArray(object.material) ? object.material : [object.material];
+        const hasMaterialProfiles = Object.keys(activeEntry.materialProfiles ?? {}).length > 0;
+        if (activeEntry.preserveMaterials && !hasMaterialProfiles && !texture && !emissiveTexture && !normalTexture) {
+          const materials = source.map(material => {
+            const next = material.clone();
+            next.flatShading = lowQuality;
+            next.roughness = lowQuality ? 0.95 : 0.82;
+            next.needsUpdate = true;
+            return next;
+          });
+          object.material = Array.isArray(object.material) ? materials : materials[0];
+          object.frustumCulled = false;
+          return;
+        }
+        const isClayCannon = activeEntry.slug === 'claybruiser' && object.name.includes('Cannon');
         const materials = source.map(material => {
+          const profile = activeEntry.materialProfiles?.[material?.name]
+            ?? activeEntry.materialProfiles?.default
+            ?? {};
+          const transparent = profile.transparent ?? activeEntry.transparent ?? false;
+          const emissiveIntensity = lowQuality
+            ? (profile.lowEmissiveIntensity ?? profile.emissiveIntensity ?? activeEntry.emissiveIntensity ?? 1)
+            : (profile.emissiveIntensity ?? activeEntry.emissiveIntensity ?? 1);
           const materialOptions = {
-            color: new THREE.Color(activeEntry.tint ?? '#ffffff'),
+            color: new THREE.Color(profile.color ?? activeEntry.tint ?? '#ffffff'),
             map: texture,
-            emissive: new THREE.Color(activeEntry.emissiveColor ?? '#000000'),
+            emissive: new THREE.Color(profile.emissiveColor ?? activeEntry.emissiveColor ?? '#000000'),
             emissiveMap: emissiveTexture,
-            emissiveIntensity: activeEntry.emissiveIntensity ?? 1,
-            roughness: isClayCannon ? (lowQuality ? 0.78 : 0.62) : (lowQuality ? 0.95 : 0.78),
-            metalness: isClayCannon ? 0.08 : 0.02,
+            emissiveIntensity,
+            roughness: profile.roughness ?? (isClayCannon ? (lowQuality ? 0.78 : 0.62) : (lowQuality ? 0.95 : 0.78)),
+            metalness: profile.metalness ?? (isClayCannon ? 0.08 : 0.02),
             flatShading: lowQuality,
-            transparent: activeEntry.transparent ?? false,
-            alphaTest: activeEntry.alphaTest ?? 0,
-            depthWrite: activeEntry.transparent ? false : true,
-            side: activeEntry.doubleSided ? THREE.DoubleSide : THREE.FrontSide,
+            transparent,
+            opacity: profile.opacity ?? activeEntry.opacity ?? 1,
+            alphaTest: profile.alphaTest ?? activeEntry.alphaTest ?? 0,
+            depthWrite: profile.depthWrite ?? (transparent ? false : true),
+            side: (profile.doubleSided ?? activeEntry.doubleSided) ? THREE.DoubleSide : THREE.FrontSide,
+            vertexColors: Boolean(object.geometry.getAttribute('color')),
           };
           if (normalTexture) {
             const normalStrength = lowQuality ? 0.45 : 0.72;
             materialOptions.normalMap = normalTexture;
-            materialOptions.normalScale = new THREE.Vector2(normalStrength, normalStrength);
+            materialOptions.normalScale = new THREE.Vector2(normalStrength, -normalStrength);
           }
           const next = new THREE.MeshStandardMaterial(materialOptions);
           next.name = material?.name || 'WikiMaterial';
+          next.alphaToCoverage = transparent && renderer.getContext().getContextAttributes()?.antialias;
           return next;
         });
         object.material = Array.isArray(object.material) ? materials : materials[0];
@@ -356,6 +400,15 @@
       model.position.z -= center.z;
       model.position.y -= box.min.y;
       wrapper.position.x = x;
+    }
+
+    function updateMotionAnchor(slot) {
+      if (!slot.motionAnchor || !slot.motionReference) return;
+      const offset = slot.motionAnchor.position.clone()
+        .sub(slot.motionReference)
+        .multiply(slot.model.scale)
+        .applyQuaternion(slot.model.quaternion);
+      slot.model.position.copy(slot.baseModelPosition).sub(offset);
     }
 
     function findClip(slot, clipName) {
@@ -383,30 +436,39 @@
     function playDefault() {
       currentSkillClip = null;
       document.querySelectorAll('.skill').forEach(button => button.classList.remove('active'));
+      if (activeEntry.animationPreviewDisabled) return;
       activeSlots.forEach(slot => playOnSlot(slot, activeEntry.defaultClip, true));
     }
 
     function playClip(clipName, loop = false) {
+      if (activeEntry.animationPreviewDisabled) return;
       currentSkillClip = clipName;
       activeSlots.forEach(slot => playOnSlot(slot, clipName, loop));
     }
 
     async function loadSlot(variant, x, targetHeight, targetWidth) {
+      const texturePath = activeEntry.textures?.[variant];
       const emissivePath = activeEntry.emissiveTextures?.[variant];
       const normalPath = activeEntry.normalTextures?.[variant];
       const [gltf, texture, emissiveTexture, normalTexture] = await Promise.all([
         loader.loadAsync(`${activeEntry.models[variant]}?v=${assetRevision}`),
-        textureLoader.loadAsync(`${activeEntry.textures[variant]}?v=${assetRevision}`),
+        texturePath ? textureLoader.loadAsync(`${texturePath}?v=${assetRevision}`) : Promise.resolve(null),
         emissivePath ? textureLoader.loadAsync(`${emissivePath}?v=${assetRevision}`) : Promise.resolve(null),
         normalPath ? textureLoader.loadAsync(`${normalPath}?v=${assetRevision}`) : Promise.resolve(null),
       ]);
       const wrapper = new THREE.Group();
       const model = gltf.scene;
+      const gameRotation = activeGame.modelRotationDeg ?? [0, 0, 0];
+      const entryRotation = activeEntry.modelRotationDeg ?? [0, 0, 0];
+      const modelRotation = gameRotation.map((value, index) => value + entryRotation[index]);
+      model.rotation.set(...modelRotation.map(THREE.MathUtils.degToRad));
       applyTexture(model, texture, emissiveTexture, normalTexture, variant === 'low');
       wrapper.add(model);
       scene.add(wrapper);
       const mixer = new THREE.AnimationMixer(model);
-      const previewClip = gltf.animations.find(clip => clip.name === activeEntry.defaultClip);
+      const previewClip = activeEntry.animationPreviewDisabled
+        ? null
+        : gltf.animations.find(clip => clip.name === activeEntry.defaultClip);
       if (previewClip) {
         mixer.clipAction(previewClip).play();
         mixer.update(0);
@@ -414,9 +476,23 @@
       model.updateMatrixWorld(true);
       fitModel(model, wrapper, targetHeight, targetWidth, x);
       mixer.stopAllAction();
+      const motionAnchor = activeEntry.motionAnchorBone
+        ? model.getObjectByName(activeEntry.motionAnchorBone)
+          || model.getObjectByProperty('name', activeEntry.motionAnchorBone)
+          || (() => {
+            let match = null;
+            model.traverse(object => {
+              if (!match && object.isBone && object.name.endsWith(activeEntry.motionAnchorBone)) match = object;
+            });
+            return match;
+          })()
+        : null;
       const slot = {
         variant, wrapper, model, mixer, clips: gltf.animations,
-        texture, emissiveTexture, normalTexture, action: null, playingDefault: false
+        texture, emissiveTexture, normalTexture, action: null, playingDefault: false,
+        motionAnchor,
+        motionReference: motionAnchor?.position.clone() ?? null,
+        baseModelPosition: model.position.clone()
       };
       mixer.addEventListener('finished', () => {
         if (!slot.playingDefault && slot === activeSlots[0]) playDefault();
@@ -425,14 +501,32 @@
     }
 
     function resetCamera() {
+      if (!activeEntry) return;
       activeSlots.forEach(slot => slot.wrapper.rotation.set(0, 0, 0));
       controls.target.set(0, activeEntry.cameraTargetY ?? (activeMode === 'compare' ? 1.15 : 1.35), 0);
-      camera.position.set(activeMode === 'compare' ? 0 : 5.6, 3.3, activeMode === 'compare' ? 10.8 : 6.8);
+      camera.position.set(0, 3.3, activeMode === 'compare' ? 10.8 : 8.8);
       controls.update();
     }
 
     async function loadActiveModels() {
+      if (!activeEntry?.available && activeEntry?.available !== undefined) {
+        clearModels();
+        canvas.dataset.loadedModelCount = '0';
+        document.querySelector('#compareLabels').classList.remove('visible');
+        loading.textContent = activeEntry.unavailableMessage || '该条目尚未生成可浏览模型';
+        loading.classList.add('analysis');
+        loading.classList.remove('hidden');
+        return;
+      }
+      if (!activeEntry) {
+        clearModels();
+        loading.textContent = '当前游戏还没有可浏览条目';
+        loading.classList.add('analysis');
+        loading.classList.remove('hidden');
+        return;
+      }
       loading.textContent = '正在载入模型…';
+      loading.classList.remove('analysis');
       loading.classList.remove('hidden');
       clearModels();
       canvas.dataset.loadedModelCount = '0';
@@ -461,27 +555,39 @@
     }
 
     function compatibleAnimations(entry) {
+      if (!entry) return [];
       const prefix = entry.defaultClip?.includes('|') ? entry.defaultClip.split('|')[0] : null;
-      const items = prefix ? entry.animations.filter(animation => animation.clip.startsWith(`${prefix}|`)) : entry.animations;
+      const animations = entry.animations ?? [];
+      const items = prefix ? animations.filter(animation => animation.clip.startsWith(`${prefix}|`)) : animations;
       const priority = { attack: 0, movement: 1, idle: 2, spawn: 3, hurt: 4, death: 5, other: 6 };
       return items.sort((a, b) => (priority[a.kind] ?? 9) - (priority[b.kind] ?? 9) || a.name.localeCompare(b.name));
     }
 
     function renderDetails(entry) {
+      if (!entry) return;
       document.querySelector('#monsterName').textContent = entry.name;
       document.querySelector('#monsterNameEn').textContent = entry.nameEn;
-      document.querySelector('#tierBadge').textContent = entry.tier;
+      document.querySelector('#tierBadge').textContent = entry.status || entry.tier;
       document.querySelector('#summaryText').textContent = entry.summary;
-      document.querySelector('#sourceTriangles').textContent = entry.sourceTriangles.toLocaleString();
-      document.querySelector('#lowTriangles').textContent = entry.lowTriangles.toLocaleString();
+      document.querySelector('#sourceTriangles').textContent = Number.isFinite(entry.sourceTriangles) ? entry.sourceTriangles.toLocaleString() : '待提取';
+      document.querySelector('#lowTriangles').textContent = Number.isFinite(entry.lowTriangles) ? entry.lowTriangles.toLocaleString() : '待生成';
       const retained = entry.sourceTriangles
         ? Math.round((entry.lowTriangles / entry.sourceTriangles) * 100)
         : 0;
-      document.querySelector('#reduction').textContent = entry.sourceTriangles ? `${retained}%` : '—';
+      document.querySelector('#reduction').textContent = entry.sourceTriangles && entry.lowTriangles ? `${retained}%` : '—';
+
+      const modelAvailable = entry.available !== false;
+      document.querySelectorAll('.mode-button').forEach(button => { button.disabled = !modelAvailable; });
+      const animations = compatibleAnimations(entry);
+      const hasAnimations = modelAvailable && animations.length > 0 && !entry.animationPreviewDisabled;
+      document.querySelector('#playSelectedButton').disabled = !hasAnimations;
+      document.querySelector('#pauseButton').disabled = !hasAnimations;
+      document.querySelector('.animation-row').hidden = !hasAnimations;
+      document.querySelector('.skills').hidden = !(entry.skills?.length);
 
       const select = document.querySelector('#animationSelect');
       select.innerHTML = '';
-      compatibleAnimations(entry).forEach(animation => {
+      animations.forEach(animation => {
         const option = document.createElement('option');
         option.value = animation.clip;
         option.textContent = animation.name;
@@ -490,7 +596,7 @@
 
       const list = document.querySelector('#skillList');
       list.innerHTML = '';
-      entry.skills.forEach(skill => {
+      (entry.skills ?? []).forEach(skill => {
         const button = document.createElement('button');
         button.className = 'skill';
         button.disabled = !skill.clip;
@@ -507,7 +613,7 @@
     function filteredCatalog() {
       const query = document.querySelector('#searchInput').value.trim().toLowerCase();
       return catalog.filter(entry => {
-        const tierMatch = activeTier === '全部' || entry.tier.includes(activeTier);
+        const tierMatch = activeTier === '全部' || entry.tier?.includes(activeTier);
         const queryMatch = !query || entry.name.toLowerCase().includes(query) || entry.nameEn.toLowerCase().includes(query);
         return tierMatch && queryMatch;
       });
@@ -524,7 +630,7 @@
       entries.forEach(entry => {
         const button = document.createElement('button');
         button.className = `monster-entry${entry.slug === activeEntry.slug ? ' active' : ''}`;
-        button.innerHTML = `<strong>${entry.name}</strong><small>${entry.nameEn}</small><span>${entry.tier}</span>`;
+        button.innerHTML = `<strong>${entry.name}</strong><small>${entry.nameEn}</small><span>${entry.status || entry.tier}</span>`;
         button.addEventListener('click', async () => {
           activeEntry = entry;
           currentSkillClip = null;
@@ -536,7 +642,34 @@
       });
     }
 
+    function updateViewNavigation() {
+      const mapsAvailable = Boolean(activeGame.mapsPage);
+      document.querySelector('#viewTabs').classList.toggle('maps-unavailable', !mapsAvailable);
+      document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
+      document.querySelector('#mapsLink').href = mapsAvailable ? `./${activeGame.mapsPage}` : '#';
+    }
+
+    async function switchGame(slug) {
+      const nextGame = games.find(game => game.slug === slug);
+      if (!nextGame || nextGame === activeGame) return;
+      activeGame = nextGame;
+      assetRevision = activeGame.assetRevision;
+      catalog = await fetch(`./${activeGame.catalog}?v=${assetRevision}`, { cache: 'no-store' }).then(response => response.json());
+      activeEntry = catalog[0] ?? null;
+      activeTier = '全部';
+      document.querySelector('#searchInput').value = '';
+      document.querySelectorAll('.tier-filter').forEach(button => button.classList.toggle('active', button.dataset.tier === '全部'));
+      document.querySelector('#brand').textContent = `${activeGame.name} · 角色图鉴`;
+      document.querySelector('#edition').textContent = activeGame.subtitle;
+      document.title = `${activeGame.name} · 角色 3D 图鉴`;
+      updateViewNavigation();
+      renderMonsterList();
+      if (activeEntry) renderDetails(activeEntry);
+      await loadActiveModels();
+    }
+
     document.querySelector('#searchInput').addEventListener('input', renderMonsterList);
+    document.querySelector('#gameSelect').addEventListener('change', event => switchGame(event.target.value));
     document.querySelectorAll('.tier-filter').forEach(button => {
       button.addEventListener('click', () => {
         activeTier = button.dataset.tier;
@@ -566,7 +699,7 @@
     document.querySelector('#resetButton').addEventListener('click', resetCamera);
     document.querySelector('#playSelectedButton').addEventListener('click', () => {
       const clip = document.querySelector('#animationSelect').value;
-      const animation = activeEntry.animations.find(item => item.clip === clip);
+      const animation = activeEntry?.animations?.find(item => item.clip === clip);
       playClip(clip, animation?.kind === 'idle' || animation?.kind === 'movement');
     });
 
@@ -578,7 +711,10 @@
         return;
       }
       const delta = Math.min(clock.getDelta(), 0.05);
-      activeSlots.forEach(slot => slot.mixer.update(delta));
+      activeSlots.forEach(slot => {
+        slot.mixer.update(delta);
+        updateMotionAnchor(slot);
+      });
       if (rotating) activeSlots.forEach(slot => { slot.wrapper.rotation.y += delta * 0.38; });
       controls.update();
       renderer.render(scene, camera);
@@ -586,8 +722,20 @@
 
     new ResizeObserver(resize).observe(stage);
     resize();
+    const gameSelect = document.querySelector('#gameSelect');
+    games.forEach(game => {
+      const option = document.createElement('option');
+      option.value = game.slug;
+      option.textContent = `${game.name} / ${game.nameEn}`;
+      gameSelect.appendChild(option);
+    });
+    gameSelect.value = activeGame.slug;
+    document.querySelector('#brand').textContent = `${activeGame.name} · 角色图鉴`;
+    document.querySelector('#edition').textContent = activeGame.subtitle;
+    document.title = `${activeGame.name} · 角色 3D 图鉴`;
+    updateViewNavigation();
     renderMonsterList();
-    renderDetails(activeEntry);
+    if (activeEntry) renderDetails(activeEntry);
     await loadActiveModels();
     animate();
   </script>
