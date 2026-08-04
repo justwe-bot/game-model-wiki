@@ -48,6 +48,16 @@ def main() -> None:
                 "animations": source.get("animations", []),
                 "defaultClip": source.get("defaultClip"),
                 **(
+                    {"motionAnchorBone": source["motionAnchorBone"]}
+                    if source.get("motionAnchorBone")
+                    else {}
+                ),
+                **(
+                    {"motionAnchorAxes": source["motionAnchorAxes"]}
+                    if source.get("motionAnchorAxes")
+                    else {}
+                ),
+                **(
                     {"framingScaleByVariant": source["framingScaleByVariant"]}
                     if source.get("framingScaleByVariant")
                     else {}

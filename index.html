@@ -404,10 +404,17 @@
 
     function updateMotionAnchor(slot) {
       if (!slot.motionAnchor || !slot.motionReference) return;
-      const offset = slot.motionAnchor.position.clone()
+      slot.model.position.copy(slot.baseModelPosition);
+      slot.model.updateMatrixWorld(true);
+      const anchorWorldPosition = slot.motionAnchor.getWorldPosition(new THREE.Vector3());
+      const anchorModelPosition = slot.model.worldToLocal(anchorWorldPosition);
+      const offset = anchorModelPosition
         .sub(slot.motionReference)
         .multiply(slot.model.scale)
         .applyQuaternion(slot.model.quaternion);
+      if (!slot.motionAnchorAxes.includes('x')) offset.x = 0;
+      if (!slot.motionAnchorAxes.includes('y')) offset.y = 0;
+      if (!slot.motionAnchorAxes.includes('z')) offset.z = 0;
       slot.model.position.copy(slot.baseModelPosition).sub(offset);
     }
 
@@ -495,11 +502,16 @@
             return match;
           })()
         : null;
+      model.updateMatrixWorld(true);
+      const motionReference = motionAnchor
+        ? model.worldToLocal(motionAnchor.getWorldPosition(new THREE.Vector3()))
+        : null;
       const slot = {
         variant, wrapper, model, mixer, clips: gltf.animations,
         texture, emissiveTexture, normalTexture, action: null, playingDefault: false,
         motionAnchor,
-        motionReference: motionAnchor?.position.clone() ?? null,
+        motionReference,
+        motionAnchorAxes: activeEntry.motionAnchorAxes ?? ['x', 'y', 'z'],
         baseModelPosition: model.position.clone()
       };
       mixer.addEventListener('finished', () => {

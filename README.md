@@ -57,11 +57,13 @@ python -m http.server 4173
 
 ## Risk of Rain 2 英雄构建链
 
-- `scripts/extract_ror2_survivors.py`：读取本机 Addressables bundle，定位 17 位英雄的默认模型 prefab，恢复 Transform 层级，并将 SkinnedMeshRenderer 按骨骼和 bind pose 烘焙为完整静态网格。
+- `scripts/extract_ror2_survivors.py`：读取本机 Addressables bundle，定位 17 位英雄的默认模型 prefab，恢复 Transform 层级，并将 SkinnedMeshRenderer 按骨骼和 bind pose 烘焙为完整模型。
 - `scripts/build_ror2_survivor_glb.py`：为烘焙网格生成原模与 50% 移动低模 GLB，并写入三角面和文件大小统计。
 - `scripts/build_ror2_bandit_game_rig.py`：从本机 Addressables bundle 直接写出盗贼的 98 根游戏原始骨骼、bind pose、顶点权重与 8 个游戏动画。
+- `scripts/build_ror2_commando_game_rig.py`：保留突击兵的 78 根游戏原始骨骼、双枪挂点、蒙皮权重，并从 Unity `.anim` 曲线生成 18 个游戏动作。
 - `scripts/build_ror2_bandit_low_glb.py`：在 Armature 之前简化盗贼网格，保留原始骨架、权重和动作生成移动低模。
 - `scripts/validate_ror2_bandit_game_rig.py`：校验盗贼原模与低模的原始骨架来源、蒙皮权重、inverse bind matrices 和动画通道。
+- `scripts/validate_ror2_commando_game_rig.py`：校验突击兵原模与低模的 78 骨骼、双枪、蒙皮权重和 18 个动作。
 - `scripts/merge_ror2_survivors.py`：把英雄生成清单合并到主目录，保留原有怪物与其他游戏条目。
 
 当前英雄池包含 17 位英雄、34 个 GLB。每个英雄均使用明确指定的默认 prefab 根节点，普通挂件与蒙皮分件会在同一世界姿态中合并，避免只显示腿部、散落武器或堆叠网格。
@@ -111,7 +113,7 @@ python -m http.server 4173
 
 - 51 个角色原模和 51 个角色低模均包含有效网格和三角面
 - 23 个地图 GLB 均包含有效网格和三角面；9 张主题地图已恢复游戏地形纹理
-- 所有低模均保留 UV；怪物模型保留动作所需的蒙皮属性，英雄模型保留烘焙后的完整姿态，盗贼额外包含重建骨骼和蒙皮属性
+- 所有低模均保留 UV；怪物模型保留动作所需的蒙皮属性，英雄模型保留完整姿态，盗贼和突击兵额外保留游戏原始骨骼、蒙皮与动作
 - 动态怪物条目的默认动作和技能动作都存在于原模与低模 GLB
 - 月球傀儡与月球幽魂的三项技能动作已在浏览器中逐项播放验证
 - 甲壳虫女王、巨角野牛等细肢模型已用并排对比检查，低模未再出现缺脚问题
@@ -125,7 +127,7 @@ python -m http.server 4173
 - 技能按钮播放的是模型骨骼动作。火球、激光、火焰、光晕、冲击波等独立粒子/VFX 不包含在角色 GLB 中。
 - 少数游戏资源把静态网格和动作骨架拆在不同包中，需要额外的骨架与蒙皮合并管线，当前不会用空骨架冒充完整模型。
 - 巨型幽魂与黏土沙丘行者的 FBX 导出缺少部分蒙皮权重，构建管线会为缺失顶点补充刚性权重，适合 Wiki 预览，但不等同于游戏项目中的精确蒙皮数据。
-- 除盗贼外，英雄当前使用默认姿态的静态烘焙模型，不包含 Animator 动作、技能特效或可切换皮肤；盗贼已保留游戏原始骨架、蒙皮和 8 个动画，但仍不包含运行时 Animator 分层、IK、技能特效或已隐藏的武器模型。
+- 除盗贼和突击兵外，英雄当前使用默认姿态的静态烘焙模型，不包含 Animator 动作、技能特效或可切换皮肤；盗贼保留 98 骨骼和 8 个动作，突击兵保留 78 骨骼、双枪挂点和 18 个动作，但仍不包含运行时 Animator 状态机、IK 或技能特效。
 - 《哈迪斯 II》优化资源由共享字符串库 `.sdb` 与角色 Packfile `.gpk` 组成，必须先重建为标准 GR2；仓库不包含原始 GPK/SDB、游戏 DLL、临时 GR2 或 H2GX 桥接文件。
 - 地图结构预览不包含天空盒、粒子、动态机关、植被实例和烘焙光照；部分运行时拼装场景仍使用结构配色。
 

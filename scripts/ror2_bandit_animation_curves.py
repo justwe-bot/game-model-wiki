@@ -1,4 +1,4 @@
-"""Parse selected original Risk of Rain 2 Bandit animation curves."""
+"""Parse selected original Risk of Rain 2 survivor animation curves."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ class ClipSpec:
     name: str
     label: str
     kind: str
+    base_file_name: str | None = None
 
 
 CLIPS = (
@@ -25,6 +26,52 @@ CLIPS = (
     ClipSpec("BanditArmature_FireMainWeapon.anim", "Bandit_FireMainWeapon", "主武器攻击", "attack"),
     ClipSpec("BanditArmature_Reload.anim", "Bandit_Reload", "装填", "other"),
     ClipSpec("BanditArmature_SlashBlade.anim", "Bandit_SlashBlade", "近战挥砍", "attack"),
+)
+
+
+COMMANDO_CLIPS = (
+    ClipSpec("CommandoArmature_Idle_ Single.anim", "Commando_Idle", "待机", "idle"),
+    ClipSpec("CommandoArmature_RunForward.anim", "Commando_RunForward", "向前移动", "movement"),
+    ClipSpec("CommandoArmature_RunBackwards.anim", "Commando_RunBackward", "向后移动", "movement"),
+    ClipSpec("CommandoArmature_RunLeft.anim", "Commando_RunLeft", "向左移动", "movement"),
+    ClipSpec("CommandoArmature_RunRight.anim", "Commando_RunRight", "向右移动", "movement"),
+    ClipSpec("CommandoArmature_SprintForward.anim", "Commando_SprintForward", "冲刺", "movement"),
+    ClipSpec("CommandoArmature_Jump.anim", "Commando_Jump", "跳跃", "movement"),
+    ClipSpec("CommandoArmature_RollForward.anim", "Commando_RollForward", "向前翻滚", "movement"),
+    ClipSpec("CommandoArmature_RollBackward.anim", "Commando_RollBackward", "向后翻滚", "movement"),
+    ClipSpec("CommandoArmature_RollLeft.anim", "Commando_RollLeft", "向左翻滚", "movement"),
+    ClipSpec("CommandoArmature_RollRight.anim", "Commando_RollRight", "向右翻滚", "movement"),
+    ClipSpec("CommandoArmature_SlideForward.anim", "Commando_SlideForward", "向前滑行", "movement"),
+    ClipSpec("CommandoArmature_FirePistol_ Left.anim", "Commando_FirePistolLeft", "左枪射击", "attack"),
+    ClipSpec("CommandoArmature_FirePistol_ Right.anim", "Commando_FirePistolRight", "右枪射击", "attack"),
+    ClipSpec(
+        "CommandoArmature_ReloadPistols_ Override.anim",
+        "Commando_ReloadPistols",
+        "双枪换弹",
+        "other",
+        "CommandoArmature_Idle_ Single.anim",
+    ),
+    ClipSpec(
+        "CommandoArmature_FireFMJ_ Override.anim",
+        "Commando_FireFMJ",
+        "相位弹",
+        "attack",
+        "CommandoArmature_Idle_ Single.anim",
+    ),
+    ClipSpec(
+        "CommandoArmature_FireBarrage_ Override.anim",
+        "Commando_FireBarrage",
+        "压制射击",
+        "attack",
+        "CommandoArmature_Idle_ Single.anim",
+    ),
+    ClipSpec(
+        "CommandoArmature_ThrowGrenade_ Override.anim",
+        "Commando_ThrowGrenade",
+        "投掷手雷",
+        "attack",
+        "CommandoArmature_Idle_ Single.anim",
+    ),
 )
 
 

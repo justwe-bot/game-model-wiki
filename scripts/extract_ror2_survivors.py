@@ -31,8 +31,73 @@ SURVIVORS = [
         "bundle": "base-commando",
         "root": "mdlCommandoDualies",
         "meshes": ["CommandoMesh"],
+        "rig": "original-game-rig",
+        "rigBuilder": "commando",
+        "animationRoot": r"RoR2\Base\Characters\Commando",
+        "motionAnchorBone": "base",
+        "motionAnchorAxes": ["x", "z"],
+        "status": "游戏原始动作",
+        "jointCount": 78,
+        "animations": [
+            {"name": "待机", "clip": "Commando_Idle", "kind": "idle"},
+            {"name": "向前移动", "clip": "Commando_RunForward", "kind": "movement"},
+            {"name": "向后移动", "clip": "Commando_RunBackward", "kind": "movement"},
+            {"name": "向左移动", "clip": "Commando_RunLeft", "kind": "movement"},
+            {"name": "向右移动", "clip": "Commando_RunRight", "kind": "movement"},
+            {"name": "冲刺", "clip": "Commando_SprintForward", "kind": "movement"},
+            {"name": "跳跃", "clip": "Commando_Jump", "kind": "movement"},
+            {"name": "向前翻滚", "clip": "Commando_RollForward", "kind": "movement"},
+            {"name": "向后翻滚", "clip": "Commando_RollBackward", "kind": "movement"},
+            {"name": "向左翻滚", "clip": "Commando_RollLeft", "kind": "movement"},
+            {"name": "向右翻滚", "clip": "Commando_RollRight", "kind": "movement"},
+            {"name": "向前滑行", "clip": "Commando_SlideForward", "kind": "movement"},
+            {"name": "左枪射击", "clip": "Commando_FirePistolLeft", "kind": "attack"},
+            {"name": "右枪射击", "clip": "Commando_FirePistolRight", "kind": "attack"},
+            {"name": "双枪换弹", "clip": "Commando_ReloadPistols", "kind": "other"},
+            {"name": "相位弹", "clip": "Commando_FireFMJ", "kind": "attack"},
+            {"name": "压制射击", "clip": "Commando_FireBarrage", "kind": "attack"},
+            {"name": "投掷手雷", "clip": "Commando_ThrowGrenade", "kind": "attack"},
+        ],
+        "defaultClip": "Commando_Idle",
+        "skills": [
+            {
+                "name": "双枪射击",
+                "clip": "Commando_FirePistolRight",
+                "attackType": "交替射击",
+                "range": "中距离",
+                "description": "直接使用游戏原始右枪射击曲线，双枪保留在手部挂点。",
+            },
+            {
+                "name": "相位弹",
+                "clip": "Commando_FireFMJ",
+                "attackType": "贯穿射击",
+                "range": "远距离",
+                "description": "游戏原始 FMJ 上半身动作与自然待机底层合成。",
+            },
+            {
+                "name": "战术翻滚",
+                "clip": "Commando_RollForward",
+                "attackType": "位移动作",
+                "range": "自身",
+                "description": "游戏原始向前翻滚动作；网页预览在原地播放。",
+            },
+            {
+                "name": "压制射击",
+                "clip": "Commando_FireBarrage",
+                "attackType": "连续射击",
+                "range": "中距离",
+                "description": "游戏原始压制射击上半身动作与自然待机底层合成。",
+            },
+            {
+                "name": "破片手雷",
+                "clip": "Commando_ThrowGrenade",
+                "attackType": "投掷动作",
+                "range": "中距离",
+                "description": "游戏原始手雷投掷动作，不包含手雷粒子和爆炸特效。",
+            },
+        ],
         "texture": "texCommandoPaletteDiffuse",
-        "summary": "基础远程英雄。展示从默认角色 prefab 烘焙的完整静态模型与双枪。",
+        "summary": "基础远程英雄。保留游戏原始 78 骨骼、蒙皮权重、双枪挂点与 18 个动作曲线。",
     },
     {
         "slug": "huntress",
@@ -55,6 +120,8 @@ SURVIVORS = [
         "meshes": ["Bandit2BodyMesh"],
         "excludeRenderers": ["BanditShotgunMesh", "BanditPistolMesh"],
         "rig": "original-game-rig",
+        "rigBuilder": "bandit",
+        "animationRoot": r"RoR2\Base\Characters\Bandit2\Animations",
         "status": "游戏原始动作",
         "jointCount": 98,
         "animations": [
@@ -694,7 +761,10 @@ def main() -> None:
     model_root.mkdir(parents=True, exist_ok=True)
     texture_root.mkdir(parents=True, exist_ok=True)
     blender_script = args.repo_root / "scripts" / "build_ror2_survivor_glb.py"
-    bandit_game_rig_script = args.repo_root / "scripts" / "build_ror2_bandit_game_rig.py"
+    game_rig_scripts = {
+        "bandit": args.repo_root / "scripts" / "build_ror2_bandit_game_rig.py",
+        "commando": args.repo_root / "scripts" / "build_ror2_commando_game_rig.py",
+    }
     bandit_low_script = args.repo_root / "scripts" / "build_ror2_bandit_low_glb.py"
     results = []
 
@@ -756,18 +826,12 @@ def main() -> None:
             subprocess.run(command, check=True)
             stats = json.loads(stats_path.read_text(encoding="utf-8"))
             if item.get("rig") == "original-game-rig":
-                animation_root = (
-                    args.asset_ripper_project
-                    / "RoR2"
-                    / "Base"
-                    / "Characters"
-                    / "Bandit2"
-                    / "Animations"
-                )
+                animation_root = args.asset_ripper_project / item["animationRoot"]
+                game_rig_script = game_rig_scripts[item["rigBuilder"]]
                 subprocess.run(
                     [
                         sys.executable,
-                        str(bandit_game_rig_script),
+                        str(game_rig_script),
                         "--bundles",
                         *[str(path) for path in bundle_paths],
                         "--texture",

@@ -3804,8 +3804,8 @@
     "nameEn": "Commando",
     "kind": "hero",
     "tier": "英雄",
-    "status": "静态模型",
-    "summary": "基础远程英雄。展示从默认角色 prefab 烘焙的完整静态模型与双枪。",
+    "status": "游戏原始动作",
+    "summary": "基础远程英雄。保留游戏原始 78 骨骼、蒙皮权重、双枪挂点与 18 个动作曲线。",
     "models": {
       "original": "models/survivors/commando-original.glb",
       "low": "models/survivors/commando-low.glb"
@@ -3830,14 +3830,149 @@
     "rendererCount": 3,
     "bakedTriangles": 7432,
     "sourceTriangles": 7432,
-    "lowTriangles": 3715,
-    "sourceSizeKB": 252,
-    "lowSizeKB": 150,
-    "animationCount": 0,
+    "lowTriangles": 3707,
+    "sourceSizeKB": 2318,
+    "lowSizeKB": 1548,
+    "animationCount": 18,
     "preserveMaterials": true,
-    "animations": [],
-    "defaultClip": null,
-    "skills": []
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Commando_Idle",
+        "kind": "idle"
+      },
+      {
+        "name": "向前移动",
+        "clip": "Commando_RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后移动",
+        "clip": "Commando_RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左移动",
+        "clip": "Commando_RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右移动",
+        "clip": "Commando_RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "冲刺",
+        "clip": "Commando_SprintForward",
+        "kind": "movement"
+      },
+      {
+        "name": "跳跃",
+        "clip": "Commando_Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "向前翻滚",
+        "clip": "Commando_RollForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后翻滚",
+        "clip": "Commando_RollBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左翻滚",
+        "clip": "Commando_RollLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右翻滚",
+        "clip": "Commando_RollRight",
+        "kind": "movement"
+      },
+      {
+        "name": "向前滑行",
+        "clip": "Commando_SlideForward",
+        "kind": "movement"
+      },
+      {
+        "name": "左枪射击",
+        "clip": "Commando_FirePistolLeft",
+        "kind": "attack"
+      },
+      {
+        "name": "右枪射击",
+        "clip": "Commando_FirePistolRight",
+        "kind": "attack"
+      },
+      {
+        "name": "双枪换弹",
+        "clip": "Commando_ReloadPistols",
+        "kind": "other"
+      },
+      {
+        "name": "相位弹",
+        "clip": "Commando_FireFMJ",
+        "kind": "attack"
+      },
+      {
+        "name": "压制射击",
+        "clip": "Commando_FireBarrage",
+        "kind": "attack"
+      },
+      {
+        "name": "投掷手雷",
+        "clip": "Commando_ThrowGrenade",
+        "kind": "attack"
+      }
+    ],
+    "defaultClip": "Commando_Idle",
+    "motionAnchorBone": "base",
+    "motionAnchorAxes": [
+      "x",
+      "z"
+    ],
+    "skills": [
+      {
+        "name": "双枪射击",
+        "clip": "Commando_FirePistolRight",
+        "attackType": "交替射击",
+        "range": "中距离",
+        "description": "直接使用游戏原始右枪射击曲线，双枪保留在手部挂点。"
+      },
+      {
+        "name": "相位弹",
+        "clip": "Commando_FireFMJ",
+        "attackType": "贯穿射击",
+        "range": "远距离",
+        "description": "游戏原始 FMJ 上半身动作与自然待机底层合成。"
+      },
+      {
+        "name": "战术翻滚",
+        "clip": "Commando_RollForward",
+        "attackType": "位移动作",
+        "range": "自身",
+        "description": "游戏原始向前翻滚动作；网页预览在原地播放。"
+      },
+      {
+        "name": "压制射击",
+        "clip": "Commando_FireBarrage",
+        "attackType": "连续射击",
+        "range": "中距离",
+        "description": "游戏原始压制射击上半身动作与自然待机底层合成。"
+      },
+      {
+        "name": "破片手雷",
+        "clip": "Commando_ThrowGrenade",
+        "attackType": "投掷动作",
+        "range": "中距离",
+        "description": "游戏原始手雷投掷动作，不包含手雷粒子和爆炸特效。"
+      }
+    ],
+    "rigSource": "original-game-rig",
+    "jointCount": 78,
+    "originalGameRig": true
   },
   {
     "slug": "huntress",
