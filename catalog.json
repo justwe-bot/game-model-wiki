@@ -3833,6 +3833,7 @@
     "lowTriangles": 3715,
     "sourceSizeKB": 252,
     "lowSizeKB": 150,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -3873,6 +3874,7 @@
     "lowTriangles": 5077,
     "sourceSizeKB": 481,
     "lowSizeKB": 363,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -3884,8 +3886,8 @@
     "nameEn": "Bandit",
     "kind": "hero",
     "tier": "英雄",
-    "status": "重建骨骼",
-    "summary": "擅长背刺与连招的枪手。展示完整人物模型、披风与帽子，并附带重建的人形与披风建模骨骼；枪械已隐藏。",
+    "status": "游戏原始动作",
+    "summary": "擅长背刺与连招的枪手。保留游戏原始 98 骨骼、蒙皮权重与动作曲线；枪械模型已隐藏。",
     "models": {
       "original": "models/survivors/bandit-original.glb",
       "low": "models/survivors/bandit-low.glb"
@@ -3910,16 +3912,82 @@
     "rendererCount": 5,
     "bakedTriangles": 20700,
     "sourceTriangles": 20700,
-    "lowTriangles": 10349,
-    "sourceSizeKB": 954,
-    "lowSizeKB": 618,
+    "lowTriangles": 10350,
+    "sourceSizeKB": 1951,
+    "lowSizeKB": 1285,
+    "animationCount": 8,
     "preserveMaterials": true,
-    "animations": [],
-    "defaultClip": null,
-    "skills": [],
-    "rigSource": "reconstructed-humanoid-v1",
-    "jointCount": 24,
-    "originalGameRig": false
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Bandit_SelectPoseIdle",
+        "kind": "idle"
+      },
+      {
+        "name": "向前移动",
+        "clip": "Bandit_RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后移动",
+        "clip": "Bandit_RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左移动",
+        "clip": "Bandit_RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右移动",
+        "clip": "Bandit_RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "主武器攻击",
+        "clip": "Bandit_FireMainWeapon",
+        "kind": "attack"
+      },
+      {
+        "name": "装填",
+        "clip": "Bandit_Reload",
+        "kind": "other"
+      },
+      {
+        "name": "近战挥砍",
+        "clip": "Bandit_SlashBlade",
+        "kind": "attack"
+      }
+    ],
+    "defaultClip": "Bandit_SelectPoseIdle",
+    "framingScaleByVariant": {
+      "low": 1.3
+    },
+    "compareFramingScaleByVariant": {
+      "low": 1.0
+    },
+    "mobileFramingScaleByVariant": {
+      "low": 1.0
+    },
+    "skills": [
+      {
+        "name": "主武器攻击",
+        "clip": "Bandit_FireMainWeapon",
+        "attackType": "射击动作",
+        "range": "中距离",
+        "description": "直接使用游戏原始主武器攻击曲线；枪械模型保持隐藏。"
+      },
+      {
+        "name": "近战挥砍",
+        "clip": "Bandit_SlashBlade",
+        "attackType": "挥砍动作",
+        "range": "近距离",
+        "description": "直接使用游戏原始近战挥砍曲线。"
+      }
+    ],
+    "rigSource": "original-game-rig",
+    "jointCount": 98,
+    "originalGameRig": true
   },
   {
     "slug": "mul-t",
@@ -3956,6 +4024,7 @@
     "lowTriangles": 6311,
     "sourceSizeKB": 587,
     "lowSizeKB": 387,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -3996,6 +4065,7 @@
     "lowTriangles": 3495,
     "sourceSizeKB": 787,
     "lowSizeKB": 665,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4036,6 +4106,7 @@
     "lowTriangles": 6803,
     "sourceSizeKB": 490,
     "lowSizeKB": 315,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4076,6 +4147,7 @@
     "lowTriangles": 3805,
     "sourceSizeKB": 1321,
     "lowSizeKB": 1230,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4116,6 +4188,7 @@
     "lowTriangles": 13315,
     "sourceSizeKB": 962,
     "lowSizeKB": 608,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4156,6 +4229,7 @@
     "lowTriangles": 5804,
     "sourceSizeKB": 421,
     "lowSizeKB": 269,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4196,6 +4270,7 @@
     "lowTriangles": 5299,
     "sourceSizeKB": 612,
     "lowSizeKB": 490,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4236,6 +4311,7 @@
     "lowTriangles": 7998,
     "sourceSizeKB": 486,
     "lowSizeKB": 284,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4276,6 +4352,7 @@
     "lowTriangles": 6379,
     "sourceSizeKB": 1009,
     "lowSizeKB": 820,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4316,6 +4393,7 @@
     "lowTriangles": 6141,
     "sourceSizeKB": 872,
     "lowSizeKB": 733,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4356,6 +4434,7 @@
     "lowTriangles": 7103,
     "sourceSizeKB": 1116,
     "lowSizeKB": 950,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4396,6 +4475,7 @@
     "lowTriangles": 9359,
     "sourceSizeKB": 1251,
     "lowSizeKB": 1030,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4436,6 +4516,7 @@
     "lowTriangles": 5769,
     "sourceSizeKB": 1045,
     "lowSizeKB": 909,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
@@ -4476,6 +4557,7 @@
     "lowTriangles": 9331,
     "sourceSizeKB": 1436,
     "lowSizeKB": 1121,
+    "animationCount": 0,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,

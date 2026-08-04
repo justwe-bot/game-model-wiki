@@ -43,15 +43,31 @@ def main() -> None:
                 "lowTriangles": source["lowTriangles"],
                 "sourceSizeKB": source["sourceSizeKB"],
                 "lowSizeKB": source["lowSizeKB"],
+                "animationCount": source.get("animationCount", len(source.get("animations", []))),
                 "preserveMaterials": True,
-                "animations": [],
-                "defaultClip": None,
-                "skills": [],
+                "animations": source.get("animations", []),
+                "defaultClip": source.get("defaultClip"),
+                **(
+                    {"framingScaleByVariant": source["framingScaleByVariant"]}
+                    if source.get("framingScaleByVariant")
+                    else {}
+                ),
+                **(
+                    {"compareFramingScaleByVariant": source["compareFramingScaleByVariant"]}
+                    if source.get("compareFramingScaleByVariant")
+                    else {}
+                ),
+                **(
+                    {"mobileFramingScaleByVariant": source["mobileFramingScaleByVariant"]}
+                    if source.get("mobileFramingScaleByVariant")
+                    else {}
+                ),
+                "skills": source.get("skills", []),
                 **(
                     {
                         "rigSource": source["rig"],
                         "jointCount": source["jointCount"],
-                        "originalGameRig": False,
+                        "originalGameRig": source["rig"] == "original-game-rig",
                     }
                     if source.get("rig")
                     else {}
