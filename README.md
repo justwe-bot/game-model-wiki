@@ -59,8 +59,9 @@ python -m http.server 4173
 
 - `scripts/extract_ror2_survivors.py`：读取本机 Addressables bundle，定位 17 位英雄的默认模型 prefab，恢复 Transform 层级，并将 SkinnedMeshRenderer 按骨骼和 bind pose 烘焙为完整静态网格。
 - `scripts/build_ror2_survivor_glb.py`：为烘焙网格生成原模与 50% 移动低模 GLB，并写入三角面和文件大小统计。
-- `scripts/add_ror2_bandit_rig.py`：为盗贼的烘焙展示姿态补充 24 关节的人形与披风建模骨骼和启发式蒙皮；该骨架不是游戏原始运行时骨架。
-- `scripts/validate_ror2_bandit_rig.py`：校验盗贼原模与低模的关节层级、顶点权重和 inverse bind matrices。
+- `scripts/build_ror2_bandit_game_rig.py`：从本机 Addressables bundle 直接写出盗贼的 98 根游戏原始骨骼、bind pose、顶点权重与 8 个游戏动画。
+- `scripts/build_ror2_bandit_low_glb.py`：在 Armature 之前简化盗贼网格，保留原始骨架、权重和动作生成移动低模。
+- `scripts/validate_ror2_bandit_game_rig.py`：校验盗贼原模与低模的原始骨架来源、蒙皮权重、inverse bind matrices 和动画通道。
 - `scripts/merge_ror2_survivors.py`：把英雄生成清单合并到主目录，保留原有怪物与其他游戏条目。
 
 当前英雄池包含 17 位英雄、34 个 GLB。每个英雄均使用明确指定的默认 prefab 根节点，普通挂件与蒙皮分件会在同一世界姿态中合并，避免只显示腿部、散落武器或堆叠网格。
@@ -124,7 +125,7 @@ python -m http.server 4173
 - 技能按钮播放的是模型骨骼动作。火球、激光、火焰、光晕、冲击波等独立粒子/VFX 不包含在角色 GLB 中。
 - 少数游戏资源把静态网格和动作骨架拆在不同包中，需要额外的骨架与蒙皮合并管线，当前不会用空骨架冒充完整模型。
 - 巨型幽魂与黏土沙丘行者的 FBX 导出缺少部分蒙皮权重，构建管线会为缺失顶点补充刚性权重，适合 Wiki 预览，但不等同于游戏项目中的精确蒙皮数据。
-- 英雄当前使用默认姿态的静态烘焙模型，不包含 Animator 动作、技能特效或可切换皮肤；盗贼的 24 关节骨架用于建模与姿态调整，不等同于游戏原始 rig。
+- 除盗贼外，英雄当前使用默认姿态的静态烘焙模型，不包含 Animator 动作、技能特效或可切换皮肤；盗贼已保留游戏原始骨架、蒙皮和 8 个动画，但仍不包含运行时 Animator 分层、IK、技能特效或已隐藏的武器模型。
 - 《哈迪斯 II》优化资源由共享字符串库 `.sdb` 与角色 Packfile `.gpk` 组成，必须先重建为标准 GR2；仓库不包含原始 GPK/SDB、游戏 DLL、临时 GR2 或 H2GX 桥接文件。
 - 地图结构预览不包含天空盒、粒子、动态机关、植被实例和烘焙光照；部分运行时拼装场景仍使用结构配色。
 

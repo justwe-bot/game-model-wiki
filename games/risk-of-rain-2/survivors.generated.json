@@ -54,18 +54,87 @@
       "BanditShotgunMesh",
       "BanditPistolMesh"
     ],
-    "rig": "reconstructed-humanoid-v1",
-    "status": "重建骨骼",
-    "jointCount": 24,
+    "rig": "original-game-rig",
+    "status": "游戏原始动作",
+    "jointCount": 98,
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Bandit_SelectPoseIdle",
+        "kind": "idle"
+      },
+      {
+        "name": "向前移动",
+        "clip": "Bandit_RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后移动",
+        "clip": "Bandit_RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左移动",
+        "clip": "Bandit_RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右移动",
+        "clip": "Bandit_RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "主武器攻击",
+        "clip": "Bandit_FireMainWeapon",
+        "kind": "attack"
+      },
+      {
+        "name": "装填",
+        "clip": "Bandit_Reload",
+        "kind": "other"
+      },
+      {
+        "name": "近战挥砍",
+        "clip": "Bandit_SlashBlade",
+        "kind": "attack"
+      }
+    ],
+    "defaultClip": "Bandit_SelectPoseIdle",
+    "framingScaleByVariant": {
+      "low": 1.3
+    },
+    "mobileFramingScaleByVariant": {
+      "low": 1.0
+    },
+    "compareFramingScaleByVariant": {
+      "low": 1.0
+    },
+    "skills": [
+      {
+        "name": "主武器攻击",
+        "clip": "Bandit_FireMainWeapon",
+        "attackType": "射击动作",
+        "range": "中距离",
+        "description": "直接使用游戏原始主武器攻击曲线；枪械模型保持隐藏。"
+      },
+      {
+        "name": "近战挥砍",
+        "clip": "Bandit_SlashBlade",
+        "attackType": "挥砍动作",
+        "range": "近距离",
+        "description": "直接使用游戏原始近战挥砍曲线。"
+      }
+    ],
     "texture": "texBandit2Diffuse",
-    "summary": "擅长背刺与连招的枪手。展示完整人物模型、披风与帽子，并附带重建的人形与披风建模骨骼；枪械已隐藏。",
+    "summary": "擅长背刺与连招的枪手。保留游戏原始 98 骨骼、蒙皮权重与动作曲线；枪械模型已隐藏。",
     "prefab": "mdlBandit2@MasterAnims",
     "rendererCount": 5,
     "bakedTriangles": 20700,
     "sourceTriangles": 20700,
-    "lowTriangles": 10349,
-    "sourceSizeKB": 954,
-    "lowSizeKB": 618
+    "animationCount": 8,
+    "lowTriangles": 10350,
+    "sourceSizeKB": 1951,
+    "lowSizeKB": 1285
   },
   {
     "slug": "mul-t",

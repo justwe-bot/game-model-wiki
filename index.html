@@ -385,14 +385,14 @@
       });
     }
 
-    function fitModel(model, wrapper, targetHeight, targetWidth, x) {
+    function fitModel(model, wrapper, targetHeight, targetWidth, x, framingScale = 1) {
       const firstBox = new THREE.Box3().setFromObject(model);
       const size = firstBox.getSize(new THREE.Vector3());
       const horizontalSize = Math.max(size.x, size.z);
       const scale = Math.min(
         targetHeight / Math.max(size.y, 0.001),
         targetWidth / Math.max(horizontalSize, 0.001)
-      ) * (activeEntry.framingScale ?? 1);
+      ) * framingScale;
       model.scale.setScalar(scale);
       const box = new THREE.Box3().setFromObject(model);
       const center = box.getCenter(new THREE.Vector3());
@@ -474,7 +474,15 @@
         mixer.update(0);
       }
       model.updateMatrixWorld(true);
-      fitModel(model, wrapper, targetHeight, targetWidth, x);
+      const framingScale = (activeMode === 'compare'
+        ? activeEntry.compareFramingScaleByVariant?.[variant]
+        : stage.clientWidth <= 560
+          ? activeEntry.mobileFramingScaleByVariant?.[variant]
+          : undefined)
+        ?? activeEntry.framingScaleByVariant?.[variant]
+        ?? activeEntry.framingScale
+        ?? 1;
+      fitModel(model, wrapper, targetHeight, targetWidth, x, framingScale);
       mixer.stopAllAction();
       const motionAnchor = activeEntry.motionAnchorBone
         ? model.getObjectByName(activeEntry.motionAnchorBone)

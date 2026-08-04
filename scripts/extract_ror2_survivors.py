@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import sys
 import tempfile
 
 import numpy as np
@@ -53,11 +54,41 @@ SURVIVORS = [
         "poseClip": r"RoR2\Base\Characters\Bandit2\Animations\Bandit_SelectPoseIdle.anim",
         "meshes": ["Bandit2BodyMesh"],
         "excludeRenderers": ["BanditShotgunMesh", "BanditPistolMesh"],
-        "rig": "reconstructed-humanoid-v1",
-        "status": "重建骨骼",
-        "jointCount": 24,
+        "rig": "original-game-rig",
+        "status": "游戏原始动作",
+        "jointCount": 98,
+        "animations": [
+            {"name": "待机", "clip": "Bandit_SelectPoseIdle", "kind": "idle"},
+            {"name": "向前移动", "clip": "Bandit_RunForward", "kind": "movement"},
+            {"name": "向后移动", "clip": "Bandit_RunBackward", "kind": "movement"},
+            {"name": "向左移动", "clip": "Bandit_RunLeft", "kind": "movement"},
+            {"name": "向右移动", "clip": "Bandit_RunRight", "kind": "movement"},
+            {"name": "主武器攻击", "clip": "Bandit_FireMainWeapon", "kind": "attack"},
+            {"name": "装填", "clip": "Bandit_Reload", "kind": "other"},
+            {"name": "近战挥砍", "clip": "Bandit_SlashBlade", "kind": "attack"},
+        ],
+        "defaultClip": "Bandit_SelectPoseIdle",
+        "framingScaleByVariant": {"low": 1.3},
+        "mobileFramingScaleByVariant": {"low": 1.0},
+        "compareFramingScaleByVariant": {"low": 1.0},
+        "skills": [
+            {
+                "name": "主武器攻击",
+                "clip": "Bandit_FireMainWeapon",
+                "attackType": "射击动作",
+                "range": "中距离",
+                "description": "直接使用游戏原始主武器攻击曲线；枪械模型保持隐藏。",
+            },
+            {
+                "name": "近战挥砍",
+                "clip": "Bandit_SlashBlade",
+                "attackType": "挥砍动作",
+                "range": "近距离",
+                "description": "直接使用游戏原始近战挥砍曲线。",
+            },
+        ],
         "texture": "texBandit2Diffuse",
-        "summary": "擅长背刺与连招的枪手。展示完整人物模型、披风与帽子，并附带重建的人形与披风建模骨骼；枪械已隐藏。",
+        "summary": "擅长背刺与连招的枪手。保留游戏原始 98 骨骼、蒙皮权重与动作曲线；枪械模型已隐藏。",
     },
     {
         "slug": "mul-t",
@@ -663,7 +694,8 @@ def main() -> None:
     model_root.mkdir(parents=True, exist_ok=True)
     texture_root.mkdir(parents=True, exist_ok=True)
     blender_script = args.repo_root / "scripts" / "build_ror2_survivor_glb.py"
-    bandit_rig_script = args.repo_root / "scripts" / "add_ror2_bandit_rig.py"
+    bandit_game_rig_script = args.repo_root / "scripts" / "build_ror2_bandit_game_rig.py"
+    bandit_low_script = args.repo_root / "scripts" / "build_ror2_bandit_low_glb.py"
     results = []
 
     with tempfile.TemporaryDirectory(prefix="codex-ror2-survivors-") as temp_value:
@@ -723,15 +755,39 @@ def main() -> None:
             ]
             subprocess.run(command, check=True)
             stats = json.loads(stats_path.read_text(encoding="utf-8"))
-            if item.get("rig") == "reconstructed-humanoid-v1":
-                for variant in ("original", "low"):
-                    model_path = model_root / f"{item['slug']}-{variant}.glb"
-                    subprocess.run(
-                        [sys.executable, str(bandit_rig_script), str(model_path), str(model_path)],
-                        check=True,
-                    )
-                stats["sourceSizeKB"] = round((model_root / f"{item['slug']}-original.glb").stat().st_size / 1024)
-                stats["lowSizeKB"] = round((model_root / f"{item['slug']}-low.glb").stat().st_size / 1024)
+            if item.get("rig") == "original-game-rig":
+                animation_root = (
+                    args.asset_ripper_project
+                    / "RoR2"
+                    / "Base"
+                    / "Characters"
+                    / "Bandit2"
+                    / "Animations"
+                )
+                subprocess.run(
+                    [
+                        sys.executable,
+                        str(bandit_game_rig_script),
+                        "--bundles",
+                        *[str(path) for path in bundle_paths],
+                        "--texture",
+                        str(original_texture),
+                        "--animation-root",
+                        str(animation_root),
+                        "--original",
+                        str(model_root / f"{item['slug']}-original.glb"),
+                        "--low",
+                        str(model_root / f"{item['slug']}-low.glb"),
+                        "--blender",
+                        str(args.blender),
+                        "--low-script",
+                        str(bandit_low_script),
+                        "--stats",
+                        str(stats_path),
+                    ],
+                    check=True,
+                )
+                stats = json.loads(stats_path.read_text(encoding="utf-8"))
             results.append({**item, **prefab_stats, **stats})
 
     result_path = args.repo_root / "games" / "risk-of-rain-2" / "survivors.generated.json"
