@@ -3884,8 +3884,8 @@
     "nameEn": "Bandit",
     "kind": "hero",
     "tier": "英雄",
-    "status": "静态模型",
-    "summary": "擅长背刺与连招的枪手。展示完整静态人物模型、披风与帽子，枪械已隐藏。",
+    "status": "重建骨骼",
+    "summary": "擅长背刺与连招的枪手。展示完整人物模型、披风与帽子，并附带重建的人形与披风建模骨骼；枪械已隐藏。",
     "models": {
       "original": "models/survivors/bandit-original.glb",
       "low": "models/survivors/bandit-low.glb"
@@ -3911,12 +3911,15 @@
     "bakedTriangles": 20700,
     "sourceTriangles": 20700,
     "lowTriangles": 10349,
-    "sourceSizeKB": 711,
-    "lowSizeKB": 481,
+    "sourceSizeKB": 954,
+    "lowSizeKB": 618,
     "preserveMaterials": true,
     "animations": [],
     "defaultClip": null,
-    "skills": []
+    "skills": [],
+    "rigSource": "reconstructed-humanoid-v1",
+    "jointCount": 24,
+    "originalGameRig": false
   },
   {
     "slug": "mul-t",

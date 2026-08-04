@@ -23,7 +23,7 @@ def main() -> None:
                 "nameEn": source["nameEn"],
                 "kind": "hero",
                 "tier": "英雄",
-                "status": "静态模型",
+                "status": source.get("status", "静态模型"),
                 "summary": source["summary"],
                 "models": {
                     "original": f"models/survivors/{slug}-original.glb",
@@ -47,6 +47,15 @@ def main() -> None:
                 "animations": [],
                 "defaultClip": None,
                 "skills": [],
+                **(
+                    {
+                        "rigSource": source["rig"],
+                        "jointCount": source["jointCount"],
+                        "originalGameRig": False,
+                    }
+                    if source.get("rig")
+                    else {}
+                ),
             }
         )
 
