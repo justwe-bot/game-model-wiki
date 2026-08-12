@@ -8,6 +8,7 @@
 
 - `risk-of-rain-2`：20 个怪物和 23 张地图，支持模型对比、骨骼动作与独立地图浏览
 - `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
+- `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
 
 《哈迪斯 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
 
@@ -45,6 +46,9 @@ python -m http.server 4173
 追加 `monster=<slug>` 可直接打开具体条目，例如
 `http://127.0.0.1:4173/?game=hades-2&monster=jellyfish`。
 
+自定义模型资源池可直接打开：
+`http://127.0.0.1:4173/?game=custom-models&monster=nova-jet-sentinel`。
+
 ## Hades II 构建链
 
 - `tools/hades2-granny-rebuild`：结合共享 SDB 重建 GPK 中的标准 GR2。
@@ -64,9 +68,26 @@ python -m http.server 4173
 - `scripts/build_ror2_bandit_low_glb.py`：在 Armature 之前简化盗贼网格，保留原始骨架、权重和动作生成移动低模。
 - `scripts/validate_ror2_bandit_game_rig.py`：校验盗贼原模与低模的原始骨架来源、蒙皮权重、inverse bind matrices 和动画通道。
 - `scripts/validate_ror2_commando_game_rig.py`：校验突击兵原模与低模的 78 骨骼、双枪、蒙皮权重和 18 个动作。
+- `scripts/build_space_commando.py`：以突击兵原始蒙皮身体、双枪、骨骼和动作作为基准，重新材质化内层压力服并生成宇航机甲护甲、封闭头盔和喷气背包。
+- `scripts/validate_space_commando.py`：校验宇宙突击兵的 78 骨骼、18 个动作、蒙皮权重、双枪挂点和原创材质边界。
+- `references/space-commando-concept.png`：宇宙突击兵重构所依据的正反面设计稿。
+- `scripts/build_popbot_pro.py`：依据 POPBOT_PRO_01 角色设计稿，在突击兵骨架上程序化生成兔耳头部、宽松夹克、撞色鞋袜、背部装置和大型枪械，并把原模与低模硬限制在 10,000 三角面以内。
+- `scripts/validate_popbot_pro.py`：校验兔耳重炮手的三角面上限、78 骨骼、18 个动作、蒙皮权重、武器挂点和全部程序化分件。
+- `references/popbot-pro-concept.png`：兔耳重炮手重构所依据的正侧背角色设计稿。
+- `cloud/modal_triposr.py`：在 Modal L4 上按需运行 TripoSR，复用缓存容器镜像和持久模型卷，从角色图片生成带顶点色的原始 GLB。
+- `scripts/build_rig_proxy_character.py`：按清单执行“白模三视图 -> Modal 多视图重建 -> UniRig 关节检查 -> 78 骨骼动作迁移 -> 变形验证 -> Wiki 发布”的可缓存分阶段流程，默认拒绝覆盖并要求视觉验收后才能发布。
+- `references/character-production-pipeline.md`：记录设计图到可动画 GLB 的白模校准、分件权重、动作质量门槛和 Modal 额度使用策略。
+- `references/image-hunyuan3d-mixamo-workflow.md`：记录新默认“生图 -> 混元高模 -> Blender/QRemeshify 网格规整与烘焙 -> Mixamo 最终蒙皮与动作 -> 动画 GLB/FBX”的实操流程，并保留历史重定向兼容说明。
+- `cloud/modal_character_mesh.py`：在现有 Modal 套餐中运行 Blender 4.2 与 QRemeshify，对混元高模执行保守修复、T Pose/非流形门禁、四边重拓扑、UV 和高低模贴图烘焙，并输出 Mixamo 上传 FBX。
+- `cloud/modal_mixamo_character.py`：把 Mixamo 下载的 With Skin 基础 FBX 与 Without Skin 动作包合并为同时带网格、蒙皮和多动作的 GLB/FBX，并统一角色高度、脚底原点和动作骨骼路径。
+- `scripts/mixamo_character_pipeline.py`：新角色默认入口，提供 `prepare`、`finalize` 和 `validate` 三个阶段。
+- `scripts/validate_mixamo_character.py`：校验最终 Mixamo 角色的核心人形骨骼、蒙皮网格、关节索引、归一化权重和动画关键帧。
+- `scripts/rig_generated_character.py`：把 TripoSR 网格转为 Y-up，并迁移宇宙突击兵的 78 根骨骼、蒙皮权重和 20 个动作；支持把融合道具区域显式刚性绑定到左手或右手。
+- `scripts/build_image_to_wiki_model.py`：单命令完成图片生成、骨骼动作迁移、结构校验、实验条目登记和主目录合并。
+- `scripts/validate_generated_character.py`：校验图片生成模型的可见蒙皮网格、顶点色、法线、78 骨骼、20 个动作和归一化权重。
 - `scripts/merge_ror2_survivors.py`：把英雄生成清单合并到主目录，保留原有怪物与其他游戏条目。
 
-当前英雄池包含 17 位英雄、34 个 GLB。每个英雄均使用明确指定的默认 prefab 根节点，普通挂件与蒙皮分件会在同一世界姿态中合并，避免只显示腿部、散落武器或堆叠网格。
+当前英雄池包含 18 位英雄、36 个 GLB，其中 17 位来自游戏资源提取，1 位是通过生图、混元 3D、UniRig 与 Mixamo 工作流生成的自定义角色。每个英雄均使用明确指定的默认 prefab 根节点，普通挂件与蒙皮分件会在同一世界姿态中合并，避免只显示腿部、散落武器或堆叠网格。
 
 英雄材质默认按不透明方式导出，避免把游戏贴图中用于材质遮罩的 Alpha 误当成身体透明度；明确使用透明裁切的分件会单独保留 Alpha。提取器也支持 Unity 省略恒定权重的单骨骼顶点格式，并允许像 MUL-T 这样使用独立 MasterAnims 骨架的模型从展示姿态烘焙，而不是输出拆散的 bind pose。对于 MasterAnims 参考姿态仍不自然的角色，可以从 AssetRipper 还原的 `.anim` Transform 曲线采样展示帧；盗贼当前使用 `Bandit_SelectPoseIdle` 的首帧烘焙，并在烘焙结果上附加明确标记的重建建模骨架。
 
@@ -119,7 +140,7 @@ python -m http.server 4173
 - 甲壳虫女王、巨角野牛等细肢模型已用并排对比检查，低模未再出现缺脚问题
 - Hades II 的 14 个条目均有原模、低模和目录中列出的骨骼动作；冲撞、砸地、飞行、长躯干卷曲、施法和巨斧攻击的极端姿态均保留完整可见本体
 - 鱼群怪的鳍和上下颚、水母的全部触手、自动机的分离面板、鹰身女妖的羽翼和鱼人的武器均按低模完整性标准保留
-- Risk of Rain 2 的 17 位英雄已逐项加载验证；Bandit、Captain、Railgunner、Drifter 与 REX 已重点检查分件、武器和默认 prefab 选择
+- Risk of Rain 2 的 17 位游戏提取英雄已逐项加载验证；3 位自定义角色额外验证了原始骨骼继承、动作播放或程序化分件，图片生成实验体已检查绑定姿态、移动动作、重炮动作和原模/低模加载
 - 英雄页面已在 390x844 移动视口验证，无横向溢出、模型空白或工具栏遮挡
 
 ## 已知边界

@@ -1,0 +1,29 @@
+{
+  "name": "POPBOT Hunyuan V3.1 clean multiview",
+  "targetHeight": 1.9,
+  "depthOffset": 0.08,
+  "bodyYawDeg": 180,
+  "sourceOrientation": "hunyuan-blender-z-down",
+  "jointWorldPositions": {
+    "base": [0.0, 0.94, 0.08],
+    "pelvis": [0.0, 0.92, 0.02],
+    "stomach": [0.0, 1.02, 0.03],
+    "chest": [0.0, 1.22, 0.05],
+    "head": [0.0, 1.55, 0.09],
+    "upper_arm.l": [-0.23, 1.4, 0.09],
+    "lower_arm.l": [-0.45, 1.39, 0.09],
+    "hand.l": [-0.63, 1.33, 0.1],
+    "upper_arm.r": [0.23, 1.4, 0.09],
+    "lower_arm.r": [0.45, 1.39, 0.09],
+    "hand.r": [0.63, 1.33, 0.1],
+    "thigh.l": [-0.1, 0.9, 0.0],
+    "calf.l": [-0.11, 0.51, 0.0],
+    "foot.l": [-0.12, 0.14, 0.1],
+    "toe.l": [-0.12, 0.05, -0.04],
+    "thigh.r": [0.1, 0.9, 0.0],
+    "calf.r": [0.11, 0.51, 0.0],
+    "foot.r": [0.12, 0.14, 0.1],
+    "toe.r": [0.12, 0.05, -0.04]
+  },
+  "notes": "Landmarks are fitted to the clean front/left/back turnaround. Arm joints use the generated mesh T-pose shoulder, elbow, and wrist positions so the Commando animation retarget can lower and bend the arms correctly. Ear tips remain head-weighted geometry and are not used as anatomical head height."
+}

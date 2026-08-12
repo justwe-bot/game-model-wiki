@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-10T00:40:16.872436+00:00",
+  "identity": {
+    "slug": "popbot-unirig-template-v1",
+    "name": "兔耳战术兵 UniRig 动作迁移版",
+    "nameEn": "POPBOT UniRig Template Transfer",
+    "game": "risk-of-rain-2",
+    "kind": "hero",
+    "tier": "英雄"
+  },
+  "pipelineManifest": {
+    "path": "references/characters/popbot-unirig-template-v1.json",
+    "bytes": 4430,
+    "sha256": "d565b0c623ee31e94c2c73c056b2368ab9bd9eea136a0bfa87f19f181f8ce632"
+  },
+  "references": [],
+  "supportAssets": [
+    {
+      "path": "generated/popbot-hunyuan-v31-unirig-auto-profile.json",
+      "bytes": 3756,
+      "sha256": "7a1068c769f1fccc662b7ef014584f7c5f163288e3cf31ebd4751263e8e1f390"
+    },
+    {
+      "path": "generated/templates/space-commando-original.glb",
+      "bytes": 2652236,
+      "sha256": "0a1993b0de358dac7c3ec2025d6ca061e9d4677e50efc928dd129d1ae5ec57ce"
+    }
+  ],
+  "intermediates": [
+    {
+      "path": "generated/popbot-hunyuan-v31-unirig-500k.glb",
+      "bytes": 64093608,
+      "sha256": "0a9e23997bdbc918017f0229a0bfcbf5aeb814c846a37094109ac530cb2a26dd"
+    },
+    {
+      "path": "generated/popbot-hunyuan-v31-unirig-120k.glb",
+      "bytes": 46259384,
+      "sha256": "c3dfc6c1e0e0e8ce605b20536ff8850d28892a151bc0b1a5184da3471b8d6656"
+    }
+  ],
+  "outputs": {
+    "original": {
+      "path": "models/survivors/popbot-unirig-template-v1-original.glb",
+      "bytes": 66985324,
+      "sha256": "3f5337c05dcf34e94bc24922c33ec858a7c8c7df81452c4b435a31333959f035",
+      "validation": {
+        "vertices": 378827,
+        "triangles": 499973,
+        "totalTriangles": 499973,
+        "joints": 78,
+        "animations": 20,
+        "weightError": 4.470348358154297e-08
+      }
+    },
+    "low": {
+      "path": "models/survivors/popbot-unirig-template-v1-low.glb",
+      "bytes": 49151104,
+      "sha256": "e5e9410a0fbdbb35aadee889c9824b1cac13110ace5449ee6054e86d043f2176",
+      "validation": {
+        "vertices": 123549,
+        "triangles": 119993,
+        "totalTriangles": 119993,
+        "joints": 78,
+        "animations": 20,
+        "weightError": 4.470348358154297e-08
+      }
+    }
+  },
+  "adapters": {
+    "reconstruction": "existing-glb",
+    "proxyRig": "none",
+    "finalGeometry": "existing-variants",
+    "finalSkin": "existing-variants",
+    "rigProfile": "existing",
+    "finalRig": "unirig-template-transfer"
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-provided POPBOT concept and generated Hunyuan3D mesh",
+    "limitations": "The POPBOT design and inherited game animations remain subject to their respective rights holders; confirm distribution rights before shipping."
+  }
+}

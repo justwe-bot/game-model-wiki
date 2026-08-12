@@ -1,0 +1,185 @@
+{
+  "$schema": "../character-pipeline.schema.json",
+  "schemaVersion": 2,
+  "pipeline": {
+    "name": "Flux Vanguard image, Hunyuan3D, UniRig, and Mixamo production v1",
+    "scope": "humanoid-character"
+  },
+  "identity": {
+    "slug": "flux-vanguard",
+    "name": "磁暴先锋",
+    "nameEn": "Flux Vanguard",
+    "game": "risk-of-rain-2",
+    "kind": "hero",
+    "tier": "英雄"
+  },
+  "references": {
+    "mode": "turnaround",
+    "sourceDesign": "references/flux-vanguard/concept.png",
+    "turnaround": "references/flux-vanguard/turnaround.png",
+    "viewsDir": "references/flux-vanguard",
+    "cropBoxes": {
+      "front": [0, 0, 770, 929],
+      "left": [770, 0, 1000, 929],
+      "back": [1000, 0, 1692, 929]
+    },
+    "canvasSize": 1024,
+    "background": [238, 238, 238, 255],
+    "generation": {
+      "adapter": "openai-imagegen-sub2api",
+      "artifact": "references/flux-vanguard/turnaround.png",
+      "prompt": "Create an orthographic front, strict left-side, and back modeling turnaround of the same compact sci-fi shock trooper. Preserve the broad shoulders, thick chest, arms, thighs, oversized boots, cobalt and ivory armor, cyan energy details, helmet, proportions, and ground line. Use a full T-pose with arms and sleeves fully separated from the torso, legs separated, feet parallel, hands relaxed with fingers together, no weapon, no handheld prop, no perspective, no text, and a plain background."
+    }
+  },
+  "reconstruction": {
+    "adapter": "hunyuan-multiview",
+    "backend": "tencent/Hunyuan3D-2mv",
+    "gpu": "L4",
+    "script": "cloud/modal_hunyuan3d_mv.py",
+    "output": "generated/flux-vanguard-hunyuan-raw.glb",
+    "options": {
+      "seed": 12345,
+      "steps": 50,
+      "octreeResolution": 380,
+      "numChunks": 20000,
+      "paintBackend": "tencent/Hunyuan3D-2",
+      "paintTargetFaces": 120000
+    }
+  },
+  "proxyRig": {
+    "adapter": "none"
+  },
+  "finalGeometry": {
+    "adapter": "existing-variants",
+    "backend": "tencent/Hunyuan3D-2mv + Hunyuan3D-2 Paint",
+    "outputs": {
+      "original": "generated/flux-vanguard-hunyuan-120k.glb",
+      "low": "generated/flux-vanguard-hunyuan-30k.glb"
+    },
+    "options": {
+      "originalFaces": 120000,
+      "lowFaces": 30000,
+      "lowTextureSize": 1024
+    }
+  },
+  "finalSkin": {
+    "adapter": "existing-variants",
+    "backend": "VAST-AI/UniRig",
+    "outputs": {
+      "original": "generated/flux-vanguard-unirig-120k.glb",
+      "low": "generated/flux-vanguard-unirig-30k.glb"
+    },
+    "options": {
+      "seed": 12345,
+      "facesTargetCount": {
+        "original": 50000,
+        "low": 30000
+      }
+    }
+  },
+  "rigProfile": {
+    "adapter": "existing",
+    "output": "generated/flux-vanguard-unirig-profile.json",
+    "options": {
+      "targetHeight": 1.9,
+      "depthOffset": 0.08,
+      "bodyYawDeg": 0
+    }
+  },
+  "finalRig": {
+    "adapter": "unirig-template-transfer",
+    "script": "scripts/rig_unirig_character.py",
+    "template": "generated/templates/space-commando-original.glb",
+    "outputs": {
+      "original": "generated/flux-vanguard-mixamo-only-120k-upper-body-shoulders-fixed-v4.glb",
+      "low": "generated/flux-vanguard-mixamo-only-30k-1k-upper-body-shoulders-fixed-v4.glb"
+    },
+    "options": {
+      "fingerMode": "rigid",
+      "handPose": "relaxed",
+      "footMode": "rigid-shoe",
+      "upperBodyMode": "armored",
+      "shoulderMode": "armored-slab",
+      "motionSource": "Adobe Mixamo",
+      "sourceYawDegrees": 180,
+      "animationFilter": "Mixamo_*"
+    }
+  },
+  "validation": {
+    "final": {
+      "script": "scripts/validate_rigged_character.py"
+    },
+    "visualClips": [
+      "bind-pose",
+      "Mixamo_RunForward",
+      "Mixamo_SprintForward",
+      "Mixamo_RifleRunFire"
+    ],
+    "reject": [
+      "reversed knees",
+      "outward foot yaw",
+      "ankle collapse",
+      "hand or finger spikes",
+      "thigh tearing",
+      "sleeve stretching across the torso",
+      "backward-facing locomotion"
+    ]
+  },
+  "publish": {
+    "modelsDir": "models/survivors",
+    "provenanceOutput": "generated/provenance/flux-vanguard.json",
+    "catalog": {
+      "mode": "source-template",
+      "path": "games/risk-of-rain-2/survivors.custom.json",
+      "templateEntry": "popbot-heavy-gunner-v1",
+      "mergeCommand": ["python3", "scripts/merge_ror2_survivors.py"],
+      "viewerUrl": "http://127.0.0.1:8765/?game={game}&monster={slug}"
+    },
+    "entry": {
+      "bundle": "image-hunyuan3d2mv-unirig-mixamo-flux-vanguard-v1",
+      "texture": "embeddedHunyuan3D2PaintTextures",
+      "status": "生图 + Hunyuan3D-2mv + Hunyuan Paint + UniRig + Mixamo 动作 v2",
+      "summary": "原创科幻重装角色由设计稿生成统一 T Pose 三视图，经 Modal L4 上的 Hunyuan3D-2mv 50 步、380 分辨率重建，并使用 Hunyuan Paint 生成纹理。最终网格分别以约 12 万面和 3 万面运行 UniRig 蒙皮，再迁移到稳定 78 骨目标骨架并只保留 16 个 Mixamo 动作。角色实际正面为源网格 +Z，Mixamo 动作源使用 180 度朝向校正；发布版额外稳定颈圈和左右内肩权重，并压薄、对齐 Hunyuan 生成过圆的外肩甲轮廓。移动低模使用 1K 主纹理，武器应作为独立模型在运行时挂接手骨。",
+      "meshes": ["GeneratedCharacterMesh"],
+      "prefab": "Hunyuan3D-2mv mesh / Hunyuan Paint / UniRig target skin / Mixamo-only motions",
+      "rendererCount": 1,
+      "animationCount": 16,
+      "rig": "unirig-template-mixamo-retarget-v1",
+      "jointCount": 78,
+      "framingScaleByVariant": {
+        "original": 1.18,
+        "low": 1.18
+      },
+      "mobileFramingScaleByVariant": {
+        "original": 1.08,
+        "low": 1.08
+      },
+      "compareFramingScaleByVariant": {
+        "original": 1.0,
+        "low": 1.0
+      },
+      "embeddedMaterialEmissiveColor": "#202830",
+      "embeddedMaterialEmissiveIntensity": 0.6,
+      "embeddedMaterialMetalness": 0.06,
+      "cameraTargetY": 1.55,
+      "skills": [
+        {
+          "name": "磁暴移动压制",
+          "clip": "Mixamo_RifleRunFire",
+          "attackType": "跑动中持续射击",
+          "range": "中远距离",
+          "description": "使用 Mixamo 步枪跑动连续开火姿态，位移由游戏控制器驱动，武器和枪口特效在运行时挂接。"
+        }
+      ]
+    }
+  },
+  "approvals": {
+    "requireProxyVisual": false,
+    "requireFinalVisual": true
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-authorized original Flux Vanguard design and generated Hunyuan3D mesh",
+    "limitations": "Confirm Hunyuan3D, Adobe Mixamo, template animation, and generated character distribution rights before public or commercial shipping."
+  }
+}

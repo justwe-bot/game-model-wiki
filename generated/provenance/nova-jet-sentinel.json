@@ -1,0 +1,148 @@
+{
+  "slug": "nova-jet-sentinel",
+  "status": "delivery-approved",
+  "source": {
+    "concept": "references/nova-jet-sentinel/concept.jpg",
+    "conceptSha256": "d2b4915347680eec26f087fb754c91c38393f7b44cedcbbea90177f8d42e9c0e",
+    "turnaround": "references/nova-jet-sentinel/turnaround.png",
+    "imageGenerationId": "ig_04d6a1b8e53ef99e016a7adf2409148196ae6d13438ffbcf4c",
+    "imageGeneratedAt": "2026-08-11T08:37:58.986Z"
+  },
+  "hunyuan": {
+    "adapter": "https://3d.hunyuan.tencent.com/",
+    "model": "Tencent Hunyuan 3D Web V3.1",
+    "mode": "multiview-image-to-3d",
+    "webFaceBudget": "1.5m",
+    "shape": "generated/nova-jet-sentinel-hunyuan-web-v31-1p5m.glb",
+    "textured": "generated/nova-jet-sentinel-hunyuan-web-v31-1p5m.glb",
+    "texturedSha256": "ac8445d9bece3eabd48b52986bce6d930010d057f20a4adfc67087d209fce562",
+    "texturedTriangles": 1499999,
+    "texturedVertices": 889748,
+    "generatedAt": "2026-08-11T15:47:00Z",
+    "assetLibrary": "Tencent Hunyuan Web account Assets",
+    "visualReview": "passed-front-side-back",
+    "semanticSeparation": "helmet lower rim and neck collar retain a visible continuous gap; armpits and legs remain separated; jetpack is intact",
+    "replacesPrototype": "generated/candidates/nova-jet-sentinel-hunyuan-seed24680-r512-textured.glb"
+  },
+  "animationMesh": {
+    "adapter": "cloud/modal_character_mesh.py",
+    "qremeshify": true,
+    "symmetryX": false,
+    "targetHeightMeters": 1.9,
+    "targetFaces": 50000,
+    "textureSize": 4096,
+    "glb": "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/animation-ready.glb",
+    "glbSha256": "205183f3ab3ae26362176ee5f12f07e66b641f61e80dbd20ffebaccceaac88a7",
+    "previewGlb": "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/animation-ready.glb",
+    "fbx": "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/mixamo-upload.fbx",
+    "fbxSha256": "30ec6c7561b7a9e58c0e4ccdc9db3b9a067e9d749df451bc00af1ad911f1d6c5",
+    "exportedTriangles": 49976,
+    "vertices": 24985,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "subdivisionLevels": 0,
+    "meshReport": "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/mesh-report.json",
+    "textures": [
+      "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/textures/base-color.png",
+      "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/textures/normal.png",
+      "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/textures/ao.png"
+    ],
+    "staticVisualReview": "passed-front-side-back-head-neck-gap",
+    "topologyRepair": {
+      "boundaryEdgesBefore": 30,
+      "boundaryEdgesAfter": 0,
+      "nonManifoldEdgesBefore": 34,
+      "nonManifoldEdgesAfter": 0,
+      "conflictingFacesRemoved": 7
+    }
+  },
+  "mixamo": {
+    "status": "passed",
+    "upload": "generated/nova-jet-sentinel-animation-mesh-web-v31-watertight/mixamo-upload.fbx",
+    "lastAttemptDate": "2026-08-12",
+    "browser": "Microsoft Edge with existing Adobe session",
+    "skeletonLod": "No Fingers (25)",
+    "baseWithSkin": "generated/nova-jet-sentinel-v31-mixamo-with-skin.fbx",
+    "baseWithSkinSha256": "fb15aac61faf49a425a62768fe8d61e81e9e457063b8eefe468d411d7876ae3b",
+    "actionsDirectory": "generated/nova-jet-sentinel-v31-mixamo-actions",
+    "actions": [
+      "idle.fbx",
+      "jump-inplace.fbx",
+      "rifle-fire.fbx",
+      "run-forward-inplace.fbx",
+      "walk-forward-inplace.fbx"
+    ],
+    "idleAction": {
+      "source": "Mixamo Unarmed Idle",
+      "characterArmSpace": 80,
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "sha256": "4c4ff5fbc4ecb5895a9950b79d8e1c997413c6989c98996df8ffad86666c865c",
+      "replaces": "Mixamo Standing Idle with insufficient armored-character arm clearance"
+    },
+    "autoRigReview": "passed-no-helmet-neck-stretch-no-knee-reversal"
+  },
+  "final": {
+    "status": "delivery-approved",
+    "glb": "generated/nova-jet-sentinel-v31-animated.glb",
+    "glbSha256": "80482eb099c7a17ba271c40cec86bdb2be4f7a760c55ef2ba99224230f177df5",
+    "fbx": "generated/nova-jet-sentinel-v31-animated.fbx",
+    "fbxSha256": "890f54cdf5b3cdf274b90f9555a0105758a22319b5c8430bace7e6b52f20b4a9",
+    "report": "generated/nova-jet-sentinel-v31-animated.mixamo-report.json",
+    "reportSha256": "ce24f6278baf2523f9d5ab9f4a14954456f2024c165a1d7fb0f2b7be4c814f70",
+    "triangles": 49976,
+    "vertices": 141086,
+    "skinnedMeshes": 1,
+    "joints": 25,
+    "animationCount": 5,
+    "targetHeightMeters": 1.9,
+    "weightError": 1.34e-7,
+    "helmetWeightStabilization": {
+      "changedVertices": 2106,
+      "rigidVertices": 1804,
+      "localizedVertices": 302,
+      "rigidThreshold": 0.35,
+      "minimumHeadInfluence": 0.02
+    },
+    "opaqueMaterialStabilization": {
+      "materials": 1,
+      "alphaMode": "OPAQUE",
+      "alphaLinksRemoved": 1,
+      "changedAlphaPixels": 0
+    }
+  },
+  "quality": {
+    "pipelineExecution": "passed",
+    "structuralValidation": "passed",
+    "visualBindPoseReview": "passed",
+    "animatedVisualReview": "passed",
+    "deliveryApproval": "approved",
+    "reviewedViews": [
+      "front",
+      "side",
+      "back"
+    ],
+    "reviewedNormalizedTimes": [0.125, 0.375, 0.625, 0.875],
+    "locomotionLoopEndpoints": "passed",
+    "idleArmClearance": {
+      "status": "passed",
+      "handHorizontalMeters": [0.433, 0.458],
+      "elbowHorizontalMeters": [0.303, 0.317],
+      "reviewedViews": ["front", "side", "back"]
+    },
+    "helmetReviewClips": [
+      "Mixamo_Idle",
+      "Mixamo_JumpInplace",
+      "Mixamo_RifleFire",
+      "Mixamo_RunForwardInplace",
+      "Mixamo_WalkForwardInplace"
+    ],
+    "previewUrl": "http://127.0.0.1:8765/tools/unirig-preview.html?model=nova-jet-sentinel-v31-animated.glb&frontZ=1"
+  },
+  "rights": {
+    "generatedDesign": "Confirm commercial and redistribution rights for the generated character design and Hunyuan output before public release.",
+    "mixamo": "Mixamo animation usage remains subject to Adobe Mixamo terms.",
+    "approvalScope": "Technical delivery approval only; it does not replace a license review."
+  }
+}

@@ -145,11 +145,6 @@
           <input id="searchInput" type="search" placeholder="搜索角色" autocomplete="off">
         </label>
         <div class="tier-filters" id="tierFilters">
-          <button class="tier-filter active" data-tier="全部">全部</button>
-          <button class="tier-filter" data-tier="英雄">英雄</button>
-          <button class="tier-filter" data-tier="普通">普通</button>
-          <button class="tier-filter" data-tier="大型">大型</button>
-          <button class="tier-filter" data-tier="Boss">Boss</button>
         </div>
       </div>
       <div class="monster-list" id="monsterList"></div>
@@ -196,7 +191,7 @@
           <h2>技能与攻击形式</h2>
           <div class="skill-list" id="skillList"></div>
         </div>
-        <div class="notice">模型和贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle 或 FBX。</div>
+        <div class="notice" id="rightsNotice">模型和贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle 或 FBX。</div>
       </section>
     </main>
   </div>
@@ -331,6 +326,7 @@
       configureTexture(normalTexture, lowQuality, 'data');
       root.traverse(object => {
         if (!object.isMesh) return;
+        if (!object.geometry.getAttribute('normal')) object.geometry.computeVertexNormals();
         const source = Array.isArray(object.material) ? object.material : [object.material];
         const hasMaterialProfiles = Object.keys(activeEntry.materialProfiles ?? {}).length > 0;
         if (activeEntry.preserveMaterials && !hasMaterialProfiles && !texture && !emissiveTexture && !normalTexture) {
@@ -338,6 +334,13 @@
             const next = material.clone();
             next.flatShading = lowQuality;
             next.roughness = lowQuality ? 0.95 : 0.82;
+            if (activeEntry.embeddedMaterialMetalness != null && 'metalness' in next) {
+              next.metalness = activeEntry.embeddedMaterialMetalness;
+            }
+            if (activeEntry.embeddedMaterialEmissiveColor && next.emissive) {
+              next.emissive.set(activeEntry.embeddedMaterialEmissiveColor);
+              next.emissiveIntensity = activeEntry.embeddedMaterialEmissiveIntensity ?? 1;
+            }
             next.needsUpdate = true;
             return next;
           });
@@ -589,6 +592,8 @@
       document.querySelector('#monsterNameEn').textContent = entry.nameEn;
       document.querySelector('#tierBadge').textContent = entry.status || entry.tier;
       document.querySelector('#summaryText').textContent = entry.summary;
+      document.querySelector('#rightsNotice').textContent = activeGame.notice
+        ?? '模型和贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle 或 FBX。';
       document.querySelector('#sourceTriangles').textContent = Number.isFinite(entry.sourceTriangles) ? entry.sourceTriangles.toLocaleString() : '待提取';
       document.querySelector('#lowTriangles').textContent = Number.isFinite(entry.lowTriangles) ? entry.lowTriangles.toLocaleString() : '待生成';
       const retained = entry.sourceTriangles
@@ -613,6 +618,9 @@
         option.textContent = animation.name;
         select.appendChild(option);
       });
+      if (animations.some(animation => animation.clip === entry.defaultClip)) {
+        select.value = entry.defaultClip;
+      }
 
       const list = document.querySelector('#skillList');
       list.innerHTML = '';
@@ -662,6 +670,24 @@
       });
     }
 
+    function renderTierFilters() {
+      const container = document.querySelector('#tierFilters');
+      const tiers = activeGame.tiers ?? ['英雄', '普通', '大型', 'Boss'];
+      container.innerHTML = '';
+      ['全部', ...tiers].forEach(tier => {
+        const button = document.createElement('button');
+        button.className = `tier-filter${tier === activeTier ? ' active' : ''}`;
+        button.dataset.tier = tier;
+        button.textContent = tier;
+        button.addEventListener('click', () => {
+          activeTier = tier;
+          container.querySelectorAll('.tier-filter').forEach(item => item.classList.toggle('active', item === button));
+          renderMonsterList();
+        });
+        container.appendChild(button);
+      });
+    }
+
     function updateViewNavigation() {
       const mapsAvailable = Boolean(activeGame.mapsPage);
       document.querySelector('#viewTabs').classList.toggle('maps-unavailable', !mapsAvailable);
@@ -678,11 +704,11 @@
       activeEntry = catalog[0] ?? null;
       activeTier = '全部';
       document.querySelector('#searchInput').value = '';
-      document.querySelectorAll('.tier-filter').forEach(button => button.classList.toggle('active', button.dataset.tier === '全部'));
       document.querySelector('#brand').textContent = `${activeGame.name} · 角色图鉴`;
       document.querySelector('#edition').textContent = activeGame.subtitle;
       document.title = `${activeGame.name} · 角色 3D 图鉴`;
       updateViewNavigation();
+      renderTierFilters();
       renderMonsterList();
       if (activeEntry) renderDetails(activeEntry);
       await loadActiveModels();
@@ -690,13 +716,6 @@
 
     document.querySelector('#searchInput').addEventListener('input', renderMonsterList);
     document.querySelector('#gameSelect').addEventListener('change', event => switchGame(event.target.value));
-    document.querySelectorAll('.tier-filter').forEach(button => {
-      button.addEventListener('click', () => {
-        activeTier = button.dataset.tier;
-        document.querySelectorAll('.tier-filter').forEach(item => item.classList.toggle('active', item === button));
-        renderMonsterList();
-      });
-    });
     document.querySelectorAll('.mode-button').forEach(button => {
       button.addEventListener('click', async () => {
         activeMode = button.dataset.mode;
@@ -754,6 +773,7 @@
     document.querySelector('#edition').textContent = activeGame.subtitle;
     document.title = `${activeGame.name} · 角色 3D 图鉴`;
     updateViewNavigation();
+    renderTierFilters();
     renderMonsterList();
     if (activeEntry) renderDetails(activeEntry);
     await loadActiveModels();

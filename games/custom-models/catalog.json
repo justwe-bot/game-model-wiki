@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "nova-jet-sentinel",
+    "name": "新星喷射哨兵",
+    "nameEn": "Nova Jet Sentinel",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "腾讯混元 3D Web V3.1 + Mixamo 动画",
+    "summary": "原创科幻复古重装英雄，配备全封闭头盔、分层装甲和背部喷气背包。角色由正面、严格侧面和背面三视图通过腾讯混元 3D 网页 V3.1 生成高模，经 Modal Blender 与 QRemeshify 重拓扑、UV 和 4K PBR 烘焙，修复为零边界边、零非流形边的动画网格，再由 Mixamo 重新蒙皮。发布版包含待机、原地行走、原地跑动、原地跳跃和步枪射击五个动作；待机采用 Arm-Space 80 的 Unarmed Idle，为重装甲上臂、前臂和腰侧挂件保留净空，并已启用刚性头盔权重稳定和不透明材质保护。",
+    "models": {
+      "original": "models/custom/nova-jet-sentinel.glb",
+      "low": "models/custom/nova-jet-sentinel.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "embedded 4096px Base Color / Normal / AO",
+    "emissiveTextureSource": null,
+    "normalTextureSource": "embedded AnimationReadyNormal",
+    "modelSource": "Tencent Hunyuan 3D Web V3.1 multiview 1.5m high mesh",
+    "prefabSource": "Hunyuan Web V3.1 / QRemeshify watertight animation mesh / Mixamo final skin",
+    "rendererCount": 1,
+    "bakedTriangles": 49976,
+    "sourceTriangles": 49976,
+    "lowTriangles": 49976,
+    "sourceSizeKB": 17757,
+    "lowSizeKB": 17757,
+    "animationCount": 5,
+    "preserveMaterials": true,
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Mixamo_Idle",
+        "kind": "idle",
+        "source": "Mixamo Unarmed Idle",
+        "armSpace": 80
+      },
+      {
+        "name": "原地跳跃",
+        "clip": "Mixamo_JumpInplace",
+        "kind": "movement"
+      },
+      {
+        "name": "步枪射击",
+        "clip": "Mixamo_RifleFire",
+        "kind": "attack"
+      },
+      {
+        "name": "原地跑动",
+        "clip": "Mixamo_RunForwardInplace",
+        "kind": "movement"
+      },
+      {
+        "name": "原地行走",
+        "clip": "Mixamo_WalkForwardInplace",
+        "kind": "movement"
+      }
+    ],
+    "defaultClip": "Mixamo_Idle",
+    "framingScaleByVariant": {
+      "original": 1,
+      "low": 1
+    },
+    "mobileFramingScaleByVariant": {
+      "original": 0.94,
+      "low": 0.94
+    },
+    "cameraTargetY": 1.05,
+    "rigSource": "mixamo-final-skin-watertight-v1",
+    "jointCount": 25,
+    "motionAnchorBone": "mixamorig:Hips",
+    "motionAnchorAxes": ["x", "y", "z"],
+    "originalGameRig": false,
+    "topology": {
+      "vertices": 24985,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    "skills": [
+      {
+        "name": "步枪射击",
+        "clip": "Mixamo_RifleFire",
+        "attackType": "站立射击",
+        "range": "中远距离",
+        "description": "双手保持步枪瞄准与后坐姿态；动作不包含枪械模型、弹道或枪口特效，武器应在游戏中挂接手骨。"
+      },
+      {
+        "name": "喷射机动",
+        "clip": "Mixamo_JumpInplace",
+        "attackType": "垂直机动",
+        "range": "自身",
+        "description": "使用原地跳跃动作表现喷气背包起跳；喷焰、光效和实际位移由游戏运行时提供。"
+      }
+    ]
+  }
+]

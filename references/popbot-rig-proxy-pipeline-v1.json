@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "name": "POPBOT rig proxy pipeline v1",
+  "references": {
+    "turnaround": "references/popbot-rig-proxy-turnaround-v1.png",
+    "viewsDir": "references/popbot-rig-proxy-v1",
+    "cropBoxes": {
+      "front": [0, 0, 700, 941],
+      "left": [700, 0, 986, 941],
+      "back": [986, 0, 1672, 941]
+    },
+    "canvasSize": 941,
+    "background": [238, 238, 238, 255]
+  },
+  "reconstruction": {
+    "backend": "tencent/Hunyuan3D-2mv",
+    "gpu": "L4",
+    "script": "cloud/modal_hunyuan3d_mv.py",
+    "output": "generated/popbot-rig-proxy-v1-raw.glb",
+    "seed": 12345,
+    "steps": 50,
+    "octreeResolution": 380,
+    "numChunks": 20000
+  },
+  "proxyRig": {
+    "backend": "VAST-AI/UniRig",
+    "gpu": "L4",
+    "script": "cloud/modal_unirig.py",
+    "seed": 12345,
+    "facesTargetCount": 50000,
+    "skeletonOutput": "generated/popbot-rig-proxy-v1-unirig-skeleton.fbx",
+    "inspectionOutput": "generated/popbot-rig-proxy-v1-unirig-skeleton.json",
+    "validationScript": "scripts/validate_proxy_skeleton.py",
+    "validationOutput": "generated/popbot-rig-proxy-v1-unirig-validation.json",
+    "riggedOutput": "generated/popbot-rig-proxy-v1-unirig-rigged.glb"
+  },
+  "finalTransfer": {
+    "strategy": "reviewed-landmarks-plus-component-aware-commando-weight-transfer",
+    "script": "scripts/rig_hunyuan_character.py",
+    "template": "generated/templates/space-commando-original.glb",
+    "profile": "references/popbot-hunyuan-v31-tpose-v5-rig-profile.json",
+    "profileStatus": "reviewed baseline; compare against proxy skeleton before promotion",
+    "sources": {
+      "original": "generated/popbot-hunyuan-v31-tpose-v5-500k.glb",
+      "low": "generated/popbot-hunyuan-v31-tpose-v5-120k.glb"
+    },
+    "outputs": {
+      "original": "generated/popbot-hunyuan-v31-proxy-rig-v1-original.glb",
+      "low": "generated/popbot-hunyuan-v31-proxy-rig-v1-low.glb"
+    }
+  },
+  "validation": {
+    "script": "scripts/validate_hunyuan_character.py",
+    "visualClips": [
+      "bind-pose",
+      "Commando_RunForward",
+      "Commando_SprintForward",
+      "Commando_RollForward",
+      "Commando_Jump",
+      "SpaceCommando_HeavyFire"
+    ],
+    "reject": [
+      "fused sleeve and torso geometry",
+      "reversed knees",
+      "outward foot yaw",
+      "ankle collapse",
+      "hand or finger spikes",
+      "thigh tearing",
+      "coat stretching across the arms"
+    ]
+  },
+  "wiki": {
+    "catalogSource": "games/risk-of-rain-2/survivors.custom.json",
+    "templateEntry": "popbot-heavy-gunner-v1",
+    "slug": "popbot-hunyuan-v31-proxy-v1",
+    "name": "兔耳战术兵 V3.1 白模校准版",
+    "nameEn": "POPBOT Hunyuan3D V3.1 Proxy Calibrated",
+    "bundle": "hunyuan3d-v31-proxy-calibrated-v1",
+    "status": "白模骨骼校准 / 分件权重 / 视觉验收实验",
+    "summary": "先使用无服装、关节清晰的三视图白模验证骨骼拓扑、左右方向和关节位置，再按最终设计图的专用关节坐标迁移 78 骨骼突击兵动作。手、鞋、腿、袖子、外套和挂件使用不同的刚性或窄过渡权重规则；跑动、冲刺和射击已通过浏览器视觉检查，未见脚踝塌陷、大腿撕裂或袖子跨胸拉伸。翻滚和跳跃为避免生成网格再次畸形，采用稳定下肢策略，动作幅度比原 Commando 更保守。"
+  }
+}

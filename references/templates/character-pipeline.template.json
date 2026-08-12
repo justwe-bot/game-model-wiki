@@ -1,0 +1,187 @@
+{
+  "$schema": "../character-pipeline.schema.json",
+  "schemaVersion": 2,
+  "pipeline": {
+    "name": "__NAME_EN__ character production pipeline",
+    "scope": "humanoid-character"
+  },
+  "identity": {
+    "slug": "__SLUG__",
+    "name": "__NAME__",
+    "nameEn": "__NAME_EN__",
+    "game": "__GAME__",
+    "kind": "__KIND__",
+    "tier": "__TIER__"
+  },
+  "references": {
+    "mode": "turnaround",
+    "sourceDesign": "references/characters/__SLUG__/design.png",
+    "turnaround": "references/characters/__SLUG__/white-model-turnaround.png",
+    "viewsDir": "references/characters/__SLUG__/views",
+    "cropBoxes": {
+      "front": [0, 0, 1024, 1024],
+      "left": [1024, 0, 2048, 1024],
+      "back": [2048, 0, 3072, 1024]
+    },
+    "canvasSize": 1024,
+    "background": [238, 238, 238, 255],
+    "generation": {
+      "adapter": "openai-imagegen-sub2api",
+      "artifact": "references/characters/__SLUG__/white-model-turnaround.png",
+      "prompt": "Adult stylized humanoid in an exact orthographic T-pose; front, strict left, and back views; identical scale and limb lengths; seamless opaque gray modeling suit; arms and legs fully separated; no clothes, hair, accessories, weapon, text, shadows, or perspective."
+    }
+  },
+  "reconstruction": {
+    "adapter": "hunyuan-multiview",
+    "backend": "tencent/Hunyuan3D-2mv",
+    "gpu": "L4",
+    "script": "cloud/modal_hunyuan3d_mv.py",
+    "output": "generated/__SLUG__-proxy-raw.glb",
+    "options": {
+      "seed": 12345,
+      "steps": 50,
+      "octreeResolution": 380,
+      "numChunks": 20000
+    }
+  },
+  "proxyRig": {
+    "adapter": "unirig",
+    "backend": "VAST-AI/UniRig",
+    "gpu": "L4",
+    "script": "cloud/modal_unirig.py",
+    "skeletonOutput": "generated/__SLUG__-unirig-skeleton.fbx",
+    "inspectionOutput": "generated/__SLUG__-unirig-skeleton.json",
+    "riggedOutput": "generated/__SLUG__-unirig-rigged.glb",
+    "options": {
+      "seed": 12345,
+      "facesTargetCount": 50000
+    },
+    "validation": {
+      "script": "scripts/validate_proxy_skeleton.py",
+      "output": "generated/__SLUG__-unirig-validation.json"
+    }
+  },
+  "finalGeometry": {
+    "adapter": "hunyuan-multiview-variants",
+    "backend": "tencent/Hunyuan3D-2mv",
+    "gpu": "L4",
+    "script": "cloud/modal_hunyuan3d_mv.py",
+    "views": {
+      "front": "references/characters/__SLUG__/final-views/front.png",
+      "left": "references/characters/__SLUG__/final-views/left.png",
+      "back": "references/characters/__SLUG__/final-views/back.png"
+    },
+    "outputs": {
+      "original": "generated/__SLUG__-500k.glb",
+      "low": "generated/__SLUG__-120k.glb"
+    },
+    "options": {
+      "seed": 12345,
+      "steps": 50,
+      "numChunks": 20000,
+      "variants": {
+        "original": { "octreeResolution": 380 },
+        "low": { "octreeResolution": 256 }
+      }
+    }
+  },
+  "finalSkin": {
+    "adapter": "unirig-shared",
+    "backend": "VAST-AI/UniRig",
+    "gpu": "L4",
+    "script": "cloud/modal_unirig.py",
+    "rawOutput": "generated/__SLUG__-unirig-full.glb",
+    "outputs": {
+      "original": "generated/__SLUG__-unirig-500k.glb",
+      "low": "generated/__SLUG__-unirig-120k.glb"
+    },
+    "options": {
+      "sourceVariant": "original",
+      "seed": 12345,
+      "facesTargetCount": 50000,
+      "targetFaces": {
+        "original": 500000,
+        "low": 120000
+      }
+    }
+  },
+  "rigProfile": {
+    "adapter": "unirig-auto",
+    "script": "scripts/generate_rig_profile_from_unirig.py",
+    "output": "references/characters/__SLUG__/rig-profile.auto.json",
+    "options": {
+      "sourceVariant": "original",
+      "name": "__NAME_EN__ automatic UniRig profile",
+      "targetHeight": 1.9,
+      "depthOffset": 0.08,
+      "bodyYawDeg": 0,
+      "compareProxy": true,
+      "strict": false
+    }
+  },
+  "finalRig": {
+    "adapter": "unirig-template-transfer",
+    "script": "scripts/rig_unirig_character.py",
+    "template": "generated/templates/space-commando-original.glb",
+    "outputs": {
+      "original": "generated/__SLUG__-rigged-original.glb",
+      "low": "generated/__SLUG__-rigged-low.glb"
+    },
+    "options": {
+      "fingerMode": "rigid",
+      "handPose": "relaxed",
+      "footMode": "rigid-shoe"
+    }
+  },
+  "validation": {
+    "final": {
+      "script": "scripts/validate_rigged_character.py"
+    },
+    "visualClips": [
+      "bind-pose",
+      "Commando_RunForward",
+      "Commando_SprintForward",
+      "Commando_RollForward",
+      "Commando_Jump",
+      "SpaceCommando_HeavyFire"
+    ],
+    "reject": [
+      "reversed knees",
+      "outward foot yaw",
+      "ankle collapse",
+      "hand or finger spikes",
+      "thigh tearing",
+      "sleeve or coat stretching across the torso"
+    ]
+  },
+  "publish": {
+    "modelsDir": "models/survivors",
+    "provenanceOutput": "generated/provenance/__SLUG__.json",
+    "catalog": {
+      "mode": "source-template",
+      "path": "games/risk-of-rain-2/survivors.custom.json",
+      "templateEntry": "space-commando",
+      "mergeCommand": ["python3", "scripts/merge_ror2_survivors.py"],
+      "viewerUrl": "http://127.0.0.1:8765/?game={game}&monster={slug}"
+    },
+    "entry": {
+      "bundle": "generated-__SLUG__",
+      "status": "设计图重建 / 白模骨骼校准 / 动作迁移待验收",
+      "summary": "由设计图生成标准化白模三视图，经多视图重建、UniRig 关节代理检查和已审核模板动作迁移得到。发布前必须完成人工动作变形验收。",
+      "meshes": ["GeneratedCharacterMesh"],
+      "prefab": "Generated image mesh / UniRig semantic template transfer",
+      "rendererCount": 1,
+      "skills": [],
+      "skillsAppend": []
+    }
+  },
+  "approvals": {
+    "requireProxyVisual": true,
+    "requireFinalVisual": true
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-provided or user-authorized character design",
+    "limitations": "Confirm distribution rights before shipping the generated model or inherited animations."
+  }
+}
