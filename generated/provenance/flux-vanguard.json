@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-11T01:46:02.747753+00:00",
+  "identity": {
+    "slug": "flux-vanguard",
+    "name": "磁暴先锋",
+    "nameEn": "Flux Vanguard",
+    "game": "risk-of-rain-2",
+    "kind": "hero",
+    "tier": "英雄"
+  },
+  "pipelineManifest": {
+    "path": "references/characters/flux-vanguard.json",
+    "bytes": 6628,
+    "sha256": "b15c7322a6dbb81610265461ddf339b3868b2cf219d6229e2deb9a3eb0c2c0e0"
+  },
+  "references": [
+    {
+      "path": "references/flux-vanguard/turnaround.png",
+      "bytes": 1635775,
+      "sha256": "b6726b7af35183c6e362f6f2187151e36c94135e67e2050305a005f1f12936ae"
+    },
+    {
+      "path": "references/flux-vanguard/front.png",
+      "bytes": 847743,
+      "sha256": "a18babd890b6906285ed70326a6e1193e5d23fb406baf93d5d4d4969ea6c8307"
+    },
+    {
+      "path": "references/flux-vanguard/left.png",
+      "bytes": 341500,
+      "sha256": "1e19038e1ccd1b7c4c3be361c41e2577a9de7312f615179a31a2a9ea463f4ff1"
+    },
+    {
+      "path": "references/flux-vanguard/back.png",
+      "bytes": 758238,
+      "sha256": "8c1f727d673281ee9b1e13addca793cb3dd7aa7986ec73b628e6336ba6c6550b"
+    }
+  ],
+  "supportAssets": [
+    {
+      "path": "generated/flux-vanguard-unirig-profile.json",
+      "bytes": 3341,
+      "sha256": "045d0f59757348d9748c6fea11c61400288843460e8cfe02b77c50eda247b5d1"
+    },
+    {
+      "path": "generated/templates/space-commando-original.glb",
+      "bytes": 2652236,
+      "sha256": "0a1993b0de358dac7c3ec2025d6ca061e9d4677e50efc928dd129d1ae5ec57ce"
+    }
+  ],
+  "intermediates": [
+    {
+      "path": "generated/flux-vanguard-hunyuan-raw.glb",
+      "bytes": 8264824,
+      "sha256": "fb042b33e808cf85c2b9aa212cd7623fda08c45df71aa41b976278062eb66dc3"
+    },
+    {
+      "path": "generated/flux-vanguard-unirig-120k.glb",
+      "bytes": 23862892,
+      "sha256": "13d1d93f8eeeffca7d70abd169041c450ccc0bdb3b8428901e5ec828dbb327f7"
+    },
+    {
+      "path": "generated/flux-vanguard-unirig-30k.glb",
+      "bytes": 8751392,
+      "sha256": "69efe1e4612d7743fcf42183f036446a4cedd95307ed33d574dc272915e7110f"
+    }
+  ],
+  "outputs": {
+    "original": {
+      "path": "models/survivors/flux-vanguard-original.glb",
+      "bytes": 26527700,
+      "sha256": "0401967926a8789f0d14f261896f7b20e52a8902ee6d68a6ac78f8a5960a964b",
+      "validation": {
+        "vertices": 359830,
+        "triangles": 120000,
+        "totalTriangles": 120000,
+        "joints": 78,
+        "animations": 16,
+        "weightError": 4.470348358154297e-08
+      }
+    },
+    "low": {
+      "path": "models/survivors/flux-vanguard-low.glb",
+      "bytes": 8989848,
+      "sha256": "be28df68e1c5191b0dfcbc5bb888f051be642eab2439a9a8d3a1809a6fbeec06",
+      "validation": {
+        "vertices": 89992,
+        "triangles": 30000,
+        "totalTriangles": 30000,
+        "joints": 78,
+        "animations": 16,
+        "weightError": 4.470348358154297e-08
+      }
+    }
+  },
+  "adapters": {
+    "reconstruction": "hunyuan-multiview",
+    "proxyRig": "none",
+    "finalGeometry": "existing-variants",
+    "finalSkin": "existing-variants",
+    "rigProfile": "existing",
+    "finalRig": "unirig-template-transfer"
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-authorized original Flux Vanguard design and generated Hunyuan3D mesh",
+    "limitations": "Confirm Hunyuan3D, Adobe Mixamo, template animation, and generated character distribution rights before public or commercial shipping."
+  }
+}

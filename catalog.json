@@ -4697,5 +4697,310 @@
     "animations": [],
     "defaultClip": null,
     "skills": []
+  },
+  {
+    "slug": "popbot-heavy-gunner-v1",
+    "name": "兔耳重炮手 v1",
+    "nameEn": "POPBOT Heavy Gunner v1",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "生图 + 混元 3D V3.1 + UniRig 蒙皮 + Mixamo 动作 v1",
+    "summary": "使用无武器、袖子与躯干分离的正面/严格左侧/背面设计图，通过腾讯混元 3D V3.1 生成穿衣网格，以最终网格的 UniRig 蒙皮和 78 关节目标骨架承载 Mixamo 动作。当前仅保留 16 个 Mixamo 动画，包括待机、跳跃、四向走跑、转向、冲刺和跑动中持续开火；所有动作按统一前向轴重定向，并经过正面与侧面四相位检查。动作不包含枪械模型，武器应在运行时挂接手骨。原模保留约 12 万面与 4K PBR 纹理，移动低模压缩到约 3 万面与 1K PBR 纹理。",
+    "models": {
+      "original": "models/survivors/popbot-heavy-gunner-v1-original.glb",
+      "low": "models/survivors/popbot-heavy-gunner-v1-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "embeddedHunyuanV31PbrTextures",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "GeneratedCharacterMesh",
+    "prefabSource": "Hunyuan3D V3.1 mesh / UniRig target skin / Mixamo retargeted motions",
+    "rendererCount": 1,
+    "bakedTriangles": 119993,
+    "sourceTriangles": 119993,
+    "lowTriangles": 29950,
+    "sourceSizeKB": 47770,
+    "lowSizeKB": 8288,
+    "animationCount": 16,
+    "preserveMaterials": true,
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Mixamo_Idle",
+        "kind": "idle"
+      },
+      {
+        "name": "跳跃",
+        "clip": "Mixamo_Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "向前行走",
+        "clip": "Mixamo_WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后行走",
+        "clip": "Mixamo_WalkBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左行走",
+        "clip": "Mixamo_WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右行走",
+        "clip": "Mixamo_WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "向前跑动",
+        "clip": "Mixamo_RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后跑动",
+        "clip": "Mixamo_RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左跑动",
+        "clip": "Mixamo_RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右跑动",
+        "clip": "Mixamo_RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "向左转向",
+        "clip": "Mixamo_TurnLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右转向",
+        "clip": "Mixamo_TurnRight",
+        "kind": "movement"
+      },
+      {
+        "name": "左转 90 度",
+        "clip": "Mixamo_TurnLeft90",
+        "kind": "movement"
+      },
+      {
+        "name": "右转 90 度",
+        "clip": "Mixamo_TurnRight90",
+        "kind": "movement"
+      },
+      {
+        "name": "向前冲刺",
+        "clip": "Mixamo_SprintForward",
+        "kind": "movement"
+      },
+      {
+        "name": "跑动持续开火",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack"
+      }
+    ],
+    "defaultClip": "Mixamo_Idle",
+    "motionAnchorBone": "base",
+    "motionAnchorAxes": [
+      "x",
+      "z"
+    ],
+    "framingScaleByVariant": {
+      "original": 0.96,
+      "low": 0.96
+    },
+    "modelRotationDeg": [
+      0,
+      180,
+      0
+    ],
+    "skills": [
+      {
+        "name": "移动压制射击",
+        "clip": "Mixamo_RifleRunFire",
+        "attackType": "跑动中持续射击",
+        "range": "中远距离",
+        "description": "使用 Mixamo 步枪跑动连续开火动作，角色位移由游戏控制器驱动；动作不包含枪械模型或枪口特效。"
+      }
+    ],
+    "rigSource": "unirig-template-mixamo-retarget-v1",
+    "jointCount": 78,
+    "originalGameRig": false
+  },
+  {
+    "slug": "flux-vanguard",
+    "name": "磁暴先锋",
+    "nameEn": "Flux Vanguard",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "生图 + Hunyuan3D-2mv + Hunyuan Paint + UniRig + Mixamo 动作 v2",
+    "summary": "原创科幻重装角色由设计稿生成统一 T Pose 三视图，经 Modal L4 上的 Hunyuan3D-2mv 50 步、380 分辨率重建，并使用 Hunyuan Paint 生成纹理。最终网格分别以约 12 万面和 3 万面运行 UniRig 蒙皮，再迁移到稳定 78 骨目标骨架并只保留 16 个 Mixamo 动作。角色实际正面为源网格 +Z，Mixamo 动作源使用 180 度朝向校正；发布版额外稳定颈圈和左右内肩权重，并压薄、对齐 Hunyuan 生成过圆的外肩甲轮廓。移动低模使用 1K 主纹理，武器应作为独立模型在运行时挂接手骨。",
+    "models": {
+      "original": "models/survivors/flux-vanguard-original.glb",
+      "low": "models/survivors/flux-vanguard-low.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "embeddedHunyuan3D2PaintTextures",
+    "emissiveTextureSource": null,
+    "normalTextureSource": null,
+    "modelSource": "GeneratedCharacterMesh",
+    "prefabSource": "Hunyuan3D-2mv mesh / Hunyuan Paint / UniRig target skin / Mixamo-only motions",
+    "rendererCount": 1,
+    "bakedTriangles": 120000,
+    "sourceTriangles": 120000,
+    "lowTriangles": 30000,
+    "sourceSizeKB": 25906,
+    "lowSizeKB": 8779,
+    "animationCount": 16,
+    "preserveMaterials": true,
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Mixamo_Idle",
+        "kind": "idle"
+      },
+      {
+        "name": "跳跃",
+        "clip": "Mixamo_Jump",
+        "kind": "movement"
+      },
+      {
+        "name": "向前行走",
+        "clip": "Mixamo_WalkForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后行走",
+        "clip": "Mixamo_WalkBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左行走",
+        "clip": "Mixamo_WalkLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右行走",
+        "clip": "Mixamo_WalkRight",
+        "kind": "movement"
+      },
+      {
+        "name": "向前跑动",
+        "clip": "Mixamo_RunForward",
+        "kind": "movement"
+      },
+      {
+        "name": "向后跑动",
+        "clip": "Mixamo_RunBackward",
+        "kind": "movement"
+      },
+      {
+        "name": "向左跑动",
+        "clip": "Mixamo_RunLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右跑动",
+        "clip": "Mixamo_RunRight",
+        "kind": "movement"
+      },
+      {
+        "name": "向左转向",
+        "clip": "Mixamo_TurnLeft",
+        "kind": "movement"
+      },
+      {
+        "name": "向右转向",
+        "clip": "Mixamo_TurnRight",
+        "kind": "movement"
+      },
+      {
+        "name": "左转 90 度",
+        "clip": "Mixamo_TurnLeft90",
+        "kind": "movement"
+      },
+      {
+        "name": "右转 90 度",
+        "clip": "Mixamo_TurnRight90",
+        "kind": "movement"
+      },
+      {
+        "name": "向前冲刺",
+        "clip": "Mixamo_SprintForward",
+        "kind": "movement"
+      },
+      {
+        "name": "跑动持续开火",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack"
+      }
+    ],
+    "defaultClip": "Mixamo_Idle",
+    "motionAnchorBone": "base",
+    "motionAnchorAxes": [
+      "x",
+      "z"
+    ],
+    "framingScaleByVariant": {
+      "original": 1.18,
+      "low": 1.18
+    },
+    "compareFramingScaleByVariant": {
+      "original": 1.0,
+      "low": 1.0
+    },
+    "mobileFramingScaleByVariant": {
+      "original": 1.08,
+      "low": 1.08
+    },
+    "modelRotationDeg": [
+      0,
+      180,
+      0
+    ],
+    "embeddedMaterialEmissiveColor": "#202830",
+    "embeddedMaterialEmissiveIntensity": 0.6,
+    "embeddedMaterialMetalness": 0.06,
+    "skills": [
+      {
+        "name": "磁暴移动压制",
+        "clip": "Mixamo_RifleRunFire",
+        "attackType": "跑动中持续射击",
+        "range": "中远距离",
+        "description": "使用 Mixamo 步枪跑动连续开火姿态，位移由游戏控制器驱动，武器和枪口特效在运行时挂接。"
+      }
+    ],
+    "rigSource": "unirig-template-mixamo-retarget-v1",
+    "jointCount": 78,
+    "originalGameRig": false
   }
 ]

@@ -1,0 +1,29 @@
+{
+  "name": "POPBOT Hunyuan V3.1 T-pose v5",
+  "targetHeight": 1.9,
+  "depthOffset": 0.08,
+  "bodyYawDeg": 180,
+  "sourceOrientation": "hunyuan-blender-z-down",
+  "jointWorldPositions": {
+    "base": [0.0, 0.991, 0.06],
+    "pelvis": [0.0, 0.991, 0.06],
+    "stomach": [0.0, 1.072, 0.06],
+    "chest": [0.0, 1.184, 0.06],
+    "head": [0.0, 1.503, 0.097],
+    "upper_arm.l": [-0.159, 1.369, 0.097],
+    "lower_arm.l": [-0.382, 1.347, 0.104],
+    "hand.l": [-0.634, 1.347, 0.097],
+    "upper_arm.r": [0.152, 1.369, 0.097],
+    "lower_arm.r": [0.375, 1.347, 0.104],
+    "hand.r": [0.627, 1.347, 0.097],
+    "thigh.l": [-0.1, 0.939, 0.06],
+    "calf.l": [-0.144, 0.531, 0.097],
+    "foot.l": [-0.174, 0.174, 0.127],
+    "toe.l": [-0.167, 0.019, -0.059],
+    "thigh.r": [0.093, 0.939, 0.052],
+    "calf.r": [0.138, 0.531, 0.097],
+    "foot.r": [0.167, 0.174, 0.127],
+    "toe.r": [0.16, 0.019, -0.059]
+  },
+  "notes": "Landmarks are converted from the 52-bone UniRig fit on the T-pose v5 mesh. The source shoulders, elbows and wrists are horizontal, with sleeves separated from the jacket torso below the armholes."
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-09T17:18:13.505863+00:00",
+  "identity": {
+    "slug": "popbot-hunyuan-v31-proxy-v1",
+    "name": "兔耳战术兵 V3.1 白模校准版",
+    "nameEn": "POPBOT Hunyuan3D V3.1 Proxy Calibrated",
+    "game": "risk-of-rain-2",
+    "kind": "hero",
+    "tier": "英雄"
+  },
+  "pipelineManifest": {
+    "path": "references/characters/popbot-hunyuan-v31-proxy-v1.json",
+    "bytes": 4956,
+    "sha256": "bdc4680cf69caf879beec1a9b20257a100a4852a5bc6e5fb6795c6167585a973"
+  },
+  "references": [
+    {
+      "path": "references/popbot-rig-proxy-turnaround-v1.png",
+      "bytes": 994689,
+      "sha256": "4c63dfba7ddba7d289129c73576cce1bcc0276d0059cf7b60682c118a3b748fb"
+    },
+    {
+      "path": "references/popbot-rig-proxy-v1/front.png",
+      "bytes": 467049,
+      "sha256": "5087e7cd12c3f9b20d3418873a2728d93d6fd05a0bd33b84a49385bb329ab139"
+    },
+    {
+      "path": "references/popbot-rig-proxy-v1/left.png",
+      "bytes": 219961,
+      "sha256": "e41caccc089af41b6293b0fe7256e657cbbdc13a58b9683340a2d340b2bddbbf"
+    },
+    {
+      "path": "references/popbot-rig-proxy-v1/back.png",
+      "bytes": 450619,
+      "sha256": "ba9efa11e2081afb4d8f8e81eb6cf6ee0e05131d0817f55575277eef38951ec7"
+    }
+  ],
+  "supportAssets": [
+    {
+      "path": "generated/templates/space-commando-original.glb",
+      "bytes": 2652236,
+      "sha256": "0a1993b0de358dac7c3ec2025d6ca061e9d4677e50efc928dd129d1ae5ec57ce"
+    },
+    {
+      "path": "references/popbot-hunyuan-v31-tpose-v5-rig-profile.json",
+      "bytes": 1113,
+      "sha256": "55c93f649a08c4aeeb07d3b60f7d2512fba05536549e554b62a5d326c43d97b4"
+    }
+  ],
+  "intermediates": [
+    {
+      "path": "generated/popbot-rig-proxy-v1-raw.glb",
+      "bytes": 3676204,
+      "sha256": "ac221f3f3177f900c382b2ccadb2aaa59a1e069ed9cde6a635257f1b3370a965"
+    },
+    {
+      "path": "generated/popbot-rig-proxy-v1-unirig-skeleton.fbx",
+      "bytes": 1548140,
+      "sha256": "d91d38f430c24a9bfaab44727ad2cab017ea643d15f4576b6c35074fd3496c9c"
+    },
+    {
+      "path": "generated/popbot-rig-proxy-v1-unirig-skeleton.json",
+      "bytes": 9425,
+      "sha256": "aa469bb275fa1b894277bc38027088358c05665b62c94fe90fc519ea170b87a8"
+    },
+    {
+      "path": "generated/popbot-rig-proxy-v1-unirig-validation.json",
+      "bytes": 1877,
+      "sha256": "505f5277f4c0b707e1b8515c2d268cf94666dd0829bcfe714ecc0a17c42fa166"
+    },
+    {
+      "path": "generated/popbot-hunyuan-v31-tpose-v5-500k.glb",
+      "bytes": 56501992,
+      "sha256": "e09d4538154a5d70164d17d5e45fd2d6ba603699d87016ec317dfa1022e16125"
+    },
+    {
+      "path": "generated/popbot-hunyuan-v31-tpose-v5-120k.glb",
+      "bytes": 43772164,
+      "sha256": "85a14fbe2eba0ff75005c85c006d1d562c4fd93fe8d19f47dc5541227754fb4a"
+    }
+  ],
+  "outputs": {
+    "original": {
+      "path": "models/survivors/popbot-hunyuan-v31-proxy-v1-original.glb",
+      "bytes": 67202196,
+      "sha256": "f6533a112cc0eca21f700d228730999731870cfa694acf50ab2fbd0995b6f491",
+      "validation": {
+        "vertices": 378839,
+        "bodyTriangles": 500000,
+        "totalTriangles": 501668,
+        "joints": 78,
+        "animations": 20,
+        "weightError": 4.470348358154297e-08,
+        "triangles": 501668
+      }
+    },
+    "low": {
+      "path": "models/survivors/popbot-hunyuan-v31-proxy-v1-low.glb",
+      "bytes": 49362372,
+      "sha256": "4d2be21a7f1a2475fded8b26db413dd594860ed70e66441bdfb291e0988d1d70",
+      "validation": {
+        "vertices": 123532,
+        "bodyTriangles": 120000,
+        "totalTriangles": 121540,
+        "joints": 78,
+        "animations": 20,
+        "weightError": 4.470348358154297e-08,
+        "triangles": 121540
+      }
+    }
+  },
+  "adapters": {
+    "reconstruction": "hunyuan-multiview",
+    "proxyRig": "unirig",
+    "finalGeometry": "existing-variants",
+    "finalRig": "hunyuan-component-aware"
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-provided POPBOT concept reference plus generated proxy images",
+    "limitations": "The POPBOT design and inherited game animations remain subject to their respective rights holders; confirm distribution rights before shipping."
+  }
+}

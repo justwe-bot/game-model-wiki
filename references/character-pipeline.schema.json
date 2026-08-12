@@ -1,0 +1,281 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://game-model-wiki.local/schemas/character-pipeline.schema.json",
+  "title": "Game Model Wiki character production pipeline",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "pipeline",
+    "identity",
+    "references",
+    "reconstruction",
+    "proxyRig",
+    "finalGeometry",
+    "finalSkin",
+    "rigProfile",
+    "finalRig",
+    "validation",
+    "publish",
+    "approvals",
+    "rights"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "pipeline": {
+      "type": "object",
+      "required": ["name", "scope"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "scope": { "enum": ["humanoid-character"] }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "required": ["slug", "name", "nameEn", "game", "kind", "tier"],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "nameEn": { "type": "string", "minLength": 1 },
+        "game": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 },
+        "tier": { "type": "string", "minLength": 1 }
+      }
+    },
+    "references": {
+      "type": "object",
+      "required": ["mode"],
+      "properties": {
+        "mode": { "enum": ["single-image", "multiview", "turnaround", "existing-glb"] },
+        "sourceDesign": { "type": "string" },
+        "singleImage": { "type": "string" },
+        "turnaround": { "type": "string" },
+        "viewsDir": { "type": "string" },
+        "views": {
+          "type": "object",
+          "required": ["front", "left", "back"],
+          "properties": {
+            "front": { "type": "string" },
+            "left": { "type": "string" },
+            "back": { "type": "string" }
+          }
+        },
+        "cropBoxes": {
+          "type": "object",
+          "required": ["front", "left", "back"],
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "canvasSize": { "type": "integer", "minimum": 256 },
+        "background": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0, "maximum": 255 },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "generation": {
+          "type": "object",
+          "properties": {
+            "adapter": { "enum": ["openai-imagegen-sub2api", "manual", "none"] },
+            "artifact": { "type": "string" },
+            "prompt": { "type": "string" }
+          }
+        }
+      }
+    },
+    "reconstruction": {
+      "type": "object",
+      "required": ["adapter", "output"],
+      "properties": {
+        "adapter": { "enum": ["existing-glb", "hunyuan-multiview", "triposr-single"] },
+        "backend": { "type": "string" },
+        "gpu": { "type": "string" },
+        "script": { "type": "string" },
+        "source": { "type": "string" },
+        "output": { "type": "string" },
+        "options": { "type": "object" }
+      }
+    },
+    "proxyRig": {
+      "type": "object",
+      "required": ["adapter"],
+      "properties": {
+        "adapter": { "enum": ["none", "unirig"] },
+        "backend": { "type": "string" },
+        "gpu": { "type": "string" },
+        "script": { "type": "string" },
+        "skeletonOutput": { "type": "string" },
+        "inspectionOutput": { "type": "string" },
+        "riggedOutput": { "type": "string" },
+        "options": { "type": "object" },
+        "validation": {
+          "type": "object",
+          "properties": {
+            "script": { "type": "string" },
+            "output": { "type": "string" }
+          }
+        }
+      }
+    },
+    "finalGeometry": {
+      "type": "object",
+      "required": ["adapter", "outputs"],
+      "properties": {
+        "adapter": {
+          "enum": [
+            "existing-variants",
+            "hunyuan-multiview-variants",
+            "reuse-reconstruction"
+          ]
+        },
+        "backend": { "type": "string" },
+        "gpu": { "type": "string" },
+        "script": { "type": "string" },
+        "views": {
+          "type": "object",
+          "required": ["front", "left", "back"],
+          "properties": {
+            "front": { "type": "string" },
+            "left": { "type": "string" },
+            "back": { "type": "string" }
+          }
+        },
+        "outputs": {
+          "type": "object",
+          "required": ["original", "low"],
+          "properties": {
+            "original": { "type": "string" },
+            "low": { "type": "string" }
+          }
+        },
+        "options": { "type": "object" }
+      }
+    },
+    "finalSkin": {
+      "type": "object",
+      "required": ["adapter"],
+      "properties": {
+        "adapter": { "enum": ["none", "existing-variants", "unirig-shared"] },
+        "backend": { "type": "string" },
+        "gpu": { "type": "string" },
+        "script": { "type": "string" },
+        "rawOutput": { "type": "string" },
+        "outputs": {
+          "type": "object",
+          "required": ["original", "low"],
+          "properties": {
+            "original": { "type": "string" },
+            "low": { "type": "string" }
+          }
+        },
+        "options": { "type": "object" }
+      }
+    },
+    "rigProfile": {
+      "type": "object",
+      "required": ["adapter", "output"],
+      "properties": {
+        "adapter": { "enum": ["existing", "unirig-auto"] },
+        "script": { "type": "string" },
+        "output": { "type": "string" },
+        "options": { "type": "object" }
+      }
+    },
+    "finalRig": {
+      "type": "object",
+      "required": ["adapter", "outputs"],
+      "properties": {
+        "adapter": {
+          "enum": [
+            "hunyuan-component-aware",
+            "nearest-template",
+            "none",
+            "unirig-template-transfer"
+          ]
+        },
+        "script": { "type": "string" },
+        "template": { "type": "string" },
+        "profile": { "type": "string" },
+        "sources": {
+          "type": "object",
+          "required": ["original", "low"],
+          "properties": {
+            "original": { "type": "string" },
+            "low": { "type": "string" }
+          }
+        },
+        "outputs": {
+          "type": "object",
+          "required": ["original", "low"],
+          "properties": {
+            "original": { "type": "string" },
+            "low": { "type": "string" }
+          }
+        },
+        "options": { "type": "object" }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["final", "visualClips", "reject"],
+      "properties": {
+        "final": {
+          "type": "object",
+          "required": ["script"],
+          "properties": { "script": { "type": "string" } }
+        },
+        "visualClips": { "type": "array", "items": { "type": "string" } },
+        "reject": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "publish": {
+      "type": "object",
+      "required": ["modelsDir", "provenanceOutput", "catalog", "entry"],
+      "properties": {
+        "modelsDir": { "type": "string" },
+        "provenanceOutput": { "type": "string" },
+        "catalog": {
+          "type": "object",
+          "required": ["mode", "path"],
+          "properties": {
+            "mode": { "enum": ["direct", "source-template"] },
+            "path": { "type": "string" },
+            "templateEntry": { "type": "string" },
+            "mergeCommand": { "type": "array", "items": { "type": "string" } },
+            "viewerUrl": { "type": "string" }
+          }
+        },
+        "entry": {
+          "type": "object",
+          "required": ["bundle", "status", "summary"],
+          "properties": {
+            "bundle": { "type": "string" },
+            "status": { "type": "string" },
+            "summary": { "type": "string" }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "approvals": {
+      "type": "object",
+      "required": ["requireProxyVisual", "requireFinalVisual"],
+      "properties": {
+        "requireProxyVisual": { "type": "boolean" },
+        "requireFinalVisual": { "type": "boolean" }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["usage"],
+      "properties": {
+        "usage": { "type": "string" },
+        "source": { "type": "string" },
+        "limitations": { "type": "string" }
+      }
+    }
+  }
+}

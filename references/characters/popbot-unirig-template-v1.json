@@ -1,0 +1,116 @@
+{
+  "$schema": "../character-pipeline.schema.json",
+  "schemaVersion": 2,
+  "pipeline": {
+    "name": "POPBOT final-mesh UniRig semantic template transfer v1",
+    "scope": "humanoid-character"
+  },
+  "identity": {
+    "slug": "popbot-unirig-template-v1",
+    "name": "兔耳战术兵 UniRig 动作迁移版",
+    "nameEn": "POPBOT UniRig Template Transfer",
+    "game": "risk-of-rain-2",
+    "kind": "hero",
+    "tier": "英雄"
+  },
+  "references": {
+    "mode": "existing-glb"
+  },
+  "reconstruction": {
+    "adapter": "existing-glb",
+    "source": "generated/popbot-hunyuan-v31-tpose-v5-500k.glb",
+    "output": "generated/popbot-unirig-template-v1-source.glb"
+  },
+  "proxyRig": {
+    "adapter": "none"
+  },
+  "finalGeometry": {
+    "adapter": "existing-variants",
+    "backend": "tencent/Hunyuan3D-3.1",
+    "outputs": {
+      "original": "generated/popbot-hunyuan-v31-tpose-v5-500k.glb",
+      "low": "generated/popbot-hunyuan-v31-tpose-v5-120k.glb"
+    },
+    "options": {}
+  },
+  "finalSkin": {
+    "adapter": "existing-variants",
+    "backend": "VAST-AI/UniRig",
+    "outputs": {
+      "original": "generated/popbot-hunyuan-v31-unirig-500k.glb",
+      "low": "generated/popbot-hunyuan-v31-unirig-120k.glb"
+    },
+    "options": {}
+  },
+  "rigProfile": {
+    "adapter": "existing",
+    "output": "generated/popbot-hunyuan-v31-unirig-auto-profile.json",
+    "options": {}
+  },
+  "finalRig": {
+    "adapter": "unirig-template-transfer",
+    "script": "scripts/rig_unirig_character.py",
+    "template": "generated/templates/space-commando-original.glb",
+    "outputs": {
+      "original": "generated/popbot-hunyuan-v31-unirig-template-rig-500k-relaxed.glb",
+      "low": "generated/popbot-hunyuan-v31-unirig-template-rig-120k-relaxed.glb"
+    },
+    "options": {
+      "fingerMode": "rigid",
+      "handPose": "relaxed",
+      "footMode": "rigid-shoe"
+    }
+  },
+  "validation": {
+    "final": {
+      "script": "scripts/validate_rigged_character.py"
+    },
+    "visualClips": [
+      "bind-pose",
+      "Commando_RunForward",
+      "Commando_SprintForward",
+      "Commando_RollForward",
+      "Commando_Jump",
+      "SpaceCommando_HeavyFire"
+    ],
+    "reject": [
+      "reversed knees",
+      "outward foot yaw",
+      "ankle collapse",
+      "hand or finger spikes",
+      "thigh tearing",
+      "sleeve or coat stretching across the torso",
+      "open hand pose unsuitable for the target action"
+    ]
+  },
+  "publish": {
+    "modelsDir": "models/survivors",
+    "provenanceOutput": "generated/provenance/popbot-unirig-template-v1.json",
+    "catalog": {
+      "mode": "source-template",
+      "path": "games/risk-of-rain-2/survivors.custom.json",
+      "templateEntry": "popbot-hunyuan-v31-proxy-v1",
+      "mergeCommand": ["python3", "scripts/merge_ror2_survivors.py"],
+      "viewerUrl": "http://127.0.0.1:8765/?game={game}&monster={slug}"
+    },
+    "entry": {
+      "bundle": "hunyuan3d-v31-unirig-template-transfer-v1",
+      "status": "最终网格 UniRig 权重 / 跑步半握拳 / 厚底鞋刚性补偿 / 移动曲线去尖峰 / 动作迁移视觉验收",
+      "summary": "最终穿衣网格只运行一次 UniRig full，再共享生成 500k/120k 两级网格；匿名 UniRig 权重按人体语义迁移到 78 骨 Commando 动作模板。源 UniRig 52 骨手指先按真实指骨烘焙为跑步半握拳，再稳定合并到目标手骨；鞋头权重并入足骨，并对地面移动动作增加脚掌世界俯仰补偿，避免厚底鞋折弯和前摆脚过度压脚尖。Run/Sprint 的大腿、小腿和脚掌只对孤立异常关键帧执行循环去尖峰，保留步幅和正常弯曲，预览器播放状态刷新也已节流以避免界面布局造成卡顿。跑动、冲刺、翻滚、跳跃和射击已通过结构与浏览器形变检查。逐指动画、武器和特效不包含在该实验模型中。",
+      "meshes": ["GeneratedCharacterMesh"],
+      "prefab": "Hunyuan3D V3.1 mesh / UniRig semantic template transfer",
+      "rendererCount": 1,
+      "skills": [],
+      "skillsAppend": []
+    }
+  },
+  "approvals": {
+    "requireProxyVisual": false,
+    "requireFinalVisual": true
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-provided POPBOT concept and generated Hunyuan3D mesh",
+    "limitations": "The POPBOT design and inherited game animations remain subject to their respective rights holders; confirm distribution rights before shipping."
+  }
+}

@@ -12,6 +12,14 @@ work/
 *.bundle
 *.fbx
 
+# Generated experiments are local build products. Keep only the source assets
+# explicitly required to resume the current Doujie production task.
+generated/**
+!generated/provenance/
+!generated/provenance/*.json
+!generated/doujie-hunyuan-web-v31-raw.glb
+!generated/doujie-head-hunyuan-web-v31.glb
+
 # Early local experiments that are not used by the current catalog.
 models.json
 models/beetle.glb

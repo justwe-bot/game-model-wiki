@@ -1,0 +1,138 @@
+{
+  "$schema": "../character-pipeline.schema.json",
+  "schemaVersion": 2,
+  "pipeline": {
+    "name": "POPBOT Hunyuan V3.1 proxy-calibrated production pipeline v2",
+    "scope": "humanoid-character"
+  },
+  "identity": {
+    "slug": "popbot-hunyuan-v31-proxy-v2",
+    "name": "兔耳战术兵 V3.1 白模校准版 V2",
+    "nameEn": "POPBOT Hunyuan3D V3.1 Proxy Calibrated V2",
+    "game": "risk-of-rain-2",
+    "kind": "hero",
+    "tier": "英雄"
+  },
+  "references": {
+    "mode": "turnaround",
+    "sourceDesign": "references/popbot-pro-concept.png",
+    "turnaround": "references/popbot-rig-proxy-turnaround-v2.png",
+    "viewsDir": "references/popbot-rig-proxy-v2",
+    "cropBoxes": {
+      "front": [0, 0, 700, 946],
+      "left": [700, 0, 970, 946],
+      "back": [970, 0, 1662, 946]
+    },
+    "canvasSize": 946,
+    "background": [238, 238, 238, 255],
+    "generation": {
+      "adapter": "openai-imagegen-sub2api",
+      "artifact": "references/popbot-rig-proxy-turnaround-v2.png",
+      "prompt": "POPPBOT adult stylized proportions converted into an orthographic gray modeling mannequin; front, strict left, and back T-pose views at identical scale; arms and legs fully separated; no clothing, hair, rabbit ears, accessories, backpack, weapon, text, shadow, or perspective."
+    }
+  },
+  "reconstruction": {
+    "adapter": "hunyuan-multiview",
+    "backend": "tencent/Hunyuan3D-2mv",
+    "gpu": "L4",
+    "script": "cloud/modal_hunyuan3d_mv.py",
+    "output": "generated/popbot-rig-proxy-v2-raw.glb",
+    "options": {
+      "seed": 12345,
+      "steps": 50,
+      "octreeResolution": 380,
+      "numChunks": 20000
+    }
+  },
+  "proxyRig": {
+    "adapter": "unirig",
+    "backend": "VAST-AI/UniRig",
+    "gpu": "L4",
+    "script": "cloud/modal_unirig.py",
+    "skeletonOutput": "generated/popbot-rig-proxy-v2-unirig-skeleton.fbx",
+    "inspectionOutput": "generated/popbot-rig-proxy-v2-unirig-skeleton.json",
+    "riggedOutput": "generated/popbot-rig-proxy-v2-unirig-rigged.glb",
+    "options": {
+      "seed": 12345,
+      "facesTargetCount": 50000
+    },
+    "validation": {
+      "script": "scripts/validate_proxy_skeleton.py",
+      "output": "generated/popbot-rig-proxy-v2-unirig-validation.json"
+    }
+  },
+  "finalGeometry": {
+    "adapter": "existing-variants",
+    "backend": "tencent/Hunyuan3D-3.1",
+    "outputs": {
+      "original": "generated/popbot-hunyuan-v31-tpose-v5-500k.glb",
+      "low": "generated/popbot-hunyuan-v31-tpose-v5-120k.glb"
+    },
+    "options": {}
+  },
+  "finalSkin": {
+    "adapter": "none"
+  },
+  "rigProfile": {
+    "adapter": "existing",
+    "output": "references/popbot-hunyuan-v31-tpose-v5-rig-profile.json",
+    "options": {}
+  },
+  "finalRig": {
+    "adapter": "hunyuan-component-aware",
+    "script": "scripts/rig_hunyuan_character.py",
+    "template": "generated/templates/space-commando-original.glb",
+    "outputs": {
+      "original": "generated/popbot-hunyuan-v31-proxy-rig-v2-original.glb",
+      "low": "generated/popbot-hunyuan-v31-proxy-rig-v2-low.glb"
+    },
+    "options": {}
+  },
+  "validation": {
+    "final": {
+      "script": "scripts/validate_hunyuan_character.py"
+    },
+    "visualClips": [
+      "bind-pose",
+      "Commando_RunForward",
+      "Commando_SprintForward",
+      "Commando_RollForward",
+      "Commando_Jump",
+      "SpaceCommando_HeavyFire"
+    ],
+    "reject": [
+      "fused sleeve and torso geometry",
+      "reversed knees",
+      "outward foot yaw",
+      "ankle collapse",
+      "hand or finger spikes",
+      "thigh tearing",
+      "coat stretching across the arms"
+    ]
+  },
+  "publish": {
+    "modelsDir": "models/survivors",
+    "provenanceOutput": "generated/provenance/popbot-hunyuan-v31-proxy-v2.json",
+    "catalog": {
+      "mode": "source-template",
+      "path": "games/risk-of-rain-2/survivors.custom.json",
+      "templateEntry": "popbot-heavy-gunner-v1",
+      "mergeCommand": ["python3", "scripts/merge_ror2_survivors.py"],
+      "viewerUrl": "http://127.0.0.1:8765/?game={game}&monster={slug}"
+    },
+    "entry": {
+      "bundle": "hunyuan3d-v31-proxy-calibrated-v2",
+      "status": "新白模待重建 / 骨骼代理待验收",
+      "summary": "使用新生成的正交白模三视图重新执行 Hunyuan 多视图重建和 UniRig 关节代理检查。该清单使用独立 v2 缓存路径，只有白模骨架叠加和最终动作都通过后才允许发布。"
+    }
+  },
+  "approvals": {
+    "requireProxyVisual": true,
+    "requireFinalVisual": true
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "source": "User-provided POPBOT concept reference plus generated proxy images",
+    "limitations": "The POPBOT design and inherited game animations remain subject to their respective rights holders; confirm distribution rights before shipping."
+  }
+}

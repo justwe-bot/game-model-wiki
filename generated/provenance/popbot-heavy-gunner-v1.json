@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "slug": "popbot-heavy-gunner-v1",
+  "name": "兔耳重炮手 v1",
+  "workflow": "image-hunyuan3d-mixamo-v1",
+  "source": "generated/popbot-hunyuan-v31-mixamo-runfire-120k.glb",
+  "models": {
+    "original": "models/survivors/popbot-heavy-gunner-v1-original.glb",
+    "low": "models/survivors/popbot-heavy-gunner-v1-low.glb",
+    "variantsShareGeometry": false
+  },
+  "validation": {
+    "original": {
+      "triangles": 119993,
+      "vertices": 123549,
+      "joints": 78,
+      "animations": 16,
+      "maximumWeightError": 4.47e-08
+    },
+    "low": {
+      "triangles": 29950,
+      "vertices": 31944,
+      "joints": 78,
+      "animations": 16,
+      "maximumWeightError": 4.47e-08
+    }
+  },
+  "optimization": {
+    "tool": "@gltf-transform/cli 4.2.1",
+    "simplifyRatio": 0.25,
+    "simplifyError": 0.01,
+    "originalTextureSize": 4096,
+    "lowTextureSize": 1024
+  },
+  "sha256": {
+    "original": "aa1c169d7e57e6cef9ce15f6830e1bf081de562c8b43e0a111819ba3504b2ade",
+    "low": "a6e927478284befb62ba402adb392c54d4e94357aef9613331e90b3bf0e5fe45"
+  },
+  "rights": {
+    "usage": "local-research-and-prototype",
+    "limitations": "Confirm character, generated-model, Mixamo-motion, and inherited-rig distribution rights before shipping."
+  }
+}
