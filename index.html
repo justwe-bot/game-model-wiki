@@ -47,9 +47,13 @@
     .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
     .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
     .search input::placeholder { color: var(--faint); }
-    .tier-filters { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
+    .package-filters, .tier-filters { display: flex; gap: 6px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
+    .package-filters:empty { display: none; }
+    .package-filters::-webkit-scrollbar,
     .tier-filters::-webkit-scrollbar { display: none; }
+    .package-filter,
     .tier-filter { flex: 0 0 auto; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); padding: 6px 9px; cursor: pointer; font-size: 12px; }
+    .package-filter.active,
     .tier-filter.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
     .monster-list { padding: 10px; display: grid; align-content: start; gap: 5px; overflow-y: auto; }
     .monster-entry { min-height: 58px; width: 100%; border: 1px solid transparent; border-radius: 6px; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; align-items: center; padding: 9px 10px; text-align: left; cursor: pointer; }
@@ -59,6 +63,7 @@
     .monster-entry small { grid-column: 1; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .monster-entry span { grid-column: 2; grid-row: 1 / span 2; color: var(--lime); font-size: 11px; }
     .empty { color: var(--muted); padding: 20px 10px; font-size: 13px; }
+    .load-more { min-height: 38px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--text); cursor: pointer; }
     .workspace { min-width: 0; display: grid; grid-template-rows: minmax(470px, 66vh) auto; }
     .stage { min-height: 470px; position: relative; overflow: hidden; background: #0a100e; }
     #canvas { width: 100%; height: 100%; display: block; touch-action: none; }
@@ -107,7 +112,9 @@
       .game-switcher { margin: 10px 0 8px; }
       .monster-list { display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
       .monster-list::-webkit-scrollbar { display: none; }
-      .monster-entry { min-width: 176px; }
+      .monster-entry { flex: 0 0 210px; min-width: 210px; grid-template-columns: minmax(0, 1fr); }
+      .monster-entry small { grid-column: 1; }
+      .monster-entry span { grid-column: 1; grid-row: auto; white-space: nowrap; }
       .workspace { grid-template-rows: minmax(430px, 60vh) auto; }
       .stage { min-height: 430px; }
       .details { grid-template-columns: 1fr; gap: 28px; }
@@ -142,8 +149,9 @@
         <p class="edition" id="edition"></p>
         <label class="search">
           <i data-lucide="search"></i>
-          <input id="searchInput" type="search" placeholder="搜索角色" autocomplete="off">
+          <input id="searchInput" type="search" placeholder="搜索模型" autocomplete="off">
         </label>
+        <div class="package-filters" id="packageFilters"></div>
         <div class="tier-filters" id="tierFilters">
         </div>
       </div>
@@ -260,7 +268,9 @@
 
     let activeEntry = catalog.find(entry => entry.slug === requestedMonster) ?? catalog[0] ?? null;
     let activeMode = isCompactViewport ? 'low' : 'original';
+    let activePackage = '全部资源包';
     let activeTier = '全部';
+    let visibleCatalogLimit = 200;
     let activeSlots = [];
     let paused = false;
     let rotating = true;
@@ -581,7 +591,12 @@
       if (!entry) return [];
       const prefix = entry.defaultClip?.includes('|') ? entry.defaultClip.split('|')[0] : null;
       const animations = entry.animations ?? [];
-      const items = prefix ? animations.filter(animation => animation.clip.startsWith(`${prefix}|`)) : animations;
+      const variantItems = animations.filter(animation => {
+        if (!animation.variants?.length) return true;
+        if (activeMode === 'compare') return animation.variants.includes('original') && animation.variants.includes('low');
+        return animation.variants.includes(activeMode);
+      });
+      const items = prefix ? variantItems.filter(animation => animation.clip.startsWith(`${prefix}|`)) : variantItems;
       const priority = { attack: 0, movement: 1, idle: 2, spawn: 3, hurt: 4, death: 5, other: 6 };
       return items.sort((a, b) => (priority[a.kind] ?? 9) - (priority[b.kind] ?? 9) || a.name.localeCompare(b.name));
     }
@@ -641,9 +656,10 @@
     function filteredCatalog() {
       const query = document.querySelector('#searchInput').value.trim().toLowerCase();
       return catalog.filter(entry => {
+        const packageMatch = activePackage === '全部资源包' || entry.package === activePackage;
         const tierMatch = activeTier === '全部' || entry.tier?.includes(activeTier);
-        const queryMatch = !query || entry.name.toLowerCase().includes(query) || entry.nameEn.toLowerCase().includes(query);
-        return tierMatch && queryMatch;
+        const queryMatch = !query || entry.name.toLowerCase().includes(query) || entry.nameEn.toLowerCase().includes(query) || entry.category?.toLowerCase().includes(query);
+        return packageMatch && tierMatch && queryMatch;
       });
     }
 
@@ -655,7 +671,7 @@
         list.innerHTML = '<div class="empty">没有匹配条目</div>';
         return;
       }
-      entries.forEach(entry => {
+      entries.slice(0, visibleCatalogLimit).forEach(entry => {
         const button = document.createElement('button');
         button.className = `monster-entry${entry.slug === activeEntry.slug ? ' active' : ''}`;
         button.innerHTML = `<strong>${entry.name}</strong><small>${entry.nameEn}</small><span>${entry.status || entry.tier}</span>`;
@@ -668,12 +684,48 @@
         });
         list.appendChild(button);
       });
+      if (entries.length > visibleCatalogLimit) {
+        const more = document.createElement('button');
+        more.className = 'load-more';
+        more.textContent = `继续显示（剩余 ${entries.length - visibleCatalogLimit}）`;
+        more.addEventListener('click', () => {
+          visibleCatalogLimit += 200;
+          renderMonsterList();
+        });
+        list.appendChild(more);
+      }
+    }
+
+    function renderPackageFilters() {
+      const container = document.querySelector('#packageFilters');
+      const packages = [...new Set(catalog.map(entry => entry.package).filter(Boolean))];
+      container.innerHTML = '';
+      if (packages.length < 2) return;
+      ['全部资源包', ...packages].forEach(packageName => {
+        const button = document.createElement('button');
+        button.className = `package-filter${packageName === activePackage ? ' active' : ''}`;
+        button.textContent = packageName.replace(/ Ultimate Pack /, ' Pack ');
+        button.title = packageName;
+        button.addEventListener('click', () => {
+          activePackage = packageName;
+          activeTier = '全部';
+          visibleCatalogLimit = 200;
+          renderPackageFilters();
+          renderTierFilters();
+          renderMonsterList();
+        });
+        container.appendChild(button);
+      });
     }
 
     function renderTierFilters() {
       const container = document.querySelector('#tierFilters');
-      const tiers = activeGame.tiers ?? ['英雄', '普通', '大型', 'Boss'];
+      const packageEntries = activePackage === '全部资源包' ? catalog : catalog.filter(entry => entry.package === activePackage);
+      const tiers = activeGame.slug === 'ultimate-pack'
+        ? (activePackage === '全部资源包' ? [] : [...new Set(packageEntries.map(entry => entry.tier).filter(Boolean))])
+        : (activeGame.tiers ?? ['英雄', '普通', '大型', 'Boss']);
       container.innerHTML = '';
+      if (!tiers.length && activeGame.slug === 'ultimate-pack') return;
       ['全部', ...tiers].forEach(tier => {
         const button = document.createElement('button');
         button.className = `tier-filter${tier === activeTier ? ' active' : ''}`;
@@ -681,6 +733,7 @@
         button.textContent = tier;
         button.addEventListener('click', () => {
           activeTier = tier;
+          visibleCatalogLimit = 200;
           container.querySelectorAll('.tier-filter').forEach(item => item.classList.toggle('active', item === button));
           renderMonsterList();
         });
@@ -691,6 +744,7 @@
     function updateViewNavigation() {
       const mapsAvailable = Boolean(activeGame.mapsPage);
       document.querySelector('#viewTabs').classList.toggle('maps-unavailable', !mapsAvailable);
+      document.querySelector('#creaturesLink').lastChild.textContent = activeGame.slug === 'ultimate-pack' ? '模型' : '角色';
       document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
       document.querySelector('#mapsLink').href = mapsAvailable ? `./${activeGame.mapsPage}` : '#';
     }
@@ -702,24 +756,31 @@
       assetRevision = activeGame.assetRevision;
       catalog = await fetch(`./${activeGame.catalog}?v=${assetRevision}`, { cache: 'no-store' }).then(response => response.json());
       activeEntry = catalog[0] ?? null;
+      activePackage = '全部资源包';
       activeTier = '全部';
+      visibleCatalogLimit = 200;
       document.querySelector('#searchInput').value = '';
-      document.querySelector('#brand').textContent = `${activeGame.name} · 角色图鉴`;
+      document.querySelector('#brand').textContent = `${activeGame.name} · 模型图鉴`;
       document.querySelector('#edition').textContent = activeGame.subtitle;
-      document.title = `${activeGame.name} · 角色 3D 图鉴`;
+      document.title = `${activeGame.name} · 3D 模型图鉴`;
       updateViewNavigation();
+      renderPackageFilters();
       renderTierFilters();
       renderMonsterList();
       if (activeEntry) renderDetails(activeEntry);
       await loadActiveModels();
     }
 
-    document.querySelector('#searchInput').addEventListener('input', renderMonsterList);
+    document.querySelector('#searchInput').addEventListener('input', () => {
+      visibleCatalogLimit = 200;
+      renderMonsterList();
+    });
     document.querySelector('#gameSelect').addEventListener('change', event => switchGame(event.target.value));
     document.querySelectorAll('.mode-button').forEach(button => {
       button.addEventListener('click', async () => {
         activeMode = button.dataset.mode;
         document.querySelectorAll('.mode-button').forEach(item => item.classList.toggle('active', item === button));
+        renderDetails(activeEntry);
         await loadActiveModels();
       });
     });
@@ -769,10 +830,11 @@
       gameSelect.appendChild(option);
     });
     gameSelect.value = activeGame.slug;
-    document.querySelector('#brand').textContent = `${activeGame.name} · 角色图鉴`;
+    document.querySelector('#brand').textContent = `${activeGame.name} · 模型图鉴`;
     document.querySelector('#edition').textContent = activeGame.subtitle;
-    document.title = `${activeGame.name} · 角色 3D 图鉴`;
+    document.title = `${activeGame.name} · 3D 模型图鉴`;
     updateViewNavigation();
+    renderPackageFilters();
     renderTierFilters();
     renderMonsterList();
     if (activeEntry) renderDetails(activeEntry);
