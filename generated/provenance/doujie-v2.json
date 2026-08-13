@@ -1,0 +1,35 @@
+{
+  "slug": "doujie-v2",
+  "generatedAt": "2026-08-12T16:00:00Z",
+  "sourcePolicy": "Regenerated from the user-provided reference; no repository modeling data was reused.",
+  "status": "rejected-style-superseded",
+  "rejectionReason": "Superseded by the user's later request for a unified semi-realistic 3D CG style and short blunt bob hairstyle.",
+  "body": {
+    "platform": "Tencent Hunyuan 3D Web",
+    "modelVersion": "HY3D-3.1",
+    "assetId": "5f2f0c54-cfc5-4238-b2c3-c62c38c68fda",
+    "triangleCount": 1500000,
+    "vertexCount": 852711,
+    "inputImages": [
+      "references/doujie-v2/front.png",
+      "references/doujie-v2/left.png",
+      "references/doujie-v2/back.png"
+    ],
+    "output": "generated/doujie-v2-hunyuan-web-v31-raw.glb",
+    "sha256": "25FAAC6C60F0DAA838F46F5667531199180D014076B4B9F1040A10DD36459CBD"
+  },
+  "head": {
+    "platform": "Tencent Hunyuan 3D Web",
+    "modelVersion": "HY3D-3.1",
+    "assetId": "e1df8763-0be3-4af6-8b94-f80c3bc2ccaa",
+    "triangleCount": 1033306,
+    "vertexCount": 765092,
+    "inputImages": [
+      "references/doujie-v2/head/front.png",
+      "references/doujie-v2/head/left.png",
+      "references/doujie-v2/head/back.png"
+    ],
+    "output": "generated/doujie-v2-head-hunyuan-web-v31.glb",
+    "sha256": "6329033EBC2C643C4AE45531CAC1276B4143A6E030817131FFF9249AB5B48B12"
+  }
+}
