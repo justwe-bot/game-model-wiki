@@ -30,3 +30,11 @@ models/wisp-*.glb
 textures/parent-*.png
 textures/roboballboss-*.png
 textures/wisp-*.png
+
+# Purchased Ultimate Pack binaries and locally generated catalogs must never be
+# published. The tracked inventory contains metadata only.
+models/ultimate-pack/
+textures/ultimate-pack/
+generated/ultimate-pack/
+games/ultimate-pack/catalog.local.json
+games/ultimate-pack/import-warnings.local.json

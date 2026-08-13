@@ -9,6 +9,10 @@
 - `risk-of-rain-2`：20 个怪物和 23 张地图，支持模型对比、骨骼动作与独立地图浏览
 - `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
 - `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
+- `ultimate-pack`：5 个已购买 Unity 资源包的本地 Wiki，收录 3,831 个模型条目和 45,304 组动作元数据；商业模型与贴图不进入公开仓库
+
+Ultimate Pack 的本地构建、动作导入和许可边界见
+[`games/ultimate-pack/README.md`](games/ultimate-pack/README.md)。
 
 《哈迪斯 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
 
