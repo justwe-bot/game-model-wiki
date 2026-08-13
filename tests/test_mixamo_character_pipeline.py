@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import inspect
 import importlib.util
 import json
 from pathlib import Path
@@ -36,6 +37,10 @@ ATTACHMENT = load_module(
 HEAD_REPLACEMENT = load_module(
     "modal_character_head_replacement_test",
     REPO_ROOT / "cloud" / "modal_character_head_replacement.py",
+)
+CHARACTER_MESH = load_module(
+    "modal_character_mesh_test",
+    REPO_ROOT / "cloud" / "modal_character_mesh.py",
 )
 
 
@@ -105,9 +110,28 @@ class MixamoCharacterPipelineTests(unittest.TestCase):
             force=False,
         )
         command = PIPELINE.prepare_command(args)
-        self.assertIn("cloud/modal_character_mesh.py", " ".join(command))
+        command_text = " ".join(command).replace("\\", "/")
+        self.assertIn("cloud/modal_character_mesh.py", command_text)
         self.assertIn("15000", command)
         self.assertIn("2048", command)
+
+    def test_animation_mesh_uv_projection_avoids_aggressive_triangle_islands(self) -> None:
+        source = inspect.getsource(CHARACTER_MESH._smart_uv)
+        self.assertIn("math.radians(89.0)", source)
+        self.assertIn("island_margin=0.008", source)
+
+    def test_animation_mesh_bake_rays_do_not_cross_thin_face_layers(self) -> None:
+        signature = inspect.signature(CHARACTER_MESH._bake_textures)
+        self.assertEqual(signature.parameters["cage_extrusion"].default, 0.006)
+        self.assertEqual(signature.parameters["max_ray_distance"].default, 0.015)
+
+    def test_material_transfer_preserves_high_source_uvs_and_material_indices(self) -> None:
+        source = (REPO_ROOT / "scripts" / "blender_transfer_mixamo_materials.py").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("BVHTree.FromPolygons", source)
+        self.assertIn("barycentric_transform", source)
+        self.assertIn("polygon.material_index = int(source_polygon.material_index)", source)
 
     def test_replace_head_command_runs_before_mixamo(self) -> None:
         args = argparse.Namespace(
@@ -125,7 +149,8 @@ class MixamoCharacterPipelineTests(unittest.TestCase):
             force=False,
         )
         command = PIPELINE.replace_head_command(args)
-        self.assertIn("cloud/modal_character_head_replacement.py", " ".join(command))
+        command_text = " ".join(command).replace("\\", "/")
+        self.assertIn("cloud/modal_character_head_replacement.py", command_text)
         self.assertIn("--body-cut-ratio", command)
         self.assertIn("--voxel-size", command)
 
@@ -134,6 +159,9 @@ class MixamoCharacterPipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "between"):
             HEAD_REPLACEMENT.resolve_cut_height(0.0, 1.0, 1.0)
 
+    def test_headless_body_cut_can_use_the_upper_neck_range(self) -> None:
+        self.assertAlmostEqual(HEAD_REPLACEMENT.resolve_cut_height(0.0, 1.0, 0.96), 0.96)
+
     def test_head_replacement_vector_parser_is_strict(self) -> None:
         self.assertEqual(
             HEAD_REPLACEMENT.parse_vector("0.1, -0.2, 0", label="offset"),
@@ -141,6 +169,45 @@ class MixamoCharacterPipelineTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(ValueError, "three"):
             HEAD_REPLACEMENT.parse_vector("1,2", label="offset")
+
+    def test_head_replacement_never_voxel_remeshes_the_full_character(self) -> None:
+        source = inspect.getsource(HEAD_REPLACEMENT.replace_head)
+        self.assertNotIn("voxel_remesh", source)
+        self.assertIn("_bridge_neck_boundaries", source)
+
+    def test_head_replacement_reads_bmesh_deform_weights_from_vertices(self) -> None:
+        source = inspect.getsource(HEAD_REPLACEMENT._bridge_neck_boundaries)
+        self.assertIn("vertex[deform].get", source)
+        self.assertNotIn("deform[vertex]", source)
+
+    def test_head_replacement_only_welds_zero_distance_export_seams(self) -> None:
+        signature = inspect.signature(HEAD_REPLACEMENT._weld_coincident_vertices)
+        self.assertEqual(signature.parameters["distance"].default, 1e-7)
+        source = inspect.getsource(HEAD_REPLACEMENT.replace_head)
+        self.assertEqual(source.count("_weld_coincident_vertices"), 2)
+
+    def test_head_replacement_seals_secondary_cut_loops_before_bridging(self) -> None:
+        source = inspect.getsource(HEAD_REPLACEMENT._mark_primary_boundary_loop)
+        self.assertIn("center_vertex", source)
+        self.assertIn("bm.faces.new", source)
+        self.assertNotIn("holes_fill", source)
+        self.assertIn("sealedSecondaryLoops", source)
+
+    def test_head_replacement_equalizes_neck_loop_counts_locally(self) -> None:
+        source = inspect.getsource(HEAD_REPLACEMENT._bridge_neck_boundaries)
+        self.assertIn("subdivide_edges", source)
+        self.assertIn("addedBoundaryVertices", source)
+        self.assertNotIn("dissolve_verts", source)
+
+    def test_head_replacement_builds_a_deterministic_one_to_one_bridge(self) -> None:
+        source = inspect.getsource(HEAD_REPLACEMENT._bridge_neck_boundaries)
+        self.assertIn("bm.faces.new", source)
+        self.assertIn("alignmentOffset", source)
+        self.assertNotIn("bridge_loops", source)
+
+    def test_head_replacement_does_not_retriangulate_the_full_character(self) -> None:
+        source = inspect.getsource(HEAD_REPLACEMENT.replace_head)
+        self.assertNotIn("_triangulate_mesh", source)
 
     def test_finalize_command_fixes_the_delivery_height(self) -> None:
         args = argparse.Namespace(
@@ -212,7 +279,8 @@ class MixamoCharacterPipelineTests(unittest.TestCase):
             force=False,
         )
         command = PIPELINE.attach_command(args)
-        self.assertIn("cloud/modal_character_attachment.py", " ".join(command))
+        command_text = " ".join(command).replace("\\", "/")
+        self.assertIn("cloud/modal_character_attachment.py", command_text)
         self.assertIn("mixamorig:Head", command)
         self.assertIn("0.36", command)
         self.assertIn("--force-opaque-materials", command)

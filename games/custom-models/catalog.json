@@ -101,5 +101,106 @@
         "description": "使用原地跳跃动作表现喷气背包起跳；喷焰、光效和实际位移由游戏运行时提供。"
       }
     ]
+  },
+  {
+    "slug": "doujie-cg",
+    "name": "斗姐",
+    "nameEn": "Doujie CG",
+    "kind": "hero",
+    "tier": "英雄",
+    "status": "腾讯混元 3D Web V3.1 + 生物头模替换 + Mixamo 动画",
+    "summary": "半写实精致 3D CG 风格英雄，保留原服装与整体造型，并重制为中分、下巴长度的直发波波头。身体与独立生物头均由腾讯混元 3D 网页 V3.1 生成，在 Mixamo 绑定前完成无旧脸残留的闭合颈部融合，再经 Blender 与 QRemeshify 重拓扑、UV 和 2K PBR 烘焙。发布版使用 25 骨 Mixamo 蒙皮，包含待机、原地行走、原地跑动和跳跃四个动作；眼睛保留正常眼白、虹膜和瞳孔关系，材质已强制保持不透明。",
+    "models": {
+      "original": "models/custom/doujie-cg.glb",
+      "low": "models/custom/doujie-cg.glb"
+    },
+    "textures": {
+      "original": null,
+      "low": null
+    },
+    "emissiveTextures": {
+      "original": null,
+      "low": null
+    },
+    "normalTextures": {
+      "original": null,
+      "low": null
+    },
+    "textureSource": "embedded 2048px Base Color / Normal / AO",
+    "emissiveTextureSource": null,
+    "normalTextureSource": "embedded baked normal map",
+    "modelSource": "Tencent Hunyuan 3D Web V3.1 multiview body and biological head",
+    "prefabSource": "Hunyuan Web V3.1 / biological head replacement / QRemeshify watertight animation mesh / Mixamo final skin",
+    "rendererCount": 1,
+    "bakedTriangles": 14814,
+    "sourceTriangles": 14814,
+    "lowTriangles": 14814,
+    "sourceSizeKB": 6465,
+    "lowSizeKB": 6465,
+    "animationCount": 4,
+    "preserveMaterials": true,
+    "animations": [
+      {
+        "name": "待机",
+        "clip": "Mixamo_DoujieCgMixamoIdle",
+        "kind": "idle",
+        "source": "Mixamo Idle"
+      },
+      {
+        "name": "跳跃",
+        "clip": "Mixamo_DoujieCgMixamoJump",
+        "kind": "movement",
+        "source": "Mixamo Jump"
+      },
+      {
+        "name": "原地跑动",
+        "clip": "Mixamo_DoujieCgMixamoRunInplace",
+        "kind": "movement",
+        "source": "Mixamo Run In Place"
+      },
+      {
+        "name": "原地行走",
+        "clip": "Mixamo_DoujieCgMixamoWalkInplace",
+        "kind": "movement",
+        "source": "Mixamo Walk In Place"
+      }
+    ],
+    "defaultClip": "Mixamo_DoujieCgMixamoIdle",
+    "framingScaleByVariant": {
+      "original": 1,
+      "low": 1
+    },
+    "mobileFramingScaleByVariant": {
+      "original": 0.94,
+      "low": 0.94
+    },
+    "cameraTargetY": 1.05,
+    "rigSource": "mixamo-final-skin-watertight-v1",
+    "jointCount": 25,
+    "motionAnchorBone": "mixamorig:Hips",
+    "motionAnchorAxes": ["x", "y", "z"],
+    "originalGameRig": false,
+    "topology": {
+      "vertices": 6992,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    "skills": [
+      {
+        "name": "敏捷移动",
+        "clip": "Mixamo_DoujieCgMixamoRunInplace",
+        "attackType": "移动",
+        "range": "自身",
+        "description": "使用原地跑动表现角色移动，实际位移由游戏运行时提供。"
+      },
+      {
+        "name": "跃起",
+        "clip": "Mixamo_DoujieCgMixamoJump",
+        "attackType": "垂直机动",
+        "range": "自身",
+        "description": "跳跃动作负责角色姿态，实际高度和落点由游戏运行时控制。"
+      }
+    ],
+    "limitations": "默认仅用于本地研究、个人原型和技术验证；公开发布或商业使用前须分别确认原创角色设计、腾讯混元输出和 Adobe Mixamo 动作的使用与分发权利。"
   }
 ]
