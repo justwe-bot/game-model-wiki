@@ -14,6 +14,8 @@ EXPECTED = {
     "monsters-03": (16, 285),
     "low-poly-10": (3137, 44452),
     "stylized-weapons": (648, 0),
+    "sci-fi-civilians": (6, 114),
+    "sci-fi-battle-weapons": (35, 0),
 }
 
 
@@ -39,8 +41,10 @@ class UltimatePackCatalogTests(unittest.TestCase):
     def test_category_and_packages_are_registered(self) -> None:
         game = next(item for item in self.games if item["slug"] == "ultimate-pack")
         self.assertEqual(game["catalog"], "games/ultimate-pack/catalog.json")
-        self.assertIn("3,831 个模型", game["subtitle"])
-        self.assertIn("45,304 组动作", game["subtitle"])
+        self.assertIn("3,872 个模型", game["subtitle"])
+        self.assertIn("45,418 组动作", game["subtitle"])
+        self.assertIn("人物", game["tiers"])
+        self.assertIn("科幻武器", game["tiers"])
         counts = Counter(entry["packageSlug"] for entry in self.catalog)
         actions = Counter()
         for entry in self.catalog:
@@ -49,7 +53,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertEqual({slug: actions[slug] for slug in EXPECTED}, {slug: value[1] for slug, value in EXPECTED.items()})
 
     def test_all_models_and_actions_are_valid(self) -> None:
-        self.assertEqual(len(self.catalog), 3831)
+        self.assertEqual(len(self.catalog), 3872)
         self.assertEqual(len({entry["slug"] for entry in self.catalog}), len(self.catalog))
         inspected: dict[Path, dict] = {}
         for entry in self.catalog:
@@ -86,7 +90,32 @@ class UltimatePackCatalogTests(unittest.TestCase):
         warnings = json.loads(
             (ROOT / "games" / "ultimate-pack" / "import-warnings.json").read_text(encoding="utf-8")
         )
-        self.assertEqual(warnings, {"stylized-weapons": []})
+        self.assertEqual(warnings, {
+            "stylized-weapons": [],
+            "sci-fi-civilians": [],
+            "sci-fi-battle-weapons": [],
+        })
+
+    def test_sci_fi_characters_and_weapons(self) -> None:
+        entries = {entry["slug"]: entry for entry in self.catalog}
+        civilian = entries["sci-fi-civilians-scificivilians-01"]
+        self.assertEqual(civilian["animationCount"], 19)
+        self.assertEqual(civilian["defaultClip"], "Ultimate_Idle_Standing")
+        self.assertEqual(civilian["motionAnchorBone"], "pelvis")
+        civilian_document = read_glb(ROOT / civilian["models"]["original"])
+        self.assertIn("pelvis", {node.get("name") for node in civilian_document["nodes"]})
+        self.assertGreaterEqual(len(civilian_document["skins"][0]["joints"]), 88)
+
+        rifle = entries["sci-fi-battle-weapons-scifirifle01-1"]
+        self.assertTrue(rifle["textures"]["original"])
+        self.assertTrue(rifle["emissiveTextures"]["original"])
+        self.assertTrue(rifle["normalTextures"]["original"])
+        rifle_document = read_glb(ROOT / rifle["models"]["original"])
+        collision_prefixes = ("UCX_", "UBX_", "USP_", "UCP_")
+        self.assertFalse(any(
+            node.get("name", "").upper().startswith(collision_prefixes)
+            for node in rifle_document["nodes"]
+        ))
 
     def test_low_poly_materials_are_restored(self) -> None:
         entries = {entry["slug"]: entry for entry in self.catalog}
