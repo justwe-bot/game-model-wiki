@@ -262,6 +262,9 @@ def retarget_animation(
     source_path: Path,
     animation_name: str,
     source_yaw_degrees: float = 0.0,
+    bone_mapping: tuple[tuple[str, str], ...] = MIXAMO_TO_TEMPLATE,
+    target_hips: str = "base",
+    target_feet: tuple[str, str] = ("foot.l", "foot.r"),
 ) -> dict:
     source_document, source_binary = read_glb(source_path)
     source_animations = source_document.get("animations", [])
@@ -270,8 +273,8 @@ def retarget_animation(
 
     source_names = {node.get("name", ""): index for index, node in enumerate(source_document.get("nodes", []))}
     target_names = {node.get("name", ""): index for index, node in enumerate(target_document.get("nodes", []))}
-    missing_source = [name for name, _target in MIXAMO_TO_TEMPLATE if name not in source_names]
-    missing_target = [name for _source, name in MIXAMO_TO_TEMPLATE if name not in target_names]
+    missing_source = [name for name, _target in bone_mapping if name not in source_names]
+    missing_target = [name for _source, name in bone_mapping if name not in target_names]
     if missing_source or missing_target:
         raise ValueError(f"Missing mapped bones: source={missing_source}, target={missing_target}")
 
@@ -299,17 +302,17 @@ def retarget_animation(
     target_leg_length = skeleton_scale(
         target_rest_world,
         target_names,
-        "base",
-        ("foot.l", "foot.r"),
+        target_hips,
+        target_feet,
     )
     motion_scale = target_leg_length / max(source_leg_length, 1e-8)
 
     source_for_target = {
         target_names[target_name]: source_names[source_name]
-        for source_name, target_name in MIXAMO_TO_TEMPLATE
+        for source_name, target_name in bone_mapping
     }
     rotation_rows = {target_index: [] for target_index in source_for_target}
-    base_index = target_names["base"]
+    base_index = target_names[target_hips]
     base_translation_rows: list[tuple[float, ...]] = []
 
     for time in times:

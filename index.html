@@ -876,10 +876,15 @@
       refreshIcons();
     });
     document.querySelector('#resetButton').addEventListener('click', resetCamera);
-    document.querySelector('#playSelectedButton').addEventListener('click', () => {
+    document.querySelector('#playSelectedButton').addEventListener('click', async () => {
       const clip = document.querySelector('#animationSelect').value;
       const animation = activeEntry?.animations?.find(item => item.clip === clip);
-      playClip(clip, animation?.kind === 'idle' || animation?.kind === 'movement');
+      if (animation?.equipment && selectedEquipmentOption()?.slug !== animation.equipment) {
+        equippedByEntry.set(activeEntry.slug, animation.equipment);
+        document.querySelector('#equipmentSelect').value = animation.equipment;
+        await loadActiveModels();
+      }
+      playClip(clip, animation?.loop || animation?.kind === 'idle' || animation?.kind === 'movement');
     });
     document.querySelector('#equipmentSelect').addEventListener('change', async event => {
       equippedByEntry.set(activeEntry.slug, event.target.value);

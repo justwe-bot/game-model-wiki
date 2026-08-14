@@ -46,6 +46,7 @@ from retarget_mixamo_animation import (
     quat_multiply,
     quat_normalize,
     require_finite_rows,
+    retarget_animation,
     sample_track,
     skeleton_scale,
     vec_add,
@@ -58,6 +59,7 @@ from retarget_mixamo_animation import (
 CATALOG_PATH = ROOT / "games" / "ultimate-pack" / "catalog.json"
 WARNINGS_PATH = CATALOG_PATH.parent / "import-warnings.json"
 ACTION_SOURCE = ROOT / "models" / "ultimate-pack" / "low-poly-10" / "m" / "people-man-casual.glb"
+MIXAMO_ACTION_ROOT = ROOT / "generated" / "sci-fi-civilians-mixamo"
 DEFAULT_CONVERTER = Path(
     r"C:\Users\xd199\Documents\Codex\2026-07-28\steam-wiki-d\work\tools\fbx2gltf"
     r"\FBX2glTF-windows-x86_64\FBX2glTF-windows-x86_64.exe"
@@ -88,11 +90,46 @@ SOURCE_TO_SIDEKICK = (
     ("RightToeBase", "ball_r"),
 )
 
+MIXAMO_TO_SIDEKICK = (
+    ("mixamorig:Hips", "pelvis"),
+    ("mixamorig:Spine", "spine_01"),
+    ("mixamorig:Spine1", "spine_02"),
+    ("mixamorig:Spine2", "spine_03"),
+    ("mixamorig:Neck", "neck_01"),
+    ("mixamorig:Head", "head"),
+    ("mixamorig:LeftShoulder", "clavicle_l"),
+    ("mixamorig:LeftArm", "upperarm_l"),
+    ("mixamorig:LeftForeArm", "lowerarm_l"),
+    ("mixamorig:LeftHand", "hand_l"),
+    ("mixamorig:RightShoulder", "clavicle_r"),
+    ("mixamorig:RightArm", "upperarm_r"),
+    ("mixamorig:RightForeArm", "lowerarm_r"),
+    ("mixamorig:RightHand", "hand_r"),
+    ("mixamorig:LeftUpLeg", "thigh_l"),
+    ("mixamorig:LeftLeg", "calf_l"),
+    ("mixamorig:LeftFoot", "foot_l"),
+    ("mixamorig:LeftToeBase", "ball_l"),
+    ("mixamorig:RightUpLeg", "thigh_r"),
+    ("mixamorig:RightLeg", "calf_r"),
+    ("mixamorig:RightFoot", "foot_r"),
+    ("mixamorig:RightToeBase", "ball_r"),
+)
+
+MIXAMO_ACTIONS = (
+    ("Mixamo_RifleFireStanding", MIXAMO_ACTION_ROOT / "rifle-fire-standing.glb"),
+    ("Mixamo_RifleRunFire", MIXAMO_ACTION_ROOT / "rifle-run-fire-inplace.glb"),
+)
+
+MIXAMO_ACTION_LABELS = {
+    "Mixamo_RifleFireStanding": "步枪站立射击",
+    "Mixamo_RifleRunFire": "步枪跑动射击",
+}
+
 COLLISION_PREFIXES = ("UCX_", "UBX_", "USP_", "UCP_")
 
 EQUIPMENT_OPTIONS = [
-    ("sci-fi-battle-weapons-scifipistol01-1", "科幻手枪 01", "pistol"),
     ("sci-fi-battle-weapons-scifirifle01-1", "科幻步枪 01", "rifle"),
+    ("sci-fi-battle-weapons-scifipistol01-1", "科幻手枪 01", "pistol"),
     ("sci-fi-battle-weapons-scifismg01-1", "科幻冲锋枪 01", "rifle"),
     ("sci-fi-battle-weapons-scifishotgun01-1", "科幻霰弹枪 01", "rifle"),
     ("sci-fi-battle-weapons-scifisniperrifle01-1", "科幻狙击枪 01", "rifle"),
@@ -517,6 +554,33 @@ def retarget_low_poly_actions(path: Path) -> None:
     append_generic_animations(path)
 
 
+def append_mixamo_actions(path: Path) -> list[dict]:
+    missing = [source for _name, source in MIXAMO_ACTIONS if not source.is_file()]
+    if missing:
+        raise FileNotFoundError(f"Missing Mixamo action sources: {missing}")
+    document, binary_bytes = read_glb(path)
+    binary = bytearray(binary_bytes)
+    results = [
+        retarget_animation(
+            document,
+            binary,
+            source,
+            name,
+            bone_mapping=MIXAMO_TO_SIDEKICK,
+            target_hips="pelvis",
+            target_feet=("foot_l", "foot_r"),
+        )
+        for name, source in MIXAMO_ACTIONS
+    ]
+    extras = document.setdefault("asset", {}).setdefault("extras", {})
+    extras["mixamoRetarget"] = {"version": 1, "animations": results}
+    rig = extras.get("rig")
+    if isinstance(rig, dict):
+        rig["animations"] = len(document.get("animations", []))
+    write_glb(path, document, bytes(binary))
+    return results
+
+
 def prune_collision_geometry(path: Path) -> int:
     document, binary = read_glb(path)
     removed = {
@@ -586,12 +650,18 @@ def build_characters() -> list[dict]:
         print(f"[{package_slug}] {index}/6 {stem}", flush=True)
         build_character_glb(directory / "Meshes" / f"{stem}.asset", directory / f"{stem}.prefab", output)
         retarget_low_poly_actions(output)
+        append_mixamo_actions(output)
         texture_source = directory / "Textures" / f"T_{stem}ColorMap.png"
         texture_target = TEXTURES_ROOT / package_slug / f"{slugify(stem)}-color-map.png"
         texture_target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(texture_source, texture_target)
         report = report_for_glb(output)
         entry = base_entry(package_slug, package, slugify(stem), f"Sci-Fi Civilian {index:02d}", report, output.relative_to(ROOT).as_posix())
+        for animation in entry["animations"]:
+            if animation["clip"].startswith("Mixamo_Rifle"):
+                animation["name"] = MIXAMO_ACTION_LABELS[animation["clip"]]
+                animation["equipment"] = EQUIPMENT_OPTIONS[0][0]
+                animation["loop"] = animation["clip"] == "Mixamo_RifleRunFire"
         entry.update({
             "name": f"科幻平民 {index:02d}",
             "category": "人物",
@@ -610,6 +680,14 @@ def build_characters() -> list[dict]:
             "defaultEquipment": EQUIPMENT_OPTIONS[0][0],
             "equipmentOptions": equipment_options(),
             "sharedPackageActions": [animation.get("name") for animation in report["animations"]],
+            "mixamoActionSource": {
+                "provider": "Adobe Mixamo",
+                "motion": "Firing Rifle",
+                "skin": "Without Skin",
+                "fps": 30,
+                "keyframeReduction": "none",
+                "runInPlace": True,
+            },
             "cameraTargetY": 1.05,
         })
         entries.append(entry)

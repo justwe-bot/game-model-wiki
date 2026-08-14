@@ -15,7 +15,7 @@ EXPECTED = {
     "monsters-03": (16, 285),
     "low-poly-10": (3137, 44452),
     "stylized-weapons": (648, 0),
-    "sci-fi-civilians": (6, 114),
+    "sci-fi-civilians": (6, 126),
     "sci-fi-battle-weapons": (35, 0),
 }
 
@@ -43,7 +43,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
         game = next(item for item in self.games if item["slug"] == "ultimate-pack")
         self.assertEqual(game["catalog"], "games/ultimate-pack/catalog.json")
         self.assertIn("3,872 个模型", game["subtitle"])
-        self.assertIn("45,418 组动作", game["subtitle"])
+        self.assertIn("45,430 组动作", game["subtitle"])
         self.assertIn("人物", game["tiers"])
         self.assertIn("科幻武器", game["tiers"])
         counts = Counter(entry["packageSlug"] for entry in self.catalog)
@@ -100,7 +100,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
     def test_sci_fi_characters_and_weapons(self) -> None:
         entries = {entry["slug"]: entry for entry in self.catalog}
         civilian = entries["sci-fi-civilians-scificivilians-01"]
-        self.assertEqual(civilian["animationCount"], 19)
+        self.assertEqual(civilian["animationCount"], 21)
         self.assertEqual(civilian["defaultClip"], "Ultimate_Idle_Standing")
         self.assertEqual(civilian["motionAnchorBone"], "pelvis")
         civilian_document = read_glb(ROOT / civilian["models"]["original"])
@@ -108,12 +108,41 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertGreaterEqual(len(civilian_document["skins"][0]["joints"]), 88)
         self.assertTrue(civilian["paletteTexture"])
         self.assertEqual(civilian["equipmentBone"], "hand_r")
-        self.assertEqual(civilian["defaultEquipment"], "sci-fi-battle-weapons-scifipistol01-1")
+        self.assertEqual(civilian["defaultEquipment"], "sci-fi-battle-weapons-scifirifle01-1")
         self.assertEqual(len(civilian["equipmentOptions"]), 7)
+        mixamo_animations = {
+            animation["clip"]: animation
+            for animation in civilian["animations"]
+            if animation["clip"].startswith("Mixamo_")
+        }
+        self.assertEqual(set(mixamo_animations), {"Mixamo_RifleFireStanding", "Mixamo_RifleRunFire"})
+        self.assertTrue(all(
+            animation["equipment"] == "sci-fi-battle-weapons-scifirifle01-1"
+            for animation in mixamo_animations.values()
+        ))
+        self.assertEqual(mixamo_animations["Mixamo_RifleFireStanding"]["name"], "步枪站立射击")
+        self.assertEqual(mixamo_animations["Mixamo_RifleRunFire"]["name"], "步枪跑动射击")
+        self.assertFalse(mixamo_animations["Mixamo_RifleFireStanding"]["loop"])
+        self.assertTrue(mixamo_animations["Mixamo_RifleRunFire"]["loop"])
+        self.assertEqual(civilian["mixamoActionSource"], {
+            "provider": "Adobe Mixamo",
+            "motion": "Firing Rifle",
+            "skin": "Without Skin",
+            "fps": 30,
+            "keyframeReduction": "none",
+            "runInPlace": True,
+        })
         for character_index in range(1, 7):
             character = entries[f"sci-fi-civilians-scificivilians-{character_index:02d}"]
             character_document = read_glb(ROOT / character["models"]["original"])
             self.assertIn(character["equipmentBone"], {node.get("name") for node in character_document["nodes"]})
+            character_animation_names = {animation.get("name") for animation in character_document["animations"]}
+            self.assertIn("Mixamo_RifleFireStanding", character_animation_names)
+            self.assertIn("Mixamo_RifleRunFire", character_animation_names)
+            self.assertEqual(len(character_document["animations"]), 21)
+            mixamo_report = character_document["asset"]["extras"]["mixamoRetarget"]["animations"]
+            self.assertEqual({animation["frames"] for animation in mixamo_report}, {9, 18})
+            self.assertTrue(all(animation["channels"] == 23 for animation in mixamo_report))
             for equipment in character["equipmentOptions"]:
                 weapon = entries[equipment["slug"]]
                 self.assertEqual(weapon["packageSlug"], "sci-fi-battle-weapons")
