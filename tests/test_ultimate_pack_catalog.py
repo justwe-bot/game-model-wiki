@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 import struct
 import unittest
 from collections import Counter
@@ -105,6 +106,20 @@ class UltimatePackCatalogTests(unittest.TestCase):
         civilian_document = read_glb(ROOT / civilian["models"]["original"])
         self.assertIn("pelvis", {node.get("name") for node in civilian_document["nodes"]})
         self.assertGreaterEqual(len(civilian_document["skins"][0]["joints"]), 88)
+        self.assertTrue(civilian["paletteTexture"])
+        self.assertEqual(civilian["equipmentBone"], "hand_r")
+        self.assertEqual(civilian["defaultEquipment"], "sci-fi-battle-weapons-scifipistol01-1")
+        self.assertEqual(len(civilian["equipmentOptions"]), 7)
+        for character_index in range(1, 7):
+            character = entries[f"sci-fi-civilians-scificivilians-{character_index:02d}"]
+            character_document = read_glb(ROOT / character["models"]["original"])
+            self.assertIn(character["equipmentBone"], {node.get("name") for node in character_document["nodes"]})
+            for equipment in character["equipmentOptions"]:
+                weapon = entries[equipment["slug"]]
+                self.assertEqual(weapon["packageSlug"], "sci-fi-battle-weapons")
+                for field in ("position", "rotationDeg", "scale"):
+                    self.assertEqual(len(equipment[field]), 3)
+                    self.assertTrue(all(math.isfinite(value) for value in equipment[field]))
 
         rifle = entries["sci-fi-battle-weapons-scifirifle01-1"]
         self.assertTrue(rifle["textures"]["original"])

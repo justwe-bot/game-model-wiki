@@ -90,6 +90,30 @@ SOURCE_TO_SIDEKICK = (
 
 COLLISION_PREFIXES = ("UCX_", "UBX_", "USP_", "UCP_")
 
+EQUIPMENT_OPTIONS = [
+    ("sci-fi-battle-weapons-scifipistol01-1", "科幻手枪 01", "pistol"),
+    ("sci-fi-battle-weapons-scifirifle01-1", "科幻步枪 01", "rifle"),
+    ("sci-fi-battle-weapons-scifismg01-1", "科幻冲锋枪 01", "rifle"),
+    ("sci-fi-battle-weapons-scifishotgun01-1", "科幻霰弹枪 01", "rifle"),
+    ("sci-fi-battle-weapons-scifisniperrifle01-1", "科幻狙击枪 01", "rifle"),
+    ("sci-fi-battle-weapons-scifigrenadelauncher01-1", "科幻榴弹发射器 01", "heavy"),
+    ("sci-fi-battle-weapons-scifirocketlauncher01-1", "科幻火箭筒 01", "heavy"),
+]
+
+
+def equipment_options() -> list[dict]:
+    return [
+        {
+            "slug": slug,
+            "name": name,
+            "family": family,
+            "position": [0.0, 0.0, 0.0],
+            "rotationDeg": [0.0, 90.0, 180.0],
+            "scale": [1.0, 1.0, 1.0],
+        }
+        for slug, name, family in EQUIPMENT_OPTIONS
+    ]
+
 
 def yaml_documents(text: str):
     pattern = re.compile(r"^--- !u!(\d+) &(-?\d+)\r?\n(.*?)(?=^--- !u!|\Z)", re.MULTILINE | re.DOTALL)
@@ -578,9 +602,13 @@ def build_characters() -> list[dict]:
             "prefabSource": f"{stem}.prefab / {stem}.asset",
             "rigSource": "original-unity-sidekick-prefab",
             "textures": {"original": texture_target.relative_to(ROOT).as_posix(), "low": texture_target.relative_to(ROOT).as_posix()},
+            "paletteTexture": True,
             "defaultClip": "Ultimate_Idle_Standing",
             "motionAnchorBone": "pelvis",
             "motionAnchorAxes": ["x", "y", "z"],
+            "equipmentBone": "hand_r",
+            "defaultEquipment": EQUIPMENT_OPTIONS[0][0],
+            "equipmentOptions": equipment_options(),
             "sharedPackageActions": [animation.get("name") for animation in report["animations"]],
             "cameraTargetY": 1.05,
         })
