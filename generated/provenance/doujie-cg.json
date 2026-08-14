@@ -1,0 +1,135 @@
+{
+  "slug": "doujie-cg",
+  "status": "blocked-head-replacement",
+  "style": "semi-realistic polished 3D CG",
+  "body": {
+    "source": "Tencent Hunyuan 3D Web",
+    "modelVersion": "HY3D-3.1",
+    "assetId": "3dc92f35-8716-472e-8ae3-5144bbc5c5ca",
+    "generatedAt": "2026-08-13",
+    "inputImages": [
+      "references/doujie-cg/front.png",
+      "references/doujie-cg/left.png",
+      "references/doujie-cg/back.png"
+    ],
+    "output": "generated/doujie-cg-hunyuan-web-v31-raw.glb",
+    "triangles": 1499608,
+    "vertices": 833352,
+    "sha256": "588C7BE1CEDAD1E9F349A24C783A27F59D1E40EF31AF5A766DBE3FC8E926BE89",
+    "visualStatus": "accepted-for-head-replacement"
+  },
+  "rejectedHeads": [
+    {
+      "source": "Tencent Hunyuan 3D Web",
+      "modelVersion": "HY3D-3.1",
+      "inputImages": [
+        "references/doujie-cg/head/front.png",
+        "references/doujie-cg/head/left.png",
+        "references/doujie-cg/head/back.png"
+      ],
+      "output": "generated/doujie-cg-head-hunyuan-web-v31-rejected-eyes.glb",
+      "triangles": 1120724,
+      "vertices": 761468,
+      "sha256": "649DF187C1340C3301C3232B430D9A4DA70998F61782DBE3D841C996F2B25B53",
+      "reason": "Rejected during local visual review: both eyes have thick gray concentric iris rings and distorted pupils."
+    }
+  ],
+  "head": {
+    "source": "Tencent Hunyuan 3D Web",
+    "modelVersion": "HY3D-3.1",
+    "assetId": "8592c9b2-40c6-4028-b49b-24f8ddda0416",
+    "generatedAt": "2026-08-13",
+    "inputImages": [
+      "references/doujie-cg/head-v2/front.png",
+      "references/doujie-cg/head-v2/left.png",
+      "references/doujie-cg/head-v2/back.png"
+    ],
+    "output": "generated/doujie-cg-head-hunyuan-web-v31.glb",
+    "triangles": 1246910,
+    "vertices": 761012,
+    "sha256": "A6531456A2DB26784510389F9D324ED6C333394D20309BA6171B85AAEDBD5EB9",
+    "status": "rejected-proportion-and-identity",
+    "visualNotes": "Rejected after comparison with the authoritative case reference: face is too long and mature, facial identity differs, and the fitted head is visibly oversized relative to the body. All derived low-poly and Mixamo results are invalidated."
+  },
+  "headReplacement": {
+    "output": "generated/doujie-cg-head-replacement/head-replaced.glb",
+    "report": "generated/doujie-cg-head-replacement/head-replacement-report.json",
+    "bodyCutRatio": 0.96,
+    "headCutRatio": 0.12,
+    "headFitHeight": 0.23,
+    "neckOverlap": 0.018,
+    "triangles": 2702688,
+    "vertices": 1350792,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "sha256": "F943EDB96A6C5691F99643BE4C71ADC1203C48FC52D4848984FA52D219FAA526",
+    "status": "rejected-proportion-and-identity",
+    "visualNotes": "Structurally intact but visually rejected: the replacement head does not match the authoritative case reference and remains oversized."
+  },
+  "animationMesh": {
+    "output": "generated/doujie-cg-animation-mesh/animation-ready.glb",
+    "mixamoUpload": "generated/doujie-cg-animation-mesh/mixamo-upload.fbx",
+    "report": "generated/doujie-cg-animation-mesh/mesh-report.json",
+    "targetTriangles": 15000,
+    "triangles": 15088,
+    "vertices": 6992,
+    "heightMeters": 1.9,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "textureSize": 2048,
+    "textures": [
+      "generated/doujie-cg-animation-mesh/textures/base-color.png",
+      "generated/doujie-cg-animation-mesh/textures/normal.png",
+      "generated/doujie-cg-animation-mesh/textures/ao.png"
+    ],
+    "status": "invalidated-by-high-model-rejection",
+    "visualNotes": "Front, left-side and back bind-pose review passed. Natural eyes and facial proportions survived retopology; the center-parted chin-length blunt bob, rounded back of head, neck seam, hands, sleeves, separated legs and heels remain intact without collapse or semantic fusion."
+  },
+  "mixamo": {
+    "skeleton": "No Fingers (25)",
+    "jointCount": 25,
+    "baseWithSkin": "generated/doujie-cg-mixamo-with-skin.fbx",
+    "baseWithSkinSha256": "7FD1CAC1984D1E49D137CA86AFE1BC402CF4467A6A181884F93B2C14A3B1CC21",
+    "actionsArchive": "generated/doujie-cg-mixamo-actions.zip",
+    "downloadSettings": {
+      "format": "FBX Binary",
+      "framesPerSecond": 30,
+      "keyframeReduction": "none",
+      "additionalActionsSkin": "Without Skin",
+      "locomotionInPlace": true
+    },
+    "animations": [
+      "Mixamo_DoujieCgMixamoIdle",
+      "Mixamo_DoujieCgMixamoJump",
+      "Mixamo_DoujieCgMixamoRunInplace",
+      "Mixamo_DoujieCgMixamoWalkInplace"
+    ],
+    "status": "invalidated-by-high-model-rejection",
+    "visualNotes": "Idle, run, walk and jump were reviewed from representative front, side and back phases. Knees, arms, neck, bob haircut, sleeves and heels remain stable without stretching, reversal or clipping."
+  },
+  "final": {
+    "glb": "generated/doujie-cg-animated.glb",
+    "fbx": "generated/doujie-cg-animated.fbx",
+    "report": "generated/doujie-cg-animated.mixamo-report.json",
+    "glbSha256": "8FFD0D8F40D74A03BB89B70ACF58873F50091BC1EC98CDE4B0EFE6527D1D5DF1",
+    "triangles": 14814,
+    "gltfVertices": 43314,
+    "skinnedMeshes": 1,
+    "jointCount": 25,
+    "animationCount": 4,
+    "heightMeters": 1.9,
+    "maximumWeightSumError": 1.22e-7,
+    "transparentMaterials": [],
+    "pipelineStatus": "invalidated",
+    "structuralStatus": "passed",
+    "visualStatus": "failed-high-model-identity-and-proportion",
+    "deliveryStatus": "not-approved"
+  },
+  "publication": {
+    "category": "英雄",
+    "runtimeModel": "models/custom/doujie-cg.glb",
+    "catalog": "games/custom-models/catalog.json",
+    "url": "http://127.0.0.1:8765/index.html?game=custom-models&monster=doujie-cg",
+    "rightsNotice": "Original character design, Tencent Hunyuan output and Adobe Mixamo actions may have separate usage and redistribution terms. Confirm all rights before public or commercial distribution."
+  }
+}

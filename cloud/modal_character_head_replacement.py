@@ -1,9 +1,9 @@
 """Replace an integrated biological head before Mixamo skinning.
 
 The body and replacement head remain unskinned. Blender removes the old head,
-trims and aligns the replacement, voxel-fuses the overlapping neck region,
-rebuilds UVs, bakes the combined appearance, and exports a watertight GLB for
-the normal QRemeshify/Mixamo preparation stage.
+trims and aligns the replacement, then bridges only the two open neck boundary
+loops. Source vertices, UVs, materials, and textures remain unchanged outside
+the newly created neck strip.
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ runtime_image = (
     )
     .run_commands(
         "python -m pip install --upgrade pip",
-        "python -m pip install bpy==4.2.0 numpy==1.26.4 xatlas==0.0.10",
+        "python -m pip install bpy==4.2.0 numpy==1.26.4",
     )
 )
 
@@ -95,6 +95,29 @@ def _mesh_stats(obj) -> dict[str, int]:
     return stats
 
 
+def _non_manifold_edge_details(obj, limit: int = 20) -> list[dict[str, object]]:
+    import bmesh
+
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    details = []
+    for edge in bm.edges:
+        if edge.is_manifold:
+            continue
+        center = (edge.verts[0].co + edge.verts[1].co) * 0.5
+        details.append(
+            {
+                "faceCount": len(edge.link_faces),
+                "center": [float(center[axis]) for axis in range(3)],
+                "length": float(edge.calc_length()),
+            }
+        )
+        if len(details) >= limit:
+            break
+    bm.free()
+    return details
+
+
 def _triangulate_mesh(obj) -> None:
     import bmesh
 
@@ -104,6 +127,21 @@ def _triangulate_mesh(obj) -> None:
     bm.to_mesh(obj.data)
     bm.free()
     obj.data.update()
+
+
+def _weld_coincident_vertices(obj, distance: float = 1e-7) -> int:
+    """Remove zero-distance GLB export seams without changing the surface shape."""
+    import bmesh
+
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    before = len(bm.verts)
+    bmesh.ops.remove_doubles(bm, verts=list(bm.verts), dist=distance)
+    removed = before - len(bm.verts)
+    bm.to_mesh(obj.data)
+    bm.free()
+    obj.data.update()
+    return removed
 
 
 def _join_meshes(objects, name: str):
@@ -147,6 +185,515 @@ def _delete_vertices_by_world_z(obj, threshold: float, *, delete_above: bool) ->
     bm.free()
     obj.data.update()
     return len(selected)
+
+
+def _remove_loose_cut_geometry(obj) -> dict[str, int]:
+    import bmesh
+
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    loose_edges = [edge for edge in bm.edges if not edge.link_faces]
+    loose_vertices = [vertex for vertex in bm.verts if not vertex.link_edges]
+    if loose_edges:
+        bmesh.ops.delete(bm, geom=loose_edges, context="EDGES")
+    if loose_vertices:
+        bmesh.ops.delete(bm, geom=loose_vertices, context="VERTS")
+    bm.to_mesh(obj.data)
+    bm.free()
+    obj.data.update()
+    return {"edges": len(loose_edges), "vertices": len(loose_vertices)}
+
+
+def _mark_primary_boundary_loop(obj, target_z: float, group_name: str) -> dict[str, object]:
+    import bmesh
+
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    bm.verts.ensure_lookup_table()
+    boundary_edges = [edge for edge in bm.edges if edge.is_boundary]
+    if not boundary_edges:
+        bm.free()
+        raise RuntimeError(f"{obj.name} has no open boundary after the neck cut")
+
+    edge_neighbors: dict[object, list[object]] = {}
+    for edge in boundary_edges:
+        for vertex in edge.verts:
+            edge_neighbors.setdefault(vertex, []).append(edge)
+
+    remaining = set(boundary_edges)
+    components: list[tuple[list[object], set[object]]] = []
+    while remaining:
+        seed = remaining.pop()
+        edges = [seed]
+        vertices = set(seed.verts)
+        stack = list(seed.verts)
+        while stack:
+            vertex = stack.pop()
+            for edge in edge_neighbors.get(vertex, []):
+                if edge not in remaining:
+                    continue
+                remaining.remove(edge)
+                edges.append(edge)
+                for linked in edge.verts:
+                    if linked not in vertices:
+                        vertices.add(linked)
+                        stack.append(linked)
+        components.append((edges, vertices))
+
+    def score(component) -> tuple[int, float]:
+        edges, vertices = component
+        center_z = sum(float(vertex.co.z) for vertex in vertices) / len(vertices)
+        return -len(edges), abs(center_z - target_z)
+
+    edges, vertices = min(components, key=score)
+    sealed_faces = []
+    sealed_center_vertices = 0
+    for component_edges, component_vertices in components:
+        if component_edges is edges:
+            continue
+        center_vertex = bm.verts.new(
+            tuple(
+                sum(float(vertex.co[axis]) for vertex in component_vertices)
+                / len(component_vertices)
+                for axis in range(3)
+            )
+        )
+        sealed_center_vertices += 1
+        for edge in component_edges:
+            neighboring_materials = [
+                linked.material_index for linked in edge.link_faces
+            ]
+            face = bm.faces.new((edge.verts[1], edge.verts[0], center_vertex))
+            if neighboring_materials:
+                face.material_index = max(
+                    set(neighboring_materials), key=neighboring_materials.count
+                )
+            sealed_faces.append(face)
+    indices = sorted(int(vertex.index) for vertex in vertices)
+    center = [
+        sum(float(vertex.co[axis]) for vertex in vertices) / len(vertices)
+        for axis in range(3)
+    ]
+    bm.to_mesh(obj.data)
+    bm.free()
+    obj.data.update()
+    group = obj.vertex_groups.get(group_name) or obj.vertex_groups.new(name=group_name)
+    group.add(indices, 1.0, "REPLACE")
+    return {
+        "vertices": len(vertices),
+        "edges": len(edges),
+        "center": center,
+        "candidateLoops": len(components),
+        "sealedSecondaryLoops": max(0, len(components) - 1),
+        "sealedSecondaryFaces": len(sealed_faces),
+        "sealedCenterVertices": sealed_center_vertices,
+    }
+
+
+def _bridge_neck_boundaries(
+    obj, body_group_name: str, head_group_name: str, bridge_material_indices
+) -> dict[str, object]:
+    import bmesh
+    from mathutils import Vector
+
+    body_group = obj.vertex_groups.get(body_group_name)
+    head_group = obj.vertex_groups.get(head_group_name)
+    if body_group is None or head_group is None:
+        raise RuntimeError("Neck boundary vertex groups were lost while joining the meshes")
+
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    bm.verts.ensure_lookup_table()
+    deform = bm.verts.layers.deform.active
+    if deform is None:
+        bm.free()
+        raise RuntimeError("Joined neck mesh has no vertex-group deform layer")
+
+    def in_group(vertex, group_index: int) -> bool:
+        return vertex[deform].get(group_index, 0.0) > 0.5
+
+    body_vertices = {vertex for vertex in bm.verts if in_group(vertex, body_group.index)}
+    head_vertices = {vertex for vertex in bm.verts if in_group(vertex, head_group.index)}
+    body_edges = [
+        edge for edge in bm.edges
+        if edge.is_boundary and all(vertex in body_vertices for vertex in edge.verts)
+    ]
+    head_edges = [
+        edge for edge in bm.edges
+        if edge.is_boundary and all(vertex in head_vertices for vertex in edge.verts)
+    ]
+    if not body_edges or not head_edges:
+        bm.free()
+        raise RuntimeError(
+            "Could not recover both open neck loops after joining: "
+            f"body={len(body_edges)}, head={len(head_edges)}"
+        )
+
+    def ordered_loop(edges):
+        edge_set = set(edges)
+        if any(
+            sum(1 for linked in vertex.link_edges if linked in edge_set) != 2
+            for edge in edges
+            for vertex in edge.verts
+        ):
+            raise RuntimeError("Neck boundary is not a simple closed loop")
+        start = edges[0]
+        ordered_edges = []
+        ordered_vertices = []
+        current_edge = start
+        current_vertex = start.verts[0]
+        while True:
+            ordered_edges.append(current_edge)
+            ordered_vertices.append(current_vertex)
+            next_vertex = current_edge.other_vert(current_vertex)
+            next_edges = [
+                edge
+                for edge in next_vertex.link_edges
+                if edge in edge_set and edge is not current_edge
+            ]
+            if len(next_edges) != 1:
+                raise RuntimeError("Could not order the neck boundary loop")
+            current_vertex = next_vertex
+            current_edge = next_edges[0]
+            if current_edge is start:
+                break
+            if len(ordered_edges) > len(edges):
+                raise RuntimeError("Neck boundary loop traversal did not close")
+        if len(ordered_edges) != len(edges):
+            raise RuntimeError("Neck boundary contains more than one loop")
+        return ordered_edges, ordered_vertices
+
+    def boundary_components():
+        remaining = {edge for edge in bm.edges if edge.is_boundary}
+        components = []
+        while remaining:
+            seed = remaining.pop()
+            component_edges = [seed]
+            component_vertices = set(seed.verts)
+            stack = list(seed.verts)
+            while stack:
+                vertex = stack.pop()
+                for edge in vertex.link_edges:
+                    if edge not in remaining or not edge.is_boundary:
+                        continue
+                    remaining.remove(edge)
+                    component_edges.append(edge)
+                    for linked in edge.verts:
+                        if linked not in component_vertices:
+                            component_vertices.add(linked)
+                            stack.append(linked)
+            components.append((component_edges, component_vertices))
+        return components
+
+    body_center_before = sum((vertex.co for vertex in body_vertices), Vector()) / len(
+        body_vertices
+    )
+    head_center_before = sum((vertex.co for vertex in head_vertices), Vector()) / len(
+        head_vertices
+    )
+    original_body_edges = len(body_edges)
+    original_head_edges = len(head_edges)
+    subdivided_loop = None
+    added_boundary_vertices = 0
+    if len(body_edges) != len(head_edges):
+        sparse_name = "body" if len(body_edges) < len(head_edges) else "head"
+        sparse_edges = body_edges if sparse_name == "body" else head_edges
+        target_count = max(len(body_edges), len(head_edges))
+        ordered, _ordered_vertices = ordered_loop(sparse_edges)
+        added_boundary_vertices = target_count - len(ordered)
+        base_cuts, extra_cuts = divmod(added_boundary_vertices, len(ordered))
+        edges_by_cut_count: dict[int, list[object]] = {}
+        for index, edge in enumerate(ordered):
+            distributed_extra = (
+                (index + 1) * extra_cuts // len(ordered)
+                > index * extra_cuts // len(ordered)
+            )
+            cuts = base_cuts + int(distributed_extra)
+            if cuts:
+                edges_by_cut_count.setdefault(cuts, []).append(edge)
+        for cuts in sorted(edges_by_cut_count, reverse=True):
+            bmesh.ops.subdivide_edges(
+                bm,
+                edges=edges_by_cut_count[cuts],
+                cuts=cuts,
+                use_grid_fill=False,
+                smooth=0.0,
+            )
+        components = boundary_components()
+        if len(components) != 2:
+            bm.free()
+            raise RuntimeError(
+                f"Expected two neck boundaries after subdivision, found {len(components)}"
+            )
+
+        def component_center(component):
+            _edges, vertices = component
+            return sum((vertex.co for vertex in vertices), Vector()) / len(vertices)
+
+        first, second = components
+        first_center = component_center(first)
+        second_center = component_center(second)
+        if (first_center - body_center_before).length <= (
+            second_center - body_center_before
+        ).length:
+            body_edges, body_vertices = first
+            head_edges, head_vertices = second
+        else:
+            body_edges, body_vertices = second
+            head_edges, head_vertices = first
+        if len(body_edges) != len(head_edges):
+            bm.free()
+            raise RuntimeError(
+                "Neck loop subdivision did not equalize edge counts: "
+                f"body={len(body_edges)}, head={len(head_edges)}"
+            )
+        subdivided_loop = sparse_name
+
+    uv_layer = bm.loops.layers.uv.active
+    head_uv: dict[object, Vector] = {}
+    if uv_layer is not None:
+        for vertex in head_vertices:
+            samples = [loop[uv_layer].uv.copy() for loop in vertex.link_loops]
+            if samples:
+                head_uv[vertex] = sum(samples, Vector((0.0, 0.0))) / len(samples)
+
+    head_center = sum((vertex.co for vertex in head_vertices), Vector()) / len(head_vertices)
+    head_by_angle = sorted(
+        head_vertices,
+        key=lambda vertex: math.atan2(
+            float(vertex.co.y - head_center.y), float(vertex.co.x - head_center.x)
+        ),
+    )
+
+    _ordered_body_edges, ordered_body_vertices = ordered_loop(body_edges)
+    _ordered_head_edges, ordered_head_vertices = ordered_loop(head_edges)
+    if len(ordered_body_vertices) != len(ordered_head_vertices):
+        bm.free()
+        raise RuntimeError("Neck loops must have equal vertex counts before bridging")
+
+    # Preserve the source neck curvature. The seam is placed inside the collar,
+    # where a short smooth connector follows the original boundary heights.
+    body_boundary_z = sum(vertex.co.z for vertex in ordered_body_vertices) / len(
+        ordered_body_vertices
+    )
+    head_boundary_z = sum(vertex.co.z for vertex in ordered_head_vertices) / len(
+        ordered_head_vertices
+    )
+
+    def squared_distance(first, second) -> float:
+        delta = first.co - second.co
+        return float(delta.length_squared)
+
+    best_score = math.inf
+    best_head_vertices = None
+    best_direction = 1
+    best_offset = 0
+    for direction, candidate in (
+        (1, ordered_head_vertices),
+        (-1, list(reversed(ordered_head_vertices))),
+    ):
+        for offset in range(len(candidate)):
+            score = sum(
+                squared_distance(
+                    ordered_body_vertices[index],
+                    candidate[(index + offset) % len(candidate)],
+                )
+                for index in range(len(ordered_body_vertices))
+            )
+            if score < best_score:
+                best_score = score
+                best_head_vertices = [
+                    candidate[(index + offset) % len(candidate)]
+                    for index in range(len(candidate))
+                ]
+                best_direction = direction
+                best_offset = offset
+    if best_head_vertices is None:
+        bm.free()
+        raise RuntimeError("Could not align the two neck boundary loops")
+
+    bridge_segments = len(bridge_material_indices)
+    bridge_rings = [ordered_body_vertices]
+    for segment in range(1, bridge_segments):
+        amount = segment / bridge_segments
+        bridge_rings.append(
+            [
+                bm.verts.new(body.co.lerp(head.co, amount))
+                for body, head in zip(ordered_body_vertices, best_head_vertices)
+            ]
+        )
+    bridge_rings.append(best_head_vertices)
+
+    new_faces = []
+    for segment in range(bridge_segments):
+        lower = bridge_rings[segment]
+        upper = bridge_rings[segment + 1]
+        for index, lower_vertex in enumerate(lower):
+            next_index = (index + 1) % len(lower)
+            try:
+                face = bm.faces.new(
+                    (
+                        lower_vertex,
+                        lower[next_index],
+                        upper[next_index],
+                        upper[index],
+                    )
+                )
+            except ValueError as exc:
+                bm.free()
+                raise RuntimeError(
+                    "Could not create deterministic neck bridge face "
+                    f"segment={segment}, index={index}"
+                ) from exc
+            face.material_index = bridge_material_indices[segment]
+            face.smooth = True
+            new_faces.append(face)
+    if not new_faces:
+        bm.free()
+        raise RuntimeError("Blender created no faces while bridging the neck boundary loops")
+
+    bridge_face_set = set(new_faces)
+    bridge_non_manifold = []
+    for edge in bm.edges:
+        if edge.is_manifold:
+            continue
+        center = (edge.verts[0].co + edge.verts[1].co) * 0.5
+        bridge_non_manifold.append(
+            {
+                "faceCount": len(edge.link_faces),
+                "bridgeFaceCount": sum(
+                    1 for face in edge.link_faces if face in bridge_face_set
+                ),
+                "center": [float(center[axis]) for axis in range(3)],
+            }
+        )
+    if bridge_non_manifold:
+        bm.free()
+        raise RuntimeError(
+            "Neck bridge introduced non-manifold edges: "
+            f"{json.dumps(bridge_non_manifold[:20])}"
+        )
+
+    reference_head_uv = Vector((0.5, 0.5))
+    if head_uv:
+        reference_vertex = min(
+            head_vertices,
+            key=lambda vertex: (
+                float(vertex.co.y),
+                abs(float(vertex.co.x - head_center.x)),
+            ),
+        )
+        reference_head_uv = head_uv.get(reference_vertex, reference_head_uv)
+    for face in new_faces:
+        if uv_layer is not None:
+            for loop in face.loops:
+                loop[uv_layer].uv = reference_head_uv
+    for vertex in set(ordered_body_vertices) | set(best_head_vertices):
+        for face in vertex.link_faces:
+            face.smooth = True
+
+    bmesh.ops.recalc_face_normals(bm, faces=list(bm.faces))
+    bm.to_mesh(obj.data)
+    bm.free()
+    obj.data.update()
+    return {
+        "originalBodyBoundaryEdges": original_body_edges,
+        "originalHeadBoundaryEdges": original_head_edges,
+        "bodyBoundaryEdges": len(body_edges),
+        "headBoundaryEdges": len(head_edges),
+        "subdividedLoop": subdivided_loop,
+        "addedBoundaryVertices": added_boundary_vertices,
+        "alignmentDirection": best_direction,
+        "alignmentOffset": best_offset,
+        "alignmentSquaredDistance": best_score,
+        "bridgeFaces": len(new_faces),
+        "bridgeSegments": bridge_segments,
+        "materialIndices": list(bridge_material_indices),
+        "bodyBoundaryZ": float(body_boundary_z),
+        "headBoundaryZ": float(head_boundary_z),
+        "referenceHeadUv": [float(value) for value in reference_head_uv],
+    }
+
+
+def _sample_group_base_color(obj, group_name: str) -> tuple[float, float, float, float]:
+    import bmesh
+
+    group = obj.vertex_groups.get(group_name)
+    if group is None:
+        raise RuntimeError(f"Missing vertex group for material sampling: {group_name}")
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    deform = bm.verts.layers.deform.active
+    uv_layer = bm.loops.layers.uv.active
+    members = {
+        vertex
+        for vertex in bm.verts
+        if deform is not None and vertex[deform].get(group.index, 0.0) > 0.5
+    }
+    if not members:
+        bm.free()
+        raise RuntimeError(f"Vertex group is empty: {group_name}")
+
+    faces = {face for vertex in members for face in vertex.link_faces}
+    samples = []
+    for face in faces:
+        material = obj.data.materials[face.material_index]
+        if material is None or not material.use_nodes:
+            continue
+        principled = next(
+            (node for node in material.node_tree.nodes if node.type == "BSDF_PRINCIPLED"),
+            None,
+        )
+        if principled is None:
+            continue
+        base = principled.inputs.get("Base Color")
+        if base is None:
+            continue
+        factor = tuple(float(value) for value in base.default_value)
+        image = None
+        if base.is_linked and base.links[0].from_node.type == "TEX_IMAGE":
+            image = base.links[0].from_node.image
+        for loop in face.loops:
+            if loop.vert not in members:
+                continue
+            if image is None or uv_layer is None:
+                samples.append(factor)
+                continue
+            u, v = loop[uv_layer].uv
+            x = min(image.size[0] - 1, max(0, int((float(u) % 1.0) * image.size[0])))
+            y = min(image.size[1] - 1, max(0, int((float(v) % 1.0) * image.size[1])))
+            offset = (y * image.size[0] + x) * 4
+            samples.append(
+                tuple(image.pixels[offset + axis] * factor[axis] for axis in range(4))
+            )
+    bm.free()
+    if not samples:
+        raise RuntimeError(f"Could not sample material color for {group_name}")
+    ordered = [sorted(sample[axis] for sample in samples) for axis in range(4)]
+    middle = len(samples) // 2
+    return tuple(values[middle] for values in ordered)
+
+
+def _create_neck_bridge_materials(obj, body_color, head_color, segments: int) -> list[int]:
+    import bpy
+
+    indices = []
+    for segment in range(segments):
+        amount = (segment + 0.5) / segments
+        color = tuple(
+            body_color[axis] * (1.0 - amount) + head_color[axis] * amount
+            for axis in range(4)
+        )
+        material = bpy.data.materials.new(f"NeckBridgeSkin{segment + 1:02d}")
+        material.use_nodes = True
+        principled = next(
+            node for node in material.node_tree.nodes if node.type == "BSDF_PRINCIPLED"
+        )
+        principled.inputs["Base Color"].default_value = color
+        principled.inputs["Roughness"].default_value = 0.5
+        obj.data.materials.append(material)
+        indices.append(len(obj.data.materials) - 1)
+    return indices
 
 
 def _copy_sources(objects):
@@ -381,10 +928,12 @@ def replace_head(
         raise RuntimeError("Body must be a visible unskinned GLB")
     body = _join_meshes(body_objects, "BodyForHeadReplacement")
     _apply_world_transforms([body])
+    body_welded = _weld_coincident_vertices(body)
     body_bounds = _bounds([body])
     body_height = body_bounds[1][2] - body_bounds[0][2]
     body_cut_z = resolve_cut_height(body_bounds[0][2], body_bounds[1][2], body_cut_ratio)
     body_removed = _delete_vertices_by_world_z(body, body_cut_z, delete_above=True)
+    body_loose_cut_geometry = _remove_loose_cut_geometry(body)
 
     before = set(bpy.context.scene.objects)
     bpy.ops.import_scene.gltf(filepath=str(head_path))
@@ -393,10 +942,12 @@ def replace_head(
         raise RuntimeError("Replacement head must be a visible unskinned GLB")
     head = _join_meshes(head_objects, "ReplacementHead")
     _apply_world_transforms([head])
+    head_welded = _weld_coincident_vertices(head)
     head_bounds = _bounds([head])
     source_head_height = head_bounds[1][2] - head_bounds[0][2]
     head_cut_z = resolve_cut_height(head_bounds[0][2], head_bounds[1][2], head_cut_ratio)
     head_removed = _delete_vertices_by_world_z(head, head_cut_z, delete_above=False)
+    head_loose_cut_geometry = _remove_loose_cut_geometry(head)
     trimmed_bounds = _bounds([head])
     trimmed_height = trimmed_bounds[1][2] - trimmed_bounds[0][2]
     if trimmed_height <= 1e-6:
@@ -424,58 +975,71 @@ def replace_head(
     head.matrix_world = transform @ head.matrix_world
     _apply_world_transforms([head])
 
-    bake_sources = _copy_sources([body, head])
+    body_boundary = _mark_primary_boundary_loop(body, body_cut_z, "BodyNeckBoundary")
+    head_boundary = _mark_primary_boundary_loop(
+        head, body_cut_z - neck_overlap, "HeadNeckBoundary"
+    )
     fusion = _join_meshes([body, head], "HeadReplacedFusionSource")
-    fusion.data.remesh_voxel_size = voxel_size
-    bpy.context.view_layer.objects.active = fusion
-    fusion.select_set(True)
-    bpy.ops.object.voxel_remesh()
+    bridge_material_indices = _create_neck_bridge_materials(
+        fusion,
+        (0.60, 0.44, 0.39, 1.0),
+        (0.60, 0.44, 0.39, 1.0),
+        1,
+    )
+    bridge = _bridge_neck_boundaries(
+        fusion, "BodyNeckBoundary", "HeadNeckBoundary", bridge_material_indices
+    )
     fusion.name = "HeadReplacedCharacter"
-    _triangulate_mesh(fusion)
     fusion_stats = _mesh_stats(fusion)
     if fusion_stats["boundaryEdges"] or fusion_stats["nonManifoldEdges"]:
+        topology_details = _non_manifold_edge_details(fusion)
         raise RuntimeError(
             "Head replacement fusion is not watertight: "
             f"boundary={fusion_stats['boundaryEdges']}, "
-            f"nonManifold={fusion_stats['nonManifoldEdges']}"
+            f"nonManifold={fusion_stats['nonManifoldEdges']}, "
+            f"details={json.dumps(topology_details)}"
         )
     if fusion_stats["triangles"] < 10_000:
-        raise RuntimeError("Head replacement voxel resolution is too coarse")
+        raise RuntimeError("Head replacement mesh is unexpectedly sparse")
 
-    uv_atlas = _atlas_uv(fusion)
-    textures, texture_coverage = _bake_textures(
-        bake_sources, fusion, output_dir / "textures", texture_size
-    )
-    for source in bake_sources:
-        source.hide_set(True)
-        source.hide_render = True
     output = output_dir / "head-replaced.glb"
     _export_glb(fusion, output)
     report = {
         "passed": True,
         "mode": "biological-head-replacement",
-        "body": {"cutRatio": body_cut_ratio, "cutZ": body_cut_z, "removedVertices": body_removed},
+        "body": {
+            "cutRatio": body_cut_ratio,
+            "cutZ": body_cut_z,
+            "removedVertices": body_removed,
+            "weldedCoincidentVertices": body_welded,
+            "removedLooseCutGeometry": body_loose_cut_geometry,
+        },
         "head": {
             "cutRatio": head_cut_ratio, "sourceCutZ": head_cut_z,
             "removedVertices": head_removed, "requestedHeight": requested_height,
             "effectiveScale": scale, "offset": list(head_offset),
             "rotationDegrees": list(head_rotation_degrees),
+            "weldedCoincidentVertices": head_welded,
+            "removedLooseCutGeometry": head_loose_cut_geometry,
         },
         "fusion": {
-            "voxelSize": voxel_size,
+            "mode": "boundary-loop-bridge-preserve-source",
             "neckOverlap": neck_overlap,
-            "uvAtlas": uv_atlas,
+            "compatibilityVoxelSize": voxel_size,
+            "bodyBoundary": body_boundary,
+            "headBoundary": head_boundary,
+            "bridge": bridge,
             **fusion_stats,
         },
         "artifacts": {
             "glb": output.name,
-            "textures": [path.relative_to(output_dir).as_posix() for path in textures],
-            "textureCoverage": texture_coverage,
+            "textures": "preserved from the source body and head GLBs",
         },
         "nextStage": "Run mixamo_character_pipeline.py prepare on head-replaced.glb before Mixamo.",
         "limitations": [
             "Facial identity remains a visual quality gate.",
             "Inspect the neck seam and silhouette before running the preparation stage.",
+            "The compatibility voxel-size argument is retained but no voxel remesh is performed.",
         ],
     }
     (output_dir / "head-replacement-report.json").write_text(
@@ -536,8 +1100,8 @@ def main(
     for path in (body_path, head_path):
         if not path.is_file():
             raise FileNotFoundError(path)
-    if not 0.78 <= body_cut_ratio <= 0.93:
-        raise ValueError("body_cut_ratio must be between 0.78 and 0.93")
+    if not 0.78 <= body_cut_ratio <= 0.99:
+        raise ValueError("body_cut_ratio must be between 0.78 and 0.99")
     if not 0.0 < head_cut_ratio < 0.45:
         raise ValueError("head_cut_ratio must be between 0 and 0.45")
     if head_fit_height < 0 or neck_overlap < 0:
