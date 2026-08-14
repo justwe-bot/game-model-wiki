@@ -685182,7 +685182,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "19 个动作",
+    "status": "21 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-01.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-01.glb"
@@ -685203,9 +685203,9 @@
     "bakedTriangles": 20593,
     "sourceTriangles": 20593,
     "lowTriangles": 20593,
-    "sourceSizeKB": 2047,
-    "lowSizeKB": 2047,
-    "animationCount": 19,
+    "sourceSizeKB": 2068,
+    "lowSizeKB": 2068,
+    "animationCount": 21,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -685320,6 +685320,22 @@
         "clip": "Ultimate_Scale_Appear_Bounce",
         "kind": "spawn",
         "sourceHasKeyframes": true
+      },
+      {
+        "name": "步枪站立射击",
+        "clip": "Mixamo_RifleFireStanding",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": false
+      },
+      {
+        "name": "步枪跑动射击",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": true
       }
     ],
     "defaultClip": "Ultimate_Idle_Standing",
@@ -685344,41 +685360,20 @@
     "summary": "Sidekick 科幻平民角色 01，使用 Unity 完整组合网格、原始骨骼与颜色贴图。",
     "modelSource": "Sci-Fi Civilians - Sidekick Modular Characters",
     "prefabSource": "ScifiCivilians_01.prefab / ScifiCivilians_01.asset",
+    "paletteTexture": true,
     "motionAnchorBone": "pelvis",
     "motionAnchorAxes": [
       "x",
       "y",
       "z"
     ],
-    "sharedPackageActions": [
-      "Ultimate_Dead_Pose",
-      "Ultimate_Idle_Standing",
-      "Ultimate_Run_Cycle",
-      "Ultimate_Sitting_Pose",
-      "Ultimate_Walk_Cycle",
-      "Ultimate_Position_X_Loop",
-      "Ultimate_Position_Y_Loop",
-      "Ultimate_Position_Z_Loop",
-      "Ultimate_Rotation_X_360_3s_Loop",
-      "Ultimate_Rotation_X_5_5s_Loop",
-      "Ultimate_Rotation_Y_360_3s_Loop",
-      "Ultimate_Rotation_Y_360_5s_Loop",
-      "Ultimate_Rotation_Y_45_10s_Loop",
-      "Ultimate_Rotation_Z_2_5s_Loop",
-      "Ultimate_Rotation_Z_360_3s_Loop",
-      "Ultimate_Rotation_Z_5_5s_Loop",
-      "Ultimate_Scale_110_2s_Loop",
-      "Ultimate_Scale_Appear",
-      "Ultimate_Scale_Appear_Bounce"
-    ],
-    "paletteTexture": true,
     "equipmentBone": "hand_r",
-    "defaultEquipment": "sci-fi-battle-weapons-scifipistol01-1",
+    "defaultEquipment": "sci-fi-battle-weapons-scifirifle01-1",
     "equipmentOptions": [
       {
-        "slug": "sci-fi-battle-weapons-scifipistol01-1",
-        "name": "科幻手枪 01",
-        "family": "pistol",
+        "slug": "sci-fi-battle-weapons-scifirifle01-1",
+        "name": "科幻步枪 01",
+        "family": "rifle",
         "position": [
           0.0,
           0.0,
@@ -685396,9 +685391,9 @@
         ]
       },
       {
-        "slug": "sci-fi-battle-weapons-scifirifle01-1",
-        "name": "科幻步枪 01",
-        "family": "rifle",
+        "slug": "sci-fi-battle-weapons-scifipistol01-1",
+        "name": "科幻手枪 01",
+        "family": "pistol",
         "position": [
           0.0,
           0.0,
@@ -685515,7 +685510,38 @@
           1.0
         ]
       }
-    ]
+    ],
+    "sharedPackageActions": [
+      "Ultimate_Dead_Pose",
+      "Ultimate_Idle_Standing",
+      "Ultimate_Run_Cycle",
+      "Ultimate_Sitting_Pose",
+      "Ultimate_Walk_Cycle",
+      "Ultimate_Position_X_Loop",
+      "Ultimate_Position_Y_Loop",
+      "Ultimate_Position_Z_Loop",
+      "Ultimate_Rotation_X_360_3s_Loop",
+      "Ultimate_Rotation_X_5_5s_Loop",
+      "Ultimate_Rotation_Y_360_3s_Loop",
+      "Ultimate_Rotation_Y_360_5s_Loop",
+      "Ultimate_Rotation_Y_45_10s_Loop",
+      "Ultimate_Rotation_Z_2_5s_Loop",
+      "Ultimate_Rotation_Z_360_3s_Loop",
+      "Ultimate_Rotation_Z_5_5s_Loop",
+      "Ultimate_Scale_110_2s_Loop",
+      "Ultimate_Scale_Appear",
+      "Ultimate_Scale_Appear_Bounce",
+      "Mixamo_RifleFireStanding",
+      "Mixamo_RifleRunFire"
+    ],
+    "mixamoActionSource": {
+      "provider": "Adobe Mixamo",
+      "motion": "Firing Rifle",
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "runInPlace": true
+    }
   },
   {
     "slug": "sci-fi-civilians-scificivilians-02",
@@ -685525,7 +685551,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "19 个动作",
+    "status": "21 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-02.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-02.glb"
@@ -685546,9 +685572,9 @@
     "bakedTriangles": 19065,
     "sourceTriangles": 19065,
     "lowTriangles": 19065,
-    "sourceSizeKB": 1872,
-    "lowSizeKB": 1872,
-    "animationCount": 19,
+    "sourceSizeKB": 1892,
+    "lowSizeKB": 1892,
+    "animationCount": 21,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -685663,6 +685689,22 @@
         "clip": "Ultimate_Scale_Appear_Bounce",
         "kind": "spawn",
         "sourceHasKeyframes": true
+      },
+      {
+        "name": "步枪站立射击",
+        "clip": "Mixamo_RifleFireStanding",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": false
+      },
+      {
+        "name": "步枪跑动射击",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": true
       }
     ],
     "defaultClip": "Ultimate_Idle_Standing",
@@ -685687,41 +685729,20 @@
     "summary": "Sidekick 科幻平民角色 02，使用 Unity 完整组合网格、原始骨骼与颜色贴图。",
     "modelSource": "Sci-Fi Civilians - Sidekick Modular Characters",
     "prefabSource": "ScifiCivilians_02.prefab / ScifiCivilians_02.asset",
+    "paletteTexture": true,
     "motionAnchorBone": "pelvis",
     "motionAnchorAxes": [
       "x",
       "y",
       "z"
     ],
-    "sharedPackageActions": [
-      "Ultimate_Dead_Pose",
-      "Ultimate_Idle_Standing",
-      "Ultimate_Run_Cycle",
-      "Ultimate_Sitting_Pose",
-      "Ultimate_Walk_Cycle",
-      "Ultimate_Position_X_Loop",
-      "Ultimate_Position_Y_Loop",
-      "Ultimate_Position_Z_Loop",
-      "Ultimate_Rotation_X_360_3s_Loop",
-      "Ultimate_Rotation_X_5_5s_Loop",
-      "Ultimate_Rotation_Y_360_3s_Loop",
-      "Ultimate_Rotation_Y_360_5s_Loop",
-      "Ultimate_Rotation_Y_45_10s_Loop",
-      "Ultimate_Rotation_Z_2_5s_Loop",
-      "Ultimate_Rotation_Z_360_3s_Loop",
-      "Ultimate_Rotation_Z_5_5s_Loop",
-      "Ultimate_Scale_110_2s_Loop",
-      "Ultimate_Scale_Appear",
-      "Ultimate_Scale_Appear_Bounce"
-    ],
-    "paletteTexture": true,
     "equipmentBone": "hand_r",
-    "defaultEquipment": "sci-fi-battle-weapons-scifipistol01-1",
+    "defaultEquipment": "sci-fi-battle-weapons-scifirifle01-1",
     "equipmentOptions": [
       {
-        "slug": "sci-fi-battle-weapons-scifipistol01-1",
-        "name": "科幻手枪 01",
-        "family": "pistol",
+        "slug": "sci-fi-battle-weapons-scifirifle01-1",
+        "name": "科幻步枪 01",
+        "family": "rifle",
         "position": [
           0.0,
           0.0,
@@ -685739,9 +685760,9 @@
         ]
       },
       {
-        "slug": "sci-fi-battle-weapons-scifirifle01-1",
-        "name": "科幻步枪 01",
-        "family": "rifle",
+        "slug": "sci-fi-battle-weapons-scifipistol01-1",
+        "name": "科幻手枪 01",
+        "family": "pistol",
         "position": [
           0.0,
           0.0,
@@ -685858,7 +685879,38 @@
           1.0
         ]
       }
-    ]
+    ],
+    "sharedPackageActions": [
+      "Ultimate_Dead_Pose",
+      "Ultimate_Idle_Standing",
+      "Ultimate_Run_Cycle",
+      "Ultimate_Sitting_Pose",
+      "Ultimate_Walk_Cycle",
+      "Ultimate_Position_X_Loop",
+      "Ultimate_Position_Y_Loop",
+      "Ultimate_Position_Z_Loop",
+      "Ultimate_Rotation_X_360_3s_Loop",
+      "Ultimate_Rotation_X_5_5s_Loop",
+      "Ultimate_Rotation_Y_360_3s_Loop",
+      "Ultimate_Rotation_Y_360_5s_Loop",
+      "Ultimate_Rotation_Y_45_10s_Loop",
+      "Ultimate_Rotation_Z_2_5s_Loop",
+      "Ultimate_Rotation_Z_360_3s_Loop",
+      "Ultimate_Rotation_Z_5_5s_Loop",
+      "Ultimate_Scale_110_2s_Loop",
+      "Ultimate_Scale_Appear",
+      "Ultimate_Scale_Appear_Bounce",
+      "Mixamo_RifleFireStanding",
+      "Mixamo_RifleRunFire"
+    ],
+    "mixamoActionSource": {
+      "provider": "Adobe Mixamo",
+      "motion": "Firing Rifle",
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "runInPlace": true
+    }
   },
   {
     "slug": "sci-fi-civilians-scificivilians-03",
@@ -685868,7 +685920,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "19 个动作",
+    "status": "21 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-03.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-03.glb"
@@ -685889,9 +685941,9 @@
     "bakedTriangles": 18695,
     "sourceTriangles": 18695,
     "lowTriangles": 18695,
-    "sourceSizeKB": 1846,
-    "lowSizeKB": 1846,
-    "animationCount": 19,
+    "sourceSizeKB": 1866,
+    "lowSizeKB": 1866,
+    "animationCount": 21,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -686006,6 +686058,22 @@
         "clip": "Ultimate_Scale_Appear_Bounce",
         "kind": "spawn",
         "sourceHasKeyframes": true
+      },
+      {
+        "name": "步枪站立射击",
+        "clip": "Mixamo_RifleFireStanding",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": false
+      },
+      {
+        "name": "步枪跑动射击",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": true
       }
     ],
     "defaultClip": "Ultimate_Idle_Standing",
@@ -686030,41 +686098,20 @@
     "summary": "Sidekick 科幻平民角色 03，使用 Unity 完整组合网格、原始骨骼与颜色贴图。",
     "modelSource": "Sci-Fi Civilians - Sidekick Modular Characters",
     "prefabSource": "ScifiCivilians_03.prefab / ScifiCivilians_03.asset",
+    "paletteTexture": true,
     "motionAnchorBone": "pelvis",
     "motionAnchorAxes": [
       "x",
       "y",
       "z"
     ],
-    "sharedPackageActions": [
-      "Ultimate_Dead_Pose",
-      "Ultimate_Idle_Standing",
-      "Ultimate_Run_Cycle",
-      "Ultimate_Sitting_Pose",
-      "Ultimate_Walk_Cycle",
-      "Ultimate_Position_X_Loop",
-      "Ultimate_Position_Y_Loop",
-      "Ultimate_Position_Z_Loop",
-      "Ultimate_Rotation_X_360_3s_Loop",
-      "Ultimate_Rotation_X_5_5s_Loop",
-      "Ultimate_Rotation_Y_360_3s_Loop",
-      "Ultimate_Rotation_Y_360_5s_Loop",
-      "Ultimate_Rotation_Y_45_10s_Loop",
-      "Ultimate_Rotation_Z_2_5s_Loop",
-      "Ultimate_Rotation_Z_360_3s_Loop",
-      "Ultimate_Rotation_Z_5_5s_Loop",
-      "Ultimate_Scale_110_2s_Loop",
-      "Ultimate_Scale_Appear",
-      "Ultimate_Scale_Appear_Bounce"
-    ],
-    "paletteTexture": true,
     "equipmentBone": "hand_r",
-    "defaultEquipment": "sci-fi-battle-weapons-scifipistol01-1",
+    "defaultEquipment": "sci-fi-battle-weapons-scifirifle01-1",
     "equipmentOptions": [
       {
-        "slug": "sci-fi-battle-weapons-scifipistol01-1",
-        "name": "科幻手枪 01",
-        "family": "pistol",
+        "slug": "sci-fi-battle-weapons-scifirifle01-1",
+        "name": "科幻步枪 01",
+        "family": "rifle",
         "position": [
           0.0,
           0.0,
@@ -686082,9 +686129,9 @@
         ]
       },
       {
-        "slug": "sci-fi-battle-weapons-scifirifle01-1",
-        "name": "科幻步枪 01",
-        "family": "rifle",
+        "slug": "sci-fi-battle-weapons-scifipistol01-1",
+        "name": "科幻手枪 01",
+        "family": "pistol",
         "position": [
           0.0,
           0.0,
@@ -686201,7 +686248,38 @@
           1.0
         ]
       }
-    ]
+    ],
+    "sharedPackageActions": [
+      "Ultimate_Dead_Pose",
+      "Ultimate_Idle_Standing",
+      "Ultimate_Run_Cycle",
+      "Ultimate_Sitting_Pose",
+      "Ultimate_Walk_Cycle",
+      "Ultimate_Position_X_Loop",
+      "Ultimate_Position_Y_Loop",
+      "Ultimate_Position_Z_Loop",
+      "Ultimate_Rotation_X_360_3s_Loop",
+      "Ultimate_Rotation_X_5_5s_Loop",
+      "Ultimate_Rotation_Y_360_3s_Loop",
+      "Ultimate_Rotation_Y_360_5s_Loop",
+      "Ultimate_Rotation_Y_45_10s_Loop",
+      "Ultimate_Rotation_Z_2_5s_Loop",
+      "Ultimate_Rotation_Z_360_3s_Loop",
+      "Ultimate_Rotation_Z_5_5s_Loop",
+      "Ultimate_Scale_110_2s_Loop",
+      "Ultimate_Scale_Appear",
+      "Ultimate_Scale_Appear_Bounce",
+      "Mixamo_RifleFireStanding",
+      "Mixamo_RifleRunFire"
+    ],
+    "mixamoActionSource": {
+      "provider": "Adobe Mixamo",
+      "motion": "Firing Rifle",
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "runInPlace": true
+    }
   },
   {
     "slug": "sci-fi-civilians-scificivilians-04",
@@ -686211,7 +686289,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "19 个动作",
+    "status": "21 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-04.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-04.glb"
@@ -686232,9 +686310,9 @@
     "bakedTriangles": 19476,
     "sourceTriangles": 19476,
     "lowTriangles": 19476,
-    "sourceSizeKB": 2019,
-    "lowSizeKB": 2019,
-    "animationCount": 19,
+    "sourceSizeKB": 2040,
+    "lowSizeKB": 2040,
+    "animationCount": 21,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -686349,6 +686427,22 @@
         "clip": "Ultimate_Scale_Appear_Bounce",
         "kind": "spawn",
         "sourceHasKeyframes": true
+      },
+      {
+        "name": "步枪站立射击",
+        "clip": "Mixamo_RifleFireStanding",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": false
+      },
+      {
+        "name": "步枪跑动射击",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": true
       }
     ],
     "defaultClip": "Ultimate_Idle_Standing",
@@ -686373,41 +686467,20 @@
     "summary": "Sidekick 科幻平民角色 04，使用 Unity 完整组合网格、原始骨骼与颜色贴图。",
     "modelSource": "Sci-Fi Civilians - Sidekick Modular Characters",
     "prefabSource": "ScifiCivilians_04.prefab / ScifiCivilians_04.asset",
+    "paletteTexture": true,
     "motionAnchorBone": "pelvis",
     "motionAnchorAxes": [
       "x",
       "y",
       "z"
     ],
-    "sharedPackageActions": [
-      "Ultimate_Dead_Pose",
-      "Ultimate_Idle_Standing",
-      "Ultimate_Run_Cycle",
-      "Ultimate_Sitting_Pose",
-      "Ultimate_Walk_Cycle",
-      "Ultimate_Position_X_Loop",
-      "Ultimate_Position_Y_Loop",
-      "Ultimate_Position_Z_Loop",
-      "Ultimate_Rotation_X_360_3s_Loop",
-      "Ultimate_Rotation_X_5_5s_Loop",
-      "Ultimate_Rotation_Y_360_3s_Loop",
-      "Ultimate_Rotation_Y_360_5s_Loop",
-      "Ultimate_Rotation_Y_45_10s_Loop",
-      "Ultimate_Rotation_Z_2_5s_Loop",
-      "Ultimate_Rotation_Z_360_3s_Loop",
-      "Ultimate_Rotation_Z_5_5s_Loop",
-      "Ultimate_Scale_110_2s_Loop",
-      "Ultimate_Scale_Appear",
-      "Ultimate_Scale_Appear_Bounce"
-    ],
-    "paletteTexture": true,
     "equipmentBone": "hand_r",
-    "defaultEquipment": "sci-fi-battle-weapons-scifipistol01-1",
+    "defaultEquipment": "sci-fi-battle-weapons-scifirifle01-1",
     "equipmentOptions": [
       {
-        "slug": "sci-fi-battle-weapons-scifipistol01-1",
-        "name": "科幻手枪 01",
-        "family": "pistol",
+        "slug": "sci-fi-battle-weapons-scifirifle01-1",
+        "name": "科幻步枪 01",
+        "family": "rifle",
         "position": [
           0.0,
           0.0,
@@ -686425,9 +686498,9 @@
         ]
       },
       {
-        "slug": "sci-fi-battle-weapons-scifirifle01-1",
-        "name": "科幻步枪 01",
-        "family": "rifle",
+        "slug": "sci-fi-battle-weapons-scifipistol01-1",
+        "name": "科幻手枪 01",
+        "family": "pistol",
         "position": [
           0.0,
           0.0,
@@ -686544,7 +686617,38 @@
           1.0
         ]
       }
-    ]
+    ],
+    "sharedPackageActions": [
+      "Ultimate_Dead_Pose",
+      "Ultimate_Idle_Standing",
+      "Ultimate_Run_Cycle",
+      "Ultimate_Sitting_Pose",
+      "Ultimate_Walk_Cycle",
+      "Ultimate_Position_X_Loop",
+      "Ultimate_Position_Y_Loop",
+      "Ultimate_Position_Z_Loop",
+      "Ultimate_Rotation_X_360_3s_Loop",
+      "Ultimate_Rotation_X_5_5s_Loop",
+      "Ultimate_Rotation_Y_360_3s_Loop",
+      "Ultimate_Rotation_Y_360_5s_Loop",
+      "Ultimate_Rotation_Y_45_10s_Loop",
+      "Ultimate_Rotation_Z_2_5s_Loop",
+      "Ultimate_Rotation_Z_360_3s_Loop",
+      "Ultimate_Rotation_Z_5_5s_Loop",
+      "Ultimate_Scale_110_2s_Loop",
+      "Ultimate_Scale_Appear",
+      "Ultimate_Scale_Appear_Bounce",
+      "Mixamo_RifleFireStanding",
+      "Mixamo_RifleRunFire"
+    ],
+    "mixamoActionSource": {
+      "provider": "Adobe Mixamo",
+      "motion": "Firing Rifle",
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "runInPlace": true
+    }
   },
   {
     "slug": "sci-fi-civilians-scificivilians-05",
@@ -686554,7 +686658,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "19 个动作",
+    "status": "21 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-05.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-05.glb"
@@ -686575,9 +686679,9 @@
     "bakedTriangles": 17125,
     "sourceTriangles": 17125,
     "lowTriangles": 17125,
-    "sourceSizeKB": 1725,
-    "lowSizeKB": 1725,
-    "animationCount": 19,
+    "sourceSizeKB": 1746,
+    "lowSizeKB": 1746,
+    "animationCount": 21,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -686692,6 +686796,22 @@
         "clip": "Ultimate_Scale_Appear_Bounce",
         "kind": "spawn",
         "sourceHasKeyframes": true
+      },
+      {
+        "name": "步枪站立射击",
+        "clip": "Mixamo_RifleFireStanding",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": false
+      },
+      {
+        "name": "步枪跑动射击",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": true
       }
     ],
     "defaultClip": "Ultimate_Idle_Standing",
@@ -686716,41 +686836,20 @@
     "summary": "Sidekick 科幻平民角色 05，使用 Unity 完整组合网格、原始骨骼与颜色贴图。",
     "modelSource": "Sci-Fi Civilians - Sidekick Modular Characters",
     "prefabSource": "ScifiCivilians_05.prefab / ScifiCivilians_05.asset",
+    "paletteTexture": true,
     "motionAnchorBone": "pelvis",
     "motionAnchorAxes": [
       "x",
       "y",
       "z"
     ],
-    "sharedPackageActions": [
-      "Ultimate_Dead_Pose",
-      "Ultimate_Idle_Standing",
-      "Ultimate_Run_Cycle",
-      "Ultimate_Sitting_Pose",
-      "Ultimate_Walk_Cycle",
-      "Ultimate_Position_X_Loop",
-      "Ultimate_Position_Y_Loop",
-      "Ultimate_Position_Z_Loop",
-      "Ultimate_Rotation_X_360_3s_Loop",
-      "Ultimate_Rotation_X_5_5s_Loop",
-      "Ultimate_Rotation_Y_360_3s_Loop",
-      "Ultimate_Rotation_Y_360_5s_Loop",
-      "Ultimate_Rotation_Y_45_10s_Loop",
-      "Ultimate_Rotation_Z_2_5s_Loop",
-      "Ultimate_Rotation_Z_360_3s_Loop",
-      "Ultimate_Rotation_Z_5_5s_Loop",
-      "Ultimate_Scale_110_2s_Loop",
-      "Ultimate_Scale_Appear",
-      "Ultimate_Scale_Appear_Bounce"
-    ],
-    "paletteTexture": true,
     "equipmentBone": "hand_r",
-    "defaultEquipment": "sci-fi-battle-weapons-scifipistol01-1",
+    "defaultEquipment": "sci-fi-battle-weapons-scifirifle01-1",
     "equipmentOptions": [
       {
-        "slug": "sci-fi-battle-weapons-scifipistol01-1",
-        "name": "科幻手枪 01",
-        "family": "pistol",
+        "slug": "sci-fi-battle-weapons-scifirifle01-1",
+        "name": "科幻步枪 01",
+        "family": "rifle",
         "position": [
           0.0,
           0.0,
@@ -686768,9 +686867,9 @@
         ]
       },
       {
-        "slug": "sci-fi-battle-weapons-scifirifle01-1",
-        "name": "科幻步枪 01",
-        "family": "rifle",
+        "slug": "sci-fi-battle-weapons-scifipistol01-1",
+        "name": "科幻手枪 01",
+        "family": "pistol",
         "position": [
           0.0,
           0.0,
@@ -686887,7 +686986,38 @@
           1.0
         ]
       }
-    ]
+    ],
+    "sharedPackageActions": [
+      "Ultimate_Dead_Pose",
+      "Ultimate_Idle_Standing",
+      "Ultimate_Run_Cycle",
+      "Ultimate_Sitting_Pose",
+      "Ultimate_Walk_Cycle",
+      "Ultimate_Position_X_Loop",
+      "Ultimate_Position_Y_Loop",
+      "Ultimate_Position_Z_Loop",
+      "Ultimate_Rotation_X_360_3s_Loop",
+      "Ultimate_Rotation_X_5_5s_Loop",
+      "Ultimate_Rotation_Y_360_3s_Loop",
+      "Ultimate_Rotation_Y_360_5s_Loop",
+      "Ultimate_Rotation_Y_45_10s_Loop",
+      "Ultimate_Rotation_Z_2_5s_Loop",
+      "Ultimate_Rotation_Z_360_3s_Loop",
+      "Ultimate_Rotation_Z_5_5s_Loop",
+      "Ultimate_Scale_110_2s_Loop",
+      "Ultimate_Scale_Appear",
+      "Ultimate_Scale_Appear_Bounce",
+      "Mixamo_RifleFireStanding",
+      "Mixamo_RifleRunFire"
+    ],
+    "mixamoActionSource": {
+      "provider": "Adobe Mixamo",
+      "motion": "Firing Rifle",
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "runInPlace": true
+    }
   },
   {
     "slug": "sci-fi-civilians-scificivilians-06",
@@ -686897,7 +687027,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "19 个动作",
+    "status": "21 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-06.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-06.glb"
@@ -686918,9 +687048,9 @@
     "bakedTriangles": 16745,
     "sourceTriangles": 16745,
     "lowTriangles": 16745,
-    "sourceSizeKB": 1688,
-    "lowSizeKB": 1688,
-    "animationCount": 19,
+    "sourceSizeKB": 1709,
+    "lowSizeKB": 1709,
+    "animationCount": 21,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -687035,6 +687165,22 @@
         "clip": "Ultimate_Scale_Appear_Bounce",
         "kind": "spawn",
         "sourceHasKeyframes": true
+      },
+      {
+        "name": "步枪站立射击",
+        "clip": "Mixamo_RifleFireStanding",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": false
+      },
+      {
+        "name": "步枪跑动射击",
+        "clip": "Mixamo_RifleRunFire",
+        "kind": "attack",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "loop": true
       }
     ],
     "defaultClip": "Ultimate_Idle_Standing",
@@ -687059,41 +687205,20 @@
     "summary": "Sidekick 科幻平民角色 06，使用 Unity 完整组合网格、原始骨骼与颜色贴图。",
     "modelSource": "Sci-Fi Civilians - Sidekick Modular Characters",
     "prefabSource": "ScifiCivilians_06.prefab / ScifiCivilians_06.asset",
+    "paletteTexture": true,
     "motionAnchorBone": "pelvis",
     "motionAnchorAxes": [
       "x",
       "y",
       "z"
     ],
-    "sharedPackageActions": [
-      "Ultimate_Dead_Pose",
-      "Ultimate_Idle_Standing",
-      "Ultimate_Run_Cycle",
-      "Ultimate_Sitting_Pose",
-      "Ultimate_Walk_Cycle",
-      "Ultimate_Position_X_Loop",
-      "Ultimate_Position_Y_Loop",
-      "Ultimate_Position_Z_Loop",
-      "Ultimate_Rotation_X_360_3s_Loop",
-      "Ultimate_Rotation_X_5_5s_Loop",
-      "Ultimate_Rotation_Y_360_3s_Loop",
-      "Ultimate_Rotation_Y_360_5s_Loop",
-      "Ultimate_Rotation_Y_45_10s_Loop",
-      "Ultimate_Rotation_Z_2_5s_Loop",
-      "Ultimate_Rotation_Z_360_3s_Loop",
-      "Ultimate_Rotation_Z_5_5s_Loop",
-      "Ultimate_Scale_110_2s_Loop",
-      "Ultimate_Scale_Appear",
-      "Ultimate_Scale_Appear_Bounce"
-    ],
-    "paletteTexture": true,
     "equipmentBone": "hand_r",
-    "defaultEquipment": "sci-fi-battle-weapons-scifipistol01-1",
+    "defaultEquipment": "sci-fi-battle-weapons-scifirifle01-1",
     "equipmentOptions": [
       {
-        "slug": "sci-fi-battle-weapons-scifipistol01-1",
-        "name": "科幻手枪 01",
-        "family": "pistol",
+        "slug": "sci-fi-battle-weapons-scifirifle01-1",
+        "name": "科幻步枪 01",
+        "family": "rifle",
         "position": [
           0.0,
           0.0,
@@ -687111,9 +687236,9 @@
         ]
       },
       {
-        "slug": "sci-fi-battle-weapons-scifirifle01-1",
-        "name": "科幻步枪 01",
-        "family": "rifle",
+        "slug": "sci-fi-battle-weapons-scifipistol01-1",
+        "name": "科幻手枪 01",
+        "family": "pistol",
         "position": [
           0.0,
           0.0,
@@ -687230,7 +687355,38 @@
           1.0
         ]
       }
-    ]
+    ],
+    "sharedPackageActions": [
+      "Ultimate_Dead_Pose",
+      "Ultimate_Idle_Standing",
+      "Ultimate_Run_Cycle",
+      "Ultimate_Sitting_Pose",
+      "Ultimate_Walk_Cycle",
+      "Ultimate_Position_X_Loop",
+      "Ultimate_Position_Y_Loop",
+      "Ultimate_Position_Z_Loop",
+      "Ultimate_Rotation_X_360_3s_Loop",
+      "Ultimate_Rotation_X_5_5s_Loop",
+      "Ultimate_Rotation_Y_360_3s_Loop",
+      "Ultimate_Rotation_Y_360_5s_Loop",
+      "Ultimate_Rotation_Y_45_10s_Loop",
+      "Ultimate_Rotation_Z_2_5s_Loop",
+      "Ultimate_Rotation_Z_360_3s_Loop",
+      "Ultimate_Rotation_Z_5_5s_Loop",
+      "Ultimate_Scale_110_2s_Loop",
+      "Ultimate_Scale_Appear",
+      "Ultimate_Scale_Appear_Bounce",
+      "Mixamo_RifleFireStanding",
+      "Mixamo_RifleRunFire"
+    ],
+    "mixamoActionSource": {
+      "provider": "Adobe Mixamo",
+      "motion": "Firing Rifle",
+      "skin": "Without Skin",
+      "fps": 30,
+      "keyframeReduction": "none",
+      "runInPlace": true
+    }
   },
   {
     "slug": "stylized-weapons-fantasy-fantasy-arrow-01",
