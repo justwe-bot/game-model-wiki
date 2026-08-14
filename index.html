@@ -335,7 +335,7 @@
       texture.needsUpdate = true;
     }
 
-    function applyTexture(root, texture, emissiveTexture, normalTexture, lowQuality) {
+    function applyTexture(root, texture, emissiveTexture, normalTexture, lowQuality, variant) {
       configureTexture(texture, lowQuality, 'color');
       configureTexture(emissiveTexture, lowQuality, 'color');
       configureTexture(normalTexture, lowQuality, 'data');
@@ -344,6 +344,8 @@
         if (!object.geometry.getAttribute('normal')) object.geometry.computeVertexNormals();
         const source = Array.isArray(object.material) ? object.material : [object.material];
         const hasMaterialProfiles = Object.keys(activeEntry.materialProfiles ?? {}).length > 0;
+        const textureMaterialNames = activeEntry.textureMaterialNamesByVariant?.[variant];
+        const usesExternalTexture = material => !textureMaterialNames || textureMaterialNames.includes(material?.name);
         if (activeEntry.preserveMaterials && !hasMaterialProfiles && !texture && !emissiveTexture && !normalTexture) {
           const materials = source.map(material => {
             const next = material.clone();
@@ -365,27 +367,35 @@
         }
         const isClayCannon = activeEntry.slug === 'claybruiser' && object.name.includes('Cannon');
         const materials = source.map(material => {
+          if (activeEntry.preserveMaterials && !hasMaterialProfiles && !usesExternalTexture(material)) {
+            const next = material.clone();
+            next.flatShading = lowQuality;
+            next.needsUpdate = true;
+            return next;
+          }
           const profile = activeEntry.materialProfiles?.[material?.name]
             ?? activeEntry.materialProfiles?.default
             ?? {};
-          const transparent = profile.transparent ?? activeEntry.transparent ?? false;
+          const transparent = profile.transparent ?? activeEntry.transparent ?? material?.transparent ?? false;
           const emissiveIntensity = lowQuality
             ? (profile.lowEmissiveIntensity ?? profile.emissiveIntensity ?? activeEntry.emissiveIntensity ?? 1)
             : (profile.emissiveIntensity ?? activeEntry.emissiveIntensity ?? 1);
           const materialOptions = {
             color: new THREE.Color(profile.color ?? activeEntry.tint ?? '#ffffff'),
             map: texture,
-            emissive: new THREE.Color(profile.emissiveColor ?? activeEntry.emissiveColor ?? '#000000'),
+            emissive: new THREE.Color(profile.emissiveColor ?? activeEntry.emissiveColor ?? (emissiveTexture ? '#ffffff' : '#000000')),
             emissiveMap: emissiveTexture,
             emissiveIntensity,
             roughness: profile.roughness ?? (isClayCannon ? (lowQuality ? 0.78 : 0.62) : (lowQuality ? 0.95 : 0.78)),
             metalness: profile.metalness ?? (isClayCannon ? 0.08 : 0.02),
             flatShading: lowQuality,
             transparent,
-            opacity: profile.opacity ?? activeEntry.opacity ?? 1,
+            opacity: profile.opacity ?? activeEntry.opacity ?? material?.opacity ?? 1,
             alphaTest: profile.alphaTest ?? activeEntry.alphaTest ?? 0,
             depthWrite: profile.depthWrite ?? (transparent ? false : true),
-            side: (profile.doubleSided ?? activeEntry.doubleSided) ? THREE.DoubleSide : THREE.FrontSide,
+            side: (profile.doubleSided ?? activeEntry.doubleSided ?? material?.side === THREE.DoubleSide)
+              ? THREE.DoubleSide
+              : THREE.FrontSide,
             vertexColors: Boolean(object.geometry.getAttribute('color')),
           };
           if (normalTexture) {
@@ -487,7 +497,7 @@
       const entryRotation = activeEntry.modelRotationDeg ?? [0, 0, 0];
       const modelRotation = gameRotation.map((value, index) => value + entryRotation[index]);
       model.rotation.set(...modelRotation.map(THREE.MathUtils.degToRad));
-      applyTexture(model, texture, emissiveTexture, normalTexture, variant === 'low');
+      applyTexture(model, texture, emissiveTexture, normalTexture, variant === 'low', variant);
       wrapper.add(model);
       scene.add(wrapper);
       const mixer = new THREE.AnimationMixer(model);

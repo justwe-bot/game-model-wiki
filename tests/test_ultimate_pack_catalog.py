@@ -88,6 +88,37 @@ class UltimatePackCatalogTests(unittest.TestCase):
         )
         self.assertEqual(warnings, {"stylized-weapons": []})
 
+    def test_low_poly_materials_are_restored(self) -> None:
+        entries = {entry["slug"]: entry for entry in self.catalog}
+        ak = entries["low-poly-10-weapons-ak-47"]
+        self.assertEqual(
+            ak["textures"]["low"],
+            "textures/ultimate-pack/low-poly-10/atlas-gradient.png",
+        )
+        self.assertEqual(ak["defaultClip"], "Ultimate_Rotation_Y_360_5s_Loop")
+        document = read_glb(ROOT / ak["models"]["original"])
+        colors = {
+            material["name"]: material["pbrMetallicRoughness"]["baseColorFactor"]
+            for material in document["materials"]
+        }
+        self.assertLess(colors["17 GREY-DARKEST"][0], 0.04)
+        self.assertGreater(colors["28 ORANGE"][0], 0.9)
+        self.assertLess(colors["28 ORANGE"][1], 0.25)
+
+        sherman = entries["low-poly-10-ww2-sherman"]
+        self.assertEqual(
+            sherman["textureMaterialNamesByVariant"]["original"],
+            ["LOWPOLY-COLORS"],
+        )
+
+        desktop = entries["low-poly-10-electronics-pc-desktop-gaming"]
+        desktop_document = read_glb(ROOT / desktop["models"]["low"])
+        transparent = next(
+            material for material in desktop_document["materials"]
+            if material["name"] == "LOWPOLY-COLORS-TRANSPARENT"
+        )
+        self.assertEqual(transparent["alphaMode"], "BLEND")
+
 
 if __name__ == "__main__":
     unittest.main()
