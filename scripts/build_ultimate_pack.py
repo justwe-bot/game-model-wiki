@@ -73,6 +73,20 @@ PACKS = {
         "tier": "Weapons",
         "kind": "weapon",
     },
+    "sci-fi-civilians": {
+        "name": "Sci-Fi Civilians - Sidekick Modular Characters",
+        "type": "sidekick-character",
+        "source": Path(r"C:\baidunetdiskdownload\Sci-Fi Civilians - Sidekick Modular Characters Unity\SIDEKICK_SciFi_Civilians_Unity_2021_3_v1_0_7 - extracted\Assets\Synty\SidekickCharacters"),
+        "tier": "人物",
+        "kind": "character",
+    },
+    "sci-fi-battle-weapons": {
+        "name": "Sci-Fi Battle Weapons 1.2",
+        "type": "sci-fi-weapons",
+        "source": Path(r"C:\baidunetdiskdownload\Sci-Fi Battle Weapons\Sci-Fi Battle Weapons 1.2 - extracted\Assets\TirgamesAssets\SciFiWorld\Weapons"),
+        "tier": "科幻武器",
+        "kind": "weapon",
+    },
 }
 
 CHINESE_NAMES = {
@@ -202,7 +216,7 @@ def load_unity_materials(source_root: Path) -> dict:
     by_guid = {}
     by_name = {}
     by_number = defaultdict(list)
-    for path in sorted((source_root / "Materials").rglob("*.mat")):
+    for path in sorted(source_root.rglob("*.mat")):
         text = path.read_text(encoding="utf-8", errors="ignore")
         name_match = re.search(r"^  m_Name: (.+)$", text, re.MULTILINE)
         meta = Path(f"{path}.meta")
@@ -222,6 +236,7 @@ def load_unity_materials(source_root: Path) -> dict:
             "cutoff": _unity_property(text, "_Cutoff"),
             "baseTextureGuid": _unity_texture_guid(text, "_MainTex"),
             "emissiveTextureGuid": _unity_texture_guid(text, "_EmissionMap"),
+            "normalTextureGuid": _unity_texture_guid(text, "_BumpMap"),
         }
         by_guid[material["guid"]] = material
         by_name[_material_key(material["name"])] = material
@@ -338,6 +353,7 @@ def apply_unity_materials(path: Path, source: Path, library: dict, assignments: 
     prefab_guids = _choose_prefab_assignment(source, len(materials), assignments)
     base_texture_materials = defaultdict(list)
     emissive_texture_materials = defaultdict(list)
+    normal_texture_materials = defaultdict(list)
     repaired = 0
     unresolved = []
     for index, material in enumerate(materials):
@@ -378,6 +394,8 @@ def apply_unity_materials(path: Path, source: Path, library: dict, assignments: 
             base_texture_materials[unity["baseTextureGuid"]].append(material.get("name", "Material"))
         if unity.get("emissiveTextureGuid"):
             emissive_texture_materials[unity["emissiveTextureGuid"]].append(material.get("name", "Material"))
+        if unity.get("normalTextureGuid"):
+            normal_texture_materials[unity["normalTextureGuid"]].append(material.get("name", "Material"))
         repaired += 1
     write_glb(path, document, binary)
     return {
@@ -385,6 +403,7 @@ def apply_unity_materials(path: Path, source: Path, library: dict, assignments: 
         "unresolved": unresolved,
         "baseTextureMaterials": dict(base_texture_materials),
         "emissiveTextureMaterials": dict(emissive_texture_materials),
+        "normalTextureMaterials": dict(normal_texture_materials),
     }
 
 
