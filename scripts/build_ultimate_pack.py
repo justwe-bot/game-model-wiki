@@ -28,6 +28,12 @@ REPORTS_ROOT = ROOT / "generated" / "ultimate-pack" / "reports"
 CACHE_ROOT = ROOT / "generated" / "ultimate-pack" / "conversion-cache"
 CATALOG_PATH = ROOT / "games" / "ultimate-pack" / "catalog.json"
 
+LOW_POLY_TEXTURES = {
+    "base": ("Textures/Atlas_Gradient_Lpup.png", "low-poly-10/atlas-gradient.png"),
+    "emissive": ("Textures/Atlas_Emission_Lpup.png", "low-poly-10/atlas-emission.png"),
+    "specular": ("Textures/Atlas_Specular_Lpup.png", "low-poly-10/atlas-specular.png"),
+}
+
 PACKS = {
     "robots-01": {
         "name": "Robots Ultimate Pack 01 Cute Series [1.0]",
@@ -147,6 +153,338 @@ def preferred_texture(paths: list[Path], emission: bool, name: str) -> Path | No
         not path.stem.lower().startswith(expected), "blue" not in path.stem.lower(),
         "red" in path.stem.lower(), len(path.name),
     ))[0]
+
+
+def _unity_property(text: str, name: str) -> float | None:
+    match = re.search(rf"^    - {re.escape(name)}: ([-+0-9.eE]+)$", text, re.MULTILINE)
+    return float(match.group(1)) if match else None
+
+
+def _unity_color(text: str, name: str) -> tuple[float, float, float, float] | None:
+    match = re.search(
+        rf"^    - {re.escape(name)}: \{{r: ([^,]+), g: ([^,]+), b: ([^,]+), a: ([^}}]+)\}}$",
+        text,
+        re.MULTILINE,
+    )
+    return tuple(float(value) for value in match.groups()) if match else None
+
+
+def _unity_texture_guid(text: str, name: str) -> str | None:
+    match = re.search(
+        rf"^    - {re.escape(name)}:\r?\n"
+        rf"        m_Texture: \{{fileID: \d+, guid: ([0-9a-f]{{32}}), type: 3\}}$",
+        text,
+        re.MULTILINE,
+    )
+    return match.group(1) if match else None
+
+
+def _material_key(name: str) -> str:
+    value = re.sub(r"\.\d+$", "", name.strip().lower())
+    value = re.sub(r"^(?:materialinstance|mi?)[_ -]*", "", value)
+    value = re.sub(r"[_ -]*lpup$", "", value)
+    value = re.sub(r"^0+(?=\d)", "", value)
+    return re.sub(r"[^a-z0-9]+", "", value)
+
+
+def _material_number(name: str) -> int | None:
+    match = re.search(r"(?<!\d)0*(\d{1,2})(?!\d)", name)
+    return int(match.group(1)) if match else None
+
+
+def _srgb_to_linear(value: float) -> float:
+    if value <= 0.04045:
+        return value / 12.92
+    return ((value + 0.055) / 1.055) ** 2.4
+
+
+def load_unity_materials(source_root: Path) -> dict:
+    by_guid = {}
+    by_name = {}
+    by_number = defaultdict(list)
+    for path in sorted((source_root / "Materials").rglob("*.mat")):
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        name_match = re.search(r"^  m_Name: (.+)$", text, re.MULTILINE)
+        meta = Path(f"{path}.meta")
+        if not name_match or not meta.is_file():
+            continue
+        guid_match = re.search(r"^guid: ([0-9a-f]{32})$", meta.read_text(encoding="utf-8"), re.MULTILINE)
+        if not guid_match:
+            continue
+        material = {
+            "guid": guid_match.group(1),
+            "name": name_match.group(1).strip(),
+            "color": _unity_color(text, "_Color"),
+            "emissive": _unity_color(text, "_EmissionColor"),
+            "metallic": _unity_property(text, "_Metallic"),
+            "glossiness": _unity_property(text, "_Glossiness"),
+            "mode": _unity_property(text, "_Mode"),
+            "cutoff": _unity_property(text, "_Cutoff"),
+            "baseTextureGuid": _unity_texture_guid(text, "_MainTex"),
+            "emissiveTextureGuid": _unity_texture_guid(text, "_EmissionMap"),
+        }
+        by_guid[material["guid"]] = material
+        by_name[_material_key(material["name"])] = material
+        number = _material_number(material["name"])
+        if number is not None:
+            by_number[number].append(material)
+    atlas = next((item for item in by_guid.values() if item["name"] == "M_Atlas_LPUP"), None)
+    if atlas:
+        by_name["lowpolycolors"] = atlas
+        by_name["atlascolorsgradient"] = atlas
+        by_name["tankbelts"] = atlas
+    transparent_atlas = next(
+        (item for item in by_guid.values() if item["name"] == "M_Atlas_Transparent_LPUP"),
+        None,
+    )
+    if transparent_atlas:
+        by_name["lowpolycolorstransparent"] = transparent_atlas
+    for alias, material_name in {
+        "black": "M_57_Black_LPUP",
+        "brown": "M_12_Brown_LPUP",
+        "pink": "M_52_Pink_LPUP",
+    }.items():
+        material = next((item for item in by_guid.values() if item["name"] == material_name), None)
+        if material:
+            by_name[alias] = material
+    return {"byGuid": by_guid, "byName": by_name, "byNumber": by_number}
+
+
+def load_unity_textures(source_root: Path) -> dict[str, Path]:
+    textures = {}
+    for meta in source_root.rglob("*.meta"):
+        source = Path(str(meta)[:-5])
+        if not source.is_file() or source.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
+            continue
+        match = re.search(r"^guid: ([0-9a-f]{32})$", meta.read_text(encoding="utf-8"), re.MULTILINE)
+        if match:
+            textures[match.group(1)] = source
+    return textures
+
+
+def _yaml_documents(text: str):
+    pattern = re.compile(r"^--- !u!(\d+) &(-?\d+)\r?\n(.*?)(?=^--- !u!|\Z)", re.MULTILINE | re.DOTALL)
+    yield from ((int(match.group(1)), match.group(2), match.group(3)) for match in pattern.finditer(text))
+
+
+def load_prefab_materials(source_root: Path) -> dict[str, list[dict]]:
+    assignments = defaultdict(list)
+    for path in sorted(source_root.rglob("*.prefab")):
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        mesh_by_object = {}
+        materials_by_object = {}
+        for class_id, _, body in _yaml_documents(text):
+            object_match = re.search(r"^  m_GameObject: \{fileID: (-?\d+)\}$", body, re.MULTILINE)
+            if not object_match:
+                continue
+            object_id = object_match.group(1)
+            if class_id in (33, 137):
+                mesh_match = re.search(
+                    r"^  m_Mesh: \{fileID: -?\d+, guid: ([0-9a-f]{32}), type: 3\}$",
+                    body,
+                    re.MULTILINE,
+                )
+                if mesh_match:
+                    mesh_by_object[object_id] = mesh_match.group(1)
+            if class_id in (23, 137):
+                block = re.search(r"^  m_Materials:\r?\n((?:  - .*\r?\n)*)", body, re.MULTILINE)
+                if block:
+                    materials_by_object[object_id] = re.findall(r"guid: ([0-9a-f]{32})", block.group(1))
+        for object_id, mesh_guid in mesh_by_object.items():
+            material_guids = materials_by_object.get(object_id)
+            if material_guids:
+                assignments[mesh_guid].append({"path": path, "materials": material_guids})
+    return assignments
+
+
+def _fbx_guid(path: Path) -> str | None:
+    meta = Path(f"{path}.meta")
+    if not meta.is_file():
+        return None
+    match = re.search(r"^guid: ([0-9a-f]{32})$", meta.read_text(encoding="utf-8"), re.MULTILINE)
+    return match.group(1) if match else None
+
+
+def _choose_prefab_assignment(source: Path, material_count: int, assignments: dict) -> list[str]:
+    candidates = assignments.get(_fbx_guid(source) or "", [])
+    source_name = slugify(re.sub(r"^(SM|SKM)_", "", source.stem, flags=re.I))
+    ranked = sorted(
+        candidates,
+        key=lambda item: (
+            len(item["materials"]) == material_count,
+            slugify(item["path"].stem) == source_name,
+            source_name in slugify(item["path"].stem),
+            -abs(len(item["materials"]) - material_count),
+        ),
+        reverse=True,
+    )
+    return ranked[0]["materials"] if ranked and len(ranked[0]["materials"]) == material_count else []
+
+
+def _resolve_unity_material(name: str, guid: str | None, library: dict) -> dict | None:
+    if guid and guid in library["byGuid"]:
+        return library["byGuid"][guid]
+    exact = library["byName"].get(_material_key(name))
+    if exact:
+        return exact
+    number = _material_number(name)
+    matches = library["byNumber"].get(number, []) if number is not None else []
+    return matches[0] if len(matches) == 1 else None
+
+
+def apply_unity_materials(path: Path, source: Path, library: dict, assignments: dict) -> dict:
+    document, binary = read_glb(path)
+    materials = document.get("materials", [])
+    prefab_guids = _choose_prefab_assignment(source, len(materials), assignments)
+    base_texture_materials = defaultdict(list)
+    emissive_texture_materials = defaultdict(list)
+    repaired = 0
+    unresolved = []
+    for index, material in enumerate(materials):
+        unity = _resolve_unity_material(
+            material.get("name", ""),
+            prefab_guids[index] if index < len(prefab_guids) else None,
+            library,
+        )
+        if not unity:
+            factor = material.get("pbrMetallicRoughness", {}).get("baseColorFactor", [0.8, 0.8, 0.8, 1])
+            if all(abs(value - 0.8) < 0.001 for value in factor[:3]):
+                unresolved.append(material.get("name", "Material"))
+            continue
+        pbr = material.setdefault("pbrMetallicRoughness", {})
+        color = unity.get("color")
+        if color:
+            pbr["baseColorFactor"] = [*(_srgb_to_linear(value) for value in color[:3]), color[3]]
+        if unity.get("metallic") is not None:
+            pbr["metallicFactor"] = unity["metallic"]
+        if unity.get("glossiness") is not None:
+            pbr["roughnessFactor"] = 1 - unity["glossiness"]
+        emissive = unity.get("emissive")
+        if emissive and any(value > 0 for value in emissive[:3]):
+            material["emissiveFactor"] = [_srgb_to_linear(value) for value in emissive[:3]]
+        else:
+            material.pop("emissiveFactor", None)
+        mode = int(unity.get("mode") or 0)
+        if mode == 1:
+            material["alphaMode"] = "MASK"
+            material["alphaCutoff"] = unity.get("cutoff") or 0.5
+        elif mode in (2, 3):
+            material["alphaMode"] = "BLEND"
+            material.pop("alphaCutoff", None)
+        else:
+            material["alphaMode"] = "OPAQUE"
+            material.pop("alphaCutoff", None)
+        if unity.get("baseTextureGuid"):
+            base_texture_materials[unity["baseTextureGuid"]].append(material.get("name", "Material"))
+        if unity.get("emissiveTextureGuid"):
+            emissive_texture_materials[unity["emissiveTextureGuid"]].append(material.get("name", "Material"))
+        repaired += 1
+    write_glb(path, document, binary)
+    return {
+        "repaired": repaired,
+        "unresolved": unresolved,
+        "baseTextureMaterials": dict(base_texture_materials),
+        "emissiveTextureMaterials": dict(emissive_texture_materials),
+    }
+
+
+def copy_low_poly_textures(package: dict) -> tuple[dict[str, str], dict[str, str]]:
+    paths = {}
+    paths_by_guid = {}
+    for kind, (source_name, target_name) in LOW_POLY_TEXTURES.items():
+        source = package["source"] / source_name
+        target = TEXTURES_ROOT / target_name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+        paths[kind] = target.relative_to(ROOT).as_posix()
+        meta = Path(f"{source}.meta")
+        match = re.search(r"^guid: ([0-9a-f]{32})$", meta.read_text(encoding="utf-8"), re.MULTILINE)
+        if match:
+            paths_by_guid[match.group(1)] = paths[kind]
+    return paths, paths_by_guid
+
+
+def copy_referenced_texture(guid: str, source_path: Path, paths_by_guid: dict[str, str]) -> str:
+    if guid in paths_by_guid:
+        return paths_by_guid[guid]
+    target = TEXTURES_ROOT / "low-poly-10" / f"{slugify(source_path.stem)}{source_path.suffix.lower()}"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source_path, target)
+    paths_by_guid[guid] = target.relative_to(ROOT).as_posix()
+    return paths_by_guid[guid]
+
+
+def repair_low_poly_materials(package_slug: str, package: dict, entries: list[dict]) -> dict:
+    textures, paths_by_guid = copy_low_poly_textures(package)
+    source_textures = load_unity_textures(package["source"])
+    library = load_unity_materials(package["source"])
+    assignments = load_prefab_materials(package["source"])
+    entry_by_slug = {entry["slug"].removeprefix(f"{package_slug}-"): entry for entry in entries}
+    summary = {"models": 0, "materials": 0, "unresolved": [], "textureWarnings": []}
+    for spec in low_poly_specs(package):
+        entry = entry_by_slug.get(spec["slug"])
+        if not entry:
+            continue
+        filters = {}
+        variant_textures = {}
+        variant_emissive = {}
+        for source_variant, label in (("M", "original"), ("T", "low")):
+            source = spec["variants"].get(source_variant)
+            if not source:
+                continue
+            model_path = ROOT / entry["models"][label]
+            result = apply_unity_materials(model_path, source, library, assignments)
+            summary["models"] += 1
+            summary["materials"] += result["repaired"]
+            summary["unresolved"].extend(
+                f"{model_path.relative_to(ROOT).as_posix()}:{name}" for name in result["unresolved"]
+            )
+            if source_variant == "T":
+                variant_textures[label] = textures["base"]
+                variant_emissive[label] = textures["emissive"]
+            else:
+                base_maps = result["baseTextureMaterials"]
+                emissive_maps = result["emissiveTextureMaterials"]
+                if len(base_maps) > 1 or len(emissive_maps) > 1:
+                    summary["textureWarnings"].append(model_path.relative_to(ROOT).as_posix())
+                if base_maps:
+                    guid, names = next(iter(base_maps.items()))
+                    source_texture = source_textures.get(guid)
+                    if source_texture:
+                        variant_textures[label] = copy_referenced_texture(guid, source_texture, paths_by_guid)
+                        filters[label] = sorted(set(names))
+                if emissive_maps:
+                    guid, names = next(iter(emissive_maps.items()))
+                    source_texture = source_textures.get(guid)
+                    if source_texture:
+                        variant_emissive[label] = copy_referenced_texture(guid, source_texture, paths_by_guid)
+                        filters[label] = sorted(set([*filters.get(label, []), *names]))
+
+        for label, source_variant, fallback in (("original", "M", "low"), ("low", "T", "original")):
+            if source_variant not in spec["variants"]:
+                if fallback in variant_textures:
+                    variant_textures[label] = variant_textures[fallback]
+                if fallback in variant_emissive:
+                    variant_emissive[label] = variant_emissive[fallback]
+                if fallback in filters:
+                    filters[label] = filters[fallback]
+        entry["textures"] = {label: variant_textures.get(label) for label in ("original", "low")}
+        entry["emissiveTextures"] = {label: variant_emissive.get(label) for label in ("original", "low")}
+        if not any(animation["kind"] == "idle" for animation in entry["animations"]):
+            rotation_preview = next(
+                (
+                    animation["clip"] for animation in entry["animations"]
+                    if animation["clip"] == "Ultimate_Rotation_Y_360_5s_Loop"
+                ),
+                None,
+            )
+            if rotation_preview:
+                entry["defaultClip"] = rotation_preview
+        if filters:
+            entry["textureMaterialNamesByVariant"] = filters
+        else:
+            entry.pop("textureMaterialNamesByVariant", None)
+    return summary
 
 
 def convert_fbx(converter: Path, source: Path, output: Path) -> Path:
@@ -488,6 +826,7 @@ def build_low_poly(package_slug: str, package: dict, converter: Path) -> list[di
         entry["lowSizeKB"] = round(reports.get("low", report)["sizeBytes"] / 1024)
         entry["sharedPackageActions"] = [item[0] for item in LOW_POLY_SHARED_ACTIONS]
         entries.append(entry)
+    repair_low_poly_materials(package_slug, package, entries)
     return entries
 
 
@@ -555,9 +894,10 @@ def write_catalog(entries: list[dict]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--converter", type=Path, required=True)
+    parser.add_argument("--converter", type=Path)
     parser.add_argument("--package", choices=[*PACKS, "all"], default="all")
     parser.add_argument("--catalog-only", action="store_true")
+    parser.add_argument("--repair-low-poly-materials", action="store_true")
     args = parser.parse_args()
     for directory in (MODELS_ROOT, TEXTURES_ROOT, REPORTS_ROOT, CACHE_ROOT):
         directory.mkdir(parents=True, exist_ok=True)
@@ -569,7 +909,15 @@ def main() -> None:
         by_package[entry.get("packageSlug", "robots-01")].append(entry)
     by_package["robots-01"] = normalize_existing_pack01(by_package["robots-01"])
 
+    if args.repair_low_poly_materials:
+        summary = repair_low_poly_materials("low-poly-10", PACKS["low-poly-10"], by_package["low-poly-10"])
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        write_catalog([entry for values in by_package.values() for entry in values])
+        return
+
     if not args.catalog_only:
+        if not args.converter:
+            parser.error("--converter is required unless --catalog-only or --repair-low-poly-materials is used")
         for package_slug in selected:
             package = PACKS[package_slug]
             if package_slug == "robots-01" and by_package[package_slug]:
