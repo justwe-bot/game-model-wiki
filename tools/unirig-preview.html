@@ -70,10 +70,14 @@
     const frontZ = Number(params.get('frontZ') || -1);
     const lockRootMotion = params.get('lockRoot') !== '0';
     const requestedTime = params.has('time') ? Number(params.get('time')) : null;
+    const requestedTargetY = params.has('targetY') ? Number(params.get('targetY')) : null;
+    const requestedDistance = params.has('distance') ? Number(params.get('distance')) : null;
     if (!/^[a-z0-9._-]+\.glb$/i.test(modelFile)) throw new Error('Invalid model filename');
     if (skeletonFile && !/^[a-z0-9._-]+\.json$/i.test(skeletonFile)) throw new Error('Invalid skeleton filename');
     if (![1, -1].includes(frontZ)) throw new Error('frontZ must be 1 or -1');
     if (requestedTime !== null && (!Number.isFinite(requestedTime) || requestedTime < 0 || requestedTime > 1)) throw new Error('time must be between 0 and 1');
+    if (requestedTargetY !== null && (!Number.isFinite(requestedTargetY) || requestedTargetY < 0 || requestedTargetY > 4)) throw new Error('targetY must be between 0 and 4');
+    if (requestedDistance !== null && (!Number.isFinite(requestedDistance) || requestedDistance < 0.2 || requestedDistance > 20)) throw new Error('distance must be between 0.2 and 20');
     const gltf = await new GLTFLoader().loadAsync(`../generated/${modelFile}`);
     const root = gltf.scene;
     const mixer = new THREE.AnimationMixer(root);
@@ -253,11 +257,12 @@
 
     function setView(name) {
       currentView = name;
-      const distance = Math.max(3.2, size.y * 2.1);
-      if (name === 'left') camera.position.set(distance * frontZ, size.y * 0.52, 0);
-      else if (name === 'back') camera.position.set(0, size.y * 0.52, -distance * frontZ);
-      else camera.position.set(0, size.y * 0.52, distance * frontZ);
-      controls.target.set(0, size.y * 0.5, 0);
+      const distance = requestedDistance ?? Math.max(3.2, size.y * 2.1);
+      const targetY = requestedTargetY ?? size.y * 0.5;
+      if (name === 'left') camera.position.set(distance * frontZ, targetY, 0);
+      else if (name === 'back') camera.position.set(0, targetY, -distance * frontZ);
+      else camera.position.set(0, targetY, distance * frontZ);
+      controls.target.set(0, targetY, 0);
       controls.update();
       document.querySelectorAll('[data-view]').forEach(button => {
         button.setAttribute('aria-pressed', String(button.dataset.view === name));

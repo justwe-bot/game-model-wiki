@@ -1,0 +1,15 @@
+{
+  "source": "built-in image generation edit",
+  "generationId": "ig_04da7670b777d9b4016a7c9aebed7c8196998d825904f329f3",
+  "generatedAt": "2026-08-12T16:11:09.720Z",
+  "editTarget": "references/doujie-v2/head/turnaround.png",
+  "output": "references/doujie-v2/head-v2/turnaround.png",
+  "sha256": "86C3028E29182111626786CD341D96811F33C3C49D47D647D5A4051D477AFAB0",
+  "width": 1536,
+  "height": 1024,
+  "cropSpec": "references/doujie-v2/head-v2/crop-spec.json",
+  "prompt": "references/doujie-v2/head-v2/prompt.txt",
+  "reason": "Reduce eye size, reflections, eyeliner and eyelashes to prevent layered eye geometry during image-to-3D reconstruction."
+  ,"status": "rejected"
+  ,"rejectionReason": "Hairstyle drifted from the original centered part and compact circular low bun. Do not use for 3D generation."
+}

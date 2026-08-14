@@ -330,7 +330,7 @@ def _smart_uv(obj) -> None:
     bpy.context.view_layer.objects.active = obj
     bpy.ops.object.mode_set(mode="EDIT")
     bpy.ops.mesh.select_all(action="SELECT")
-    bpy.ops.uv.smart_project(angle_limit=math.radians(66.0), island_margin=0.015)
+    bpy.ops.uv.smart_project(angle_limit=math.radians(89.0), island_margin=0.008)
     bpy.ops.object.mode_set(mode="OBJECT")
 
 
@@ -369,7 +369,15 @@ def _route_base_color_to_emission(source) -> None:
                 emission_strength.default_value = 1.0
 
 
-def _bake_textures(source, target, directory: Path, texture_size: int) -> list[Path]:
+def _bake_textures(
+    source,
+    target,
+    directory: Path,
+    texture_size: int,
+    *,
+    cage_extrusion: float = 0.006,
+    max_ray_distance: float = 0.015,
+) -> list[Path]:
     import bpy
     import numpy as np
 
@@ -378,8 +386,8 @@ def _bake_textures(source, target, directory: Path, texture_size: int) -> list[P
     scene.render.engine = "CYCLES"
     scene.render.image_settings.file_format = "PNG"
     scene.render.bake.use_selected_to_active = True
-    scene.render.bake.cage_extrusion = 0.02
-    scene.render.bake.max_ray_distance = 0.05
+    scene.render.bake.cage_extrusion = cage_extrusion
+    scene.render.bake.max_ray_distance = max_ray_distance
 
     material = bpy.data.materials.new("AnimationReadyPBR")
     material.use_nodes = True
