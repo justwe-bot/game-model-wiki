@@ -45,6 +45,7 @@ from retarget_mixamo_animation import (
     quat_inverse,
     quat_multiply,
     quat_normalize,
+    quat_rotate,
     require_finite_rows,
     retarget_animation,
     sample_track,
@@ -119,7 +120,7 @@ MIXAMO_ACTIONS = (
     ("Mixamo_RifleFireStanding", MIXAMO_ACTION_ROOT / "rifle-fire-standing.glb"),
     ("Mixamo_RifleRunFire", MIXAMO_ACTION_ROOT / "rifle-run-fire-inplace.glb"),
     ("Mixamo_PistolReady", MIXAMO_ACTION_ROOT / "pistol-ready.glb"),
-    ("Mixamo_PistolFireStanding", MIXAMO_ACTION_ROOT / "pistol-fire-standing.glb"),
+    ("Mixamo_PistolFireStanding", MIXAMO_ACTION_ROOT / "pistol-ready.glb"),
     ("Mixamo_PistolRun", MIXAMO_ACTION_ROOT / "pistol-run-inplace.glb"),
 )
 
@@ -203,26 +204,47 @@ RIFLE_GRIP_CURL_DEGREES = {
 PISTOL_GRIP_CURL_DEGREES = {
     **{
         f"{finger}_{segment}_r": angle
-        for finger in ("middle", "ring", "pinky")
-        for segment, angle in (("01", 52.0), ("02", 68.0), ("03", 46.0))
+        for finger, angles in {
+            "middle": (58.0, 78.0, 54.0),
+            "ring": (62.0, 82.0, 58.0),
+            "pinky": (66.0, 86.0, 62.0),
+        }.items()
+        for segment, angle in zip(("01", "02", "03"), angles)
     },
     **{
         f"index_{segment}_r": angle
-        for segment, angle in (("01", 6.0), ("02", 12.0), ("03", 8.0))
+        for segment, angle in zip(("01", "02", "03"), (24.0, 44.0, 28.0))
     },
     **{
         f"thumb_{segment}_r": angle
-        for segment, angle in (("01", 20.0), ("02", 32.0), ("03", 22.0))
+        for segment, angle in zip(("01", "02", "03"), (24.0, 38.0, 26.0))
     },
     **{
         f"{finger}_{segment}_l": angle
-        for finger in ("index", "middle", "ring", "pinky")
-        for segment, angle in (("01", 34.0), ("02", 48.0), ("03", 30.0))
+        for finger, angles in {
+            "index": (50.0, 68.0, 46.0),
+            "middle": (56.0, 76.0, 52.0),
+            "ring": (62.0, 82.0, 58.0),
+            "pinky": (68.0, 88.0, 64.0),
+        }.items()
+        for segment, angle in zip(("01", "02", "03"), angles)
     },
     **{
         f"thumb_{segment}_l": angle
-        for segment, angle in (("01", 16.0), ("02", 24.0), ("03", 18.0))
+        for segment, angle in zip(("01", "02", "03"), (28.0, 42.0, 30.0))
     },
+}
+
+# The trigger finger needs to flex in a plane rotated around its longitudinal
+# axis. Using the palm curl axis pushes its fingertip outside the trigger guard.
+_PISTOL_TRIGGER_PLANE_RADIANS = math.radians(70.0)
+PISTOL_GRIP_CURL_AXES = {
+    f"index_{segment}_r": (
+        0.0,
+        -math.sin(_PISTOL_TRIGGER_PLANE_RADIANS),
+        math.cos(_PISTOL_TRIGGER_PLANE_RADIANS),
+    )
+    for segment in ("01", "02", "03")
 }
 
 COLLISION_PREFIXES = ("UCX_", "UBX_", "USP_", "UCP_")
@@ -674,11 +696,16 @@ def append_grip_channels(
     binary: bytearray,
     animation_names: tuple[str, ...],
     curl_degrees: dict[str, float],
+    curl_axes: dict[str, tuple[float, float, float]] | None = None,
 ) -> None:
+    curl_axes = curl_axes or {}
     node_names = {node.get("name", ""): index for index, node in enumerate(document.get("nodes", []))}
     missing = sorted(set(curl_degrees) - set(node_names))
     if missing:
         raise ValueError(f"Missing Sidekick finger bones: {missing}")
+    invalid_axes = sorted(set(curl_axes) - set(curl_degrees))
+    if invalid_axes:
+        raise ValueError(f"Finger curl axes without matching curl angles: {invalid_axes}")
     animations = {animation.get("name"): animation for animation in document.get("animations", [])}
     for animation_name in animation_names:
         animation = animations[animation_name]
@@ -697,10 +724,21 @@ def append_grip_channels(
         for bone_name, degrees in curl_degrees.items():
             bone_index = node_names[bone_name]
             rest_rotation = tuple(document["nodes"][bone_index].get("rotation", [0.0, 0.0, 0.0, 1.0]))
+            axis = curl_axes.get(bone_name, (0.0, 0.0, 1.0))
+            axis_length = math.sqrt(sum(component * component for component in axis))
+            if axis_length <= 1e-8:
+                raise ValueError(f"Finger curl axis must be non-zero: {bone_name}")
+            normalized_axis = tuple(component / axis_length for component in axis)
             half_angle = math.radians(degrees) * 0.5
+            sine = math.sin(half_angle)
             grip_rotation = quat_multiply(
                 rest_rotation,
-                (0.0, 0.0, math.sin(half_angle), math.cos(half_angle)),
+                (
+                    normalized_axis[0] * sine,
+                    normalized_axis[1] * sine,
+                    normalized_axis[2] * sine,
+                    math.cos(half_angle),
+                ),
             )
             output_accessor = append_accessor(
                 document,
@@ -720,6 +758,95 @@ def append_grip_channels(
                 "sampler": sampler_index,
                 "target": {"node": bone_index, "path": "rotation"},
             })
+
+
+def append_pistol_recoil_translation(
+    document: dict,
+    binary: bytearray,
+    animation_name: str,
+    reference_name: str,
+    recoil_distance: float = 0.04,
+) -> dict:
+    animations = {animation.get("name"): animation for animation in document.get("animations", [])}
+    animation = animations[animation_name]
+    reference = animations[reference_name]
+    node_names = {node.get("name", ""): index for index, node in enumerate(document.get("nodes", []))}
+    parents, order = hierarchy(document)
+    rest_local = [node_transform(node) for node in document.get("nodes", [])]
+    tracks = animation_tracks(document, binary, reference)
+    reference_duration = max(track[0][-1] for track in tracks.values())
+    sampled_local = list(rest_local)
+    for (node_index, path), (times, values, interpolation) in tracks.items():
+        sampled = sample_track(times, values, reference_duration * 0.375, path, interpolation)
+        current = sampled_local[node_index]
+        if path == "translation":
+            sampled_local[node_index] = Transform(sampled, current.rotation, current.scale)
+        elif path == "rotation":
+            sampled_local[node_index] = Transform(current.translation, sampled, current.scale)
+        elif path == "scale":
+            sampled_local[node_index] = Transform(current.translation, current.rotation, sampled)
+    sampled_world = world_transforms(sampled_local, parents, order)
+    prop_index = node_names["prop_r"]
+    spine_index = node_names["spine_01"]
+    spine_parent = parents[spine_index]
+    if spine_parent is None:
+        raise ValueError("spine_01 must have a parent for recoil translation")
+    weapon_rotation = quat_multiply(
+        sampled_world[prop_index].rotation,
+        tuple(PISTOL_EQUIPMENT_TRANSFORM["rotationQuaternion"]),
+    )
+    muzzle_world = quat_rotate(weapon_rotation, tuple(PISTOL_GRIP_PROFILE["muzzleAxis"]))
+    recoil_local = quat_rotate(
+        quat_inverse(sampled_world[spine_parent].rotation),
+        tuple(-component for component in muzzle_world),
+    )
+    target_duration = max(
+        float(read_accessor(document, binary, sampler["input"])[-1][0])
+        for sampler in animation.get("samplers", [])
+    )
+    times = [target_duration * phase for phase in (0.0, 0.08, 0.16, 0.30, 1.0)]
+    strengths = (0.0, 1.0, 0.45, 0.0, 0.0)
+    rest_translation = rest_local[spine_index].translation
+    translations = [
+        tuple(
+            rest_translation[axis] + recoil_local[axis] * recoil_distance * strength
+            for axis in range(3)
+        )
+        for strength in strengths
+    ]
+    input_accessor = append_accessor(
+        document,
+        binary,
+        packed_floats([(time,) for time in times]),
+        5126,
+        "SCALAR",
+        len(times),
+    )
+    document["accessors"][input_accessor]["min"] = [0.0]
+    document["accessors"][input_accessor]["max"] = [target_duration]
+    output_accessor = append_accessor(
+        document,
+        binary,
+        packed_floats(translations),
+        5126,
+        "VEC3",
+        len(translations),
+    )
+    sampler_index = len(animation["samplers"])
+    animation["samplers"].append({
+        "input": input_accessor,
+        "output": output_accessor,
+        "interpolation": "LINEAR",
+    })
+    animation["channels"].append({
+        "sampler": sampler_index,
+        "target": {"node": spine_index, "path": "translation"},
+    })
+    return {
+        "bone": "spine_01",
+        "distance": recoil_distance,
+        "keyframes": len(times),
+    }
 
 
 def clone_animation_as_pose(
@@ -781,6 +908,12 @@ def append_mixamo_actions(path: Path) -> list[dict]:
         )
         for name, source in MIXAMO_ACTIONS
     ]
+    pistol_fire_recoil = append_pistol_recoil_translation(
+        document,
+        binary,
+        "Mixamo_PistolFireStanding",
+        "Mixamo_PistolReady",
+    )
     append_grip_channels(
         document,
         binary,
@@ -792,6 +925,7 @@ def append_mixamo_actions(path: Path) -> list[dict]:
         binary,
         ("Mixamo_PistolReady", "Mixamo_PistolFireStanding", "Mixamo_PistolRun"),
         PISTOL_GRIP_CURL_DEGREES,
+        PISTOL_GRIP_CURL_AXES,
     )
     pose_report = clone_animation_as_pose(
         document,
@@ -809,6 +943,9 @@ def append_mixamo_actions(path: Path) -> list[dict]:
     extras["pistolGripPose"] = {
         "version": 1,
         "fingerChannels": len(PISTOL_GRIP_CURL_DEGREES),
+        "customCurlAxes": len(PISTOL_GRIP_CURL_AXES),
+        "firePoseSource": "Mixamo_PistolReady",
+        "fireRecoil": pistol_fire_recoil,
         "animations": ["Mixamo_PistolReady", "Mixamo_PistolFireStanding", "Mixamo_PistolRun"],
     }
     rig = extras.get("rig")
@@ -934,10 +1071,14 @@ def build_characters() -> list[dict]:
                 "provider": "Adobe Mixamo",
                 "motions": [
                     "Firing Rifle",
-                    "Pistol Idle - Ready Alert Two Hand Pistol Grip",
-                    "Shooting - Firing A Gun",
+                    "Idle With Aimed Pistol",
                     "Pistol Run - Running With Aimed Pistol",
                 ],
+                "derivedMotions": [{
+                    "clip": "Mixamo_PistolFireStanding",
+                    "source": "Idle With Aimed Pistol",
+                    "recoil": "procedural spine_01 translation",
+                }],
                 "skin": "Without Skin",
                 "fps": 30,
                 "keyframeReduction": "none",

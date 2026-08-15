@@ -247,6 +247,9 @@ generateMipmaps = false
 - 四元数全部有限且长度约为 1；
 - 角色 GLB 确实包含 `prop_r` 和三项步枪动作；
 - 持枪动作包含预期的手指动画通道；
+- 手枪右食指指尖落在扳机护圈的局部空间范围内；
+- 手枪三项动作在四个相位的 `prop_l`/`prop_r` 距离小于 5.5 厘米；
+- 左手食指、中指、无名指和小指末端保持在主握把附近；
 - 颜色贴图存在，调色板纹理标志和 `flipY` 配置正确；
 - 武器 Base Color、Emissive、Normal 贴图存在，碰撞节点已移除。
 
@@ -265,11 +268,14 @@ generateMipmaps = false
 
 手枪动作来自 Mixamo 的双手手枪候选：
 
-- `Pistol Idle - Ready Alert Two Hand Pistol Grip`
-- `Shooting - Firing A Gun`
+- `Idle With Aimed Pistol`，作为待机和射击的稳定双手基础姿态
 - `Pistol Run - Running With Aimed Pistol`，下载时启用 `In Place`
 
-下载设置统一为 `FBX Binary`、`Without Skin`、`30 FPS`、`Keyframe Reduction: none`。动作重定向到 Sidekick 骨架后，再追加手枪专用手指通道：右手中指、无名指和小指包住握把，右手食指仅轻微弯曲靠近扳机，左手四指从外侧支撑右手和握把。
+下载设置统一为 `FBX Binary`、`Without Skin`、`30 FPS`、`Keyframe Reduction: none`。动作重定向到 Sidekick 骨架后，再追加手枪专用手指通道：右手中指、无名指和小指包住握把，左手四指从外侧支撑右手和握把。
+
+不要假设所有手指都绕局部 `Z` 轴弯曲。Sidekick 右手食指沿默认掌面弯曲时，指尖会横向离开枪体约 6 厘米，即使侧面看起来已经弯曲，也没有进入扳机护圈。本项目把右手食指三节的弯曲轴绕指骨纵向旋转约 70 度，使最终指尖落到手枪局部坐标约 `[0.031, -0.016, 0.007]`，处于扳机护圈区域。
+
+原先使用的 `Shooting - Firing A Gun` 是单手结构，`prop_l` 与 `prop_r` 在动作中相距约 9 至 10 厘米，无法通过卷曲手指修复。当前射击动作直接复用已验证的 `Idle With Aimed Pistol` 双手姿态，并给 `spine_01` 追加 5 帧、最大 4 厘米的短促后坐位移。这样既保持双手与枪口方向，又保留非循环射击反馈。
 
 装备条目需要声明动作族和默认动作：
 

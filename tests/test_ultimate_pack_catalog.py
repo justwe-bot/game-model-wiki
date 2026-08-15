@@ -220,7 +220,11 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertEqual(civilian["mixamoActionSource"]["fps"], 30)
         self.assertEqual(civilian["mixamoActionSource"]["keyframeReduction"], "none")
         self.assertTrue(civilian["mixamoActionSource"]["runInPlace"])
-        self.assertIn("Pistol Idle - Ready Alert Two Hand Pistol Grip", civilian["mixamoActionSource"]["motions"])
+        self.assertIn("Idle With Aimed Pistol", civilian["mixamoActionSource"]["motions"])
+        self.assertEqual(
+            civilian["mixamoActionSource"]["derivedMotions"][0]["clip"],
+            "Mixamo_PistolFireStanding",
+        )
         for character_index in range(1, 7):
             character = entries[f"sci-fi-civilians-scificivilians-{character_index:02d}"]
             character_document = read_glb(ROOT / character["models"]["original"])
@@ -234,13 +238,25 @@ class UltimatePackCatalogTests(unittest.TestCase):
             self.assertIn("Mixamo_PistolRun", character_animation_names)
             self.assertEqual(len(character_document["animations"]), 25)
             mixamo_report = character_document["asset"]["extras"]["mixamoRetarget"]["animations"]
-            self.assertEqual({animation["frames"] for animation in mixamo_report}, {9, 18, 23, 36, 121})
+            self.assertEqual(
+                {animation["name"]: animation["frames"] for animation in mixamo_report},
+                {
+                    "Mixamo_RifleFireStanding": 9,
+                    "Mixamo_RifleRunFire": 18,
+                    "Mixamo_PistolReady": 41,
+                    "Mixamo_PistolFireStanding": 41,
+                    "Mixamo_PistolRun": 23,
+                },
+            )
             self.assertTrue(all(animation["channels"] == 23 for animation in mixamo_report))
             grip_report = character_document["asset"]["extras"]["rifleGripPose"]
             self.assertEqual(grip_report["fingerChannels"], 30)
             self.assertEqual(grip_report["poseAnimation"]["channels"], 53)
             pistol_grip_report = character_document["asset"]["extras"]["pistolGripPose"]
             self.assertEqual(pistol_grip_report["fingerChannels"], 30)
+            self.assertEqual(pistol_grip_report["customCurlAxes"], 3)
+            self.assertEqual(pistol_grip_report["firePoseSource"], "Mixamo_PistolReady")
+            self.assertEqual(pistol_grip_report["fireRecoil"]["bone"], "spine_01")
             self.assertEqual(set(pistol_grip_report["animations"]), set(pistol_animations))
             for clip_name in (
                 "Mixamo_RifleReady",
