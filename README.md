@@ -78,6 +78,7 @@ python -m http.server 4173
 - `scripts/build_rig_proxy_character.py`：按清单执行“白模三视图 -> Modal 多视图重建 -> UniRig 关节检查 -> 78 骨骼动作迁移 -> 变形验证 -> Wiki 发布”的可缓存分阶段流程，默认拒绝覆盖并要求视觉验收后才能发布。
 - `references/character-production-pipeline.md`：记录设计图到可动画 GLB 的白模校准、分件权重、动作质量门槛和 Modal 额度使用策略。
 - `references/image-hunyuan3d-mixamo-workflow.md`：记录新默认“生图 -> 混元高模 -> Blender/QRemeshify 网格规整与烘焙 -> Mixamo 最终蒙皮与动作 -> 动画 GLB/FBX”的实操流程，并保留历史重定向兼容说明。
+- `references/sidekick-weapon-attachment-workflow.md`：记录 Sidekick 角色专用武器挂点、双手握把求解、动作分档、手指姿态、Unity 配色恢复和视觉验收经验。
 - `cloud/modal_character_mesh.py`：在现有 Modal 套餐中运行 Blender 4.2 与 QRemeshify，对混元高模执行保守修复、T Pose/非流形门禁、四边重拓扑、UV 和高低模贴图烘焙，并输出 Mixamo 上传 FBX。
 - `cloud/modal_mixamo_character.py`：把 Mixamo 下载的 With Skin 基础 FBX 与 Without Skin 动作包合并为同时带网格、蒙皮和多动作的 GLB/FBX，并统一角色高度、脚底原点和动作骨骼路径。
 - `scripts/mixamo_character_pipeline.py`：新角色默认入口，提供 `prepare`、`finalize` 和 `validate` 三个阶段。

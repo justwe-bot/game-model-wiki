@@ -328,6 +328,8 @@ python3 scripts/mixamo_character_pipeline.py attach \
 
 该命令不会切除身体一体网格里的原脸，也不会焊接颈部。裸脸换头必须改用第 3 节的 `replace-head`，并在换头、融合、UV/烘焙和规整完成后再上传 Mixamo。封闭头盔或带颈圈重叠的模块化头部才使用刚性装配。
 
+Sidekick 角色使用独立枪械时，还需要处理专用 `prop_r`/`prop_l` 挂点、双手握把锚点、枪口轴、动作专用装备变换、手指姿态和调色板贴图。完整实测流程见 [sidekick-weapon-attachment-workflow.md](sidekick-weapon-attachment-workflow.md)。
+
 ## 8. 旧版动作重定向兼容路径
 
 以下 UniRig/模板骨架重定向只用于已有 POPBOT 等历史资产。新角色走第 7 节的 Mixamo 最终蒙皮路径时不执行本节。
