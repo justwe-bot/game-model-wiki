@@ -15,7 +15,7 @@ EXPECTED = {
     "monsters-03": (16, 285),
     "low-poly-10": (3137, 44452),
     "stylized-weapons": (648, 0),
-    "sci-fi-civilians": (6, 126),
+    "sci-fi-civilians": (6, 132),
     "sci-fi-battle-weapons": (35, 0),
 }
 
@@ -43,7 +43,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
         game = next(item for item in self.games if item["slug"] == "ultimate-pack")
         self.assertEqual(game["catalog"], "games/ultimate-pack/catalog.json")
         self.assertIn("3,872 个模型", game["subtitle"])
-        self.assertIn("45,430 组动作", game["subtitle"])
+        self.assertIn("45,436 组动作", game["subtitle"])
         self.assertIn("人物", game["tiers"])
         self.assertIn("科幻武器", game["tiers"])
         counts = Counter(entry["packageSlug"] for entry in self.catalog)
@@ -52,6 +52,14 @@ class UltimatePackCatalogTests(unittest.TestCase):
             actions[entry["packageSlug"]] += entry["animationCount"]
         self.assertEqual({slug: counts[slug] for slug in EXPECTED}, {slug: value[0] for slug, value in EXPECTED.items()})
         self.assertEqual({slug: actions[slug] for slug in EXPECTED}, {slug: value[1] for slug, value in EXPECTED.items()})
+
+    def test_action_specific_equipment_transform_is_applied(self) -> None:
+        index_html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("function applyEquipmentTransform(equipment, transform)", index_html)
+        self.assertIn(
+            "animation?.equipmentTransform ?? selectedEquipmentOption()",
+            index_html,
+        )
 
     def test_all_models_and_actions_are_valid(self) -> None:
         self.assertEqual(len(self.catalog), 3872)
@@ -100,8 +108,8 @@ class UltimatePackCatalogTests(unittest.TestCase):
     def test_sci_fi_characters_and_weapons(self) -> None:
         entries = {entry["slug"]: entry for entry in self.catalog}
         civilian = entries["sci-fi-civilians-scificivilians-01"]
-        self.assertEqual(civilian["animationCount"], 21)
-        self.assertEqual(civilian["defaultClip"], "Ultimate_Idle_Standing")
+        self.assertEqual(civilian["animationCount"], 22)
+        self.assertEqual(civilian["defaultClip"], "Mixamo_RifleReady")
         self.assertEqual(civilian["motionAnchorBone"], "pelvis")
         civilian_document = read_glb(ROOT / civilian["models"]["original"])
         self.assertIn("pelvis", {node.get("name") for node in civilian_document["nodes"]})
@@ -115,15 +123,27 @@ class UltimatePackCatalogTests(unittest.TestCase):
             for animation in civilian["animations"]
             if animation["clip"].startswith("Mixamo_")
         }
-        self.assertEqual(set(mixamo_animations), {"Mixamo_RifleFireStanding", "Mixamo_RifleRunFire"})
+        self.assertEqual(set(mixamo_animations), {
+            "Mixamo_RifleReady",
+            "Mixamo_RifleFireStanding",
+            "Mixamo_RifleRunFire",
+        })
         self.assertTrue(all(
             animation["equipment"] == "sci-fi-battle-weapons-scifirifle01-1"
             for animation in mixamo_animations.values()
         ))
+        self.assertEqual(mixamo_animations["Mixamo_RifleReady"]["name"], "步枪持枪待机")
         self.assertEqual(mixamo_animations["Mixamo_RifleFireStanding"]["name"], "步枪站立射击")
         self.assertEqual(mixamo_animations["Mixamo_RifleRunFire"]["name"], "步枪跑动射击")
+        self.assertTrue(mixamo_animations["Mixamo_RifleReady"]["loop"])
         self.assertFalse(mixamo_animations["Mixamo_RifleFireStanding"]["loop"])
         self.assertTrue(mixamo_animations["Mixamo_RifleRunFire"]["loop"])
+        self.assertEqual(mixamo_animations["Mixamo_RifleReady"]["kind"], "idle")
+        for animation in mixamo_animations.values():
+            self.assertEqual(animation["gripPose"], "rifle")
+            for field in ("position", "rotationDeg", "scale"):
+                self.assertEqual(len(animation["equipmentTransform"][field]), 3)
+                self.assertTrue(all(math.isfinite(value) for value in animation["equipmentTransform"][field]))
         self.assertEqual(civilian["mixamoActionSource"], {
             "provider": "Adobe Mixamo",
             "motion": "Firing Rifle",
@@ -139,10 +159,24 @@ class UltimatePackCatalogTests(unittest.TestCase):
             character_animation_names = {animation.get("name") for animation in character_document["animations"]}
             self.assertIn("Mixamo_RifleFireStanding", character_animation_names)
             self.assertIn("Mixamo_RifleRunFire", character_animation_names)
-            self.assertEqual(len(character_document["animations"]), 21)
+            self.assertIn("Mixamo_RifleReady", character_animation_names)
+            self.assertEqual(len(character_document["animations"]), 22)
             mixamo_report = character_document["asset"]["extras"]["mixamoRetarget"]["animations"]
             self.assertEqual({animation["frames"] for animation in mixamo_report}, {9, 18})
             self.assertTrue(all(animation["channels"] == 23 for animation in mixamo_report))
+            grip_report = character_document["asset"]["extras"]["rifleGripPose"]
+            self.assertEqual(grip_report["fingerChannels"], 30)
+            self.assertEqual(grip_report["poseAnimation"]["channels"], 53)
+            for clip_name in ("Mixamo_RifleReady", "Mixamo_RifleFireStanding", "Mixamo_RifleRunFire"):
+                clip = next(animation for animation in character_document["animations"] if animation["name"] == clip_name)
+                finger_targets = {
+                    character_document["nodes"][channel["target"]["node"]].get("name")
+                    for channel in clip["channels"]
+                    if character_document["nodes"][channel["target"]["node"]].get("name", "").startswith(
+                        ("thumb_", "index_", "middle_", "ring_", "pinky_")
+                    )
+                }
+                self.assertEqual(len(finger_targets), 30)
             for equipment in character["equipmentOptions"]:
                 weapon = entries[equipment["slug"]]
                 self.assertEqual(weapon["packageSlug"], "sci-fi-battle-weapons")

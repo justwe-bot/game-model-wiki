@@ -14,7 +14,7 @@ from pathlib import Path
 
 import numpy as np
 
-from add_ror2_bandit_rig import append_accessor
+from add_ror2_bandit_rig import append_accessor, read_accessor
 from build_ultimate_pack import (
     LOW_POLY_PERSON_ACTIONS,
     PACKS,
@@ -121,8 +121,49 @@ MIXAMO_ACTIONS = (
 )
 
 MIXAMO_ACTION_LABELS = {
+    "Mixamo_RifleReady": "步枪持枪待机",
     "Mixamo_RifleFireStanding": "步枪站立射击",
     "Mixamo_RifleRunFire": "步枪跑动射击",
+}
+
+RIFLE_EQUIPMENT_TRANSFORMS = {
+    "Mixamo_RifleReady": {
+        "position": [-0.1018, -0.0042, 0.0798],
+        "rotationDeg": [6.663, -61.199, -84.155],
+        "scale": [1.0, 1.0, 1.0],
+    },
+    "Mixamo_RifleFireStanding": {
+        "position": [-0.1018, -0.0042, 0.0798],
+        "rotationDeg": [6.663, -61.199, -84.155],
+        "scale": [1.0, 1.0, 1.0],
+    },
+    "Mixamo_RifleRunFire": {
+        "position": [-0.0820, -0.0084, 0.0870],
+        "rotationDeg": [9.551, -47.649, -82.912],
+        "scale": [1.0, 1.0, 1.0],
+    },
+}
+
+RIFLE_GRIP_CURL_DEGREES = {
+    **{
+        f"{finger}_{segment}_{side}": angle
+        for side in ("l", "r")
+        for finger in ("middle", "ring", "pinky")
+        for segment, angle in (("01", 48.0), ("02", 62.0), ("03", 42.0))
+    },
+    **{
+        f"index_{segment}_l": angle
+        for segment, angle in (("01", 38.0), ("02", 50.0), ("03", 32.0))
+    },
+    **{
+        f"index_{segment}_r": angle
+        for segment, angle in (("01", 8.0), ("02", 16.0), ("03", 10.0))
+    },
+    **{
+        f"thumb_{segment}_{side}": angle
+        for side in ("l", "r")
+        for segment, angle in (("01", 18.0), ("02", 28.0), ("03", 20.0))
+    },
 }
 
 COLLISION_PREFIXES = ("UCX_", "UBX_", "USP_", "UCP_")
@@ -139,17 +180,20 @@ EQUIPMENT_OPTIONS = [
 
 
 def equipment_options() -> list[dict]:
-    return [
-        {
-            "slug": slug,
-            "name": name,
-            "family": family,
+    options = []
+    for slug, name, family in EQUIPMENT_OPTIONS:
+        transform = RIFLE_EQUIPMENT_TRANSFORMS["Mixamo_RifleReady"] if slug == EQUIPMENT_OPTIONS[0][0] else {
             "position": [0.0, 0.0, 0.0],
             "rotationDeg": [0.0, 90.0, 180.0],
             "scale": [1.0, 1.0, 1.0],
         }
-        for slug, name, family in EQUIPMENT_OPTIONS
-    ]
+        options.append({
+            "slug": slug,
+            "name": name,
+            "family": family,
+            **deepcopy(transform),
+        })
+    return options
 
 
 def yaml_documents(text: str):
@@ -554,6 +598,95 @@ def retarget_low_poly_actions(path: Path) -> None:
     append_generic_animations(path)
 
 
+def append_rifle_grip_channels(document: dict, binary: bytearray, animation_names: tuple[str, ...]) -> None:
+    node_names = {node.get("name", ""): index for index, node in enumerate(document.get("nodes", []))}
+    missing = sorted(set(RIFLE_GRIP_CURL_DEGREES) - set(node_names))
+    if missing:
+        raise ValueError(f"Missing Sidekick finger bones: {missing}")
+    animations = {animation.get("name"): animation for animation in document.get("animations", [])}
+    for animation_name in animation_names:
+        animation = animations[animation_name]
+        duration = max(
+            float(read_accessor(document, binary, sampler["input"])[-1][0])
+            for sampler in animation.get("samplers", [])
+        )
+        time_accessor = append_accessor(
+            document,
+            binary,
+            packed_floats([(0.0,), (duration,)]),
+            5126,
+            "SCALAR",
+            2,
+        )
+        for bone_name, degrees in RIFLE_GRIP_CURL_DEGREES.items():
+            bone_index = node_names[bone_name]
+            rest_rotation = tuple(document["nodes"][bone_index].get("rotation", [0.0, 0.0, 0.0, 1.0]))
+            half_angle = math.radians(degrees) * 0.5
+            grip_rotation = quat_multiply(
+                rest_rotation,
+                (0.0, 0.0, math.sin(half_angle), math.cos(half_angle)),
+            )
+            output_accessor = append_accessor(
+                document,
+                binary,
+                packed_floats([grip_rotation, grip_rotation]),
+                5126,
+                "VEC4",
+                2,
+            )
+            sampler_index = len(animation["samplers"])
+            animation["samplers"].append({
+                "input": time_accessor,
+                "output": output_accessor,
+                "interpolation": "LINEAR",
+            })
+            animation["channels"].append({
+                "sampler": sampler_index,
+                "target": {"node": bone_index, "path": "rotation"},
+            })
+
+
+def clone_animation_as_pose(
+    document: dict,
+    binary: bytearray,
+    source_name: str,
+    target_name: str,
+    duration: float = 1.0,
+) -> dict:
+    source = next(animation for animation in document.get("animations", []) if animation.get("name") == source_name)
+    time_accessor = append_accessor(
+        document,
+        binary,
+        packed_floats([(0.0,), (duration,)]),
+        5126,
+        "SCALAR",
+        2,
+    )
+    pose = {"name": target_name, "samplers": [], "channels": []}
+    for channel in source.get("channels", []):
+        sampler = source["samplers"][channel["sampler"]]
+        values = read_accessor(document, binary, sampler["output"])
+        first_value = tuple(float(value) for value in values[0])
+        output_type = document["accessors"][sampler["output"]]["type"]
+        output_accessor = append_accessor(
+            document,
+            binary,
+            packed_floats([first_value, first_value]),
+            5126,
+            output_type,
+            2,
+        )
+        sampler_index = len(pose["samplers"])
+        pose["samplers"].append({
+            "input": time_accessor,
+            "output": output_accessor,
+            "interpolation": "LINEAR",
+        })
+        pose["channels"].append({"sampler": sampler_index, "target": deepcopy(channel["target"])})
+    document.setdefault("animations", []).append(pose)
+    return {"name": target_name, "source": source_name, "frames": 2, "channels": len(pose["channels"])}
+
+
 def append_mixamo_actions(path: Path) -> list[dict]:
     missing = [source for _name, source in MIXAMO_ACTIONS if not source.is_file()]
     if missing:
@@ -572,8 +705,24 @@ def append_mixamo_actions(path: Path) -> list[dict]:
         )
         for name, source in MIXAMO_ACTIONS
     ]
+    append_rifle_grip_channels(
+        document,
+        binary,
+        ("Mixamo_RifleFireStanding", "Mixamo_RifleRunFire"),
+    )
+    pose_report = clone_animation_as_pose(
+        document,
+        binary,
+        "Mixamo_RifleFireStanding",
+        "Mixamo_RifleReady",
+    )
     extras = document.setdefault("asset", {}).setdefault("extras", {})
     extras["mixamoRetarget"] = {"version": 1, "animations": results}
+    extras["rifleGripPose"] = {
+        "version": 1,
+        "fingerChannels": len(RIFLE_GRIP_CURL_DEGREES),
+        "poseAnimation": pose_report,
+    }
     rig = extras.get("rig")
     if isinstance(rig, dict):
         rig["animations"] = len(document.get("animations", []))
@@ -661,7 +810,10 @@ def build_characters() -> list[dict]:
             if animation["clip"].startswith("Mixamo_Rifle"):
                 animation["name"] = MIXAMO_ACTION_LABELS[animation["clip"]]
                 animation["equipment"] = EQUIPMENT_OPTIONS[0][0]
-                animation["loop"] = animation["clip"] == "Mixamo_RifleRunFire"
+                animation["equipmentTransform"] = deepcopy(RIFLE_EQUIPMENT_TRANSFORMS[animation["clip"]])
+                animation["gripPose"] = "rifle"
+                animation["loop"] = animation["clip"] in {"Mixamo_RifleReady", "Mixamo_RifleRunFire"}
+                animation["kind"] = "idle" if animation["clip"] == "Mixamo_RifleReady" else "attack"
         entry.update({
             "name": f"科幻平民 {index:02d}",
             "category": "人物",
@@ -673,7 +825,7 @@ def build_characters() -> list[dict]:
             "rigSource": "original-unity-sidekick-prefab",
             "textures": {"original": texture_target.relative_to(ROOT).as_posix(), "low": texture_target.relative_to(ROOT).as_posix()},
             "paletteTexture": True,
-            "defaultClip": "Ultimate_Idle_Standing",
+            "defaultClip": "Mixamo_RifleReady",
             "motionAnchorBone": "pelvis",
             "motionAnchorAxes": ["x", "y", "z"],
             "equipmentBone": "hand_r",
@@ -753,15 +905,27 @@ def build_weapons(converter: Path) -> tuple[list[dict], list[dict]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--converter", type=Path, default=DEFAULT_CONVERTER)
+    parser.add_argument("--characters-only", action="store_true")
     args = parser.parse_args()
     if not args.converter.is_file():
         parser.error(f"FBX2glTF converter not found: {args.converter}")
     existing = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     existing = [
         entry for entry in existing
-        if entry.get("packageSlug") not in {"sci-fi-civilians", "sci-fi-battle-weapons"}
+        if entry.get("packageSlug") != "sci-fi-civilians"
+        and (args.characters_only or entry.get("packageSlug") != "sci-fi-battle-weapons")
     ]
     characters = build_characters()
+    if args.characters_only:
+        warnings = json.loads(WARNINGS_PATH.read_text(encoding="utf-8")) if WARNINGS_PATH.is_file() else {}
+        warnings["sci-fi-civilians"] = []
+        WARNINGS_PATH.write_text(json.dumps(warnings, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        write_catalog([*existing, *characters])
+        print(json.dumps({
+            "characters": len(characters),
+            "characterActions": sum(entry["animationCount"] for entry in characters),
+        }, ensure_ascii=False, indent=2))
+        return
     weapons, weapon_warnings = build_weapons(args.converter)
     warnings = json.loads(WARNINGS_PATH.read_text(encoding="utf-8")) if WARNINGS_PATH.is_file() else {}
     warnings["sci-fi-civilians"] = []
