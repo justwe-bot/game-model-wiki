@@ -144,6 +144,11 @@ class UltimatePackCatalogTests(unittest.TestCase):
             for field in ("position", "rotationDeg", "scale"):
                 self.assertEqual(len(animation["equipmentTransform"][field]), 3)
                 self.assertTrue(all(math.isfinite(value) for value in animation["equipmentTransform"][field]))
+            self.assertGreater(
+                animation["equipmentTransform"]["rotationDeg"][0],
+                180.0,
+                "rifle must be rolled grip-down around its local barrel axis",
+            )
         self.assertEqual(civilian["mixamoActionSource"], {
             "provider": "Adobe Mixamo",
             "motion": "Firing Rifle",

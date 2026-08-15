@@ -129,17 +129,17 @@ MIXAMO_ACTION_LABELS = {
 RIFLE_EQUIPMENT_TRANSFORMS = {
     "Mixamo_RifleReady": {
         "position": [-0.1018, -0.0042, 0.0798],
-        "rotationDeg": [6.663, -61.199, -84.155],
+        "rotationDeg": [186.663, -61.199, -84.155],
         "scale": [1.0, 1.0, 1.0],
     },
     "Mixamo_RifleFireStanding": {
         "position": [-0.1018, -0.0042, 0.0798],
-        "rotationDeg": [6.663, -61.199, -84.155],
+        "rotationDeg": [186.663, -61.199, -84.155],
         "scale": [1.0, 1.0, 1.0],
     },
     "Mixamo_RifleRunFire": {
         "position": [-0.0820, -0.0084, 0.0870],
-        "rotationDeg": [9.551, -47.649, -82.912],
+        "rotationDeg": [189.551, -47.649, -82.912],
         "scale": [1.0, 1.0, 1.0],
     },
 }
