@@ -328,7 +328,7 @@
     function configureTexture(texture, lowQuality, usage, entry) {
       if (!texture) return;
       texture.colorSpace = usage === 'color' ? THREE.SRGBColorSpace : THREE.NoColorSpace;
-      texture.flipY = false;
+      texture.flipY = entry.textureFlipY ?? false;
       texture.wrapS = entry.paletteTexture ? THREE.ClampToEdgeWrapping : THREE.RepeatWrapping;
       texture.wrapT = entry.paletteTexture ? THREE.ClampToEdgeWrapping : THREE.RepeatWrapping;
       texture.generateMipmaps = !entry.paletteTexture;

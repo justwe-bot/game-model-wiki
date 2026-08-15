@@ -56,6 +56,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
     def test_action_specific_equipment_transform_is_applied(self) -> None:
         index_html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("function applyEquipmentTransform(equipment, transform)", index_html)
+        self.assertIn("texture.flipY = entry.textureFlipY ?? false", index_html)
         self.assertIn(
             "animation?.equipmentTransform ?? selectedEquipmentOption()",
             index_html,
@@ -115,6 +116,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertIn("pelvis", {node.get("name") for node in civilian_document["nodes"]})
         self.assertGreaterEqual(len(civilian_document["skins"][0]["joints"]), 88)
         self.assertTrue(civilian["paletteTexture"])
+        self.assertTrue(civilian["textureFlipY"])
         self.assertEqual(civilian["equipmentBone"], "hand_r")
         self.assertEqual(civilian["defaultEquipment"], "sci-fi-battle-weapons-scifirifle01-1")
         self.assertEqual(len(civilian["equipmentOptions"]), 7)
