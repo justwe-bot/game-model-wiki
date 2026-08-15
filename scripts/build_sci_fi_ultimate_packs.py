@@ -126,20 +126,21 @@ MIXAMO_ACTION_LABELS = {
     "Mixamo_RifleRunFire": "步枪跑动射击",
 }
 
+# Calibrated from the rifle's local trigger grip and foregrip to the Sidekick palm centers.
 RIFLE_EQUIPMENT_TRANSFORMS = {
     "Mixamo_RifleReady": {
-        "position": [-0.1018, -0.0042, 0.0798],
-        "rotationDeg": [186.663, -61.199, -84.155],
+        "position": [-0.149029, -0.056048, 0.000132],
+        "rotationDeg": [176.583, 60.904, 47.410],
         "scale": [1.0, 1.0, 1.0],
     },
     "Mixamo_RifleFireStanding": {
-        "position": [-0.1018, -0.0042, 0.0798],
-        "rotationDeg": [186.663, -61.199, -84.155],
+        "position": [-0.149029, -0.056048, 0.000132],
+        "rotationDeg": [176.583, 60.904, 47.410],
         "scale": [1.0, 1.0, 1.0],
     },
     "Mixamo_RifleRunFire": {
-        "position": [-0.0820, -0.0084, 0.0870],
-        "rotationDeg": [189.551, -47.649, -82.912],
+        "position": [-0.157476, -0.035763, 0.005702],
+        "rotationDeg": [183.367, 48.910, 65.647],
         "scale": [1.0, 1.0, 1.0],
     },
 }

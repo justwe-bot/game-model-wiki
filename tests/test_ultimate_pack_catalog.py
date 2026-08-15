@@ -141,16 +141,29 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertFalse(mixamo_animations["Mixamo_RifleFireStanding"]["loop"])
         self.assertTrue(mixamo_animations["Mixamo_RifleRunFire"]["loop"])
         self.assertEqual(mixamo_animations["Mixamo_RifleReady"]["kind"], "idle")
-        for animation in mixamo_animations.values():
+        expected_equipment_transforms = {
+            "Mixamo_RifleReady": {
+                "position": [-0.149029, -0.056048, 0.000132],
+                "rotationDeg": [176.583, 60.904, 47.410],
+                "scale": [1.0, 1.0, 1.0],
+            },
+            "Mixamo_RifleFireStanding": {
+                "position": [-0.149029, -0.056048, 0.000132],
+                "rotationDeg": [176.583, 60.904, 47.410],
+                "scale": [1.0, 1.0, 1.0],
+            },
+            "Mixamo_RifleRunFire": {
+                "position": [-0.157476, -0.035763, 0.005702],
+                "rotationDeg": [183.367, 48.910, 65.647],
+                "scale": [1.0, 1.0, 1.0],
+            },
+        }
+        for clip_name, animation in mixamo_animations.items():
             self.assertEqual(animation["gripPose"], "rifle")
             for field in ("position", "rotationDeg", "scale"):
                 self.assertEqual(len(animation["equipmentTransform"][field]), 3)
                 self.assertTrue(all(math.isfinite(value) for value in animation["equipmentTransform"][field]))
-            self.assertGreater(
-                animation["equipmentTransform"]["rotationDeg"][0],
-                180.0,
-                "rifle must be rolled grip-down around its local barrel axis",
-            )
+            self.assertEqual(animation["equipmentTransform"], expected_equipment_transforms[clip_name])
         self.assertEqual(civilian["mixamoActionSource"], {
             "provider": "Adobe Mixamo",
             "motion": "Firing Rifle",
