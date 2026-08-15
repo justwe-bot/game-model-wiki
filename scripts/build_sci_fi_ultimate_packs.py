@@ -825,6 +825,7 @@ def build_characters() -> list[dict]:
             "rigSource": "original-unity-sidekick-prefab",
             "textures": {"original": texture_target.relative_to(ROOT).as_posix(), "low": texture_target.relative_to(ROOT).as_posix()},
             "paletteTexture": True,
+            "textureFlipY": True,
             "defaultClip": "Mixamo_RifleReady",
             "motionAnchorBone": "pelvis",
             "motionAnchorAxes": ["x", "y", "z"],
