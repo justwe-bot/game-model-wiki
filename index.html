@@ -446,6 +446,16 @@
       return options.find(option => option.slug === selectedSlug) ?? null;
     }
 
+    function defaultClipForEquipment(entry = activeEntry) {
+      const option = selectedEquipmentOption(entry);
+      if (option?.defaultClip) return option.defaultClip;
+      if (entry?.equipmentOptions?.length) {
+        return entry.animations?.find(animation => !animation.weaponActionFamily && animation.kind === 'idle')?.clip
+          ?? entry.defaultClip;
+      }
+      return entry?.defaultClip;
+    }
+
     function applyEquipmentTransform(equipment, transform) {
       if (!equipment || !transform) return;
       equipment.position.fromArray(transform.position ?? [0, 0, 0]);
@@ -455,6 +465,13 @@
         equipment.rotation.set(...(transform.rotationDeg ?? [0, 0, 0]).map(THREE.MathUtils.degToRad));
       }
       equipment.scale.fromArray(transform.scale ?? [1, 1, 1]);
+    }
+
+    function equipmentTransformForAction(animation, option = selectedEquipmentOption()) {
+      if (!option) return null;
+      return option.actionTransforms?.[animation?.clip]
+        ?? animation?.equipmentTransform
+        ?? option;
     }
 
     async function attachEquipment(model, variant) {
@@ -532,7 +549,7 @@
       action.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, loop ? Infinity : 1);
       action.play();
       const animation = activeEntry.animations?.find(item => item.clip === clipName);
-      applyEquipmentTransform(slot.equipment?.model, animation?.equipmentTransform ?? selectedEquipmentOption());
+      applyEquipmentTransform(slot.equipment?.model, equipmentTransformForAction(animation));
       slot.action = action;
       slot.playingDefault = loop;
       return true;
@@ -542,7 +559,7 @@
       currentSkillClip = null;
       document.querySelectorAll('.skill').forEach(button => button.classList.remove('active'));
       if (activeEntry.animationPreviewDisabled) return;
-      activeSlots.forEach(slot => playOnSlot(slot, activeEntry.defaultClip, true));
+      activeSlots.forEach(slot => playOnSlot(slot, defaultClipForEquipment(), true));
     }
 
     function playClip(clipName, loop = false) {
@@ -573,7 +590,7 @@
       const mixer = new THREE.AnimationMixer(model);
       const previewClip = activeEntry.animationPreviewDisabled
         ? null
-        : gltf.animations.find(clip => clip.name === activeEntry.defaultClip);
+        : gltf.animations.find(clip => clip.name === defaultClipForEquipment());
       if (previewClip) {
         mixer.clipAction(previewClip).play();
         mixer.update(0);
@@ -674,7 +691,11 @@
         if (activeMode === 'compare') return animation.variants.includes('original') && animation.variants.includes('low');
         return animation.variants.includes(activeMode);
       });
-      const items = prefix ? variantItems.filter(animation => animation.clip.startsWith(`${prefix}|`)) : variantItems;
+      const actionFamily = selectedEquipmentOption(entry)?.actionFamily;
+      const equipmentItems = variantItems.filter(animation => (
+        !animation.weaponActionFamily || animation.weaponActionFamily === actionFamily
+      ));
+      const items = prefix ? equipmentItems.filter(animation => animation.clip.startsWith(`${prefix}|`)) : equipmentItems;
       const priority = { attack: 0, movement: 1, idle: 2, spawn: 3, hurt: 4, death: 5, other: 6 };
       return items.sort((a, b) => (priority[a.kind] ?? 9) - (priority[b.kind] ?? 9) || a.name.localeCompare(b.name));
     }
@@ -713,8 +734,9 @@
         option.textContent = animation.name;
         select.appendChild(option);
       });
-      if (animations.some(animation => animation.clip === entry.defaultClip)) {
-        select.value = entry.defaultClip;
+      const equipmentDefaultClip = defaultClipForEquipment(entry);
+      if (animations.some(animation => animation.clip === equipmentDefaultClip)) {
+        select.value = equipmentDefaultClip;
       }
 
       const equipmentSelect = document.querySelector('#equipmentSelect');
@@ -899,11 +921,12 @@
     });
     document.querySelector('#equipmentSelect').addEventListener('change', async event => {
       equippedByEntry.set(activeEntry.slug, event.target.value);
+      renderDetails(activeEntry);
       await loadActiveModels();
     });
     document.querySelector('#removeEquipmentButton').addEventListener('click', async () => {
       equippedByEntry.set(activeEntry.slug, '');
-      document.querySelector('#equipmentSelect').value = '';
+      renderDetails(activeEntry);
       await loadActiveModels();
     });
 

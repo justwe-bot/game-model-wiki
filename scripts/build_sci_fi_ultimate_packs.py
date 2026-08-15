@@ -118,18 +118,32 @@ MIXAMO_TO_SIDEKICK = (
 MIXAMO_ACTIONS = (
     ("Mixamo_RifleFireStanding", MIXAMO_ACTION_ROOT / "rifle-fire-standing.glb"),
     ("Mixamo_RifleRunFire", MIXAMO_ACTION_ROOT / "rifle-run-fire-inplace.glb"),
+    ("Mixamo_PistolReady", MIXAMO_ACTION_ROOT / "pistol-ready.glb"),
+    ("Mixamo_PistolFireStanding", MIXAMO_ACTION_ROOT / "pistol-fire-standing.glb"),
+    ("Mixamo_PistolRun", MIXAMO_ACTION_ROOT / "pistol-run-inplace.glb"),
 )
 
 MIXAMO_ACTION_LABELS = {
     "Mixamo_RifleReady": "步枪持枪待机",
     "Mixamo_RifleFireStanding": "步枪站立射击",
     "Mixamo_RifleRunFire": "步枪跑动射击",
+    "Mixamo_PistolReady": "手枪双手警戒",
+    "Mixamo_PistolFireStanding": "手枪站立射击",
+    "Mixamo_PistolRun": "手枪瞄准跑步",
 }
 
 # Rifle-local anchors measured from the side profile. +Z points from stock to muzzle.
 RIFLE_GRIP_PROFILE = {
     "rightGrip": [0.0, -0.075, -0.085],
     "supportGrip": [0.0, -0.035, 0.255],
+    "muzzleAxis": [0.0, 0.0, 1.0],
+    "upAxis": [0.0, 1.0, 0.0],
+}
+
+# Pistol-local palm anchor measured from the side profile. The weapon uses the
+# same +Z stock-to-muzzle axis as the rifle, but its grip is closer to origin.
+PISTOL_GRIP_PROFILE = {
+    "rightGrip": [0.0, -0.048, -0.060],
     "muzzleAxis": [0.0, 0.0, 1.0],
     "upAxis": [0.0, 1.0, 0.0],
 }
@@ -151,6 +165,17 @@ RIFLE_EQUIPMENT_TRANSFORMS = {
         "rotationQuaternion": [0.746999, 0.194202, 0.518711, -0.367719],
         "scale": [1.036815, 1.036815, 1.036815],
     },
+}
+
+PISTOL_EQUIPMENT_TRANSFORM = {
+    "position": [0.066654, 0.006463, -0.037675],
+    "rotationQuaternion": [0.731112, -0.047561, 0.519142, -0.440119],
+    "scale": [1.0, 1.0, 1.0],
+}
+
+PISTOL_EQUIPMENT_TRANSFORMS = {
+    clip_name: deepcopy(PISTOL_EQUIPMENT_TRANSFORM)
+    for clip_name in ("Mixamo_PistolReady", "Mixamo_PistolFireStanding", "Mixamo_PistolRun")
 }
 
 RIFLE_GRIP_CURL_DEGREES = {
@@ -175,6 +200,31 @@ RIFLE_GRIP_CURL_DEGREES = {
     },
 }
 
+PISTOL_GRIP_CURL_DEGREES = {
+    **{
+        f"{finger}_{segment}_r": angle
+        for finger in ("middle", "ring", "pinky")
+        for segment, angle in (("01", 52.0), ("02", 68.0), ("03", 46.0))
+    },
+    **{
+        f"index_{segment}_r": angle
+        for segment, angle in (("01", 6.0), ("02", 12.0), ("03", 8.0))
+    },
+    **{
+        f"thumb_{segment}_r": angle
+        for segment, angle in (("01", 20.0), ("02", 32.0), ("03", 22.0))
+    },
+    **{
+        f"{finger}_{segment}_l": angle
+        for finger in ("index", "middle", "ring", "pinky")
+        for segment, angle in (("01", 34.0), ("02", 48.0), ("03", 30.0))
+    },
+    **{
+        f"thumb_{segment}_l": angle
+        for segment, angle in (("01", 16.0), ("02", 24.0), ("03", 18.0))
+    },
+}
+
 COLLISION_PREFIXES = ("UCX_", "UBX_", "USP_", "UCP_")
 
 EQUIPMENT_OPTIONS = [
@@ -191,19 +241,29 @@ EQUIPMENT_OPTIONS = [
 def equipment_options() -> list[dict]:
     options = []
     for slug, name, family in EQUIPMENT_OPTIONS:
-        transform = RIFLE_EQUIPMENT_TRANSFORMS["Mixamo_RifleReady"] if slug == EQUIPMENT_OPTIONS[0][0] else {
-            "position": [0.0, 0.0, 0.0],
-            "rotationDeg": [0.0, 90.0, 180.0],
-            "scale": [1.0, 1.0, 1.0],
-        }
+        if slug == EQUIPMENT_OPTIONS[0][0]:
+            transform = RIFLE_EQUIPMENT_TRANSFORMS["Mixamo_RifleReady"]
+        elif slug == EQUIPMENT_OPTIONS[1][0]:
+            transform = PISTOL_EQUIPMENT_TRANSFORM
+        else:
+            transform = {
+                "position": [0.0, 0.0, 0.0],
+                "rotationDeg": [0.0, 90.0, 180.0],
+                "scale": [1.0, 1.0, 1.0],
+            }
         options.append({
             "slug": slug,
             "name": name,
             "family": family,
+            "actionFamily": "pistol" if family == "pistol" else "rifle",
+            "defaultClip": "Mixamo_PistolReady" if family == "pistol" else "Mixamo_RifleReady",
             **deepcopy(transform),
         })
         if slug == EQUIPMENT_OPTIONS[0][0]:
             options[-1]["gripProfile"] = deepcopy(RIFLE_GRIP_PROFILE)
+        elif slug == EQUIPMENT_OPTIONS[1][0]:
+            options[-1]["gripProfile"] = deepcopy(PISTOL_GRIP_PROFILE)
+            options[-1]["actionTransforms"] = deepcopy(PISTOL_EQUIPMENT_TRANSFORMS)
     return options
 
 
@@ -609,9 +669,14 @@ def retarget_low_poly_actions(path: Path) -> None:
     append_generic_animations(path)
 
 
-def append_rifle_grip_channels(document: dict, binary: bytearray, animation_names: tuple[str, ...]) -> None:
+def append_grip_channels(
+    document: dict,
+    binary: bytearray,
+    animation_names: tuple[str, ...],
+    curl_degrees: dict[str, float],
+) -> None:
     node_names = {node.get("name", ""): index for index, node in enumerate(document.get("nodes", []))}
-    missing = sorted(set(RIFLE_GRIP_CURL_DEGREES) - set(node_names))
+    missing = sorted(set(curl_degrees) - set(node_names))
     if missing:
         raise ValueError(f"Missing Sidekick finger bones: {missing}")
     animations = {animation.get("name"): animation for animation in document.get("animations", [])}
@@ -629,7 +694,7 @@ def append_rifle_grip_channels(document: dict, binary: bytearray, animation_name
             "SCALAR",
             2,
         )
-        for bone_name, degrees in RIFLE_GRIP_CURL_DEGREES.items():
+        for bone_name, degrees in curl_degrees.items():
             bone_index = node_names[bone_name]
             rest_rotation = tuple(document["nodes"][bone_index].get("rotation", [0.0, 0.0, 0.0, 1.0]))
             half_angle = math.radians(degrees) * 0.5
@@ -716,10 +781,17 @@ def append_mixamo_actions(path: Path) -> list[dict]:
         )
         for name, source in MIXAMO_ACTIONS
     ]
-    append_rifle_grip_channels(
+    append_grip_channels(
         document,
         binary,
         ("Mixamo_RifleFireStanding", "Mixamo_RifleRunFire"),
+        RIFLE_GRIP_CURL_DEGREES,
+    )
+    append_grip_channels(
+        document,
+        binary,
+        ("Mixamo_PistolReady", "Mixamo_PistolFireStanding", "Mixamo_PistolRun"),
+        PISTOL_GRIP_CURL_DEGREES,
     )
     pose_report = clone_animation_as_pose(
         document,
@@ -733,6 +805,11 @@ def append_mixamo_actions(path: Path) -> list[dict]:
         "version": 1,
         "fingerChannels": len(RIFLE_GRIP_CURL_DEGREES),
         "poseAnimation": pose_report,
+    }
+    extras["pistolGripPose"] = {
+        "version": 1,
+        "fingerChannels": len(PISTOL_GRIP_CURL_DEGREES),
+        "animations": ["Mixamo_PistolReady", "Mixamo_PistolFireStanding", "Mixamo_PistolRun"],
     }
     rig = extras.get("rig")
     if isinstance(rig, dict):
@@ -825,6 +902,15 @@ def build_characters() -> list[dict]:
                 animation["gripPose"] = "rifle"
                 animation["loop"] = animation["clip"] in {"Mixamo_RifleReady", "Mixamo_RifleRunFire"}
                 animation["kind"] = "idle" if animation["clip"] == "Mixamo_RifleReady" else "attack"
+                animation["weaponActionFamily"] = "rifle"
+            elif animation["clip"].startswith("Mixamo_Pistol"):
+                animation["name"] = MIXAMO_ACTION_LABELS[animation["clip"]]
+                animation["equipment"] = EQUIPMENT_OPTIONS[1][0]
+                animation["equipmentTransform"] = deepcopy(PISTOL_EQUIPMENT_TRANSFORMS[animation["clip"]])
+                animation["gripPose"] = "pistol"
+                animation["loop"] = animation["clip"] in {"Mixamo_PistolReady", "Mixamo_PistolRun"}
+                animation["kind"] = "idle" if animation["clip"] == "Mixamo_PistolReady" else "attack"
+                animation["weaponActionFamily"] = "pistol"
         entry.update({
             "name": f"科幻平民 {index:02d}",
             "category": "人物",
@@ -846,7 +932,12 @@ def build_characters() -> list[dict]:
             "sharedPackageActions": [animation.get("name") for animation in report["animations"]],
             "mixamoActionSource": {
                 "provider": "Adobe Mixamo",
-                "motion": "Firing Rifle",
+                "motions": [
+                    "Firing Rifle",
+                    "Pistol Idle - Ready Alert Two Hand Pistol Grip",
+                    "Shooting - Firing A Gun",
+                    "Pistol Run - Running With Aimed Pistol",
+                ],
                 "skin": "Without Skin",
                 "fps": 30,
                 "keyframeReduction": "none",

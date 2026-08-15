@@ -15,7 +15,7 @@ EXPECTED = {
     "monsters-03": (16, 285),
     "low-poly-10": (3137, 44452),
     "stylized-weapons": (648, 0),
-    "sci-fi-civilians": (6, 132),
+    "sci-fi-civilians": (6, 150),
     "sci-fi-battle-weapons": (35, 0),
 }
 
@@ -56,7 +56,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
         game = next(item for item in self.games if item["slug"] == "ultimate-pack")
         self.assertEqual(game["catalog"], "games/ultimate-pack/catalog.json")
         self.assertIn("3,872 个模型", game["subtitle"])
-        self.assertIn("45,436 组动作", game["subtitle"])
+        self.assertIn("45,454 组动作", game["subtitle"])
         self.assertIn("人物", game["tiers"])
         self.assertIn("科幻武器", game["tiers"])
         counts = Counter(entry["packageSlug"] for entry in self.catalog)
@@ -72,9 +72,12 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertIn("equipment.quaternion.fromArray(transform.rotationQuaternion).normalize()", index_html)
         self.assertIn("texture.flipY = entry.textureFlipY ?? false", index_html)
         self.assertIn(
-            "animation?.equipmentTransform ?? selectedEquipmentOption()",
+            "option.actionTransforms?.[animation?.clip]",
             index_html,
         )
+        self.assertIn("equipmentTransformForAction(animation)", index_html)
+        self.assertIn("function defaultClipForEquipment(entry = activeEntry)", index_html)
+        self.assertIn("animation.weaponActionFamily === actionFamily", index_html)
 
     def test_all_models_and_actions_are_valid(self) -> None:
         self.assertEqual(len(self.catalog), 3872)
@@ -123,7 +126,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
     def test_sci_fi_characters_and_weapons(self) -> None:
         entries = {entry["slug"]: entry for entry in self.catalog}
         civilian = entries["sci-fi-civilians-scificivilians-01"]
-        self.assertEqual(civilian["animationCount"], 22)
+        self.assertEqual(civilian["animationCount"], 25)
         self.assertEqual(civilian["defaultClip"], "Mixamo_RifleReady")
         self.assertEqual(civilian["motionAnchorBone"], "pelvis")
         civilian_document = read_glb(ROOT / civilian["models"]["original"])
@@ -143,11 +146,28 @@ class UltimatePackCatalogTests(unittest.TestCase):
             "Mixamo_RifleReady",
             "Mixamo_RifleFireStanding",
             "Mixamo_RifleRunFire",
+            "Mixamo_PistolReady",
+            "Mixamo_PistolFireStanding",
+            "Mixamo_PistolRun",
         })
+        rifle_animations = {
+            clip: animation for clip, animation in mixamo_animations.items()
+            if clip.startswith("Mixamo_Rifle")
+        }
+        pistol_animations = {
+            clip: animation for clip, animation in mixamo_animations.items()
+            if clip.startswith("Mixamo_Pistol")
+        }
         self.assertTrue(all(
             animation["equipment"] == "sci-fi-battle-weapons-scifirifle01-1"
-            for animation in mixamo_animations.values()
+            for animation in rifle_animations.values()
         ))
+        self.assertTrue(all(
+            animation["equipment"] == "sci-fi-battle-weapons-scifipistol01-1"
+            for animation in pistol_animations.values()
+        ))
+        self.assertTrue(all(animation["weaponActionFamily"] == "rifle" for animation in rifle_animations.values()))
+        self.assertTrue(all(animation["weaponActionFamily"] == "pistol" for animation in pistol_animations.values()))
         self.assertEqual(mixamo_animations["Mixamo_RifleReady"]["name"], "步枪持枪待机")
         self.assertEqual(mixamo_animations["Mixamo_RifleFireStanding"]["name"], "步枪站立射击")
         self.assertEqual(mixamo_animations["Mixamo_RifleRunFire"]["name"], "步枪跑动射击")
@@ -165,7 +185,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
             if equipment["slug"] == "sci-fi-battle-weapons-scifirifle01-1"
         )
         grip = rifle_option["gripProfile"]
-        for clip_name, animation in mixamo_animations.items():
+        for clip_name, animation in rifle_animations.items():
             self.assertEqual(animation["gripPose"], "rifle")
             for field in ("position", "scale"):
                 self.assertEqual(len(animation["equipmentTransform"][field]), 3)
@@ -195,14 +215,12 @@ class UltimatePackCatalogTests(unittest.TestCase):
             dot = sum(muzzle_direction[index] * support_direction[index] for index in range(3))
             magnitude = math.sqrt(sum(value * value for value in support_direction))
             self.assertGreater(dot / magnitude, 0.98)
-        self.assertEqual(civilian["mixamoActionSource"], {
-            "provider": "Adobe Mixamo",
-            "motion": "Firing Rifle",
-            "skin": "Without Skin",
-            "fps": 30,
-            "keyframeReduction": "none",
-            "runInPlace": True,
-        })
+        self.assertEqual(civilian["mixamoActionSource"]["provider"], "Adobe Mixamo")
+        self.assertEqual(civilian["mixamoActionSource"]["skin"], "Without Skin")
+        self.assertEqual(civilian["mixamoActionSource"]["fps"], 30)
+        self.assertEqual(civilian["mixamoActionSource"]["keyframeReduction"], "none")
+        self.assertTrue(civilian["mixamoActionSource"]["runInPlace"])
+        self.assertIn("Pistol Idle - Ready Alert Two Hand Pistol Grip", civilian["mixamoActionSource"]["motions"])
         for character_index in range(1, 7):
             character = entries[f"sci-fi-civilians-scificivilians-{character_index:02d}"]
             character_document = read_glb(ROOT / character["models"]["original"])
@@ -211,14 +229,27 @@ class UltimatePackCatalogTests(unittest.TestCase):
             self.assertIn("Mixamo_RifleFireStanding", character_animation_names)
             self.assertIn("Mixamo_RifleRunFire", character_animation_names)
             self.assertIn("Mixamo_RifleReady", character_animation_names)
-            self.assertEqual(len(character_document["animations"]), 22)
+            self.assertIn("Mixamo_PistolReady", character_animation_names)
+            self.assertIn("Mixamo_PistolFireStanding", character_animation_names)
+            self.assertIn("Mixamo_PistolRun", character_animation_names)
+            self.assertEqual(len(character_document["animations"]), 25)
             mixamo_report = character_document["asset"]["extras"]["mixamoRetarget"]["animations"]
-            self.assertEqual({animation["frames"] for animation in mixamo_report}, {9, 18})
+            self.assertEqual({animation["frames"] for animation in mixamo_report}, {9, 18, 23, 36, 121})
             self.assertTrue(all(animation["channels"] == 23 for animation in mixamo_report))
             grip_report = character_document["asset"]["extras"]["rifleGripPose"]
             self.assertEqual(grip_report["fingerChannels"], 30)
             self.assertEqual(grip_report["poseAnimation"]["channels"], 53)
-            for clip_name in ("Mixamo_RifleReady", "Mixamo_RifleFireStanding", "Mixamo_RifleRunFire"):
+            pistol_grip_report = character_document["asset"]["extras"]["pistolGripPose"]
+            self.assertEqual(pistol_grip_report["fingerChannels"], 30)
+            self.assertEqual(set(pistol_grip_report["animations"]), set(pistol_animations))
+            for clip_name in (
+                "Mixamo_RifleReady",
+                "Mixamo_RifleFireStanding",
+                "Mixamo_RifleRunFire",
+                "Mixamo_PistolReady",
+                "Mixamo_PistolFireStanding",
+                "Mixamo_PistolRun",
+            ):
                 clip = next(animation for animation in character_document["animations"] if animation["name"] == clip_name)
                 finger_targets = {
                     character_document["nodes"][channel["target"]["node"]].get("name")
@@ -246,6 +277,25 @@ class UltimatePackCatalogTests(unittest.TestCase):
             self.assertLess(grip["rightGrip"][2], grip["supportGrip"][2])
             self.assertEqual(grip["muzzleAxis"], [0.0, 0.0, 1.0])
             self.assertEqual(grip["upAxis"], [0.0, 1.0, 0.0])
+
+            pistol_option = next(
+                equipment for equipment in character["equipmentOptions"]
+                if equipment["slug"] == "sci-fi-battle-weapons-scifipistol01-1"
+            )
+            pistol_grip = pistol_option["gripProfile"]
+            self.assertEqual(pistol_option["actionFamily"], "pistol")
+            self.assertEqual(pistol_option["defaultClip"], "Mixamo_PistolReady")
+            self.assertEqual(set(pistol_option["actionTransforms"]), set(pistol_animations))
+            for transform in pistol_option["actionTransforms"].values():
+                quaternion = transform["rotationQuaternion"]
+                scaled_grip = [value * transform["scale"][0] for value in pistol_grip["rightGrip"]]
+                grip_socket = [
+                    transform["position"][axis] + rotate_vector(quaternion, scaled_grip)[axis]
+                    for axis in range(3)
+                ]
+                self.assertLess(math.dist(grip_socket, [0.0, 0.0, 0.0]), 0.00001)
+                muzzle_direction = rotate_vector(quaternion, pistol_grip["muzzleAxis"])
+                self.assertGreater(sum(value * value for value in muzzle_direction), 0.999)
 
         rifle = entries["sci-fi-battle-weapons-scifirifle01-1"]
         self.assertTrue(rifle["textures"]["original"])
