@@ -94,9 +94,10 @@
     .stat { padding: 14px 10px 14px 0; min-width: 0; }
     .stat b { display: block; font-size: 19px; color: var(--text); overflow: hidden; text-overflow: ellipsis; }
     .stat span { display: block; margin-top: 3px; color: var(--faint); font-size: 11px; }
-    .animation-row { margin-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
-    .animation-row select { min-width: 0; height: 38px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--text); padding: 0 9px; outline: 0; }
-    .animation-row .icon-button { border: 1px solid var(--line); background: var(--surface); }
+    .animation-row, .equipment-row { margin-top: 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+    .equipment-row { margin-top: 8px; }
+    .animation-row select, .equipment-row select { min-width: 0; height: 38px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--text); padding: 0 9px; outline: 0; }
+    .animation-row .icon-button, .equipment-row .icon-button { border: 1px solid var(--line); background: var(--surface); }
     .skill-list { display: grid; gap: 8px; }
     .skill { width: 100%; min-height: 82px; padding: 12px 14px; border: 1px solid var(--line-soft); border-radius: 6px; background: transparent; cursor: pointer; text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 16px; }
     .skill:hover { border-color: var(--line); background: var(--surface); }
@@ -199,6 +200,10 @@
             <select id="animationSelect" aria-label="动作选择"></select>
             <button class="icon-button" id="playSelectedButton" title="播放所选动作"><i data-lucide="play"></i></button>
           </div>
+          <div class="equipment-row" hidden>
+            <select id="equipmentSelect" aria-label="武器选择"></select>
+            <button class="icon-button" id="removeEquipmentButton" title="卸下武器"><i data-lucide="x"></i></button>
+          </div>
         </div>
         <div class="skills">
           <h2>技能与攻击形式</h2>
@@ -216,9 +221,9 @@
     import * as THREE from 'three';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users } from 'lucide';
+    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users, X } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users };
+    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users, X };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -281,6 +286,16 @@
     let rotating = true;
     let currentSkillClip = null;
     let stageVisible = true;
+    const equippedByEntry = new Map();
+
+    if (initialParams.has('qa')) {
+      window.__wikiModelQa = {
+        scene,
+        camera,
+        controls,
+        getActiveSlots: () => activeSlots,
+      };
+    }
 
     document.querySelectorAll('.mode-button').forEach(button => {
       button.classList.toggle('active', button.dataset.mode === activeMode);
@@ -309,6 +324,9 @@
       slot.texture?.dispose();
       slot.emissiveTexture?.dispose();
       slot.normalTexture?.dispose();
+      slot.equipment?.texture?.dispose();
+      slot.equipment?.emissiveTexture?.dispose();
+      slot.equipment?.normalTexture?.dispose();
     }
 
     function clearModels() {
@@ -316,14 +334,18 @@
       activeSlots = [];
     }
 
-    function configureTexture(texture, lowQuality, usage) {
+    function configureTexture(texture, lowQuality, usage, entry) {
       if (!texture) return;
       texture.colorSpace = usage === 'color' ? THREE.SRGBColorSpace : THREE.NoColorSpace;
-      texture.flipY = false;
-      texture.wrapS = THREE.RepeatWrapping;
-      texture.wrapT = THREE.RepeatWrapping;
-      texture.generateMipmaps = true;
-      if (lowQuality) {
+      texture.flipY = entry.textureFlipY ?? false;
+      texture.wrapS = entry.paletteTexture ? THREE.ClampToEdgeWrapping : THREE.RepeatWrapping;
+      texture.wrapT = entry.paletteTexture ? THREE.ClampToEdgeWrapping : THREE.RepeatWrapping;
+      texture.generateMipmaps = !entry.paletteTexture;
+      if (entry.paletteTexture) {
+        texture.magFilter = THREE.NearestFilter;
+        texture.minFilter = THREE.NearestFilter;
+        texture.anisotropy = 1;
+      } else if (lowQuality) {
         texture.magFilter = THREE.NearestFilter;
         texture.minFilter = THREE.NearestMipmapNearestFilter;
         texture.anisotropy = 1;
@@ -335,28 +357,28 @@
       texture.needsUpdate = true;
     }
 
-    function applyTexture(root, texture, emissiveTexture, normalTexture, lowQuality, variant) {
-      configureTexture(texture, lowQuality, 'color');
-      configureTexture(emissiveTexture, lowQuality, 'color');
-      configureTexture(normalTexture, lowQuality, 'data');
+    function applyTexture(entry, root, texture, emissiveTexture, normalTexture, lowQuality, variant) {
+      configureTexture(texture, lowQuality, 'color', entry);
+      configureTexture(emissiveTexture, lowQuality, 'color', entry);
+      configureTexture(normalTexture, lowQuality, 'data', entry);
       root.traverse(object => {
         if (!object.isMesh) return;
         if (!object.geometry.getAttribute('normal')) object.geometry.computeVertexNormals();
         const source = Array.isArray(object.material) ? object.material : [object.material];
-        const hasMaterialProfiles = Object.keys(activeEntry.materialProfiles ?? {}).length > 0;
-        const textureMaterialNames = activeEntry.textureMaterialNamesByVariant?.[variant];
+        const hasMaterialProfiles = Object.keys(entry.materialProfiles ?? {}).length > 0;
+        const textureMaterialNames = entry.textureMaterialNamesByVariant?.[variant];
         const usesExternalTexture = material => !textureMaterialNames || textureMaterialNames.includes(material?.name);
-        if (activeEntry.preserveMaterials && !hasMaterialProfiles && !texture && !emissiveTexture && !normalTexture) {
+        if (entry.preserveMaterials && !hasMaterialProfiles && !texture && !emissiveTexture && !normalTexture) {
           const materials = source.map(material => {
             const next = material.clone();
             next.flatShading = lowQuality;
             next.roughness = lowQuality ? 0.95 : 0.82;
-            if (activeEntry.embeddedMaterialMetalness != null && 'metalness' in next) {
-              next.metalness = activeEntry.embeddedMaterialMetalness;
+            if (entry.embeddedMaterialMetalness != null && 'metalness' in next) {
+              next.metalness = entry.embeddedMaterialMetalness;
             }
-            if (activeEntry.embeddedMaterialEmissiveColor && next.emissive) {
-              next.emissive.set(activeEntry.embeddedMaterialEmissiveColor);
-              next.emissiveIntensity = activeEntry.embeddedMaterialEmissiveIntensity ?? 1;
+            if (entry.embeddedMaterialEmissiveColor && next.emissive) {
+              next.emissive.set(entry.embeddedMaterialEmissiveColor);
+              next.emissiveIntensity = entry.embeddedMaterialEmissiveIntensity ?? 1;
             }
             next.needsUpdate = true;
             return next;
@@ -365,35 +387,35 @@
           object.frustumCulled = false;
           return;
         }
-        const isClayCannon = activeEntry.slug === 'claybruiser' && object.name.includes('Cannon');
+        const isClayCannon = entry.slug === 'claybruiser' && object.name.includes('Cannon');
         const materials = source.map(material => {
-          if (activeEntry.preserveMaterials && !hasMaterialProfiles && !usesExternalTexture(material)) {
+          if (entry.preserveMaterials && !hasMaterialProfiles && !usesExternalTexture(material)) {
             const next = material.clone();
             next.flatShading = lowQuality;
             next.needsUpdate = true;
             return next;
           }
-          const profile = activeEntry.materialProfiles?.[material?.name]
-            ?? activeEntry.materialProfiles?.default
+          const profile = entry.materialProfiles?.[material?.name]
+            ?? entry.materialProfiles?.default
             ?? {};
-          const transparent = profile.transparent ?? activeEntry.transparent ?? material?.transparent ?? false;
+          const transparent = profile.transparent ?? entry.transparent ?? material?.transparent ?? false;
           const emissiveIntensity = lowQuality
-            ? (profile.lowEmissiveIntensity ?? profile.emissiveIntensity ?? activeEntry.emissiveIntensity ?? 1)
-            : (profile.emissiveIntensity ?? activeEntry.emissiveIntensity ?? 1);
+            ? (profile.lowEmissiveIntensity ?? profile.emissiveIntensity ?? entry.emissiveIntensity ?? 1)
+            : (profile.emissiveIntensity ?? entry.emissiveIntensity ?? 1);
           const materialOptions = {
-            color: new THREE.Color(profile.color ?? activeEntry.tint ?? '#ffffff'),
+            color: new THREE.Color(profile.color ?? entry.tint ?? '#ffffff'),
             map: texture,
-            emissive: new THREE.Color(profile.emissiveColor ?? activeEntry.emissiveColor ?? (emissiveTexture ? '#ffffff' : '#000000')),
+            emissive: new THREE.Color(profile.emissiveColor ?? entry.emissiveColor ?? (emissiveTexture ? '#ffffff' : '#000000')),
             emissiveMap: emissiveTexture,
             emissiveIntensity,
             roughness: profile.roughness ?? (isClayCannon ? (lowQuality ? 0.78 : 0.62) : (lowQuality ? 0.95 : 0.78)),
             metalness: profile.metalness ?? (isClayCannon ? 0.08 : 0.02),
             flatShading: lowQuality,
             transparent,
-            opacity: profile.opacity ?? activeEntry.opacity ?? material?.opacity ?? 1,
-            alphaTest: profile.alphaTest ?? activeEntry.alphaTest ?? 0,
+            opacity: profile.opacity ?? entry.opacity ?? material?.opacity ?? 1,
+            alphaTest: profile.alphaTest ?? entry.alphaTest ?? 0,
             depthWrite: profile.depthWrite ?? (transparent ? false : true),
-            side: (profile.doubleSided ?? activeEntry.doubleSided ?? material?.side === THREE.DoubleSide)
+            side: (profile.doubleSided ?? entry.doubleSided ?? material?.side === THREE.DoubleSide)
               ? THREE.DoubleSide
               : THREE.FrontSide,
             vertexColors: Boolean(object.geometry.getAttribute('color')),
@@ -411,6 +433,78 @@
         object.material = Array.isArray(object.material) ? materials : materials[0];
         object.frustumCulled = false;
       });
+    }
+
+    function findNamedObject(root, name) {
+      return root.getObjectByName(name)
+        || root.getObjectByProperty('name', name)
+        || (() => {
+          let match = null;
+          root.traverse(object => {
+            if (!match && object.name?.endsWith(name)) match = object;
+          });
+          return match;
+        })();
+    }
+
+    function selectedEquipmentOption(entry = activeEntry) {
+      const options = entry?.equipmentOptions ?? [];
+      const selectedSlug = equippedByEntry.has(entry?.slug)
+        ? equippedByEntry.get(entry.slug)
+        : entry?.defaultEquipment;
+      return options.find(option => option.slug === selectedSlug) ?? null;
+    }
+
+    function defaultClipForEquipment(entry = activeEntry) {
+      const option = selectedEquipmentOption(entry);
+      if (option?.defaultClip) return option.defaultClip;
+      if (entry?.equipmentOptions?.length) {
+        return entry.animations?.find(animation => !animation.weaponActionFamily && animation.kind === 'idle')?.clip
+          ?? entry.defaultClip;
+      }
+      return entry?.defaultClip;
+    }
+
+    function applyEquipmentTransform(equipment, transform) {
+      if (!equipment || !transform) return;
+      equipment.position.fromArray(transform.position ?? [0, 0, 0]);
+      if (transform.rotationQuaternion?.length === 4) {
+        equipment.quaternion.fromArray(transform.rotationQuaternion).normalize();
+      } else {
+        equipment.rotation.set(...(transform.rotationDeg ?? [0, 0, 0]).map(THREE.MathUtils.degToRad));
+      }
+      equipment.scale.fromArray(transform.scale ?? [1, 1, 1]);
+    }
+
+    function equipmentTransformForAction(animation, option = selectedEquipmentOption()) {
+      if (!option) return null;
+      return option.actionTransforms?.[animation?.clip]
+        ?? animation?.equipmentTransform
+        ?? option;
+    }
+
+    async function attachEquipment(model, variant) {
+      const option = selectedEquipmentOption();
+      if (!option || !activeEntry.equipmentBone) return null;
+      const equipmentEntry = catalog.find(entry => entry.slug === option.slug);
+      if (!equipmentEntry) throw new Error(`找不到武器条目：${option.slug}`);
+      const equipmentVariant = equipmentEntry.models?.[variant] ? variant : 'original';
+      const texturePath = equipmentEntry.textures?.[equipmentVariant];
+      const emissivePath = equipmentEntry.emissiveTextures?.[equipmentVariant];
+      const normalPath = equipmentEntry.normalTextures?.[equipmentVariant];
+      const [gltf, texture, emissiveTexture, normalTexture] = await Promise.all([
+        loader.loadAsync(`${equipmentEntry.models[equipmentVariant]}?v=${assetRevision}`),
+        texturePath ? textureLoader.loadAsync(`${texturePath}?v=${assetRevision}`) : Promise.resolve(null),
+        emissivePath ? textureLoader.loadAsync(`${emissivePath}?v=${assetRevision}`) : Promise.resolve(null),
+        normalPath ? textureLoader.loadAsync(`${normalPath}?v=${assetRevision}`) : Promise.resolve(null),
+      ]);
+      const bone = findNamedObject(model, activeEntry.equipmentBone);
+      if (!bone) throw new Error(`模型缺少武器挂点：${activeEntry.equipmentBone}`);
+      const equipment = gltf.scene;
+      applyTexture(equipmentEntry, equipment, texture, emissiveTexture, normalTexture, variant === 'low', equipmentVariant);
+      applyEquipmentTransform(equipment, option);
+      bone.add(equipment);
+      return { model: equipment, texture, emissiveTexture, normalTexture, slug: option.slug };
     }
 
     function fitModel(model, wrapper, targetHeight, targetWidth, x, framingScale = 1) {
@@ -463,6 +557,8 @@
       action.clampWhenFinished = !loop;
       action.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, loop ? Infinity : 1);
       action.play();
+      const animation = activeEntry.animations?.find(item => item.clip === clipName);
+      applyEquipmentTransform(slot.equipment?.model, equipmentTransformForAction(animation));
       slot.action = action;
       slot.playingDefault = loop;
       return true;
@@ -472,7 +568,7 @@
       currentSkillClip = null;
       document.querySelectorAll('.skill').forEach(button => button.classList.remove('active'));
       if (activeEntry.animationPreviewDisabled) return;
-      activeSlots.forEach(slot => playOnSlot(slot, activeEntry.defaultClip, true));
+      activeSlots.forEach(slot => playOnSlot(slot, defaultClipForEquipment(), true));
     }
 
     function playClip(clipName, loop = false) {
@@ -497,17 +593,18 @@
       const entryRotation = activeEntry.modelRotationDeg ?? [0, 0, 0];
       const modelRotation = gameRotation.map((value, index) => value + entryRotation[index]);
       model.rotation.set(...modelRotation.map(THREE.MathUtils.degToRad));
-      applyTexture(model, texture, emissiveTexture, normalTexture, variant === 'low', variant);
+      applyTexture(activeEntry, model, texture, emissiveTexture, normalTexture, variant === 'low', variant);
       wrapper.add(model);
       scene.add(wrapper);
       const mixer = new THREE.AnimationMixer(model);
       const previewClip = activeEntry.animationPreviewDisabled
         ? null
-        : gltf.animations.find(clip => clip.name === activeEntry.defaultClip);
+        : gltf.animations.find(clip => clip.name === defaultClipForEquipment());
       if (previewClip) {
         mixer.clipAction(previewClip).play();
         mixer.update(0);
       }
+      const equipment = await attachEquipment(model, variant);
       model.updateMatrixWorld(true);
       const framingScale = (activeMode === 'compare'
         ? activeEntry.compareFramingScaleByVariant?.[variant]
@@ -520,15 +617,7 @@
       fitModel(model, wrapper, targetHeight, targetWidth, x, framingScale);
       mixer.stopAllAction();
       const motionAnchor = activeEntry.motionAnchorBone
-        ? model.getObjectByName(activeEntry.motionAnchorBone)
-          || model.getObjectByProperty('name', activeEntry.motionAnchorBone)
-          || (() => {
-            let match = null;
-            model.traverse(object => {
-              if (!match && object.isBone && object.name.endsWith(activeEntry.motionAnchorBone)) match = object;
-            });
-            return match;
-          })()
+        ? findNamedObject(model, activeEntry.motionAnchorBone)
         : null;
       model.updateMatrixWorld(true);
       const motionReference = motionAnchor
@@ -536,7 +625,7 @@
         : null;
       const slot = {
         variant, wrapper, model, mixer, clips: gltf.animations,
-        texture, emissiveTexture, normalTexture, action: null, playingDefault: false,
+        texture, emissiveTexture, normalTexture, equipment, action: null, playingDefault: false,
         motionAnchor,
         motionReference,
         motionAnchorAxes: activeEntry.motionAnchorAxes ?? ['x', 'y', 'z'],
@@ -611,7 +700,11 @@
         if (activeMode === 'compare') return animation.variants.includes('original') && animation.variants.includes('low');
         return animation.variants.includes(activeMode);
       });
-      const items = prefix ? variantItems.filter(animation => animation.clip.startsWith(`${prefix}|`)) : variantItems;
+      const actionFamily = selectedEquipmentOption(entry)?.actionFamily;
+      const equipmentItems = variantItems.filter(animation => (
+        !animation.weaponActionFamily || animation.weaponActionFamily === actionFamily
+      ));
+      const items = prefix ? equipmentItems.filter(animation => animation.clip.startsWith(`${prefix}|`)) : equipmentItems;
       const priority = { attack: 0, movement: 1, idle: 2, spawn: 3, hurt: 4, death: 5, other: 6 };
       return items.sort((a, b) => (priority[a.kind] ?? 9) - (priority[b.kind] ?? 9) || a.name.localeCompare(b.name));
     }
@@ -638,6 +731,8 @@
       document.querySelector('#playSelectedButton').disabled = !hasAnimations;
       document.querySelector('#pauseButton').disabled = !hasAnimations;
       document.querySelector('.animation-row').hidden = !hasAnimations;
+      const equipmentOptions = entry.equipmentOptions ?? [];
+      document.querySelector('.equipment-row').hidden = !equipmentOptions.length;
       document.querySelector('.skills').hidden = !(entry.skills?.length);
 
       const select = document.querySelector('#animationSelect');
@@ -648,9 +743,20 @@
         option.textContent = animation.name;
         select.appendChild(option);
       });
-      if (animations.some(animation => animation.clip === entry.defaultClip)) {
-        select.value = entry.defaultClip;
+      const equipmentDefaultClip = defaultClipForEquipment(entry);
+      if (animations.some(animation => animation.clip === equipmentDefaultClip)) {
+        select.value = equipmentDefaultClip;
       }
+
+      const equipmentSelect = document.querySelector('#equipmentSelect');
+      equipmentSelect.innerHTML = '<option value="">不装备武器</option>';
+      equipmentOptions.forEach(equipment => {
+        const option = document.createElement('option');
+        option.value = equipment.slug;
+        option.textContent = equipment.name;
+        equipmentSelect.appendChild(option);
+      });
+      equipmentSelect.value = selectedEquipmentOption(entry)?.slug ?? '';
 
       const list = document.querySelector('#skillList');
       list.innerHTML = '';
@@ -812,10 +918,25 @@
       refreshIcons();
     });
     document.querySelector('#resetButton').addEventListener('click', resetCamera);
-    document.querySelector('#playSelectedButton').addEventListener('click', () => {
+    document.querySelector('#playSelectedButton').addEventListener('click', async () => {
       const clip = document.querySelector('#animationSelect').value;
       const animation = activeEntry?.animations?.find(item => item.clip === clip);
-      playClip(clip, animation?.kind === 'idle' || animation?.kind === 'movement');
+      if (animation?.equipment && selectedEquipmentOption()?.slug !== animation.equipment) {
+        equippedByEntry.set(activeEntry.slug, animation.equipment);
+        document.querySelector('#equipmentSelect').value = animation.equipment;
+        await loadActiveModels();
+      }
+      playClip(clip, animation?.loop || animation?.kind === 'idle' || animation?.kind === 'movement');
+    });
+    document.querySelector('#equipmentSelect').addEventListener('change', async event => {
+      equippedByEntry.set(activeEntry.slug, event.target.value);
+      renderDetails(activeEntry);
+      await loadActiveModels();
+    });
+    document.querySelector('#removeEquipmentButton').addEventListener('click', async () => {
+      equippedByEntry.set(activeEntry.slug, '');
+      renderDetails(activeEntry);
+      await loadActiveModels();
     });
 
     const clock = new THREE.Clock();
