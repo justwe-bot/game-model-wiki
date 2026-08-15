@@ -126,22 +126,30 @@ MIXAMO_ACTION_LABELS = {
     "Mixamo_RifleRunFire": "步枪跑动射击",
 }
 
-# Calibrated from the rifle's local trigger grip and foregrip to the Sidekick palm centers.
+# Rifle-local anchors measured from the side profile. +Z points from stock to muzzle.
+RIFLE_GRIP_PROFILE = {
+    "rightGrip": [0.0, -0.075, -0.085],
+    "supportGrip": [0.0, -0.035, 0.255],
+    "muzzleAxis": [0.0, 0.0, 1.0],
+    "upAxis": [0.0, 1.0, 0.0],
+}
+
+# Solved against the Sidekick prop_r/prop_l weapon sockets. Quaternion order is XYZW.
 RIFLE_EQUIPMENT_TRANSFORMS = {
     "Mixamo_RifleReady": {
-        "position": [-0.149029, -0.056048, 0.000132],
-        "rotationDeg": [176.583, 60.904, 47.410],
-        "scale": [1.0, 1.0, 1.0],
+        "position": [0.096768, 0.004881, -0.058001],
+        "rotationQuaternion": [0.731112, -0.047561, 0.519142, -0.440119],
+        "scale": [0.996182, 0.996182, 0.996182],
     },
     "Mixamo_RifleFireStanding": {
-        "position": [-0.149029, -0.056048, 0.000132],
-        "rotationDeg": [176.583, 60.904, 47.410],
-        "scale": [1.0, 1.0, 1.0],
+        "position": [0.096525, 0.004488, -0.058229],
+        "rotationQuaternion": [0.732707, -0.047608, 0.518573, -0.438127],
+        "scale": [0.995232, 0.995232, 0.995232],
     },
     "Mixamo_RifleRunFire": {
-        "position": [-0.157476, -0.035763, 0.005702],
-        "rotationDeg": [183.367, 48.910, 65.647],
-        "scale": [1.0, 1.0, 1.0],
+        "position": [0.107935, 0.015305, -0.043925],
+        "rotationQuaternion": [0.746999, 0.194202, 0.518711, -0.367719],
+        "scale": [1.036815, 1.036815, 1.036815],
     },
 }
 
@@ -194,6 +202,8 @@ def equipment_options() -> list[dict]:
             "family": family,
             **deepcopy(transform),
         })
+        if slug == EQUIPMENT_OPTIONS[0][0]:
+            options[-1]["gripProfile"] = deepcopy(RIFLE_GRIP_PROFILE)
     return options
 
 
@@ -830,7 +840,7 @@ def build_characters() -> list[dict]:
             "defaultClip": "Mixamo_RifleReady",
             "motionAnchorBone": "pelvis",
             "motionAnchorAxes": ["x", "y", "z"],
-            "equipmentBone": "hand_r",
+            "equipmentBone": "prop_r",
             "defaultEquipment": EQUIPMENT_OPTIONS[0][0],
             "equipmentOptions": equipment_options(),
             "sharedPackageActions": [animation.get("name") for animation in report["animations"]],

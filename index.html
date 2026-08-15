@@ -449,7 +449,11 @@
     function applyEquipmentTransform(equipment, transform) {
       if (!equipment || !transform) return;
       equipment.position.fromArray(transform.position ?? [0, 0, 0]);
-      equipment.rotation.set(...(transform.rotationDeg ?? [0, 0, 0]).map(THREE.MathUtils.degToRad));
+      if (transform.rotationQuaternion?.length === 4) {
+        equipment.quaternion.fromArray(transform.rotationQuaternion).normalize();
+      } else {
+        equipment.rotation.set(...(transform.rotationDeg ?? [0, 0, 0]).map(THREE.MathUtils.degToRad));
+      }
       equipment.scale.fromArray(transform.scale ?? [1, 1, 1]);
     }
 
