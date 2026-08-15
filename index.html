@@ -446,6 +446,13 @@
       return options.find(option => option.slug === selectedSlug) ?? null;
     }
 
+    function applyEquipmentTransform(equipment, transform) {
+      if (!equipment || !transform) return;
+      equipment.position.fromArray(transform.position ?? [0, 0, 0]);
+      equipment.rotation.set(...(transform.rotationDeg ?? [0, 0, 0]).map(THREE.MathUtils.degToRad));
+      equipment.scale.fromArray(transform.scale ?? [1, 1, 1]);
+    }
+
     async function attachEquipment(model, variant) {
       const option = selectedEquipmentOption();
       if (!option || !activeEntry.equipmentBone) return null;
@@ -465,9 +472,7 @@
       if (!bone) throw new Error(`模型缺少武器挂点：${activeEntry.equipmentBone}`);
       const equipment = gltf.scene;
       applyTexture(equipmentEntry, equipment, texture, emissiveTexture, normalTexture, variant === 'low', equipmentVariant);
-      equipment.position.fromArray(option.position);
-      equipment.rotation.set(...option.rotationDeg.map(THREE.MathUtils.degToRad));
-      equipment.scale.fromArray(option.scale);
+      applyEquipmentTransform(equipment, option);
       bone.add(equipment);
       return { model: equipment, texture, emissiveTexture, normalTexture, slug: option.slug };
     }
@@ -522,6 +527,8 @@
       action.clampWhenFinished = !loop;
       action.setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce, loop ? Infinity : 1);
       action.play();
+      const animation = activeEntry.animations?.find(item => item.clip === clipName);
+      applyEquipmentTransform(slot.equipment?.model, animation?.equipmentTransform ?? selectedEquipmentOption());
       slot.action = action;
       slot.playingDefault = loop;
       return true;

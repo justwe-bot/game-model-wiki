@@ -685182,7 +685182,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "21 个动作",
+    "status": "22 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-01.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-01.glb"
@@ -685203,9 +685203,9 @@
     "bakedTriangles": 20593,
     "sourceTriangles": 20593,
     "lowTriangles": 20593,
-    "sourceSizeKB": 2068,
-    "lowSizeKB": 2068,
-    "animationCount": 21,
+    "sourceSizeKB": 2096,
+    "lowSizeKB": 2096,
+    "animationCount": 22,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -685327,6 +685327,24 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": false
       },
       {
@@ -685335,10 +685353,54 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.082,
+            -0.0084,
+            0.087
+          ],
+          "rotationDeg": [
+            9.551,
+            -47.649,
+            -82.912
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
+        "loop": true
+      },
+      {
+        "name": "步枪持枪待机",
+        "clip": "Mixamo_RifleReady",
+        "kind": "idle",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": true
       }
     ],
-    "defaultClip": "Ultimate_Idle_Standing",
+    "defaultClip": "Mixamo_RifleReady",
     "preserveMaterials": true,
     "jointCount": 109,
     "topology": {
@@ -685375,14 +685437,14 @@
         "name": "科幻步枪 01",
         "family": "rifle",
         "position": [
-          0.0,
-          0.0,
-          0.0
+          -0.1018,
+          -0.0042,
+          0.0798
         ],
         "rotationDeg": [
-          0.0,
-          90.0,
-          180.0
+          6.663,
+          -61.199,
+          -84.155
         ],
         "scale": [
           1.0,
@@ -685532,7 +685594,8 @@
       "Ultimate_Scale_Appear",
       "Ultimate_Scale_Appear_Bounce",
       "Mixamo_RifleFireStanding",
-      "Mixamo_RifleRunFire"
+      "Mixamo_RifleRunFire",
+      "Mixamo_RifleReady"
     ],
     "mixamoActionSource": {
       "provider": "Adobe Mixamo",
@@ -685551,7 +685614,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "21 个动作",
+    "status": "22 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-02.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-02.glb"
@@ -685572,9 +685635,9 @@
     "bakedTriangles": 19065,
     "sourceTriangles": 19065,
     "lowTriangles": 19065,
-    "sourceSizeKB": 1892,
-    "lowSizeKB": 1892,
-    "animationCount": 21,
+    "sourceSizeKB": 1921,
+    "lowSizeKB": 1921,
+    "animationCount": 22,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -685696,6 +685759,24 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": false
       },
       {
@@ -685704,10 +685785,54 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.082,
+            -0.0084,
+            0.087
+          ],
+          "rotationDeg": [
+            9.551,
+            -47.649,
+            -82.912
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
+        "loop": true
+      },
+      {
+        "name": "步枪持枪待机",
+        "clip": "Mixamo_RifleReady",
+        "kind": "idle",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": true
       }
     ],
-    "defaultClip": "Ultimate_Idle_Standing",
+    "defaultClip": "Mixamo_RifleReady",
     "preserveMaterials": true,
     "jointCount": 127,
     "topology": {
@@ -685744,14 +685869,14 @@
         "name": "科幻步枪 01",
         "family": "rifle",
         "position": [
-          0.0,
-          0.0,
-          0.0
+          -0.1018,
+          -0.0042,
+          0.0798
         ],
         "rotationDeg": [
-          0.0,
-          90.0,
-          180.0
+          6.663,
+          -61.199,
+          -84.155
         ],
         "scale": [
           1.0,
@@ -685901,7 +686026,8 @@
       "Ultimate_Scale_Appear",
       "Ultimate_Scale_Appear_Bounce",
       "Mixamo_RifleFireStanding",
-      "Mixamo_RifleRunFire"
+      "Mixamo_RifleRunFire",
+      "Mixamo_RifleReady"
     ],
     "mixamoActionSource": {
       "provider": "Adobe Mixamo",
@@ -685920,7 +686046,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "21 个动作",
+    "status": "22 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-03.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-03.glb"
@@ -685941,9 +686067,9 @@
     "bakedTriangles": 18695,
     "sourceTriangles": 18695,
     "lowTriangles": 18695,
-    "sourceSizeKB": 1866,
-    "lowSizeKB": 1866,
-    "animationCount": 21,
+    "sourceSizeKB": 1895,
+    "lowSizeKB": 1895,
+    "animationCount": 22,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -686065,6 +686191,24 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": false
       },
       {
@@ -686073,10 +686217,54 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.082,
+            -0.0084,
+            0.087
+          ],
+          "rotationDeg": [
+            9.551,
+            -47.649,
+            -82.912
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
+        "loop": true
+      },
+      {
+        "name": "步枪持枪待机",
+        "clip": "Mixamo_RifleReady",
+        "kind": "idle",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": true
       }
     ],
-    "defaultClip": "Ultimate_Idle_Standing",
+    "defaultClip": "Mixamo_RifleReady",
     "preserveMaterials": true,
     "jointCount": 103,
     "topology": {
@@ -686113,14 +686301,14 @@
         "name": "科幻步枪 01",
         "family": "rifle",
         "position": [
-          0.0,
-          0.0,
-          0.0
+          -0.1018,
+          -0.0042,
+          0.0798
         ],
         "rotationDeg": [
-          0.0,
-          90.0,
-          180.0
+          6.663,
+          -61.199,
+          -84.155
         ],
         "scale": [
           1.0,
@@ -686270,7 +686458,8 @@
       "Ultimate_Scale_Appear",
       "Ultimate_Scale_Appear_Bounce",
       "Mixamo_RifleFireStanding",
-      "Mixamo_RifleRunFire"
+      "Mixamo_RifleRunFire",
+      "Mixamo_RifleReady"
     ],
     "mixamoActionSource": {
       "provider": "Adobe Mixamo",
@@ -686289,7 +686478,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "21 个动作",
+    "status": "22 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-04.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-04.glb"
@@ -686310,9 +686499,9 @@
     "bakedTriangles": 19476,
     "sourceTriangles": 19476,
     "lowTriangles": 19476,
-    "sourceSizeKB": 2040,
-    "lowSizeKB": 2040,
-    "animationCount": 21,
+    "sourceSizeKB": 2069,
+    "lowSizeKB": 2069,
+    "animationCount": 22,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -686434,6 +686623,24 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": false
       },
       {
@@ -686442,10 +686649,54 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.082,
+            -0.0084,
+            0.087
+          ],
+          "rotationDeg": [
+            9.551,
+            -47.649,
+            -82.912
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
+        "loop": true
+      },
+      {
+        "name": "步枪持枪待机",
+        "clip": "Mixamo_RifleReady",
+        "kind": "idle",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": true
       }
     ],
-    "defaultClip": "Ultimate_Idle_Standing",
+    "defaultClip": "Mixamo_RifleReady",
     "preserveMaterials": true,
     "jointCount": 100,
     "topology": {
@@ -686482,14 +686733,14 @@
         "name": "科幻步枪 01",
         "family": "rifle",
         "position": [
-          0.0,
-          0.0,
-          0.0
+          -0.1018,
+          -0.0042,
+          0.0798
         ],
         "rotationDeg": [
-          0.0,
-          90.0,
-          180.0
+          6.663,
+          -61.199,
+          -84.155
         ],
         "scale": [
           1.0,
@@ -686639,7 +686890,8 @@
       "Ultimate_Scale_Appear",
       "Ultimate_Scale_Appear_Bounce",
       "Mixamo_RifleFireStanding",
-      "Mixamo_RifleRunFire"
+      "Mixamo_RifleRunFire",
+      "Mixamo_RifleReady"
     ],
     "mixamoActionSource": {
       "provider": "Adobe Mixamo",
@@ -686658,7 +686910,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "21 个动作",
+    "status": "22 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-05.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-05.glb"
@@ -686679,9 +686931,9 @@
     "bakedTriangles": 17125,
     "sourceTriangles": 17125,
     "lowTriangles": 17125,
-    "sourceSizeKB": 1746,
-    "lowSizeKB": 1746,
-    "animationCount": 21,
+    "sourceSizeKB": 1774,
+    "lowSizeKB": 1774,
+    "animationCount": 22,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -686803,6 +687055,24 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": false
       },
       {
@@ -686811,10 +687081,54 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.082,
+            -0.0084,
+            0.087
+          ],
+          "rotationDeg": [
+            9.551,
+            -47.649,
+            -82.912
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
+        "loop": true
+      },
+      {
+        "name": "步枪持枪待机",
+        "clip": "Mixamo_RifleReady",
+        "kind": "idle",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": true
       }
     ],
-    "defaultClip": "Ultimate_Idle_Standing",
+    "defaultClip": "Mixamo_RifleReady",
     "preserveMaterials": true,
     "jointCount": 112,
     "topology": {
@@ -686851,14 +687165,14 @@
         "name": "科幻步枪 01",
         "family": "rifle",
         "position": [
-          0.0,
-          0.0,
-          0.0
+          -0.1018,
+          -0.0042,
+          0.0798
         ],
         "rotationDeg": [
-          0.0,
-          90.0,
-          180.0
+          6.663,
+          -61.199,
+          -84.155
         ],
         "scale": [
           1.0,
@@ -687008,7 +687322,8 @@
       "Ultimate_Scale_Appear",
       "Ultimate_Scale_Appear_Bounce",
       "Mixamo_RifleFireStanding",
-      "Mixamo_RifleRunFire"
+      "Mixamo_RifleRunFire",
+      "Mixamo_RifleReady"
     ],
     "mixamoActionSource": {
       "provider": "Adobe Mixamo",
@@ -687027,7 +687342,7 @@
     "packageSlug": "sci-fi-civilians",
     "kind": "character",
     "tier": "人物",
-    "status": "21 个动作",
+    "status": "22 个动作",
     "models": {
       "original": "models/ultimate-pack/sci-fi-civilians/scificivilians-06.glb",
       "low": "models/ultimate-pack/sci-fi-civilians/scificivilians-06.glb"
@@ -687048,9 +687363,9 @@
     "bakedTriangles": 16745,
     "sourceTriangles": 16745,
     "lowTriangles": 16745,
-    "sourceSizeKB": 1709,
-    "lowSizeKB": 1709,
-    "animationCount": 21,
+    "sourceSizeKB": 1737,
+    "lowSizeKB": 1737,
+    "animationCount": 22,
     "animations": [
       {
         "name": "Ultimate_Dead_Pose（源占位）",
@@ -687172,6 +687487,24 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": false
       },
       {
@@ -687180,10 +687513,54 @@
         "kind": "attack",
         "sourceHasKeyframes": true,
         "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.082,
+            -0.0084,
+            0.087
+          ],
+          "rotationDeg": [
+            9.551,
+            -47.649,
+            -82.912
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
+        "loop": true
+      },
+      {
+        "name": "步枪持枪待机",
+        "clip": "Mixamo_RifleReady",
+        "kind": "idle",
+        "sourceHasKeyframes": true,
+        "equipment": "sci-fi-battle-weapons-scifirifle01-1",
+        "equipmentTransform": {
+          "position": [
+            -0.1018,
+            -0.0042,
+            0.0798
+          ],
+          "rotationDeg": [
+            6.663,
+            -61.199,
+            -84.155
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "gripPose": "rifle",
         "loop": true
       }
     ],
-    "defaultClip": "Ultimate_Idle_Standing",
+    "defaultClip": "Mixamo_RifleReady",
     "preserveMaterials": true,
     "jointCount": 113,
     "topology": {
@@ -687220,14 +687597,14 @@
         "name": "科幻步枪 01",
         "family": "rifle",
         "position": [
-          0.0,
-          0.0,
-          0.0
+          -0.1018,
+          -0.0042,
+          0.0798
         ],
         "rotationDeg": [
-          0.0,
-          90.0,
-          180.0
+          6.663,
+          -61.199,
+          -84.155
         ],
         "scale": [
           1.0,
@@ -687377,7 +687754,8 @@
       "Ultimate_Scale_Appear",
       "Ultimate_Scale_Appear_Bounce",
       "Mixamo_RifleFireStanding",
-      "Mixamo_RifleRunFire"
+      "Mixamo_RifleRunFire",
+      "Mixamo_RifleReady"
     ],
     "mixamoActionSource": {
       "provider": "Adobe Mixamo",
