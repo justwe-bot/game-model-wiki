@@ -288,6 +288,15 @@
     let stageVisible = true;
     const equippedByEntry = new Map();
 
+    if (initialParams.has('qa')) {
+      window.__wikiModelQa = {
+        scene,
+        camera,
+        controls,
+        getActiveSlots: () => activeSlots,
+      };
+    }
+
     document.querySelectorAll('.mode-button').forEach(button => {
       button.classList.toggle('active', button.dataset.mode === activeMode);
     });
