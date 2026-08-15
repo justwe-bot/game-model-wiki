@@ -31,6 +31,19 @@ def read_glb(path: Path) -> dict:
     return json.loads(data[20 : 20 + json_length].decode("utf-8"))
 
 
+def rotate_vector(quaternion: list[float], vector: list[float]) -> list[float]:
+    x, y, z, w = quaternion
+    vx, vy, vz = vector
+    tx = 2.0 * (y * vz - z * vy)
+    ty = 2.0 * (z * vx - x * vz)
+    tz = 2.0 * (x * vy - y * vx)
+    return [
+        vx + w * tx + (y * tz - z * ty),
+        vy + w * ty + (z * tx - x * tz),
+        vz + w * tz + (x * ty - y * tx),
+    ]
+
+
 class UltimatePackCatalogTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -56,6 +69,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
     def test_action_specific_equipment_transform_is_applied(self) -> None:
         index_html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn("function applyEquipmentTransform(equipment, transform)", index_html)
+        self.assertIn("equipment.quaternion.fromArray(transform.rotationQuaternion).normalize()", index_html)
         self.assertIn("texture.flipY = entry.textureFlipY ?? false", index_html)
         self.assertIn(
             "animation?.equipmentTransform ?? selectedEquipmentOption()",
@@ -117,7 +131,7 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertGreaterEqual(len(civilian_document["skins"][0]["joints"]), 88)
         self.assertTrue(civilian["paletteTexture"])
         self.assertTrue(civilian["textureFlipY"])
-        self.assertEqual(civilian["equipmentBone"], "hand_r")
+        self.assertEqual(civilian["equipmentBone"], "prop_r")
         self.assertEqual(civilian["defaultEquipment"], "sci-fi-battle-weapons-scifirifle01-1")
         self.assertEqual(len(civilian["equipmentOptions"]), 7)
         mixamo_animations = {
@@ -141,29 +155,46 @@ class UltimatePackCatalogTests(unittest.TestCase):
         self.assertFalse(mixamo_animations["Mixamo_RifleFireStanding"]["loop"])
         self.assertTrue(mixamo_animations["Mixamo_RifleRunFire"]["loop"])
         self.assertEqual(mixamo_animations["Mixamo_RifleReady"]["kind"], "idle")
-        expected_equipment_transforms = {
-            "Mixamo_RifleReady": {
-                "position": [-0.149029, -0.056048, 0.000132],
-                "rotationDeg": [176.583, 60.904, 47.410],
-                "scale": [1.0, 1.0, 1.0],
-            },
-            "Mixamo_RifleFireStanding": {
-                "position": [-0.149029, -0.056048, 0.000132],
-                "rotationDeg": [176.583, 60.904, 47.410],
-                "scale": [1.0, 1.0, 1.0],
-            },
-            "Mixamo_RifleRunFire": {
-                "position": [-0.157476, -0.035763, 0.005702],
-                "rotationDeg": [183.367, 48.910, 65.647],
-                "scale": [1.0, 1.0, 1.0],
-            },
+        expected_support_socket = {
+            "Mixamo_RifleReady": [0.286727, 0.177017, -0.052531],
+            "Mixamo_RifleFireStanding": [0.286571, 0.176198, -0.054004],
+            "Mixamo_RifleRunFire": [0.250690, 0.237556, -0.081915],
         }
+        rifle_option = next(
+            equipment for equipment in civilian["equipmentOptions"]
+            if equipment["slug"] == "sci-fi-battle-weapons-scifirifle01-1"
+        )
+        grip = rifle_option["gripProfile"]
         for clip_name, animation in mixamo_animations.items():
             self.assertEqual(animation["gripPose"], "rifle")
-            for field in ("position", "rotationDeg", "scale"):
+            for field in ("position", "scale"):
                 self.assertEqual(len(animation["equipmentTransform"][field]), 3)
                 self.assertTrue(all(math.isfinite(value) for value in animation["equipmentTransform"][field]))
-            self.assertEqual(animation["equipmentTransform"], expected_equipment_transforms[clip_name])
+            quaternion = animation["equipmentTransform"]["rotationQuaternion"]
+            self.assertEqual(len(quaternion), 4)
+            self.assertTrue(all(math.isfinite(value) for value in quaternion))
+            self.assertAlmostEqual(sum(value * value for value in quaternion), 1.0, places=5)
+            transform = animation["equipmentTransform"]
+            right_grip = [value * transform["scale"][0] for value in grip["rightGrip"]]
+            support_grip = [value * transform["scale"][0] for value in grip["supportGrip"]]
+            right_socket = [
+                transform["position"][index] + rotate_vector(quaternion, right_grip)[index]
+                for index in range(3)
+            ]
+            support_socket = [
+                transform["position"][index] + rotate_vector(quaternion, support_grip)[index]
+                for index in range(3)
+            ]
+            self.assertLess(math.dist(right_socket, [0.0, 0.0, 0.0]), 0.00001)
+            self.assertLess(math.dist(support_socket, expected_support_socket[clip_name]), 0.00001)
+            muzzle_direction = rotate_vector(quaternion, grip["muzzleAxis"])
+            support_direction = [
+                expected_support_socket[clip_name][index] - right_socket[index]
+                for index in range(3)
+            ]
+            dot = sum(muzzle_direction[index] * support_direction[index] for index in range(3))
+            magnitude = math.sqrt(sum(value * value for value in support_direction))
+            self.assertGreater(dot / magnitude, 0.98)
         self.assertEqual(civilian["mixamoActionSource"], {
             "provider": "Adobe Mixamo",
             "motion": "Firing Rifle",
@@ -200,9 +231,21 @@ class UltimatePackCatalogTests(unittest.TestCase):
             for equipment in character["equipmentOptions"]:
                 weapon = entries[equipment["slug"]]
                 self.assertEqual(weapon["packageSlug"], "sci-fi-battle-weapons")
-                for field in ("position", "rotationDeg", "scale"):
+                for field in ("position", "scale"):
                     self.assertEqual(len(equipment[field]), 3)
                     self.assertTrue(all(math.isfinite(value) for value in equipment[field]))
+                rotation = equipment.get("rotationQuaternion", equipment.get("rotationDeg"))
+                self.assertIn(len(rotation), {3, 4})
+                self.assertTrue(all(math.isfinite(value) for value in rotation))
+
+            rifle_option = next(
+                equipment for equipment in character["equipmentOptions"]
+                if equipment["slug"] == "sci-fi-battle-weapons-scifirifle01-1"
+            )
+            grip = rifle_option["gripProfile"]
+            self.assertLess(grip["rightGrip"][2], grip["supportGrip"][2])
+            self.assertEqual(grip["muzzleAxis"], [0.0, 0.0, 1.0])
+            self.assertEqual(grip["upAxis"], [0.0, 1.0, 0.0])
 
         rifle = entries["sci-fi-battle-weapons-scifirifle01-1"]
         self.assertTrue(rifle["textures"]["original"])
