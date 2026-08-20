@@ -9,8 +9,11 @@
 - `risk-of-rain-2`：20 个怪物和 23 张地图，支持模型对比、骨骼动作与独立地图浏览
 - `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
 - `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
+- `20-minutes-till-dawn`：从本机 Steam 安装提取的 86 组音效事件，覆盖武器射击、换弹、近战、法术和界面
 
 《哈迪斯 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
+
+游戏机制研究文档位于 `docs/`：[RoR2 永久加成系统](docs/RoR2%20%E6%B0%B8%E4%B9%85%E5%8A%A0%E6%88%90%E7%B3%BB%E7%BB%9F.md)、[RoR2 核心构筑与物品大全](docs/RoR2%20%E6%A0%B8%E5%BF%83%E6%9E%84%E7%AD%91%E4%B8%8E%E7%89%A9%E5%93%81%E5%A4%A7%E5%85%A8.md)、[20MTD 符文技能系统](docs/20MTD%20%E7%AC%A6%E6%96%87%E6%8A%80%E8%83%BD%E7%B3%BB%E7%BB%9F.md)。
 
 ## 当前内容
 
@@ -24,6 +27,7 @@
 - 石傀儡使用独立发光贴图显示红眼；黏土圣堂武士接入法线贴图以恢复炮体和护甲细节
 - 独立地图页支持搜索、扩展包筛选、自动旋转、俯视和重置视角
 - 23 张地图均使用静态场景 GLB；其中 9 张已接入岩石、草地和泥土地形纹理的三平面混合材质
+- 独立音效页支持分类筛选、搜索、循环播放和采样变体切换
 
 低模使用误差受限简化。10% 只是期望目标，不会为了达到固定比例强行删除脚、细腿、角、炮口或其他关键轮廓。不同模型会在接近明显变形前停止，因此实际保留比例约为 23%-79%。
 
@@ -48,6 +52,15 @@ python -m http.server 4173
 
 自定义模型资源池可直接打开：
 `http://127.0.0.1:4173/?game=custom-models&monster=nova-jet-sentinel`。
+
+《黎明前 20 分钟》音效页地址为
+`http://127.0.0.1:4173/sounds.html?game=20-minutes-till-dawn`。
+追加 `sound=<slug>` 可直接打开具体事件，例如
+`http://127.0.0.1:4173/sounds.html?game=20-minutes-till-dawn&sound=gunfire`。
+
+## 黎明前 20 分钟音效构建链
+
+- `scripts/extract_20mtd_audio.py`：读取本机 Steam Unity 安装中的 AudioClip 和 `SoundEffectSO`，转成网页预览用 M4A，并按射击、换弹、近战、法术等分类写入目录。
 
 ## Hades II 构建链
 

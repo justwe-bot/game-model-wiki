@@ -14,7 +14,11 @@
     "name": "哈迪斯 II",
     "nameEn": "Hades II",
     "catalog": "games/hades-2/catalog.json",
-    "modelRotationDeg": [0, 90, 0],
+    "modelRotationDeg": [
+      0,
+      90,
+      0
+    ],
     "subtitle": "14 个怪物 / 原始贴图 / 173 组动作",
     "assetRevision": "20260803-4"
   },
@@ -24,7 +28,10 @@
     "nameEn": "Custom Models",
     "catalog": "games/custom-models/catalog.json",
     "subtitle": "2 位英雄 / 0 个怪物 / 9 组动作",
-    "tiers": ["英雄", "怪物"],
+    "tiers": [
+      "英雄",
+      "怪物"
+    ],
     "notice": "自定义角色设计、腾讯混元 3D 生成模型和 Adobe Mixamo 动作可能分别受不同许可约束。公开发布或商业使用前请确认生成资产、动作与设计的使用和分发权利。",
     "assetRevision": "20260813-4"
   },
@@ -34,8 +41,36 @@
     "nameEn": "Ultimate Pack",
     "catalog": "games/ultimate-pack/catalog.json",
     "subtitle": "7 个资源包 / 3,872 个模型 / 45,454 组动作",
-    "tiers": ["Cute Series", "Low Poly", "Weapons", "人物", "科幻武器"],
+    "tiers": [
+      "Cute Series",
+      "Low Poly",
+      "Weapons",
+      "人物",
+      "科幻武器"
+    ],
     "notice": "这些模型、贴图和动作来自你购买的 Unity Ultimate Pack 资源包，仅用于本地 Wiki 浏览与已获许可的个人项目。公开发布或向他人分发模型文件前，请逐包核对原资产许可范围。",
     "assetRevision": "20260815-5"
+  },
+  {
+    "slug": "20-minutes-till-dawn",
+    "name": "黎明前 20 分钟",
+    "nameEn": "20 Minutes Till Dawn",
+    "catalog": "games/20-minutes-till-dawn/catalog.json",
+    "soundsPage": "sounds.html",
+    "defaultView": "sounds",
+    "subtitle": "86 组音效事件 / 97 条音频 / 射击换弹分类",
+    "tiers": [
+      "武器射击",
+      "武器换弹",
+      "近战挥砍",
+      "法术技能",
+      "角色动作",
+      "敌人",
+      "拾取增益",
+      "界面",
+      "音乐"
+    ],
+    "notice": "音效来自你本机 Steam 安装的《黎明前 20 分钟》，仅用于个人研究与 Wiki 原型。公开发布或向他人分发音频文件前请核对游戏素材许可，不要分发原始 Unity assets。",
+    "assetRevision": "20260818-1"
   }
 ]

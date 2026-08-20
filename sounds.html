@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101513">
+  <title>黎明前 20 分钟 · 音效图鉴</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101513; --side: #151c19; --surface: #1a231f; --surface-2: #202b26;
+      --line: #34413b; --line-soft: #27322d; --text: #f1f4ec; --muted: #a7b1aa;
+      --faint: #748078; --lime: #bddb6b; --coral: #f08366; --amber: #efbb61;
+      font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
+    body { min-height: 100vh; overflow: hidden; }
+    button, input, select { font: inherit; }
+    button, a { color: inherit; }
+    .app { height: 100vh; min-height: 0; overflow: hidden; display: grid; grid-template-columns: 292px minmax(0, 1fr); }
+    .catalog { min-width: 0; min-height: 0; overflow: hidden; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; }
+    .catalog-head { padding: 20px 16px 14px; border-bottom: 1px solid var(--line-soft); }
+    .brand { margin: 0; font-size: 19px; font-weight: 800; }
+    .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+    .game-switcher { position: relative; margin: 14px 0 10px; }
+    .game-switcher select { width: 100%; height: 38px; appearance: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 34px 0 11px; outline: 0; cursor: pointer; }
+    .game-switcher svg { position: absolute; right: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
+    .view-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 0 0 10px; }
+    .view-tabs.models-unavailable { grid-template-columns: 1fr; }
+    .view-tabs.models-unavailable #creaturesLink { display: none; }
+    .view-tab { height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
+    .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .view-tab svg { width: 15px; height: 15px; }
+    .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
+    .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
+    .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
+    .search input::placeholder { color: var(--faint); }
+    .tier-filters { max-height: 86px; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; margin-top: 10px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+    .tier-filter { border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); padding: 6px 9px; cursor: pointer; font-size: 12px; }
+    .tier-filter.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .sound-list { min-height: 0; flex: 1; padding: 10px; display: grid; align-content: start; gap: 5px; overflow-y: auto; overscroll-behavior: contain; }
+    .sound-entry { min-height: 58px; width: 100%; border: 1px solid transparent; border-radius: 6px; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; align-items: center; padding: 9px 10px; text-align: left; cursor: pointer; }
+    .sound-entry:hover { background: var(--surface); }
+    .sound-entry.active { background: var(--surface-2); border-color: var(--line); }
+    .sound-entry strong, .sound-entry small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .sound-entry strong { font-size: 14px; }
+    .sound-entry small { grid-column: 1; color: var(--muted); }
+    .sound-entry span { grid-column: 2; grid-row: 1 / span 2; color: var(--lime); font-size: 11px; }
+    .empty { color: var(--muted); padding: 20px 10px; font-size: 13px; }
+    .workspace { min-width: 0; min-height: 0; height: 100vh; overflow-y: auto; overscroll-behavior: contain; display: grid; grid-template-rows: minmax(420px, 58vh) auto; }
+    .stage { min-height: 420px; position: sticky; z-index: 2; top: 0; overflow: hidden; background:
+      radial-gradient(circle at 18% 20%, rgba(189, 219, 107, .08), transparent 28%),
+      radial-gradient(circle at 82% 78%, rgba(240, 131, 102, .08), transparent 26%),
+      #0a100e; display: grid; place-items: center; padding: 88px 28px 86px; }
+    .stage-head { position: absolute; z-index: 3; top: 18px; left: 20px; right: 20px; display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; pointer-events: none; }
+    .identity h1 { margin: 0; max-width: min(62vw, 780px); font-size: clamp(30px, 4.5vw, 56px); line-height: 1; overflow-wrap: anywhere; }
+    .identity p { margin: 7px 0 0; color: var(--muted); font-size: 14px; }
+    .tier-badge { padding: 7px 10px; border: 1px solid var(--line); border-radius: 5px; background: rgba(16, 21, 19, .86); color: var(--lime); font-size: 12px; }
+    .player { width: min(720px, 100%); display: grid; justify-items: center; gap: 22px; }
+    .play-button { width: 92px; height: 92px; border: 0; border-radius: 50%; background: var(--lime); color: #17200e; display: grid; place-items: center; cursor: pointer; box-shadow: 0 0 0 12px rgba(189, 219, 107, .12); }
+    .play-button:hover { transform: scale(1.03); }
+    .play-button svg { width: 36px; height: 36px; }
+    .waveform { width: 100%; height: 86px; display: flex; align-items: flex-end; gap: 3px; padding: 0 4px; }
+    .waveform i { flex: 1; border-radius: 99px 99px 2px 2px; background: #314038; transform-origin: bottom; }
+    .waveform.playing i { animation: pulse 1.1s ease-in-out infinite; animation-delay: var(--d); background: linear-gradient(180deg, var(--lime), #6f8a3d); }
+    @keyframes pulse { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    .transport { width: 100%; display: grid; gap: 8px; }
+    .progress { appearance: none; width: 100%; height: 6px; border-radius: 99px; background: #22302a; outline: 0; }
+    .progress::-webkit-slider-thumb { appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--lime); }
+    .times { display: flex; justify-content: space-between; color: var(--faint); font-size: 12px; }
+    .stage-tools { position: absolute; z-index: 4; left: 20px; right: 20px; bottom: 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .icon-tools { padding: 4px; border: 1px solid var(--line); border-radius: 6px; background: rgba(16, 21, 19, .88); display: flex; gap: 3px; }
+    .icon-button { width: 34px; height: 34px; padding: 0; border: 0; border-radius: 4px; background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--muted); }
+    .icon-button:hover, .icon-button.active { background: var(--surface-2); color: var(--text); }
+    .icon-button svg { width: 17px; height: 17px; }
+    .clip-label { color: var(--muted); font-size: 12px; }
+    .details { border-top: 1px solid var(--line); padding: 24px clamp(20px, 3.5vw, 48px) 38px; display: grid; grid-template-columns: minmax(270px, .8fr) minmax(420px, 1.2fr); gap: 38px 50px; }
+    .details h2 { margin: 0 0 10px; font-size: 18px; }
+    .details p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .stats { margin-top: 20px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); display: grid; grid-template-columns: repeat(3, 1fr); }
+    .stat { padding: 14px 10px 14px 0; min-width: 0; }
+    .stat b { display: block; font-size: 19px; overflow: hidden; text-overflow: ellipsis; }
+    .stat span { display: block; margin-top: 3px; color: var(--faint); font-size: 11px; }
+    .used-by { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .chip { padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--amber); font-size: 12px; }
+    .clip-list { display: grid; gap: 8px; }
+    .clip { width: 100%; min-height: 72px; padding: 12px 14px; border: 1px solid var(--line-soft); border-radius: 6px; background: transparent; cursor: pointer; text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 16px; }
+    .clip:hover { border-color: var(--line); background: var(--surface); }
+    .clip.active { border-color: var(--coral); background: #261f1c; }
+    .clip-name { font-size: 15px; font-weight: 800; }
+    .clip-meta { color: var(--amber); font-size: 11px; align-self: center; }
+    .clip-description { grid-column: 1 / -1; color: var(--muted); font-size: 13px; }
+    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
+    @media (max-width: 900px) {
+      body { overflow: visible; }
+      .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
+      .catalog { overflow: visible; border-right: 0; border-bottom: 1px solid var(--line); }
+      .catalog-head { padding: 13px 12px 10px; }
+      .edition { display: none; }
+      .brand { font-size: 17px; }
+      .tier-filters { max-height: none; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+      .sound-list { min-height: auto; flex: none; display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
+      .sound-entry { flex: 0 0 210px; min-width: 210px; grid-template-columns: minmax(0, 1fr); }
+      .sound-entry span { grid-column: 1; grid-row: auto; }
+      .workspace { height: auto; overflow: visible; grid-template-rows: minmax(390px, 56vh) auto; }
+      .stage { min-height: 390px; position: relative; padding: 76px 16px 78px; }
+      .details { grid-template-columns: 1fr; gap: 26px; }
+    }
+    @media (max-width: 560px) {
+      .identity h1 { max-width: 72vw; font-size: 31px; }
+      .stage-head, .stage-tools { left: 14px; right: 14px; }
+      .details { padding: 20px 15px 30px; }
+      .stat b { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="catalog">
+      <div class="catalog-head">
+        <h1 class="brand" id="brand">黎明前 20 分钟 · 音效图鉴</h1>
+        <div class="game-switcher">
+          <select id="gameSelect" aria-label="游戏选择"></select>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <nav class="view-tabs" id="viewTabs" aria-label="图鉴类型">
+          <a class="view-tab" id="creaturesLink" href="./index.html"><i data-lucide="users"></i>角色</a>
+          <a class="view-tab active" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
+        </nav>
+        <p class="edition" id="edition"></p>
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="搜索音效、武器或事件" autocomplete="off">
+        </label>
+        <div class="tier-filters" id="tierFilters"></div>
+      </div>
+      <div class="sound-list" id="soundList"></div>
+    </aside>
+    <main class="workspace">
+      <section class="stage" id="stage">
+        <div class="stage-head">
+          <div class="identity"><h1 id="soundName">加载中</h1><p id="soundNameEn"></p></div>
+          <div class="tier-badge" id="tierBadge">SFX</div>
+        </div>
+        <div class="player">
+          <button class="play-button" id="playButton" title="播放"><i data-lucide="play"></i></button>
+          <div class="waveform" id="waveform" aria-hidden="true"></div>
+          <div class="transport">
+            <input class="progress" id="progress" type="range" min="0" max="1000" value="0" aria-label="播放进度">
+            <div class="times"><span id="currentTime">0:00</span><span id="durationTime">0:00</span></div>
+          </div>
+          <div class="clip-label" id="clipLabel"></div>
+        </div>
+        <div class="stage-tools">
+          <div class="icon-tools">
+            <button class="icon-button" id="loopButton" title="循环播放"><i data-lucide="repeat"></i></button>
+            <button class="icon-button" id="stopButton" title="停止"><i data-lucide="square"></i></button>
+          </div>
+        </div>
+      </section>
+      <section class="details">
+        <div>
+          <h2>音效信息</h2>
+          <p id="summaryText"></p>
+          <div class="stats">
+            <div class="stat"><b id="durationStat">—</b><span>时长</span></div>
+            <div class="stat"><b id="clipCountStat">—</b><span>采样条数</span></div>
+            <div class="stat"><b id="rateStat">—</b><span>采样率 / 声道</span></div>
+          </div>
+          <div class="used-by" id="usedBy"></div>
+        </div>
+        <div>
+          <h2>采样与变体</h2>
+          <div class="clip-list" id="clipList"></div>
+        </div>
+        <div class="notice" id="rightsNotice"></div>
+      </section>
+    </main>
+  </div>
+  <audio id="player" preload="metadata"></audio>
+  <script type="importmap">
+    {"imports":{"lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+  </script>
+  <script type="module">
+    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown } from 'lucide';
+
+    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown };
+    const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
+    refreshIcons();
+
+    const games = await fetch('./games.json', { cache: 'no-store' }).then(response => response.json());
+    const params = new URLSearchParams(location.search);
+    const requestedGame = params.get('game');
+    const requestedSound = params.get('sound');
+    const soundGames = games.filter(game => game.soundsPage);
+    let activeGame = soundGames.find(game => game.slug === requestedGame) ?? soundGames[0] ?? games[0];
+    if (!activeGame.soundsPage) {
+      location.replace(`./index.html?game=${encodeURIComponent(activeGame.slug)}`);
+      await new Promise(() => {});
+    }
+    let catalog = await fetch(`./${activeGame.catalog}?v=${activeGame.assetRevision}`, { cache: 'no-store' }).then(response => response.json());
+    let activeEntry = catalog.find(entry => entry.slug === requestedSound) ?? catalog[0] ?? null;
+    let activeClipIndex = 0;
+    let activeTier = '全部';
+    const player = document.querySelector('#player');
+    const waveform = document.querySelector('#waveform');
+
+    for (let index = 0; index < 42; index += 1) {
+      const bar = document.createElement('i');
+      bar.style.setProperty('--d', `${(index % 9) * 70}ms`);
+      bar.style.height = `${28 + ((index * 17) % 58)}px`;
+      waveform.appendChild(bar);
+    }
+
+    function formatTime(seconds) {
+      if (!Number.isFinite(seconds)) return '0:00';
+      const total = Math.max(0, Math.round(seconds));
+      const minutes = Math.floor(total / 60);
+      const remain = String(total % 60).padStart(2, '0');
+      return `${minutes}:${remain}`;
+    }
+
+    function activeClip() {
+      return activeEntry?.clips?.[activeClipIndex] ?? activeEntry?.clips?.[0] ?? null;
+    }
+
+    function setPlaying(playing) {
+      waveform.classList.toggle('playing', playing);
+      document.querySelector('#playButton').innerHTML = `<i data-lucide="${playing ? 'pause' : 'play'}"></i>`;
+      document.querySelector('#playButton').title = playing ? '暂停' : '播放';
+      refreshIcons();
+    }
+
+    function loadClip(autoplay = false) {
+      const clip = activeClip();
+      if (!clip) return;
+      player.src = `${clip.file}?v=${activeGame.assetRevision}`;
+      player.loop = Boolean(activeEntry.loop) || document.querySelector('#loopButton').classList.contains('active');
+      document.querySelector('#clipLabel').textContent = `${clip.name} · ${clip.sampleRate / 1000} kHz`;
+      document.querySelector('#durationTime').textContent = formatTime(clip.durationSec);
+      document.querySelector('#progress').value = 0;
+      if (autoplay) {
+        player.play().catch(() => setPlaying(false));
+      } else {
+        setPlaying(false);
+      }
+    }
+
+    function renderDetails(entry) {
+      if (!entry) return;
+      document.querySelector('#soundName').textContent = entry.name;
+      document.querySelector('#soundNameEn').textContent = entry.nameEn;
+      document.querySelector('#tierBadge').textContent = entry.tier;
+      document.querySelector('#summaryText').textContent = entry.summary;
+      document.querySelector('#rightsNotice').textContent = activeGame.notice
+        ?? '音效来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
+      const clip = entry.clips[0];
+      document.querySelector('#durationStat').textContent = formatTime(entry.durationSec);
+      document.querySelector('#clipCountStat').textContent = String(entry.clipCount);
+      document.querySelector('#rateStat').textContent = clip
+        ? `${(clip.sampleRate / 1000).toFixed(1)} kHz / ${clip.channels}ch`
+        : '—';
+      document.querySelector('#usedBy').innerHTML = (entry.usedBy ?? [])
+        .map(item => `<span class="chip">${item}</span>`).join('');
+      const list = document.querySelector('#clipList');
+      list.innerHTML = '';
+      entry.clips.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.className = `clip${index === activeClipIndex ? ' active' : ''}`;
+        button.innerHTML = `<span class="clip-name">${item.name}</span><span class="clip-meta">${formatTime(item.durationSec)} · ${item.previewSizeKB} KB</span><span class="clip-description">${entry.sourceName}</span>`;
+        button.addEventListener('click', () => {
+          activeClipIndex = index;
+          renderDetails(entry);
+          loadClip(true);
+        });
+        list.appendChild(button);
+      });
+    }
+
+    function filteredCatalog() {
+      const query = document.querySelector('#searchInput').value.trim().toLowerCase();
+      return catalog.filter(entry => {
+        const tierMatch = activeTier === '全部' || entry.tier === activeTier;
+        const haystack = [
+          entry.name, entry.nameEn, entry.sourceName, entry.summary,
+          ...(entry.usedBy ?? []),
+          ...(entry.clips ?? []).map(clip => clip.name),
+        ].join(' ').toLowerCase();
+        return tierMatch && (!query || haystack.includes(query));
+      });
+    }
+
+    function renderSoundList() {
+      const list = document.querySelector('#soundList');
+      list.innerHTML = '';
+      const entries = filteredCatalog();
+      if (!entries.length) {
+        list.innerHTML = '<div class="empty">没有匹配音效</div>';
+        return;
+      }
+      entries.forEach(entry => {
+        const button = document.createElement('button');
+        button.className = `sound-entry${entry.slug === activeEntry?.slug ? ' active' : ''}`;
+        button.innerHTML = `<strong>${entry.name}</strong><small>${entry.nameEn}</small><span>${entry.tier}</span>`;
+        button.addEventListener('click', () => {
+          activeEntry = entry;
+          activeClipIndex = 0;
+          const next = new URL(location.href);
+          next.searchParams.set('game', activeGame.slug);
+          next.searchParams.set('sound', entry.slug);
+          history.replaceState({}, '', next);
+          renderSoundList();
+          renderDetails(entry);
+          loadClip(true);
+        });
+        list.appendChild(button);
+      });
+    }
+
+    function renderTierFilters() {
+      const container = document.querySelector('#tierFilters');
+      const tiers = activeGame.tiers ?? [...new Set(catalog.map(entry => entry.tier))];
+      container.innerHTML = '';
+      ['全部', ...tiers].forEach(tier => {
+        const button = document.createElement('button');
+        button.className = `tier-filter${tier === activeTier ? ' active' : ''}`;
+        button.textContent = tier;
+        button.addEventListener('click', () => {
+          activeTier = tier;
+          renderTierFilters();
+          renderSoundList();
+        });
+        container.appendChild(button);
+      });
+    }
+
+    function bindGameSelect() {
+      const select = document.querySelector('#gameSelect');
+      games.forEach(game => {
+        const option = document.createElement('option');
+        option.value = game.slug;
+        option.textContent = `${game.name} / ${game.nameEn}`;
+        select.appendChild(option);
+      });
+      select.value = activeGame.slug;
+      select.addEventListener('change', event => {
+        const nextGame = games.find(game => game.slug === event.target.value);
+        if (!nextGame) return;
+        if (nextGame.soundsPage) {
+          location.href = `./${nextGame.soundsPage}?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        location.href = `./index.html?game=${encodeURIComponent(nextGame.slug)}`;
+      });
+    }
+
+    document.querySelector('#playButton').addEventListener('click', () => {
+      if (!player.src) loadClip(true);
+      else if (player.paused) player.play();
+      else player.pause();
+    });
+    document.querySelector('#stopButton').addEventListener('click', () => {
+      player.pause();
+      player.currentTime = 0;
+      setPlaying(false);
+    });
+    document.querySelector('#loopButton').addEventListener('click', event => {
+      const next = !event.currentTarget.classList.contains('active');
+      event.currentTarget.classList.toggle('active', next);
+      player.loop = next || Boolean(activeEntry?.loop);
+    });
+    document.querySelector('#progress').addEventListener('input', event => {
+      if (!player.duration) return;
+      player.currentTime = (Number(event.target.value) / 1000) * player.duration;
+    });
+    document.querySelector('#searchInput').addEventListener('input', renderSoundList);
+    player.addEventListener('play', () => setPlaying(true));
+    player.addEventListener('pause', () => setPlaying(false));
+    player.addEventListener('ended', () => {
+      if (activeEntry?.clips?.length > 1 && activeClipIndex < activeEntry.clips.length - 1) {
+        activeClipIndex += 1;
+        renderDetails(activeEntry);
+        loadClip(true);
+        return;
+      }
+      setPlaying(false);
+    });
+    player.addEventListener('timeupdate', () => {
+      document.querySelector('#currentTime').textContent = formatTime(player.currentTime);
+      if (player.duration) {
+        document.querySelector('#progress').value = String(Math.round((player.currentTime / player.duration) * 1000));
+      }
+    });
+    player.addEventListener('loadedmetadata', () => {
+      document.querySelector('#durationTime').textContent = formatTime(player.duration || activeClip()?.durationSec);
+    });
+
+    document.querySelector('#brand').textContent = `${activeGame.name} · 音效图鉴`;
+    document.querySelector('#edition').textContent = activeGame.subtitle;
+    document.querySelector('#viewTabs').classList.toggle('models-unavailable', activeGame.defaultView === 'sounds');
+    document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#soundsLink').href = `./${activeGame.soundsPage}?game=${encodeURIComponent(activeGame.slug)}`;
+    document.title = `${activeGame.name} · 音效图鉴`;
+    bindGameSelect();
+    renderTierFilters();
+    renderSoundList();
+    if (activeEntry) {
+      renderDetails(activeEntry);
+      loadClip(false);
+    }
+  </script>
+</body>
+</html>

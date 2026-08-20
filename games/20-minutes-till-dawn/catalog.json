@@ -1,0 +1,2263 @@
+[
+  {
+    "slug": "crossbow-fire",
+    "name": "十字弩射击",
+    "nameEn": "Crossbow Fire",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "CrossbowFire_SFX",
+    "summary": "十字弩松开蓄力后的发射音，量子螺栓、疾风之箭和快速换弹也共用这组射击。",
+    "usedBy": [
+      "十字弩",
+      "量子螺栓",
+      "疾风之箭",
+      "快速换弹"
+    ],
+    "loop": false,
+    "durationSec": 1.096,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Switch (8)",
+        "file": "sounds/20-minutes-till-dawn/switch-8.m4a",
+        "durationSec": 1.096,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 12
+      }
+    ]
+  },
+  {
+    "slug": "crossbow-charge",
+    "name": "十字弩蓄力",
+    "nameEn": "Crossbow Charge",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "CrossbowChargeUp_SFX",
+    "summary": "长按射击键给十字弩充能时的提示音。",
+    "usedBy": [
+      "十字弩"
+    ],
+    "loop": false,
+    "durationSec": 0.808,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (10)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-10.m4a",
+        "durationSec": 0.808,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 15
+      }
+    ]
+  },
+  {
+    "slug": "crossbow-woosh",
+    "name": "弩箭飞行",
+    "nameEn": "Crossbow Bolt Flight",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "CrossbowWoosh_SFX",
+    "summary": "十字弩箭矢飞出时的破空音。",
+    "usedBy": [
+      "十字弩"
+    ],
+    "loop": false,
+    "durationSec": 1.25,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Arrow Fly 3_3",
+        "file": "sounds/20-minutes-till-dawn/arrow-fly-3-3.m4a",
+        "durationSec": 1.25,
+        "sampleRate": 48000,
+        "channels": 2,
+        "previewSizeKB": 9
+      }
+    ]
+  },
+  {
+    "slug": "gunfire",
+    "name": "枪械射击",
+    "nameEn": "Gunfire",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "Gunfire_SFX",
+    "summary": "左轮手枪、霰弹枪、双冲锋枪和榴弹发射器共用的单发射击音。",
+    "usedBy": [
+      "左轮手枪",
+      "霰弹枪",
+      "双枪",
+      "榴弹发射器"
+    ],
+    "loop": false,
+    "durationSec": 0.615,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "single_shot",
+        "file": "sounds/20-minutes-till-dawn/single-shot.m4a",
+        "durationSec": 0.615,
+        "sampleRate": 48000,
+        "channels": 2,
+        "previewSizeKB": 12
+      }
+    ]
+  },
+  {
+    "slug": "grenade-explosion",
+    "name": "榴弹爆炸",
+    "nameEn": "Grenade Explosion",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "GrenadeExplosion_SFX",
+    "summary": "榴弹发射器命中后的魔法爆炸，与自爆怪共用同一条爆炸采样。",
+    "usedBy": [
+      "榴弹发射器"
+    ],
+    "loop": false,
+    "durationSec": 2.985,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Explosion_Magic_02",
+        "file": "sounds/20-minutes-till-dawn/spell-explosion-magic-02.m4a",
+        "durationSec": 2.985,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 37
+      }
+    ]
+  },
+  {
+    "slug": "spray-gun-fire",
+    "name": "水枪喷射",
+    "nameEn": "Spray Gun",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "SprayGun_SFX",
+    "summary": "魔法水枪、喷射器和孢子花发射时的水流音。",
+    "usedBy": [
+      "魔法水枪",
+      "喷射器"
+    ],
+    "loop": false,
+    "durationSec": 2.128,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Water_02",
+        "file": "sounds/20-minutes-till-dawn/spell-water-02.m4a",
+        "durationSec": 2.128,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 24
+      }
+    ]
+  },
+  {
+    "slug": "flame-cannon-fire",
+    "name": "火炮喷射",
+    "nameEn": "Flame Cannon",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "FlameCannon_SFX",
+    "summary": "火焰炮持续喷出燃烧弹时的短促火焰音。",
+    "usedBy": [
+      "火炮",
+      "燎原之火",
+      "超频效应"
+    ],
+    "loop": false,
+    "durationSec": 0.774,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Fire_Small_Whoosh_03",
+        "file": "sounds/20-minutes-till-dawn/spell-fire-small-whoosh-03.m4a",
+        "durationSec": 0.774,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 11
+      }
+    ]
+  },
+  {
+    "slug": "meteor-gun-fire",
+    "name": "火焰流星",
+    "nameEn": "Meteor Shot",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "MeteorGun_SFX",
+    "summary": "火焰流星变体的高伤害慢射命中音。",
+    "usedBy": [
+      "火焰流星"
+    ],
+    "loop": false,
+    "durationSec": 1.3,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Fire_Impact_01",
+        "file": "sounds/20-minutes-till-dawn/spell-fire-impact-01.m4a",
+        "durationSec": 1.3,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 20
+      }
+    ]
+  },
+  {
+    "slug": "max-charge",
+    "name": "蓄力完成",
+    "nameEn": "Max Charge",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "MaxCharge_SFX",
+    "summary": "十字弩或其他蓄力武器达到满蓄时的提示。",
+    "usedBy": [
+      "十字弩"
+    ],
+    "loop": false,
+    "durationSec": 0.635,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Coins (10)",
+        "file": "sounds/20-minutes-till-dawn/coins-10.m4a",
+        "durationSec": 0.635,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 9
+      }
+    ]
+  },
+  {
+    "slug": "batgun-fire",
+    "name": "蝙蝠枪射击",
+    "nameEn": "Batgun Fire",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "Batgun_SFX",
+    "summary": "蝙蝠枪放出追踪蝙蝠时的暗影抛射音，狱火、暗影和嗜血变体共用。",
+    "usedBy": [
+      "蝙蝠枪",
+      "狱火蝙蝠",
+      "暗影蝙蝠",
+      "嗜血蝙蝠"
+    ],
+    "loop": false,
+    "durationSec": 1.693,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Projectile_Shadow_01",
+        "file": "sounds/20-minutes-till-dawn/spell-projectile-shadow-01.m4a",
+        "durationSec": 1.693,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 21
+      }
+    ]
+  },
+  {
+    "slug": "thunder-caller-fire",
+    "name": "雷霆万钧射击",
+    "nameEn": "Thunder Caller Fire",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "ThunderCaller_SFX",
+    "summary": "雷霆万钧变体射出带落雷判定的魔箭。",
+    "usedBy": [
+      "雷霆万钧"
+    ],
+    "loop": false,
+    "durationSec": 2.122,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Lightning Spelll 18",
+        "file": "sounds/20-minutes-till-dawn/lightning-spelll-18.m4a",
+        "durationSec": 2.122,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 26
+      }
+    ]
+  },
+  {
+    "slug": "salvo-lock",
+    "name": "飞刀锁定",
+    "nameEn": "Salvo Lock-On",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "SalvoTargetAcquired_SFX",
+    "summary": "齐射之刃移动瞄准到敌人时的短促锁定提示。",
+    "usedBy": [
+      "齐射之刃"
+    ],
+    "loop": false,
+    "durationSec": 2.838,
+    "clipCount": 6,
+    "clips": [
+      {
+        "name": "Obtain_Points_01",
+        "file": "sounds/20-minutes-till-dawn/obtain-points-01.m4a",
+        "durationSec": 0.599,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      },
+      {
+        "name": "Obtain_Points_02",
+        "file": "sounds/20-minutes-till-dawn/obtain-points-02.m4a",
+        "durationSec": 0.624,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      },
+      {
+        "name": "Obtain_Points_03",
+        "file": "sounds/20-minutes-till-dawn/obtain-points-03.m4a",
+        "durationSec": 0.329,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      },
+      {
+        "name": "Obtain_Points_04",
+        "file": "sounds/20-minutes-till-dawn/obtain-points-04.m4a",
+        "durationSec": 0.312,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      },
+      {
+        "name": "Obtain_Points_05",
+        "file": "sounds/20-minutes-till-dawn/obtain-points-05.m4a",
+        "durationSec": 0.383,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      },
+      {
+        "name": "Obtain_Points_06",
+        "file": "sounds/20-minutes-till-dawn/obtain-points-06.m4a",
+        "durationSec": 0.591,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      }
+    ]
+  },
+  {
+    "slug": "magic-bow-fire",
+    "name": "魔羽射出",
+    "nameEn": "Magic Bow Fire",
+    "tier": "武器射击",
+    "status": "已提取",
+    "sourceName": "MagicBow_SFX",
+    "summary": "魔羽把箭钉进地面时的轻盈射出音。",
+    "usedBy": [
+      "魔羽",
+      "神箭召唤",
+      "炸弹魔箭"
+    ],
+    "loop": false,
+    "durationSec": 1.0,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Whoosh 9_5",
+        "file": "sounds/20-minutes-till-dawn/whoosh-9-5.m4a",
+        "durationSec": 1.0,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      }
+    ]
+  },
+  {
+    "slug": "reload-start",
+    "name": "开始换弹",
+    "nameEn": "Reload Start",
+    "tier": "武器换弹",
+    "status": "已提取",
+    "sourceName": "ReloadStart_SFX",
+    "summary": "绝大多数枪械按下换弹或弹药耗尽自动换弹时的枪机拉动音。",
+    "usedBy": [
+      "左轮手枪",
+      "霰弹枪",
+      "双枪",
+      "十字弩",
+      "火炮"
+    ],
+    "loop": false,
+    "durationSec": 1.019,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Weapon_Shotgun_Reload",
+        "file": "sounds/20-minutes-till-dawn/weapon-shotgun-reload.m4a",
+        "durationSec": 1.019,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 17
+      }
+    ]
+  },
+  {
+    "slug": "reload-finish",
+    "name": "换弹完成",
+    "nameEn": "Reload Finish",
+    "tier": "武器换弹",
+    "status": "已提取",
+    "sourceName": "ReloadFinish_SFX",
+    "summary": "弹匣到位、可以再次射击时的短促锁止音。",
+    "usedBy": [
+      "通用换弹"
+    ],
+    "loop": false,
+    "durationSec": 0.5,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Item Lock (1)",
+        "file": "sounds/20-minutes-till-dawn/item-lock-1.m4a",
+        "durationSec": 0.5,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 10
+      }
+    ]
+  },
+  {
+    "slug": "thunder-caller-retrieve",
+    "name": "雷霆箭回收",
+    "nameEn": "Thunder Caller Retrieve",
+    "tier": "武器换弹",
+    "status": "已提取",
+    "sourceName": "ThunderCallerRetrieve_SFX",
+    "summary": "雷霆万钧的箭矢返回时伴随的第二段雷声音。",
+    "usedBy": [
+      "雷霆万钧"
+    ],
+    "loop": false,
+    "durationSec": 3.636,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Lightning Spelll 19",
+        "file": "sounds/20-minutes-till-dawn/lightning-spelll-19.m4a",
+        "durationSec": 3.636,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 44
+      }
+    ]
+  },
+  {
+    "slug": "magic-bow-retrieve",
+    "name": "魔羽回收",
+    "nameEn": "Magic Bow Retrieve",
+    "tier": "武器换弹",
+    "status": "已提取",
+    "sourceName": "MagicBowRetrieve_SFX",
+    "summary": "换弹时地面上的魔箭收回并割伤路径敌人。",
+    "usedBy": [
+      "魔羽"
+    ],
+    "loop": false,
+    "durationSec": 1.45,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Weapon_Various_Whooshes_Movements_04",
+        "file": "sounds/20-minutes-till-dawn/weapon-various-whooshes-movements-04.m4a",
+        "durationSec": 1.45,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 11
+      }
+    ]
+  },
+  {
+    "slug": "cyclone-sword",
+    "name": "旋风神剑挥砍",
+    "nameEn": "Cyclone Sword Slash",
+    "tier": "近战挥砍",
+    "status": "已提取",
+    "sourceName": "Sword_SFX",
+    "summary": "旋风神剑普通挥砍，三把标准武器破空音轮换。",
+    "usedBy": [
+      "旋风神剑",
+      "死亡之剑",
+      "光明之剑",
+      "疾风之剑"
+    ],
+    "loop": false,
+    "durationSec": 3.713,
+    "clipCount": 3,
+    "clips": [
+      {
+        "name": "Standard_Weapon_Whoosh_01",
+        "file": "sounds/20-minutes-till-dawn/standard-weapon-whoosh-01.m4a",
+        "durationSec": 1.225,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 7
+      },
+      {
+        "name": "Standard_Weapon_Whoosh_02",
+        "file": "sounds/20-minutes-till-dawn/standard-weapon-whoosh-02.m4a",
+        "durationSec": 1.169,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      },
+      {
+        "name": "Standard_Weapon_Whoosh_03",
+        "file": "sounds/20-minutes-till-dawn/standard-weapon-whoosh-03.m4a",
+        "durationSec": 1.319,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 8
+      }
+    ]
+  },
+  {
+    "slug": "cyclone-sword-spin",
+    "name": "旋风神剑旋转",
+    "nameEn": "Cyclone Sword Spin",
+    "tier": "近战挥砍",
+    "status": "已提取",
+    "sourceName": "SwordSpin_SFX",
+    "summary": "换弹时的旋转斩击，对周围敌人造成子弹伤害。",
+    "usedBy": [
+      "旋风神剑"
+    ],
+    "loop": false,
+    "durationSec": 1.999,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Weapon_Various_Whooshes_Movements_01",
+        "file": "sounds/20-minutes-till-dawn/weapon-various-whooshes-movements-01.m4a",
+        "durationSec": 1.999,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 18
+      }
+    ]
+  },
+  {
+    "slug": "sword-of-death-spin",
+    "name": "死亡之剑旋转",
+    "nameEn": "Sword of Death Spin",
+    "tier": "近战挥砍",
+    "status": "已提取",
+    "sourceName": "SwordOfDeathSpin_SFX",
+    "summary": "死亡之剑变体换弹旋转时更厚重的带残响挥砍。",
+    "usedBy": [
+      "死亡之剑"
+    ],
+    "loop": false,
+    "durationSec": 5.944,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Big_Weapon_Whoosh_With_Echo",
+        "file": "sounds/20-minutes-till-dawn/big-weapon-whoosh-with-echo.m4a",
+        "durationSec": 5.944,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 57
+      }
+    ]
+  },
+  {
+    "slug": "salvo-knife",
+    "name": "齐射飞刀",
+    "nameEn": "Salvo Knives",
+    "tier": "近战挥砍",
+    "status": "已提取",
+    "sourceName": "SalvoKnife_SFX",
+    "summary": "齐射之刃锁定后同时甩出飞刀，三把匕首破空音会随机轮换。",
+    "usedBy": [
+      "齐射之刃"
+    ],
+    "loop": false,
+    "durationSec": 3.899,
+    "clipCount": 3,
+    "clips": [
+      {
+        "name": "Dagger_Whoosh_02",
+        "file": "sounds/20-minutes-till-dawn/dagger-whoosh-02.m4a",
+        "durationSec": 1.276,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      },
+      {
+        "name": "Dagger_Whoosh_03",
+        "file": "sounds/20-minutes-till-dawn/dagger-whoosh-03.m4a",
+        "durationSec": 1.275,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      },
+      {
+        "name": "Dagger_Whoosh_04",
+        "file": "sounds/20-minutes-till-dawn/dagger-whoosh-04.m4a",
+        "durationSec": 1.348,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 7
+      }
+    ]
+  },
+  {
+    "slug": "freeze",
+    "name": "冰冻",
+    "nameEn": "Freeze",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "Freeze_SFX",
+    "summary": "冰矛命中并施加冰冻时的结晶音。",
+    "usedBy": [
+      "冰冻"
+    ],
+    "loop": false,
+    "durationSec": 1.5,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_IceSpear_03",
+        "file": "sounds/20-minutes-till-dawn/spell-icespear-03.m4a",
+        "durationSec": 1.5,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 21
+      }
+    ]
+  },
+  {
+    "slug": "shockwave",
+    "name": "冲击波",
+    "nameEn": "Shockwave",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "Shockwave_SFX",
+    "summary": "角色或召唤物释放环形冲击波。",
+    "usedBy": [
+      "冲击波"
+    ],
+    "loop": false,
+    "durationSec": 1.343,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Wind_02",
+        "file": "sounds/20-minutes-till-dawn/spell-wind-02.m4a",
+        "durationSec": 1.343,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 16
+      }
+    ]
+  },
+  {
+    "slug": "summon-pulse",
+    "name": "召唤脉冲",
+    "nameEn": "Summon Pulse",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "SummonPulse_SFX",
+    "summary": "召唤物脉冲爆发时的法术书翻页冲击。",
+    "usedBy": [
+      "召唤物"
+    ],
+    "loop": false,
+    "durationSec": 2.5,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "SpellBook_NewSpell_01",
+        "file": "sounds/20-minutes-till-dawn/spellbook-newspell-01.m4a",
+        "durationSec": 2.5,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 31
+      }
+    ]
+  },
+  {
+    "slug": "smite",
+    "name": "圣击",
+    "nameEn": "Smite",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "Smite_SFX",
+    "summary": "圣击治疗或惩戒时的短促圣光音。",
+    "usedBy": [
+      "圣击"
+    ],
+    "loop": false,
+    "durationSec": 2.421,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Heal_Short",
+        "file": "sounds/20-minutes-till-dawn/heal-short.m4a",
+        "durationSec": 2.421,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 32
+      }
+    ]
+  },
+  {
+    "slug": "gun-glyph-spawn",
+    "name": "枪之烙印出现",
+    "nameEn": "Gun Glyph Spawn",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "GunGlyphSpawn_SFX",
+    "summary": "枪之烙印符文在地面生成印记。",
+    "usedBy": [
+      "枪之烙印"
+    ],
+    "loop": false,
+    "durationSec": 2.0,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_BlackMagic_Short_01",
+        "file": "sounds/20-minutes-till-dawn/spell-blackmagic-short-01.m4a",
+        "durationSec": 2.0,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 22
+      }
+    ]
+  },
+  {
+    "slug": "gun-glyph-activate",
+    "name": "枪之烙印爆发",
+    "nameEn": "Gun Glyph Activate",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "GunGlyphActivate_SFX",
+    "summary": "烙印延迟结束后炸成六发散弹。",
+    "usedBy": [
+      "枪之烙印"
+    ],
+    "loop": false,
+    "durationSec": 2.281,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_BlackMagic_Short_02",
+        "file": "sounds/20-minutes-till-dawn/spell-blackmagic-short-02.m4a",
+        "durationSec": 2.281,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 27
+      }
+    ]
+  },
+  {
+    "slug": "fire-wave",
+    "name": "火焰波",
+    "nameEn": "Fire Wave",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "FireWave_SFX",
+    "summary": "地面火焰波向前推进时的燃烧扫过音。",
+    "usedBy": [
+      "火焰波"
+    ],
+    "loop": false,
+    "durationSec": 1.63,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Fire_Whoosh_02",
+        "file": "sounds/20-minutes-till-dawn/spell-fire-whoosh-02.m4a",
+        "durationSec": 1.63,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 21
+      }
+    ]
+  },
+  {
+    "slug": "fireball-impact",
+    "name": "火球命中",
+    "nameEn": "Fireball Impact",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "FireballImpact_SFX",
+    "summary": "火球砸中敌人或地面时的火焰冲击。",
+    "usedBy": [
+      "火球",
+      "火焰流星"
+    ],
+    "loop": false,
+    "durationSec": 1.3,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Fire_Impact_01",
+        "file": "sounds/20-minutes-till-dawn/spell-fire-impact-01.m4a",
+        "durationSec": 1.3,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 20
+      }
+    ]
+  },
+  {
+    "slug": "fireball-woosh",
+    "name": "火球飞出",
+    "nameEn": "Fireball Whoosh",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "FireballWoosh_SFX",
+    "summary": "火球类投射物离手时的小型火焰破空。",
+    "usedBy": [
+      "火球"
+    ],
+    "loop": false,
+    "durationSec": 0.758,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Fire_Small_Whoosh_02",
+        "file": "sounds/20-minutes-till-dawn/spell-fire-small-whoosh-02.m4a",
+        "durationSec": 0.758,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "gale-woosh",
+    "name": "疾风",
+    "nameEn": "Gale",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "GaleWoosh",
+    "summary": "疾风技能刮过时的小型气流音。",
+    "usedBy": [
+      "疾风"
+    ],
+    "loop": false,
+    "durationSec": 1.0,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Air_Small_Whoosh_03",
+        "file": "sounds/20-minutes-till-dawn/spell-air-small-whoosh-03.m4a",
+        "durationSec": 1.0,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 16
+      }
+    ]
+  },
+  {
+    "slug": "ice-shatter",
+    "name": "碎冰",
+    "nameEn": "Ice Shatter",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "IceShatter_SFX",
+    "summary": "冰冻状态结束或碎冰爆炸时的碎裂音。",
+    "usedBy": [
+      "碎冰"
+    ],
+    "loop": false,
+    "durationSec": 1.658,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Ice_Impact_03",
+        "file": "sounds/20-minutes-till-dawn/spell-ice-impact-03.m4a",
+        "durationSec": 1.658,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 21
+      }
+    ]
+  },
+  {
+    "slug": "lilith-spirit",
+    "name": "莉莉丝灵魂",
+    "nameEn": "Lilith Spirit",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "LilithSpirit_SFX",
+    "summary": "莉莉丝放出灵魂时的诅咒音。",
+    "usedBy": [
+      "莉莉丝"
+    ],
+    "loop": false,
+    "durationSec": 1.91,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Curse_01",
+        "file": "sounds/20-minutes-till-dawn/spell-curse-01.m4a",
+        "durationSec": 1.91,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 22
+      }
+    ]
+  },
+  {
+    "slug": "thunder",
+    "name": "落雷",
+    "nameEn": "Thunder",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "Thunder_SFX",
+    "summary": "召唤落雷劈中敌人时的电击音。",
+    "usedBy": [
+      "落雷",
+      "雷霆万钧"
+    ],
+    "loop": false,
+    "durationSec": 2.122,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Lightning Spelll 18",
+        "file": "sounds/20-minutes-till-dawn/lightning-spelll-18.m4a",
+        "durationSec": 2.122,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 26
+      }
+    ]
+  },
+  {
+    "slug": "luna-black-hole",
+    "name": "露娜黑洞",
+    "nameEn": "Luna Black Hole",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "LunaBlackHole_SFX",
+    "summary": "露娜角色技能生成黑洞时的黑魔法音。",
+    "usedBy": [
+      "露娜"
+    ],
+    "loop": false,
+    "durationSec": 1.882,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_BlackMagic_Short_03",
+        "file": "sounds/20-minutes-till-dawn/spell-blackmagic-short-03.m4a",
+        "durationSec": 1.882,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 19
+      }
+    ]
+  },
+  {
+    "slug": "eye-of-the-storm",
+    "name": "风暴之眼",
+    "nameEn": "Eye of the Storm",
+    "tier": "法术技能",
+    "status": "已提取",
+    "sourceName": "EyeOfTheStorm_SFX",
+    "summary": "风暴之眼持续旋转时的气流音。",
+    "usedBy": [
+      "风暴之眼"
+    ],
+    "loop": false,
+    "durationSec": 2.229,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Air_03",
+        "file": "sounds/20-minutes-till-dawn/spell-air-03.m4a",
+        "durationSec": 2.229,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 31
+      }
+    ]
+  },
+  {
+    "slug": "dasher-to-human",
+    "name": "化形为人",
+    "nameEn": "Transform to Human",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "DasherTransformToHuman_SFX",
+    "summary": "黛歇从鹿形态切回人形。",
+    "usedBy": [
+      "黛歇"
+    ],
+    "loop": false,
+    "durationSec": 3.69,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Debuff_Beasts",
+        "file": "sounds/20-minutes-till-dawn/debuff-beasts.m4a",
+        "durationSec": 3.69,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 38
+      }
+    ]
+  },
+  {
+    "slug": "dasher-to-deer",
+    "name": "化形为鹿",
+    "nameEn": "Transform to Deer",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "DasherTransformToDeer_SFX 1",
+    "summary": "黛歇切换成鹿形态。",
+    "usedBy": [
+      "黛歇"
+    ],
+    "loop": false,
+    "durationSec": 3.69,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Buff_BeastsPower",
+        "file": "sounds/20-minutes-till-dawn/buff-beastspower.m4a",
+        "durationSec": 3.69,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 42
+      }
+    ]
+  },
+  {
+    "slug": "dasher-transform-warning",
+    "name": "化形预警",
+    "nameEn": "Dasher Transform Warning",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "DasherTransformWarning_SFX",
+    "summary": "黛歇即将在人鹿形态间切换的预警。",
+    "usedBy": [
+      "黛歇"
+    ],
+    "loop": false,
+    "durationSec": 3.739,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Debuff_Positive",
+        "file": "sounds/20-minutes-till-dawn/debuff-positive.m4a",
+        "durationSec": 3.739,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 43
+      }
+    ]
+  },
+  {
+    "slug": "hina-dash",
+    "name": "希娜冲刺",
+    "nameEn": "Hina Dash",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "HinaDash_SFX",
+    "summary": "希娜冲刺位移时的破空音。",
+    "usedBy": [
+      "希娜"
+    ],
+    "loop": false,
+    "durationSec": 0.875,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Whoosh 12_2",
+        "file": "sounds/20-minutes-till-dawn/whoosh-12-2.m4a",
+        "durationSec": 0.875,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 7
+      }
+    ]
+  },
+  {
+    "slug": "shadow-clone-attack",
+    "name": "影分身攻击",
+    "nameEn": "Shadow Clone Attack",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "ShadowCloneAttack_SFX",
+    "summary": "影分身挥砍时的火把破空音。",
+    "usedBy": [
+      "影分身"
+    ],
+    "loop": false,
+    "durationSec": 1.188,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Torch_Whoosh_02",
+        "file": "sounds/20-minutes-till-dawn/torch-whoosh-02.m4a",
+        "durationSec": 1.188,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 15
+      }
+    ]
+  },
+  {
+    "slug": "footstep-grass",
+    "name": "草地脚步",
+    "nameEn": "Grass Footsteps",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "FootstepGrass_SFX",
+    "summary": "角色在草地上移动时的三组脚步随机轮换。",
+    "usedBy": [
+      "角色移动"
+    ],
+    "loop": false,
+    "durationSec": 1.001,
+    "clipCount": 3,
+    "clips": [
+      {
+        "name": "Footsteps_Casual_Grass_01",
+        "file": "sounds/20-minutes-till-dawn/footsteps-casual-grass-01.m4a",
+        "durationSec": 0.308,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      },
+      {
+        "name": "Footsteps_Casual_Grass_02",
+        "file": "sounds/20-minutes-till-dawn/footsteps-casual-grass-02.m4a",
+        "durationSec": 0.357,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      },
+      {
+        "name": "Footsteps_Casual_Grass_03",
+        "file": "sounds/20-minutes-till-dawn/footsteps-casual-grass-03.m4a",
+        "durationSec": 0.336,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 6
+      }
+    ]
+  },
+  {
+    "slug": "player-hurt",
+    "name": "角色受伤",
+    "nameEn": "Player Hurt",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "Hurt_SFX",
+    "summary": "玩家被击中时的血溅音。",
+    "usedBy": [
+      "角色"
+    ],
+    "loop": false,
+    "durationSec": 0.999,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Blood_Splash_Quick_01",
+        "file": "sounds/20-minutes-till-dawn/blood-splash-quick-01.m4a",
+        "durationSec": 0.999,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 12
+      }
+    ]
+  },
+  {
+    "slug": "dodge",
+    "name": "闪避",
+    "nameEn": "Dodge",
+    "tier": "角色动作",
+    "status": "已提取",
+    "sourceName": "Dodge_SFX",
+    "summary": "成功闪避伤害时的短促提示。",
+    "usedBy": [
+      "闪避"
+    ],
+    "loop": false,
+    "durationSec": 1.035,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (24)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-24.m4a",
+        "durationSec": 1.035,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "shoggoth-death",
+    "name": "修格斯死亡",
+    "nameEn": "Shoggoth Death",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "ShoggothDeath_SFX",
+    "summary": "修格斯倒下时的血爆。",
+    "usedBy": [
+      "修格斯"
+    ],
+    "loop": false,
+    "durationSec": 1.641,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Explosion_Blood_01",
+        "file": "sounds/20-minutes-till-dawn/explosion-blood-01.m4a",
+        "durationSec": 1.641,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 19
+      }
+    ]
+  },
+  {
+    "slug": "shoggoth-laser",
+    "name": "修格斯激光",
+    "nameEn": "Shoggoth Laser",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "ShoggothLaser_SFX",
+    "summary": "修格斯致命激光射击。",
+    "usedBy": [
+      "修格斯"
+    ],
+    "loop": false,
+    "durationSec": 0.837,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "deadly_lazar_shot_24",
+        "file": "sounds/20-minutes-till-dawn/deadly-lazar-shot-24.m4a",
+        "durationSec": 0.837,
+        "sampleRate": 48000,
+        "channels": 2,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "shoggoth-windup",
+    "name": "修格斯蓄力",
+    "nameEn": "Shoggoth Windup",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "ShoggothWindup_SFX",
+    "summary": "修格斯放出激光前的充能。",
+    "usedBy": [
+      "修格斯"
+    ],
+    "loop": false,
+    "durationSec": 1.889,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Recharge_Version_01",
+        "file": "sounds/20-minutes-till-dawn/spell-recharge-version-01.m4a",
+        "durationSec": 1.889,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 25
+      }
+    ]
+  },
+  {
+    "slug": "monster-hit",
+    "name": "命中敌人",
+    "nameEn": "Monster Hit",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "MonsterHit_SFX",
+    "summary": "子弹打中敌人时的极短撞击。",
+    "usedBy": [
+      "命中反馈"
+    ],
+    "loop": false,
+    "durationSec": 0.093,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "sfx_sounds_impact1",
+        "file": "sounds/20-minutes-till-dawn/sfx-sounds-impact1.m4a",
+        "durationSec": 0.093,
+        "sampleRate": 44100,
+        "channels": 1,
+        "previewSizeKB": 5
+      }
+    ]
+  },
+  {
+    "slug": "dragon-attack",
+    "name": "巨龙攻击",
+    "nameEn": "Dragon Attack",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "DragonAttack_SFX",
+    "summary": "巨龙吐息或扑击时的带回声吼叫。",
+    "usedBy": [
+      "巨龙"
+    ],
+    "loop": false,
+    "durationSec": 2.545,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Monster_2_Attack_Quick_01_WITH_ECHO",
+        "file": "sounds/20-minutes-till-dawn/monster-2-attack-quick-01-with-echo.m4a",
+        "durationSec": 2.545,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 23
+      }
+    ]
+  },
+  {
+    "slug": "ghost-pet-attack",
+    "name": "幽灵宠物攻击",
+    "nameEn": "Ghost Pet Attack",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "GhostPettAttack_SFX",
+    "summary": "幽灵宠物或友方幽灵的攻击音。",
+    "usedBy": [
+      "幽灵宠物"
+    ],
+    "loop": false,
+    "durationSec": 2.128,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Water_02",
+        "file": "sounds/20-minutes-till-dawn/spell-water-02.m4a",
+        "durationSec": 2.128,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 24
+      }
+    ]
+  },
+  {
+    "slug": "yog-attack",
+    "name": "犹格攻击",
+    "nameEn": "Yog Attack",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "YogAttack",
+    "summary": "犹格·索托斯的攻击音。",
+    "usedBy": [
+      "犹格"
+    ],
+    "loop": false,
+    "durationSec": 2.128,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Water_02",
+        "file": "sounds/20-minutes-till-dawn/spell-water-02.m4a",
+        "durationSec": 2.128,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 24
+      }
+    ]
+  },
+  {
+    "slug": "eye-monster-shoot",
+    "name": "眼球怪射击",
+    "nameEn": "Eye Monster Shot",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "EyeMonsterShoot_SFX",
+    "summary": "眼球怪吐出投射物。",
+    "usedBy": [
+      "眼球怪"
+    ],
+    "loop": false,
+    "durationSec": 0.999,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Blood_Splash_Quick_01",
+        "file": "sounds/20-minutes-till-dawn/blood-splash-quick-01.m4a",
+        "durationSec": 0.999,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 12
+      }
+    ]
+  },
+  {
+    "slug": "rhogog-hit",
+    "name": "罗格格弹命中",
+    "nameEn": "Rhogog Projectile Hit",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "RhogogProjectileHit_SFX",
+    "summary": "罗格格投射物命中时的毒性护盾音。",
+    "usedBy": [
+      "罗格格"
+    ],
+    "loop": false,
+    "durationSec": 2.6,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Shield_Poison",
+        "file": "sounds/20-minutes-till-dawn/shield-poison.m4a",
+        "durationSec": 2.6,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 29
+      }
+    ]
+  },
+  {
+    "slug": "boomer-explode",
+    "name": "自爆怪爆炸",
+    "nameEn": "Boomer Explosion",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "Boomer_SFX",
+    "summary": "自爆怪靠近后引爆。",
+    "usedBy": [
+      "自爆怪"
+    ],
+    "loop": false,
+    "durationSec": 2.985,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Explosion_Magic_02",
+        "file": "sounds/20-minutes-till-dawn/spell-explosion-magic-02.m4a",
+        "durationSec": 2.985,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 37
+      }
+    ]
+  },
+  {
+    "slug": "boomer-warning",
+    "name": "自爆预警",
+    "nameEn": "Boomer Warning",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "BoomerWarning_SFX",
+    "summary": "自爆怪即将爆炸时的循环警报。",
+    "usedBy": [
+      "自爆怪"
+    ],
+    "loop": false,
+    "durationSec": 0.8,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "sfx_lowhealth_alarmloop1",
+        "file": "sounds/20-minutes-till-dawn/sfx-lowhealth-alarmloop1.m4a",
+        "durationSec": 0.8,
+        "sampleRate": 44100,
+        "channels": 1,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "shub-death",
+    "name": "莎布死亡",
+    "nameEn": "Shub Death",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "ShubDeath_SFX",
+    "summary": "莎布受击倒下的高强度惨叫。",
+    "usedBy": [
+      "莎布"
+    ],
+    "loop": false,
+    "durationSec": 2.617,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Monster_2_RecieveAttack_HighIntensity_01",
+        "file": "sounds/20-minutes-till-dawn/monster-2-recieveattack-highintensity-01.m4a",
+        "durationSec": 2.617,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 28
+      }
+    ]
+  },
+  {
+    "slug": "shub-special",
+    "name": "莎布特殊攻击",
+    "nameEn": "Shub Special",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "ShubSpecial_SFX",
+    "summary": "莎布的大型武器挥砍。",
+    "usedBy": [
+      "莎布"
+    ],
+    "loop": false,
+    "durationSec": 2.028,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Big_Weapon_Whoosh",
+        "file": "sounds/20-minutes-till-dawn/big-weapon-whoosh.m4a",
+        "durationSec": 2.028,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 15
+      }
+    ]
+  },
+  {
+    "slug": "shub-windup",
+    "name": "莎布蓄力",
+    "nameEn": "Shub Windup",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "ShubWindup_SFX",
+    "summary": "莎布·尼古拉丝放出特殊攻击前的充能。",
+    "usedBy": [
+      "莎布"
+    ],
+    "loop": false,
+    "durationSec": 1.889,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Recharge_Version_01",
+        "file": "sounds/20-minutes-till-dawn/spell-recharge-version-01.m4a",
+        "durationSec": 1.889,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 25
+      }
+    ]
+  },
+  {
+    "slug": "tentacle-attack",
+    "name": "触手攻击",
+    "nameEn": "Tentacle Attack",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "TentacleAttack_SFX",
+    "summary": "触手抽打时的水声挥击。",
+    "usedBy": [
+      "触手"
+    ],
+    "loop": false,
+    "durationSec": 2.668,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Water_01",
+        "file": "sounds/20-minutes-till-dawn/spell-water-01.m4a",
+        "durationSec": 2.668,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 30
+      }
+    ]
+  },
+  {
+    "slug": "frost-moth",
+    "name": "霜蛾",
+    "nameEn": "Frost Moth",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "FrostMoth_SFX",
+    "summary": "霜蛾施加大范围冰冻。",
+    "usedBy": [
+      "霜蛾"
+    ],
+    "loop": false,
+    "durationSec": 5.063,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Freeze",
+        "file": "sounds/20-minutes-till-dawn/spell-freeze.m4a",
+        "durationSec": 5.063,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 62
+      }
+    ]
+  },
+  {
+    "slug": "winged-monster",
+    "name": "飞翼怪",
+    "nameEn": "Winged Monster",
+    "tier": "敌人",
+    "status": "已提取",
+    "sourceName": "WingedMonster_SFX",
+    "summary": "蝙蝠类飞翼敌人死亡或受击。",
+    "usedBy": [
+      "飞翼怪"
+    ],
+    "loop": false,
+    "durationSec": 1.376,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Bat_Death_02",
+        "file": "sounds/20-minutes-till-dawn/bat-death-02.m4a",
+        "durationSec": 1.376,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 16
+      }
+    ]
+  },
+  {
+    "slug": "energized",
+    "name": "充能",
+    "nameEn": "Energized",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "Energized_SFX",
+    "summary": "获得充能或强化状态时的提升音。",
+    "usedBy": [
+      "增益"
+    ],
+    "loop": false,
+    "durationSec": 2.556,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Buff_Power_Up_01",
+        "file": "sounds/20-minutes-till-dawn/buff-power-up-01.m4a",
+        "durationSec": 2.556,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 29
+      }
+    ]
+  },
+  {
+    "slug": "halo-spawn",
+    "name": "光环出现",
+    "nameEn": "Halo Spawn",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "HaloSpawn_SFX",
+    "summary": "场上生成可拾取光环。",
+    "usedBy": [
+      "光环"
+    ],
+    "loop": false,
+    "durationSec": 3.542,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Buff_Intelligence",
+        "file": "sounds/20-minutes-till-dawn/buff-intelligence.m4a",
+        "durationSec": 3.542,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 43
+      }
+    ]
+  },
+  {
+    "slug": "holy-shield-recharge",
+    "name": "圣盾充能",
+    "nameEn": "Holy Shield Recharge",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "HolyShieldRecharge_SFX",
+    "summary": "圣盾重新充满时的恢复音。",
+    "usedBy": [
+      "圣盾"
+    ],
+    "loop": false,
+    "durationSec": 3.542,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Buff_Intelligence",
+        "file": "sounds/20-minutes-till-dawn/buff-intelligence.m4a",
+        "durationSec": 3.542,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 43
+      }
+    ]
+  },
+  {
+    "slug": "holy-shield-break",
+    "name": "圣盾破碎",
+    "nameEn": "Holy Shield Break",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "HolyShieldBreak_SFX",
+    "summary": "圣盾被打破时的减速/破碎音。",
+    "usedBy": [
+      "圣盾"
+    ],
+    "loop": false,
+    "durationSec": 1.911,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Debuff_Speed",
+        "file": "sounds/20-minutes-till-dawn/debuff-speed.m4a",
+        "durationSec": 1.911,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 19
+      }
+    ]
+  },
+  {
+    "slug": "egg-hatch",
+    "name": "孵化",
+    "nameEn": "Egg Hatch",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "EggHatch_SFX",
+    "summary": "蛋或召唤物孵化破壳。",
+    "usedBy": [
+      "孵化"
+    ],
+    "loop": false,
+    "durationSec": 2.257,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (17)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-17.m4a",
+        "durationSec": 2.257,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 30
+      }
+    ]
+  },
+  {
+    "slug": "chest-xp",
+    "name": "宝箱经验",
+    "nameEn": "Chest XP",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "ChestSpawnXP_SFX",
+    "summary": "宝箱喷出经验水晶时的单次计数。",
+    "usedBy": [
+      "宝箱"
+    ],
+    "loop": false,
+    "durationSec": 0.427,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Count Prize (Single Tick)",
+        "file": "sounds/20-minutes-till-dawn/count-prize-single-tick.m4a",
+        "durationSec": 0.427,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 9
+      }
+    ]
+  },
+  {
+    "slug": "halo-pickup",
+    "name": "拾取光环",
+    "nameEn": "Halo Pickup",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "HaloPickup_SFX",
+    "summary": "拾取光环后的正向增益音。",
+    "usedBy": [
+      "光环"
+    ],
+    "loop": false,
+    "durationSec": 3.739,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Buff_Positive",
+        "file": "sounds/20-minutes-till-dawn/buff-positive.m4a",
+        "durationSec": 3.739,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 47
+      }
+    ]
+  },
+  {
+    "slug": "heart-pickup",
+    "name": "拾取心脏",
+    "nameEn": "Heart Pickup",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "HeartPickup_SFX",
+    "summary": "拾取治疗心脏。",
+    "usedBy": [
+      "治疗"
+    ],
+    "loop": false,
+    "durationSec": 0.809,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (19)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-19.m4a",
+        "durationSec": 0.809,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "xp-pickup",
+    "name": "拾取经验",
+    "nameEn": "XP Pickup",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "XPPick_SFX",
+    "summary": "吸入经验水晶时的短促计数音。",
+    "usedBy": [
+      "经验"
+    ],
+    "loop": false,
+    "durationSec": 0.546,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Crystal Reward Tick",
+        "file": "sounds/20-minutes-till-dawn/crystal-reward-tick.m4a",
+        "durationSec": 0.546,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 11
+      }
+    ]
+  },
+  {
+    "slug": "soul-link",
+    "name": "灵魂链接",
+    "nameEn": "Soul Link",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "SoulLink_SFX",
+    "summary": "灵魂链接生效时的负面/绑定音。",
+    "usedBy": [
+      "灵魂链接"
+    ],
+    "loop": false,
+    "durationSec": 3.739,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Debuff_Positive",
+        "file": "sounds/20-minutes-till-dawn/debuff-positive.m4a",
+        "durationSec": 3.739,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 43
+      }
+    ]
+  },
+  {
+    "slug": "blazing-speed",
+    "name": "炽热加速",
+    "nameEn": "Blazing Speed",
+    "tier": "拾取增益",
+    "status": "已提取",
+    "sourceName": "BlazingSpeed_SFX",
+    "summary": "获得炽热加速类增益时的火焰气流。",
+    "usedBy": [
+      "增益"
+    ],
+    "loop": false,
+    "durationSec": 0.82,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Spell_Fire_Small_Whoosh_01",
+        "file": "sounds/20-minutes-till-dawn/spell-fire-small-whoosh-01.m4a",
+        "durationSec": 0.82,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "you-died",
+    "name": "你死了",
+    "nameEn": "You Died",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "YouDied_SFX",
+    "summary": "黎明前阵亡时的失败音乐。",
+    "usedBy": [
+      "结算"
+    ],
+    "loop": false,
+    "durationSec": 4.142,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "You Lose (4)",
+        "file": "sounds/20-minutes-till-dawn/you-lose-4.m4a",
+        "durationSec": 4.142,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 46
+      }
+    ]
+  },
+  {
+    "slug": "you-survived",
+    "name": "你活下来了",
+    "nameEn": "You Survived",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "YouSurvived_SFX",
+    "summary": "撑过二十分钟后的胜利音乐。",
+    "usedBy": [
+      "结算"
+    ],
+    "loop": false,
+    "durationSec": 5.887,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "You Win (2)",
+        "file": "sounds/20-minutes-till-dawn/you-win-2.m4a",
+        "durationSec": 5.887,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 70
+      }
+    ]
+  },
+  {
+    "slug": "level-up",
+    "name": "升级",
+    "nameEn": "Level Up",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "LevelUp_SFX",
+    "summary": "角色升级并打开强化菜单。",
+    "usedBy": [
+      "升级"
+    ],
+    "loop": false,
+    "durationSec": 2.042,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (8)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-8.m4a",
+        "durationSec": 2.042,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 26
+      }
+    ]
+  },
+  {
+    "slug": "chest-leadup",
+    "name": "开箱铺垫",
+    "nameEn": "Chest Drumroll",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "ChestOpenLeadUp_SFX",
+    "summary": "打开宝箱前的鼓点铺垫。",
+    "usedBy": [
+      "宝箱"
+    ],
+    "loop": false,
+    "durationSec": 1.78,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Drum Roll (3)",
+        "file": "sounds/20-minutes-till-dawn/drum-roll-3.m4a",
+        "durationSec": 1.78,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 24
+      }
+    ]
+  },
+  {
+    "slug": "powerup-menu",
+    "name": "强化菜单",
+    "nameEn": "Powerup Menu",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "PowerupMenuSFX",
+    "summary": "打开强化/祝福选择界面。",
+    "usedBy": [
+      "强化"
+    ],
+    "loop": false,
+    "durationSec": 0.963,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (13)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-13.m4a",
+        "durationSec": 0.963,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 15
+      }
+    ]
+  },
+  {
+    "slug": "chest-open",
+    "name": "打开宝箱",
+    "nameEn": "Chest Open",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "ChestOpen_SFX",
+    "summary": "宝箱揭晓奖励。",
+    "usedBy": [
+      "宝箱"
+    ],
+    "loop": false,
+    "durationSec": 1.682,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (11)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-11.m4a",
+        "durationSec": 1.682,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 24
+      }
+    ]
+  },
+  {
+    "slug": "gun-evo-end",
+    "name": "武器进化完成",
+    "nameEn": "Gun Evolution End",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "GunEvoEnd_SFX",
+    "summary": "进化动画结束、新枪到手。",
+    "usedBy": [
+      "武器进化"
+    ],
+    "loop": false,
+    "durationSec": 1.75,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (16)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-16.m4a",
+        "durationSec": 1.75,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 23
+      }
+    ]
+  },
+  {
+    "slug": "gun-evo-start",
+    "name": "武器进化开始",
+    "nameEn": "Gun Evolution Start",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "GunEvoStart_SFX",
+    "summary": "确认进化后的过场起始音。",
+    "usedBy": [
+      "武器进化"
+    ],
+    "loop": false,
+    "durationSec": 1.035,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (24)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-24.m4a",
+        "durationSec": 1.035,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 14
+      }
+    ]
+  },
+  {
+    "slug": "gun-evo-menu",
+    "name": "武器进化菜单",
+    "nameEn": "Gun Evolution Menu",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "GunEvoMenu_SFX",
+    "summary": "打开武器进化三选一界面。",
+    "usedBy": [
+      "武器进化"
+    ],
+    "loop": false,
+    "durationSec": 0.808,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (10)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-10.m4a",
+        "durationSec": 0.808,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 15
+      }
+    ]
+  },
+  {
+    "slug": "ui-hover",
+    "name": "界面悬停",
+    "nameEn": "UI Hover",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "UIHover_SFX",
+    "summary": "鼠标划过按钮时的轻点。",
+    "usedBy": [
+      "菜单"
+    ],
+    "loop": false,
+    "durationSec": 0.5,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Pop (3)",
+        "file": "sounds/20-minutes-till-dawn/pop-3.m4a",
+        "durationSec": 0.5,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      }
+    ]
+  },
+  {
+    "slug": "ui-click",
+    "name": "界面点击",
+    "nameEn": "UI Click",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "UIClick_SFX",
+    "summary": "菜单按钮按下时的通用点击。",
+    "usedBy": [
+      "菜单"
+    ],
+    "loop": false,
+    "durationSec": 0.625,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "UI Click 36",
+        "file": "sounds/20-minutes-till-dawn/ui-click-36.m4a",
+        "durationSec": 0.625,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 5
+      }
+    ]
+  },
+  {
+    "slug": "unlock-loadout",
+    "name": "解锁配装",
+    "nameEn": "Unlock Loadout",
+    "tier": "界面",
+    "status": "已提取",
+    "sourceName": "UnlockLoadout_SFX",
+    "summary": "解锁新角色或新武器配装。",
+    "usedBy": [
+      "解锁"
+    ],
+    "loop": false,
+    "durationSec": 1.682,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Special & Powerup (11)",
+        "file": "sounds/20-minutes-till-dawn/special-powerup-11.m4a",
+        "durationSec": 1.682,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 24
+      }
+    ]
+  },
+  {
+    "slug": "title-theme",
+    "name": "标题主题",
+    "nameEn": "Pretty Dungeon Loop",
+    "tier": "音乐",
+    "status": "已提取",
+    "sourceName": "AudioManager",
+    "summary": "标题界面循环背景乐，由 AudioManager 在主菜单淡入播放。",
+    "usedBy": [
+      "标题界面"
+    ],
+    "loop": true,
+    "durationSec": 72.0,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Pretty Dungeon LOOP",
+        "file": "sounds/20-minutes-till-dawn/pretty-dungeon-loop.m4a",
+        "durationSec": 72.0,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 1093
+      }
+    ]
+  },
+  {
+    "slug": "combat-theme",
+    "name": "荒原战斗",
+    "nameEn": "Wasteland Combat Loop",
+    "tier": "音乐",
+    "status": "已提取",
+    "sourceName": "AudioManager",
+    "summary": "局内循环战斗乐，由 AudioManager 在进入关卡后淡入播放。",
+    "usedBy": [
+      "战斗"
+    ],
+    "loop": true,
+    "durationSec": 110.345,
+    "clipCount": 1,
+    "clips": [
+      {
+        "name": "Wasteland Combat Loop",
+        "file": "sounds/20-minutes-till-dawn/wasteland-combat-loop.m4a",
+        "durationSec": 110.345,
+        "sampleRate": 44100,
+        "channels": 2,
+        "previewSizeKB": 1760
+      }
+    ]
+  }
+]
