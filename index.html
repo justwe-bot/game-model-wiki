@@ -43,6 +43,11 @@
     .view-tab svg { width: 15px; height: 15px; }
     .view-tabs.maps-unavailable { grid-template-columns: 1fr; }
     .view-tabs.maps-unavailable #mapsLink { display: none; }
+    .view-tabs.sounds-available { grid-template-columns: 1fr 1fr; }
+    .view-tabs.sounds-available:not(.maps-unavailable) { grid-template-columns: 1fr 1fr 1fr; }
+    .view-tabs.sounds-available.maps-unavailable { grid-template-columns: 1fr 1fr; }
+    #soundsLink { display: none; }
+    .view-tabs.sounds-available #soundsLink { display: flex; }
     .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
     .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
     .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
@@ -151,6 +156,7 @@
         <nav class="view-tabs" id="viewTabs" aria-label="图鉴类型">
           <a class="view-tab active" id="creaturesLink" href="./index.html"><i data-lucide="users"></i>角色</a>
           <a class="view-tab" id="mapsLink" href="./maps.html"><i data-lucide="map"></i>地图</a>
+          <a class="view-tab" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
         </nav>
         <p class="edition" id="edition"></p>
         <label class="search">
@@ -221,9 +227,9 @@
     import * as THREE from 'three';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users, X } from 'lucide';
+    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users, X, Volume2 } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users, X };
+    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users, X, Volume2 };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -232,6 +238,10 @@
     const requestedGame = initialParams.get('game');
     const requestedMonster = initialParams.get('monster');
     let activeGame = games.find(game => game.slug === requestedGame) ?? games[0];
+    if (activeGame.defaultView === 'sounds' && activeGame.soundsPage) {
+      location.replace(`./${activeGame.soundsPage}?game=${encodeURIComponent(activeGame.slug)}`);
+      await new Promise(() => {});
+    }
     let assetRevision = activeGame.assetRevision;
     let catalog = await fetch(`./${activeGame.catalog}?v=${assetRevision}`, { cache: 'no-store' }).then(response => response.json());
     const canvas = document.querySelector('#canvas');
@@ -864,15 +874,24 @@
 
     function updateViewNavigation() {
       const mapsAvailable = Boolean(activeGame.mapsPage);
+      const soundsAvailable = Boolean(activeGame.soundsPage);
       document.querySelector('#viewTabs').classList.toggle('maps-unavailable', !mapsAvailable);
+      document.querySelector('#viewTabs').classList.toggle('sounds-available', soundsAvailable);
       document.querySelector('#creaturesLink').lastChild.textContent = activeGame.slug === 'ultimate-pack' ? '模型' : '角色';
       document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
       document.querySelector('#mapsLink').href = mapsAvailable ? `./${activeGame.mapsPage}` : '#';
+      document.querySelector('#soundsLink').href = soundsAvailable
+        ? `./${activeGame.soundsPage}?game=${encodeURIComponent(activeGame.slug)}`
+        : '#';
     }
 
     async function switchGame(slug) {
       const nextGame = games.find(game => game.slug === slug);
       if (!nextGame || nextGame === activeGame) return;
+      if (nextGame.defaultView === 'sounds' && nextGame.soundsPage) {
+        location.href = `./${nextGame.soundsPage}?game=${encodeURIComponent(nextGame.slug)}`;
+        return;
+      }
       activeGame = nextGame;
       assetRevision = activeGame.assetRevision;
       catalog = await fetch(`./${activeGame.catalog}?v=${assetRevision}`, { cache: 'no-store' }).then(response => response.json());
