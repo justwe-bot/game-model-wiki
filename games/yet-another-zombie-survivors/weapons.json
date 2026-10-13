@@ -59,7 +59,23 @@
       "audio": [
         "engineer-blaster-fire",
         "engineer-energy-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Eng_Laser",
@@ -78,7 +94,23 @@
         "engineer-laser-stop",
         "engineer-laser-reload",
         "engineer-energy-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "energy",
+        "color": "#ff6b6b",
+        "sound": "engineer-laser-hit"
+      }
     },
     {
       "key": "Eng_Plasma",
@@ -96,7 +128,23 @@
         "engineer-plasma-stop",
         "engineer-plasma-reload",
         "engineer-energy-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "energy",
+        "color": "#9b8cff",
+        "sound": "engineer-plasma-loop"
+      }
     },
     {
       "key": "Eng_Taser",
@@ -111,7 +159,23 @@
       "audio": [
         "engineer-taser-fire",
         "engineer-energy-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "energy",
+        "color": "#ffe066",
+        "sound": "engineer-taser-fire"
+      }
     },
     {
       "key": "Eng_Tesla",
@@ -129,7 +193,23 @@
         "engineer-tesla-stop",
         "engineer-tesla-reload",
         "engineer-energy-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "energy",
+        "color": "#9be7ff",
+        "sound": "engineer-tesla-loop"
+      }
     },
     {
       "key": "Huntress_Bow",
@@ -143,7 +223,23 @@
       "sourceTerm": "Powerups/Weapons/Huntress_Bow",
       "audio": [
         "huntress-bow-fire"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#ff1c1c",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Huntress_BowExplosive",
@@ -157,7 +253,23 @@
       "sourceTerm": "Powerups/Weapons/Huntress_BowExplosive",
       "audio": [
         "huntress-bow-fire"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#ff1c1c",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Huntress_BowFreezing",
@@ -172,7 +284,23 @@
       "audio": [
         "huntress-bow-freezing-fire",
         "huntress-bow-fire"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01_Blue",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#7fd4ff",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Huntress_BowMulti",
@@ -186,7 +314,23 @@
       "sourceTerm": "Powerups/Weapons/Huntress_BowMulti",
       "audio": [
         "huntress-bow-fire"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#ff1c1c",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Huntress_BowPoison",
@@ -200,7 +344,23 @@
       "sourceTerm": "Powerups/Weapons/Huntress_BowPoison",
       "audio": [
         "huntress-bow-fire"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01_Toxic",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "toxic",
+        "color": "#8ede5a",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Mechanic_Chainsaw",
@@ -217,7 +377,23 @@
         "mechanic-chainsaw-hitting",
         "mechanic-chainsaw-attack-loop",
         "mechanic-chainsaw-attack-end"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Mechanic_Lancer",
@@ -232,7 +408,23 @@
       "audio": [
         "mechanic-lancer-burst",
         "mechanic-lancer-melee"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Mechanic_NitroGun",
@@ -247,7 +439,23 @@
       "audio": [
         "mechanic-nitro-gun-fire",
         "mechanic-nitro-gun-hit"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "mechanic-nitro-gun-hit"
+      }
     },
     {
       "key": "Mechanic_ChaosEngine",
@@ -261,7 +469,23 @@
       "sourceTerm": "Powerups/Weapons/Mechanic_ChaosEngine",
       "audio": [
         "mechanic-chaos-engine"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "KeyBlade_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "mechanic-spanner-hit"
+      }
     },
     {
       "key": "Mechanic_KeyBlade",
@@ -277,7 +501,23 @@
         "mechanic-spanner-melee",
         "mechanic-spanner-hit",
         "mechanic-spanner-throw"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "KeyBlade_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "mechanic-spanner-hit"
+      }
     },
     {
       "key": "Medic_DotaBottleThrow",
@@ -292,7 +532,23 @@
       "audio": [
         "medic-experiment-throw",
         "medic-experiment-toxic"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Medic_FreezeBottleThrow",
@@ -307,7 +563,23 @@
       "audio": [
         "medic-experiment-throw",
         "medic-experiment-ice"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Medic_Handgun",
@@ -322,7 +594,23 @@
       "audio": [
         "medic-handgun-fire",
         "universal-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Medic_SyringeThrow",
@@ -336,7 +624,23 @@
       "sourceTerm": "Powerups/Weapons/Medic_SyringeThrow",
       "audio": [
         "medic-syringe-gun-fire"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Syringe_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "toxic",
+        "color": "#8ede5a",
+        "sound": "medic-syringe-gun-fire"
+      }
     },
     {
       "key": "Medic_SyringeRifle",
@@ -351,7 +655,23 @@
       "audio": [
         "medic-syringer-fire",
         "universal-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Syringe_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "toxic",
+        "color": "#8ede5a",
+        "sound": "medic-syringer-fire"
+      }
     },
     {
       "key": "Ninja_Katana",
@@ -366,7 +686,23 @@
       "audio": [
         "sword-woosh",
         "blade-hit"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Katana_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "blade",
+        "color": "#ff1c1c",
+        "sound": "blade-hit"
+      }
     },
     {
       "key": "Ninja_KatanaSplash",
@@ -381,7 +717,23 @@
       "audio": [
         "sword-woosh",
         "blade-hit"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Katana_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "blade",
+        "color": "#ff1c1c",
+        "sound": "blade-hit"
+      }
     },
     {
       "key": "Ninja_KatanaSuperSlash",
@@ -397,7 +749,23 @@
         "ninja-soul-reaper-slash",
         "ninja-soul-reaper-impact",
         "sword-woosh"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "SuperSlash_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "blade",
+        "color": "#ff1c1c",
+        "sound": "ninja-soul-reaper-impact"
+      }
     },
     {
       "key": "Ninja_KatanaMultiSlash",
@@ -413,7 +781,23 @@
         "ninja-thousand-cuts",
         "sword-woosh",
         "blade-hit"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Katana_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "blade",
+        "color": "#ff1c1c",
+        "sound": "blade-hit"
+      }
     },
     {
       "key": "Ninja_KatanaHurricaneWave",
@@ -428,7 +812,23 @@
       "audio": [
         "ninja-windcutter",
         "sword-woosh"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "SuperSlash_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "blade",
+        "color": "#ff1c1c",
+        "sound": "ninja-windcutter"
+      }
     },
     {
       "key": "Pyro_AxeThrow",
@@ -443,7 +843,23 @@
       "audio": [
         "pyro-axerang-throw",
         "pyro-axerang-flying"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "ThrowingAxe_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "blade",
+        "color": "#ff1c1c",
+        "sound": "blade-hit"
+      }
     },
     {
       "key": "Pyro_Blowtorch",
@@ -459,7 +875,23 @@
         "pyro-flamethrower-start",
         "pyro-flamethrower-loop",
         "pyro-flamethrower-stop"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Nail_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Arc_Mask.png",
+        "kind": "fire",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Pyro_Fireaxe",
@@ -474,7 +906,23 @@
       "audio": [
         "sword-woosh",
         "blade-hit"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Axe_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Arc_Mask.png",
+        "kind": "fire",
+        "color": "#ff1c1c",
+        "sound": "blade-hit"
+      }
     },
     {
       "key": "Pyro_Flamethrower",
@@ -490,7 +938,23 @@
         "pyro-flamethrower-start",
         "pyro-flamethrower-loop",
         "pyro-flamethrower-stop"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Nail_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Arc_Mask.png",
+        "kind": "fire",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Pyro_Infernax",
@@ -505,7 +969,23 @@
       "audio": [
         "pyro-infernax-swing",
         "sword-woosh"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Axe_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Arc_Mask.png",
+        "kind": "fire",
+        "color": "#ff1c1c",
+        "sound": "blade-hit"
+      }
     },
     {
       "key": "Ranger_CrossbowBarber",
@@ -521,7 +1001,23 @@
         "ranger-crossbow-barber-fire",
         "ranger-crossbow-barber-cut",
         "ranger-crossbow-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "CrossbowBarbed_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#ff1c1c",
+        "sound": "ranger-crossbow-barber-cut"
+      }
     },
     {
       "key": "Ranger_Crossbow",
@@ -537,7 +1033,23 @@
         "ranger-crossbow-fire",
         "ranger-crossbow-penetrate",
         "ranger-crossbow-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#ff1c1c",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Ranger_CrossbowFirebrand",
@@ -554,7 +1066,23 @@
         "ranger-crossbow-firebrand-spread",
         "ranger-crossbow-penetrate",
         "ranger-crossbow-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Arc_Mask.png",
+        "kind": "fire",
+        "color": "#ff1c1c",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Ranger_CrossbowRepeater",
@@ -570,7 +1098,23 @@
         "ranger-crossbow-repeater-fire",
         "ranger-crossbow-penetrate",
         "ranger-crossbow-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Arrow_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+        "kind": "arrow",
+        "color": "#ff1c1c",
+        "sound": "arrow-penetrate"
+      }
     },
     {
       "key": "Ranger_CrossbowShockspike",
@@ -587,7 +1131,23 @@
         "ranger-crossbow-shockspike-pulse",
         "ranger-crossbow-shockspike-activate",
         "ranger-crossbow-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Shiur_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+        "kind": "energy",
+        "color": "#ffe066",
+        "sound": "ranger-crossbow-shockspike-activate"
+      }
     },
     {
       "key": "Swat_Rifle",
@@ -602,7 +1162,23 @@
       "audio": [
         "swat-rifle-fire",
         "universal-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Swat_GrenadeLauncher",
@@ -617,7 +1193,23 @@
       "audio": [
         "swat-grenade-launcher-fire",
         "explosion-small"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Swat_Pistol",
@@ -632,7 +1224,23 @@
       "audio": [
         "swat-pistol-fire",
         "universal-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Swat_Uzi",
@@ -647,7 +1255,23 @@
       "audio": [
         "swat-smg-fire",
         "universal-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Swat_Sniper",
@@ -662,7 +1286,23 @@
       "audio": [
         "swat-sniper-fire",
         "sniper-rifle-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Tank_Minigun",
@@ -679,7 +1319,23 @@
         "tank-minigun-loop",
         "tank-minigun-stop",
         "universal-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Tank_DoubleShotgun",
@@ -694,7 +1350,23 @@
       "audio": [
         "tank-shotgun-fire",
         "shotgun-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Tank_Rocket",
@@ -709,7 +1381,23 @@
       "audio": [
         "tank-rocket-fire",
         "explosion-rocket"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Tank_Shotgun",
@@ -724,7 +1412,23 @@
       "audio": [
         "tank-shotgun-fire",
         "shotgun-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     },
     {
       "key": "Tank_SuperShotgun",
@@ -739,7 +1443,101 @@
       "audio": [
         "tank-shotgun-fire",
         "shotgun-reload"
-      ]
+      ],
+      "hitEffect": {
+        "particle": "Bullet_Hit_01",
+        "particleTextures": [
+          "Point12"
+        ],
+        "impactSprite": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+        "flipbookSprite": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+        "flipbookGrid": [
+          8,
+          8
+        ],
+        "bloodSprite": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+        "kind": "ballistic",
+        "color": "#ff1c1c",
+        "sound": "hit-flesh"
+      }
     }
-  ]
+  ],
+  "hitEffectAssets": {
+    "Circle4_Explosion": {
+      "file": "textures/yet-another-zombie-survivors/vfx/Circle4_Explosion.png",
+      "width": 512,
+      "height": 512,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "ImpactHit_02": {
+      "file": "textures/yet-another-zombie-survivors/vfx/ImpactHit_02.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "Flame1": {
+      "file": "textures/yet-another-zombie-survivors/vfx/Flame1.png",
+      "width": 512,
+      "height": 512,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "T_BloodSpray_Mask": {
+      "file": "textures/yet-another-zombie-survivors/vfx/T_BloodSpray_Mask.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "bloodsplash2": {
+      "file": "textures/yet-another-zombie-survivors/vfx/bloodsplash2.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "T_Blood_Arc_Mask": {
+      "file": "textures/yet-another-zombie-survivors/vfx/T_Blood_Arc_Mask.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "T_Blood_Mist_Mask": {
+      "file": "textures/yet-another-zombie-survivors/vfx/T_Blood_Mist_Mask.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "tex_vfx-ult_particle_spritesheet_hitBall": {
+      "file": "textures/yet-another-zombie-survivors/vfx/tex_vfx-ult_particle_spritesheet_hitBall.png",
+      "width": 1024,
+      "height": 1024,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "T_BloodBurst_Mask": {
+      "file": "textures/yet-another-zombie-survivors/vfx/T_BloodBurst_Mask.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "gore_texture": {
+      "file": "textures/yet-another-zombie-survivors/vfx/gore_texture.png",
+      "width": 32,
+      "height": 32,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "bloodsplash": {
+      "file": "textures/yet-another-zombie-survivors/vfx/bloodsplash.png",
+      "width": 256,
+      "height": 256,
+      "sourceFile": "sharedassets1.assets"
+    },
+    "Point12": {
+      "file": "textures/yet-another-zombie-survivors/vfx/Point12.png",
+      "width": 512,
+      "height": 512,
+      "sourceFile": "sharedassets1.assets"
+    }
+  },
+  "hitEffectSources": {
+    "particleRenderer": "各角色包中的 ParticleSystemRenderer（按 GameObject 名 <武器>_Hit_01 关联）",
+    "note": "IL2CPP 构建剥离了 ParticleSystem 的 type tree，粒子颜色/尺寸/速度无法读回；预览里的播放节奏是按游戏特效惯例重建的，贴图、颜色与音效取自游戏原始数据。"
+  }
 }
