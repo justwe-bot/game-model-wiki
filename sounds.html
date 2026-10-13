@@ -28,10 +28,11 @@
     .game-switcher { position: relative; margin: 14px 0 10px; }
     .game-switcher select { width: 100%; height: 38px; appearance: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 34px 0 11px; outline: 0; cursor: pointer; }
     .game-switcher svg { position: absolute; right: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
-    .view-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 0 0 10px; }
-    .view-tabs.models-unavailable { grid-template-columns: 1fr; }
-    .view-tabs.models-unavailable #creaturesLink { display: none; }
-    .view-tab { height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
+    .view-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 10px; }
+    #creaturesLink, #weaponsLink { display: none; }
+    .view-tabs.models-available #creaturesLink { display: flex; }
+    .view-tabs.weapons-available #weaponsLink { display: flex; }
+    .view-tab { flex: 1 1 72px; height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
     .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
     .view-tab svg { width: 15px; height: 15px; }
     .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
@@ -129,6 +130,7 @@
         <nav class="view-tabs" id="viewTabs" aria-label="图鉴类型">
           <a class="view-tab" id="creaturesLink" href="./index.html"><i data-lucide="users"></i>角色</a>
           <a class="view-tab active" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
+          <a class="view-tab" id="weaponsLink" href="./weapons.html"><i data-lucide="crosshair"></i>武器</a>
         </nav>
         <p class="edition" id="edition"></p>
         <label class="search">
@@ -185,9 +187,9 @@
     {"imports":{"lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
   </script>
   <script type="module">
-    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown } from 'lucide';
+    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown };
+    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -400,9 +402,11 @@
 
     document.querySelector('#brand').textContent = `${activeGame.name} · 音效图鉴`;
     document.querySelector('#edition').textContent = activeGame.subtitle;
-    document.querySelector('#viewTabs').classList.toggle('models-unavailable', activeGame.defaultView === 'sounds');
+    document.querySelector('#viewTabs').classList.toggle('models-available', activeGame.defaultView !== 'sounds');
+    document.querySelector('#viewTabs').classList.toggle('weapons-available', Boolean(activeGame.weaponsCatalog));
     document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
     document.querySelector('#soundsLink').href = `./${activeGame.soundsPage}?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#weaponsLink').href = `./weapons.html?game=${encodeURIComponent(activeGame.slug)}`;
     document.title = `${activeGame.name} · 音效图鉴`;
     bindGameSelect();
     renderTierFilters();
