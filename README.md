@@ -10,6 +10,7 @@
 - `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
 - `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
 - `20-minutes-till-dawn`：从本机 Steam 安装提取的 86 组音效事件，覆盖武器射击、换弹、近战、法术和界面
+- `yet-another-zombie-survivors`：45 把武器（含官方中文名与描述）和 471 组音效事件、884 个音频片段，覆盖 9 位幸存者、12 类敌人、5 个头目与全部地图机关
 
 《哈迪斯 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
 
@@ -28,6 +29,7 @@
 - 独立地图页支持搜索、扩展包筛选、自动旋转、俯视和重置视角
 - 23 张地图均使用静态场景 GLB；其中 9 张已接入岩石、草地和泥土地形纹理的三平面混合材质
 - 独立音效页支持分类筛选、搜索、循环播放和采样变体切换
+- 独立武器页按幸存者筛选武器，展示官方中英文名称与游戏内置描述，并可直接试听该武器在游戏内的全部音效
 
 低模使用误差受限简化。10% 只是期望目标，不会为了达到固定比例强行删除脚、细腿、角、炮口或其他关键轮廓。不同模型会在接近明显变形前停止，因此实际保留比例约为 23%-79%。
 
@@ -58,9 +60,26 @@ python -m http.server 4173
 追加 `sound=<slug>` 可直接打开具体事件，例如
 `http://127.0.0.1:4173/sounds.html?game=20-minutes-till-dawn&sound=gunfire`。
 
+《又一个僵尸幸存者》武器页地址为
+`http://127.0.0.1:4173/weapons.html?game=yet-another-zombie-survivors`。
+追加 `weapon=<slug>` 可直接打开具体武器，例如
+`http://127.0.0.1:4173/weapons.html?game=yet-another-zombie-survivors&weapon=tank-minigun`。
+该游戏的音效页地址为
+`http://127.0.0.1:4173/sounds.html?game=yet-another-zombie-survivors`，
+追加 `sound=<slug>` 可打开具体事件，例如
+`http://127.0.0.1:4173/sounds.html?game=yet-another-zombie-survivors&sound=boss01-rocket-single`。
+
 ## 黎明前 20 分钟音效构建链
 
 - `scripts/extract_20mtd_audio.py`：读取本机 Steam Unity 安装中的 AudioClip 和 `SoundEffectSO`，转成网页预览用 M4A，并按射击、换弹、近战、法术等分类写入目录。
+
+## 又一个僵尸幸存者武器与音效构建链
+
+该游戏是 Unity 2022.3 IL2CPP 构建，type tree 已被剥离，因此 MonoScript 名和 MonoBehaviour 字段都按原始字节解析；玩家数据、9 个角色包和 6 个场景包都要一起扫描，否则会漏掉敌人和头目音效。
+
+- `scripts/extract_yazs_weapons.py`：解析 `resources.assets` 中的 I2 Localization `I2Languages` 资产（4072 条术语，语言顺序为英/波/简中/法/德/日/韩/葡/俄/西），导出 45 把武器的官方英文名、简体中文名与游戏内描述到 `games/yet-another-zombie-survivors/weapons.json`。
+- `scripts/extract_yazs_audio.py`：扫描玩家数据、角色包与场景包里的全部 AudioClip，按片段名去重后转成网页预览用 M4A，并依据 `GROUP_META` 生成带简体中文说明的音效目录。脚本会在两个地方直接报错退出：有音频片段没有匹配到任何分组；`weapons.json` 引用了本次没有导出的音效条目。
+- 武器与音效通过音效条目的 `slug` 关联，`weapons.html` 据此把每把武器的游戏内音效直接挂到详情页上试听。
 
 ## Hades II 构建链
 

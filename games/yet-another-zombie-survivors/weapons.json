@@ -1,0 +1,745 @@
+{
+  "game": "yet-another-zombie-survivors",
+  "source": "resources.assets",
+  "sourceAsset": "I2Languages (I2 Localization)",
+  "languageIndex": {
+    "English": 0,
+    "ChineseSimplified": 2
+  },
+  "totalWeapons": 45,
+  "characters": [
+    {
+      "name": "SWAT",
+      "count": 5
+    },
+    {
+      "name": "医生",
+      "count": 5
+    },
+    {
+      "name": "坦克",
+      "count": 5
+    },
+    {
+      "name": "女猎手",
+      "count": 5
+    },
+    {
+      "name": "工程师",
+      "count": 5
+    },
+    {
+      "name": "忍者",
+      "count": 5
+    },
+    {
+      "name": "机械师",
+      "count": 5
+    },
+    {
+      "name": "游侠",
+      "count": 5
+    },
+    {
+      "name": "纵火者",
+      "count": 5
+    }
+  ],
+  "weapons": [
+    {
+      "key": "Eng_Blaster",
+      "slug": "eng-blaster",
+      "name": "爆能枪",
+      "nameEn": "Blaster",
+      "character": "工程师",
+      "characterEn": "Engineer",
+      "summary": "发射蕴含纯粹能量的球体，命中后内爆，飞行距离越远，造成的伤害越高",
+      "summaryEn": "Launch spheres of raw energy that implode on impact, dealing more damage the further they travel",
+      "sourceTerm": "Powerups/Weapons/Eng_Blaster",
+      "audio": [
+        "engineer-blaster-fire",
+        "engineer-energy-reload"
+      ]
+    },
+    {
+      "key": "Eng_Laser",
+      "slug": "eng-laser",
+      "name": "激光枪",
+      "nameEn": "Laser",
+      "character": "工程师",
+      "characterEn": "Engineer",
+      "summary": "想想激光笔，但是要致命一千倍",
+      "summaryEn": "Think of a laser presentation pointer, but a thousand times deadlier",
+      "sourceTerm": "Powerups/Weapons/Eng_Laser",
+      "audio": [
+        "engineer-laser-hit",
+        "engineer-laser-start",
+        "engineer-laser-loop",
+        "engineer-laser-stop",
+        "engineer-laser-reload",
+        "engineer-energy-reload"
+      ]
+    },
+    {
+      "key": "Eng_Plasma",
+      "slug": "eng-plasma",
+      "name": "等离子枪",
+      "nameEn": "Plasma",
+      "character": "工程师",
+      "characterEn": "Engineer",
+      "summary": "虽然特斯拉是位工程天才，但真正让所有僵尸大脑化为灰烬的，是工程师的等离子枪",
+      "summaryEn": "Tesla may have been a genius engineer, but it is the Engineer's Plasma that really makes all the zombie brains fry to ashes",
+      "sourceTerm": "Powerups/Weapons/Eng_Plasma",
+      "audio": [
+        "engineer-plasma-start",
+        "engineer-plasma-loop",
+        "engineer-plasma-stop",
+        "engineer-plasma-reload",
+        "engineer-energy-reload"
+      ]
+    },
+    {
+      "key": "Eng_Taser",
+      "slug": "eng-taser",
+      "name": "电击枪",
+      "nameEn": "Taser",
+      "character": "工程师",
+      "characterEn": "Engineer",
+      "summary": "经过改装的自卫工具，专门用来“治疗”僵尸之灾。近距离会造成额外伤害",
+      "summaryEn": "Self-defence tool, tweaked to \"cure\" the undead bane. Bonus damage up close",
+      "sourceTerm": "Powerups/Weapons/Eng_Taser",
+      "audio": [
+        "engineer-taser-fire",
+        "engineer-energy-reload"
+      ]
+    },
+    {
+      "key": "Eng_Tesla",
+      "slug": "eng-tesla",
+      "name": "特斯拉枪",
+      "nameEn": "Tesla",
+      "character": "工程师",
+      "characterEn": "Engineer",
+      "summary": "使用僵尸作为电源继电器，向有需要的地方输送电流",
+      "summaryEn": "Supply electricity to the needy by using zombies as power relays",
+      "sourceTerm": "Powerups/Weapons/Eng_Tesla",
+      "audio": [
+        "engineer-tesla-start",
+        "engineer-tesla-loop",
+        "engineer-tesla-stop",
+        "engineer-tesla-reload",
+        "engineer-energy-reload"
+      ]
+    },
+    {
+      "key": "Huntress_Bow",
+      "slug": "huntress-bow",
+      "name": "弓",
+      "nameEn": "Bow",
+      "character": "女猎手",
+      "characterEn": "Huntress",
+      "summary": "女猎手最青睐的武器。虽然传统，但在行家手中却非常致命",
+      "summaryEn": "Huntress's preferred weapon. Classic yet deadly in good hands",
+      "sourceTerm": "Powerups/Weapons/Huntress_Bow",
+      "audio": [
+        "huntress-bow-fire"
+      ]
+    },
+    {
+      "key": "Huntress_BowExplosive",
+      "slug": "huntress-bowexplosive",
+      "name": "爆炸箭",
+      "nameEn": "Explosive Arrows",
+      "character": "女猎手",
+      "characterEn": "Huntress",
+      "summary": "你的弓会射出加装了感应炸弹的箭",
+      "summaryEn": "Your bow shoots arrows equipped with proximity sensor bombs",
+      "sourceTerm": "Powerups/Weapons/Huntress_BowExplosive",
+      "audio": [
+        "huntress-bow-fire"
+      ]
+    },
+    {
+      "key": "Huntress_BowFreezing",
+      "slug": "huntress-bowfreezing",
+      "name": "冰冻箭",
+      "nameEn": "Freezing Arrows",
+      "character": "女猎手",
+      "characterEn": "Huntress",
+      "summary": "女猎手在发射前会将箭矢浸入冷冻化学物质中",
+      "summaryEn": "Huntress dips arrows in cryogenic chemicals before shooting",
+      "sourceTerm": "Powerups/Weapons/Huntress_BowFreezing",
+      "audio": [
+        "huntress-bow-freezing-fire",
+        "huntress-bow-fire"
+      ]
+    },
+    {
+      "key": "Huntress_BowMulti",
+      "slug": "huntress-bowmulti",
+      "name": "多重发射",
+      "nameEn": "Multishot",
+      "character": "女猎手",
+      "characterEn": "Huntress",
+      "summary": "一次只射一支箭怎么够",
+      "summaryEn": "In case firing one arrow at a time wasn't enough",
+      "sourceTerm": "Powerups/Weapons/Huntress_BowMulti",
+      "audio": [
+        "huntress-bow-fire"
+      ]
+    },
+    {
+      "key": "Huntress_BowPoison",
+      "slug": "huntress-bowpoison",
+      "name": "毒箭",
+      "nameEn": "Toxic Arrows",
+      "character": "女猎手",
+      "characterEn": "Huntress",
+      "summary": "女猎手在发射前会将箭矢浸入麻痹毒素中",
+      "summaryEn": "Huntress dips arrows in paralysing poison before firing them",
+      "sourceTerm": "Powerups/Weapons/Huntress_BowPoison",
+      "audio": [
+        "huntress-bow-fire"
+      ]
+    },
+    {
+      "key": "Mechanic_Chainsaw",
+      "slug": "mechanic-chainsaw",
+      "name": "链锯",
+      "nameEn": "Chainsaw",
+      "character": "机械师",
+      "characterEn": "Mechanic",
+      "summary": "撕碎一切。贴身距离会造成额外伤害",
+      "summaryEn": "Rip and tear. Bonus damage at direct range",
+      "sourceTerm": "Powerups/Weapons/Mechanic_Chainsaw",
+      "audio": [
+        "mechanic-chainsaw-standby",
+        "mechanic-chainsaw-hitting",
+        "mechanic-chainsaw-attack-loop",
+        "mechanic-chainsaw-attack-end"
+      ]
+    },
+    {
+      "key": "Mechanic_Lancer",
+      "slug": "mechanic-lancer",
+      "name": "骑兵枪",
+      "nameEn": "Lancer",
+      "character": "机械师",
+      "characterEn": "Mechanic",
+      "summary": "致命的发明，既能近距离手刃敌人，也能远距离射杀敌人",
+      "summaryEn": "Deadly invention which either cuts enemies up close or shoots them down at a distance",
+      "sourceTerm": "Powerups/Weapons/Mechanic_Lancer",
+      "audio": [
+        "mechanic-lancer-burst",
+        "mechanic-lancer-melee"
+      ]
+    },
+    {
+      "key": "Mechanic_NitroGun",
+      "slug": "mechanic-nitrogun",
+      "name": "液氮枪",
+      "nameEn": "Nitro-Gun",
+      "character": "机械师",
+      "characterEn": "Mechanic",
+      "summary": "发射内部灌满了极速膨胀液氮的轻型榴弹",
+      "summaryEn": "Fires a lightweight grenade filled to the brim with rapidly expanding liquid nitrogen",
+      "sourceTerm": "Powerups/Weapons/Mechanic_NitroGun",
+      "audio": [
+        "mechanic-nitro-gun-fire",
+        "mechanic-nitro-gun-hit"
+      ]
+    },
+    {
+      "key": "Mechanic_ChaosEngine",
+      "slug": "mechanic-chaosengine",
+      "name": "扳手发射器",
+      "nameEn": "Spanner Spammer",
+      "character": "机械师",
+      "characterEn": "Mechanic",
+      "summary": "一种以扳手为弹药的武器，诠释了什么叫做疯狂",
+      "summaryEn": "The definition of insanity in form of a weapon that uses spanners as ammunition",
+      "sourceTerm": "Powerups/Weapons/Mechanic_ChaosEngine",
+      "audio": [
+        "mechanic-chaos-engine"
+      ]
+    },
+    {
+      "key": "Mechanic_KeyBlade",
+      "slug": "mechanic-keyblade",
+      "name": "可靠扳手",
+      "nameEn": "Trusty Spanner",
+      "character": "机械师",
+      "characterEn": "Mechanic",
+      "summary": "机械师的最佳搭档。既能近战，也能用作远程武器。命中时机械师与目标的距离越远，造成的伤害就越高",
+      "summaryEn": "Mechanic's best friend. Works in close combat and as a long-range weapon. Bonus damage the further the Mechanic is when it hits",
+      "sourceTerm": "Powerups/Weapons/Mechanic_KeyBlade",
+      "audio": [
+        "mechanic-spanner-melee",
+        "mechanic-spanner-hit",
+        "mechanic-spanner-throw"
+      ]
+    },
+    {
+      "key": "Medic_DotaBottleThrow",
+      "slug": "medic-dotabottlethrow",
+      "name": "解毒瓶",
+      "nameEn": "Antidote Flasks",
+      "character": "医生",
+      "characterEn": "Medic",
+      "summary": "投掷一瓶解毒剂，彻底结束僵尸的痛苦。瓶子碎裂时距离越近，造成的额外伤害就越高",
+      "summaryEn": "Throw a bottle of antidotal fluids to put an end to the zombie's suffering. Bonus damage the closer it shatters",
+      "sourceTerm": "Powerups/Weapons/Medic_DotaBottleThrow",
+      "audio": [
+        "medic-experiment-throw",
+        "medic-experiment-toxic"
+      ]
+    },
+    {
+      "key": "Medic_FreezeBottleThrow",
+      "slug": "medic-freezebottlethrow",
+      "name": "冰冻瓶",
+      "nameEn": "Freezing Flasks",
+      "character": "医生",
+      "characterEn": "Medic",
+      "summary": "装满液氮的容器，能够帮助僵尸从痛苦中永久解脱。瓶子碎裂时距离越近，造成的额外伤害就越高",
+      "summaryEn": "Ease their pain indefinitely with liquid nitrogen filled vessels. Bonus damage the closer it shatters",
+      "sourceTerm": "Powerups/Weapons/Medic_FreezeBottleThrow",
+      "audio": [
+        "medic-experiment-throw",
+        "medic-experiment-ice"
+      ]
+    },
+    {
+      "key": "Medic_Handgun",
+      "slug": "medic-handgun",
+      "name": "自卫手枪",
+      "nameEn": "Handgun",
+      "character": "医生",
+      "characterEn": "Medic",
+      "summary": "随身携带的小型武器，专门用于应对僵尸危机等突发状况",
+      "summaryEn": "A small sidearm kept in case of emergencies such as zombie pandemics",
+      "sourceTerm": "Powerups/Weapons/Medic_Handgun",
+      "audio": [
+        "medic-handgun-fire",
+        "universal-reload"
+      ]
+    },
+    {
+      "key": "Medic_SyringeThrow",
+      "slug": "medic-syringethrow",
+      "name": "注射手枪",
+      "nameEn": "Syringe Gun",
+      "character": "医生",
+      "characterEn": "Medic",
+      "summary": "为那些未能及时接种疫苗的家伙注射疫苗。近距离注射会造成额外伤害",
+      "summaryEn": "Vaccinate the ones that didn't get the vaccine in time. Bonus damage for direct injection",
+      "sourceTerm": "Powerups/Weapons/Medic_SyringeThrow",
+      "audio": [
+        "medic-syringe-gun-fire"
+      ]
+    },
+    {
+      "key": "Medic_SyringeRifle",
+      "slug": "medic-syringerifle",
+      "name": "注射步枪",
+      "nameEn": "Syringer",
+      "character": "医生",
+      "characterEn": "Medic",
+      "summary": "你手头最顶级的工具，专治那些最棘手的患者",
+      "summaryEn": "The best tool in your arsenal against the most troublesome patients in your care",
+      "sourceTerm": "Powerups/Weapons/Medic_SyringeRifle",
+      "audio": [
+        "medic-syringer-fire",
+        "universal-reload"
+      ]
+    },
+    {
+      "key": "Ninja_Katana",
+      "slug": "ninja-katana",
+      "name": "武士刀",
+      "nameEn": "Katana",
+      "character": "忍者",
+      "characterEn": "Ninja",
+      "summary": "致命的近战武器，配上更致命的武士",
+      "summaryEn": "A deadly melee weapon in a hands of an even deadlier warrior",
+      "sourceTerm": "Powerups/Weapons/Ninja_Katana",
+      "audio": [
+        "sword-woosh",
+        "blade-hit"
+      ]
+    },
+    {
+      "key": "Ninja_KatanaSplash",
+      "slug": "ninja-katanasplash",
+      "name": "武士刀横扫",
+      "nameEn": "Katana Splash",
+      "character": "忍者",
+      "characterEn": "Ninja",
+      "summary": "正如大师所言：刀势越大，杀伤越广",
+      "summaryEn": "In the words of the wise Sensei: A wide sword cuts wide",
+      "sourceTerm": "Powerups/Weapons/Ninja_KatanaSplash",
+      "audio": [
+        "sword-woosh",
+        "blade-hit"
+      ]
+    },
+    {
+      "key": "Ninja_KatanaSuperSlash",
+      "slug": "ninja-katanasuperslash",
+      "name": "夺魂",
+      "nameEn": "Soul Reaper",
+      "character": "忍者",
+      "characterEn": "Ninja",
+      "summary": "对单个敌人发动致命攻击，要么冻结其仍能活动的肉身，要么在其灵魂离开躯体时引发剧烈爆炸",
+      "summaryEn": "Strike deadly on a single enemy, either freezing their still-living flesh or causing their soul to explode violently as it leaves their body",
+      "sourceTerm": "Powerups/Weapons/Ninja_KatanaSuperSlash",
+      "audio": [
+        "ninja-soul-reaper-slash",
+        "ninja-soul-reaper-impact",
+        "sword-woosh"
+      ]
+    },
+    {
+      "key": "Ninja_KatanaMultiSlash",
+      "slug": "ninja-katanamultislash",
+      "name": "千刃",
+      "nameEn": "Thousand Cuts",
+      "character": "忍者",
+      "characterEn": "Ninja",
+      "summary": "遁入化境，出刀变幻莫测、快如闪电",
+      "summaryEn": "Enter a state in which your cuts are unpredictable but blinding fast",
+      "sourceTerm": "Powerups/Weapons/Ninja_KatanaMultiSlash",
+      "audio": [
+        "ninja-thousand-cuts",
+        "sword-woosh",
+        "blade-hit"
+      ]
+    },
+    {
+      "key": "Ninja_KatanaHurricaneWave",
+      "slug": "ninja-katanahurricanewave",
+      "name": "裂风",
+      "nameEn": "Windcutter",
+      "character": "忍者",
+      "characterEn": "Ninja",
+      "summary": "压缩周围空气，射出锐利风刃。飞行距离越远，造成的伤害就越高",
+      "summaryEn": "Condense the surrounding air to launch razor sharp projectiles that deal higher damage the further it travels",
+      "sourceTerm": "Powerups/Weapons/Ninja_KatanaHurricaneWave",
+      "audio": [
+        "ninja-windcutter",
+        "sword-woosh"
+      ]
+    },
+    {
+      "key": "Pyro_AxeThrow",
+      "slug": "pyro-axethrow",
+      "name": "回旋斧",
+      "nameEn": "Axerangs",
+      "character": "纵火者",
+      "characterEn": "Pyro",
+      "summary": "连续投掷燃烧手斧，手斧会在一段时间后飞回。飞行距离越远，对僵尸造成的切割和灼烧伤害越高",
+      "summaryEn": "Throw one flaming hatchet after another, which will return after a while, slashing and burning zombies the further it travels",
+      "sourceTerm": "Powerups/Weapons/Pyro_AxeThrow",
+      "audio": [
+        "pyro-axerang-throw",
+        "pyro-axerang-flying"
+      ]
+    },
+    {
+      "key": "Pyro_Blowtorch",
+      "slug": "pyro-blowtorch",
+      "name": "喷灯",
+      "nameEn": "Blowtorch",
+      "character": "纵火者",
+      "characterEn": "Pyro",
+      "summary": "实用的小工具，既能熔化金属物体，也能在末日来临时熔化僵尸肉。近距离会造成额外伤害",
+      "summaryEn": "A fun little tool for melting metal objects and, in the event of an apocalypse, zombie flesh. Bonus damage at closer distances",
+      "sourceTerm": "Powerups/Weapons/Pyro_Blowtorch",
+      "audio": [
+        "pyro-flamethrower-start",
+        "pyro-flamethrower-loop",
+        "pyro-flamethrower-stop"
+      ]
+    },
+    {
+      "key": "Pyro_Fireaxe",
+      "slug": "pyro-fireaxe",
+      "name": "消防斧",
+      "nameEn": "Fireaxe",
+      "character": "纵火者",
+      "characterEn": "Pyro",
+      "summary": "挥舞沉重的消防斧，在周身圆形范围内造成高额近战伤害。用斧刃命中时会造成额外伤害",
+      "summaryEn": "Swing a heavy firefighter's axe in a circular area around you, dealing heavy melee damage. Bonus damage when hitting with blade",
+      "sourceTerm": "Powerups/Weapons/Pyro_Fireaxe",
+      "audio": [
+        "sword-woosh",
+        "blade-hit"
+      ]
+    },
+    {
+      "key": "Pyro_Flamethrower",
+      "slug": "pyro-flamethrower",
+      "name": "火焰喷射器",
+      "nameEn": "Flamethrower",
+      "character": "纵火者",
+      "characterEn": "Pyro",
+      "summary": "地狱级大规模杀伤性武器，是火焰兵的最佳搭档。中距离会造成额外伤害",
+      "summaryEn": "A weapon of infernal mass destruction, and Pyro's best friend to boot. Bonus damage at medium range",
+      "sourceTerm": "Powerups/Weapons/Pyro_Flamethrower",
+      "audio": [
+        "pyro-flamethrower-start",
+        "pyro-flamethrower-loop",
+        "pyro-flamethrower-stop"
+      ]
+    },
+    {
+      "key": "Pyro_Infernax",
+      "slug": "pyro-infernax",
+      "name": "地狱斧",
+      "nameEn": "Infernax",
+      "character": "纵火者",
+      "characterEn": "Pyro",
+      "summary": "蕴含地狱烈焰的强力近战武器。每次挥舞都能在巨大的圆形区域内杀伤敌人",
+      "summaryEn": "A powerful melee weapon imbued with hellish flames that slashes enemies in a huge, circular area on every swing",
+      "sourceTerm": "Powerups/Weapons/Pyro_Infernax",
+      "audio": [
+        "pyro-infernax-swing",
+        "sword-woosh"
+      ]
+    },
+    {
+      "key": "Ranger_CrossbowBarber",
+      "slug": "ranger-crossbowbarber",
+      "name": "刺网弩",
+      "nameEn": "Barber",
+      "character": "游侠",
+      "characterEn": "Ranger",
+      "summary": "呈锥形发射两发弩箭，并在弩箭之间展开一道铁丝网。铁丝网会造成切割伤害并标记命中的目标，并且会在近距离造成额外伤害",
+      "summaryEn": "Fires two bolts in a cone with barbed wire stretched between them. The wire slashes and marks hit targets and deals bonus damage at close range",
+      "sourceTerm": "Powerups/Weapons/Ranger_CrossbowBarber",
+      "audio": [
+        "ranger-crossbow-barber-fire",
+        "ranger-crossbow-barber-cut",
+        "ranger-crossbow-reload"
+      ]
+    },
+    {
+      "key": "Ranger_Crossbow",
+      "slug": "ranger-crossbow",
+      "name": "弩",
+      "nameEn": "Crossbow",
+      "character": "游侠",
+      "characterEn": "Ranger",
+      "summary": "游侠的首选武器。发射单发强力弩箭，对目标施加“标记”状态。动物攻击被标记的目标时，会在更大范围内造成额外伤害。",
+      "summaryEn": "Ranger's preferred weapon. Fires single, powerful bolts that apply Marked status. Animal attacks on Marked targets deal bonus damage in larger area",
+      "sourceTerm": "Powerups/Weapons/Ranger_Crossbow",
+      "audio": [
+        "ranger-crossbow-fire",
+        "ranger-crossbow-penetrate",
+        "ranger-crossbow-reload"
+      ]
+    },
+    {
+      "key": "Ranger_CrossbowFirebrand",
+      "slug": "ranger-crossbowfirebrand",
+      "name": "燃烧弩",
+      "nameEn": "Flarebolt",
+      "character": "游侠",
+      "characterEn": "Ranger",
+      "summary": "点燃连弩的弩箭，进一步提升其效率。其射弹可穿透、标记并同时灼烧多个目标",
+      "summaryEn": "Ignites the Repeater Crossbow bolts, increasing their efficiency even further. Its projectiles penetrate, mark, and can burn multiple targets at a time",
+      "sourceTerm": "Powerups/Weapons/Ranger_CrossbowFirebrand",
+      "audio": [
+        "ranger-crossbow-firebrand-fire",
+        "ranger-crossbow-firebrand-spread",
+        "ranger-crossbow-penetrate",
+        "ranger-crossbow-reload"
+      ]
+    },
+    {
+      "key": "Ranger_CrossbowRepeater",
+      "slug": "ranger-crossbowrepeater",
+      "name": "连弩",
+      "nameEn": "Repeater Crossbow",
+      "character": "游侠",
+      "characterEn": "Ranger",
+      "summary": "快速连续发射多支弩箭，并会自动切换目标。可标记更多目标，但在远距离时会损失部分潜在伤害",
+      "summaryEn": "Rapidly fires multiple bolts in succession, switching targets when possible. Marks more targets but loses a bit of damage potential on long range",
+      "sourceTerm": "Powerups/Weapons/Ranger_CrossbowRepeater",
+      "audio": [
+        "ranger-crossbow-repeater-fire",
+        "ranger-crossbow-penetrate",
+        "ranger-crossbow-reload"
+      ]
+    },
+    {
+      "key": "Ranger_CrossbowShockspike",
+      "slug": "ranger-crossbowshockspike",
+      "name": "电击弩",
+      "nameEn": "Shockspike",
+      "character": "游侠",
+      "characterEn": "Ranger",
+      "summary": "发射单发闪电弩箭，钉在敌人身上，引发放电并施加标记。远距离造成额外伤害",
+      "summaryEn": "Fires single bolts of lightning that stick to enemies, causing electric discharges and marking their targets. Inflicts bonus damage at long range",
+      "sourceTerm": "Powerups/Weapons/Ranger_CrossbowShockspike",
+      "audio": [
+        "ranger-crossbow-shockspike-fire",
+        "ranger-crossbow-shockspike-pulse",
+        "ranger-crossbow-shockspike-activate",
+        "ranger-crossbow-reload"
+      ]
+    },
+    {
+      "key": "Swat_Rifle",
+      "slug": "swat-rifle",
+      "name": "突击步枪",
+      "nameEn": "Assault Rifle",
+      "character": "SWAT",
+      "characterEn": "SWAT",
+      "summary": "久经沙场的高效利器，助你在尸群中杀出一条血路",
+      "summaryEn": "Plow through the horde with this proven and effective tool",
+      "sourceTerm": "Powerups/Weapons/Swat_Rifle",
+      "audio": [
+        "swat-rifle-fire",
+        "universal-reload"
+      ]
+    },
+    {
+      "key": "Swat_GrenadeLauncher",
+      "slug": "swat-grenadelauncher",
+      "name": "榴弹发射器",
+      "nameEn": "Grenade Launcher",
+      "character": "SWAT",
+      "characterEn": "SWAT",
+      "summary": "玩腻了小型弹药，于是你换上大型高爆弹药",
+      "summaryEn": "Sometimes you get bored firing small projectiles, so you switch to large and exploding ones instead",
+      "sourceTerm": "Powerups/Weapons/Swat_GrenadeLauncher",
+      "audio": [
+        "swat-grenade-launcher-fire",
+        "explosion-small"
+      ]
+    },
+    {
+      "key": "Swat_Pistol",
+      "slug": "swat-pistol",
+      "name": "制式手枪",
+      "nameEn": "Pistol",
+      "character": "SWAT",
+      "characterEn": "SWAT",
+      "summary": "即使世界终结，它也会始终伴你左右。近距离射击伤害最高",
+      "summaryEn": "He was always there for you, even when the world ended. Most effective at close range",
+      "sourceTerm": "Powerups/Weapons/Swat_Pistol",
+      "audio": [
+        "swat-pistol-fire",
+        "universal-reload"
+      ]
+    },
+    {
+      "key": "Swat_Uzi",
+      "slug": "swat-uzi",
+      "name": "冲锋枪",
+      "nameEn": "SMG",
+      "character": "SWAT",
+      "characterEn": "SWAT",
+      "summary": "抄起可靠的冲锋枪，向尸群疯狂扫射",
+      "summaryEn": "Spray & pray the zombies with your trusty submachine gun",
+      "sourceTerm": "Powerups/Weapons/Swat_Uzi",
+      "audio": [
+        "swat-smg-fire",
+        "universal-reload"
+      ]
+    },
+    {
+      "key": "Swat_Sniper",
+      "slug": "swat-sniper",
+      "name": "狙击步枪",
+      "nameEn": "Sniper Rifle",
+      "character": "SWAT",
+      "characterEn": "SWAT",
+      "summary": "通过可穿透尸群的强力射击消灭关键目标。远距离会造成额外伤害",
+      "summaryEn": "Eliminate key targets with powerful, horde-piercing shots. Bonus damage at long distance",
+      "sourceTerm": "Powerups/Weapons/Swat_Sniper",
+      "audio": [
+        "swat-sniper-fire",
+        "sniper-rifle-reload"
+      ]
+    },
+    {
+      "key": "Tank_Minigun",
+      "slug": "tank-minigun",
+      "name": "转轮机枪",
+      "nameEn": "Minigun",
+      "character": "坦克",
+      "characterEn": "Tank",
+      "summary": "对坦克来说算是迷你，对你的敌人来说可一点也不迷你。伤害会随距离衰减。",
+      "summaryEn": "Mini by the Tank's standards, but not to your enemies. Damage falls off with distance.",
+      "sourceTerm": "Powerups/Weapons/Tank_Minigun",
+      "audio": [
+        "tank-minigun-start",
+        "tank-minigun-loop",
+        "tank-minigun-stop",
+        "universal-reload"
+      ]
+    },
+    {
+      "key": "Tank_DoubleShotgun",
+      "slug": "tank-doubleshotgun",
+      "name": "泵动式霰弹枪",
+      "nameEn": "Pump-Action Shotgun",
+      "character": "坦克",
+      "characterEn": "Tank",
+      "summary": "发射强力鹿弹，直到枪管通红",
+      "summaryEn": "Fire powerful buckshots as the barrel glows hot",
+      "sourceTerm": "Powerups/Weapons/Tank_DoubleShotgun",
+      "audio": [
+        "tank-shotgun-fire",
+        "shotgun-reload"
+      ]
+    },
+    {
+      "key": "Tank_Rocket",
+      "slug": "tank-rocket",
+      "name": "火箭发射器",
+      "nameEn": "Rocket Launcher",
+      "character": "坦克",
+      "characterEn": "Tank",
+      "summary": "把尸群轰上天，炸个粉碎",
+      "summaryEn": "Send the horde to the moon, in pieces",
+      "sourceTerm": "Powerups/Weapons/Tank_Rocket",
+      "audio": [
+        "tank-rocket-fire",
+        "explosion-rocket"
+      ]
+    },
+    {
+      "key": "Tank_Shotgun",
+      "slug": "tank-shotgun",
+      "name": "霰弹枪",
+      "nameEn": "Shotgun",
+      "character": "坦克",
+      "characterEn": "Tank",
+      "summary": "有人说它慢，你却说这叫有条不紊。最适合中近距离作战",
+      "summaryEn": "Some call it slow, you call it methodical. Best at close to medium range",
+      "sourceTerm": "Powerups/Weapons/Tank_Shotgun",
+      "audio": [
+        "tank-shotgun-fire",
+        "shotgun-reload"
+      ]
+    },
+    {
+      "key": "Tank_SuperShotgun",
+      "slug": "tank-supershotgun",
+      "name": "超级霰弹枪",
+      "nameEn": "Super Shotgun",
+      "character": "坦克",
+      "characterEn": "Tank",
+      "summary": "如果射击范围内没有盲点，那么低精度就不是问题",
+      "summaryEn": "Low accuracy is not an issue if no blind spots exist in your shooting area",
+      "sourceTerm": "Powerups/Weapons/Tank_SuperShotgun",
+      "audio": [
+        "tank-shotgun-fire",
+        "shotgun-reload"
+      ]
+    }
+  ]
+}
