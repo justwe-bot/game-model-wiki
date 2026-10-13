@@ -1,0 +1,5342 @@
+[
+ {
+  "slug": "base-foundation",
+  "name": "Base Foundation",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Base Foundation",
+  "materials": [
+   "Wall Basic"
+  ],
+  "triangles": 6,
+  "subMeshes": 1,
+  "vertices": 12,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Wall Basic_DefaultMaterial_AlbedoTransparency.1001",
+   "normal": "Wall Basic_DefaultMaterial_Normal.1001",
+   "metallicGloss": "Wall Basic_DefaultMaterial_MetallicSmoothness.1001"
+  },
+  "model": "models/yet-another-zombie-survivors/base-foundation.glb",
+  "sizeKB": 276.6
+ },
+ {
+  "slug": "bg-container-bundle-10",
+  "name": "bg_container_bundle_10",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "bg_container_bundle_10 (1)",
+  "materials": [
+   "bg_containers"
+  ],
+  "triangles": 840,
+  "subMeshes": 1,
+  "vertices": 1344,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "bg_container_bundle",
+   "normal": "bg_container_bundle_normal",
+   "metallicGloss": "bg_container_bundle_maskmap",
+   "occlusion": "bg_container_bundle_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/bg-container-bundle-10.glb",
+  "sizeKB": 140.0
+ },
+ {
+  "slug": "corner-top-r-combined-static",
+  "name": "Corner_TOP_R_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Corner_TOP_R_combined_static",
+  "materials": [
+   "stromkasten_0003",
+   "muellcontainer_0001c_dirty",
+   "gasflasche_0001_dirty_c",
+   "palette_0001",
+   "zementsaecke_0002",
+   "generator_0001a_albedo_a",
+   "mobile_toilet_0001b_dirty",
+   "grafitti_10",
+   "grafitti_02",
+   "road_barrier",
+   "warenhouse-lagerhalle aussenwand",
+   "warenhouse-lagerhalle stahltraeger dach",
+   "warenhouse-lagerhalle dach betonkante",
+   "warenhouse-lagerhalle dach innen",
+   "warenhouse-rolltore",
+   "warenhouse-lagerhalle fensterrahmen",
+   "warenhouse-lagerhalle wand main",
+   "warenhouse-lagerhalle wand traeger",
+   "warenhouse-lagerhalle dach fensterscheiben",
+   "warenhouse-lagerhalle fensterscheiben",
+   "Solar Panel",
+   "laternen_0001a_off",
+   "forklift_03-plastic",
+   "forklift_03-metal",
+   "forklift_03-metal_chromed",
+   "forklift_03-gabelstapler 0004 abgasrohr",
+   "forklift_03-wheels",
+   "transformator_0001_type_4g",
+   "regentonnen_0001a_white",
+   "regentonnen_0001d_black",
+   "ibc_container_0001a",
+   "metallkaefigbehaelter_01b",
+   "gitter_01b",
+   "gasflasche_0001_rusty_d",
+   "kabelrolle_0003",
+   "kabel_0001b",
+   "gasflasche_0002_dirty_albedo_a",
+   "gasflasche_0002_rust_a_albedo_a",
+   "zementsaecke_0001",
+   "tank_0001b",
+   "tank_0002c",
+   "background_industrial_set_02",
+   "car_01B",
+   "car_01B_alpha",
+   "background_industrial_set_03",
+   "transformator_0001_type3_f"
+  ],
+  "triangles": 97782,
+  "subMeshes": 46,
+  "vertices": 137949,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "stromkasten_0003",
+   "normal": "stromkasten_0003_normal",
+   "metallicGloss": "stromkasten_0003_maskmap",
+   "occlusion": "stromkasten_0003_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/corner-top-r-combined-static.glb",
+  "sizeKB": 13439.3
+ },
+ {
+  "slug": "frame-lod1",
+  "name": "Frame_LOD1",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Frame_LOD1",
+  "materials": [
+   "Fence"
+  ],
+  "triangles": 492,
+  "subMeshes": 1,
+  "vertices": 668,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fence_DefaultMaterial_BaseColor.1001",
+   "normal": "Fence_DefaultMaterial_Normal.1001"
+  },
+  "model": "models/yet-another-zombie-survivors/frame-lod1.glb",
+  "sizeKB": 410.3
+ },
+ {
+  "slug": "hangar-01-combined-static",
+  "name": "Hangar_01_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "WhiteLine (76)",
+  "materials": [
+   "transformator_0001_type_4g",
+   "texture",
+   "laternen_0001a_off",
+   "forklift_03-plastic",
+   "forklift_03-metal",
+   "forklift_03-metal_chromed",
+   "forklift_03-gabelstapler 0004 abgasrohr",
+   "forklift_03-wheels",
+   "HangerDetails",
+   "HangerWall",
+   "HangerRoof",
+   "Hanger_Metal Frame",
+   "background_industrial_set_03",
+   "road_barrier",
+   "tank_0001b",
+   "background_industrial_set_02"
+  ],
+  "triangles": 93354,
+  "subMeshes": 16,
+  "vertices": 121225,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "transformator_0001_type_4g",
+   "normal": "transformator_0001_type_4g_normal",
+   "metallicGloss": "transformator_0001_type_4g_maskmap",
+   "occlusion": "transformator_0001_type_4g_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/hangar-01-combined-static.glb",
+  "sizeKB": 5948.0
+ },
+ {
+  "slug": "hangar-02-combined-static",
+  "name": "Hangar_02_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Hangar_02_combined_static",
+  "materials": [
+   "transformator_0001_type_4g",
+   "TrainObject_02-matStatic",
+   "texture",
+   "laternen_0001a_off",
+   "forklift_03-plastic",
+   "forklift_03-metal",
+   "forklift_03-metal_chromed",
+   "forklift_03-gabelstapler 0004 abgasrohr",
+   "forklift_03-wheels",
+   "HangerDetails",
+   "HangerWall",
+   "HangerRoof",
+   "Hanger_Metal Frame",
+   "background_industrial_set_03",
+   "Fence",
+   "Debris2",
+   "garbage_alpha",
+   "garbage"
+  ],
+  "triangles": 110838,
+  "subMeshes": 18,
+  "vertices": 160900,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "transformator_0001_type_4g",
+   "normal": "transformator_0001_type_4g_normal",
+   "metallicGloss": "transformator_0001_type_4g_maskmap",
+   "occlusion": "transformator_0001_type_4g_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/hangar-02-combined-static.glb",
+  "sizeKB": 7716.0
+ },
+ {
+  "slug": "house-2-lod002",
+  "name": "house_2_LOD002",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "house_2_LOD002",
+  "materials": [
+   "M_Wood_Beams",
+   "M_Wood_Wall_2",
+   "M_Wood_Wall_2B 1",
+   "M_Thatch_End_1",
+   "M_Thatch_1",
+   "M_Thatch_End_2",
+   "M_Stone_Wall",
+   "M_Door"
+  ],
+  "triangles": 6501,
+  "subMeshes": 9,
+  "vertices": 9326,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Wood_Beams_BC",
+   "normal": "T_Wood_Beams_N",
+   "occlusion": "T_Wood_Wall_2_AO",
+   "metallicGloss": "T_Door_M"
+  },
+  "model": "models/yet-another-zombie-survivors/house-2-lod002.glb",
+  "sizeKB": 4095.3
+ },
+ {
+  "slug": "mobile-toilet-0001-lod0",
+  "name": "mobile_toilet_0001_LOD0",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "mobile_toilet_0001b_dirty",
+  "materials": [
+   "mobile_toilet_0001b_dirty"
+  ],
+  "triangles": 6540,
+  "subMeshes": 1,
+  "vertices": 18443,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "baustellen_wc_0001b_dirty",
+   "normal": "baustellen_wc_0001b_normal",
+   "metallicGloss": "baustellen_wc_0001b_dirty_maskmap",
+   "occlusion": "baustellen_wc_0001b_dirty_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/mobile-toilet-0001-lod0.glb",
+  "sizeKB": 544.2
+ },
+ {
+  "slug": "office-container-0001-lod0",
+  "name": "office_container_0001_LOD0",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "office_container_0001a_clean",
+  "materials": [
+   "office_container_0001a_clean"
+  ],
+  "triangles": 5950,
+  "subMeshes": 1,
+  "vertices": 8604,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "office_container_0001_clean_albedo_a",
+   "normal": "office_container_0001_clean_normal",
+   "metallicGloss": "office_container_0001_clean_maskmap",
+   "occlusion": "office_container_0001_clean_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/office-container-0001-lod0.glb",
+  "sizeKB": 427.7
+ },
+ {
+  "slug": "parking-down-combined-static",
+  "name": "parking_Down_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "parking_Down_combined_static",
+  "materials": [
+   "White Line",
+   "Wall3"
+  ],
+  "triangles": 2508,
+  "subMeshes": 2,
+  "vertices": 1845,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "White line on road",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/parking-down-combined-static.glb",
+  "sizeKB": 381.3
+ },
+ {
+  "slug": "parkings-top-01-combined-static",
+  "name": "Parkings_TOP_01_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Street_el1_01 (4)_01",
+  "materials": [
+   "White Line",
+   "Wall3"
+  ],
+  "triangles": 4062,
+  "subMeshes": 2,
+  "vertices": 2949,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "White line on road",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/parkings-top-01-combined-static.glb",
+  "sizeKB": 421.0
+ },
+ {
+  "slug": "parkings-top-02-combined-static",
+  "name": "Parkings_TOP_02_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Parkings_TOP_02_combined_static",
+  "materials": [
+   "White Line",
+   "Wall3"
+  ],
+  "triangles": 4062,
+  "subMeshes": 2,
+  "vertices": 2949,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "White line on road",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/parkings-top-02-combined-static.glb",
+  "sizeKB": 421.0
+ },
+ {
+  "slug": "parkings-top-03-combined-static",
+  "name": "Parkings_TOP_03_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Parkings_TOP_03_combined_static",
+  "materials": [
+   "White Line",
+   "Wall3"
+  ],
+  "triangles": 3508,
+  "subMeshes": 2,
+  "vertices": 2450,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "White line on road",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/parkings-top-03-combined-static.glb",
+  "sizeKB": 404.8
+ },
+ {
+  "slug": "parkings-top-04-combined-static",
+  "name": "Parkings_TOP_04_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Parkings_TOP_04_combined_static",
+  "materials": [
+   "White Line",
+   "Wall3"
+  ],
+  "triangles": 3508,
+  "subMeshes": 2,
+  "vertices": 2450,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "White line on road",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/parkings-top-04-combined-static.glb",
+  "sizeKB": 404.8
+ },
+ {
+  "slug": "parkings-top-combined-static",
+  "name": "Parkings_TOP_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Parkings_TOP_combined_static",
+  "materials": [
+   "White Line",
+   "Wall3"
+  ],
+  "triangles": 4062,
+  "subMeshes": 2,
+  "vertices": 2949,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "White line on road",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/parkings-top-combined-static.glb",
+  "sizeKB": 421.0
+ },
+ {
+  "slug": "stairs-lod2",
+  "name": "stairs_LOD2",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "stairs_LOD2",
+  "materials": [
+   "M_Stone_Wall"
+  ],
+  "triangles": 92,
+  "subMeshes": 1,
+  "vertices": 148,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Stone_Wall_BC",
+   "normal": "T_Stone_Wall_N",
+   "occlusion": "T_Stone_Wall_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/stairs-lod2.glb",
+  "sizeKB": 851.4
+ },
+ {
+  "slug": "streetlight-0001-wall-fixed",
+  "name": "streetlight_0001_wall_fixed",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "streetlight_0001a_wall_fixed_off (2)",
+  "materials": [
+   "laternen_0001a_off"
+  ],
+  "triangles": 496,
+  "subMeshes": 1,
+  "vertices": 624,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "laternen_0001a",
+   "normal": "laternen_0001a_normal",
+   "metallicGloss": "laternen_0001a_maskmap",
+   "occlusion": "laternen_0001a_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/streetlight-0001-wall-fixed.glb",
+  "sizeKB": 240.0
+ },
+ {
+  "slug": "trasa-all-combined-static",
+  "name": "Trasa_ALL_combined_static",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Hemi",
+  "materials": [
+   "garbage_alpha",
+   "garbage",
+   "Debris2",
+   "Debris1"
+  ],
+  "triangles": 39312,
+  "subMeshes": 4,
+  "vertices": 40477,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "garbage",
+   "normal": "garbage_nmp",
+   "metallicGloss": "garbage_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/trasa-all-combined-static.glb",
+  "sizeKB": 2632.7
+ },
+ {
+  "slug": "warehouse-01-1-combined-static-poly-reduced",
+  "name": "Warehouse_01_1_combined_static-POLY_REDUCED",
+  "category": "建筑与结构",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Warehouse_01_1__combined_static",
+  "materials": [
+   "warenhouse-lagerhalle aussenwand",
+   "warenhouse-lagerhalle stahltraeger dach",
+   "warenhouse-lagerhalle dach betonkante",
+   "warenhouse-lagerhalle dach innen",
+   "warenhouse-rolltore",
+   "warenhouse-lagerhalle fensterrahmen",
+   "warenhouse-lagerhalle wand main",
+   "warenhouse-lagerhalle wand traeger",
+   "warenhouse-lagerhalle dach fensterscheiben",
+   "warenhouse-lagerhalle fensterscheiben"
+  ],
+  "triangles": 26025,
+  "subMeshes": 10,
+  "vertices": 42946,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "wand_0051",
+   "normal": "wand_0051_normal",
+   "metallicGloss": "wand_0051_maskmap",
+   "occlusion": "wand_0051_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/warehouse-01-1-combined-static-poly-reduced.glb",
+  "sizeKB": 3472.8
+ },
+ {
+  "slug": "forklift-03-combined-static",
+  "name": "Forklift_03_combined_static",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Forklift_03_combined_static",
+  "materials": [
+   "forklift_03-plastic",
+   "forklift_03-metal",
+   "forklift_03-metal_chromed",
+   "forklift_03-gabelstapler 0004 abgasrohr",
+   "forklift_03-wheels"
+  ],
+  "triangles": 9140,
+  "subMeshes": 5,
+  "vertices": 13250,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "forklift_03"
+  },
+  "model": "models/yet-another-zombie-survivors/forklift-03-combined-static.glb",
+  "sizeKB": 419.0
+ },
+ {
+  "slug": "tank-0001-lod1",
+  "name": "tank_0001_LOD1",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "tank_0001_LOD1",
+  "materials": [
+   "tank_0001b"
+  ],
+  "triangles": 2020,
+  "subMeshes": 1,
+  "vertices": 2298,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "tank_0001b",
+   "normal": "tank_0001b_normal",
+   "metallicGloss": "tank_0001b_maskmap",
+   "occlusion": "tank_0001b_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/tank-0001-lod1.glb",
+  "sizeKB": 311.9
+ },
+ {
+  "slug": "tankwagon-part1",
+  "name": "tankwagon_part1",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Debris1_48",
+  "materials": [
+   "train_collection-train_tankwagon_part1",
+   "train_collection-train_tankwagon_part2"
+  ],
+  "triangles": 4574,
+  "subMeshes": 2,
+  "vertices": 6033,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "train_tankwagon_part1"
+  },
+  "model": "models/yet-another-zombie-survivors/tankwagon-part1.glb",
+  "sizeKB": 245.7
+ },
+ {
+  "slug": "tankwagon-part2",
+  "name": "tankwagon_part2",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "tankwagon_part2",
+  "materials": [
+   "train_collection-train_tankwagon_part2"
+  ],
+  "triangles": 7990,
+  "subMeshes": 1,
+  "vertices": 11149,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "train_tankwagon_part2"
+  },
+  "model": "models/yet-another-zombie-survivors/tankwagon-part2.glb",
+  "sizeKB": 354.2
+ },
+ {
+  "slug": "train-door-up-05-combined-static",
+  "name": "Train_Door_Up_05_combined_static",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Train_Door_Up_05_combined_static",
+  "materials": [
+   "train_signals",
+   "concrete",
+   "Ivy1",
+   "Street_element1",
+   "Capacitor"
+  ],
+  "triangles": 16248,
+  "subMeshes": 5,
+  "vertices": 35431,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "train_signals_main",
+   "normal": "train_signals_main_normal",
+   "metallicGloss": "train_signals_main_maskmap",
+   "occlusion": "train_signals_main_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/train-door-up-05-combined-static.glb",
+  "sizeKB": 2651.4
+ },
+ {
+  "slug": "train-door-up-06-longtransistors-combined-static",
+  "name": "Train_Door_Up_06_LongTransistors_combined_static",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Train_Door_Up_06_LongTransistors_combined_static",
+  "materials": [
+   "train_signals",
+   "concrete",
+   "Ivy1",
+   "Street_element1",
+   "Capacitor"
+  ],
+  "triangles": 16245,
+  "subMeshes": 5,
+  "vertices": 35468,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "train_signals_main",
+   "normal": "train_signals_main_normal",
+   "metallicGloss": "train_signals_main_maskmap",
+   "occlusion": "train_signals_main_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/train-door-up-06-longtransistors-combined-static.glb",
+  "sizeKB": 2652.1
+ },
+ {
+  "slug": "trainobject-000-mesh2-poly-reduced",
+  "name": "TrainObject_000-mesh2-POLY_REDUCED",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Debris2_11",
+  "materials": [
+   "TrainObject_00-mat"
+  ],
+  "triangles": 3197,
+  "subMeshes": 1,
+  "vertices": 4943,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "TrainObject_00-mat-_MainTex-atlas-0 _noBlood"
+  },
+  "model": "models/yet-another-zombie-survivors/trainobject-000-mesh2-poly-reduced.glb",
+  "sizeKB": 345.5
+ },
+ {
+  "slug": "trainobject-010-mesh1-poly-reduced",
+  "name": "TrainObject_010-mesh1-POLY_REDUCED",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "MeleeParticles2",
+  "materials": [
+   "TrainObject_01-mat"
+  ],
+  "triangles": 7979,
+  "subMeshes": 1,
+  "vertices": 12640,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "TrainObject_01-mat-_MainTex-atlas-0"
+  },
+  "model": "models/yet-another-zombie-survivors/trainobject-010-mesh1-poly-reduced.glb",
+  "sizeKB": 495.5
+ },
+ {
+  "slug": "trainobject-020-mesh0-poly-reduced2",
+  "name": "TrainObject_020-mesh0-POLY_REDUCED2",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "-mesh",
+  "materials": [
+   "TrainObject_02-mat"
+  ],
+  "triangles": 10342,
+  "subMeshes": 1,
+  "vertices": 15262,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "TrainObject_02-mat-_MainTex-atlas-0"
+  },
+  "model": "models/yet-another-zombie-survivors/trainobject-020-mesh0-poly-reduced2.glb",
+  "sizeKB": 557.3
+ },
+ {
+  "slug": "trainobject-020-mesh1-poly-reduced1",
+  "name": "TrainObject_020-mesh1-POLY_REDUCED1",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "-mesh",
+  "materials": [
+   "TrainObject_02-mat"
+  ],
+  "triangles": 9795,
+  "subMeshes": 1,
+  "vertices": 14577,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "TrainObject_02-mat-_MainTex-atlas-0"
+  },
+  "model": "models/yet-another-zombie-survivors/trainobject-020-mesh1-poly-reduced1.glb",
+  "sizeKB": 537.5
+ },
+ {
+  "slug": "trainobject-020-mesh2-poly-reduced",
+  "name": "TrainObject_020-mesh2-POLY_REDUCED",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "-mesh",
+  "materials": [
+   "TrainObject_02-mat"
+  ],
+  "triangles": 4656,
+  "subMeshes": 1,
+  "vertices": 7136,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "TrainObject_02-mat-_MainTex-atlas-0"
+  },
+  "model": "models/yet-another-zombie-survivors/trainobject-020-mesh2-poly-reduced.glb",
+  "sizeKB": 331.9
+ },
+ {
+  "slug": "wz-boli",
+  "name": "WZ_BOLI",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "WZ_BOLI",
+  "materials": [
+   "W19_glass"
+  ],
+  "triangles": 70,
+  "subMeshes": 1,
+  "vertices": 86,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19_glass_D",
+   "metallicGloss": "W19_glass_S"
+  },
+  "model": "models/yet-another-zombie-survivors/wz-boli.glb",
+  "sizeKB": 51.3
+ },
+ {
+  "slug": "wz-cejiang",
+  "name": "WZ_CEJIANG",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "WZ_CEJIANG",
+  "materials": [
+   "W19A_M2"
+  ],
+  "triangles": 210,
+  "subMeshes": 1,
+  "vertices": 261,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M2_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/wz-cejiang.glb",
+  "sizeKB": 291.6
+ },
+ {
+  "slug": "wz-lun1",
+  "name": "WZ_LUN1",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "WZ_LUN1",
+  "materials": [
+   "W19A_M1"
+  ],
+  "triangles": 348,
+  "subMeshes": 1,
+  "vertices": 264,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M1_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/wz-lun1.glb",
+  "sizeKB": 294.2
+ },
+ {
+  "slug": "wz-lun2",
+  "name": "WZ_LUN2",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "WZ_LUN2",
+  "materials": [
+   "W19A_M1"
+  ],
+  "triangles": 348,
+  "subMeshes": 1,
+  "vertices": 264,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M1_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/wz-lun2.glb",
+  "sizeKB": 294.2
+ },
+ {
+  "slug": "wz-qiu",
+  "name": "WZ_QIU",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "WZ_QIU",
+  "materials": [
+   "W19A_M2"
+  ],
+  "triangles": 362,
+  "subMeshes": 1,
+  "vertices": 333,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M2_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/wz-qiu.glb",
+  "sizeKB": 294.8
+ },
+ {
+  "slug": "wz-yushua",
+  "name": "WZ_YUSHUA",
+  "category": "载具与部件",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "WZ_YUSHUA",
+  "materials": [
+   "W19A_M1"
+  ],
+  "triangles": 68,
+  "subMeshes": 1,
+  "vertices": 117,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M1_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/wz-yushua.glb",
+  "sizeKB": 288.1
+ },
+ {
+  "slug": "biococoon-1",
+  "name": "BioCocoon_1",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "BioCocoon_01",
+  "materials": [
+   "BWDet1"
+  ],
+  "triangles": 404,
+  "subMeshes": 1,
+  "vertices": 253,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "BioDetails_albedo1",
+   "normal": "BioDetails_normal",
+   "metallicGloss": "BioDetails_normal"
+  },
+  "model": "models/yet-another-zombie-survivors/biococoon-1.glb",
+  "sizeKB": 536.1
+ },
+ {
+  "slug": "biodetails-1",
+  "name": "BioDetails_1",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "BioDetails_01",
+  "materials": [
+   "BWDet1"
+  ],
+  "triangles": 392,
+  "subMeshes": 1,
+  "vertices": 251,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "BioDetails_albedo1",
+   "normal": "BioDetails_normal",
+   "metallicGloss": "BioDetails_normal"
+  },
+  "model": "models/yet-another-zombie-survivors/biodetails-1.glb",
+  "sizeKB": 535.9
+ },
+ {
+  "slug": "biodetails-2",
+  "name": "BioDetails_2",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "BioDetails_02",
+  "materials": [
+   "BWDet1"
+  ],
+  "triangles": 270,
+  "subMeshes": 1,
+  "vertices": 182,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "BioDetails_albedo1",
+   "normal": "BioDetails_normal",
+   "metallicGloss": "BioDetails_normal"
+  },
+  "model": "models/yet-another-zombie-survivors/biodetails-2.glb",
+  "sizeKB": 533.1
+ },
+ {
+  "slug": "biodetails-3",
+  "name": "BioDetails_3",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "BioDetails_03",
+  "materials": [
+   "BWDet1"
+  ],
+  "triangles": 68,
+  "subMeshes": 1,
+  "vertices": 52,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "BioDetails_albedo1",
+   "normal": "BioDetails_normal",
+   "metallicGloss": "BioDetails_normal"
+  },
+  "model": "models/yet-another-zombie-survivors/biodetails-3.glb",
+  "sizeKB": 528.2
+ },
+ {
+  "slug": "biodetails-4",
+  "name": "BioDetails_4",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "BioDetails_05",
+  "materials": [
+   "BWDet"
+  ],
+  "triangles": 42,
+  "subMeshes": 1,
+  "vertices": 31,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "BioDetails_albedo",
+   "normal": "BioDetails_normal",
+   "metallicGloss": "BioDetails_normal"
+  },
+  "model": "models/yet-another-zombie-survivors/biodetails-4.glb",
+  "sizeKB": 536.4
+ },
+ {
+  "slug": "biowebsf-5-006",
+  "name": "BioWebsF_5.006",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "BioWebsF_5.006",
+  "materials": [
+   "BWFlat"
+  ],
+  "triangles": 479,
+  "subMeshes": 1,
+  "vertices": 308,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "BioWebs2_albedo",
+   "normal": "BioWebs2_normal",
+   "metallicGloss": "BioWebs2_gloss"
+  },
+  "model": "models/yet-another-zombie-survivors/biowebsf-5-006.glb",
+  "sizeKB": 500.8
+ },
+ {
+  "slug": "candle-03-lod0",
+  "name": "candle_03_LOD0",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_03_LOD0",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 91,
+  "subMeshes": 1,
+  "vertices": 81,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-03-lod0.glb",
+  "sizeKB": 244.8
+ },
+ {
+  "slug": "candle-03-lod1",
+  "name": "candle_03_LOD1",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_03_LOD1",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 49,
+  "subMeshes": 1,
+  "vertices": 53,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-03-lod1.glb",
+  "sizeKB": 243.8
+ },
+ {
+  "slug": "candle-03-lod2",
+  "name": "candle_03_LOD2",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_03_LOD2",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 16,
+  "subMeshes": 1,
+  "vertices": 26,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-03-lod2.glb",
+  "sizeKB": 242.9
+ },
+ {
+  "slug": "candle-05-lod0",
+  "name": "candle_05_LOD0",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_05_LOD0",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 83,
+  "subMeshes": 1,
+  "vertices": 73,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-05-lod0.glb",
+  "sizeKB": 244.5
+ },
+ {
+  "slug": "candle-05-lod1",
+  "name": "candle_05_LOD1",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_05_LOD1",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 45,
+  "subMeshes": 1,
+  "vertices": 47,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-05-lod1.glb",
+  "sizeKB": 243.6
+ },
+ {
+  "slug": "candle-05-lod2",
+  "name": "candle_05_LOD2",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_05_LOD2",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 16,
+  "subMeshes": 1,
+  "vertices": 19,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-05-lod2.glb",
+  "sizeKB": 242.7
+ },
+ {
+  "slug": "candle-06-lod0",
+  "name": "candle_06_LOD0",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_06_LOD0",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 43,
+  "subMeshes": 1,
+  "vertices": 44,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-06-lod0.glb",
+  "sizeKB": 243.5
+ },
+ {
+  "slug": "candle-06-lod1",
+  "name": "candle_06_LOD1",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_06_LOD1",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 27,
+  "subMeshes": 1,
+  "vertices": 33,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-06-lod1.glb",
+  "sizeKB": 243.1
+ },
+ {
+  "slug": "candle-06-lod2",
+  "name": "candle_06_LOD2",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_06_LOD2",
+  "materials": [
+   "candles_burning_mat"
+  ],
+  "triangles": 16,
+  "subMeshes": 1,
+  "vertices": 16,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "candles_AB",
+   "normal": "candles_NM",
+   "metallicGloss": "candles_MT",
+   "occlusion": "candles_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/candle-06-lod2.glb",
+  "sizeKB": 242.7
+ },
+ {
+  "slug": "decor-01-combined-static",
+  "name": "Decor_01_combined_static",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Hangar_01Combined_Meshes",
+  "materials": [
+   "Addons1",
+   "Debris1",
+   "Roadsign"
+  ],
+  "triangles": 18412,
+  "subMeshes": 3,
+  "vertices": 19472,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Addons1",
+   "normal": "Addons1_nmp",
+   "metallicGloss": "Addons1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/decor-01-combined-static.glb",
+  "sizeKB": 2008.2
+ },
+ {
+  "slug": "decors-combined-static",
+  "name": "Decors_combined_static",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Decors_combined_static",
+  "materials": [
+   "Metal_elements1",
+   "Debris1",
+   "Wall3"
+  ],
+  "triangles": 2284,
+  "subMeshes": 3,
+  "vertices": 2087,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Metal_elements1",
+   "normal": "Metal_elements1_nmp",
+   "metallicGloss": "Metal_elements1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/decors-combined-static.glb",
+  "sizeKB": 1403.7
+ },
+ {
+  "slug": "gpvfx-cork-gpvfx-corks",
+  "name": "GPVFX_Cork_GPVFX_Corks",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "r_mid_leg2",
+  "materials": [
+   "Corks"
+  ],
+  "triangles": 124,
+  "subMeshes": 1,
+  "vertices": 130,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "cork 1"
+  },
+  "model": "models/yet-another-zombie-survivors/gpvfx-cork-gpvfx-corks.glb",
+  "sizeKB": 51.2
+ },
+ {
+  "slug": "shrineskullram-poly-reduced",
+  "name": "shrineskullram-POLY_REDUCED",
+  "category": "装饰与陈设",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Attack_Short_1",
+  "materials": [
+   "shrine_01_Inst"
+  ],
+  "triangles": 1835,
+  "subMeshes": 1,
+  "vertices": 1581,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "int_shrine_01_BaseColor",
+   "normal": "int_shrine_01_Normal"
+  },
+  "model": "models/yet-another-zombie-survivors/shrineskullram-poly-reduced.glb",
+  "sizeKB": 203.5
+ },
+ {
+  "slug": "axe01-low",
+  "name": "Axe01_Low",
+  "category": "生活道具",
+  "sourceScene": "prototypescene",
+  "inGameObject": "axe",
+  "materials": [
+   "Mat_Zombie_Firefighter_Axe"
+  ],
+  "triangles": 966,
+  "subMeshes": 1,
+  "vertices": 669,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Skin1_Zombie_Firefighter_Axe_Albedo",
+   "normal": "T_Skin1_Zombie_Firefighter_Axe_Normal",
+   "metallicGloss": "T_Skin1_Zombie_Firefighter_Axe_metalic_gloss",
+   "occlusion": "T_Skin1_Zombie_Firefighter_Axe_Occlusion"
+  },
+  "model": "models/yet-another-zombie-survivors/axe01-low.glb",
+  "sizeKB": 308.9
+ },
+ {
+  "slug": "big-axe",
+  "name": "Big Axe",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "ThumbFinger4_R",
+  "materials": [
+   "Weapon"
+  ],
+  "triangles": 440,
+  "subMeshes": 1,
+  "vertices": 284,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Weapons_Albedo",
+   "normal": "Weapons_Normal",
+   "metallicGloss": "Weapons_SpecularSmoothness"
+  },
+  "model": "models/yet-another-zombie-survivors/big-axe.glb",
+  "sizeKB": 268.1
+ },
+ {
+  "slug": "broccoli",
+  "name": "Broccoli",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Broccoli",
+  "materials": [
+   "Material"
+  ],
+  "triangles": 194,
+  "subMeshes": 1,
+  "vertices": 568,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Texture"
+  },
+  "model": "models/yet-another-zombie-survivors/broccoli.glb",
+  "sizeKB": 15.6
+ },
+ {
+  "slug": "cables3",
+  "name": "cables3",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "cables3_03",
+  "materials": [
+   "pipes_cables"
+  ],
+  "triangles": 1512,
+  "subMeshes": 1,
+  "vertices": 1611,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "cables_pipes_color",
+   "normal": "cables_pipes_normal",
+   "metallicGloss": "cables_pipes_metallic"
+  },
+  "model": "models/yet-another-zombie-survivors/cables3.glb",
+  "sizeKB": 197.6
+ },
+ {
+  "slug": "carrot",
+  "name": "Carrot",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Carrot (1)",
+  "materials": [
+   "Material"
+  ],
+  "triangles": 241,
+  "subMeshes": 1,
+  "vertices": 649,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Texture"
+  },
+  "model": "models/yet-another-zombie-survivors/carrot.glb",
+  "sizeKB": 17.7
+ },
+ {
+  "slug": "cucumber-01",
+  "name": "Cucumber_01",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Cucumber_01",
+  "materials": [
+   "Material"
+  ],
+  "triangles": 244,
+  "subMeshes": 1,
+  "vertices": 509,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Texture"
+  },
+  "model": "models/yet-another-zombie-survivors/cucumber-01.glb",
+  "sizeKB": 15.1
+ },
+ {
+  "slug": "cucumber-02",
+  "name": "Cucumber_02",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Cucumber_02",
+  "materials": [
+   "Material"
+  ],
+  "triangles": 112,
+  "subMeshes": 1,
+  "vertices": 180,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Texture"
+  },
+  "model": "models/yet-another-zombie-survivors/cucumber-02.glb",
+  "sizeKB": 7.1
+ },
+ {
+  "slug": "cucumber-03",
+  "name": "Cucumber_03",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Cucumber_03",
+  "materials": [
+   "Material"
+  ],
+  "triangles": 102,
+  "subMeshes": 1,
+  "vertices": 170,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Texture"
+  },
+  "model": "models/yet-another-zombie-survivors/cucumber-03.glb",
+  "sizeKB": 6.8
+ },
+ {
+  "slug": "documents",
+  "name": "documents",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "candle_05_off",
+  "materials": [
+   "office_props"
+  ],
+  "triangles": 380,
+  "subMeshes": 1,
+  "vertices": 591,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_office_props_color",
+   "normal": "T_office_props_normal",
+   "metallicGloss": "T_office_props_metallic"
+  },
+  "model": "models/yet-another-zombie-survivors/documents.glb",
+  "sizeKB": 68.9
+ },
+ {
+  "slug": "drain",
+  "name": "drain",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "upperarm_twist_01_l",
+  "materials": [
+   "corridor2"
+  ],
+  "triangles": 442,
+  "subMeshes": 1,
+  "vertices": 350,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_corridor2_color",
+   "normal": "T_corridor2_normal",
+   "metallicGloss": "T_corridor2_metallic"
+  },
+  "model": "models/yet-another-zombie-survivors/drain.glb",
+  "sizeKB": 161.3
+ },
+ {
+  "slug": "eyeballs",
+  "name": "EyeBalls",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "l_mid_leg4",
+  "materials": [
+   "ZombieEyeMaterial_Yellow"
+  ],
+  "triangles": 1520,
+  "subMeshes": 1,
+  "vertices": 804,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/eyeballs.glb",
+  "sizeKB": 34.7
+ },
+ {
+  "slug": "hammer1",
+  "name": "Hammer1",
+  "category": "生活道具",
+  "sourceScene": "prototypescene",
+  "inGameObject": "hammer",
+  "materials": [
+   "Mat_UrbanZombie1_Hammer_Skin2"
+  ],
+  "triangles": 272,
+  "subMeshes": 1,
+  "vertices": 221,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Mat_UrbanZombie1_Hammer_Albedo",
+   "normal": "Mat_UrbanZombie1_Hammer_Normal",
+   "metallicGloss": "Mat_UrbanZombie1_Hammer_metalic_gloss",
+   "occlusion": "Mat_UrbanZombie1_Hammer_Occlusion"
+  },
+  "model": "models/yet-another-zombie-survivors/hammer1.glb",
+  "sizeKB": 307.6
+ },
+ {
+  "slug": "hp-conditioner-01-lod1",
+  "name": "HP_Conditioner_01_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Conditioner_01_LOD1",
+  "materials": [
+   "HP_Morgue_Refrigerator"
+  ],
+  "triangles": 314,
+  "subMeshes": 1,
+  "vertices": 470,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Morgue_Refrigerator_A",
+   "normal": "HP_Morgue_Refrigerator_N",
+   "metallicGloss": "HP_Morgue_Refrigerator_MS",
+   "occlusion": "HP_Morgue_Refrigerator_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-conditioner-01-lod1.glb",
+  "sizeKB": 203.0
+ },
+ {
+  "slug": "hp-electric-box-02",
+  "name": "HP_Electric_Box_02",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Electric_Box_02",
+  "materials": [
+   "HP_Sureillance_Camera"
+  ],
+  "triangles": 14,
+  "subMeshes": 1,
+  "vertices": 26,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Sureillance_Camera_A",
+   "normal": "HP_Sureillance_Camera_N",
+   "metallicGloss": "HP_Sureillance_Camera_MS",
+   "occlusion": "HP_Sureillance_Camera_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-electric-box-02.glb",
+  "sizeKB": 206.9
+ },
+ {
+  "slug": "hp-pipes-red-0-5m-01",
+  "name": "HP_Pipes_Red_0,5m_01",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_0,5m_06",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 236,
+  "subMeshes": 1,
+  "vertices": 276,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-0-5m-01.glb",
+  "sizeKB": 290.5
+ },
+ {
+  "slug": "hp-pipes-red-1m-01-lod1",
+  "name": "HP_Pipes_Red_1m_01_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_1m_01_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 106,
+  "subMeshes": 1,
+  "vertices": 148,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-1m-01-lod1.glb",
+  "sizeKB": 286.5
+ },
+ {
+  "slug": "hp-pipes-red-2m-01-lod1",
+  "name": "HP_Pipes_Red_2m_01_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_2m_01_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 122,
+  "subMeshes": 1,
+  "vertices": 168,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-2m-01-lod1.glb",
+  "sizeKB": 287.1
+ },
+ {
+  "slug": "hp-pipes-red-angle-01-lod1",
+  "name": "HP_Pipes_Red_Angle_01_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Angle_01_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 256,
+  "subMeshes": 1,
+  "vertices": 307,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-angle-01-lod1.glb",
+  "sizeKB": 291.3
+ },
+ {
+  "slug": "hp-pipes-red-angle-02-lod1",
+  "name": "HP_Pipes_Red_Angle_02_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Angle_02_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 230,
+  "subMeshes": 1,
+  "vertices": 269,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-angle-02-lod1.glb",
+  "sizeKB": 290.4
+ },
+ {
+  "slug": "hp-pipes-red-angle-05-lod1",
+  "name": "HP_Pipes_Red_Angle_05_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Angle_05_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 328,
+  "subMeshes": 1,
+  "vertices": 314,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-angle-05-lod1.glb",
+  "sizeKB": 292.3
+ },
+ {
+  "slug": "hp-pipes-red-coupling-02-lod1",
+  "name": "HP_Pipes_Red_Coupling_02_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Coupling_02_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 250,
+  "subMeshes": 1,
+  "vertices": 273,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-coupling-02-lod1.glb",
+  "sizeKB": 290.6
+ },
+ {
+  "slug": "hp-pipes-red-faucet-01-lod1",
+  "name": "HP_Pipes_Red_Faucet_01_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Faucet_01_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 586,
+  "subMeshes": 1,
+  "vertices": 806,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-faucet-01-lod1.glb",
+  "sizeKB": 305.0
+ },
+ {
+  "slug": "hp-pipes-red-faucet-02-lod1",
+  "name": "HP_Pipes_Red_Faucet_02_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Faucet_02_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 439,
+  "subMeshes": 1,
+  "vertices": 615,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-faucet-02-lod1.glb",
+  "sizeKB": 299.5
+ },
+ {
+  "slug": "hp-pipes-red-faucet-03-lod1",
+  "name": "HP_Pipes_Red_Faucet_03_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Faucet_03_LOD1",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 406,
+  "subMeshes": 1,
+  "vertices": 496,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-faucet-03-lod1.glb",
+  "sizeKB": 296.8
+ },
+ {
+  "slug": "hp-pipes-red-lever-01",
+  "name": "HP_Pipes_Red_Lever_01",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "ShockWaveDark",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 44,
+  "subMeshes": 1,
+  "vertices": 56,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-lever-01.glb",
+  "sizeKB": 284.0
+ },
+ {
+  "slug": "hp-pipes-red-lever-02-lod0",
+  "name": "HP_Pipes_Red_Lever_02_LOD0",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Lever_02_LOD0",
+  "materials": [
+   "HP_Pipes"
+  ],
+  "triangles": 392,
+  "subMeshes": 1,
+  "vertices": 499,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Pipes_A1",
+   "normal": "HP_Pipes_N",
+   "metallicGloss": "HP_Pipes_MS",
+   "occlusion": "HP_Pipes_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-pipes-red-lever-02-lod0.glb",
+  "sizeKB": 296.7
+ },
+ {
+  "slug": "hp-severed-body-leg-01-lod2",
+  "name": "HP_Severed_Body_Leg_01_LOD2",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Severed_Body_Leg_01_LOD2",
+  "materials": [
+   "HP_Severed_Body_Parts"
+  ],
+  "triangles": 137,
+  "subMeshes": 1,
+  "vertices": 214,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Severed_Body_Parts_A",
+   "normal": "HP_Severed_Body_Parts_N",
+   "metallicGloss": "HP_Severed_Body_Parts_MS",
+   "occlusion": "HP_Severed_Body_Parts_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-severed-body-leg-01-lod2.glb",
+  "sizeKB": 304.6
+ },
+ {
+  "slug": "hp-surgical-hammer-lod1",
+  "name": "HP_Surgical_Hammer_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "thigh_twist_01_l",
+  "materials": [
+   "HP_Surgical_Instruments"
+  ],
+  "triangles": 217,
+  "subMeshes": 1,
+  "vertices": 316,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Surgical_Instruments_A",
+   "normal": "HP_Surgical_Instruments_N",
+   "metallicGloss": "HP_Surgical_Instruments_MS",
+   "occlusion": "HP_Surgical_Instruments_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-surgical-hammer-lod1.glb",
+  "sizeKB": 178.2
+ },
+ {
+  "slug": "hp-surgical-lamp-02-lod1",
+  "name": "HP_Surgical_Lamp_02_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Surgical_Lamp_02_LOD1",
+  "materials": [
+   "HP_Surgical_Lamp"
+  ],
+  "triangles": 294,
+  "subMeshes": 1,
+  "vertices": 349,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Surgical_Lamp_A",
+   "normal": "HP_Surgical_Lamp_N",
+   "metallicGloss": "HP_Surgical_Lamp_MS",
+   "occlusion": "HP_Surgical_Lamp_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-surgical-lamp-02-lod1.glb",
+  "sizeKB": 229.2
+ },
+ {
+  "slug": "hp-table-lamp-lod2",
+  "name": "HP_Table_Lamp_LOD2",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Table_Lamp_LOD2",
+  "materials": [
+   "HP_Microscope",
+   "HP_Emission"
+  ],
+  "triangles": 282,
+  "subMeshes": 2,
+  "vertices": 446,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Microscope_A",
+   "normal": "HP_Microscope_N",
+   "metallicGloss": "HP_Microscope_MS",
+   "occlusion": "HP_Microscope_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-table-lamp-lod2.glb",
+  "sizeKB": 184.1
+ },
+ {
+  "slug": "hp-tv-screen",
+  "name": "HP_TV_Screen",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_TV_Screen",
+  "materials": [
+   "HP_TV_Screen_02"
+  ],
+  "triangles": 138,
+  "subMeshes": 1,
+  "vertices": 80,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/hp-tv-screen.glb",
+  "sizeKB": 4.4
+ },
+ {
+  "slug": "hp-ventilation-4m-01-lod1",
+  "name": "HP_Ventilation_4m_01_LOD1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Ventilation_4m_01_LOD1",
+  "materials": [
+   "HP_Ventilation"
+  ],
+  "triangles": 108,
+  "subMeshes": 1,
+  "vertices": 230,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "HP_Ventilation_A",
+   "normal": "HP_Ventilation_N",
+   "metallicGloss": "HP_Ventilation_MS",
+   "occlusion": "HP_Ventilation_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/hp-ventilation-4m-01-lod1.glb",
+  "sizeKB": 231.5
+ },
+ {
+  "slug": "plate-lod0",
+  "name": "Plate_LOD0",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Plate_LOD0",
+  "materials": [
+   "Steel"
+  ],
+  "triangles": 396,
+  "subMeshes": 1,
+  "vertices": 577,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/plate-lod0.glb",
+  "sizeKB": 17.1
+ },
+ {
+  "slug": "riot-shield-blender-combined-static",
+  "name": "Riot_Shield_Blender_combined_static",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Riot_Shield_Blender_combined_static",
+  "materials": [
+   "riotshield",
+   "riotsglass"
+  ],
+  "triangles": 1486,
+  "subMeshes": 2,
+  "vertices": 2030,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "riotshield"
+  },
+  "model": "models/yet-another-zombie-survivors/riot-shield-blender-combined-static.glb",
+  "sizeKB": 103.9
+ },
+ {
+  "slug": "sm-futuristicfuelcontainer",
+  "name": "SM_FuturisticFuelContainer",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "HP_Pipes_Red_Angle_01 (1)",
+  "materials": [
+   "M_FuturisticFuelContainer2",
+   "M_FuturisticFuelContainer2Glass"
+  ],
+  "triangles": 6970,
+  "subMeshes": 2,
+  "vertices": 8102,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_FuturisticFuelContainer2_BC",
+   "normal": "T_FuturisticFuelContainer2_N",
+   "metallicGloss": "T_FuturisticFuelContainer2_M",
+   "occlusion": "T_FuturisticFuelContainer_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/sm-futuristicfuelcontainer.glb",
+  "sizeKB": 1050.0
+ },
+ {
+  "slug": "sm-lab-prop7",
+  "name": "SM_lab_prop7",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "lab_prop7",
+  "materials": [
+   "lab_equipment4"
+  ],
+  "triangles": 2674,
+  "subMeshes": 1,
+  "vertices": 3511,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_lab_equipment4_color",
+   "normal": "T_lab_equipment4_normal",
+   "metallicGloss": "T_lab_equipment4_metallic"
+  },
+  "model": "models/yet-another-zombie-survivors/sm-lab-prop7.glb",
+  "sizeKB": 237.5
+ },
+ {
+  "slug": "solar-panel-lod0",
+  "name": "Solar_Panel_LOD0",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Solar_Panel_LOD0",
+  "materials": [
+   "Solar Panel"
+  ],
+  "triangles": 522,
+  "subMeshes": 1,
+  "vertices": 658,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Solar Panel_DefaultMaterial_AlbedoTransparency.1001",
+   "normal": "Solar Panel_DefaultMaterial_Normal.1001",
+   "metallicGloss": "Solar Panel_DefaultMaterial_MetallicSmoothness.1001"
+  },
+  "model": "models/yet-another-zombie-survivors/solar-panel-lod0.glb",
+  "sizeKB": 366.0
+ },
+ {
+  "slug": "survival-melee-weapon-1",
+  "name": "Survival Melee Weapon 1",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Untitled",
+  "materials": [
+   "Survival Melee Weapon 3"
+  ],
+  "triangles": 4638,
+  "subMeshes": 1,
+  "vertices": 3491,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Survival Melee Weapon 3 AlbedoTransparency",
+   "normal": "Survival Melee Weapon 3 Normal",
+   "metallicGloss": "Survival Melee Weapon 3 MetallicSmoothness"
+  },
+  "model": "models/yet-another-zombie-survivors/survival-melee-weapon-1.glb",
+  "sizeKB": 326.0
+ },
+ {
+  "slug": "transformator-0001-type3-b-lod0",
+  "name": "transformator_0001_type3_b_LOD0",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "transformator_0001_type3b_f",
+  "materials": [
+   "transformator_0001_type3_f"
+  ],
+  "triangles": 5540,
+  "subMeshes": 1,
+  "vertices": 7094,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "transformator_0001_type_3f",
+   "normal": "transformator_0001_type_3f_normal",
+   "metallicGloss": "transformator_0001_type_3f_maskmap",
+   "occlusion": "transformator_0001_type_3f_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/transformator-0001-type3-b-lod0.glb",
+  "sizeKB": 488.9
+ },
+ {
+  "slug": "transformator-0001-type4-b-lod0",
+  "name": "transformator_0001_type4_b_LOD0",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "transformator_0001_type4b_f",
+  "materials": [
+   "transformator_0001_type_4f"
+  ],
+  "triangles": 1688,
+  "subMeshes": 1,
+  "vertices": 1701,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "transformator_0001_type_4f",
+   "normal": "transformator_0001_type_4f_normal",
+   "metallicGloss": "transformator_0001_type_4f_maskmap",
+   "occlusion": "transformator_0001_type_4f_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/transformator-0001-type4-b-lod0.glb",
+  "sizeKB": 344.7
+ },
+ {
+  "slug": "tubes4",
+  "name": "tubes4",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Bim",
+  "materials": [
+   "Potion Glass"
+  ],
+  "triangles": 764,
+  "subMeshes": 1,
+  "vertices": 716,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/tubes4.glb",
+  "sizeKB": 24.2
+ },
+ {
+  "slug": "water-glass-lod0",
+  "name": "Water Glass_LOD0",
+  "category": "生活道具",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Water Glass_LOD0",
+  "materials": [
+   "Steel"
+  ],
+  "triangles": 124,
+  "subMeshes": 1,
+  "vertices": 160,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/water-glass-lod0.glb",
+  "sizeKB": 5.8
+ },
+ {
+  "slug": "birch-large-1-lod-1",
+  "name": "Birch_Large_1_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Birch_Large_1_LOD_1(Clone)",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 5944,
+  "subMeshes": 2,
+  "vertices": 6543,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-large-1-lod-1.glb",
+  "sizeKB": 552.1
+ },
+ {
+  "slug": "birch-large-2-lod-1",
+  "name": "Birch_Large_2_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "upperarm_twist_01_r",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 3255,
+  "subMeshes": 2,
+  "vertices": 3651,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-large-2-lod-1.glb",
+  "sizeKB": 464.1
+ },
+ {
+  "slug": "birch-med-1-lod-1",
+  "name": "Birch_Med_1_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_LeftHandIndex1",
+  "materials": [
+   "M_Branch",
+   "M_Birch_Bark_Bottom"
+  ],
+  "triangles": 1725,
+  "subMeshes": 2,
+  "vertices": 1886,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branch_BC",
+   "normal": "T_Branch_N_2",
+   "metallicGloss": "T_Branch_M",
+   "occlusion": "T_Branch_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-med-1-lod-1.glb",
+  "sizeKB": 411.6
+ },
+ {
+  "slug": "birch-med-2-lod-1",
+  "name": "Birch_Med_2_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Birch_Med_2_LOD_1(Clone)",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 1661,
+  "subMeshes": 2,
+  "vertices": 1994,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-med-2-lod-1.glb",
+  "sizeKB": 413.0
+ },
+ {
+  "slug": "birch-med-4",
+  "name": "Birch_Med_4",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_Spine2",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 6260,
+  "subMeshes": 2,
+  "vertices": 6744,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-med-4.glb",
+  "sizeKB": 559.7
+ },
+ {
+  "slug": "birch-med-4-cross",
+  "name": "Birch_Med_4_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_Neck",
+  "materials": [
+   "M_Birch_Cross"
+  ],
+  "triangles": 17,
+  "subMeshes": 1,
+  "vertices": 21,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_LOD_Cross",
+   "normal": "T_Birch_LOD_Cross_N_base"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-med-4-cross.glb",
+  "sizeKB": 223.1
+ },
+ {
+  "slug": "birch-med-4-lod-1",
+  "name": "Birch_Med_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "pelvis",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 2441,
+  "subMeshes": 2,
+  "vertices": 2893,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-med-4-lod-1.glb",
+  "sizeKB": 439.7
+ },
+ {
+  "slug": "birch-sapling-1",
+  "name": "Birch_Sapling_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Birch_Sapling_1(Clone) (1)",
+  "materials": [
+   "M_Birch_Bark",
+   "M_Branch"
+  ],
+  "triangles": 886,
+  "subMeshes": 2,
+  "vertices": 1453,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-sapling-1.glb",
+  "sizeKB": 393.4
+ },
+ {
+  "slug": "birch-sapling-1-lod-1",
+  "name": "Birch_Sapling_1_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Birch_Sapling_1_LOD_1(Clone)",
+  "materials": [
+   "M_Birch_Bark",
+   "M_Branch"
+  ],
+  "triangles": 434,
+  "subMeshes": 2,
+  "vertices": 776,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-sapling-1-lod-1.glb",
+  "sizeKB": 374.9
+ },
+ {
+  "slug": "birch-sapling-2",
+  "name": "Birch_Sapling_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "calf_l",
+  "materials": [
+   "M_Branch",
+   "M_Birch_Bark"
+  ],
+  "triangles": 807,
+  "subMeshes": 2,
+  "vertices": 1359,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branch_BC",
+   "normal": "T_Branch_N_2",
+   "metallicGloss": "T_Branch_M",
+   "occlusion": "T_Branch_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-sapling-2.glb",
+  "sizeKB": 390.6
+ },
+ {
+  "slug": "birch-sapling-2-lod-1",
+  "name": "Birch_Sapling_2_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "spine_02",
+  "materials": [
+   "M_Branch",
+   "M_Birch_Bark"
+  ],
+  "triangles": 398,
+  "subMeshes": 2,
+  "vertices": 720,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branch_BC",
+   "normal": "T_Branch_N_2",
+   "metallicGloss": "T_Branch_M",
+   "occlusion": "T_Branch_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-sapling-2-lod-1.glb",
+  "sizeKB": 373.4
+ },
+ {
+  "slug": "birch-small-1",
+  "name": "Birch_Small_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_Head",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 4076,
+  "subMeshes": 2,
+  "vertices": 4174,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-small-1.glb",
+  "sizeKB": 483.9
+ },
+ {
+  "slug": "birch-small-1-lod-1",
+  "name": "Birch_Small_1_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "thigh_twist_01_r",
+  "materials": [
+   "M_Birch_Bark_Bottom",
+   "M_Branch"
+  ],
+  "triangles": 1488,
+  "subMeshes": 2,
+  "vertices": 1753,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-small-1-lod-1.glb",
+  "sizeKB": 406.3
+ },
+ {
+  "slug": "birch-small-2-cross",
+  "name": "Birch_Small_2_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "ring_01_r",
+  "materials": [
+   "M_Birch_Cross"
+  ],
+  "triangles": 18,
+  "subMeshes": 1,
+  "vertices": 22,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_LOD_Cross",
+   "normal": "T_Birch_LOD_Cross_N_base"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-small-2-cross.glb",
+  "sizeKB": 223.1
+ },
+ {
+  "slug": "birch-small-4-lod-1",
+  "name": "Birch_Small_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Birch_Small_4_LOD_1(Clone)",
+  "materials": [
+   "M_Birch_Bark",
+   "M_Branch"
+  ],
+  "triangles": 1693,
+  "subMeshes": 2,
+  "vertices": 1992,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Birch_Tile_BC",
+   "normal": "T_Birch_Tile_N",
+   "metallicGloss": "T_Birch_Tile_M",
+   "occlusion": "T_Birch_Tile_M"
+  },
+  "model": "models/yet-another-zombie-survivors/birch-small-4-lod-1.glb",
+  "sizeKB": 413.3
+ },
+ {
+  "slug": "branch-1-lod0",
+  "name": "branch_1_LOD0",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "branch_1_LOD0",
+  "materials": [
+   "M_Branch_Debris_1"
+  ],
+  "triangles": 2191,
+  "subMeshes": 1,
+  "vertices": 1401,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branch_Debris_1_BC",
+   "normal": "T_Branch_Depris_1_N",
+   "occlusion": "T_Branch_Debris_1_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/branch-1-lod0.glb",
+  "sizeKB": 719.0
+ },
+ {
+  "slug": "branch-1-lod001",
+  "name": "branch_1_LOD001",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "branch_1_LOD001",
+  "materials": [
+   "M_Branch_Debris_1"
+  ],
+  "triangles": 1426,
+  "subMeshes": 1,
+  "vertices": 1013,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branch_Debris_1_BC",
+   "normal": "T_Branch_Depris_1_N",
+   "occlusion": "T_Branch_Debris_1_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/branch-1-lod001.glb",
+  "sizeKB": 702.4
+ },
+ {
+  "slug": "branch-1-lod002",
+  "name": "branch_1_LOD002",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "branch_1_LOD002",
+  "materials": [
+   "M_Branch_Debris_1"
+  ],
+  "triangles": 422,
+  "subMeshes": 1,
+  "vertices": 365,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branch_Debris_1_BC",
+   "normal": "T_Branch_Depris_1_N",
+   "occlusion": "T_Branch_Debris_1_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/branch-1-lod002.glb",
+  "sizeKB": 678.0
+ },
+ {
+  "slug": "bush-group-1",
+  "name": "Bush_Group_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "RingFinger1_L",
+  "materials": [
+   "M_Bush"
+  ],
+  "triangles": 244,
+  "subMeshes": 1,
+  "vertices": 348,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Bush_Branches",
+   "normal": "T_Bush_Branches_N"
+  },
+  "model": "models/yet-another-zombie-survivors/bush-group-1.glb",
+  "sizeKB": 265.8
+ },
+ {
+  "slug": "fern-group-1",
+  "name": "Fern_Group_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sword Slash 1",
+  "materials": [
+   "M_Fern"
+  ],
+  "triangles": 1000,
+  "subMeshes": 1,
+  "vertices": 862,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Fern_BC",
+   "normal": "T_Fern_N",
+   "metallicGloss": "T_Fern_Mask",
+   "occlusion": "T_Fern_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/fern-group-1.glb",
+  "sizeKB": 387.4
+ },
+ {
+  "slug": "fern-group-2",
+  "name": "Fern_Group_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHandIndex2",
+  "materials": [
+   "M_Fern"
+  ],
+  "triangles": 907,
+  "subMeshes": 1,
+  "vertices": 787,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Fern_BC",
+   "normal": "T_Fern_N",
+   "metallicGloss": "T_Fern_Mask",
+   "occlusion": "T_Fern_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/fern-group-2.glb",
+  "sizeKB": 384.8
+ },
+ {
+  "slug": "grass-patch-2",
+  "name": "Grass_patch_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Enviro_Particles",
+  "materials": [
+   "M_Grass_Set_1"
+  ],
+  "triangles": 315,
+  "subMeshes": 1,
+  "vertices": 441,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Grass_Set_1_BC",
+   "normal": "T_Grass_Set_1_N",
+   "metallicGloss": "T_Grass_Set_1_Mask",
+   "occlusion": "T_Grass_Set_1_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/grass-patch-2.glb",
+  "sizeKB": 420.9
+ },
+ {
+  "slug": "grass-patch-3",
+  "name": "Grass_Patch_3",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHandPinky3",
+  "materials": [
+   "M_Grass_Set_2"
+  ],
+  "triangles": 255,
+  "subMeshes": 1,
+  "vertices": 391,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Grass_Set_2_BC",
+   "normal": "T_Grass_Set_2_N_2"
+  },
+  "model": "models/yet-another-zombie-survivors/grass-patch-3.glb",
+  "sizeKB": 248.1
+ },
+ {
+  "slug": "grass-patch-3",
+  "name": "Grass_patch_3",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "lower_jaw1",
+  "materials": [
+   "M_Grass_Set_1"
+  ],
+  "triangles": 352,
+  "subMeshes": 1,
+  "vertices": 518,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Grass_Set_1_BC",
+   "normal": "T_Grass_Set_1_N",
+   "metallicGloss": "T_Grass_Set_1_Mask",
+   "occlusion": "T_Grass_Set_1_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/grass-patch-3.glb",
+  "sizeKB": 422.9
+ },
+ {
+  "slug": "grass-patch-4",
+  "name": "Grass_Patch_4",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "middle_01_l",
+  "materials": [
+   "M_Grass_Set_2"
+  ],
+  "triangles": 447,
+  "subMeshes": 1,
+  "vertices": 637,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Grass_Set_2_BC",
+   "normal": "T_Grass_Set_2_N_2"
+  },
+  "model": "models/yet-another-zombie-survivors/grass-patch-4.glb",
+  "sizeKB": 255.1
+ },
+ {
+  "slug": "grass-patch-6",
+  "name": "Grass_Patch_6",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "r_back_leg1",
+  "materials": [
+   "M_Grass_Set_2"
+  ],
+  "triangles": 572,
+  "subMeshes": 1,
+  "vertices": 784,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Grass_Set_2_BC",
+   "normal": "T_Grass_Set_2_N_2"
+  },
+  "model": "models/yet-another-zombie-survivors/grass-patch-6.glb",
+  "sizeKB": 259.5
+ },
+ {
+  "slug": "heather-1-003",
+  "name": "Heather_1.003",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_LeftShoulder",
+  "materials": [
+   "M_Heather"
+  ],
+  "triangles": 1361,
+  "subMeshes": 1,
+  "vertices": 1745,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Heather_BC",
+   "normal": "T_Heather_N",
+   "metallicGloss": "T_Heather_Mask",
+   "occlusion": "T_Heather_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/heather-1-003.glb",
+  "sizeKB": 455.2
+ },
+ {
+  "slug": "oak-large-1-lod-2",
+  "name": "Oak_Large_1_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Large_1_LOD_2(Clone)",
+  "materials": [
+   "M_Oak_Branch",
+   "M_Oak_Large_Tile_Bark"
+  ],
+  "triangles": 3065,
+  "subMeshes": 2,
+  "vertices": 3704,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Branch_BC",
+   "normal": "T_Oak_Branch_N",
+   "metallicGloss": "T_Oak_Branch_Mask",
+   "occlusion": "T_Oak_Branch_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-large-1-lod-2.glb",
+  "sizeKB": 668.3
+ },
+ {
+  "slug": "oak-large-2-lod2-branch-large",
+  "name": "Oak_Large_2_LOD2_Branch_Large",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Large_2_LOD2(Clone)",
+  "materials": [
+   "M_Oak_Large_Tile_Bark",
+   "M_Oak_Branch"
+  ],
+  "triangles": 4644,
+  "subMeshes": 2,
+  "vertices": 5361,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Large_Tile_BC",
+   "normal": "T_Oak_Large_Tile_N",
+   "metallicGloss": "T_Oak_Large_Tile_Mask",
+   "occlusion": "T_Oak_Large_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-large-2-lod2-branch-large.glb",
+  "sizeKB": 719.1
+ },
+ {
+  "slug": "oak-med-1-lod-1",
+  "name": "Oak_Med_1_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Med_1_LOD_1(Clone)",
+  "materials": [
+   "M_Oak_Med_Bark_Double",
+   "M_Oak_Branch"
+  ],
+  "triangles": 2188,
+  "subMeshes": 2,
+  "vertices": 2622,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Med_Tile_BC",
+   "normal": "T_Oak_Med_Tile_N",
+   "metallicGloss": "T_Oak_Med_Tile_Mask",
+   "occlusion": "T_Oak_Med_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-med-1-lod-1.glb",
+  "sizeKB": 419.7
+ },
+ {
+  "slug": "oak-med-2-lod-1",
+  "name": "Oak_Med_2_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Med_2_LOD_1(Clone)",
+  "materials": [
+   "M_Oak_Med_Bark",
+   "M_Oak_Branch"
+  ],
+  "triangles": 1470,
+  "subMeshes": 2,
+  "vertices": 1578,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Med_BC",
+   "normal": "T_Oak_Med_N",
+   "metallicGloss": "T_Oak_Med_Mask",
+   "occlusion": "T_Oak_Med_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-med-2-lod-1.glb",
+  "sizeKB": 393.9
+ },
+ {
+  "slug": "oak-med-3",
+  "name": "Oak_Med_3",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "calf_twist_01_l",
+  "materials": [
+   "M_Oak_Med_Bark_Double",
+   "M_Oak_Branch"
+  ],
+  "triangles": 6352,
+  "subMeshes": 2,
+  "vertices": 6166,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Med_Tile_BC",
+   "normal": "T_Oak_Med_Tile_N",
+   "metallicGloss": "T_Oak_Med_Tile_Mask",
+   "occlusion": "T_Oak_Med_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-med-3.glb",
+  "sizeKB": 537.7
+ },
+ {
+  "slug": "oak-med-3-cross",
+  "name": "Oak_Med_3_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "thigh_twist_01_r",
+  "materials": [
+   "M_Oak_Cross"
+  ],
+  "triangles": 35,
+  "subMeshes": 1,
+  "vertices": 39,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_LOD_Cross_BC",
+   "normal": "T_Oak_LOD_Cross_N",
+   "metallicGloss": "T_Oak_Cross_Mask",
+   "occlusion": "T_Oak_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-med-3-cross.glb",
+  "sizeKB": 213.0
+ },
+ {
+  "slug": "oak-med-3-lod-1",
+  "name": "Oak_Med_3_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHandMiddle2",
+  "materials": [
+   "M_Oak_Med_Bark_Double",
+   "M_Oak_Branch"
+  ],
+  "triangles": 3399,
+  "subMeshes": 2,
+  "vertices": 4326,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Med_Tile_BC",
+   "normal": "T_Oak_Med_Tile_N",
+   "metallicGloss": "T_Oak_Med_Tile_Mask",
+   "occlusion": "T_Oak_Med_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-med-3-lod-1.glb",
+  "sizeKB": 467.2
+ },
+ {
+  "slug": "oak-med-4-lod-1",
+  "name": "Oak_Med_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Med_4_LOD_1(Clone)",
+  "materials": [
+   "M_Oak_Med_Bark_Double",
+   "M_Oak_Branch"
+  ],
+  "triangles": 3020,
+  "subMeshes": 2,
+  "vertices": 3080,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Med_Tile_BC",
+   "normal": "T_Oak_Med_Tile_N",
+   "metallicGloss": "T_Oak_Med_Tile_Mask",
+   "occlusion": "T_Oak_Med_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-med-4-lod-1.glb",
+  "sizeKB": 438.4
+ },
+ {
+  "slug": "oak-small-1",
+  "name": "Oak_Small_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Jaw_M",
+  "materials": [
+   "M_Oak_Cross"
+  ],
+  "triangles": 14,
+  "subMeshes": 1,
+  "vertices": 18,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_LOD_Cross_BC",
+   "normal": "T_Oak_LOD_Cross_N",
+   "metallicGloss": "T_Oak_Cross_Mask",
+   "occlusion": "T_Oak_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-1.glb",
+  "sizeKB": 212.4
+ },
+ {
+  "slug": "oak-small-4-lod-1",
+  "name": "Oak_Small_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Small_4_LOD_1(Clone)",
+  "materials": [
+   "M_Oak_Small_Bark",
+   "M_Oak_Branch"
+  ],
+  "triangles": 357,
+  "subMeshes": 2,
+  "vertices": 437,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Small_BC",
+   "normal": "T_Oak_Small_Tile_N",
+   "metallicGloss": "T_Oak_Small_Tile_Mask",
+   "occlusion": "T_Oak_Small_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-4-lod-1.glb",
+  "sizeKB": 348.2
+ },
+ {
+  "slug": "oak-small-5-lod-1",
+  "name": "Oak_Small_5_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Small_5_LOD_1(Clone)",
+  "materials": [
+   "M_Oak_Small_Bark",
+   "M_Oak_Branch"
+  ],
+  "triangles": 464,
+  "subMeshes": 2,
+  "vertices": 455,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Small_BC",
+   "normal": "T_Oak_Small_Tile_N",
+   "metallicGloss": "T_Oak_Small_Tile_Mask",
+   "occlusion": "T_Oak_Small_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-5-lod-1.glb",
+  "sizeKB": 349.8
+ },
+ {
+  "slug": "oak-small-6-lod-1",
+  "name": "Oak_Small_6_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Oak_Small_6_LOD_1(Clone)",
+  "materials": [
+   "M_Oak_Branch",
+   "M_Oak_Small_Bark"
+  ],
+  "triangles": 879,
+  "subMeshes": 2,
+  "vertices": 1246,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Branch_BC",
+   "normal": "T_Oak_Branch_N",
+   "metallicGloss": "T_Oak_Branch_Mask",
+   "occlusion": "T_Oak_Branch_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-6-lod-1.glb",
+  "sizeKB": 370.1
+ },
+ {
+  "slug": "oak-small-7",
+  "name": "Oak_Small_7",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "RingFinger2_R",
+  "materials": [
+   "M_Oak_Cross"
+  ],
+  "triangles": 20,
+  "subMeshes": 1,
+  "vertices": 24,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_LOD_Cross_BC",
+   "normal": "T_Oak_LOD_Cross_N",
+   "metallicGloss": "T_Oak_Cross_Mask",
+   "occlusion": "T_Oak_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-7.glb",
+  "sizeKB": 212.6
+ },
+ {
+  "slug": "oak-small-7-branch",
+  "name": "Oak_Small_7_Branch",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "upperarm_twist_01_l",
+  "materials": [
+   "M_Oak_Small_Bark",
+   "M_Oak_Branch"
+  ],
+  "triangles": 1795,
+  "subMeshes": 2,
+  "vertices": 2055,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Small_BC",
+   "normal": "T_Oak_Small_Tile_N",
+   "metallicGloss": "T_Oak_Small_Tile_Mask",
+   "occlusion": "T_Oak_Small_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-7-branch.glb",
+  "sizeKB": 396.6
+ },
+ {
+  "slug": "oak-small-7-branch-med",
+  "name": "Oak_Small_7_Branch_Med",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "ZombieSpiderMummy_LOD1",
+  "materials": [
+   "M_Oak_Branch",
+   "M_Oak_Small_Bark"
+  ],
+  "triangles": 958,
+  "subMeshes": 2,
+  "vertices": 1450,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Oak_Branch_BC",
+   "normal": "T_Oak_Branch_N",
+   "metallicGloss": "T_Oak_Branch_Mask",
+   "occlusion": "T_Oak_Branch_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/oak-small-7-branch-med.glb",
+  "sizeKB": 375.0
+ },
+ {
+  "slug": "pine-2-lod-2",
+  "name": "Pine_2_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Attack_Long",
+  "materials": [
+   "M_Pine_Branch",
+   "M_Pine_Bark"
+  ],
+  "triangles": 1920,
+  "subMeshes": 2,
+  "vertices": 3276,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Branch_BC",
+   "normal": "T_Pine_Branch_N",
+   "metallicGloss": "T_Pine_Branch_M",
+   "occlusion": "T_Pine_Branch_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-2-lod-2.glb",
+  "sizeKB": 835.9
+ },
+ {
+  "slug": "pine-3-cross",
+  "name": "Pine_3_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Surface_01",
+  "materials": [
+   "M_Pine_Cross"
+  ],
+  "triangles": 39,
+  "subMeshes": 1,
+  "vertices": 43,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Cross_BC",
+   "normal": "T_Pine_LOD_Cross_N",
+   "metallicGloss": "T_Pine_Cross_Mask",
+   "occlusion": "T_Pine_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-3-cross.glb",
+  "sizeKB": 330.1
+ },
+ {
+  "slug": "pine-3-lod-2",
+  "name": "Pine_3_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "calf_l",
+  "materials": [
+   "M_Pine_Bark",
+   "M_Pine_Branch"
+  ],
+  "triangles": 2530,
+  "subMeshes": 2,
+  "vertices": 3686,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Bark_Top_BC",
+   "normal": "T_Pine_Bark_Top_N",
+   "metallicGloss": "T_Pine_Bark_Top_M",
+   "occlusion": "T_Pine_Bark_Top_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-3-lod-2.glb",
+  "sizeKB": 851.0
+ },
+ {
+  "slug": "pine-4",
+  "name": "Pine_4",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_LeftHandThumb3",
+  "materials": [
+   "M_Pine_Bark_Tess",
+   "M_Pine_Branch"
+  ],
+  "triangles": 7422,
+  "subMeshes": 2,
+  "vertices": 8267,
+  "hasUV": true,
+  "textures": {
+   "normal": "T_Pine_Bark_Top_N",
+   "metallicGloss": "T_Pine_Bark_Top_M",
+   "occlusion": "T_Pine_Bark_Top_M",
+   "baseColor": "T_Pine_Branch_BC"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-4.glb",
+  "sizeKB": 976.6
+ },
+ {
+  "slug": "pine-4-lod-1",
+  "name": "Pine_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "r_fang1",
+  "materials": [
+   "M_Pine_Bark",
+   "M_Pine_Branch"
+  ],
+  "triangles": 3981,
+  "subMeshes": 2,
+  "vertices": 5593,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Bark_Top_BC",
+   "normal": "T_Pine_Bark_Top_N",
+   "metallicGloss": "T_Pine_Bark_Top_M",
+   "occlusion": "T_Pine_Bark_Top_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-4-lod-1.glb",
+  "sizeKB": 905.3
+ },
+ {
+  "slug": "pine-4-lod-2",
+  "name": "Pine_4_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_4_LOD_2(Clone)",
+  "materials": [
+   "M_Pine_Bark",
+   "M_Pine_Branch"
+  ],
+  "triangles": 2204,
+  "subMeshes": 2,
+  "vertices": 3445,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Bark_Top_BC",
+   "normal": "T_Pine_Bark_Top_N",
+   "metallicGloss": "T_Pine_Bark_Top_M",
+   "occlusion": "T_Pine_Bark_Top_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-4-lod-2.glb",
+  "sizeKB": 842.5
+ },
+ {
+  "slug": "pine-sapling-1",
+  "name": "Pine_Sapling_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_Sapling_1(Clone)",
+  "materials": [
+   "M_Pine_Small",
+   "M_Pine_Bark"
+  ],
+  "triangles": 672,
+  "subMeshes": 2,
+  "vertices": 871,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Branch_Small",
+   "normal": "T_Pine_Branch_Small_N",
+   "metallicGloss": "T_Pine_Branch_Small_M",
+   "occlusion": "T_Pine_Branch_Small_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-sapling-1.glb",
+  "sizeKB": 768.7
+ },
+ {
+  "slug": "pine-sapling-2",
+  "name": "Pine_Sapling_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_Sapling_2(Clone)",
+  "materials": [
+   "M_Pine_Bark",
+   "M_Pine_Small"
+  ],
+  "triangles": 825,
+  "subMeshes": 2,
+  "vertices": 1099,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Bark_Top_BC",
+   "normal": "T_Pine_Bark_Top_N",
+   "metallicGloss": "T_Pine_Bark_Top_M",
+   "occlusion": "T_Pine_Bark_Top_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-sapling-2.glb",
+  "sizeKB": 774.9
+ },
+ {
+  "slug": "pine-sapling-3",
+  "name": "Pine_Sapling_3",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_Sapling_3(Clone)",
+  "materials": [
+   "M_Pine_Bark",
+   "M_Pine_Small"
+  ],
+  "triangles": 510,
+  "subMeshes": 2,
+  "vertices": 680,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Bark_Top_BC",
+   "normal": "T_Pine_Bark_Top_N",
+   "metallicGloss": "T_Pine_Bark_Top_M",
+   "occlusion": "T_Pine_Bark_Top_M"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-sapling-3.glb",
+  "sizeKB": 763.0
+ },
+ {
+  "slug": "pine-small-1-cross",
+  "name": "Pine_Small_1_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_Small_1_Cross(Clone)",
+  "materials": [
+   "M_Pine_Cross"
+  ],
+  "triangles": 8,
+  "subMeshes": 1,
+  "vertices": 12,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Cross_BC",
+   "normal": "T_Pine_LOD_Cross_N",
+   "metallicGloss": "T_Pine_Cross_Mask",
+   "occlusion": "T_Pine_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-small-1-cross.glb",
+  "sizeKB": 329.1
+ },
+ {
+  "slug": "pine-small-2-cross",
+  "name": "Pine_Small_2_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_Small_2_Cross(Clone)",
+  "materials": [
+   "M_Pine_Cross"
+  ],
+  "triangles": 12,
+  "subMeshes": 1,
+  "vertices": 16,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Cross_BC",
+   "normal": "T_Pine_LOD_Cross_N",
+   "metallicGloss": "T_Pine_Cross_Mask",
+   "occlusion": "T_Pine_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-small-2-cross.glb",
+  "sizeKB": 329.2
+ },
+ {
+  "slug": "pine-small-3-cross",
+  "name": "Pine_Small_3_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Pine_Small_3_Cross(Clone)",
+  "materials": [
+   "M_Pine_Cross"
+  ],
+  "triangles": 11,
+  "subMeshes": 1,
+  "vertices": 25,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Pine_Cross_BC",
+   "normal": "T_Pine_LOD_Cross_N",
+   "metallicGloss": "T_Pine_Cross_Mask",
+   "occlusion": "T_Pine_Cross_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/pine-small-3-cross.glb",
+  "sizeKB": 329.4
+ },
+ {
+  "slug": "pinecone",
+  "name": "Pinecone",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "candle_03_on_01",
+  "materials": [
+   "M_Wood_Debris"
+  ],
+  "triangles": 672,
+  "subMeshes": 1,
+  "vertices": 528,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Wood_Debris_BC",
+   "normal": "T_Wood_Debris_N",
+   "occlusion": "T_Wood_Debris_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/pinecone.glb",
+  "sizeKB": 252.7
+ },
+ {
+  "slug": "spruce-med-1",
+  "name": "Spruce_Med_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "right_eyes",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 6598,
+  "subMeshes": 2,
+  "vertices": 5094,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-1.glb",
+  "sizeKB": 1038.4
+ },
+ {
+  "slug": "spruce-med-1-cross",
+  "name": "Spruce_Med_1_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "JawEnd_M",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 13,
+  "subMeshes": 1,
+  "vertices": 17,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-1-cross.glb",
+  "sizeKB": 381.6
+ },
+ {
+  "slug": "spruce-med-1-lod1",
+  "name": "Spruce_Med_1_LOD1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_Neck",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 3382,
+  "subMeshes": 2,
+  "vertices": 3298,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-1-lod1.glb",
+  "sizeKB": 965.6
+ },
+ {
+  "slug": "spruce-med-1-lod2",
+  "name": "Spruce_Med_1_LOD2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_Spine",
+  "materials": [
+   "M_Spruce_Branch",
+   "M_Spruce_Bark"
+  ],
+  "triangles": 1760,
+  "subMeshes": 2,
+  "vertices": 1620,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Branch_BC",
+   "normal": "T_Spruce_Branch_N",
+   "metallicGloss": "T_Spruce_Branch_M",
+   "occlusion": "T_Spruce_Branch_M"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-1-lod2.glb",
+  "sizeKB": 913.8
+ },
+ {
+  "slug": "spruce-med-2",
+  "name": "Spruce_Med_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "PinkyFinger1_L",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 7437,
+  "subMeshes": 2,
+  "vertices": 5615,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-2.glb",
+  "sizeKB": 1058.4
+ },
+ {
+  "slug": "spruce-med-2-cross",
+  "name": "Spruce_Med_2_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "l_mid_leg3",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 18,
+  "subMeshes": 1,
+  "vertices": 22,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-2-cross.glb",
+  "sizeKB": 381.8
+ },
+ {
+  "slug": "spruce-med-2-lod-1",
+  "name": "Spruce_Med_2_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "MiddleFinger4_L",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 3377,
+  "subMeshes": 2,
+  "vertices": 3353,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-2-lod-1.glb",
+  "sizeKB": 966.6
+ },
+ {
+  "slug": "spruce-med-2-lod-2",
+  "name": "Spruce_Med_2_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_LeftHandRing3",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 1823,
+  "subMeshes": 2,
+  "vertices": 1841,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-2-lod-2.glb",
+  "sizeKB": 918.9
+ },
+ {
+  "slug": "spruce-med-3",
+  "name": "Spruce_Med_3",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHandIndex1",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 5975,
+  "subMeshes": 2,
+  "vertices": 4122,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-3.glb",
+  "sizeKB": 1012.1
+ },
+ {
+  "slug": "spruce-med-3-cross",
+  "name": "Spruce_Med_3_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "poison_bubbles_01",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 13,
+  "subMeshes": 1,
+  "vertices": 17,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-3-cross.glb",
+  "sizeKB": 381.6
+ },
+ {
+  "slug": "spruce-med-3-lod-1",
+  "name": "Spruce_Med_3_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHandRing4",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 2535,
+  "subMeshes": 2,
+  "vertices": 2193,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-3-lod-1.glb",
+  "sizeKB": 934.1
+ },
+ {
+  "slug": "spruce-med-4",
+  "name": "Spruce_Med_4",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "PinkyFinger3_R",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 5058,
+  "subMeshes": 2,
+  "vertices": 4266,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-4.glb",
+  "sizeKB": 1004.2
+ },
+ {
+  "slug": "spruce-med-4-cross",
+  "name": "Spruce_Med_4_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHand",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 19,
+  "subMeshes": 1,
+  "vertices": 23,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-4-cross.glb",
+  "sizeKB": 381.8
+ },
+ {
+  "slug": "spruce-med-4-lod-1",
+  "name": "Spruce_Med_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Scalable",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 2622,
+  "subMeshes": 2,
+  "vertices": 2753,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-4-lod-1.glb",
+  "sizeKB": 946.1
+ },
+ {
+  "slug": "spruce-med-4-lod-2",
+  "name": "Spruce_Med_4_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "CameraMouseSelectionTarget",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 1193,
+  "subMeshes": 2,
+  "vertices": 1291,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-4-lod-2.glb",
+  "sizeKB": 900.8
+ },
+ {
+  "slug": "spruce-med-5",
+  "name": "Spruce_Med_5",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_LeftHandMiddle4",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 6450,
+  "subMeshes": 2,
+  "vertices": 5201,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-5.glb",
+  "sizeKB": 1038.7
+ },
+ {
+  "slug": "spruce-med-5-cross",
+  "name": "Spruce_Med_5_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "PinkyFinger2_L",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 16,
+  "subMeshes": 1,
+  "vertices": 20,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-5-cross.glb",
+  "sizeKB": 381.7
+ },
+ {
+  "slug": "spruce-med-5-lod-1",
+  "name": "Spruce_Med_5_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sword White",
+  "materials": [
+   "M_Spruce_Bark_Double",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 2990,
+  "subMeshes": 2,
+  "vertices": 3216,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-5-lod-1.glb",
+  "sizeKB": 959.4
+ },
+ {
+  "slug": "spruce-med-5-lod-2",
+  "name": "Spruce_Med_5_LOD_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Knee_R",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 1670,
+  "subMeshes": 2,
+  "vertices": 1915,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-med-5-lod-2.glb",
+  "sizeKB": 918.5
+ },
+ {
+  "slug": "spruce-small-1",
+  "name": "Spruce_Small_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightArm",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 2135,
+  "subMeshes": 2,
+  "vertices": 1565,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-1.glb",
+  "sizeKB": 917.2
+ },
+ {
+  "slug": "spruce-small-1-cross",
+  "name": "Spruce_Small_1_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "lower_jaw2",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 9,
+  "subMeshes": 1,
+  "vertices": 13,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-1-cross.glb",
+  "sizeKB": 381.5
+ },
+ {
+  "slug": "spruce-small-1-lod-1",
+  "name": "Spruce_Small_1_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "index_04_l",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 962,
+  "subMeshes": 2,
+  "vertices": 927,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-1-lod-1.glb",
+  "sizeKB": 891.0
+ },
+ {
+  "slug": "spruce-small-2",
+  "name": "Spruce_Small_2",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "l_mid_leg2",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 1373,
+  "subMeshes": 2,
+  "vertices": 1039,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-2.glb",
+  "sizeKB": 898.0
+ },
+ {
+  "slug": "spruce-small-2-cross",
+  "name": "Spruce_Small_2_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sword Slash 1 (1)",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 10,
+  "subMeshes": 1,
+  "vertices": 14,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-2-cross.glb",
+  "sizeKB": 381.5
+ },
+ {
+  "slug": "spruce-small-2-lod-1",
+  "name": "Spruce_Small_2_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHandThumb3",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 646,
+  "subMeshes": 2,
+  "vertices": 651,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-2-lod-1.glb",
+  "sizeKB": 881.9
+ },
+ {
+  "slug": "spruce-small-4",
+  "name": "Spruce_Small_4",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sword White",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 1463,
+  "subMeshes": 2,
+  "vertices": 1074,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-4.glb",
+  "sizeKB": 899.7
+ },
+ {
+  "slug": "spruce-small-4-cross",
+  "name": "Spruce_Small_4_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sword Slash 1 (1)",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 13,
+  "subMeshes": 1,
+  "vertices": 17,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-4-cross.glb",
+  "sizeKB": 381.6
+ },
+ {
+  "slug": "spruce-small-4-lod-1",
+  "name": "Spruce_Small_4_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "tail2",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 633,
+  "subMeshes": 2,
+  "vertices": 614,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-4-lod-1.glb",
+  "sizeKB": 881.0
+ },
+ {
+  "slug": "spruce-small-5",
+  "name": "Spruce_Small_5",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Attack_Short_2",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 1315,
+  "subMeshes": 2,
+  "vertices": 972,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-5.glb",
+  "sizeKB": 896.0
+ },
+ {
+  "slug": "spruce-small-5-cross",
+  "name": "Spruce_Small_5_Cross",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sphere_02",
+  "materials": [
+   "M_Spruce_Cross"
+  ],
+  "triangles": 13,
+  "subMeshes": 1,
+  "vertices": 17,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_LOD_Bilboard",
+   "normal": "T_Spruce_LOD_Bilboard_N",
+   "metallicGloss": "T_Spruce_LOD_Bilboard_Mask",
+   "occlusion": "T_Spruce_LOD_Bilboard_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-5-cross.glb",
+  "sizeKB": 381.6
+ },
+ {
+  "slug": "spruce-small-5-lod-1",
+  "name": "Spruce_Small_5_LOD_1",
+  "category": "植被",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Attack_Short_2",
+  "materials": [
+   "M_Spruce_Bark",
+   "M_Spruce_Branch"
+  ],
+  "triangles": 593,
+  "subMeshes": 2,
+  "vertices": 577,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Spruce_Bark_Tile_BC",
+   "normal": "T_Spruce_Tile_N",
+   "metallicGloss": "T_Spruce_Tile_Mask",
+   "occlusion": "T_Spruce_Tile_Mask"
+  },
+  "model": "models/yet-another-zombie-survivors/spruce-small-5-lod-1.glb",
+  "sizeKB": 879.8
+ },
+ {
+  "slug": "rock1-600-tris-polysurface17",
+  "name": "Rock1_600_tris:polySurface17",
+  "category": "地形与道路",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Debris1_39",
+  "materials": [
+   "Rock1"
+  ],
+  "triangles": 28,
+  "subMeshes": 1,
+  "vertices": 27,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Rock1",
+   "normal": "Rock1_nmp",
+   "metallicGloss": "Rock1_ms",
+   "occlusion": "Rock1_ao"
+  },
+  "model": "models/yet-another-zombie-survivors/rock1-600-tris-polysurface17.glb",
+  "sizeKB": 326.4
+ },
+ {
+  "slug": "rock2",
+  "name": "Rock2",
+  "category": "地形与道路",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Sword Slash 1 (1)",
+  "materials": [
+   "Bullet_EnemySpitterDesert"
+  ],
+  "triangles": 88,
+  "subMeshes": 1,
+  "vertices": 93,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "ZombieAE_Hair_MAT_AlbedoTransparency_V1_BLOOD"
+  },
+  "model": "models/yet-another-zombie-survivors/rock2.glb",
+  "sizeKB": 213.2
+ },
+ {
+  "slug": "bone-heap-01-lod2",
+  "name": "Bone_Heap_01_LOD2",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Bone_Heap_01_LOD2",
+  "materials": [
+   "M_skeleton"
+  ],
+  "triangles": 2606,
+  "subMeshes": 1,
+  "vertices": 2375,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_skeleton_dark_D",
+   "normal": "T_skeleton_N"
+  },
+  "model": "models/yet-another-zombie-survivors/bone-heap-01-lod2.glb",
+  "sizeKB": 234.2
+ },
+ {
+  "slug": "bonesheap01-poly-reduced",
+  "name": "BonesHeap01-POLY_REDUCED",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_LeftHandIndex1",
+  "materials": [
+   "MRSkeleton_01",
+   "MRBonesHeap_01"
+  ],
+  "triangles": 2228,
+  "subMeshes": 2,
+  "vertices": 1985,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Skeleton_A",
+   "normal": "T_Skeleton_N"
+  },
+  "model": "models/yet-another-zombie-survivors/bonesheap01-poly-reduced.glb",
+  "sizeKB": 630.7
+ },
+ {
+  "slug": "fallen-branches",
+  "name": "Fallen_Branches",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_RightHand",
+  "materials": [
+   "M_Branches_Dead"
+  ],
+  "triangles": 122,
+  "subMeshes": 1,
+  "vertices": 146,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Branches_Dead_BC",
+   "normal": "T_Branches_Dead_N"
+  },
+  "model": "models/yet-another-zombie-survivors/fallen-branches.glb",
+  "sizeKB": 179.5
+ },
+ {
+  "slug": "fallen-soldier-1-lod3",
+  "name": "fallen_soldier_1_LOD3",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fallen_soldier_1_LOD_3",
+  "materials": [
+   "Fallen Soldier 1 v2"
+  ],
+  "triangles": 4052,
+  "subMeshes": 1,
+  "vertices": 5559,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fallen_soldier_1_BaseColor_ver2",
+   "normal": "Fallen_soldier_1_Normal",
+   "metallicGloss": "Fallen_soldier_1_SpecularSmoothness",
+   "occlusion": "Fallen_soldier_1_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/fallen-soldier-1-lod3.glb",
+  "sizeKB": 488.6
+ },
+ {
+  "slug": "fallen-soldier-3-lod-3",
+  "name": "fallen_soldier_3_LOD_3",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fallen_soldier_3_LOD_3",
+  "materials": [
+   "Fallen Soldier 3 v2"
+  ],
+  "triangles": 3472,
+  "subMeshes": 1,
+  "vertices": 4934,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fallen_soldier_3_AlbedoTransparency_v2",
+   "normal": "Fallen_soldier_3_Normal",
+   "metallicGloss": "Fallen_soldier_3_SpecularSmoothness",
+   "occlusion": "Fallen_soldier_3_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/fallen-soldier-3-lod-3.glb",
+  "sizeKB": 476.7
+ },
+ {
+  "slug": "fallen-soldier-4-lod3",
+  "name": "Fallen_soldier_4_LOD3",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fallen_soldier_4_LOD_3",
+  "materials": [
+   "Fallen Soldier 4 v2"
+  ],
+  "triangles": 3695,
+  "subMeshes": 1,
+  "vertices": 4878,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fallen_soldier_4_AlbedoTransparency_v2",
+   "normal": "Fallen_soldier_4_Normal",
+   "metallicGloss": "Fallen_soldier_4_SpecularSmoothness",
+   "occlusion": "Fallen_soldier_4_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/fallen-soldier-4-lod3.glb",
+  "sizeKB": 475.3
+ },
+ {
+  "slug": "fallen-soldier-5-lod3",
+  "name": "Fallen_soldier_5_LOD3",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fallen_soldier_5_LOD_3",
+  "materials": [
+   "Fallen Soldier 5 v2"
+  ],
+  "triangles": 3489,
+  "subMeshes": 1,
+  "vertices": 4531,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fallen_soldier_5_AlbedoTransparency_v2",
+   "normal": "Fallen_soldier_5_Normal",
+   "metallicGloss": "Fallen_soldier_5_SpecularSmoothness",
+   "occlusion": "Fallen_soldier_5_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/fallen-soldier-5-lod3.glb",
+  "sizeKB": 458.7
+ },
+ {
+  "slug": "garbage-container-0001",
+  "name": "garbage_container_0001",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Warehouse_01 (1)_bonesHierarchy",
+  "materials": [
+   "muellcontainer_0001d_dirty"
+  ],
+  "triangles": 1064,
+  "subMeshes": 1,
+  "vertices": 1493,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "muellcontainer_0001d_dirty",
+   "normal": "muellcontainer_0001_dirty_normal",
+   "metallicGloss": "muellcontainer_0001_dirty_maskmap",
+   "occlusion": "muellcontainer_0001_dirty_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/garbage-container-0001.glb",
+  "sizeKB": 194.9
+ },
+ {
+  "slug": "skeletonpile-poly-reduced",
+  "name": "skeletonpile-POLY_REDUCED",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Jaw_01",
+  "materials": [
+   "Object_Skeletone01"
+  ],
+  "triangles": 1817,
+  "subMeshes": 1,
+  "vertices": 1548,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Object_Skeletone01_D_NWCTCY",
+   "normal": "Object_Skeletone01_N_NWCTCY"
+  },
+  "model": "models/yet-another-zombie-survivors/skeletonpile-poly-reduced.glb",
+  "sizeKB": 295.3
+ },
+ {
+  "slug": "skull-with-candle-poly-reduced",
+  "name": "skull_with_candle-POLY_REDUCED",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "Character1_Spine2",
+  "materials": [
+   "Object_Skeletone01"
+  ],
+  "triangles": 330,
+  "subMeshes": 1,
+  "vertices": 284,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Object_Skeletone01_D_NWCTCY",
+   "normal": "Object_Skeletone01_N_NWCTCY"
+  },
+  "model": "models/yet-another-zombie-survivors/skull-with-candle-poly-reduced.glb",
+  "sizeKB": 253.2
+ },
+ {
+  "slug": "skullstick4",
+  "name": "Skullstick4",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "middle_03_r",
+  "materials": [
+   "awning_cloth_wood.8",
+   "Skeleton_Bones"
+  ],
+  "triangles": 5022,
+  "subMeshes": 2,
+  "vertices": 3154,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_awning_wood_D",
+   "normal": "T_awning_wood_N"
+  },
+  "model": "models/yet-another-zombie-survivors/skullstick4.glb",
+  "sizeKB": 498.1
+ },
+ {
+  "slug": "skullstick7-poly-reduced",
+  "name": "Skullstick7-POLY_REDUCED",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "index_04_r",
+  "materials": [
+   "awning_cloth_wood.8",
+   "Skeleton_Bones"
+  ],
+  "triangles": 1236,
+  "subMeshes": 2,
+  "vertices": 896,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_awning_wood_D",
+   "normal": "T_awning_wood_N"
+  },
+  "model": "models/yet-another-zombie-survivors/skullstick7-poly-reduced.glb",
+  "sizeKB": 409.6
+ },
+ {
+  "slug": "wood-debris-2-lod1",
+  "name": "Wood_Debris_2_LOD1",
+  "category": "废墟与残骸",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "pinky_02_r",
+  "materials": [
+   "M_Wood_Debris"
+  ],
+  "triangles": 2106,
+  "subMeshes": 1,
+  "vertices": 1895,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "T_Wood_Debris_BC",
+   "normal": "T_Wood_Debris_N",
+   "occlusion": "T_Wood_Debris_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/wood-debris-2-lod1.glb",
+  "sizeKB": 296.2
+ },
+ {
+  "slug": "0-floor",
+  "name": "0_floor",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "Build1_el1(Clone)",
+  "materials": [
+   "bricks_wall_2",
+   "bricks_wall_1",
+   "bricks_wall_3",
+   "windows_1",
+   "concrete_2",
+   "concrete_1",
+   "rust_philars_1",
+   "wood_planks_1",
+   "wood_plywood_1",
+   "windows_2"
+  ],
+  "triangles": 10561,
+  "subMeshes": 10,
+  "vertices": 14826,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "bricks_wall_2",
+   "normal": "bricks_wall_2_nmp",
+   "metallicGloss": "bricks_wall_2_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/0-floor.glb",
+  "sizeKB": 2549.5
+ },
+ {
+  "slug": "cube",
+  "name": "Cube",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "ZombieEye_Red",
+  "materials": [
+   "Streetlight_Lamp_Material"
+  ],
+  "triangles": 192,
+  "subMeshes": 1,
+  "vertices": 384,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/cube.glb",
+  "sizeKB": 10.9
+ },
+ {
+  "slug": "cylinder001",
+  "name": "Cylinder001",
+  "category": "未命名模型",
+  "sourceScene": "prototypescene",
+  "inGameObject": "Model",
+  "materials": [
+   "Drone_Albedo"
+  ],
+  "triangles": 1362,
+  "subMeshes": 1,
+  "vertices": 2334,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Drone_Albedo",
+   "normal": "Drone_NormalMap",
+   "metallicGloss": "Drone_MetallicSmoothness",
+   "occlusion": "Drone_AmbientOcclusion"
+  },
+  "model": "models/yet-another-zombie-survivors/cylinder001.glb",
+  "sizeKB": 247.5
+ },
+ {
+  "slug": "default",
+  "name": "default",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Wall3H_93",
+  "materials": [
+   "DecontaminationFogWallMaterial"
+  ],
+  "triangles": 256,
+  "subMeshes": 1,
+  "vertices": 512,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/default.glb",
+  "sizeKB": 14.1
+ },
+ {
+  "slug": "defaultmaterial",
+  "name": "DefaultMaterial",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "DefaultMaterial",
+  "materials": [
+   "Wall Basic"
+  ],
+  "triangles": 6,
+  "subMeshes": 1,
+  "vertices": 12,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Wall Basic_DefaultMaterial_AlbedoTransparency.1001",
+   "normal": "Wall Basic_DefaultMaterial_Normal.1001",
+   "metallicGloss": "Wall Basic_DefaultMaterial_MetallicSmoothness.1001"
+  },
+  "model": "models/yet-another-zombie-survivors/defaultmaterial.glb",
+  "sizeKB": 276.6
+ },
+ {
+  "slug": "floppy",
+  "name": "Floppy",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Overpass3_high",
+  "materials": [
+   "Floppy_Blue"
+  ],
+  "triangles": 16,
+  "subMeshes": 1,
+  "vertices": 30,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Floppy_Blue"
+  },
+  "model": "models/yet-another-zombie-survivors/floppy.glb",
+  "sizeKB": 4.8
+ },
+ {
+  "slug": "mesh",
+  "name": "Mesh",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Wall3H (20)_09",
+  "materials": [
+   "train_signals",
+   "concrete",
+   "lights_off"
+  ],
+  "triangles": 628,
+  "subMeshes": 3,
+  "vertices": 1082,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "train_signals_main",
+   "normal": "train_signals_main_normal",
+   "metallicGloss": "train_signals_main_maskmap",
+   "occlusion": "train_signals_main_maskmap"
+  },
+  "model": "models/yet-another-zombie-survivors/mesh.glb",
+  "sizeKB": 511.9
+ },
+ {
+  "slug": "object344",
+  "name": "Object344",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Metro Fan",
+  "materials": [
+   "fan",
+   "Fence"
+  ],
+  "triangles": 2720,
+  "subMeshes": 2,
+  "vertices": 4458,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "fan_AlbedoTransparency",
+   "normal": "fan_Normal",
+   "metallicGloss": "fan_MetallicSmoothness"
+  },
+  "model": "models/yet-another-zombie-survivors/object344.glb",
+  "sizeKB": 479.3
+ },
+ {
+  "slug": "pcube1",
+  "name": "pCube1",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Wall3A(Clone)",
+  "materials": [
+   "Wall3"
+  ],
+  "triangles": 26,
+  "subMeshes": 1,
+  "vertices": 52,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Wall3",
+   "normal": "Wall3_nmp",
+   "metallicGloss": "Wall3_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/pcube1.glb",
+  "sizeKB": 297.9
+ },
+ {
+  "slug": "plane",
+  "name": "Plane",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Plane",
+  "materials": [
+   "Wall Basic"
+  ],
+  "triangles": 6,
+  "subMeshes": 1,
+  "vertices": 12,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Wall Basic_DefaultMaterial_AlbedoTransparency.1001",
+   "normal": "Wall Basic_DefaultMaterial_Normal.1001",
+   "metallicGloss": "Wall Basic_DefaultMaterial_MetallicSmoothness.1001"
+  },
+  "model": "models/yet-another-zombie-survivors/plane.glb",
+  "sizeKB": 276.6
+ },
+ {
+  "slug": "polysurface1",
+  "name": "polySurface1",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Rock3C (13)",
+  "materials": [
+   "Stone1"
+  ],
+  "triangles": 20,
+  "subMeshes": 1,
+  "vertices": 37,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Stone1",
+   "normal": "Stone1_n",
+   "metallicGloss": "Stone1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface1.glb",
+  "sizeKB": 255.3
+ },
+ {
+  "slug": "polysurface127",
+  "name": "polySurface127",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "RoadBrick_end1_08",
+  "materials": [
+   "dumpster"
+  ],
+  "triangles": 824,
+  "subMeshes": 1,
+  "vertices": 1064,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "dumpster",
+   "normal": "dumpster_nmp",
+   "metallicGloss": "dumpster_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface127.glb",
+  "sizeKB": 743.6
+ },
+ {
+  "slug": "polysurface136",
+  "name": "polySurface136",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Billboard2A(Clone)",
+  "materials": [
+   "Billboard1",
+   "Billboard_Panel1"
+  ],
+  "triangles": 1168,
+  "subMeshes": 2,
+  "vertices": 1604,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Billboard1",
+   "metallicGloss": "Billboard1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface136.glb",
+  "sizeKB": 191.0
+ },
+ {
+  "slug": "polysurface146",
+  "name": "polySurface146",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "Street_el1B(Clone)",
+  "materials": [
+   "Street_element1"
+  ],
+  "triangles": 1728,
+  "subMeshes": 1,
+  "vertices": 3019,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Street_element1",
+   "normal": "Street_element1_nmp",
+   "metallicGloss": "Street_element1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface146.glb",
+  "sizeKB": 313.1
+ },
+ {
+  "slug": "polysurface157",
+  "name": "polySurface157",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Debris2_15",
+  "materials": [
+   "bricks_wall_1",
+   "bricks_red_1",
+   "txt_001e",
+   "txt_000",
+   "txt_006"
+  ],
+  "triangles": 7334,
+  "subMeshes": 5,
+  "vertices": 10825,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "bricks_wall_1",
+   "normal": "bricks_wall_1_nmp",
+   "metallicGloss": "bricks_wall_1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface157.glb",
+  "sizeKB": 2070.7
+ },
+ {
+  "slug": "polysurface166",
+  "name": "polySurface166",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "Streetlight3(Clone)",
+  "materials": [
+   "Streetlights"
+  ],
+  "triangles": 1942,
+  "subMeshes": 1,
+  "vertices": 2240,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Streetlights",
+   "normal": "Streetlights_nmp",
+   "metallicGloss": "Streetlights_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface166.glb",
+  "sizeKB": 306.4
+ },
+ {
+  "slug": "polysurface200",
+  "name": "polySurface200",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "Build3_el1(Clone)",
+  "materials": [
+   "windows_1",
+   "concrete_3",
+   "concrete_1",
+   "door_glass_1"
+  ],
+  "triangles": 1606,
+  "subMeshes": 4,
+  "vertices": 2095,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "windows_1",
+   "normal": "windows_1_nmp",
+   "metallicGloss": "windows_1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface200.glb",
+  "sizeKB": 1324.0
+ },
+ {
+  "slug": "polysurface264",
+  "name": "polySurface264",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Jug1_LOD1(Clone)",
+  "materials": [
+   "Addons1"
+  ],
+  "triangles": 328,
+  "subMeshes": 1,
+  "vertices": 309,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Addons1",
+   "normal": "Addons1_nmp",
+   "metallicGloss": "Addons1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface264.glb",
+  "sizeKB": 831.3
+ },
+ {
+  "slug": "polysurface275",
+  "name": "polySurface275",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Jug2_LOD2(Clone)",
+  "materials": [
+   "Addons1"
+  ],
+  "triangles": 112,
+  "subMeshes": 1,
+  "vertices": 123,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Addons1",
+   "normal": "Addons1_nmp",
+   "metallicGloss": "Addons1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface275.glb",
+  "sizeKB": 825.2
+ },
+ {
+  "slug": "polysurface3",
+  "name": "polySurface3",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Barrel2(Clone)",
+  "materials": [
+   "barrels_tire"
+  ],
+  "triangles": 528,
+  "subMeshes": 1,
+  "vertices": 325,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "barrels_tire",
+   "normal": "barrels_tire_nmp",
+   "metallicGloss": "barrels_tire_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface3.glb",
+  "sizeKB": 592.5
+ },
+ {
+  "slug": "polysurface324",
+  "name": "polySurface324",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Water_tank1(Clone)",
+  "materials": [
+   "Water_tank"
+  ],
+  "triangles": 1468,
+  "subMeshes": 1,
+  "vertices": 2642,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Water_tank",
+   "normal": "Water_tank_nmp",
+   "metallicGloss": "Water_tank_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface324.glb",
+  "sizeKB": 779.7
+ },
+ {
+  "slug": "polysurface454",
+  "name": "polySurface454",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Power_cable",
+  "materials": [
+   "Power_cable"
+  ],
+  "triangles": 32,
+  "subMeshes": 1,
+  "vertices": 40,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "power_cable"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface454.glb",
+  "sizeKB": 3.0
+ },
+ {
+  "slug": "polysurface46",
+  "name": "polySurface46",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Ivy1_2(Clone)",
+  "materials": [
+   "Ivy1"
+  ],
+  "triangles": 8,
+  "subMeshes": 1,
+  "vertices": 16,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Ivy1",
+   "normal": "Ivy1_nmp",
+   "metallicGloss": "Ivy1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface46.glb",
+  "sizeKB": 628.7
+ },
+ {
+  "slug": "polysurface48",
+  "name": "polySurface48",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Ivy1_3(Clone)",
+  "materials": [
+   "Ivy1"
+  ],
+  "triangles": 8,
+  "subMeshes": 1,
+  "vertices": 16,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Ivy1",
+   "normal": "Ivy1_nmp",
+   "metallicGloss": "Ivy1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface48.glb",
+  "sizeKB": 628.7
+ },
+ {
+  "slug": "polysurface488",
+  "name": "polySurface488",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Train_Door_Up_06_LongTransistorsCombined_Meshes",
+  "materials": [
+   "Road1"
+  ],
+  "triangles": 304,
+  "subMeshes": 1,
+  "vertices": 313,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Road1",
+   "normal": "Road1_nmp",
+   "metallicGloss": "Road1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface488.glb",
+  "sizeKB": 309.0
+ },
+ {
+  "slug": "polysurface50",
+  "name": "polySurface50",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Ivy1_4(Clone)",
+  "materials": [
+   "Ivy1"
+  ],
+  "triangles": 56,
+  "subMeshes": 1,
+  "vertices": 104,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Ivy1",
+   "normal": "Ivy1_nmp",
+   "metallicGloss": "Ivy1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface50.glb",
+  "sizeKB": 631.0
+ },
+ {
+  "slug": "polysurface55",
+  "name": "polySurface55",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Wall2D(Clone)",
+  "materials": [
+   "Wall2"
+  ],
+  "triangles": 370,
+  "subMeshes": 1,
+  "vertices": 457,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Wall2",
+   "normal": "Wall2_nmp",
+   "metallicGloss": "Wall2_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface55.glb",
+  "sizeKB": 299.7
+ },
+ {
+  "slug": "polysurface553",
+  "name": "polySurface553",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "AH_propeller2",
+  "materials": [
+   "AH"
+  ],
+  "triangles": 336,
+  "subMeshes": 1,
+  "vertices": 418,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "AH_sm",
+   "normal": "AH_nmp_sm",
+   "metallicGloss": "AH_sm_m"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface553.glb",
+  "sizeKB": 519.3
+ },
+ {
+  "slug": "polysurface557",
+  "name": "polySurface557",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fakeblur2x",
+  "materials": [
+   "fakeblur"
+  ],
+  "triangles": 8,
+  "subMeshes": 1,
+  "vertices": 16,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "fakeblur"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface557.glb",
+  "sizeKB": 110.4
+ },
+ {
+  "slug": "polysurface559",
+  "name": "polySurface559",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fakeblur4x",
+  "materials": [
+   "fakeblur"
+  ],
+  "triangles": 16,
+  "subMeshes": 1,
+  "vertices": 32,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "fakeblur"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface559.glb",
+  "sizeKB": 110.9
+ },
+ {
+  "slug": "polysurface621",
+  "name": "polySurface621",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "Build1_floor(Clone)",
+  "materials": [
+   "rust_philars_1",
+   "concrete_1",
+   "floor_checker_1",
+   "rusted_bars_1"
+  ],
+  "triangles": 1832,
+  "subMeshes": 4,
+  "vertices": 1607,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "rust_philars_1",
+   "normal": "rust_philars_2",
+   "metallicGloss": "concrete_1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface621.glb",
+  "sizeKB": 1032.7
+ },
+ {
+  "slug": "polysurface66",
+  "name": "polySurface66",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Road10B",
+  "materials": [
+   "Roads",
+   "Road_el1"
+  ],
+  "triangles": 340,
+  "subMeshes": 2,
+  "vertices": 382,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Road1",
+   "normal": "Road1_nmp",
+   "metallicGloss": "Road1_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface66.glb",
+  "sizeKB": 635.3
+ },
+ {
+  "slug": "polysurface7",
+  "name": "polySurface7",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "Fabric1_LOD1(Clone)",
+  "materials": [
+   "Fabric",
+   "wood_planks3"
+  ],
+  "triangles": 280,
+  "subMeshes": 2,
+  "vertices": 292,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fabric",
+   "normal": "Fabric_nmp",
+   "metallicGloss": "Fabric_ms",
+   "occlusion": "Fabric_ao"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface7.glb",
+  "sizeKB": 1192.5
+ },
+ {
+  "slug": "polysurface70",
+  "name": "polySurface70",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Streetlight2(Clone)",
+  "materials": [
+   "Streetlights"
+  ],
+  "triangles": 576,
+  "subMeshes": 1,
+  "vertices": 604,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Streetlights",
+   "normal": "Streetlights_nmp",
+   "metallicGloss": "Streetlights_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface70.glb",
+  "sizeKB": 258.4
+ },
+ {
+  "slug": "polysurface80",
+  "name": "polySurface80",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "Hydrant(Clone)",
+  "materials": [
+   "hydrant"
+  ],
+  "triangles": 620,
+  "subMeshes": 1,
+  "vertices": 570,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "hydrant",
+   "normal": "hydrant_nmp",
+   "metallicGloss": "hydrant_ms"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface80.glb",
+  "sizeKB": 751.7
+ },
+ {
+  "slug": "polysurface91",
+  "name": "polySurface91",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Deadtree1_LOD1(Clone)",
+  "materials": [
+   "Dead_wood",
+   "Branch7_cutout"
+  ],
+  "triangles": 1417,
+  "subMeshes": 2,
+  "vertices": 1560,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Dead_wood",
+   "normal": "Dead_wood_nmp"
+  },
+  "model": "models/yet-another-zombie-survivors/polysurface91.glb",
+  "sizeKB": 306.0
+ },
+ {
+  "slug": "shen",
+  "name": "SHEN",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "SHEN",
+  "materials": [
+   "W19A_M2"
+  ],
+  "triangles": 272,
+  "subMeshes": 1,
+  "vertices": 261,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M2_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/shen.glb",
+  "sizeKB": 292.3
+ },
+ {
+  "slug": "sphere-1-simplified-mesh",
+  "name": "Sphere (1) simplified mesh",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Sphere",
+  "materials": [
+   "Bullet_Black"
+  ],
+  "triangles": 304,
+  "subMeshes": 1,
+  "vertices": 404,
+  "hasUV": true,
+  "textures": {},
+  "model": "models/yet-another-zombie-survivors/sphere-1-simplified-mesh.glb",
+  "sizeKB": 12.6
+ },
+ {
+  "slug": "support",
+  "name": "Support",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_lab",
+  "inGameObject": "Support",
+  "materials": [
+   "Fence"
+  ],
+  "triangles": 28,
+  "subMeshes": 1,
+  "vertices": 40,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fence_DefaultMaterial_BaseColor.1001",
+   "normal": "Fence_DefaultMaterial_Normal.1001"
+  },
+  "model": "models/yet-another-zombie-survivors/support.glb",
+  "sizeKB": 392.6
+ },
+ {
+  "slug": "zhuan",
+  "name": "ZHUAN",
+  "category": "未命名模型",
+  "sourceScene": "gameplayscene_desert_02",
+  "inGameObject": "ZHUAN",
+  "materials": [
+   "W19A_M2"
+  ],
+  "triangles": 78,
+  "subMeshes": 1,
+  "vertices": 89,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "W19A_M2_D",
+   "normal": "W19A_N",
+   "metallicGloss": "W19A_S",
+   "occlusion": "W19A_A"
+  },
+  "model": "models/yet-another-zombie-survivors/zhuan.glb",
+  "sizeKB": 286.7
+ },
+ {
+  "slug": "humanskull01-poly-reduced",
+  "name": "humanskull01-POLY_REDUCED",
+  "category": "其它",
+  "sourceScene": "gameplayscene_greenhell",
+  "inGameObject": "foot_l",
+  "materials": [
+   "human_skull_01"
+  ],
+  "triangles": 1596,
+  "subMeshes": 1,
+  "vertices": 1196,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "t_human_skull_01_d",
+   "normal": "t_human_skull_01_n"
+  },
+  "model": "models/yet-another-zombie-survivors/humanskull01-poly-reduced.glb",
+  "sizeKB": 485.0
+ },
+ {
+  "slug": "scifimissileincendiary",
+  "name": "ScifiMissileIncendiary",
+  "category": "其它",
+  "sourceScene": "gameplayscene_abandonedcity",
+  "inGameObject": "ScifiMissileIncendiary",
+  "materials": [
+   "ScifiStandardMissiles"
+  ],
+  "triangles": 1520,
+  "subMeshes": 1,
+  "vertices": 1490,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "ScifiStandardMissilesAlbedo",
+   "normal": "ScifiStandardMissilesNormal",
+   "metallicGloss": "ScifiStandardMissilesPBRMetalness",
+   "occlusion": "ScifiStandardMissilesAO"
+  },
+  "model": "models/yet-another-zombie-survivors/scifimissileincendiary.glb",
+  "sizeKB": 256.1
+ },
+ {
+  "slug": "soldiers-combined-static",
+  "name": "SOLDIERS_combined_static",
+  "category": "其它",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "Wall3H",
+  "materials": [
+   "Fallen Soldier 1 v2",
+   "Fallen Soldier 2 v2",
+   "Fallen Soldier 3 v2",
+   "Fallen Soldier 4 v2",
+   "Fallen Soldier 5 v2"
+  ],
+  "triangles": 96429,
+  "subMeshes": 5,
+  "vertices": 134626,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Fallen_soldier_1_BaseColor_ver2",
+   "normal": "Fallen_soldier_1_Normal",
+   "metallicGloss": "Fallen_soldier_1_SpecularSmoothness",
+   "occlusion": "Fallen_soldier_1_AO"
+  },
+  "model": "models/yet-another-zombie-survivors/soldiers-combined-static.glb",
+  "sizeKB": 5430.8
+ },
+ {
+  "slug": "zombierunner",
+  "name": "ZombieRunner",
+  "category": "其它",
+  "sourceScene": "gameplayscene_trainstation",
+  "inGameObject": "ZombieRunner",
+  "materials": [
+   "Ghoul",
+   "ZombieEyeMaterial_Red"
+  ],
+  "triangles": 11000,
+  "subMeshes": 2,
+  "vertices": 6690,
+  "hasUV": true,
+  "textures": {
+   "baseColor": "Feeder_low_feeder_AlbedoTransparency_01",
+   "normal": "Feeder_low_feeder_Normal",
+   "metallicGloss": "Feeder_low_feeder_MetallicSmoothness"
+  },
+  "model": "models/yet-another-zombie-survivors/zombierunner.glb",
+  "sizeKB": 555.6
+ }
+]

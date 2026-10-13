@@ -41,10 +41,11 @@
     .view-tab { flex: 1 1 72px; height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
     .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
     .view-tab svg { width: 15px; height: 15px; }
-    #mapsLink, #soundsLink, #weaponsLink { display: none; }
+    #mapsLink, #soundsLink, #weaponsLink, #propsLink { display: none; }
     .view-tabs.maps-available #mapsLink { display: flex; }
     .view-tabs.sounds-available #soundsLink { display: flex; }
     .view-tabs.weapons-available #weaponsLink { display: flex; }
+    .view-tabs.props-available #propsLink { display: flex; }
     .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
     .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
     .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
@@ -155,6 +156,7 @@
           <a class="view-tab" id="mapsLink" href="./maps.html"><i data-lucide="map"></i>地图</a>
           <a class="view-tab" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
           <a class="view-tab" id="weaponsLink" href="./weapons.html"><i data-lucide="crosshair"></i>武器</a>
+          <a class="view-tab" id="propsLink" href="./props.html"><i data-lucide="package"></i>道具</a>
         </nav>
         <p class="edition" id="edition"></p>
         <label class="search">
@@ -225,9 +227,9 @@
     import * as THREE from 'three';
     import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users, X, Volume2, Crosshair } from 'lucide';
+    import { createIcons, Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map as MapIcon, Users, X, Volume2, Crosshair, Package } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users, X, Volume2, Crosshair };
+    const iconSet = { Search, Play, Pause, RotateCcw, Rotate3d, Box, BoxSelect, Columns2, ChevronDown, Map: MapIcon, Users, X, Volume2, Crosshair, Package };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -874,9 +876,11 @@
       const mapsAvailable = Boolean(activeGame.mapsPage);
       const soundsAvailable = Boolean(activeGame.soundsPage);
       const weaponsAvailable = Boolean(activeGame.weaponsCatalog);
+      const propsAvailable = Boolean(activeGame.propsCatalog);
       document.querySelector('#viewTabs').classList.toggle('maps-available', mapsAvailable);
       document.querySelector('#viewTabs').classList.toggle('sounds-available', soundsAvailable);
       document.querySelector('#viewTabs').classList.toggle('weapons-available', weaponsAvailable);
+      document.querySelector('#viewTabs').classList.toggle('props-available', propsAvailable);
       document.querySelector('#creaturesLink').lastChild.textContent = activeGame.slug === 'ultimate-pack' ? '模型' : '角色';
       document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
       document.querySelector('#mapsLink').href = mapsAvailable ? `./${activeGame.mapsPage}` : '#';
@@ -885,6 +889,9 @@
         : '#';
       document.querySelector('#weaponsLink').href = weaponsAvailable
         ? `./weapons.html?game=${encodeURIComponent(activeGame.slug)}`
+        : '#';
+      document.querySelector('#propsLink').href = propsAvailable
+        ? `./props.html?game=${encodeURIComponent(activeGame.slug)}`
         : '#';
     }
 

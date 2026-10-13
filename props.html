@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101513">
+  <title>又一个僵尸幸存者 · 道具图鉴</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101513; --side: #151c19; --surface: #1a231f; --surface-2: #202b26;
+      --line: #34413b; --line-soft: #27322d; --text: #f1f4ec; --muted: #a7b1aa;
+      --faint: #748078; --lime: #bddb6b; --coral: #f08366; --amber: #efbb61;
+      font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
+    body { min-height: 100vh; overflow: hidden; }
+    button, input, select { font: inherit; }
+    button, a { color: inherit; }
+    .app { height: 100vh; min-height: 0; overflow: hidden; display: grid; grid-template-columns: 292px minmax(0, 1fr); }
+    .catalog { min-width: 0; min-height: 0; overflow: hidden; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; }
+    .catalog-head { padding: 20px 16px 14px; border-bottom: 1px solid var(--line-soft); }
+    .brand { margin: 0; font-size: 19px; font-weight: 800; }
+    .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+    .game-switcher { position: relative; margin: 14px 0 10px; }
+    .game-switcher select { width: 100%; height: 38px; appearance: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 34px 0 11px; outline: 0; cursor: pointer; }
+    .game-switcher svg { position: absolute; right: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
+    .view-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 10px; }
+    #creaturesLink, #soundsLink, #weaponsLink { display: none; }
+    .view-tabs.models-available #creaturesLink { display: flex; }
+    .view-tabs.sounds-available #soundsLink { display: flex; }
+    .view-tabs.weapons-available #weaponsLink { display: flex; }
+    .view-tab { flex: 1 1 72px; height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
+    .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .view-tab svg { width: 15px; height: 15px; }
+    .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
+    .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
+    .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
+    .search input::placeholder { color: var(--faint); }
+    .tier-filters { max-height: 86px; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; margin-top: 10px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+    .tier-filter { border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); padding: 6px 9px; cursor: pointer; font-size: 12px; }
+    .tier-filter.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .prop-list { min-height: 0; flex: 1; padding: 10px; display: grid; align-content: start; gap: 5px; overflow-y: auto; overscroll-behavior: contain; }
+    .prop-entry { min-height: 58px; width: 100%; border: 1px solid transparent; border-radius: 6px; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; align-items: center; padding: 9px 10px; text-align: left; cursor: pointer; }
+    .prop-entry:hover { background: var(--surface); }
+    .prop-entry.active { background: var(--surface-2); border-color: var(--line); }
+    .prop-entry strong, .prop-entry small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .prop-entry strong { font-size: 14px; }
+    .prop-entry small { grid-column: 1; color: var(--muted); }
+    .prop-entry span { grid-column: 2; grid-row: 1 / span 2; color: var(--lime); font-size: 11px; }
+    .empty { color: var(--muted); padding: 20px 10px; font-size: 13px; }
+    .workspace { min-width: 0; min-height: 0; height: 100vh; overflow-y: auto; overscroll-behavior: contain; display: grid; grid-template-rows: minmax(420px, 58vh) auto; }
+    .stage { min-height: 420px; position: sticky; z-index: 2; top: 0; overflow: hidden; background:
+      radial-gradient(circle at 18% 20%, rgba(189, 219, 107, .08), transparent 28%),
+      radial-gradient(circle at 82% 78%, rgba(240, 131, 102, .08), transparent 26%),
+      #0a100e; }
+    .stage canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+    .stage-head { position: absolute; z-index: 3; top: 18px; left: 20px; right: 20px; display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; pointer-events: none; }
+    .identity h1 { margin: 0; max-width: min(58vw, 640px); font-size: clamp(24px, 3.4vw, 42px); line-height: 1.05; overflow-wrap: anywhere; }
+    .identity p { margin: 7px 0 0; color: var(--muted); font-size: 14px; }
+    .tier-badge { padding: 7px 10px; border: 1px solid var(--line); border-radius: 5px; background: rgba(16, 21, 19, .86); color: var(--lime); font-size: 12px; white-space: nowrap; }
+    .loading { position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--muted); font-size: 13px; }
+    .tools { position: absolute; z-index: 4; left: 20px; right: 20px; bottom: 18px; display: flex; justify-content: space-between; gap: 12px; }
+    .icon-tools { padding: 4px; border: 1px solid var(--line); border-radius: 6px; background: rgba(16, 21, 19, .88); display: flex; gap: 3px; }
+    .icon-button { width: 34px; height: 34px; padding: 0; border: 0; border-radius: 4px; background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--muted); }
+    .icon-button:hover, .icon-button.active { background: var(--surface-2); color: var(--text); }
+    .icon-button svg { width: 17px; height: 17px; }
+    .details { border-top: 1px solid var(--line); padding: 24px clamp(20px, 3.5vw, 48px) 38px; display: grid; grid-template-columns: minmax(270px, .8fr) minmax(420px, 1.2fr); gap: 38px 50px; }
+    .details h2 { margin: 0 0 10px; font-size: 18px; }
+    .details p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .stats { margin-top: 20px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); display: grid; grid-template-columns: repeat(3, 1fr); }
+    .stat { padding: 14px 10px 14px 0; min-width: 0; }
+    .stat b { display: block; font-size: 19px; overflow: hidden; text-overflow: ellipsis; }
+    .stat span { display: block; margin-top: 3px; color: var(--faint); font-size: 11px; }
+    .used-by { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .chip { padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--amber); font-size: 12px; }
+    .chip.dim { color: var(--faint); }
+    .tex-list { display: grid; gap: 8px; }
+    .tex-row { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 9px 12px; border: 1px solid var(--line-soft); border-radius: 6px; }
+    .tex-row b { font-size: 12px; color: var(--lime); font-weight: 700; }
+    .tex-row span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .tex-row.missing span { color: var(--faint); }
+    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
+    @media (max-width: 900px) {
+      body { overflow: visible; }
+      .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
+      .catalog { overflow: visible; border-right: 0; border-bottom: 1px solid var(--line); }
+      .catalog-head { padding: 13px 12px 10px; }
+      .edition { display: none; }
+      .brand { font-size: 17px; }
+      .tier-filters { max-height: none; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+      .prop-list { min-height: auto; flex: none; display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
+      .prop-entry { flex: 0 0 210px; min-width: 210px; grid-template-columns: minmax(0, 1fr); }
+      .prop-entry span { grid-column: 1; grid-row: auto; }
+      .workspace { height: auto; overflow: visible; grid-template-rows: minmax(390px, 54vh) auto; }
+      .stage { min-height: 390px; position: relative; }
+      .details { grid-template-columns: 1fr; gap: 26px; }
+    }
+    @media (max-width: 560px) {
+      .identity h1 { max-width: 70vw; font-size: 26px; }
+      .stage-head, .tools { left: 14px; right: 14px; }
+      .details { padding: 20px 15px 30px; }
+      .stat b { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="catalog">
+      <div class="catalog-head">
+        <h1 class="brand" id="brand">道具图鉴</h1>
+        <div class="game-switcher">
+          <select id="gameSelect" aria-label="游戏选择"></select>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <nav class="view-tabs" id="viewTabs" aria-label="图鉴类型">
+          <a class="view-tab" id="creaturesLink" href="./index.html"><i data-lucide="users"></i>角色</a>
+          <a class="view-tab" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
+          <a class="view-tab" id="weaponsLink" href="./weapons.html"><i data-lucide="crosshair"></i>武器</a>
+          <a class="view-tab active" id="propsLink" href="./props.html"><i data-lucide="package"></i>道具</a>
+        </nav>
+        <p class="edition" id="edition"></p>
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="搜索建筑、装饰或道具" autocomplete="off">
+        </label>
+        <div class="tier-filters" id="tierFilters"></div>
+      </div>
+      <div class="prop-list" id="propList"></div>
+    </aside>
+    <main class="workspace">
+      <section class="stage" id="stage">
+        <div class="stage-head">
+          <div class="identity"><h1 id="propName">加载中</h1><p id="propScene"></p></div>
+          <div class="tier-badge" id="tierBadge">道具</div>
+        </div>
+        <canvas id="propCanvas"></canvas>
+        <div class="loading" id="loading">正在载入模型…</div>
+        <div class="tools">
+          <div class="icon-tools">
+            <button class="icon-button" id="rotateButton" title="自动旋转"><i data-lucide="rotate-3d"></i></button>
+            <button class="icon-button active" id="resetButton" title="重置视角"><i data-lucide="rotate-ccw"></i></button>
+          </div>
+        </div>
+      </section>
+      <section class="details">
+        <div>
+          <h2>道具信息</h2>
+          <p id="summary"></p>
+          <div class="stats">
+            <div class="stat"><b id="triStat">—</b><span>三角面</span></div>
+            <div class="stat"><b id="subStat">—</b><span>子网格 / 材质</span></div>
+            <div class="stat"><b id="sizeStat">—</b><span>GLB 大小</span></div>
+          </div>
+          <div class="used-by" id="materials"></div>
+        </div>
+        <div>
+          <h2>贴图</h2>
+          <div class="tex-list" id="texList"></div>
+        </div>
+        <div class="notice" id="rightsNotice"></div>
+      </section>
+    </main>
+  </div>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/","lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { createIcons, Search, Users, Volume2, Crosshair, Package, ChevronDown, Rotate3d, RotateCcw } from 'lucide';
+
+    const iconSet = { Search, Users, Volume2, Crosshair, Package, ChevronDown, Rotate3d, RotateCcw };
+    const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
+    refreshIcons();
+
+    const games = await fetch('./games.json', { cache: 'no-store' }).then(response => response.json());
+    const params = new URLSearchParams(location.search);
+    const requestedGame = params.get('game');
+    const requestedProp = params.get('prop');
+    const propGames = games.filter(game => game.propsCatalog);
+    let activeGame = propGames.find(game => game.slug === requestedGame) ?? propGames[0] ?? null;
+    if (!activeGame) {
+      location.replace('./index.html');
+      await new Promise(() => {});
+    }
+
+    const catalog = await fetch(`./${activeGame.propsCatalog}?v=${activeGame.assetRevision}`, { cache: 'no-store' })
+      .then(response => response.json());
+    let activeEntry = catalog.find(entry => entry.slug === requestedProp) ?? catalog[0] ?? null;
+    let activeTier = '全部';
+
+    const stage = document.querySelector('#stage');
+    const canvas = document.querySelector('#propCanvas');
+    const isCompactViewport = matchMedia('(max-width: 900px)').matches;
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isCompactViewport });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, isCompactViewport ? 1 : 1.5));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x0a100e, 1);
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x0a100e, 9, 20);
+    const camera = new THREE.PerspectiveCamera(32, 1, 0.01, 200);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.minDistance = 2.6;
+    controls.maxDistance = 16;
+
+    scene.add(new THREE.HemisphereLight(0xe6f0cc, 0x23332d, 2.45));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+    const keyLight = new THREE.DirectionalLight(0xffd5b0, 2.8);
+    keyLight.position.set(5, 7, 5);
+    scene.add(keyLight);
+    const fillLight = new THREE.DirectionalLight(0xdde8ff, 1.35);
+    fillLight.position.set(-5, 3, 6);
+    scene.add(fillLight);
+    const rimLight = new THREE.DirectionalLight(0x72b9aa, 2.0);
+    rimLight.position.set(-5, 4, -5);
+    scene.add(rimLight);
+    const floor = new THREE.Mesh(
+      new THREE.CircleGeometry(4.6, 64),
+      new THREE.MeshStandardMaterial({ color: 0x1c2822, roughness: 1, metalness: 0 })
+    );
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -0.02;
+    scene.add(floor);
+
+    let activeRoot = null;
+    let rotating = false;
+    let stageVisible = true;
+    const loader = new GLTFLoader();
+    const clock = new THREE.Clock();
+
+    function resize() {
+      const width = stage.clientWidth;
+      const height = stage.clientHeight;
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+
+    function disposeRoot() {
+      if (!activeRoot) return;
+      scene.remove(activeRoot);
+      activeRoot.traverse(object => {
+        if (object.geometry) object.geometry.dispose();
+        const material = object.material;
+        if (Array.isArray(material)) material.forEach(item => item.dispose());
+        else if (material) material.dispose();
+      });
+      activeRoot = null;
+    }
+
+    // 道具之间尺度差异极大（街灯 vs 骨头），统一归一到固定取景范围。
+    function frameModel(model) {
+      const box = new THREE.Box3().setFromObject(model);
+      const size = box.getSize(new THREE.Vector3());
+      const horizontal = Math.max(size.x, size.z);
+      const scale = Math.min(1.75 / Math.max(size.y, 0.001), 1.75 / Math.max(horizontal, 0.001));
+      model.scale.setScalar(scale);
+      const scaled = new THREE.Box3().setFromObject(model);
+      const center = scaled.getCenter(new THREE.Vector3());
+      model.position.x -= center.x;
+      model.position.z -= center.z;
+      model.position.y -= scaled.min.y;
+      const radius = Math.max(scaled.getSize(new THREE.Vector3()).length() / 2, 0.6);
+      camera.position.set(radius * 2.1, radius * 1.5, radius * 2.4);
+      controls.target.set(0, radius * 0.45, 0);
+      controls.minDistance = radius * 1.2;
+      controls.maxDistance = radius * 6;
+      controls.update();
+    }
+
+    async function loadProp(entry) {
+      const loading = document.querySelector('#loading');
+      loading.hidden = false;
+      disposeRoot();
+      try {
+        const gltf = await loader.loadAsync(`${entry.model}?v=${activeGame.assetRevision}`);
+        const root = gltf.scene;
+        root.traverse(object => {
+          if (!object.isMesh) return;
+          object.frustumCulled = false;
+          const materials = Array.isArray(object.material) ? object.material : [object.material];
+          materials.forEach(material => {
+            if (!material) return;
+            material.side = THREE.FrontSide;
+            if (material.map) material.map.colorSpace = THREE.SRGBColorSpace;
+          });
+        });
+        activeRoot = root;
+        scene.add(root);
+        frameModel(root);
+      } catch (error) {
+        loading.textContent = `模型载入失败：${error?.message ?? error}`;
+        return;
+      }
+      loading.hidden = true;
+    }
+
+    function formatTexture(entry, key) {
+      const name = entry.textures?.[key];
+      const row = document.createElement('div');
+      row.className = `tex-row${name ? '' : ' missing'}`;
+      row.innerHTML = `<b>${key}</b><span>${name ?? '该材质没有这一路贴图'}</span>`;
+      return row;
+    }
+
+    function renderDetails(entry) {
+      if (!entry) return;
+      document.querySelector('#propName').textContent = entry.name;
+      document.querySelector('#propScene').textContent = `${entry.category} · 来自 ${entry.sourceScene}`;
+      document.querySelector('#tierBadge').textContent = entry.category;
+      const textureKeys = Object.keys(entry.textures ?? {});
+      const found = textureKeys.filter(key => entry.textures[key]);
+      document.querySelector('#summary').textContent =
+        `场景中的实例名为 ${entry.inGameObject}，使用 ${found.length ? found.length : 0} 路贴图`
+        + (entry.hasUV ? '，保留原始 UV。' : '，原始网格没有 UV。')
+        + 'Unity 的金属度/光滑度贴图已重排为 glTF 的遮蔽-粗糙-金属打包贴图。';
+      document.querySelector('#triStat').textContent = entry.triangles?.toLocaleString() ?? '—';
+      document.querySelector('#subStat').textContent = `${entry.subMeshes ?? 1} / ${(entry.materials ?? []).length}`;
+      document.querySelector('#sizeStat').textContent = `${entry.sizeKB} KB`;
+      document.querySelector('#materials').innerHTML = (entry.materials ?? [])
+        .map(name => `<span class="chip">${name}</span>`).join('')
+        || '<span class="chip dim">无独立材质</span>';
+      const list = document.querySelector('#texList');
+      list.innerHTML = '';
+      ['baseColor', 'normal', 'metallicGloss', 'occlusion'].forEach(key => list.appendChild(formatTexture(entry, key)));
+      document.querySelector('#rightsNotice').textContent = activeGame.notice
+        ?? '模型与贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
+    }
+
+    function filteredCatalog() {
+      const query = document.querySelector('#searchInput').value.trim().toLowerCase();
+      return catalog.filter(entry => {
+        const tierMatch = activeTier === '全部' || entry.category === activeTier;
+        const haystack = [entry.name, entry.category, entry.sourceScene, entry.inGameObject, ...(entry.materials ?? [])]
+          .join(' ').toLowerCase();
+        return tierMatch && (!query || haystack.includes(query));
+      });
+    }
+
+    function renderList() {
+      const list = document.querySelector('#propList');
+      list.innerHTML = '';
+      const entries = filteredCatalog();
+      if (!entries.length) {
+        list.innerHTML = '<div class="empty">没有匹配道具</div>';
+        return;
+      }
+      entries.forEach(entry => {
+        const button = document.createElement('button');
+        button.className = `prop-entry${entry.slug === activeEntry?.slug ? ' active' : ''}`;
+        button.innerHTML = `<strong>${entry.name}</strong><small>${entry.inGameObject ?? ''}</small><span>${entry.category}</span>`;
+        button.addEventListener('click', async () => {
+          activeEntry = entry;
+          const next = new URL(location.href);
+          next.searchParams.set('game', activeGame.slug);
+          next.searchParams.set('prop', entry.slug);
+          history.replaceState({}, '', next);
+          renderList();
+          renderDetails(entry);
+          await loadProp(entry);
+        });
+        list.appendChild(button);
+      });
+    }
+
+    function renderFilters() {
+      const container = document.querySelector('#tierFilters');
+      const tiers = [...new Set(catalog.map(entry => entry.category))];
+      container.innerHTML = '';
+      ['全部', ...tiers].forEach(tier => {
+        const count = tier === '全部' ? catalog.length : catalog.filter(entry => entry.category === tier).length;
+        const button = document.createElement('button');
+        button.className = `tier-filter${tier === activeTier ? ' active' : ''}`;
+        button.textContent = `${tier} ${count}`;
+        button.addEventListener('click', () => {
+          activeTier = tier;
+          renderFilters();
+          renderList();
+        });
+        container.appendChild(button);
+      });
+    }
+
+    function bindGameSelect() {
+      const select = document.querySelector('#gameSelect');
+      games.forEach(game => {
+        const option = document.createElement('option');
+        option.value = game.slug;
+        option.textContent = `${game.name} / ${game.nameEn}`;
+        select.appendChild(option);
+      });
+      select.value = activeGame.slug;
+      select.addEventListener('change', event => {
+        const nextGame = games.find(game => game.slug === event.target.value);
+        if (!nextGame) return;
+        if (nextGame.propsCatalog) {
+          location.href = `./props.html?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        if (nextGame.weaponsCatalog) {
+          location.href = `./weapons.html?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        if (nextGame.soundsPage) {
+          location.href = `./${nextGame.soundsPage}?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        location.href = `./index.html?game=${encodeURIComponent(nextGame.slug)}`;
+      });
+    }
+
+    document.querySelector('#rotateButton').addEventListener('click', event => {
+      rotating = !rotating;
+      event.currentTarget.classList.toggle('active', rotating);
+    });
+    document.querySelector('#resetButton').addEventListener('click', () => {
+      if (activeRoot) frameModel(activeRoot);
+    });
+    document.querySelector('#searchInput').addEventListener('input', renderList);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!stageVisible || document.hidden) {
+        clock.getDelta();
+        return;
+      }
+      if (rotating && activeRoot) activeRoot.rotation.y += clock.getDelta() * 0.32;
+      else clock.getDelta();
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    const tabs = document.querySelector('#viewTabs');
+    tabs.classList.toggle('models-available', Boolean(activeGame.catalog) && activeGame.defaultView !== 'sounds');
+    tabs.classList.toggle('sounds-available', Boolean(activeGame.soundsPage));
+    tabs.classList.toggle('weapons-available', Boolean(activeGame.weaponsCatalog));
+    document.querySelector('#brand').textContent = `${activeGame.name} · 道具图鉴`;
+    document.querySelector('#edition').textContent = activeGame.propsSubtitle ?? activeGame.subtitle;
+    document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#soundsLink').href = `./${activeGame.soundsPage ?? 'sounds.html'}?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#weaponsLink').href = `./weapons.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.title = `${activeGame.name} · 道具图鉴`;
+
+    new ResizeObserver(resize).observe(stage);
+    new IntersectionObserver(entries => {
+      stageVisible = entries[0]?.isIntersecting ?? true;
+    }, { threshold: 0.05 }).observe(stage);
+
+    bindGameSelect();
+    renderFilters();
+    renderList();
+    resize();
+    if (activeEntry) {
+      renderDetails(activeEntry);
+      await loadProp(activeEntry);
+    }
+    animate();
+  </script>
+</body>
+</html>

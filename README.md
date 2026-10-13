@@ -10,7 +10,7 @@
 - `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
 - `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
 - `20-minutes-till-dawn`：从本机 Steam 安装提取的 86 组音效事件，覆盖武器射击、换弹、近战、法术和界面
-- `yet-another-zombie-survivors`：45 把武器（含官方中文名与描述）和 471 组音效事件、884 个音频片段，覆盖 9 位幸存者、12 类敌人、5 个头目与全部地图机关
+- `yet-another-zombie-survivors`：45 把武器（含官方中文名与描述）和 471 组音效事件、884 个音频片段，覆盖 9 位幸存者、12 类敌人、5 个头目与全部地图机关；另有从关卡场景提取的建筑、载具、植被与道具模型
 
 《哈迪斯 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
 
@@ -31,6 +31,7 @@
 - 独立音效页支持分类筛选、搜索、循环播放和采样变体切换
 - 独立武器页按幸存者筛选武器，展示官方中英文名称与游戏内置描述，并可直接试听该武器在游戏内的全部音效
 - 音效页每条采样、武器页每把武器都支持一键复制引用（原始效果名 + 中英文名称 + 文件路径 + 完整地址，制表符分隔），方便粘进表格或移植到其他游戏工程；复制前页面会显示将要复制的完整内容
+- 独立道具页按建筑、载具、街道设施、植被、地形与道路、废墟与杂物、室内道具分类浏览场景资产，显示材质与四路贴图来源，并支持自动旋转和重置视角
 
 低模使用误差受限简化。10% 只是期望目标，不会为了达到固定比例强行删除脚、细腿、角、炮口或其他关键轮廓。不同模型会在接近明显变形前停止，因此实际保留比例约为 23%-79%。
 
@@ -70,6 +71,11 @@ python -m http.server 4173
 追加 `sound=<slug>` 可打开具体事件，例如
 `http://127.0.0.1:4173/sounds.html?game=yet-another-zombie-survivors&sound=boss01-rocket-single`。
 
+《又一个僵尸幸存者》道具页地址为
+`http://127.0.0.1:4173/props.html?game=yet-another-zombie-survivors`，
+追加 `prop=<slug>` 可直接打开具体场景资产，例如
+`http://127.0.0.1:4173/props.html?game=yet-another-zombie-survivors&prop=birch-large-1-lod-1`。
+
 ## 黎明前 20 分钟音效构建链
 
 - `scripts/extract_20mtd_audio.py`：读取本机 Steam Unity 安装中的 AudioClip 和 `SoundEffectSO`，转成网页预览用 M4A，并按射击、换弹、近战、法术等分类写入目录。
@@ -81,6 +87,7 @@ python -m http.server 4173
 - `scripts/extract_yazs_weapons.py`：解析 `resources.assets` 中的 I2 Localization `I2Languages` 资产（4072 条术语，语言顺序为英/波/简中/法/德/日/韩/葡/俄/西），导出 45 把武器的官方英文名、简体中文名与游戏内描述到 `games/yet-another-zombie-survivors/weapons.json`。
 - `scripts/extract_yazs_audio.py`：扫描玩家数据、角色包与场景包里的全部 AudioClip，按片段名去重后转成网页预览用 M4A，并依据 `GROUP_META` 生成带简体中文说明的音效目录。脚本会在两个地方直接报错退出：有音频片段没有匹配到任何分组；`weapons.json` 引用了本次没有导出的音效条目。
 - 武器与音效通过音效条目的 `slug` 关联，`weapons.html` 据此把每把武器的游戏内音效直接挂到详情页上试听。
+- `scripts/extract_yazs_props.py`：提取场景资产。场景里绝大多数布景被静态合批成了 `Combined Mesh (root: scene)`，单体几何不可恢复（`m_StaticBatchInfo` 在构建时被清零），因此只导出场景包中仍指向独立网格、且带真实 `MeshFilter` + `MeshRenderer` 的那批资产，保证「网格 → 材质 → 贴图」链路可验证而不是靠名字猜。贴图按 Unity Standard 布局读取：`_MainTex` 转基础色（无透明时用 JPEG 编码省体积）、`_BumpMap`/`_NormalMap` 转法线、`_MetallicGlossMap`（金属度在 R、光滑度在 A）与环境光遮蔽重排为 glTF 的遮蔽-粗糙-金属打包贴图；多子网格按渲染器材质列表逐个子网格配对，最多合并为多材质 GLB。
 
 ## Hades II 构建链
 
