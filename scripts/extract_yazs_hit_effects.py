@@ -44,7 +44,26 @@ WANTED_TEXTURES = [
     "ImpactHit_02",
     "Flame1",
     "Circle4_Explosion",
+    # 开火 / 弹道 / 投掷物 / 弹孔
+    "muzzleflash_1_blurred",
+    "GatlingGun_L3_MuzzelFlash",
+    "GatlingGun_L3_BulletTraser",
+    "kunai1-128",
+    "BulletHole_01",
+    "Spark1",
+    "Trail_01",
+    "SmokePuff01",
+    "Flash21",
 ]
+
+# 完整战斗序列用到的贴图：能量类武器用游戏里的青色开火闪光，忍者用苦无当投掷物。
+MUZZLE_ENERGY = "Flash21"
+MUZZLE_DEFAULT = "muzzleflash_1_blurred"
+TRACER_SPRITE = "GatlingGun_L3_BulletTraser"
+KUNAI_SPRITE = "kunai1-128"
+ENERGY_KEYS = {"Eng_Laser", "Eng_Plasma", "Eng_Taser", "Eng_Tesla", "Ranger_CrossbowShockspike"}
+KUNAI_KEYS = {"Ninja_Katana", "Ninja_KatanaSplash", "Ninja_KatanaMultiSlash",
+              "Ninja_KatanaSuperSlash", "Ninja_KatanaHurricaneWave"}
 
 # 粒子渲染器所在 GameObject 的名字 -> 武器 key（来自 I2 本地化里的 Powerups/Weapons/<key>）
 HIT_VFX_BY_WEAPON = {
@@ -314,6 +333,10 @@ def main() -> int:
             "flipbookSprite": vfx_index.get(FLIPBOOK_SPRITE, {}).get("file"),
             "flipbookGrid": [8, 8],
             "bloodSprite": vfx_index.get(BLOOD_SPRITE_BY_KIND.get(kind), {}).get("file"),
+            "muzzleSprite": vfx_index.get(MUZZLE_ENERGY if key in ENERGY_KEYS else MUZZLE_DEFAULT, {}).get("file"),
+            "muzzleName": MUZZLE_ENERGY if key in ENERGY_KEYS else MUZZLE_DEFAULT,
+            "projectileSprite": vfx_index.get(KUNAI_SPRITE if key in KUNAI_KEYS else TRACER_SPRITE, {}).get("file"),
+            "projectileName": KUNAI_SPRITE if key in KUNAI_KEYS else TRACER_SPRITE,
             "kind": kind,
             "color": IMPACT_COLOR_BY_KEY.get(key, DEFAULT_IMPACT_COLOR),
             "sound": SOUND_BY_KEY.get(key, SOUND_BY_KEY["default"]),
