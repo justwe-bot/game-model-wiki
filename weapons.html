@@ -100,6 +100,28 @@
     .copy-preview b { color: var(--lime); font-weight: 700; }
     .toast { position: fixed; z-index: 20; left: 50%; bottom: 26px; transform: translate(-50%, 14px); padding: 9px 16px; border: 1px solid var(--lime); border-radius: 6px; background: #1b2417; color: var(--lime); font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
     .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .hit-section { grid-column: 1 / -1; }
+    .hit-section h2 { margin: 0 0 10px; font-size: 18px; }
+    .hit-layout { display: grid; grid-template-columns: minmax(320px, 460px) minmax(240px, 1fr); gap: 22px 30px; align-items: start; }
+    .hit-canvas-wrap { position: relative; border: 1px solid var(--line-soft); border-radius: 8px; overflow: hidden; background: #0a100e; }
+    .hit-canvas { width: 100%; height: auto; display: block; }
+    .hit-badge { position: absolute; top: 9px; left: 11px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 5px; background: rgba(16, 21, 19, .86); color: var(--lime); font-size: 11px; }
+    .hit-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .hit-button { height: 34px; padding: 0 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); cursor: pointer; font-size: 13px; display: inline-flex; align-items: center; gap: 7px; }
+    .hit-button:hover { border-color: var(--lime); color: var(--lime); }
+    .hit-button.active { background: var(--lime); border-color: var(--lime); color: #17200e; font-weight: 700; }
+    .hit-button svg { width: 15px; height: 15px; }
+    .hit-meta { display: grid; gap: 8px; }
+    .hit-line { display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: 8px; font-size: 12px; align-items: baseline; }
+    .hit-line b { color: var(--lime); font-weight: 700; }
+    .hit-line span { color: var(--muted); overflow-wrap: anywhere; }
+    .hit-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .hit-thumb { width: 62px; height: 62px; border: 1px solid var(--line-soft); border-radius: 6px; background: #0a100e url('') center/contain no-repeat; }
+    .hit-note { margin-top: 12px; color: var(--faint); font-size: 11px; line-height: 1.7; }
+    .hit-video { width: 100%; margin-top: 12px; border: 1px solid var(--line); border-radius: 8px; background: #000; }
+    @media (max-width: 900px) {
+      .hit-layout { grid-template-columns: 1fr; }
+    }
     .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
@@ -195,6 +217,28 @@
           <div class="audio-list" id="audioList"></div>
           <div class="copy-preview" id="copyPreview" hidden></div>
         </div>
+        <div class="hit-section">
+          <h2>命中敌人后的效果</h2>
+          <div class="hit-layout">
+            <div>
+              <div class="hit-canvas-wrap">
+                <canvas class="hit-canvas" id="hitCanvas" width="640" height="360"></canvas>
+                <div class="hit-badge" id="hitBadge">命中演示</div>
+              </div>
+              <div class="hit-tools">
+                <button class="hit-button" id="hitPlayButton"><i data-lucide="play"></i>播放命中</button>
+                <button class="hit-button" id="hitLoopButton"><i data-lucide="repeat"></i>循环</button>
+                <button class="hit-button" id="hitRecordButton"><i data-lucide="video"></i>录制为视频</button>
+              </div>
+              <video class="hit-video" id="hitVideo" controls playsinline hidden></video>
+            </div>
+            <div>
+              <div class="hit-meta" id="hitMeta"></div>
+              <div class="hit-thumbs" id="hitThumbs"></div>
+              <p class="hit-note" id="hitNote"></p>
+            </div>
+          </div>
+        </div>
         <div class="notice" id="rightsNotice"></div>
       </section>
     </main>
@@ -205,9 +249,9 @@
     {"imports":{"lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
   </script>
   <script type="module">
-    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Map as MapIcon } from 'lucide';
+    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Video, Map as MapIcon } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Map: MapIcon };
+    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Video, Map: MapIcon };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -390,6 +434,8 @@
         });
         list.appendChild(button);
       });
+
+      renderHitEffect(weapon);
     }
 
     function filteredWeapons() {
@@ -523,6 +569,253 @@
     });
     player.addEventListener('loadedmetadata', () => {
       document.querySelector('#durationTime').textContent = formatTime(player.duration || activeClip()?.durationSec);
+    });
+
+    // ---------- 命中敌人后的效果演示 ----------
+    // 贴图、颜色、音效都取自游戏原始资源；播放节奏是重建的，因为 IL2CPP 构建
+    // 剥离了 ParticleSystem 的 type tree，粒子颜色/尺寸/速度无法读回。
+    const hitCanvas = document.querySelector('#hitCanvas');
+    const hitCtx = hitCanvas.getContext('2d');
+    const HIT_W = hitCanvas.width;
+    const HIT_H = hitCanvas.height;
+    const HIT_DURATION = 0.95;
+    const spriteCache = new Map();
+    const hitAudio = new Audio();
+    const HIT = { particles: [], startedAt: 0, running: false, looping: false, raf: 0, frameProcessed: -1 };
+
+    function sprite(path) {
+      if (!path) return null;
+      if (!spriteCache.has(path)) {
+        const img = new Image();
+        img.src = `${path}?v=${activeGame.assetRevision}`;
+        spriteCache.set(path, img);
+      }
+      return spriteCache.get(path);
+    }
+
+    function drawHitTarget() {
+      const cx = HIT_W / 2;
+      const cy = HIT_H / 2;
+      const radial = hitCtx.createRadialGradient(cx, cy, 6, cx, cy, 150);
+      radial.addColorStop(0, 'rgba(38, 52, 45, 1)');
+      radial.addColorStop(1, 'rgba(14, 20, 17, 1)');
+      hitCtx.fillStyle = radial;
+      hitCtx.beginPath();
+      hitCtx.arc(cx, cy, 92, 0, Math.PI * 2);
+      hitCtx.fill();
+      hitCtx.strokeStyle = 'rgba(120, 140, 128, .5)';
+      hitCtx.lineWidth = 2;
+      hitCtx.stroke();
+      hitCtx.fillStyle = 'rgba(167, 177, 170, .55)';
+      hitCtx.font = '12px Inter, "Microsoft YaHei", sans-serif';
+      hitCtx.textAlign = 'center';
+      hitCtx.fillText('敌人（占位示意）', cx, cy + 118);
+    }
+
+    function drawHitFrame(seconds) {
+      const fx = activeWeapon?.hitEffect;
+      hitCtx.clearRect(0, 0, HIT_W, HIT_H);
+      drawHitTarget();
+      if (!fx) return;
+      const cx = HIT_W / 2;
+      const cy = HIT_H / 2;
+
+      hitCtx.save();
+      hitCtx.translate(cx, cy);
+
+      // 血雾：先放大后淡出，压在粒子下面
+      const blood = fx.bloodSprite && sprite(fx.bloodSprite);
+      if (blood?.complete && seconds < 0.55) {
+        const k = seconds / 0.55;
+        const size = 90 + k * 130;
+        hitCtx.globalAlpha = Math.max(0, 1 - k) * 0.85;
+        hitCtx.drawImage(blood, -size / 2, -size / 2, size, size);
+      }
+
+      // 撞击光点粒子：向外飞散并衰减
+      hitCtx.globalCompositeOperation = 'lighter';
+      const point = sprite(fx.impactSprite);
+      for (const particle of HIT.particles) {
+        const k = Math.min(1, particle.age / particle.life);
+        if (k >= 1 || !point?.complete) continue;
+        const x = particle.x + particle.vx * particle.age * (1 - k * 0.6);
+        const y = particle.y + particle.vy * particle.age * (1 - k * 0.6) + 120 * particle.age * particle.age;
+        const size = particle.size * (1 - k * 0.7);
+        hitCtx.globalAlpha = (1 - k) * 0.9;
+        hitCtx.drawImage(point, x - size / 2, y - size / 2, size, size);
+      }
+      hitCtx.globalAlpha = 1;
+
+      // 逐帧命中球：8x8 精灵图，前 0.3 秒播完
+      const sheet = fx.flipbookSprite && sprite(fx.flipbookSprite);
+      if (sheet?.complete && seconds < 0.3) {
+        const [cols, rows] = fx.flipbookGrid ?? [8, 8];
+        const frameW = sheet.width / cols;
+        const frameH = sheet.height / rows;
+        const total = cols * rows;
+        const frame = Math.min(total - 1, Math.floor((seconds / 0.3) * total));
+        const sx = (frame % cols) * frameW;
+        const sy = Math.floor(frame / cols) * frameH;
+        const size = 210 * (1 - seconds * 0.5);
+        hitCtx.globalAlpha = Math.max(0, 1 - seconds / 0.3) * 0.95;
+        hitCtx.drawImage(sheet, sx, sy, frameW, frameH, -size / 2, -size / 2, size, size);
+        hitCtx.globalAlpha = 1;
+      }
+
+      hitCtx.globalCompositeOperation = 'source-over';
+      hitCtx.restore();
+    }
+
+    function stepHit(now) {
+      HIT.raf = 0;
+      if (!HIT.running) return;
+      const seconds = (now - HIT.startedAt) / 1000;
+      for (const particle of HIT.particles) particle.age = seconds;
+      drawHitFrame(seconds);
+      if (seconds < HIT_DURATION) {
+        HIT.raf = requestAnimationFrame(stepHit);
+        return;
+      }
+      if (HIT.looping) {
+        triggerHit(false);
+        return;
+      }
+      HIT.running = false;
+      drawHitFrame(HIT_DURATION);
+    }
+
+    function triggerHit(withSound = true) {
+      const fx = activeWeapon?.hitEffect;
+      if (!fx) return;
+      HIT.particles = [];
+      for (let index = 0; index < 18; index += 1) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 70 + Math.random() * 230;
+        HIT.particles.push({
+          x: 0,
+          y: 0,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          life: 0.3 + Math.random() * 0.35,
+          age: 0,
+          size: 16 + Math.random() * 30,
+        });
+      }
+      HIT.startedAt = performance.now();
+      HIT.running = true;
+      if (!HIT.raf) HIT.raf = requestAnimationFrame(stepHit);
+
+      if (!withSound) return;
+      const soundEntry = soundBySlug.get(fx.sound);
+      const clip = soundEntry?.clips?.[0];
+      if (!clip) return;
+      hitAudio.src = `${clip.file}?v=${activeGame.assetRevision}`;
+      hitAudio.play().catch(() => {});
+    }
+
+    function renderHitEffect(weapon) {
+      const fx = weapon?.hitEffect;
+      const meta = document.querySelector('#hitMeta');
+      const thumbs = document.querySelector('#hitThumbs');
+      const note = document.querySelector('#hitNote');
+      const badge = document.querySelector('#hitBadge');
+      meta.innerHTML = '';
+      thumbs.innerHTML = '';
+      HIT.running = false;
+      HIT.looping = false;
+      document.querySelector('#hitLoopButton').classList.remove('active');
+      document.querySelector('#hitVideo').hidden = true;
+
+      if (!fx) {
+        badge.textContent = '无命中特效';
+        note.textContent = '这把武器在游戏里没有单独的命中粒子，预览不可用。';
+        drawHitFrame(0);
+        return;
+      }
+
+      badge.textContent = `命中粒子 ${fx.particle}`;
+      const rows = [
+        ['命中粒子', fx.particle],
+        ['粒子贴图', (fx.particleTextures ?? []).join('、') || '—'],
+        ['命中类型', fx.kind],
+        ['撞击颜色', fx.color],
+        ['命中音效', soundBySlug.get(fx.sound)?.name ?? fx.sound],
+      ];
+      meta.innerHTML = rows
+        .map(([label, value]) => `<div class="hit-line"><b>${label}</b><span>${value}</span></div>`)
+        .join('');
+      [fx.impactSprite, fx.bloodSprite, fx.flipbookSprite]
+        .filter(Boolean)
+        .forEach(path => {
+          const cell = document.createElement('div');
+          cell.className = 'hit-thumb';
+          cell.style.backgroundImage = `url('${path}?v=${activeGame.assetRevision}')`;
+          cell.title = path.split('/').pop();
+          thumbs.appendChild(cell);
+        });
+      note.innerHTML = '贴图、颜色与音效取自游戏原始资源；<b>播放节奏是按游戏特效惯例重建的</b>'
+        + '——IL2CPP 构建剥离了 ParticleSystem 的类型信息，粒子颜色、尺寸与速度无法读回。'
+        + '点「录制为视频」可把这段动画导出为 WebM。';
+
+      sprite(fx.impactSprite);
+      sprite(fx.bloodSprite);
+      sprite(fx.flipbookSprite);
+      drawHitFrame(HIT_DURATION);
+    }
+
+    document.querySelector('#hitPlayButton').addEventListener('click', () => triggerHit(true));
+    document.querySelector('#hitLoopButton').addEventListener('click', event => {
+      HIT.looping = !HIT.looping;
+      event.currentTarget.classList.toggle('active', HIT.looping);
+      if (HIT.looping) triggerHit(true);
+    });
+    document.querySelector('#hitRecordButton').addEventListener('click', () => {
+      const button = document.querySelector('#hitRecordButton');
+      if (HIT.recorder) {
+        HIT.recorder.stop();
+        return;
+      }
+      if (typeof MediaRecorder === 'undefined' || !hitCanvas.captureStream) {
+        showToast('当前浏览器不支持画布录制');
+        return;
+      }
+      let stream;
+      try {
+        stream = hitCanvas.captureStream(30);
+        HIT.recorder = new MediaRecorder(stream, { mimeType: 'video/webm' });
+      } catch (error) {
+        showToast('无法启动录制');
+        HIT.recorder = null;
+        return;
+      }
+      const chunks = [];
+      HIT.recorder.ondataavailable = event => {
+        if (event.data?.size) chunks.push(event.data);
+      };
+      HIT.recorder.onstop = () => {
+        hitCanvas.captureStream && stream.getTracks().forEach(track => track.stop());
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const video = document.querySelector('#hitVideo');
+        video.src = URL.createObjectURL(blob);
+        video.hidden = false;
+        const link = document.createElement('a');
+        link.href = video.src;
+        link.download = `${activeWeapon?.slug ?? 'hit'}-hit.webm`;
+        link.click();
+        HIT.recorder = null;
+        button.classList.remove('active');
+        button.innerHTML = '<i data-lucide="video"></i>录制为视频';
+        refreshIcons();
+        showToast('已生成视频并开始下载');
+      };
+      HIT.recorder.start();
+      button.classList.add('active');
+      button.innerHTML = '<i data-lucide="square"></i>停止录制';
+      refreshIcons();
+      showToast('录制中，再次点击结束');
+      HIT.looping = true;
+      document.querySelector('#hitLoopButton').classList.add('active');
+      triggerHit(true);
     });
 
     document.querySelector('#brand').textContent = `${activeGame.name} · 武器图鉴`;

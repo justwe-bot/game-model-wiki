@@ -4163,7 +4163,7 @@ def update_games_json(catalog: list[dict]) -> None:
             "武器与音效来自你本机 Steam 安装的《又一个僵尸幸存者》，仅用于个人研究与 Wiki 原型。"
             "公开发布或向他人分发音频文件前请核对游戏素材许可，不要分发原始 Unity 资源包。"
         ),
-        "assetRevision": "20261013-1",
+        "assetRevision": "20261013-3",
     }
     for index, game in enumerate(games):
         if game.get("slug") == GAME_SLUG:
