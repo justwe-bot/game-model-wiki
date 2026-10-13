@@ -88,12 +88,22 @@
     .used-by { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
     .chip { padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--amber); font-size: 12px; }
     .clip-list { display: grid; gap: 8px; }
+    .copy-hint { margin: 0 0 12px; color: var(--faint); font-size: 12px; line-height: 1.6; }
+    .clip-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
     .clip { width: 100%; min-height: 72px; padding: 12px 14px; border: 1px solid var(--line-soft); border-radius: 6px; background: transparent; cursor: pointer; text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px 16px; }
     .clip:hover { border-color: var(--line); background: var(--surface); }
     .clip.active { border-color: var(--coral); background: #261f1c; }
     .clip-name { font-size: 15px; font-weight: 800; }
     .clip-meta { color: var(--amber); font-size: 11px; align-self: center; }
     .clip-description { grid-column: 1 / -1; color: var(--muted); font-size: 13px; }
+    .clip-copy { width: 46px; min-height: 72px; padding: 0; border: 1px solid var(--line-soft); border-radius: 6px; background: transparent; color: var(--muted); display: grid; place-items: center; cursor: pointer; }
+    .clip-copy:hover { border-color: var(--lime); background: var(--surface); color: var(--lime); }
+    .clip-copy.copied { border-color: var(--lime); color: var(--lime); }
+    .clip-copy svg { width: 17px; height: 17px; }
+    .copy-preview { grid-column: 1 / -1; margin-top: 2px; padding: 10px 12px; border: 1px dashed var(--line); border-radius: 6px; background: #101613; color: var(--muted); font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 11px; line-height: 1.6; white-space: pre-wrap; word-break: break-all; }
+    .copy-preview b { color: var(--lime); font-weight: 700; }
+    .toast { position: fixed; z-index: 20; left: 50%; bottom: 26px; transform: translate(-50%, 14px); padding: 9px 16px; border: 1px solid var(--lime); border-radius: 6px; background: #1b2417; color: var(--lime); font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
     .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
@@ -161,6 +171,10 @@
             <button class="icon-button" id="loopButton" title="循环播放"><i data-lucide="repeat"></i></button>
             <button class="icon-button" id="stopButton" title="停止"><i data-lucide="square"></i></button>
           </div>
+          <div class="icon-tools">
+            <button class="icon-button" id="copyClipButton" title="复制当前采样的引用"><i data-lucide="clipboard-copy"></i></button>
+            <button class="icon-button" id="copyEntryButton" title="复制本条目全部采样的引用"><i data-lucide="copy"></i></button>
+          </div>
         </div>
       </section>
       <section class="details">
@@ -176,6 +190,7 @@
         </div>
         <div>
           <h2>采样与变体</h2>
+          <p class="copy-hint">每条采样右侧的按钮可复制“原始效果名 + 中文名称 + 英文名称 + 文件地址”，直接粘进表格或移植到其他游戏工程。</p>
           <div class="clip-list" id="clipList"></div>
         </div>
         <div class="notice" id="rightsNotice"></div>
@@ -183,13 +198,14 @@
     </main>
   </div>
   <audio id="player" preload="metadata"></audio>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script type="importmap">
     {"imports":{"lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
   </script>
   <script type="module">
-    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair } from 'lucide';
+    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair };
+    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -223,6 +239,72 @@
       const minutes = Math.floor(total / 60);
       const remain = String(total % 60).padStart(2, '0');
       return `${minutes}:${remain}`;
+    }
+
+    // 引用格式：制表符分隔，方便直接粘进表格，也方便逐列解析后移植到其他游戏工程。
+    const REFERENCE_COLUMNS = ['原始效果名', '中文名称', '英文名称', '文件路径', '完整地址'];
+
+    function referenceRow(entry, clip) {
+      return [
+        clip.name,
+        entry.name,
+        entry.nameEn,
+        clip.file,
+        new URL(clip.file, location.href).href,
+      ].join('\t');
+    }
+
+    function referenceBlock(entry, clips, withHeader) {
+      const rows = clips.map(clip => referenceRow(entry, clip));
+      return (withHeader ? [REFERENCE_COLUMNS.join('\t'), ...rows] : rows).join('\n');
+    }
+
+    let toastTimer = 0;
+    function showToast(message) {
+      const toast = document.querySelector('#toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 1900);
+    }
+
+    // navigator.clipboard 只在安全上下文可用；用 localhost 打开时没问题，
+    // 但用局域网 IP 或 file:// 打开会缺失，所以保留一个 execCommand 兜底。
+    async function writeClipboard(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (error) {
+        /* 落到下面的兜底实现 */
+      }
+      try {
+        const scratch = document.createElement('textarea');
+        scratch.value = text;
+        scratch.setAttribute('readonly', '');
+        scratch.style.position = 'fixed';
+        scratch.style.top = '-1000px';
+        document.body.appendChild(scratch);
+        scratch.select();
+        const ok = document.execCommand('copy');
+        document.body.removeChild(scratch);
+        return ok;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    async function copyReference(text, button) {
+      const ok = await writeClipboard(text);
+      if (!ok) {
+        showToast('复制失败，请手动选中文本');
+        return;
+      }
+      showToast('已复制引用');
+      if (!button) return;
+      button.classList.add('copied');
+      setTimeout(() => button.classList.remove('copied'), 1200);
     }
 
     function activeClip() {
@@ -269,7 +351,9 @@
         .map(item => `<span class="chip">${item}</span>`).join('');
       const list = document.querySelector('#clipList');
       list.innerHTML = '';
-      entry.clips.forEach((item, index) => {
+      (entry.clips ?? []).forEach((item, index) => {
+        const row = document.createElement('div');
+        row.className = 'clip-row';
         const button = document.createElement('button');
         button.className = `clip${index === activeClipIndex ? ' active' : ''}`;
         button.innerHTML = `<span class="clip-name">${item.name}</span><span class="clip-meta">${formatTime(item.durationSec)} · ${item.previewSizeKB} KB</span><span class="clip-description">${entry.sourceName}</span>`;
@@ -278,8 +362,26 @@
           renderDetails(entry);
           loadClip(true);
         });
-        list.appendChild(button);
+        const copyButton = document.createElement('button');
+        copyButton.className = 'clip-copy';
+        copyButton.title = `复制 ${item.name} 的引用`;
+        copyButton.setAttribute('aria-label', `复制 ${item.name} 的引用`);
+        copyButton.innerHTML = '<i data-lucide="clipboard-copy"></i>';
+        copyButton.addEventListener('click', () => {
+          copyReference(referenceRow(entry, item), copyButton);
+        });
+        row.appendChild(button);
+        row.appendChild(copyButton);
+        list.appendChild(row);
       });
+
+      // 把当前采样会复制到的内容显示出来，避免盲复制。
+      const preview = document.createElement('div');
+      preview.className = 'copy-preview';
+      preview.innerHTML = activeClip()
+        ? `<b>${REFERENCE_COLUMNS.join('  ·  ')}</b>\n${referenceRow(entry, activeClip())}`
+        : '该条目录音没有可用采样';
+      list.appendChild(preview);
     }
 
     function filteredCatalog() {
@@ -373,6 +475,22 @@
       const next = !event.currentTarget.classList.contains('active');
       event.currentTarget.classList.toggle('active', next);
       player.loop = next || Boolean(activeEntry?.loop);
+    });
+    document.querySelector('#copyClipButton').addEventListener('click', event => {
+      const clip = activeClip();
+      if (!activeEntry || !clip) {
+        showToast('当前没有可复制的采样');
+        return;
+      }
+      copyReference(referenceRow(activeEntry, clip), event.currentTarget);
+    });
+    document.querySelector('#copyEntryButton').addEventListener('click', event => {
+      const clips = activeEntry?.clips ?? [];
+      if (!clips.length) {
+        showToast('当前没有可复制的采样');
+        return;
+      }
+      copyReference(referenceBlock(activeEntry, clips, true), event.currentTarget);
     });
     document.querySelector('#progress').addEventListener('input', event => {
       if (!player.duration) return;
