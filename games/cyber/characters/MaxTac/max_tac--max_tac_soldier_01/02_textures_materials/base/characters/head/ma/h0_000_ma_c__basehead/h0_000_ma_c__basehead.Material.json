@@ -1,0 +1,1544 @@
+{
+  "Header": {
+    "MaterialJsonVersion": "1.0.0"
+  },
+  "MaterialRepo": "\\\\?\\C:\\Code\\UeCover\\Blender\\hq_sample\\material_depot",
+  "Materials": [
+    {
+      "Name": "skin_face",
+      "BaseMaterial": "base\\characters\\common\\skin\\old_mat_instances\\skin_ma_c__head.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d02.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 171,
+          "Green": 155,
+          "Blue": 150,
+          "Alpha": 255
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "02_ca_limestone",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_02_ca_limestone.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 131,
+          "Green": 149,
+          "Blue": 83,
+          "Alpha": 255
+        },
+        "TintScale": 0.379999995,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "npc_01_pale_dirt",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_npc_01_pale_dirt.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.850000024,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 171,
+          "Green": 155,
+          "Blue": 150,
+          "Alpha": 255
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "01_ca_pale",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_01_ca_pale.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 171,
+          "Green": 155,
+          "Blue": 150,
+          "Alpha": 255
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "04_ca_almond",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_04_ca_almond.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 189,
+          "Green": 180,
+          "Blue": 173,
+          "Alpha": 255
+        },
+        "TintScale": 1,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "npc_02_black_dirt",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_npc_02_black_dirt.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_b__basehead_d03.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 63,
+          "Green": 51,
+          "Blue": 39,
+          "Alpha": 255
+        },
+        "TintScale": 0.845000029,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "03_ca_senna",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_03_ca_senna.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 202,
+          "Green": 177,
+          "Blue": 153,
+          "Alpha": 255
+        },
+        "TintScale": 0.699999988,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "npc_04_almond_sick",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_npc_04_almond_sick.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\mba\\h0_000_mba_c__basehead\\textures\\h0_000_mba_c__basehead_d01.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 157,
+          "Green": 141,
+          "Blue": 121,
+          "Alpha": 255
+        },
+        "TintScale": 1,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "npc_03_limestone_sick",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_npc_03_limestone_sick.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\mba\\h0_000_mba_c__basehead\\textures\\h0_000_mba_c__basehead_d01.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 171,
+          "Green": 155,
+          "Blue": 150,
+          "Alpha": 255
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "06_bl_dark",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_06_bl_dark.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_b__basehead_d03.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 63,
+          "Green": 51,
+          "Blue": 39,
+          "Alpha": 255
+        },
+        "TintScale": 0.845000029,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "05_bl_espresso",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_05_bl_espresso.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_b__basehead_d03.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 117,
+          "Green": 98,
+          "Blue": 96,
+          "Alpha": 255
+        },
+        "TintScale": 0.800000012,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "npc_05_senna_valentino",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_npc_05_senna_valentino_.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_valentino_d04.xbm",
+        "SecondaryAlbedo": "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__valentino_01_d01.xbm",
+        "SecondaryAlbedoInfluence": 1,
+        "SecondaryAlbedoTintColorInfluence": 1,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 202,
+          "Green": 177,
+          "Blue": 153,
+          "Alpha": 255
+        },
+        "TintScale": 0.699999988,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 1
+      }
+    },
+    {
+      "Name": "npc_06_limestone_tyger",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_npc_06_limestone_tyger.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_tyger_d04.xbm",
+        "SecondaryAlbedo": "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__tygerclaw_01_d01.xbm",
+        "SecondaryAlbedoInfluence": 1,
+        "SecondaryAlbedoTintColorInfluence": 1,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.850000024,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 131,
+          "Green": 149,
+          "Blue": 83,
+          "Alpha": 255
+        },
+        "TintScale": 0.379999995,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__tygerclaw_01_e01.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 1
+      }
+    },
+    {
+      "Name": "hologram",
+      "BaseMaterial": "base\\fx\\materials\\holograms\\crime_scene\\holo_crime_scene.mi",
+      "MaterialTemplate": "base\\fx\\shaders\\hologram.mt",
+      "EnableMask": false,
+      "Data": {
+        "AdditiveAlphaBlend": 1,
+        "OpaqueScanlineDensity": 200,
+        "Scanline": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+        "Normal": "base\\characters\\garment\\corp_trauma\\unique_trauma\\head\\h2_003_helmet__front\\textures\\h2_003_ma_helmet__front_n01.xbm",
+        "DotsTexture": "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+        "DotsSize": 200,
+        "DotsColor": {
+          "Red": 82,
+          "Green": 155,
+          "Blue": 216,
+          "Alpha": 255
+        },
+        "Projector1Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1,
+          "W": 0
+        },
+        "SurfaceColor": {
+          "Red": 240,
+          "Green": 251,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "SurfaceShadows": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "FallofColor": {
+          "Red": 204,
+          "Green": 246,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "Diffuse": "base\\fx\\_textures\\holograms\\fx_trauma_helmet_front_holo.xbm",
+        "GradientOffset": -2.5999999,
+        "GradientLength": 0.899999976,
+        "FresnelStrength": 0.121950999,
+        "DotsFresnelStrength": 0.746268988,
+        "GlowStrength": 0.100000001,
+        "DesaturationStrength": 0,
+        "FlickerThreshold": 0.375609994,
+        "FlickerChance": 0.112195,
+        "ArtifactsChance": 0,
+        "LightBleed": 0.291498005,
+        "NormalStrength": 1,
+        "ScreenSpaceFlicker": 1.09000003,
+        "UseIsobars": 0,
+        "IsobarsOffsets": {
+          "X": 3320,
+          "Y": 120,
+          "Z": 0,
+          "W": 0
+        },
+        "EntropyThreshold": 0.195122004,
+        "UseMovingDots": 0,
+        "IsHair": 0,
+        "ScanlineThickness": -0.578947008,
+        "Opacity": 1,
+        "GlobalTint": 0,
+        "SampledOrProceduralDots": 1,
+        "FullColorOrGrayscale": 0,
+        "GlitchChance": 0.419512004
+      }
+    },
+    {
+      "Name": "npc_01_ca_pale_scav_01",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_01_ca_pale.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__scavengers_01_d01.xbm",
+        "SecondaryAlbedoInfluence": 0.75,
+        "SecondaryAlbedoTintColorInfluence": 1,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 171,
+          "Green": 155,
+          "Blue": 150,
+          "Alpha": 255
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    },
+    {
+      "Name": "npc_01_ca_pale_scav_02",
+      "BaseMaterial": "base\\characters\\common\\skin\\character_mat_instance\\male\\head\\male_head_01_ca_pale.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+        "SecondaryAlbedo": "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__scavengers_02_d01.xbm",
+        "SecondaryAlbedoInfluence": 0.75,
+        "SecondaryAlbedoTintColorInfluence": 1,
+        "Normal": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+        "DetailNormal": "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+        "Roughness": "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.930000007,
+        "MicroDetailUVScale01": 20,
+        "MicroDetailUVScale02": 8,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 0.800000012,
+        "TintColorMask": "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 171,
+          "Green": 155,
+          "Blue": 150,
+          "Alpha": 255
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0.800000012
+      }
+    }
+  ],
+  "TexturesList": [
+    "engine\\textures\\editor\\white.xbm",
+    "engine\\textures\\small_flat_normal.xbm",
+    "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+    "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+    "engine\\textures\\editor\\black.xbm",
+    "engine\\textures\\small_white.xbm",
+    "base\\characters\\common\\skin\\face\\h0_000_base__tintcolormask.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d04.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_n01.xbm",
+    "base\\characters\\common\\skin\\face\\h0_000_ma_c__base_nd.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_rm01.xbm",
+    "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_stretch_n.xbm",
+    "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_squash_n.xbm",
+    "base\\characters\\common\\skin\\face\\h0_001_ma__wrnkl_blood_mask_u.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d02.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_b__basehead_d03.xbm",
+    "base\\characters\\head\\mba\\h0_000_mba_c__basehead\\textures\\h0_000_mba_c__basehead_d01.xbm",
+    "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__valentino_01_d01.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_valentino_d04.xbm",
+    "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__tygerclaw_01_d01.xbm",
+    "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__tygerclaw_01_e01.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_d01.xbm",
+    "base\\characters\\head\\ma\\h0_001_ma_c__basehead\\textures\\h0_001_ma_c__basehead_tyger_d04.xbm",
+    "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+    "base\\materials\\placeholder\\normal.xbm",
+    "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+    "base\\materials\\placeholder\\black.xbm",
+    "base\\characters\\garment\\corp_trauma\\unique_trauma\\head\\h2_003_helmet__front\\textures\\h2_003_ma_helmet__front_n01.xbm",
+    "base\\fx\\_textures\\holograms\\fx_trauma_helmet_front_holo.xbm",
+    "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__scavengers_01_d01.xbm",
+    "base\\characters\\common\\character_customisation_items\\tattoos\\face\\textures\\head_tattoo__scavengers_02_d01.xbm"
+  ],
+  "MaterialTemplates": [
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\fx\\shaders\\hologram.mt",
+      "EnableMask": true,
+      "Data": {
+        "AdditiveAlphaBlend": 1,
+        "OpaqueScanlineDensity": 400,
+        "Scanline": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+        "Normal": "base\\materials\\placeholder\\normal.xbm",
+        "DotsTexture": "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+        "DotsSize": 100,
+        "DotsColor": {
+          "Red": 73,
+          "Green": 168,
+          "Blue": 246,
+          "Alpha": 255
+        },
+        "Projector1Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1,
+          "W": 0
+        },
+        "SurfaceColor": {
+          "Red": 73,
+          "Green": 168,
+          "Blue": 246,
+          "Alpha": 255
+        },
+        "SurfaceShadows": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "FallofColor": {
+          "Red": 0,
+          "Green": 136,
+          "Blue": 163,
+          "Alpha": 255
+        },
+        "Diffuse": "base\\materials\\placeholder\\black.xbm",
+        "GradientOffset": -100,
+        "GradientLength": 1,
+        "FresnelStrength": 3.07393003,
+        "DotsFresnelStrength": 0.544746995,
+        "GlowStrength": 0.252918005,
+        "DesaturationStrength": 0,
+        "FlickerThreshold": 0,
+        "FlickerChance": 0,
+        "ArtifactsChance": 0,
+        "LightBleed": 0.291498005,
+        "NormalStrength": 1,
+        "ScreenSpaceFlicker": 0,
+        "UseIsobars": 0,
+        "IsobarsOffsets": {
+          "X": 3320,
+          "Y": 120,
+          "Z": 0,
+          "W": 0
+        },
+        "EntropyThreshold": 0,
+        "UseMovingDots": 0,
+        "IsHair": 0,
+        "ScanlineThickness": -0.578947008,
+        "Opacity": 1,
+        "GlobalTint": 0,
+        "SampledOrProceduralDots": 1,
+        "FullColorOrGrayscale": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    }
+  ],
+  "Appearances": {
+    "default0": [
+      "skin_face",
+      "skin_face",
+      "skin_face",
+      "skin_face"
+    ],
+    "01_ca_pale1": [
+      "01_ca_pale",
+      "01_ca_pale",
+      "01_ca_pale",
+      "01_ca_pale"
+    ],
+    "04_ca_almond2": [
+      "04_ca_almond",
+      "04_ca_almond",
+      "04_ca_almond",
+      "04_ca_almond"
+    ],
+    "npc_04_almond_sick3": [
+      "npc_04_almond_sick",
+      "npc_04_almond_sick",
+      "npc_04_almond_sick",
+      "npc_04_almond_sick"
+    ],
+    "02_ca_limestone4": [
+      "02_ca_limestone",
+      "02_ca_limestone",
+      "02_ca_limestone",
+      "02_ca_limestone"
+    ],
+    "npc_01_pale_dirt5": [
+      "npc_01_pale_dirt",
+      "npc_01_pale_dirt",
+      "npc_01_pale_dirt",
+      "npc_01_pale_dirt"
+    ],
+    "03_ca_senna6": [
+      "03_ca_senna",
+      "03_ca_senna",
+      "03_ca_senna",
+      "03_ca_senna"
+    ],
+    "npc_02_black_dirt7": [
+      "npc_02_black_dirt",
+      "npc_02_black_dirt",
+      "npc_02_black_dirt",
+      "npc_02_black_dirt"
+    ],
+    "npc_03_limestone_sick8": [
+      "npc_03_limestone_sick",
+      "npc_03_limestone_sick",
+      "npc_03_limestone_sick",
+      "npc_03_limestone_sick"
+    ],
+    "05_bl_espresso9": [
+      "05_bl_espresso",
+      "05_bl_espresso",
+      "05_bl_espresso",
+      "05_bl_espresso"
+    ],
+    "06_bl_dark10": [
+      "06_bl_dark",
+      "06_bl_dark",
+      "06_bl_dark",
+      "06_bl_dark"
+    ],
+    "npc_05_senna_valentino11": [
+      "npc_05_senna_valentino",
+      "npc_05_senna_valentino",
+      "npc_05_senna_valentino",
+      "npc_05_senna_valentino"
+    ],
+    "npc_06_limestone_tyger12": [
+      "npc_06_limestone_tyger",
+      "npc_06_limestone_tyger",
+      "npc_06_limestone_tyger",
+      "npc_06_limestone_tyger"
+    ],
+    "hologram13": [
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram"
+    ],
+    "npc_01_ca_pale_scav_0114": [
+      "npc_01_ca_pale_scav_01",
+      "npc_01_ca_pale_scav_01",
+      "npc_01_ca_pale_scav_01",
+      "npc_01_ca_pale_scav_01"
+    ],
+    "npc_01_ca_pale_scav_0215": [
+      "npc_01_ca_pale_scav_02",
+      "npc_01_ca_pale_scav_02",
+      "npc_01_ca_pale_scav_02",
+      "npc_01_ca_pale_scav_02"
+    ]
+  }
+}

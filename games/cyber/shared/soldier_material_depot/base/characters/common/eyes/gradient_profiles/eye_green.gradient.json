@@ -1,0 +1,54 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-01T04:34:33.6547664Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "base\\characters\\common\\eyes\\gradient_profiles\\eye_green.gradient"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "CGradient",
+      "cookingPlatform": "PLATFORM_PC",
+      "gradientEntries": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 88,
+            "Green": 168,
+            "Red": 118
+          },
+          "value": 0.785713971
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 255,
+            "Green": 255,
+            "Red": 255
+          },
+          "value": 1
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 22,
+            "Green": 22,
+            "Red": 22
+          },
+          "value": 0
+        }
+      ]
+    },
+    "EmbeddedFiles": []
+  }
+}

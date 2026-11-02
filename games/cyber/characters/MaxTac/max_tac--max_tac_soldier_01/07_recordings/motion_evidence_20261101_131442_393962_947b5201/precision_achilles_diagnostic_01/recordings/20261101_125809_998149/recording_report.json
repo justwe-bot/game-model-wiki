@@ -1,0 +1,32 @@
+{
+  "source_blend": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\precision_achilles_diagnostic_01\\FULL_CHARACTER_RECONSTRUCTION_NOTACCEPTED.blend",
+  "status": "encoded_decoded_samples_1_60_105_visually_reviewed_DIAGNOSTIC_NOT_ACCEPTED",
+  "decoded_evidence": "decoded_movie_audit.json",
+  "visual_review": {
+    "actual_decoded_frames_read": [1, 60, 105],
+    "finding": "Whole character and Achilles visible; crouch/arm progression observed with fixed camera and persistent NOT ACCEPTED label. Wholebody diagnostic is coherent, but no precise hand-contact, garment deformation, runtime weapon assembly or animation quality acceptance.",
+    "accepted": false
+  },
+  "accepted": false,
+  "acceptance_evidence": null,
+  "render_device": {
+    "engine": "CYCLES",
+    "backend": "HIP",
+    "devices": [
+      {
+        "name": "AMD Radeon RX 9070 XT",
+        "id": "HIP_AMD Radeon RX 9070 XT_0000:03:00",
+        "type": "HIP"
+      }
+    ],
+    "cpu_render_enabled": false
+  },
+  "diagnostic": true,
+  "note": "Successful encoding is not visual or source-animation acceptance.",
+  "movie": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\precision_achilles_diagnostic_01\\recordings\\20261101_125809_998149\\Achilles_SOURCE_SLOT_shoot_RECONSTRUCTION_NOTACCEPTED_DIAGNOSTIC.mp4",
+  "frame_start": 1,
+  "frame_end": 105,
+  "fps": 30,
+  "expected_frames": 105,
+  "movie_bytes": 403893
+}

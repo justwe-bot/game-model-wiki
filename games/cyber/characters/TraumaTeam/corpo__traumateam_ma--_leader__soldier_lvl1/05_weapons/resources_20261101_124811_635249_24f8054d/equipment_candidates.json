@@ -1,0 +1,2971 @@
+{
+  "status": "template_pool_candidates_runtime_choice_unproven",
+  "template": "traumateam_ma",
+  "appearance_role_assignment_proven": false,
+  "chosen_own_weapon": null,
+  "items": [
+    {
+      "item_id": "106091336006",
+      "item_name": "Items.Preset_Dian_Trauma",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/0",
+          "target": "traumateam_ma",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "168801809851",
+              "flat_name": "Items.Preset_Dian_Trauma.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "205143180438",
+              "flat_name": "Items.Preset_Dian_Trauma.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_Dian_Default"
+              }
+            },
+            "entityName": {
+              "flat_id": "152130981028",
+              "flat_name": "Items.Preset_Dian_Trauma.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "145934405382",
+              "flat_name": "Items.Preset_Dian_Trauma.itemType",
+              "value": {
+                "id": "111871861266",
+                "name": "ItemType.Wea_SubmachineGun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "163645375811",
+              "character_name": "Character.mws_hey_07_trauma_soldier_01",
+              "route": {
+                "item_id": "106091336006",
+                "item_name": "Items.Preset_Dian_Trauma",
+                "edges": [
+                  {
+                    "record_id": "163645375811",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_01",
+                    "field": "primaryEquipment",
+                    "flat_id": "239849253036",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "142958529659"
+                  },
+                  {
+                    "record_id": "142958529659",
+                    "record_name": "Character.TraumaRiflePool_inline0",
+                    "field": "items",
+                    "flat_id": "167897822810",
+                    "target_id": "142807219437"
+                  },
+                  {
+                    "record_id": "142807219437",
+                    "record_name": "Character.TraumaRiflePool_inline1",
+                    "field": "item",
+                    "flat_id": "163460332142",
+                    "target_id": "106091336006"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "163702341978",
+              "character_name": "Character.mws_hey_07_trauma_soldier_05",
+              "route": {
+                "item_id": "106091336006",
+                "item_name": "Items.Preset_Dian_Trauma",
+                "edges": [
+                  {
+                    "record_id": "163702341978",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_05",
+                    "field": "primaryEquipment",
+                    "flat_id": "239772237738",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "142958529659"
+                  },
+                  {
+                    "record_id": "142958529659",
+                    "record_name": "Character.TraumaRiflePool_inline0",
+                    "field": "items",
+                    "flat_id": "167897822810",
+                    "target_id": "142807219437"
+                  },
+                  {
+                    "record_id": "142807219437",
+                    "record_name": "Character.TraumaRiflePool_inline1",
+                    "field": "item",
+                    "flat_id": "163460332142",
+                    "target_id": "106091336006"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "190361655288",
+              "character_name": "Character.kab_trauma_soldier_ranged2_dian_ma",
+              "route": {
+                "item_id": "106091336006",
+                "item_name": "Items.Preset_Dian_Trauma",
+                "edges": [
+                  {
+                    "record_id": "190361655288",
+                    "record_name": "Character.kab_trauma_soldier_ranged2_dian_ma",
+                    "field": "primaryEquipment",
+                    "flat_id": "265635012797",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "142958529659"
+                  },
+                  {
+                    "record_id": "142958529659",
+                    "record_name": "Character.TraumaRiflePool_inline0",
+                    "field": "items",
+                    "flat_id": "167897822810",
+                    "target_id": "142807219437"
+                  },
+                  {
+                    "record_id": "142807219437",
+                    "record_name": "Character.TraumaRiflePool_inline1",
+                    "field": "item",
+                    "flat_id": "163460332142",
+                    "target_id": "106091336006"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "165407560953",
+              "character_name": "Character.mws_hey_07_trauma_soldier_02",
+              "route": {
+                "item_id": "106091336006",
+                "item_name": "Items.Preset_Dian_Trauma",
+                "edges": [
+                  {
+                    "record_id": "165407560953",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_02",
+                    "field": "primaryEquipment",
+                    "flat_id": "237073069518",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "142958529659"
+                  },
+                  {
+                    "record_id": "142958529659",
+                    "record_name": "Character.TraumaRiflePool_inline0",
+                    "field": "items",
+                    "flat_id": "167897822810",
+                    "target_id": "142807219437"
+                  },
+                  {
+                    "record_id": "142807219437",
+                    "record_name": "Character.TraumaRiflePool_inline1",
+                    "field": "item",
+                    "flat_id": "163460332142",
+                    "target_id": "106091336006"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "166550819696",
+              "character_name": "Character.mws_pac_06_trauma_soldier_02",
+              "route": {
+                "item_id": "106091336006",
+                "item_name": "Items.Preset_Dian_Trauma",
+                "edges": [
+                  {
+                    "record_id": "166550819696",
+                    "record_name": "Character.mws_pac_06_trauma_soldier_02",
+                    "field": "primaryEquipment",
+                    "flat_id": "239303928159",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "142958529659"
+                  },
+                  {
+                    "record_id": "142958529659",
+                    "record_name": "Character.TraumaRiflePool_inline0",
+                    "field": "items",
+                    "flat_id": "167897822810",
+                    "target_id": "142807219437"
+                  },
+                  {
+                    "record_id": "142807219437",
+                    "record_name": "Character.TraumaRiflePool_inline1",
+                    "field": "item",
+                    "flat_id": "163460332142",
+                    "target_id": "106091336006"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "175616730307",
+              "character_name": "Character.trauma_soldier_ranged2_dian_ma",
+              "route": {
+                "item_id": "106091336006",
+                "item_name": "Items.Preset_Dian_Trauma",
+                "edges": [
+                  {
+                    "record_id": "175616730307",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma",
+                    "field": "primaryEquipment",
+                    "flat_id": "248817302486",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "142958529659"
+                  },
+                  {
+                    "record_id": "142958529659",
+                    "record_name": "Character.TraumaRiflePool_inline0",
+                    "field": "items",
+                    "flat_id": "167897822810",
+                    "target_id": "142807219437"
+                  },
+                  {
+                    "record_id": "142807219437",
+                    "record_name": "Character.TraumaRiflePool_inline1",
+                    "field": "item",
+                    "flat_id": "163460332142",
+                    "target_id": "106091336006"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app.json",
+              "depot_path": "base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_Dian_Default",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "q001_hologram",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "trauma",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "yinglong",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/8/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/9/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:03.4605732Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/0",
+          "app_depot": "base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app",
+          "parsed_appearanceName": {
+            "flat_id": "168801809851",
+            "flat_name": "Items.Preset_Dian_Trauma.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "q001_hologram",
+            "trauma",
+            "yinglong",
+            "military1",
+            "military2",
+            "neon1",
+            "neon2",
+            "pimp1",
+            "pimp2"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_Dian_Default",
+              "expected_depot": "base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/28",
+                  "fields": {
+                    "name": "Preset_Dian_Default",
+                    "path": "base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    },
+    {
+      "item_id": "124068650567",
+      "item_name": "Items.Preset_Masamune_Trauma",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/1",
+          "target": "traumateam_ma",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "188175699977",
+              "flat_name": "Items.Preset_Masamune_Trauma.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "219262417672",
+              "flat_name": "Items.Preset_Masamune_Trauma.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_Base_Masamune"
+              }
+            },
+            "entityName": {
+              "flat_id": "169640205065",
+              "flat_name": "Items.Preset_Masamune_Trauma.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "162750298437",
+              "flat_name": "Items.Preset_Masamune_Trauma.itemType",
+              "value": {
+                "id": "79365459674",
+                "name": "ItemType.Wea_Rifle"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "163645375811",
+              "character_name": "Character.mws_hey_07_trauma_soldier_01",
+              "route": {
+                "item_id": "124068650567",
+                "item_name": "Items.Preset_Masamune_Trauma",
+                "edges": [
+                  {
+                    "record_id": "163645375811",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_01",
+                    "field": "primaryEquipment",
+                    "flat_id": "239849253036",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "144534695255"
+                  },
+                  {
+                    "record_id": "144534695255",
+                    "record_name": "Character.TraumaRiflePool_inline2",
+                    "field": "items",
+                    "flat_id": "169666045811",
+                    "target_id": "145256570305"
+                  },
+                  {
+                    "record_id": "145256570305",
+                    "record_name": "Character.TraumaRiflePool_inline3",
+                    "field": "item",
+                    "flat_id": "164336376677",
+                    "target_id": "124068650567"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "163702341978",
+              "character_name": "Character.mws_hey_07_trauma_soldier_05",
+              "route": {
+                "item_id": "124068650567",
+                "item_name": "Items.Preset_Masamune_Trauma",
+                "edges": [
+                  {
+                    "record_id": "163702341978",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_05",
+                    "field": "primaryEquipment",
+                    "flat_id": "239772237738",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "144534695255"
+                  },
+                  {
+                    "record_id": "144534695255",
+                    "record_name": "Character.TraumaRiflePool_inline2",
+                    "field": "items",
+                    "flat_id": "169666045811",
+                    "target_id": "145256570305"
+                  },
+                  {
+                    "record_id": "145256570305",
+                    "record_name": "Character.TraumaRiflePool_inline3",
+                    "field": "item",
+                    "flat_id": "164336376677",
+                    "target_id": "124068650567"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "190361655288",
+              "character_name": "Character.kab_trauma_soldier_ranged2_dian_ma",
+              "route": {
+                "item_id": "124068650567",
+                "item_name": "Items.Preset_Masamune_Trauma",
+                "edges": [
+                  {
+                    "record_id": "190361655288",
+                    "record_name": "Character.kab_trauma_soldier_ranged2_dian_ma",
+                    "field": "primaryEquipment",
+                    "flat_id": "265635012797",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "144534695255"
+                  },
+                  {
+                    "record_id": "144534695255",
+                    "record_name": "Character.TraumaRiflePool_inline2",
+                    "field": "items",
+                    "flat_id": "169666045811",
+                    "target_id": "145256570305"
+                  },
+                  {
+                    "record_id": "145256570305",
+                    "record_name": "Character.TraumaRiflePool_inline3",
+                    "field": "item",
+                    "flat_id": "164336376677",
+                    "target_id": "124068650567"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "165407560953",
+              "character_name": "Character.mws_hey_07_trauma_soldier_02",
+              "route": {
+                "item_id": "124068650567",
+                "item_name": "Items.Preset_Masamune_Trauma",
+                "edges": [
+                  {
+                    "record_id": "165407560953",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_02",
+                    "field": "primaryEquipment",
+                    "flat_id": "237073069518",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "144534695255"
+                  },
+                  {
+                    "record_id": "144534695255",
+                    "record_name": "Character.TraumaRiflePool_inline2",
+                    "field": "items",
+                    "flat_id": "169666045811",
+                    "target_id": "145256570305"
+                  },
+                  {
+                    "record_id": "145256570305",
+                    "record_name": "Character.TraumaRiflePool_inline3",
+                    "field": "item",
+                    "flat_id": "164336376677",
+                    "target_id": "124068650567"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "166550819696",
+              "character_name": "Character.mws_pac_06_trauma_soldier_02",
+              "route": {
+                "item_id": "124068650567",
+                "item_name": "Items.Preset_Masamune_Trauma",
+                "edges": [
+                  {
+                    "record_id": "166550819696",
+                    "record_name": "Character.mws_pac_06_trauma_soldier_02",
+                    "field": "primaryEquipment",
+                    "flat_id": "239303928159",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "144534695255"
+                  },
+                  {
+                    "record_id": "144534695255",
+                    "record_name": "Character.TraumaRiflePool_inline2",
+                    "field": "items",
+                    "flat_id": "169666045811",
+                    "target_id": "145256570305"
+                  },
+                  {
+                    "record_id": "145256570305",
+                    "record_name": "Character.TraumaRiflePool_inline3",
+                    "field": "item",
+                    "flat_id": "164336376677",
+                    "target_id": "124068650567"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "175616730307",
+              "character_name": "Character.trauma_soldier_ranged2_dian_ma",
+              "route": {
+                "item_id": "124068650567",
+                "item_name": "Items.Preset_Masamune_Trauma",
+                "edges": [
+                  {
+                    "record_id": "175616730307",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma",
+                    "field": "primaryEquipment",
+                    "flat_id": "248817302486",
+                    "target_id": "207049453180"
+                  },
+                  {
+                    "record_id": "207049453180",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "272671188465",
+                    "target_id": "207267618538"
+                  },
+                  {
+                    "record_id": "207267618538",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "228801017509",
+                    "target_id": "144534695255"
+                  },
+                  {
+                    "record_id": "144534695255",
+                    "record_name": "Character.TraumaRiflePool_inline2",
+                    "field": "items",
+                    "flat_id": "169666045811",
+                    "target_id": "145256570305"
+                  },
+                  {
+                    "record_id": "145256570305",
+                    "record_name": "Character.TraumaRiflePool_inline3",
+                    "field": "item",
+                    "flat_id": "164336376677",
+                    "target_id": "124068650567"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app.json",
+              "depot_path": "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_Base_Masamune",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "afterlife",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "pimp_01",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "neon_01",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "nowaki_default",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "trauma",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                },
+                {
+                  "name": "pimp_02",
+                  "pointer": "/Data/RootChunk/appearances/8/Data/name"
+                },
+                {
+                  "name": "neon_02",
+                  "pointer": "/Data/RootChunk/appearances/9/Data/name"
+                },
+                {
+                  "name": "nowaki_2077",
+                  "pointer": "/Data/RootChunk/appearances/10/Data/name"
+                },
+                {
+                  "name": "default_flashlight",
+                  "pointer": "/Data/RootChunk/appearances/11/Data/name"
+                },
+                {
+                  "name": "default_flashlight_shadow",
+                  "pointer": "/Data/RootChunk/appearances/12/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:02.8456391Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/1",
+          "app_depot": "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app",
+          "parsed_appearanceName": {
+            "flat_id": "188175699977",
+            "flat_name": "Items.Preset_Masamune_Trauma.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "afterlife",
+            "pimp_01",
+            "neon_01",
+            "nowaki_default",
+            "trauma",
+            "military1",
+            "military2",
+            "pimp_02",
+            "neon_02",
+            "nowaki_2077",
+            "default_flashlight",
+            "default_flashlight_shadow"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_Base_Masamune",
+              "expected_depot": "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/26",
+                  "fields": {
+                    "name": "Preset_Base_Masamune",
+                    "path": "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    },
+    {
+      "item_id": "122216229834",
+      "item_name": "Items.Preset_Yukimura_Trauma",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/2",
+          "target": "traumateam_ma",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "187110169602",
+              "flat_name": "Items.Preset_Yukimura_Trauma.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "219053780616",
+              "flat_name": "Items.Preset_Yukimura_Trauma.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_Yukimura_Default"
+              }
+            },
+            "entityName": {
+              "flat_id": "168232689843",
+              "flat_name": "Items.Preset_Yukimura_Trauma.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "161195218962",
+              "flat_name": "Items.Preset_Yukimura_Trauma.itemType",
+              "value": {
+                "id": "87630388496",
+                "name": "ItemType.Wea_Handgun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "163645375811",
+              "character_name": "Character.mws_hey_07_trauma_soldier_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "163645375811",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_01",
+                    "field": "secondaryEquipment",
+                    "flat_id": "248819474458",
+                    "target_id": "209857301321"
+                  },
+                  {
+                    "record_id": "209857301321",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "271386758165",
+                    "target_id": "209035688927"
+                  },
+                  {
+                    "record_id": "209035688927",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "230112335288",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "163702341978",
+              "character_name": "Character.mws_hey_07_trauma_soldier_05",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "163702341978",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_05",
+                    "field": "secondaryEquipment",
+                    "flat_id": "247499983683",
+                    "target_id": "209857301321"
+                  },
+                  {
+                    "record_id": "209857301321",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "271386758165",
+                    "target_id": "209035688927"
+                  },
+                  {
+                    "record_id": "209035688927",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "230112335288",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "159836895809",
+              "character_name": "Character.trauma_rare_officer_chao_ma",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "159836895809",
+                    "record_name": "Character.trauma_rare_officer_chao_ma",
+                    "field": "primaryEquipment",
+                    "flat_id": "232331737160",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "159836895809",
+              "character_name": "Character.trauma_rare_officer_chao_ma",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "159836895809",
+                    "record_name": "Character.trauma_rare_officer_chao_ma",
+                    "field": "secondaryEquipment",
+                    "flat_id": "241894605835",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "155900117690",
+              "character_name": "Character.mws_hey_07_trauma_medic_02",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "155900117690",
+                    "record_name": "Character.mws_hey_07_trauma_medic_02",
+                    "field": "primaryEquipment",
+                    "flat_id": "230100227091",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "155900117690",
+              "character_name": "Character.mws_hey_07_trauma_medic_02",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "155900117690",
+                    "record_name": "Character.mws_hey_07_trauma_medic_02",
+                    "field": "secondaryEquipment",
+                    "flat_id": "237189834609",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "177464399944",
+              "character_name": "Character.kab_trauma_rare_officer_chao_ma",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "177464399944",
+                    "record_name": "Character.kab_trauma_rare_officer_chao_ma",
+                    "field": "primaryEquipment",
+                    "flat_id": "250737430136",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "177464399944",
+              "character_name": "Character.kab_trauma_rare_officer_chao_ma",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "177464399944",
+                    "record_name": "Character.kab_trauma_rare_officer_chao_ma",
+                    "field": "secondaryEquipment",
+                    "flat_id": "258573230048",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "190361655288",
+              "character_name": "Character.kab_trauma_soldier_ranged2_dian_ma",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "190361655288",
+                    "record_name": "Character.kab_trauma_soldier_ranged2_dian_ma",
+                    "field": "secondaryEquipment",
+                    "flat_id": "272167455021",
+                    "target_id": "209857301321"
+                  },
+                  {
+                    "record_id": "209857301321",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "271386758165",
+                    "target_id": "209035688927"
+                  },
+                  {
+                    "record_id": "209035688927",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "230112335288",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "156155315557",
+              "character_name": "Character.mws_hey_07_trauma_pilot_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "156155315557",
+                    "record_name": "Character.mws_hey_07_trauma_pilot_01",
+                    "field": "primaryEquipment",
+                    "flat_id": "230735366318",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "156155315557",
+              "character_name": "Character.mws_hey_07_trauma_pilot_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "156155315557",
+                    "record_name": "Character.mws_hey_07_trauma_pilot_01",
+                    "field": "secondaryEquipment",
+                    "flat_id": "238661108487",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "164994265548",
+              "character_name": "Character.mws_hey_07_trauma_soldier_04",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "164994265548",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_04",
+                    "field": "secondaryEquipment",
+                    "flat_id": "248122519557",
+                    "target_id": "234215518474"
+                  },
+                  {
+                    "record_id": "234215518474",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "296471789111",
+                    "target_id": "236211798428"
+                  },
+                  {
+                    "record_id": "236211798428",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline5",
+                    "field": "pool",
+                    "flat_id": "255119637050",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "165407560953",
+              "character_name": "Character.mws_hey_07_trauma_soldier_02",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "165407560953",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_02",
+                    "field": "secondaryEquipment",
+                    "flat_id": "245910121936",
+                    "target_id": "209857301321"
+                  },
+                  {
+                    "record_id": "209857301321",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "271386758165",
+                    "target_id": "209035688927"
+                  },
+                  {
+                    "record_id": "209035688927",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "230112335288",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "165429825760",
+              "character_name": "Character.mws_hey_07_trauma_soldier_06",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "165429825760",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_06",
+                    "field": "secondaryEquipment",
+                    "flat_id": "245074183817",
+                    "target_id": "234215518474"
+                  },
+                  {
+                    "record_id": "234215518474",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "296471789111",
+                    "target_id": "236211798428"
+                  },
+                  {
+                    "record_id": "236211798428",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline5",
+                    "field": "pool",
+                    "flat_id": "255119637050",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "166165013478",
+              "character_name": "Character.mws_pac_06_trauma_soldier_03",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "166165013478",
+                    "record_name": "Character.mws_pac_06_trauma_soldier_03",
+                    "field": "secondaryEquipment",
+                    "flat_id": "248088507957",
+                    "target_id": "234215518474"
+                  },
+                  {
+                    "record_id": "234215518474",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "296471789111",
+                    "target_id": "236211798428"
+                  },
+                  {
+                    "record_id": "236211798428",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline5",
+                    "field": "pool",
+                    "flat_id": "255119637050",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "157883847903",
+              "character_name": "Character.mws_hey_07_trauma_pilot_02",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "157883847903",
+                    "record_name": "Character.mws_hey_07_trauma_pilot_02",
+                    "field": "primaryEquipment",
+                    "flat_id": "229015328204",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "157883847903",
+              "character_name": "Character.mws_hey_07_trauma_pilot_02",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "157883847903",
+                    "record_name": "Character.mws_hey_07_trauma_pilot_02",
+                    "field": "secondaryEquipment",
+                    "flat_id": "237278514893",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "166550819696",
+              "character_name": "Character.mws_pac_06_trauma_soldier_02",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "166550819696",
+                    "record_name": "Character.mws_pac_06_trauma_soldier_02",
+                    "field": "secondaryEquipment",
+                    "flat_id": "247604252019",
+                    "target_id": "209857301321"
+                  },
+                  {
+                    "record_id": "209857301321",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "271386758165",
+                    "target_id": "209035688927"
+                  },
+                  {
+                    "record_id": "209035688927",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "230112335288",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "200910849511",
+              "character_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "200910849511",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare",
+                    "field": "secondaryEquipment",
+                    "flat_id": "280750880612",
+                    "target_id": "234215518474"
+                  },
+                  {
+                    "record_id": "234215518474",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "296471789111",
+                    "target_id": "236211798428"
+                  },
+                  {
+                    "record_id": "236211798428",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline5",
+                    "field": "pool",
+                    "flat_id": "255119637050",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "158198027008",
+              "character_name": "Character.mws_hey_07_trauma_medic_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "158198027008",
+                    "record_name": "Character.mws_hey_07_trauma_medic_01",
+                    "field": "primaryEquipment",
+                    "flat_id": "229672487281",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "158198027008",
+              "character_name": "Character.mws_hey_07_trauma_medic_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "158198027008",
+                    "record_name": "Character.mws_hey_07_trauma_medic_01",
+                    "field": "secondaryEquipment",
+                    "flat_id": "238743251643",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "175616730307",
+              "character_name": "Character.trauma_soldier_ranged2_dian_ma",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "175616730307",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma",
+                    "field": "secondaryEquipment",
+                    "flat_id": "254780736787",
+                    "target_id": "209857301321"
+                  },
+                  {
+                    "record_id": "209857301321",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "271386758165",
+                    "target_id": "209035688927"
+                  },
+                  {
+                    "record_id": "209035688927",
+                    "record_name": "Character.trauma_soldier_ranged2_dian_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "230112335288",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "158501632930",
+              "character_name": "Character.mws_pac_06_trauma_medic_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "158501632930",
+                    "record_name": "Character.mws_pac_06_trauma_medic_01",
+                    "field": "primaryEquipment",
+                    "flat_id": "228855415853",
+                    "target_id": "196023937953"
+                  },
+                  {
+                    "record_id": "196023937953",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "260332992992",
+                    "target_id": "196845558583"
+                  },
+                  {
+                    "record_id": "196845558583",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline3",
+                    "field": "pool",
+                    "flat_id": "217281186799",
+                    "target_id": "183403971023"
+                  },
+                  {
+                    "record_id": "183403971023",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "208083025985",
+                    "target_id": "183689392473"
+                  },
+                  {
+                    "record_id": "183689392473",
+                    "record_name": "Character.TraumaPrimaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "203814954806",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "158501632930",
+              "character_name": "Character.mws_pac_06_trauma_medic_01",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "158501632930",
+                    "record_name": "Character.mws_pac_06_trauma_medic_01",
+                    "field": "secondaryEquipment",
+                    "flat_id": "236545324586",
+                    "target_id": "194524237460"
+                  },
+                  {
+                    "record_id": "194524237460",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "261164584964",
+                    "target_id": "194306080258"
+                  },
+                  {
+                    "record_id": "194306080258",
+                    "record_name": "Character.trauma_rare_officer_chao_ma_inline5",
+                    "field": "pool",
+                    "flat_id": "215833520370",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "167302931567",
+              "character_name": "Character.mws_hey_07_trauma_soldier_03",
+              "route": {
+                "item_id": "122216229834",
+                "item_name": "Items.Preset_Yukimura_Trauma",
+                "edges": [
+                  {
+                    "record_id": "167302931567",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_03",
+                    "field": "secondaryEquipment",
+                    "flat_id": "245417481878",
+                    "target_id": "234215518474"
+                  },
+                  {
+                    "record_id": "234215518474",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline4",
+                    "field": "equipmentItems",
+                    "flat_id": "296471789111",
+                    "target_id": "236211798428"
+                  },
+                  {
+                    "record_id": "236211798428",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline5",
+                    "field": "pool",
+                    "flat_id": "255119637050",
+                    "target_id": "191413242272"
+                  },
+                  {
+                    "record_id": "191413242272",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "217628803592",
+                    "target_id": "192838990134"
+                  },
+                  {
+                    "record_id": "192838990134",
+                    "record_name": "Character.TraumaSecondaryHandgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "213222290143",
+                    "target_id": "122216229834"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app.json",
+              "depot_path": "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_Yukimura_Default",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "skippy",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                },
+                {
+                  "name": "kiji",
+                  "pointer": "/Data/RootChunk/appearances/8/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:02.4059537Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/2",
+          "app_depot": "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app",
+          "parsed_appearanceName": {
+            "flat_id": "187110169602",
+            "flat_name": "Items.Preset_Yukimura_Trauma.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "military1",
+            "military2",
+            "neon1",
+            "neon2",
+            "pimp1",
+            "pimp2",
+            "skippy",
+            "kiji"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_Yukimura_Default",
+              "expected_depot": "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/25",
+                  "fields": {
+                    "name": "Preset_Yukimura_Default",
+                    "path": "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    },
+    {
+      "item_id": "105718335062",
+      "item_name": "Items.Preset_Zhuo_Trauma",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/3",
+          "target": "traumateam_ma",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "170279241078",
+              "flat_name": "Items.Preset_Zhuo_Trauma.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "204386531473",
+              "flat_name": "Items.Preset_Zhuo_Trauma.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_Zhuo_Default"
+              }
+            },
+            "entityName": {
+              "flat_id": "154348354015",
+              "flat_name": "Items.Preset_Zhuo_Trauma.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "143716740929",
+              "flat_name": "Items.Preset_Zhuo_Trauma.itemType",
+              "value": {
+                "id": "87115856579",
+                "name": "ItemType.Wea_Shotgun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "164994265548",
+              "character_name": "Character.mws_hey_07_trauma_soldier_04",
+              "route": {
+                "item_id": "105718335062",
+                "item_name": "Items.Preset_Zhuo_Trauma",
+                "edges": [
+                  {
+                    "record_id": "164994265548",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_04",
+                    "field": "primaryEquipment",
+                    "flat_id": "237244205387",
+                    "target_id": "233559200831"
+                  },
+                  {
+                    "record_id": "233559200831",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "297771014099",
+                    "target_id": "232300586153"
+                  },
+                  {
+                    "record_id": "232300586153",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline3",
+                    "field": "pool",
+                    "flat_id": "256356473127",
+                    "target_id": "153667231696"
+                  },
+                  {
+                    "record_id": "153667231696",
+                    "record_name": "Character.TraumaShotgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "176645263187",
+                    "target_id": "153280900934"
+                  },
+                  {
+                    "record_id": "153280900934",
+                    "record_name": "Character.TraumaShotgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "173065126789",
+                    "target_id": "105718335062"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "165429825760",
+              "character_name": "Character.mws_hey_07_trauma_soldier_06",
+              "route": {
+                "item_id": "105718335062",
+                "item_name": "Items.Preset_Zhuo_Trauma",
+                "edges": [
+                  {
+                    "record_id": "165429825760",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_06",
+                    "field": "primaryEquipment",
+                    "flat_id": "237180494536",
+                    "target_id": "233559200831"
+                  },
+                  {
+                    "record_id": "233559200831",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "297771014099",
+                    "target_id": "232300586153"
+                  },
+                  {
+                    "record_id": "232300586153",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline3",
+                    "field": "pool",
+                    "flat_id": "256356473127",
+                    "target_id": "153667231696"
+                  },
+                  {
+                    "record_id": "153667231696",
+                    "record_name": "Character.TraumaShotgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "176645263187",
+                    "target_id": "153280900934"
+                  },
+                  {
+                    "record_id": "153280900934",
+                    "record_name": "Character.TraumaShotgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "173065126789",
+                    "target_id": "105718335062"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "166165013478",
+              "character_name": "Character.mws_pac_06_trauma_soldier_03",
+              "route": {
+                "item_id": "105718335062",
+                "item_name": "Items.Preset_Zhuo_Trauma",
+                "edges": [
+                  {
+                    "record_id": "166165013478",
+                    "record_name": "Character.mws_pac_06_trauma_soldier_03",
+                    "field": "primaryEquipment",
+                    "flat_id": "237715496894",
+                    "target_id": "233559200831"
+                  },
+                  {
+                    "record_id": "233559200831",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "297771014099",
+                    "target_id": "232300586153"
+                  },
+                  {
+                    "record_id": "232300586153",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline3",
+                    "field": "pool",
+                    "flat_id": "256356473127",
+                    "target_id": "153667231696"
+                  },
+                  {
+                    "record_id": "153667231696",
+                    "record_name": "Character.TraumaShotgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "176645263187",
+                    "target_id": "153280900934"
+                  },
+                  {
+                    "record_id": "153280900934",
+                    "record_name": "Character.TraumaShotgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "173065126789",
+                    "target_id": "105718335062"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "200910849511",
+              "character_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare",
+              "route": {
+                "item_id": "105718335062",
+                "item_name": "Items.Preset_Zhuo_Trauma",
+                "edges": [
+                  {
+                    "record_id": "200910849511",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare",
+                    "field": "primaryEquipment",
+                    "flat_id": "270806293489",
+                    "target_id": "233559200831"
+                  },
+                  {
+                    "record_id": "233559200831",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "297771014099",
+                    "target_id": "232300586153"
+                  },
+                  {
+                    "record_id": "232300586153",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline3",
+                    "field": "pool",
+                    "flat_id": "256356473127",
+                    "target_id": "153667231696"
+                  },
+                  {
+                    "record_id": "153667231696",
+                    "record_name": "Character.TraumaShotgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "176645263187",
+                    "target_id": "153280900934"
+                  },
+                  {
+                    "record_id": "153280900934",
+                    "record_name": "Character.TraumaShotgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "173065126789",
+                    "target_id": "105718335062"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "167302931567",
+              "character_name": "Character.mws_hey_07_trauma_soldier_03",
+              "route": {
+                "item_id": "105718335062",
+                "item_name": "Items.Preset_Zhuo_Trauma",
+                "edges": [
+                  {
+                    "record_id": "167302931567",
+                    "record_name": "Character.mws_hey_07_trauma_soldier_03",
+                    "field": "primaryEquipment",
+                    "flat_id": "239947039535",
+                    "target_id": "233559200831"
+                  },
+                  {
+                    "record_id": "233559200831",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "297771014099",
+                    "target_id": "232300586153"
+                  },
+                  {
+                    "record_id": "232300586153",
+                    "record_name": "Character.trauma_soldier_shotgun2_zhuo_ma_rare_inline3",
+                    "field": "pool",
+                    "flat_id": "256356473127",
+                    "target_id": "153667231696"
+                  },
+                  {
+                    "record_id": "153667231696",
+                    "record_name": "Character.TraumaShotgunPool_inline0",
+                    "field": "items",
+                    "flat_id": "176645263187",
+                    "target_id": "153280900934"
+                  },
+                  {
+                    "record_id": "153280900934",
+                    "record_name": "Character.TraumaShotgunPool_inline1",
+                    "field": "item",
+                    "flat_id": "173065126789",
+                    "target_id": "105718335062"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app.json",
+              "depot_path": "base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_Zhuo_Default",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "star_cannon",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:03.4845140Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/5/cache_evidence/0/weapon_candidates/3",
+          "app_depot": "base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app",
+          "parsed_appearanceName": {
+            "flat_id": "170279241078",
+            "flat_name": "Items.Preset_Zhuo_Trauma.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "star_cannon",
+            "military1",
+            "military2",
+            "neon1",
+            "neon2",
+            "pimp1",
+            "pimp2"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_Zhuo_Default",
+              "expected_depot": "base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/20",
+                  "fields": {
+                    "name": "Preset_Zhuo_Default",
+                    "path": "base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    }
+  ],
+  "families": [
+    {
+      "family": "w_handgun__arasaka_yukimura",
+      "app_depot": "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\handgunboth\\w_handgun__arasaka_yukimura\\w_handgun__arasaka_yukimura__base1.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\handgunboth\\w_handgun__arasaka_yukimura\\w_handgun__arasaka_yukimura__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\handgunboth\\w_handgun__militech_lexington\\w_handgun_ma__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\handgunboth\\w_handgun_arasaka_yukimura\\w_handgun_arasaka_yukimura__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\handgunleft\\w_handgun__mag_wounded_right_arm.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\handgunright\\w_handgun__mag_wounded_left_arm.anims",
+        "base\\animations\\weapon\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura__base1.anims",
+        "base\\animations\\weapon\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\handgun\\w_handgun__rcv1.anims",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__base1_01.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__base1_01_decal_01.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__base1_01_decal_bitch.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__base1_01_decal_skippy.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__base1_01_diode1.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__mag_std_01.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__mag_std_01_decal_01.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\entities\\meshes\\w_handgun__arasaka_yukimura__mag_stdr_01.mesh",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\rig\\w_handgun__arasaka_yukimura__base1.rig",
+        "base\\weapons\\firearms\\handgun\\arasaka_yukimura\\rig\\w_handgun__arasaka_yukimura__mag_std.rig",
+        "base\\weapons\\firearms\\handgun\\rig\\w_handgun__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "military1",
+        "military2",
+        "neon1",
+        "neon2",
+        "pimp1",
+        "pimp2",
+        "skippy",
+        "kiji"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\handgun\\arasaka_yukimura\\w_handgun__arasaka_yukimura.app.json",
+        "size_bytes": 2296440,
+        "sha256": "578d5c4f60d44630a7f246024e87ae5e199b0671c79df52a81b27e0b81782519"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    },
+    {
+      "family": "w_rifle_assault__arasaka_masamune",
+      "app_depot": "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\w_rifle_assault_arasaka_masamune\\w_rifle_assault__arasaka_masamune__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\rifle\\w_rifle_assault_arasaka_masamune\\w_rifle_arasaka_masamune__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune__base1.anims",
+        "base\\animations\\weapon\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\rifle_assault\\w_rifle_assault__rcv1.anims",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_dec_tt_d.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_dec_tt_logo.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decal_afterlife_d.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decal_military_a.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decal_military_b.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decal_neon1_d.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decals_d.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decals_n.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_decals_pimp_n.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_diode_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_diode_02.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_flashlight.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_ironsights.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_01_lights.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_02.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_02_decal_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_02_diode_front.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_02_ironsight_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__base1_02_ironsight_01_decal_n01_default.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_std_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_std_01_cover_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_std_02.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_std_02_decal_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_stdr_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_stdr_01_cover_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_stdr_02.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\entities\\meshes\\w_rifle_assault__arasaka_masamune__mag_stdr_02_decal_01.mesh",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\rig\\w_rifle_assault__arasaka_masamune__base1.rig",
+        "base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\rig\\w_rifle_assault__arasaka_masamune__mag_std.rig",
+        "base\\weapons\\firearms\\rifle_assault\\rig\\w_rifle_assault__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "afterlife",
+        "pimp_01",
+        "neon_01",
+        "nowaki_default",
+        "trauma",
+        "military1",
+        "military2",
+        "pimp_02",
+        "neon_02",
+        "nowaki_2077",
+        "default_flashlight",
+        "default_flashlight_shadow"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\rifle_assault\\arasaka_masamune\\w_rifle_assault__arasaka_masamune.app.json",
+        "size_bytes": 4371673,
+        "sha256": "63cc60d96c4759c16f565f0469afb52ebec33e32c11269c8521d0a47f6b46a8c"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    },
+    {
+      "family": "w_special__kangtao_dian",
+      "app_depot": "base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\smg\\w_smg__kangtao_dian\\w_special__kangtao_dian__base1.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\smg\\w_smg__kangtao_dian\\w_special__kangtao_dian__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\smg\\w_smg__kangtao_dian\\w_special__kangtao_dian__base1.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\smg\\w_smg__kangtao_dian\\w_special__kangtao_dian__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian__base1.anims",
+        "base\\animations\\weapon\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian__rcv1.anims",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__base1_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__base1_01_decals_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__base1_01_leds.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__base1_02.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__base1_02_decal1.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__mag_std_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__mag_stdr_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__rcv1_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__rcv1_01_decal_d01_neon1.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__rcv1_01_decal_yinglong.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__rcv1_01_decals_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\entities\\meshes\\w_special__kangtao_dian__rcv1_01_leds.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\rig\\w_special__kangtao_dian__base1.rig",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\rig\\w_special__kangtao_dian__mag_std.rig",
+        "base\\weapons\\firearms\\special\\kangtao_dian\\rig\\w_special__kangtao_dian__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "q001_hologram",
+        "trauma",
+        "yinglong",
+        "military1",
+        "military2",
+        "neon1",
+        "neon2",
+        "pimp1",
+        "pimp2"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\special\\kangtao_dian\\w_special__kangtao_dian.app.json",
+        "size_bytes": 2950952,
+        "sha256": "094bfaa34de7d0de94b9801e6ea7d43d9353b32c98c4868dfed9ebeda63aab82"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    },
+    {
+      "family": "w_special__kangtao_zhuo",
+      "app_depot": "base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\shotgun\\w_shotgun__kangtao_zhuo\\w_shotgun__kangtao_zhuo__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\shotgun\\w_shotgun__kangtao_zhuo\\w_shotgun__kangtao_zhuo__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo__base1.anims",
+        "base\\animations\\weapon\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo__rcv1.anims",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__base1_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__base1_01_decal_01_d.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__base1_01_decal_01_n.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__base1_01_decal_d01_star_cannon.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__base1_01_diode1.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__base1_01_diode2.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__mag_std_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__mag_std_01_decal_01_d.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__mag_std_01_decal_d01_star_cannon.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__mag_stdr_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__mag_stdr_01_decal_01_d.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__mag_stdr_01_decal_d01_star_cannon.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__rcv1_01.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__rcv1_01_decal_01_d.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\entities\\meshes\\w_special__kangtao_zhuo__rcv1_01_decal_01_n.mesh",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\rig\\w_special__kangtao_zhuo__base1.rig",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\rig\\w_special__kangtao_zhuo__mag_std.rig",
+        "base\\weapons\\firearms\\special\\kangtao_zhuo\\rig\\w_special__kangtao_zhuo__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "star_cannon",
+        "military1",
+        "military2",
+        "neon1",
+        "neon2",
+        "pimp1",
+        "pimp2"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\special\\kangtao_zhuo\\w_special__kangtao_zhuo.app.json",
+        "size_bytes": 2853789,
+        "sha256": "71cd7debf33f9dd47ac1373c812c9c10a3d3672dd6e90338fcaf660e17216be9"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    }
+  ],
+  "source_manifest": {
+    "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\weapon_sources\\recovered_20261101_121904_595140\\source_manifest.json",
+    "sha256": "0b22005dde894ce5107fe3f8069bcc42f3ec00b32e56deb78d2f2504dc37f47a",
+    "bytes": 141306255,
+    "snapshot_at": "2026-11-01T04:48:09.269385+00:00"
+  }
+}

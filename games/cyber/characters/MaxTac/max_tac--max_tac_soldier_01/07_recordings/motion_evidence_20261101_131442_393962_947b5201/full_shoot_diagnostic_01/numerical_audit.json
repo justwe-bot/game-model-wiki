@@ -1,0 +1,5715 @@
+{
+  "accepted": false,
+  "game_faithful": false,
+  "status": "three_GPU_frames_complete_requires_visual_review_NOT_ACCEPTED",
+  "scope": "Full MaxTac original-material original-skin ARTISTIC shoot reconstruction DIAGNOSTIC ONLY",
+  "limitations": [
+    "Auxiliary DQ is artistic nearest-anatomical-segment reconstruction, NOT recovered game graph",
+    "Facial bones static relative to source Head delta; facial animation NOT present",
+    "GARMENT source parameters and binding space unverified; lower-leg DEVELOP source material unresolved",
+    "Weapon absent: attachment deferred until body visual review; NOT a complete shooting character",
+    "walk/attack/death NOT attempted; no 29-character expansion"
+  ],
+  "rigs": [
+    {
+      "name": "Armature__g1_013_ma_gloves__foil",
+      "bones": 109,
+      "source_common": 49,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__g1_013_ma_gloves__foil",
+        "slot": "OBArmature__g1_013_ma_gloves__foil",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1090,
+        "basis_decomposition_max_error": 2.250075340270996e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              0.11032808572053909,
+              -0.972554624080658,
+              0.20484867691993713,
+              -0.09751641750335693
+            ],
+            [
+              0.9313815236091614,
+              0.1731131374835968,
+              0.32025572657585144,
+              -0.498646080493927
+            ],
+            [
+              -0.3469270169734955,
+              0.15546146035194397,
+              0.9249172806739807,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.11032866686582565,
+              -0.9725550413131714,
+              0.20484893023967743,
+              -0.09751641750335693
+            ],
+            [
+              0.9313814640045166,
+              0.1731123924255371,
+              0.32025352120399475,
+              -0.498646080493927
+            ],
+            [
+              -0.34692686796188354,
+              0.1554592102766037,
+              0.924917995929718,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999994039535522,
+            0.9999993443489075
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__g1_013_ma_gloves__foil_dec_max_tac",
+      "bones": 21,
+      "source_common": 8,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__g1_013_ma_gloves__foil_dec_max_tac",
+        "slot": "OBArmature__g1_013_ma_gloves__foil_dec_max_tac",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 210,
+        "basis_decomposition_max_error": 1.2218952178955078e-06,
+        "worst_decomposition_joint": {
+          "joint": "RightInHandPinky",
+          "matrix": [
+            [
+              0.5773755311965942,
+              -0.3476284146308899,
+              -0.7387765645980835,
+              0.29486995935440063
+            ],
+            [
+              0.8158904910087585,
+              0.28000158071517944,
+              0.5058873295783997,
+              -0.2668314576148987
+            ],
+            [
+              0.030998528003692627,
+              -0.8948490619659424,
+              0.44529393315315247,
+              -0.1887603998184204
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.5773758292198181,
+              -0.34762877225875854,
+              -0.7387771010398865,
+              0.29486995935440063
+            ],
+            [
+              0.8158904314041138,
+              0.28000205755233765,
+              0.5058877468109131,
+              -0.2668314576148987
+            ],
+            [
+              0.030998148024082184,
+              -0.8948489427566528,
+              0.44529271125793457,
+              -0.1887603998184204
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000003576278687,
+            1.0000005960464478,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__h0_000_ma_c__basehead",
+      "bones": 254,
+      "source_common": 6,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__h0_000_ma_c__basehead",
+        "slot": "OBArmature__h0_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 2540,
+        "basis_decomposition_max_error": 7.152557373046875e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.8911858201026917,
+              -0.007440622895956039,
+              -0.4535777270793915,
+              -0.08192911744117737
+            ],
+            [
+              0.13562048971652985,
+              0.9585068821907043,
+              0.2507418692111969,
+              -0.1736297905445099
+            ],
+            [
+              0.4328940510749817,
+              -0.2849719524383545,
+              0.855215311050415,
+              0.1264331340789795
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8911861181259155,
+              -0.007440410554409027,
+              -0.4535784423351288,
+              -0.08192911744117737
+            ],
+            [
+              0.13562072813510895,
+              0.9585067629814148,
+              0.25074175000190735,
+              -0.1736297905445099
+            ],
+            [
+              0.4328935444355011,
+              -0.2849721908569336,
+              0.8552149534225464,
+              0.1264331340789795
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000011920928955,
+            0.9999998807907104,
+            0.9999986886978149
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__h1_002_ma_hat__headcap",
+      "bones": 137,
+      "source_common": 10,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__h1_002_ma_hat__headcap",
+        "slot": "OBArmature__h1_002_ma_hat__headcap",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1370,
+        "basis_decomposition_max_error": 6.556510925292969e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.8911896347999573,
+              -0.007452584803104401,
+              -0.4535701870918274,
+              -0.08192932605743408
+            ],
+            [
+              0.1356358528137207,
+              0.9585020542144775,
+              0.2507522702217102,
+              -0.17362716794013977
+            ],
+            [
+              0.432881236076355,
+              -0.2849881649017334,
+              0.8552166223526001,
+              0.12643444538116455
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8911898136138916,
+              -0.007452402729541063,
+              -0.4535708427429199,
+              -0.08192932605743408
+            ],
+            [
+              0.13563606142997742,
+              0.9585020542144775,
+              0.25075218081474304,
+              -0.17362716794013977
+            ],
+            [
+              0.43288078904151917,
+              -0.28498831391334534,
+              0.8552163243293762,
+              0.12643444538116455
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            1.0,
+            0.9999990463256836
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__h2_016_ma_helmet__max_tac",
+      "bones": 1,
+      "source_common": 1,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__h2_016_ma_helmet__max_tac",
+        "slot": "OBArmature__h2_016_ma_helmet__max_tac",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 10,
+        "basis_decomposition_max_error": 2.980232238769531e-07,
+        "worst_decomposition_joint": {
+          "joint": "Head",
+          "matrix": [
+            [
+              0.8597279787063599,
+              -0.423860639333725,
+              -0.28497225046157837,
+              -0.176477313041687
+            ],
+            [
+              0.45590752363204956,
+              0.8883840441703796,
+              0.05405930057168007,
+              0.07397244870662689
+            ],
+            [
+              0.2302512526512146,
+              -0.1763971894979477,
+              0.9570098519325256,
+              0.23937325179576874
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8597280979156494,
+              -0.42386093735694885,
+              -0.28497233986854553,
+              -0.176477313041687
+            ],
+            [
+              0.4559074342250824,
+              0.8883839249610901,
+              0.0540592335164547,
+              0.07397244870662689
+            ],
+            [
+              0.2302512526512146,
+              -0.17639730870723724,
+              0.9570097923278809,
+              0.23937325179576874
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999997615814209,
+            1.0,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__he_000_ma_c__basehead",
+      "bones": 56,
+      "source_common": 1,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__he_000_ma_c__basehead",
+        "slot": "OBArmature__he_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 560,
+        "basis_decomposition_max_error": 2.980232238769531e-07,
+        "worst_decomposition_joint": {
+          "joint": "l_J_eye_JNT",
+          "matrix": [
+            [
+              0.8597279787063599,
+              -0.4238605499267578,
+              -0.28497233986854553,
+              -0.19602477550506592
+            ],
+            [
+              0.4559074640274048,
+              0.8883840441703796,
+              0.05405928194522858,
+              0.1053973138332367
+            ],
+            [
+              0.23025137186050415,
+              -0.17639721930027008,
+              0.9570097923278809,
+              0.2526562809944153
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8597280979156494,
+              -0.4238608479499817,
+              -0.2849724292755127,
+              -0.19602477550506592
+            ],
+            [
+              0.4559073746204376,
+              0.8883839249610901,
+              0.0540592260658741,
+              0.1053973138332367
+            ],
+            [
+              0.23025137186050415,
+              -0.17639733850955963,
+              0.9570097923278809,
+              0.2526562809944153
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999997615814209,
+            1.0,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__heb_000_ma_c__basehead",
+      "bones": 80,
+      "source_common": 2,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__heb_000_ma_c__basehead",
+        "slot": "OBArmature__heb_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 800,
+        "basis_decomposition_max_error": 2.980232238769531e-07,
+        "worst_decomposition_joint": {
+          "joint": "Head",
+          "matrix": [
+            [
+              0.8597279787063599,
+              -0.4238605499267578,
+              -0.28497233986854553,
+              -0.176477313041687
+            ],
+            [
+              0.4559074640274048,
+              0.8883840441703796,
+              0.05405928194522858,
+              0.07397238910198212
+            ],
+            [
+              0.23025137186050415,
+              -0.17639721930027008,
+              0.9570097923278809,
+              0.23937326669692993
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8597280979156494,
+              -0.4238608479499817,
+              -0.2849724292755127,
+              -0.176477313041687
+            ],
+            [
+              0.4559073746204376,
+              0.8883839249610901,
+              0.0540592260658741,
+              0.07397238910198212
+            ],
+            [
+              0.23025137186050415,
+              -0.17639733850955963,
+              0.9570097923278809,
+              0.23937326669692993
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999997615814209,
+            1.0,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__ht_000_ma_c__basehead",
+      "bones": 11,
+      "source_common": 1,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__ht_000_ma_c__basehead",
+        "slot": "OBArmature__ht_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 110,
+        "basis_decomposition_max_error": 2.980232238769531e-07,
+        "worst_decomposition_joint": {
+          "joint": "Head",
+          "matrix": [
+            [
+              0.8597279787063599,
+              -0.4238605499267578,
+              -0.28497233986854553,
+              -0.176477313041687
+            ],
+            [
+              0.4559074640274048,
+              0.8883840441703796,
+              0.05405928194522858,
+              0.07397238910198212
+            ],
+            [
+              0.23025137186050415,
+              -0.17639721930027008,
+              0.9570097923278809,
+              0.23937326669692993
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8597280979156494,
+              -0.4238608479499817,
+              -0.2849724292755127,
+              -0.176477313041687
+            ],
+            [
+              0.4559073746204376,
+              0.8883839249610901,
+              0.0540592260658741,
+              0.07397238910198212
+            ],
+            [
+              0.23025137186050415,
+              -0.17639733850955963,
+              0.9570097923278809,
+              0.23937326669692993
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999997615814209,
+            1.0,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__hx_000_ma_c__basehead_pimples_01",
+      "bones": 176,
+      "source_common": 6,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__hx_000_ma_c__basehead_pimples_01",
+        "slot": "OBArmature__hx_000_ma_c__basehead_pimples_01",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1760,
+        "basis_decomposition_max_error": 4.76837158203125e-07,
+        "worst_decomposition_joint": {
+          "joint": "LeftShoulder",
+          "matrix": [
+            [
+              0.8602744340896606,
+              -0.5059042572975159,
+              -0.06316060572862625,
+              -0.07137010246515274
+            ],
+            [
+              0.4969455599784851,
+              0.859748363494873,
+              -0.11780095100402832,
+              -0.15538978576660156
+            ],
+            [
+              0.1138986274600029,
+              0.06995372474193573,
+              0.9910262823104858,
+              0.1996835470199585
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8602741956710815,
+              -0.5059040188789368,
+              -0.06316081434488297,
+              -0.07137010246515274
+            ],
+            [
+              0.4969460368156433,
+              0.8597484827041626,
+              -0.11780102550983429,
+              -0.15538978576660156
+            ],
+            [
+              0.11389845609664917,
+              0.06995369493961334,
+              0.9910262227058411,
+              0.1996835470199585
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999999403953552,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__i1_016_ma_belt__police_eq_vest",
+      "bones": 1,
+      "source_common": 1,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__i1_016_ma_belt__police_eq_vest",
+        "slot": "OBArmature__i1_016_ma_belt__police_eq_vest",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 10,
+        "basis_decomposition_max_error": 2.980232238769531e-07,
+        "worst_decomposition_joint": {
+          "joint": "Hips",
+          "matrix": [
+            [
+              0.9735484719276428,
+              0.22021901607513428,
+              0.06088399887084961,
+              -0.15914446115493774
+            ],
+            [
+              -0.1852971762418747,
+              0.6050984263420105,
+              0.7742871642112732,
+              -0.05897761136293411
+            ],
+            [
+              0.13367170095443726,
+              -0.7650875449180603,
+              0.6298986077308655,
+              0.1300235390663147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.973548412322998,
+              0.2202189415693283,
+              0.06088411808013916,
+              -0.15914446115493774
+            ],
+            [
+              -0.18529736995697021,
+              0.605098307132721,
+              0.7742872834205627,
+              -0.05897761136293411
+            ],
+            [
+              0.133671835064888,
+              -0.7650878429412842,
+              0.6298986077308655,
+              0.1300235390663147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999997615814209,
+            0.9999998807907104
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__i1_038_ma_slot__gun_holster",
+      "bones": 17,
+      "source_common": 7,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__i1_038_ma_slot__gun_holster",
+        "slot": "OBArmature__i1_038_ma_slot__gun_holster",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 170,
+        "basis_decomposition_max_error": 2.980232238769531e-07,
+        "worst_decomposition_joint": {
+          "joint": "Hips",
+          "matrix": [
+            [
+              0.9735484719276428,
+              0.22021901607513428,
+              0.06088399887084961,
+              -0.15914446115493774
+            ],
+            [
+              -0.1852971762418747,
+              0.6050984263420105,
+              0.7742871642112732,
+              -0.05897761136293411
+            ],
+            [
+              0.13367170095443726,
+              -0.7650875449180603,
+              0.6298986077308655,
+              0.1300235390663147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.973548412322998,
+              0.2202189415693283,
+              0.06088411808013916,
+              -0.15914446115493774
+            ],
+            [
+              -0.18529736995697021,
+              0.605098307132721,
+              0.7742872834205627,
+              -0.05897761136293411
+            ],
+            [
+              0.133671835064888,
+              -0.7650878429412842,
+              0.6298986077308655,
+              0.1300235390663147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999997615814209,
+            0.9999998807907104
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__i1_095_ma_slot__baton_calf",
+      "bones": 8,
+      "source_common": 2,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__i1_095_ma_slot__baton_calf",
+        "slot": "OBArmature__i1_095_ma_slot__baton_calf",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 80,
+        "basis_decomposition_max_error": 2.682209014892578e-07,
+        "worst_decomposition_joint": {
+          "joint": "RightUpLeg",
+          "matrix": [
+            [
+              0.9198236465454102,
+              0.38362011313438416,
+              0.08222153782844543,
+              -0.10313451290130615
+            ],
+            [
+              -0.36952969431877136,
+              0.7767171859741211,
+              0.5100569725036621,
+              -0.11353801935911179
+            ],
+            [
+              0.13180503249168396,
+              -0.49954527616500854,
+              0.8562018275260925,
+              0.0952780693769455
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.9198235869407654,
+              0.38362014293670654,
+              0.0822216346859932,
+              -0.10313451290130615
+            ],
+            [
+              -0.3695298433303833,
+              0.7767171263694763,
+              0.5100569128990173,
+              -0.11353801935911179
+            ],
+            [
+              0.13180513679981232,
+              -0.49954554438591003,
+              0.8562018871307373,
+              0.0952780693769455
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999997615814209,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__l1_077_ma_pants__trauma_small",
+      "bones": 42,
+      "source_common": 18,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__l1_077_ma_pants__trauma_small",
+        "slot": "OBArmature__l1_077_ma_pants__trauma_small",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 420,
+        "basis_decomposition_max_error": 1.3709068298339844e-06,
+        "worst_decomposition_joint": {
+          "joint": "RightHandPinky3",
+          "matrix": [
+            [
+              -0.3837538957595825,
+              -0.6267731785774231,
+              -0.6781527400016785,
+              -0.1504313349723816
+            ],
+            [
+              -0.6752301454544067,
+              0.6914129853248596,
+              -0.25693008303642273,
+              -0.32831650972366333
+            ],
+            [
+              0.629918098449707,
+              0.3593082129955292,
+              -0.68854820728302,
+              -0.3920907974243164
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.3837530314922333,
+              -0.6267733573913574,
+              -0.6781513690948486,
+              -0.1504313349723816
+            ],
+            [
+              -0.675229549407959,
+              0.6914122700691223,
+              -0.2569310665130615,
+              -0.32831650972366333
+            ],
+            [
+              0.6299190521240234,
+              0.3593091666698456,
+              -0.6885489821434021,
+              -0.3920907974243164
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.999999463558197,
+            1.0000014305114746
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__l1_077_ma_pants__trauma_small_dec_logo",
+      "bones": 14,
+      "source_common": 5,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__l1_077_ma_pants__trauma_small_dec_logo",
+        "slot": "OBArmature__l1_077_ma_pants__trauma_small_dec_logo",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 140,
+        "basis_decomposition_max_error": 5.364418029785156e-07,
+        "worst_decomposition_joint": {
+          "joint": "LeftHandIndex3",
+          "matrix": [
+            [
+              -0.7585761547088623,
+              -0.5082007050514221,
+              -0.40779250860214233,
+              0.10468322038650513
+            ],
+            [
+              0.2414652705192566,
+              0.3620331883430481,
+              -0.9003481864929199,
+              0.9249999523162842
+            ],
+            [
+              0.6051920056343079,
+              -0.781450092792511,
+              -0.15191739797592163,
+              0.07844612002372742
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.7585766911506653,
+              -0.5082006454467773,
+              -0.4077925980091095,
+              0.10468322038650513
+            ],
+            [
+              0.24146518111228943,
+              0.3620332181453705,
+              -0.900348424911499,
+              0.9249999523162842
+            ],
+            [
+              0.6051921248435974,
+              -0.7814502716064453,
+              -0.15191739797592163,
+              0.07844612002372742
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000003576278687,
+            1.0000001192092896,
+            1.000000238418579
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__s1_053_ma_boot__military",
+      "bones": 82,
+      "source_common": 62,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__s1_053_ma_boot__military",
+        "slot": "OBArmature__s1_053_ma_boot__military",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 820,
+        "basis_decomposition_max_error": 1.2516975402832031e-06,
+        "worst_decomposition_joint": {
+          "joint": "RightHandPinky3",
+          "matrix": [
+            [
+              -0.41029930114746094,
+              -0.5709783434867859,
+              -0.7110811471939087,
+              -0.1430450677871704
+            ],
+            [
+              -0.6820960640907288,
+              0.70969557762146,
+              -0.17629152536392212,
+              -0.3036189079284668
+            ],
+            [
+              0.6053115129470825,
+              0.412695050239563,
+              -0.6806501150131226,
+              -0.4243854880332947
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.4103005528450012,
+              -0.570978581905365,
+              -0.7110822796821594,
+              -0.1430450677871704
+            ],
+            [
+              -0.6820961833000183,
+              0.7096959352493286,
+              -0.17629055678844452,
+              -0.3036189079284668
+            ],
+            [
+              0.60531085729599,
+              0.41269412636756897,
+              -0.6806495189666748,
+              -0.4243854880332947
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001311302185,
+            1.0000005960464478,
+            0.9999998211860657
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd",
+      "bones": 59,
+      "source_common": 13,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_073_ma_vest__tactic_collar2_ncpd",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 590,
+        "basis_decomposition_max_error": 1.6689300537109375e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              0.10342449694871902,
+              -0.9744330644607544,
+              0.19945353269577026,
+              -0.09786945581436157
+            ],
+            [
+              0.9324561357498169,
+              0.16478067636489868,
+              0.3215211033821106,
+              -0.49925750494003296
+            ],
+            [
+              -0.3461659848690033,
+              0.15273016691207886,
+              0.9256574511528015,
+              0.18750035762786865
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.10342492908239365,
+              -0.974433422088623,
+              0.1994536817073822,
+              -0.09786945581436157
+            ],
+            [
+              0.9324560761451721,
+              0.16478000581264496,
+              0.3215194642543793,
+              -0.49925750494003296
+            ],
+            [
+              -0.3461659252643585,
+              0.15272849798202515,
+              0.9256579875946045,
+              0.18750035762786865
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000009536743164,
+            0.999999463558197,
+            0.9999996423721313
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge",
+      "bones": 7,
+      "source_common": 4,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_badge",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 70,
+        "basis_decomposition_max_error": 3.2782554626464844e-07,
+        "worst_decomposition_joint": {
+          "joint": "l_chest_front_C_top_out_JNT",
+          "matrix": [
+            [
+              0.6825782656669617,
+              -0.7258849740028381,
+              0.08472096920013428,
+              0.00773930549621582
+            ],
+            [
+              0.5645934343338013,
+              0.45016664266586304,
+              -0.6917981505393982,
+              -0.0009984374046325684
+            ],
+            [
+              0.4640273451805115,
+              0.5200390219688416,
+              0.717103898525238,
+              0.2580323815345764
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.6825782060623169,
+              -0.7258852124214172,
+              0.08472105115652084,
+              0.00773930549621582
+            ],
+            [
+              0.5645935535430908,
+              0.4501663148403168,
+              -0.691798210144043,
+              -0.0009984374046325684
+            ],
+            [
+              0.4640275239944458,
+              0.5200391411781311,
+              0.7171038389205933,
+              0.2580323815345764
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000001192092896,
+            0.9999997615814209,
+            1.0000001192092896
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+      "bones": 49,
+      "source_common": 10,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 490,
+        "basis_decomposition_max_error": 8.642673492431641e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.5756098628044128,
+              -0.7008141875267029,
+              -0.4213443994522095,
+              -0.15708139538764954
+            ],
+            [
+              0.8172144293785095,
+              0.5112285614013672,
+              0.2660967707633972,
+              -0.1773974895477295
+            ],
+            [
+              0.028918661177158356,
+              -0.49749755859375,
+              0.8669832348823547,
+              0.07711148262023926
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.5756103992462158,
+              -0.7008148431777954,
+              -0.4213447570800781,
+              -0.15708139538764954
+            ],
+            [
+              0.8172141313552856,
+              0.5112283825874329,
+              0.26609763503074646,
+              -0.1773974895477295
+            ],
+            [
+              0.02891838736832142,
+              -0.49749690294265747,
+              0.8669828772544861,
+              0.07711148262023926
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000011920928955,
+            0.999999463558197,
+            0.9999992847442627
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+      "bones": 10,
+      "source_common": 2,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 100,
+        "basis_decomposition_max_error": 4.76837158203125e-07,
+        "worst_decomposition_joint": {
+          "joint": "RightShoulder",
+          "matrix": [
+            [
+              0.7647822499275208,
+              -0.22765246033668518,
+              0.602729320526123,
+              -0.04564233496785164
+            ],
+            [
+              0.5185980200767517,
+              0.7726244926452637,
+              -0.3662078380584717,
+              0.10919535160064697
+            ],
+            [
+              -0.3823148012161255,
+              0.5926429033279419,
+              0.7089499235153198,
+              -0.13292600214481354
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.7647824287414551,
+              -0.22765293717384338,
+              0.602729320526123,
+              -0.04564233496785164
+            ],
+            [
+              0.5185977220535278,
+              0.7726243138313293,
+              -0.36620792746543884,
+              0.10919535160064697
+            ],
+            [
+              -0.3823150396347046,
+              0.5926429629325867,
+              0.708949863910675,
+              -0.13292600214481354
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000000238418579,
+            0.9999999403953552,
+            1.0000003576278687
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio",
+      "bones": 12,
+      "source_common": 4,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_radio",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 120,
+        "basis_decomposition_max_error": 4.76837158203125e-07,
+        "worst_decomposition_joint": {
+          "joint": "RightShoulder",
+          "matrix": [
+            [
+              0.7647822499275208,
+              -0.22765246033668518,
+              0.602729320526123,
+              -0.04564233496785164
+            ],
+            [
+              0.5185980200767517,
+              0.7726244926452637,
+              -0.3662078380584717,
+              0.10919535160064697
+            ],
+            [
+              -0.3823148012161255,
+              0.5926429033279419,
+              0.7089499235153198,
+              -0.13292600214481354
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.7647824287414551,
+              -0.22765293717384338,
+              0.602729320526123,
+              -0.04564233496785164
+            ],
+            [
+              0.5185977220535278,
+              0.7726243138313293,
+              -0.36620792746543884,
+              0.10919535160064697
+            ],
+            [
+              -0.3823150396347046,
+              0.5926429629325867,
+              0.708949863910675,
+              -0.13292600214481354
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000000238418579,
+            0.9999999403953552,
+            1.0000003576278687
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_106_ma_jacket__trauma_small",
+      "bones": 109,
+      "source_common": 34,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_106_ma_jacket__trauma_small",
+        "slot": "OBArmature__t2_106_ma_jacket__trauma_small",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1090,
+        "basis_decomposition_max_error": 2.250075340270996e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              0.11032808572053909,
+              -0.972554624080658,
+              0.20484867691993713,
+              -0.09751641750335693
+            ],
+            [
+              0.9313815236091614,
+              0.1731131374835968,
+              0.32025572657585144,
+              -0.498646080493927
+            ],
+            [
+              -0.3469270169734955,
+              0.15546146035194397,
+              0.9249172806739807,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.11032866686582565,
+              -0.9725550413131714,
+              0.20484893023967743,
+              -0.09751641750335693
+            ],
+            [
+              0.9313814640045166,
+              0.1731123924255371,
+              0.32025352120399475,
+              -0.498646080493927
+            ],
+            [
+              -0.34692686796188354,
+              0.1554592102766037,
+              0.924917995929718,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999994039535522,
+            0.9999993443489075
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_106_ma_jacket__trauma_small_dec_cable",
+      "bones": 48,
+      "source_common": 16,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_106_ma_jacket__trauma_small_dec_cable",
+        "slot": "OBArmature__t2_106_ma_jacket__trauma_small_dec_cable",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 480,
+        "basis_decomposition_max_error": 2.250075340270996e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              0.11032808572053909,
+              -0.972554624080658,
+              0.20484867691993713,
+              -0.09751641750335693
+            ],
+            [
+              0.9313815236091614,
+              0.1731131374835968,
+              0.32025572657585144,
+              -0.498646080493927
+            ],
+            [
+              -0.3469270169734955,
+              0.15546146035194397,
+              0.9249172806739807,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.11032866686582565,
+              -0.9725550413131714,
+              0.20484893023967743,
+              -0.09751641750335693
+            ],
+            [
+              0.9313814640045166,
+              0.1731123924255371,
+              0.32025352120399475,
+              -0.498646080493927
+            ],
+            [
+              -0.34692686796188354,
+              0.1554592102766037,
+              0.924917995929718,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999994039535522,
+            0.9999993443489075
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_106_ma_jacket__trauma_small_dec_logo",
+      "bones": 27,
+      "source_common": 6,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.04m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_shoot_Armature__t2_106_ma_jacket__trauma_small_dec_logo",
+        "slot": "OBArmature__t2_106_ma_jacket__trauma_small_dec_logo",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 270,
+        "basis_decomposition_max_error": 2.250075340270996e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              0.11032808572053909,
+              -0.972554624080658,
+              0.20484867691993713,
+              -0.09751641750335693
+            ],
+            [
+              0.9313815236091614,
+              0.1731131374835968,
+              0.32025572657585144,
+              -0.498646080493927
+            ],
+            [
+              -0.3469270169734955,
+              0.15546146035194397,
+              0.9249172806739807,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.11032866686582565,
+              -0.9725550413131714,
+              0.20484893023967743,
+              -0.09751641750335693
+            ],
+            [
+              0.9313814640045166,
+              0.1731123924255371,
+              0.32025352120399475,
+              -0.498646080493927
+            ],
+            [
+              -0.34692686796188354,
+              0.1554592102766037,
+              0.924917995929718,
+              0.18795812129974365
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999994039535522,
+            0.9999993443489075
+          ]
+        }
+      }
+    }
+  ],
+  "renders": [
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\full_shoot_diagnostic_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0001.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\full_shoot_diagnostic_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0060.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\full_shoot_diagnostic_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0105.png"
+  ],
+  "source_sha256": {
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\gpu_character_check\\20261101_114018_303208\\character_static.blend": "f944c7f99b8a6a4c6ee280edb1839668847f8567b996ed7cd45d20f420fe05d3",
+    "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims.glb": "ec9a663f7db68cbdd73e9200eacdbd08403839d5ca2c5c525ed739ee76460398",
+    "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\characters\\base_entities\\man_base\\man_base.rig.json": "5fcdedca9c56bebefedb0e8c42b57497f86d48493999daed8097c4c2f1fd9bfb",
+    "C:\\Code\\UeCover\\scripts\\probe_auxiliary_motion_field.py": "baf25611f595954e4ac0946f219cb7bfba0461ec5bd267989ec94ec2cefef64f"
+  },
+  "original_mesh_count": 47,
+  "visible_mesh_count": 46,
+  "part_count": 23,
+  "visible_vertices": 98202,
+  "baseline_bounds": [
+    [
+      -0.533948540687561,
+      -0.23146218061447144,
+      -0.0016146042617037892
+    ],
+    [
+      0.5337706804275513,
+      0.29833829402923584,
+      1.8258192539215088
+    ]
+  ],
+  "source_animation": {
+    "name": "shoot_precise",
+    "extras": {
+      "schema": {
+        "type": "wkit.cyber.gltf.anims",
+        "version": 5
+      },
+      "animationType": "Normal",
+      "rootMotionType": "Unknown",
+      "frameClamping": false,
+      "frameClampingStartFrame": -1,
+      "frameClampingEndFrame": -1,
+      "numExtraJoints": 0,
+      "numExtraTracks": 0,
+      "constTrackKeys": [],
+      "trackKeys": [
+        {
+          "trackIndex": 0,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.06666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.06666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.06666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.06666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.06666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.06666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.06666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.06666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.06666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.06666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.06666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.06666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.06666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.13333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.13333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.13333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.13333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.13333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.13333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.13333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.13333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.13333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.13333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.13333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.13333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.13333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.20000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.20000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.20000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.20000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.20000002,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.20000002,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.20000002,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.20000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.20000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.20000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.20000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.20000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.20000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.26666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.26666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.26666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.26666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.26666668,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.26666668,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.26666668,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.26666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.26666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.26666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.26666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.26666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.26666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.33333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.33333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.33333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.33333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.33333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.33333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.33333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.33333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.33333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.33333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.33333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.33333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.33333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.40000004,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.40000004,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.40000004,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.40000004,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.40000004,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.40000004,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.40000004,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.40000004,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.40000004,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.40000004,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.40000004,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.40000004,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.40000004,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.4666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.4666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.4666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.53333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.53333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.53333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.53333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.53333336,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.53333336,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.53333336,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.53333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.53333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.53333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.53333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.53333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.53333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.6,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.6,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.6,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.6,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.6,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.6,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.6,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.6,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.6,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.6,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.6,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.6,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.6,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.6666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.6666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.6666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.73333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.73333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.73333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.73333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.73333335,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.73333335,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.73333335,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.73333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.73333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.73333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.73333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.73333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.73333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.8000001,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.8000001,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.8000001,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.86666673,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.86666673,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.86666673,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.86666673,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.86666673,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.86666673,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.86666673,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.86666673,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.86666673,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.86666673,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.86666673,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.86666673,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.86666673,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.9333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.9333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.9333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.0666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.0666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.0666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.0666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.0666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.0666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.0666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.0666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.0666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.0666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.0666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.0666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.0666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.1333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.1333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.1333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.2,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.2,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.2,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.2666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.2666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.2666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.2666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.2666668,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.2666668,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.2666668,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.2666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.2666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.2666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.2666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.2666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.2666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.3333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.3333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.3333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.3333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.3333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.3333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.3333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.3333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.3333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.3333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.3333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.3333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.3333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.4000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.4000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.4000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.4000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.4000001,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.4000001,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.4000001,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.4000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.4000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.4000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.4000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.4000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.4000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.4666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.4666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.4666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.5333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.5333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.5333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.5333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.5333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.5333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.5333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.5333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.5333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.5333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.5333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.5333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.5333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.6000001,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.6000001,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.6000001,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.6666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.6666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.6666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.7333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.7333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.7333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.7333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.7333335,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.7333335,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.7333335,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.7333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.7333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.7333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.7333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.7333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.7333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.8000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.8000001,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.8000001,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.8000001,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.8000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.8666668,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.8666668,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.8666668,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.9333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.9333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.9333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.0666668,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.0666668,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.0666668,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.1333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.1333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.1333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.2,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.2,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.2,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.2,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.2,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.266667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.266667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.266667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.3333335,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.3333335,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.3333335,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.4,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.4,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.4,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.4666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.4666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.4666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.4666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.4666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.5333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.5333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.5333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.5333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.5333335,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.5333335,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.5333335,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.5333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.5333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.5333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.5333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.5333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.5333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.6000001,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.6000001,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.6000001,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.6000001,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.6000001,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.6666667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.6666667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.6666667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.6666667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.6666667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.7333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.7333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.7333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.7333336,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.7333336,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.7333336,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.7333336,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.7333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.7333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.7333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.7333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.7333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.7333336,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.8000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.8000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.8000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.8000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.8000002,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.8000002,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.8000002,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.8000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.8000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.8000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.8000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.8000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.8000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.8666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.8666668,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.8666668,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.8666668,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.8666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 2.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 2.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 2.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 2.9333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 2.9333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 2.9333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 2.9333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 2.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 2.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 2.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 2.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 2.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 2.9333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.0000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.0000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.0000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.0000002,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.0000002,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.0000002,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.0000002,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.0000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.0000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.0000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.0000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.0000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.0000002,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.0666668,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.0666668,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.0666668,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.0666668,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.0666668,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.1333334,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.1333334,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.1333334,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.1333334,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.1333334,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.2000003,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.2000003,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.2000003,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.2000003,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.2000003,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.2000003,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.2000003,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.2000003,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.2000003,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.2000003,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.2000003,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.2000003,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.2000003,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.266667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.266667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.266667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.266667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.266667,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.3333335,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.3333335,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.3333335,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.3333335,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.3333335,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.4,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.4,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.4,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.4,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.4,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 3.466667,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 3.466667,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 3.466667,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 3.466667,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 3.466667,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 3.466667,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 3.466667,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 3.466667,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 3.466667,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 3.466667,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 3.466667,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 3.466667,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 3.466667,
+          "value": 0
+        }
+      ],
+      "fallbackFrameIndices": [
+        44,
+        45
+      ],
+      "optimizationHints": {
+        "preferSIMD": true,
+        "maxRotationCompression": 1,
+        "simdQuantizationBits": 12
+      },
+      "animEvents": [
+        {
+          "type": "SimpleDuration",
+          "eventName": "shoot_precise",
+          "startFrame": 0,
+          "durationInFrames": 104,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "FootPlant",
+          "eventName": "leftFootOnGround",
+          "startFrame": 98,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": "Left",
+          "customEvent": "Scuff",
+          "workspotActions": null
+        },
+        {
+          "type": "FootPlant",
+          "eventName": "leftFootOnGround",
+          "startFrame": 8,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": "Left",
+          "customEvent": "None",
+          "workspotActions": null
+        },
+        {
+          "type": "Phase",
+          "eventName": "recover",
+          "startFrame": 92,
+          "durationInFrames": 12,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "Phase",
+          "eventName": "startup",
+          "startFrame": 0,
+          "durationInFrames": 12,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "Phase",
+          "eventName": "loop",
+          "startFrame": 12,
+          "durationInFrames": 80,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "FoleyAction",
+          "eventName": "mvs",
+          "startFrame": 91,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": "lcm_mvs_fast_light",
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "FoleyAction",
+          "eventName": "mvs",
+          "startFrame": 6,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": "lcm_mvs_fast_medium",
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        }
+      ]
+    },
+    "duration": 3.4666669368743896,
+    "fps": 30,
+    "frames": 105,
+    "source_rest_matrix_error": 6.556510925292969e-07,
+    "root_motion": "Unmodified translations from existing exported GLB; exporter Include Root Motion setting not independently known"
+  },
+  "common_body_reference_count": 65,
+  "partial_rig_policy": "Per-part rigs contain pruned subsets, not 181 bones each. Exact common pose on each original bone; absent segment endpoints queried from other original part rests only; no bone/rest edits.",
+  "rest_gate": {
+    "tolerance_m": 4e-05,
+    "max_per_mesh_m": {
+      "submesh_00_LOD_1_doubled": 0.0,
+      "submesh_01_LOD_1": 0.0,
+      "submesh_02_LOD_1": 0.0,
+      "submesh_00_LOD_1": 0.0,
+      "submesh_00_LOD_1.001": 0.0,
+      "submesh_00_LOD_1.002": 0.0,
+      "submesh_00_LOD_1.003": 0.0,
+      "submesh_01_LOD_1.001": 0.0,
+      "submesh_00_LOD_1.004": 0.0,
+      "submesh_00_LOD_1.005": 0.0,
+      "submesh_01_LOD_1.002": 0.0,
+      "submesh_00_LOD_1.006": 0.0,
+      "submesh_00_LOD_1.007": 0.0,
+      "submesh_01_LOD_1.003": 0.0,
+      "submesh_02_LOD_1.001": 0.0,
+      "submesh_00_LOD_1.008": 0.0,
+      "submesh_01_LOD_1.004": 0.0,
+      "submesh_02_LOD_1.002": 0.0,
+      "submesh_00_LOD_1.009": 0.0,
+      "submesh_00_LOD_1.010": 0.0,
+      "submesh_00_LOD_1.011": 0.0,
+      "submesh_01_LOD_1.005": 0.0,
+      "submesh_02_LOD_1.003": 0.0,
+      "submesh_00_LOD_1.012": 0.0,
+      "submesh_00_LOD_1.013": 0.0,
+      "submesh_01_LOD_1.006": 0.0,
+      "submesh_02_LOD_1.004": 0.0,
+      "submesh_00_LOD_1.014": 0.0,
+      "submesh_01_LOD_1.007": 0.0,
+      "submesh_00_LOD_1.015": 0.0,
+      "submesh_00_LOD_1.016": 0.0,
+      "submesh_01_LOD_1.008": 0.0,
+      "submesh_02_LOD_1.006": 0.0,
+      "submesh_00_LOD_1.017": 0.0,
+      "submesh_01_LOD_1.009": 0.0,
+      "submesh_02_LOD_1.007": 0.0,
+      "submesh_03_LOD_1": 0.0,
+      "submesh_04_LOD_1": 0.0,
+      "submesh_05_LOD_1": 0.0,
+      "submesh_00_LOD_1.018": 0.0,
+      "submesh_00_LOD_1.019": 0.0,
+      "submesh_01_LOD_1.010": 0.0,
+      "submesh_02_LOD_1.008": 0.0,
+      "submesh_00_LOD_1.020": 0.0,
+      "submesh_00_LOD_1.021": 0.0,
+      "submesh_01_LOD_1.011": 0.0
+    },
+    "max_m": 0.0,
+    "pass": true
+  },
+  "identity_delta_max_matrix_error": 2.384185791015625e-07,
+  "pose_evaluation": [
+    {
+      "frame": 1,
+      "matrix_error_per_rig": {
+        "Armature__g1_013_ma_gloves__foil": 1.8775463104248047e-06,
+        "Armature__g1_013_ma_gloves__foil_dec_max_tac": 8.940696716308594e-07,
+        "Armature__h0_000_ma_c__basehead": 5.364418029785156e-07,
+        "Armature__h1_002_ma_hat__headcap": 4.172325134277344e-07,
+        "Armature__h2_016_ma_helmet__max_tac": 2.384185791015625e-07,
+        "Armature__he_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__heb_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__ht_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__hx_000_ma_c__basehead_pimples_01": 2.980232238769531e-07,
+        "Armature__i1_016_ma_belt__police_eq_vest": 8.940696716308594e-08,
+        "Armature__i1_038_ma_slot__gun_holster": 1.1920928955078125e-07,
+        "Armature__i1_095_ma_slot__baton_calf": 1.1920928955078125e-07,
+        "Armature__l1_077_ma_pants__trauma_small": 1.5888363122940063e-06,
+        "Armature__l1_077_ma_pants__trauma_small_dec_logo": 1.4901161193847656e-07,
+        "Armature__s1_053_ma_boot__military": 1.385807991027832e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd": 1.341104507446289e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge": 1.4901161193847656e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo": 5.364418029785156e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge": 1.7881393432617188e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio": 1.7881393432617188e-07,
+        "Armature__t2_106_ma_jacket__trauma_small": 1.8775463104248047e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_cable": 1.8775463104248047e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_logo": 1.8775463104248047e-06
+      },
+      "bounds": [
+        [
+          -0.2964411973953247,
+          -0.346194863319397,
+          0.002831849502399564
+        ],
+        [
+          0.42685630917549133,
+          0.7181583046913147,
+          1.6926231384277344
+        ]
+      ],
+      "max_displacement_from_static_m": 0.9064242591601979
+    },
+    {
+      "frame": 60,
+      "matrix_error_per_rig": {
+        "Armature__g1_013_ma_gloves__foil": 1.8775463104248047e-06,
+        "Armature__g1_013_ma_gloves__foil_dec_max_tac": 8.055940270423889e-07,
+        "Armature__h0_000_ma_c__basehead": 4.917383193969727e-07,
+        "Armature__h1_002_ma_hat__headcap": 4.3213367462158203e-07,
+        "Armature__h2_016_ma_helmet__max_tac": 1.1920928955078125e-07,
+        "Armature__he_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__heb_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__ht_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__hx_000_ma_c__basehead_pimples_01": 2.980232238769531e-07,
+        "Armature__i1_016_ma_belt__police_eq_vest": 1.341104507446289e-07,
+        "Armature__i1_038_ma_slot__gun_holster": 1.7881393432617188e-07,
+        "Armature__i1_095_ma_slot__baton_calf": 1.7881393432617188e-07,
+        "Armature__l1_077_ma_pants__trauma_small": 1.5944242477416992e-06,
+        "Armature__l1_077_ma_pants__trauma_small_dec_logo": 1.7881393432617188e-07,
+        "Armature__s1_053_ma_boot__military": 1.3709068298339844e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd": 1.4007091522216797e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge": 1.1920928955078125e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo": 8.642673492431641e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge": 1.9744038581848145e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio": 1.9744038581848145e-07,
+        "Armature__t2_106_ma_jacket__trauma_small": 1.8775463104248047e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_cable": 1.8775463104248047e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_logo": 1.8775463104248047e-06
+      },
+      "bounds": [
+        [
+          -0.31532442569732666,
+          -0.3431349992752075,
+          0.00472967978566885
+        ],
+        [
+          0.42683202028274536,
+          0.8225207328796387,
+          1.644324779510498
+        ]
+      ],
+      "max_displacement_from_static_m": 0.9782701784652438
+    },
+    {
+      "frame": 105,
+      "matrix_error_per_rig": {
+        "Armature__g1_013_ma_gloves__foil": 1.8775463104248047e-06,
+        "Armature__g1_013_ma_gloves__foil_dec_max_tac": 8.940696716308594e-07,
+        "Armature__h0_000_ma_c__basehead": 5.364418029785156e-07,
+        "Armature__h1_002_ma_hat__headcap": 4.172325134277344e-07,
+        "Armature__h2_016_ma_helmet__max_tac": 2.384185791015625e-07,
+        "Armature__he_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__heb_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__ht_000_ma_c__basehead": 1.4901161193847656e-07,
+        "Armature__hx_000_ma_c__basehead_pimples_01": 2.980232238769531e-07,
+        "Armature__i1_016_ma_belt__police_eq_vest": 8.940696716308594e-08,
+        "Armature__i1_038_ma_slot__gun_holster": 1.1920928955078125e-07,
+        "Armature__i1_095_ma_slot__baton_calf": 1.1920928955078125e-07,
+        "Armature__l1_077_ma_pants__trauma_small": 1.5888363122940063e-06,
+        "Armature__l1_077_ma_pants__trauma_small_dec_logo": 1.4901161193847656e-07,
+        "Armature__s1_053_ma_boot__military": 1.385807991027832e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd": 1.341104507446289e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge": 1.4901161193847656e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo": 5.364418029785156e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge": 1.7881393432617188e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio": 1.7881393432617188e-07,
+        "Armature__t2_106_ma_jacket__trauma_small": 1.8775463104248047e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_cable": 1.8775463104248047e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_logo": 1.8775463104248047e-06
+      },
+      "bounds": [
+        [
+          -0.2964411973953247,
+          -0.346194863319397,
+          0.002831849502399564
+        ],
+        [
+          0.42685630917549133,
+          0.7181583046913147,
+          1.6926231384277344
+        ]
+      ],
+      "max_displacement_from_static_m": 0.9064242591601979
+    }
+  ],
+  "visible_progression": [
+    {
+      "from": 1,
+      "to": 60,
+      "max_vertex_displacement_m": 0.3083353601614729
+    },
+    {
+      "from": 1,
+      "to": 105,
+      "max_vertex_displacement_m": 0.0
+    }
+  ],
+  "unchanged_geometry_weights_materials_modifier_targets": true,
+  "unchanged_original_rest_hierarchy_rig_world": true,
+  "missing_images": [],
+  "gpu": {
+    "engine": "CYCLES",
+    "backend": "HIP",
+    "devices": [
+      {
+        "name": "AMD Radeon RX 9070 XT",
+        "id": "HIP_AMD Radeon RX 9070 XT_0000:03:00",
+        "type": "HIP"
+      }
+    ],
+    "cpu_render_enabled": false
+  },
+  "fixed_camera_matrix": [
+    [
+      -0.8715754747390747,
+      0.05746467411518097,
+      -0.48688191175460815,
+      -2.6442341804504395
+    ],
+    [
+      -0.49026134610176086,
+      -0.1021595150232315,
+      0.8655675649642944,
+      5.038163185119629
+    ],
+    [
+      -5.8242264344698924e-08,
+      0.9931068420410156,
+      0.1172124370932579,
+      1.497727394104004
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "blend": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\full_shoot_diagnostic_01\\FULL_CHARACTER_RECONSTRUCTION_NOTACCEPTED.blend",
+  "source_hashes_unchanged": false
+}

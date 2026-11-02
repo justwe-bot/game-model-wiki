@@ -1,0 +1,90 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-01T04:33:42.0284749Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "base\\characters\\common\\hair\\textures\\hair_profiles\\ginger_strawberry.hp"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "CHairProfile",
+      "cookingPlatform": "PLATFORM_PC",
+      "gradientEntriesID": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 160,
+            "Green": 182,
+            "Red": 211
+          },
+          "value": 0.148551002
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 114,
+            "Green": 134,
+            "Red": 188
+          },
+          "value": 0.583333015
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 117,
+            "Green": 117,
+            "Red": 174
+          },
+          "value": 0.333332986
+        }
+      ],
+      "gradientEntriesRootToTip": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 80,
+            "Green": 80,
+            "Red": 139
+          },
+          "value": 0
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 105,
+            "Green": 105,
+            "Red": 247
+          },
+          "value": 0.329710007
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 132,
+            "Green": 111,
+            "Red": 250
+          },
+          "value": 0.981884003
+        }
+      ],
+      "sampleCount": 127
+    },
+    "EmbeddedFiles": []
+  }
+}

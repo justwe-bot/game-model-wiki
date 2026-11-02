@@ -1,0 +1,34 @@
+{
+  "status": "VISUALLY_INSPECTED_SOURCE_DEFAULT_DIAGNOSTIC_ONLY",
+  "images_read": [
+    "left.png",
+    "right.png",
+    "three_quarter.png"
+  ],
+  "observations": [
+    "Gun silhouette coherent with no exploded or detached large parts in these views.",
+    "Militech lettering, surface wear and source decals are visible; no magenta missing textures.",
+    "Framing consistent across three views. None-slot attachment is still not proven engine-faithful.",
+    "UI material surfaces use explicitly documented static source-texture approximations, not runtime Ink UI."
+  ],
+  "png_crc_check": {
+    "unique_texture_files_checked": 195,
+    "bad_chunks": 0
+  },
+  "movie_log_warning": "Blender libpng IDAT CRC warnings seen while animating; independent chunk CRC check found no corrupt blocks in195 referenced source PNG files. This does not itself prove video decode success.",
+  "movie_visual_check": {
+    "method": "Decoded actual MP4 through Blender VSE; Read four extracted PNG frames",
+    "frames": [
+      1,
+      31,
+      61,
+      91
+    ],
+    "observations": [
+      "Distinct orbit angles visible, same complete gun silhouette.",
+      "No black frames or magenta missing textures in sampled frames.",
+      "Source-default diagnostic and attachment-unverified labels visible throughout sampled frames."
+    ],
+    "limit": "Four sampled frames inspected, not every decoded video frame"
+  }
+}

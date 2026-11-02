@@ -1,0 +1,26 @@
+{
+  "frames": 120,
+  "resolution": [
+    960,
+    600
+  ],
+  "sampled_frames": [
+    1,
+    31,
+    61,
+    91
+  ],
+  "mode": "decode existing GPU rendered video through Blender sequencer",
+  "gpu": {
+    "engine": "CYCLES",
+    "backend": "HIP",
+    "devices": [
+      {
+        "name": "AMD Radeon RX 9070 XT",
+        "id": "HIP_AMD Radeon RX 9070 XT_0000:03:00",
+        "type": "HIP"
+      }
+    ],
+    "cpu_render_enabled": false
+  }
+}

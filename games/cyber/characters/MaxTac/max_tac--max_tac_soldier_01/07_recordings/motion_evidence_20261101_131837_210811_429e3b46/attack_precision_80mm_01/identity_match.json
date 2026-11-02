@@ -1,0 +1,2342 @@
+{
+  "accepted": false,
+  "source_static_blend": {
+    "source": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\gpu_character_check\\20261101_114018_303208\\character_static.blend",
+    "sha256": "f944c7f99b8a6a4c6ee280edb1839668847f8567b996ed7cd45d20f420fe05d3",
+    "bytes": 9326239,
+    "hash_evidence": "export_report"
+  },
+  "static_audit": {
+    "source": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\gpu_character_check\\20261101_114018_303208\\audit.json",
+    "sha256": "e5b9b93c10650c45a1f792c5b93c8166b79c4bbf7e145d8bbed0c422ba172183",
+    "bytes": 179086,
+    "hash_evidence": "publication_snapshot_only"
+  },
+  "dependency_manifest": {
+    "source": "C:\\Code\\UeCover\\Blender\\quality_audit\\maxtac_soldier_01_dependency_manifest.json",
+    "sha256": "97eca2808d45e92ebb9c1d0fed413669a3e4c71af4b2bbb7197825578406db69",
+    "bytes": 368931,
+    "hash_evidence": "publication_snapshot_only"
+  },
+  "selected": {
+    "entity_depot_path": "base\\characters\\entities\\corpo\\corpo__max_tac_ma.ent",
+    "entity_appearance_name": "max_tac_max_tac_soldier_01",
+    "app_depot_path": "base\\characters\\appearances\\corpo\\max_tac.app",
+    "app_appearance_name": "max_tac_soldier_01",
+    "all_app_names": [
+      "max_tac_soldier_01",
+      "max_tac_soldier_02",
+      "max_tac_soldier_03",
+      "max_tac_soldier_04"
+    ],
+    "default_entity_appearance": "random"
+  },
+  "candidate_catalog_ids": [
+    "max_tac--max_tac_soldier_01"
+  ],
+  "catalog_id": "max_tac--max_tac_soldier_01",
+  "status": "exact_ENT_APP_appearance_components_masks_materials_raw_transforms_match",
+  "faction": "MaxTac",
+  "canonical_manifest": {
+    "source": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\manifests\\max_tac--max_tac_soldier_01.json",
+    "sha256": "f51eaacdf2dda0de988f00e3d2f46f3e5e58fbc570a280308ef72e2089205696",
+    "bytes": 2493472,
+    "hash_evidence": "publication_snapshot_only"
+  },
+  "provenance": [
+    {
+      "source": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\characters\\appearances\\corpo\\max_tac.app.json",
+      "sha256": "96f5b7322ac466915e4a58ed67868b07132c83517cb9b779a7144c2b4f572a36",
+      "bytes": 15173274,
+      "hash_evidence": "export_report"
+    },
+    {
+      "source": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\characters\\entities\\corpo\\corpo__max_tac_ma.ent.json",
+      "sha256": "dfa6d8c7f769d9fd862f6fc2680dd24570829e75acdaa2543687700e9f6eca54",
+      "bytes": 1840743,
+      "hash_evidence": "export_report"
+    }
+  ],
+  "active_component_count": 23,
+  "transform_checks": [
+    {
+      "component": "he_000_ma_c__basehead",
+      "index": 1,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "ht_000_ma_c__basehead",
+      "index": 2,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "h0_000_ma_c__basehead",
+      "index": 6,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "heb_000_ma_c__basehead",
+      "index": 7,
+      "meshAppearance": "brown_05",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "hx_000_ma_c__basehead_pimples_01",
+      "index": 8,
+      "meshAppearance": "pimples__brown_02",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "face_rig"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "i1_038_slot__gun_holster0736",
+      "index": 9,
+      "meshAppearance": "black",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "l1_077_ma_pants__trauma_small6641",
+      "index": 10,
+      "meshAppearance": "max_tac_blue",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "l1_077_ma_pants__trauma_small_dec_logo",
+      "index": 11,
+      "meshAppearance": "max_tac",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "i1_095_ma_slot__baton_calf1110",
+      "index": 12,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_106_ma_jacket__trauma_small8584",
+      "index": 13,
+      "meshAppearance": "max_tac_blue",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_106_ma_jacket__trauma_small_dec_logo",
+      "index": 14,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_106_ma_jacket__trauma_small_dec_cable",
+      "index": 15,
+      "meshAppearance": "purple_blue",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "g1_013_ma_gloves__foil5820",
+      "index": 16,
+      "meshAppearance": "max_tac_blue",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "g1_013_ma_gloves__foil_dec_max_tac",
+      "index": 17,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_073_ma_vest__tactic_collar2_ncpd7388",
+      "index": 18,
+      "meshAppearance": "max_tac",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+      "index": 19,
+      "meshAppearance": "decals_max_tac",
+      "chunkMask": "18446744073709551579",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_073_ma_vest__tactic_collar2_ncpd_badge",
+      "index": 20,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+      "index": 21,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "t2_073_ma_vest__tactic_collar2_ncpd_radio",
+      "index": 23,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "i1_016_ma_belt__police_eq_vest7016",
+      "index": 24,
+      "meshAppearance": "max_tac",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "h2_016_ma_helmet__max_tac7453",
+      "index": 25,
+      "meshAppearance": "max_tac_blue",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "h1_002_ma_hat__headcap0877",
+      "index": 26,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "component": "s1_053_ma_boot__military",
+      "index": 27,
+      "meshAppearance": "default",
+      "chunkMask": "18446744073709551615",
+      "source_raw_exact_match": true,
+      "localTransform": {
+        "$type": "WorldTransform",
+        "Orientation": {
+          "$type": "Quaternion",
+          "i": 0,
+          "j": 0,
+          "k": 0,
+          "r": 1
+        },
+        "Position": {
+          "$type": "WorldPosition",
+          "x": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "y": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          },
+          "z": {
+            "$type": "FixedPoint",
+            "Bits": 0
+          }
+        }
+      },
+      "binding_evidence": {
+        "parentTransform": {
+          "$type": "entHardTransformBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          },
+          "slotName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "None"
+          }
+        },
+        "skinning": {
+          "$type": "entSkinningBinding",
+          "bindName": {
+            "$type": "CName",
+            "$storage": "string",
+            "$value": "root"
+          },
+          "enabled": 1,
+          "enableMask": {
+            "$type": "entTagMask",
+            "excludedTags": {
+              "$type": "redTagList",
+              "tags": [
+                {
+                  "$type": "CName",
+                  "$storage": "string",
+                  "$value": "NoBinding"
+                }
+              ]
+            },
+            "hardTags": {
+              "$type": "redTagList",
+              "tags": []
+            },
+            "softTags": {
+              "$type": "redTagList",
+              "tags": []
+            }
+          }
+        }
+      }
+    }
+  ],
+  "garment_parameters_applied": false,
+  "limitations": "Identity/provenance match is NOT faithful assembly, garment or animation acceptance."
+}

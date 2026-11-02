@@ -1,0 +1,2205 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-01T04:34:26.6741555Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "base\\surfaces\\materials\\metal\\steel\\steel_bare_annodised_01_300.mltemplate"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "Multilayer_LayerTemplate",
+      "colorMaskLevelsIn": {
+        "Elements": [1,-0
+        ]
+      },
+      "colorMaskLevelsOut": {
+        "Elements": [-0.215700001,1
+        ]
+      },
+      "colorTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\metal\\metal_generic\\metal_generic_bare_01_300_d.xbm"
+        },
+        "Flags": "Default"
+      },
+      "cookingPlatform": "PLATFORM_PC",
+      "defaultOverrides": {
+        "$type": "Multilayer_LayerOverrideSelection",
+        "colorScale": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "8a5f75_null"
+        },
+        "metalLevelsIn": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "metalLevelsOut": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "normalStrength": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "f3d6fb"
+        },
+        "roughLevelsIn": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "roughLevelsOut": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "a9bc97"
+        }
+      },
+      "metalnessTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\default\\white.xbm"
+        },
+        "Flags": "Default"
+      },
+      "normalTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\metal\\metal_generic\\metal_generic_bare_01_300_n.xbm"
+        },
+        "Flags": "Default"
+      },
+      "overrides": {
+        "$type": "Multilayer_LayerTemplateOverrides",
+        "colorScale": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "00f493_48e702"
+            },
+            "v": {
+              "Elements": [0.616900027,0.524100006,0.374599993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "00f493_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.780600011,0.557699978,0.199000001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "00f493_4bc178"
+            },
+            "v": {
+              "Elements": [0.562399983,0.512799978,0.433099985
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "00f493_6e0add"
+            },
+            "v": {
+              "Elements": [0.726100028,0.546500027,0.257499993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "00f493_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.671500027,0.535300016,0.316000015
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "00f493_null"
+            },
+            "v": {
+              "Elements": [0.811800003,0.564100027,0.1655
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "01e9e9_48e702"
+            },
+            "v": {
+              "Elements": [0.3213,0.433899999,0.5625
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "01e9e9_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0711800009,0.341300011,0.649999976
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "01e9e9_4bc178"
+            },
+            "v": {
+              "Elements": [0.404700011,0.464700013,0.533299983
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "01e9e9_6e0add"
+            },
+            "v": {
+              "Elements": [0.154599994,0.372099996,0.620899975
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "01e9e9_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.237900004,0.402999997,0.591700017
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "01e9e9_null"
+            },
+            "v": {
+              "Elements": [0.0235300008,0.323599994,0.666700006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "17c9b0_48e702"
+            },
+            "v": {
+              "Elements": [0.369800001,0.325100005,0.32190001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "17c9b0_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.187600002,0.0803299993,0.0726599991
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "17c9b0_4bc178"
+            },
+            "v": {
+              "Elements": [0.430599988,0.406699985,0.405000001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "17c9b0_6e0add"
+            },
+            "v": {
+              "Elements": [0.248400003,0.161899999,0.1558
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "17c9b0_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.309100002,0.243499994,0.238900006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "17c9b0_null"
+            },
+            "v": {
+              "Elements": [0.152899995,0.0337000005,0.0251800008
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "30a880_48e702"
+            },
+            "v": {
+              "Elements": [0.315800011,0.388300002,0.522800028
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "30a880_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0579200014,0.231900007,0.554700017
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "30a880_4bc178"
+            },
+            "v": {
+              "Elements": [0.401800007,0.440400004,0.512199998
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "30a880_6e0add"
+            },
+            "v": {
+              "Elements": [0.143900007,0.284000009,0.544099987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "30a880_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.229800001,0.336199999,0.533399999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "30a880_null"
+            },
+            "v": {
+              "Elements": [0.00880500022,0.202099994,0.560800016
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "3c67fb_48e702"
+            },
+            "v": {
+              "Elements": [0.41839999,0.397599995,0.646300018
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "3c67fb_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.304100007,0.254200011,0.851199985
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "3c67fb_4bc178"
+            },
+            "v": {
+              "Elements": [0.456499994,0.4454,0.578000009
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "3c67fb_6e0add"
+            },
+            "v": {
+              "Elements": [0.342200011,0.301999986,0.782899976
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "3c67fb_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.380299985,0.349799991,0.714600027
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "3c67fb_null"
+            },
+            "v": {
+              "Elements": [0.282400012,0.226899996,0.890200019
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a523c_48e702"
+            },
+            "v": {
+              "Elements": [0.393400013,0.393400013,0.393400013
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a523c_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.244100004,0.244100004,0.244100004
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a523c_4bc178"
+            },
+            "v": {
+              "Elements": [0.443100005,0.443100005,0.443100005
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a523c_6e0add"
+            },
+            "v": {
+              "Elements": [0.293900013,0.293900013,0.293900013
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a523c_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.343600005,0.343600005,0.343600005
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a523c_null"
+            },
+            "v": {
+              "Elements": [0.215700001,0.215700001,0.215700001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ab9a4_48e702"
+            },
+            "v": {
+              "Elements": [0.548699975,0.559499979,0.466500014
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ab9a4_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.616900027,0.64289999,0.419699997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ab9a4_4bc178"
+            },
+            "v": {
+              "Elements": [0.526000023,0.531799972,0.482199997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ab9a4_6e0add"
+            },
+            "v": {
+              "Elements": [0.594200015,0.615100026,0.435299993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ab9a4_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.571399987,0.587300003,0.450899988
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ab9a4_null"
+            },
+            "v": {
+              "Elements": [0.629899979,0.658800006,0.41080001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7d05b5_48e702"
+            },
+            "v": {
+              "Elements": [0.555899978,0.327499986,0.586000025
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7d05b5_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.63410002,0.0860399976,0.706499994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7d05b5_4bc178"
+            },
+            "v": {
+              "Elements": [0.529799998,0.407999992,0.545899987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7d05b5_6e0add"
+            },
+            "v": {
+              "Elements": [0.60799998,0.166500002,0.666299999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7d05b5_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.582000017,0.246999994,0.62620002
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7d05b5_null"
+            },
+            "v": {
+              "Elements": [0.648999989,0.0400400013,0.729399979
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "80d68c_48e702"
+            },
+            "v": {
+              "Elements": [0.32280001,0.32280001,0.32280001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "80d68c_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0746999979,0.0746999979,0.0746999979
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "80d68c_4bc178"
+            },
+            "v": {
+              "Elements": [0.405499995,0.405499995,0.405499995
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "80d68c_6e0add"
+            },
+            "v": {
+              "Elements": [0.157399997,0.157399997,0.157399997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "80d68c_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.240099996,0.240099996,0.240099996
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "80d68c_null"
+            },
+            "v": {
+              "Elements": [0.0274500009,0.0274500009,0.0274500009
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8803b0_48e702"
+            },
+            "v": {
+              "Elements": [0.50849998,0.559499979,0.499500006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8803b0_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.520399988,0.64289999,0.498800009
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8803b0_4bc178"
+            },
+            "v": {
+              "Elements": [0.504499972,0.531799972,0.49970001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8803b0_6e0add"
+            },
+            "v": {
+              "Elements": [0.516499996,0.615100026,0.499000013
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8803b0_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.512499988,0.587300003,0.499300003
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8803b0_null"
+            },
+            "v": {
+              "Elements": [0.522700012,0.658800006,0.498600006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8a5f75_48e702"
+            },
+            "v": {
+              "Elements": [0.652199984,0.3671,0.400299996
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8a5f75_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.8653,0.181099996,0.260699987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8a5f75_4bc178"
+            },
+            "v": {
+              "Elements": [0.581200004,0.429100007,0.446799994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8a5f75_6e0add"
+            },
+            "v": {
+              "Elements": [0.79430002,0.243100002,0.307300001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8a5f75_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.723200023,0.305099994,0.353799999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "8a5f75_null"
+            },
+            "v": {
+              "Elements": [0.905900002,0.145699993,0.234200001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "967366_48e702"
+            },
+            "v": {
+              "Elements": [0.338999987,0.342099994,0.360300004
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "967366_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.113600001,0.120999999,0.164800003
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "967366_4bc178"
+            },
+            "v": {
+              "Elements": [0.414099991,0.415800005,0.425500005
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "967366_6e0add"
+            },
+            "v": {
+              "Elements": [0.188700005,0.194700003,0.229900002
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "967366_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.263900012,0.268400013,0.295100003
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "967366_null"
+            },
+            "v": {
+              "Elements": [0.0706600025,0.0788699985,0.127499998
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9bf63f_48e702"
+            },
+            "v": {
+              "Elements": [0.528800011,0.340000004,0.646300018
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9bf63f_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.569199979,0.115999997,0.851199985
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9bf63f_4bc178"
+            },
+            "v": {
+              "Elements": [0.515399992,0.414700001,0.578000009
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9bf63f_6e0add"
+            },
+            "v": {
+              "Elements": [0.555700004,0.190699995,0.782899976
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9bf63f_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.542299986,0.265300006,0.714600027
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9bf63f_null"
+            },
+            "v": {
+              "Elements": [0.576900005,0.0733499974,0.890200019
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a5199d_48e702"
+            },
+            "v": {
+              "Elements": [0.368999988,0.503499985,0.556599975
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a5199d_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.185599998,0.508400023,0.635900021
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a5199d_4bc178"
+            },
+            "v": {
+              "Elements": [0.430099994,0.501900017,0.530200005
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a5199d_6e0add"
+            },
+            "v": {
+              "Elements": [0.246700004,0.506699979,0.609499991
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a5199d_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.307900012,0.505100012,0.583100021
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a5199d_null"
+            },
+            "v": {
+              "Elements": [0.150600001,0.509299994,0.651000023
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b55c72_48e702"
+            },
+            "v": {
+              "Elements": [0.316900015,0.356299996,0.474299997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b55c72_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0606799982,0.155100003,0.438300014
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b55c72_4bc178"
+            },
+            "v": {
+              "Elements": [0.402399987,0.423299998,0.486299992
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b55c72_6e0add"
+            },
+            "v": {
+              "Elements": [0.1461,0.222100005,0.450300008
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b55c72_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.2315,0.289200008,0.462300003
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b55c72_null"
+            },
+            "v": {
+              "Elements": [0.01186,0.116700001,0.431400001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c930dc_48e702"
+            },
+            "v": {
+              "Elements": [0.606599987,0.606599987,0.606599987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c930dc_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.755900025,0.755900025,0.755900025
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c930dc_4bc178"
+            },
+            "v": {
+              "Elements": [0.556900024,0.556900024,0.556900024
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c930dc_6e0add"
+            },
+            "v": {
+              "Elements": [0.706099987,0.706099987,0.706099987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c930dc_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.656400025,0.656400025,0.656400025
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c930dc_null"
+            },
+            "v": {
+              "Elements": [0.784300029,0.784300029,0.784300029
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cd4a5b_48e702"
+            },
+            "v": {
+              "Elements": [0.341500014,0.326700002,0.344900012
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cd4a5b_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.1197,0.0841000006,0.127599999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cd4a5b_4bc178"
+            },
+            "v": {
+              "Elements": [0.415499985,0.407599986,0.417299986
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cd4a5b_6e0add"
+            },
+            "v": {
+              "Elements": [0.193599999,0.165000007,0.200000003
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cd4a5b_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.2676,0.245800003,0.272399992
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cd4a5b_null"
+            },
+            "v": {
+              "Elements": [0.0774099976,0.0378899984,0.0862699971
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cdb8ae_48e702"
+            },
+            "v": {
+              "Elements": [0.3125,0.622799993,0.452100009
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cdb8ae_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0500000007,0.794799984,0.38499999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cdb8ae_4bc178"
+            },
+            "v": {
+              "Elements": [0.400000006,0.565500021,0.474400014
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cdb8ae_6e0add"
+            },
+            "v": {
+              "Elements": [0.137500003,0.737399995,0.407400012
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cdb8ae_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.224999994,0.680100024,0.429699987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "cdb8ae_null"
+            },
+            "v": {
+              "Elements": [0,0.827499986,0.372200012
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d281d9_48e702"
+            },
+            "v": {
+              "Elements": [0.66839999,0.467900008,0.343199998
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d281d9_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.904100001,0.422899991,0.1237
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d281d9_4bc178"
+            },
+            "v": {
+              "Elements": [0.5898,0.482899994,0.416399986
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d281d9_6e0add"
+            },
+            "v": {
+              "Elements": [0.825500011,0.437900007,0.196899995
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d281d9_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.746999979,0.452899992,0.270000011
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d281d9_null"
+            },
+            "v": {
+              "Elements": [0.949000001,0.414299995,0.0819000006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d38320_48e702"
+            },
+            "v": {
+              "Elements": [0.3125,0.565400004,0.493800014
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d38320_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0500000007,0.657100022,0.485100001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d38320_4bc178"
+            },
+            "v": {
+              "Elements": [0.400000006,0.53490001,0.496699989
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d38320_6e0add"
+            },
+            "v": {
+              "Elements": [0.137500003,0.62650001,0.488000005
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d38320_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.224999994,0.596000016,0.49090001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d38320_null"
+            },
+            "v": {
+              "Elements": [0,0.674499989,0.483500004
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d4e4a5_48e702"
+            },
+            "v": {
+              "Elements": [0.409500003,0.337700009,0.317799985
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d4e4a5_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.282900006,0.1105,0.0627899989
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d4e4a5_4bc178"
+            },
+            "v": {
+              "Elements": [0.451799989,0.413399994,0.402799994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d4e4a5_6e0add"
+            },
+            "v": {
+              "Elements": [0.325100005,0.186199993,0.147799999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d4e4a5_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.367300004,0.261999995,0.232800007
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d4e4a5_null"
+            },
+            "v": {
+              "Elements": [0.2588,0.0671999976,0.0142099997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d657e7_48e702"
+            },
+            "v": {
+              "Elements": [0.323100001,0.334300011,0.403600007
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d657e7_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0754799992,0.102300003,0.2685
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d657e7_4bc178"
+            },
+            "v": {
+              "Elements": [0.405699998,0.411599994,0.448599994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d657e7_6e0add"
+            },
+            "v": {
+              "Elements": [0.158000007,0.1796,0.313499987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d657e7_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.240600005,0.256999999,0.358500004
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "d657e7_null"
+            },
+            "v": {
+              "Elements": [0.0283100009,0.0581200011,0.242799997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e26c8b_48e702"
+            },
+            "v": {
+              "Elements": [0.327600002,0.500500023,0.608099997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e26c8b_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.0861800015,0.501299977,0.75940001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e26c8b_4bc178"
+            },
+            "v": {
+              "Elements": [0.407999992,0.50029999,0.557600021
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e26c8b_6e0add"
+            },
+            "v": {
+              "Elements": [0.166600004,0.500999987,0.708899975
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e26c8b_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.247099996,0.500800014,0.658500016
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e26c8b_null"
+            },
+            "v": {
+              "Elements": [0.0401999988,0.501399994,0.788200021
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f2baba_48e702"
+            },
+            "v": {
+              "Elements": [0.36649999,0.656599998,0.472799987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f2baba_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.1796,0.875800014,0.434700012
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f2baba_4bc178"
+            },
+            "v": {
+              "Elements": [0.428799987,0.583500028,0.485500008
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f2baba_6e0add"
+            },
+            "v": {
+              "Elements": [0.241899997,0.8028,0.447400004
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f2baba_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.304199994,0.729700029,0.460099995
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f2baba_null"
+            },
+            "v": {
+              "Elements": [0.143999994,0.917599976,0.427399993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f84db2_48e702"
+            },
+            "v": {
+              "Elements": [0.684599996,0.409200013,0.360599995
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f84db2_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.943000019,0.282200009,0.165600002
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f84db2_4bc178"
+            },
+            "v": {
+              "Elements": [0.598399997,0.451599985,0.425700009
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f84db2_6e0add"
+            },
+            "v": {
+              "Elements": [0.85680002,0.324499995,0.230599999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f84db2_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.770699978,0.366899997,0.295599997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f84db2_null"
+            },
+            "v": {
+              "Elements": [0.992200017,0.257999986,0.128399998
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_48e702"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_4a1ed1"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_4bc178"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_6e0add"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_f9bfb8"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_null"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          }
+        ],
+        "metalLevelsIn": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [1,-0
+              ]
+            }
+          }
+        ],
+        "metalLevelsOut": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [1,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "155c34"
+            },
+            "v": {
+              "Elements": [0.90200001,0
+              ]
+            }
+          }
+        ],
+        "normalStrength": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": 0.200000003
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "33a903"
+            },
+            "v": 0.159999996
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "362d1c"
+            },
+            "v": 0.119999997
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a550e"
+            },
+            "v": 0.0799999982
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "51c6e0"
+            },
+            "v": 0.280000001
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "54f7df"
+            },
+            "v": 0.0399999991
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7cfe85"
+            },
+            "v": 0.319999993
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e71110"
+            },
+            "v": 0.239999995
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f3d6fb"
+            },
+            "v": 0.200000003
+          }
+        ],
+        "roughLevelsIn": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [1.82099998,-0.428600013
+              ]
+            }
+          }
+        ],
+        "roughLevelsOut": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [0.627499998,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "12f26b"
+            },
+            "v": {
+              "Elements": [0.256000012,0.168599993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "970fd0"
+            },
+            "v": {
+              "Elements": [0.211600006,0.105899997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a9bc97"
+            },
+            "v": {
+              "Elements": [0.233700007,0.1373
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "abddf9"
+            },
+            "v": {
+              "Elements": [0.172199994,0.0392200015
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b1729f"
+            },
+            "v": {
+              "Elements": [0.273200005,0.203899994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c77e86"
+            },
+            "v": {
+              "Elements": [0.194399998,0.0705899969
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "ec971f"
+            },
+            "v": {
+              "Elements": [0.295300007,0.235300004
+              ]
+            }
+          }
+        ]
+      },
+      "roughnessTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\metal\\metal_generic\\metal_generic_bare_01_300_r.xbm"
+        },
+        "Flags": "Default"
+      },
+      "tilingMultiplier": 1
+    },
+    "EmbeddedFiles": []
+  }
+}

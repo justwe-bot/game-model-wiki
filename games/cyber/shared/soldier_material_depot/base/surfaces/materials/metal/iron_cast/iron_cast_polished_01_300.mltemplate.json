@@ -1,0 +1,777 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-01T04:21:05.9258145Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "base\\surfaces\\materials\\metal\\iron_cast\\iron_cast_polished_01_300.mltemplate"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "Multilayer_LayerTemplate",
+      "colorMaskLevelsIn": {
+        "Elements": [1,-0
+        ]
+      },
+      "colorMaskLevelsOut": {
+        "Elements": [0,0
+        ]
+      },
+      "colorTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\metal\\metal_generic\\metal_generic_bare_01_300_d.xbm"
+        },
+        "Flags": "Default"
+      },
+      "cookingPlatform": "PLATFORM_PC",
+      "defaultOverrides": {
+        "$type": "Multilayer_LayerOverrideSelection",
+        "colorScale": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null_188a63"
+        },
+        "metalLevelsIn": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "metalLevelsOut": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "normalStrength": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "roughLevelsIn": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "null"
+        },
+        "roughLevelsOut": {
+          "$type": "CName",
+          "$storage": "string",
+          "$value": "74f6b8"
+        }
+      },
+      "metalnessTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\default\\white.xbm"
+        },
+        "Flags": "Default"
+      },
+      "normalTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\metal\\iron_cast\\iron_cast_01_300_n.xbm"
+        },
+        "Flags": "Default"
+      },
+      "overrides": {
+        "$type": "Multilayer_LayerTemplateOverrides",
+        "colorScale": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "5238a5_188a63"
+            },
+            "v": {
+              "Elements": [0.381300002,0.381300002,0.381300002
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "5238a5_4cf279"
+            },
+            "v": {
+              "Elements": [0.452499986,0.452499986,0.452499986
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "5238a5_734125"
+            },
+            "v": {
+              "Elements": [0.428799987,0.428799987,0.428799987
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "5238a5_dec75b"
+            },
+            "v": {
+              "Elements": [0.405099988,0.405099988,0.405099988
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "5238a5_null"
+            },
+            "v": {
+              "Elements": [0.262699991,0.262699991,0.262699991
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ceb7e_188a63"
+            },
+            "v": {
+              "Elements": [0.459800005,0.459800005,0.459800005
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ceb7e_4cf279"
+            },
+            "v": {
+              "Elements": [0.483900011,0.483900011,0.483900011
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ceb7e_734125"
+            },
+            "v": {
+              "Elements": [0.475899994,0.475899994,0.475899994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ceb7e_dec75b"
+            },
+            "v": {
+              "Elements": [0.467799991,0.467799991,0.467799991
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "6ceb7e_null"
+            },
+            "v": {
+              "Elements": [0.41960001,0.41960001,0.41960001
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "855e94_188a63"
+            },
+            "v": {
+              "Elements": [0.499000013,0.499000013,0.499000013
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "855e94_4cf279"
+            },
+            "v": {
+              "Elements": [0.499599993,0.499599993,0.499599993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "855e94_734125"
+            },
+            "v": {
+              "Elements": [0.49939999,0.49939999,0.49939999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "855e94_dec75b"
+            },
+            "v": {
+              "Elements": [0.499199986,0.499199986,0.499199986
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "855e94_null"
+            },
+            "v": {
+              "Elements": [0.497999996,0.497999996,0.497999996
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a73e36_188a63"
+            },
+            "v": {
+              "Elements": [0.538299978,0.538299978,0.538299978
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a73e36_4cf279"
+            },
+            "v": {
+              "Elements": [0.515299976,0.515299976,0.515299976
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a73e36_734125"
+            },
+            "v": {
+              "Elements": [0.523000002,0.523000002,0.523000002
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a73e36_dec75b"
+            },
+            "v": {
+              "Elements": [0.530600011,0.530600011,0.530600011
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a73e36_null"
+            },
+            "v": {
+              "Elements": [0.576499999,0.576499999,0.576499999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e608be_188a63"
+            },
+            "v": {
+              "Elements": [0.420599997,0.420599997,0.420599997
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e608be_4cf279"
+            },
+            "v": {
+              "Elements": [0.468199998,0.468199998,0.468199998
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e608be_734125"
+            },
+            "v": {
+              "Elements": [0.452399999,0.452399999,0.452399999
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e608be_dec75b"
+            },
+            "v": {
+              "Elements": [0.436500013,0.436500013,0.436500013
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e608be_null"
+            },
+            "v": {
+              "Elements": [0.341199994,0.341199994,0.341199994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_188a63"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_4cf279"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_734125"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_dec75b"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesColor",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null_null"
+            },
+            "v": {
+              "Elements": [0.5,0.5,0.5
+              ]
+            }
+          }
+        ],
+        "metalLevelsIn": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [1,-0
+              ]
+            }
+          }
+        ],
+        "metalLevelsOut": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [0.435299993,0.545099974
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "155c34"
+            },
+            "v": {
+              "Elements": [0.3926,0.545099974
+              ]
+            }
+          }
+        ],
+        "normalStrength": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": 0.150000006
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "33a903"
+            },
+            "v": 0.119999997
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "362d1c"
+            },
+            "v": 0.0900000036
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "4a550e"
+            },
+            "v": 0.0599999987
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "51c6e0"
+            },
+            "v": 0.209999993
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "54f7df"
+            },
+            "v": 0.0299999993
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "7cfe85"
+            },
+            "v": 0.239999995
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "e71110"
+            },
+            "v": 0.180000007
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesNormalStrength",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "f3d6fb"
+            },
+            "v": 0.150000006
+          }
+        ],
+        "roughLevelsIn": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [1.18599999,-0.186100006
+              ]
+            }
+          }
+        ],
+        "roughLevelsOut": [
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "null"
+            },
+            "v": {
+              "Elements": [0.784300029,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "0837b3"
+            },
+            "v": {
+              "Elements": [0.541299999,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "377dd0"
+            },
+            "v": {
+              "Elements": [0.516700029,0.341199994
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "472f9a"
+            },
+            "v": {
+              "Elements": [0.572099984,0.270599991
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "625d6e"
+            },
+            "v": {
+              "Elements": [0.606000006,0.133300006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "65b23b"
+            },
+            "v": {
+              "Elements": [0.602800012,0.200000003
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "74f6b8"
+            },
+            "v": {
+              "Elements": [0.612100005,0.0352899991
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9198f8"
+            },
+            "v": {
+              "Elements": [0.612100005,0.0666700006
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "9ea71b"
+            },
+            "v": {
+              "Elements": [0.602900028,0.168599993
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "a884c4"
+            },
+            "v": {
+              "Elements": [0.544399977,0.305900007
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "b9b91e"
+            },
+            "v": {
+              "Elements": [0.565999985,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "ba956c"
+            },
+            "v": {
+              "Elements": [0.615100026,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "bd07ce"
+            },
+            "v": {
+              "Elements": [0.590499997,0
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "c25a82"
+            },
+            "v": {
+              "Elements": [0.599799991,0.235300004
+              ]
+            }
+          },
+          {
+            "$type": "Multilayer_LayerTemplateOverridesLevels",
+            "n": {
+              "$type": "CName",
+              "$storage": "string",
+              "$value": "ca0dec"
+            },
+            "v": {
+              "Elements": [0.608900011,0.101999998
+              ]
+            }
+          }
+        ]
+      },
+      "roughnessTexture": {
+        "DepotPath": {
+          "$type": "ResourcePath",
+          "$storage": "string",
+          "$value": "base\\surfaces\\materials\\metal\\iron_cast\\iron_cast_01_300_r.xbm"
+        },
+        "Flags": "Default"
+      },
+      "tilingMultiplier": 1
+    },
+    "EmbeddedFiles": []
+  }
+}

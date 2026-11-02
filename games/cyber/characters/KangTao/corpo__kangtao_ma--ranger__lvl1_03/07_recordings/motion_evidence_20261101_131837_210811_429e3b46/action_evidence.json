@@ -1,0 +1,208 @@
+{
+  "accepted": false,
+  "catalog_id": "corpo__kangtao_ma--ranger__lvl1_03",
+  "rows": [
+    {
+      "evidence_id": "corpo__kangtao_ma--ranger__lvl1_03::walk",
+      "catalog_id": "corpo__kangtao_ma--ranger__lvl1_03",
+      "faction": "KangTao",
+      "action": "walk",
+      "accepted": false,
+      "status": "no_archived_diagnostic_in_this_bounded_snapshot",
+      "source_exported": {
+        "available": true,
+        "status": "candidate_clip_present_not_rig_compatibility",
+        "source_set": "base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims",
+        "file": {
+          "source": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims.glb",
+          "sha256": "ec9a663f7db68cbdd73e9200eacdbd08403839d5ca2c5c525ed739ee76460398",
+          "bytes": 6580932,
+          "hash_evidence": "publication_snapshot_only"
+        },
+        "candidate_clips": [
+          "aim_ovr_walk",
+          "ovr_walk"
+        ],
+        "verified_present_clips": [
+          "aim_ovr_walk",
+          "ovr_walk"
+        ],
+        "error": null,
+        "legacy_job_status": "blocked_not_recorded",
+        "semantics_warning": "ovr clips require compatible base/layer composition; melee is rifle-butt attack candidate, not all class attacks.",
+        "archive_provenance_limit": "Explicit unbundle archive plus -gp can search across game archives and overwrite matches. Recorded hashes prove actual file bytes, NOT strict archive isolation or correct override priority. Historical164/332 source labels remain unmodified; corrected exporter regression is separate."
+      },
+      "diagnostic_rendered": {
+        "available": false,
+        "clip_count": 0,
+        "runs": [],
+        "scope": "exact character only; no body-template propagation"
+      },
+      "decoded_and_reviewed": {
+        "available": false,
+        "scope": "sampled frames only, never all-frame acceptance",
+        "runs": []
+      },
+      "acceptance": {
+        "accepted": false,
+        "evidence": null,
+        "remaining_blockers": [
+          "Character high-detail skin/garment/deformation visual acceptance not established.",
+          "Actual selected weapon and compatible pose/part synchronization unverified.",
+          "Source export / diagnostic render / successful decode are not quality acceptance."
+        ]
+      }
+    },
+    {
+      "evidence_id": "corpo__kangtao_ma--ranger__lvl1_03::attack",
+      "catalog_id": "corpo__kangtao_ma--ranger__lvl1_03",
+      "faction": "KangTao",
+      "action": "attack",
+      "accepted": false,
+      "status": "no_archived_diagnostic_in_this_bounded_snapshot",
+      "source_exported": {
+        "available": true,
+        "status": "candidate_clip_present_not_rig_compatibility",
+        "source_set": "base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims",
+        "file": {
+          "source": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims.glb",
+          "sha256": "ec9a663f7db68cbdd73e9200eacdbd08403839d5ca2c5c525ed739ee76460398",
+          "bytes": 6580932,
+          "hash_evidence": "publication_snapshot_only"
+        },
+        "candidate_clips": [
+          "melee"
+        ],
+        "verified_present_clips": [
+          "melee"
+        ],
+        "error": null,
+        "legacy_job_status": "blocked_not_recorded",
+        "semantics_warning": "ovr clips require compatible base/layer composition; melee is rifle-butt attack candidate, not all class attacks.",
+        "archive_provenance_limit": "Explicit unbundle archive plus -gp can search across game archives and overwrite matches. Recorded hashes prove actual file bytes, NOT strict archive isolation or correct override priority. Historical164/332 source labels remain unmodified; corrected exporter regression is separate."
+      },
+      "diagnostic_rendered": {
+        "available": false,
+        "clip_count": 0,
+        "runs": [],
+        "scope": "exact character only; no body-template propagation"
+      },
+      "decoded_and_reviewed": {
+        "available": false,
+        "scope": "sampled frames only, never all-frame acceptance",
+        "runs": []
+      },
+      "acceptance": {
+        "accepted": false,
+        "evidence": null,
+        "remaining_blockers": [
+          "Character high-detail skin/garment/deformation visual acceptance not established.",
+          "Actual selected weapon and compatible pose/part synchronization unverified.",
+          "Source export / diagnostic render / successful decode are not quality acceptance."
+        ]
+      }
+    },
+    {
+      "evidence_id": "corpo__kangtao_ma--ranger__lvl1_03::shoot",
+      "catalog_id": "corpo__kangtao_ma--ranger__lvl1_03",
+      "faction": "KangTao",
+      "action": "shoot",
+      "accepted": false,
+      "status": "no_archived_diagnostic_in_this_bounded_snapshot",
+      "source_exported": {
+        "available": true,
+        "status": "candidate_clip_present_not_rig_compatibility",
+        "source_set": "base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims",
+        "file": {
+          "source": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\animations\\npc\\gameplay\\man_average\\corpo\\rifle\\ma_corpo_rifle_action_combat.anims.glb",
+          "sha256": "ec9a663f7db68cbdd73e9200eacdbd08403839d5ca2c5c525ed739ee76460398",
+          "bytes": 6580932,
+          "hash_evidence": "publication_snapshot_only"
+        },
+        "candidate_clips": [
+          "shoot_precise",
+          "shoot_precise_02"
+        ],
+        "verified_present_clips": [
+          "shoot_precise",
+          "shoot_precise_02"
+        ],
+        "error": null,
+        "legacy_job_status": "blocked_not_recorded",
+        "semantics_warning": "ovr clips require compatible base/layer composition; melee is rifle-butt attack candidate, not all class attacks.",
+        "archive_provenance_limit": "Explicit unbundle archive plus -gp can search across game archives and overwrite matches. Recorded hashes prove actual file bytes, NOT strict archive isolation or correct override priority. Historical164/332 source labels remain unmodified; corrected exporter regression is separate."
+      },
+      "diagnostic_rendered": {
+        "available": false,
+        "clip_count": 0,
+        "runs": [],
+        "scope": "exact character only; no body-template propagation"
+      },
+      "decoded_and_reviewed": {
+        "available": false,
+        "scope": "sampled frames only, never all-frame acceptance",
+        "runs": []
+      },
+      "acceptance": {
+        "accepted": false,
+        "evidence": null,
+        "remaining_blockers": [
+          "Character high-detail skin/garment/deformation visual acceptance not established.",
+          "Actual selected weapon and compatible pose/part synchronization unverified.",
+          "Source export / diagnostic render / successful decode are not quality acceptance."
+        ]
+      }
+    },
+    {
+      "evidence_id": "corpo__kangtao_ma--ranger__lvl1_03::death",
+      "catalog_id": "corpo__kangtao_ma--ranger__lvl1_03",
+      "faction": "KangTao",
+      "action": "death",
+      "accepted": false,
+      "status": "no_archived_diagnostic_in_this_bounded_snapshot",
+      "source_exported": {
+        "available": true,
+        "status": "candidate_clip_present_not_rig_compatibility",
+        "source_set": "base\\animations\\npc\\gameplay\\man_average\\gang\\unarmed\\ma_gang_unarmed_reaction_ranged_death.anims",
+        "file": {
+          "source": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\animations\\npc\\gameplay\\man_average\\gang\\unarmed\\ma_gang_unarmed_reaction_ranged_death.anims.glb",
+          "sha256": "f8fa8839e1bc5681dcbc4cfde79fd796e2cdcb406f7f52b8156dda5760e19346",
+          "bytes": 6609864,
+          "hash_evidence": "publication_snapshot_only"
+        },
+        "candidate_clips": [
+          "death_front_torso_l_idle",
+          "death_extended_front_01"
+        ],
+        "verified_present_clips": [
+          "death_front_torso_l_idle",
+          "death_extended_front_01"
+        ],
+        "error": null,
+        "legacy_job_status": "blocked_not_recorded",
+        "semantics_warning": "ovr clips require compatible base/layer composition; melee is rifle-butt attack candidate, not all class attacks.",
+        "archive_provenance_limit": "Explicit unbundle archive plus -gp can search across game archives and overwrite matches. Recorded hashes prove actual file bytes, NOT strict archive isolation or correct override priority. Historical164/332 source labels remain unmodified; corrected exporter regression is separate."
+      },
+      "diagnostic_rendered": {
+        "available": false,
+        "clip_count": 0,
+        "runs": [],
+        "scope": "exact character only; no body-template propagation"
+      },
+      "decoded_and_reviewed": {
+        "available": false,
+        "scope": "sampled frames only, never all-frame acceptance",
+        "runs": []
+      },
+      "acceptance": {
+        "accepted": false,
+        "evidence": null,
+        "remaining_blockers": [
+          "Character high-detail skin/garment/deformation visual acceptance not established.",
+          "Source export / diagnostic render / successful decode are not quality acceptance."
+        ]
+      }
+    }
+  ],
+  "bounded_snapshot": "Five completed clips: shoot armed/unarmed plus walk/attack/ordinary death; no concurrent or incomplete runs."
+}

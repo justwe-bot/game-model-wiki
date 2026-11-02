@@ -1,0 +1,264 @@
+{
+  "Header": {
+    "MaterialJsonVersion": "1.0.0"
+  },
+  "MaterialRepo": "\\\\?\\C:\\Code\\UeCover\\Blender\\hq_sample\\material_depot",
+  "Materials": [
+    {
+      "Name": "teeth_MAT",
+      "BaseMaterial": "base\\characters\\common\\teeth\\teeth_base.mi",
+      "MaterialTemplate": "base\\materials\\skin.mt",
+      "EnableMask": false,
+      "Data": {
+        "Albedo": "base\\characters\\common\\teeth\\ht_001_ma_teeth_d01.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "base\\characters\\common\\teeth\\ht_001_ma_teeth_n01.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "base\\characters\\common\\teeth\\ht_001_ma_teeth_rm01.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\teeth\\ht_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 61,
+          "Green": 37,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "TintScale": 0.899999976,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "hologram",
+      "BaseMaterial": "base\\fx\\materials\\holograms\\crime_scene\\holo_crime_scene.mi",
+      "MaterialTemplate": "base\\fx\\shaders\\hologram.mt",
+      "EnableMask": false,
+      "Data": {
+        "AdditiveAlphaBlend": 1,
+        "OpaqueScanlineDensity": 200,
+        "Scanline": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+        "Normal": "base\\characters\\garment\\corp_trauma\\unique_trauma\\head\\h2_003_helmet__front\\textures\\h2_003_ma_helmet__front_n01.xbm",
+        "DotsTexture": "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+        "DotsSize": 200,
+        "DotsColor": {
+          "Red": 82,
+          "Green": 155,
+          "Blue": 216,
+          "Alpha": 255
+        },
+        "Projector1Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1,
+          "W": 0
+        },
+        "SurfaceColor": {
+          "Red": 240,
+          "Green": 251,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "SurfaceShadows": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "FallofColor": {
+          "Red": 204,
+          "Green": 246,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "Diffuse": "base\\fx\\_textures\\holograms\\fx_trauma_helmet_front_holo.xbm",
+        "GradientOffset": -2.5999999,
+        "GradientLength": 0.899999976,
+        "FresnelStrength": 0.121950999,
+        "DotsFresnelStrength": 0.746268988,
+        "GlowStrength": 0.100000001,
+        "DesaturationStrength": 0,
+        "FlickerThreshold": 0.375609994,
+        "FlickerChance": 0.112195,
+        "ArtifactsChance": 0,
+        "LightBleed": 0.291498005,
+        "NormalStrength": 1,
+        "ScreenSpaceFlicker": 1.09000003,
+        "UseIsobars": 0,
+        "IsobarsOffsets": {
+          "X": 3320,
+          "Y": 120,
+          "Z": 0,
+          "W": 0
+        },
+        "EntropyThreshold": 0.195122004,
+        "UseMovingDots": 0,
+        "IsHair": 0,
+        "ScanlineThickness": -0.578947008,
+        "Opacity": 1,
+        "GlobalTint": 0,
+        "SampledOrProceduralDots": 1,
+        "FullColorOrGrayscale": 0,
+        "GlitchChance": 0.419512004
+      }
+    }
+  ],
+  "TexturesList": [
+    "engine\\textures\\editor\\white.xbm",
+    "engine\\textures\\small_flat_normal.xbm",
+    "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+    "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+    "engine\\textures\\editor\\black.xbm",
+    "base\\characters\\common\\teeth\\ht_001_ma_teeth_d01.xbm",
+    "base\\characters\\common\\teeth\\ht_001_ma_teeth_n01.xbm",
+    "base\\characters\\common\\teeth\\ht_001_ma_teeth_rm01.xbm",
+    "base\\characters\\common\\teeth\\ht_000_base__tintcolormask.xbm",
+    "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+    "base\\materials\\placeholder\\normal.xbm",
+    "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+    "base\\materials\\placeholder\\black.xbm",
+    "base\\characters\\garment\\corp_trauma\\unique_trauma\\head\\h2_003_helmet__front\\textures\\h2_003_ma_helmet__front_n01.xbm",
+    "base\\fx\\_textures\\holograms\\fx_trauma_helmet_front_holo.xbm"
+  ],
+  "MaterialTemplates": [
+    {
+      "Name": "base\\materials\\skin.mt",
+      "EnableMask": true,
+      "Data": {
+        "Albedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedo": "engine\\textures\\editor\\white.xbm",
+        "SecondaryAlbedoInfluence": 0,
+        "SecondaryAlbedoTintColorInfluence": 0,
+        "Normal": "engine\\textures\\small_flat_normal.xbm",
+        "DetailNormal": "engine\\textures\\small_flat_normal.xbm",
+        "Roughness": "engine\\textures\\editor\\white.xbm",
+        "DetailRoughnessBiasMin": 1,
+        "DetailRoughnessBiasMax": 0.680000007,
+        "MicroDetailUVScale01": 10,
+        "MicroDetailUVScale02": 10,
+        "MicroDetail": "base\\characters\\common\\skin\\face\\microdetail_n.xbm",
+        "MicroDetailInfluence": 1,
+        "TintColorMask": "base\\characters\\common\\skin\\torso\\i0_000_base__tintcolormask.xbm",
+        "TintColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "TintScale": 0,
+        "SkinProfile": "engine\\materials\\defaults\\default.sp",
+        "Detailmap_Stretch": "engine\\textures\\small_flat_normal.xbm",
+        "EmissiveMask": "engine\\textures\\editor\\black.xbm",
+        "EmissiveEV": 0,
+        "Detailmap_Squash": "engine\\textures\\small_flat_normal.xbm",
+        "CavityIntensity": 0.25,
+        "Bloodflow": "engine\\textures\\editor\\white.xbm",
+        "BloodColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 0
+        },
+        "DetailNormalInfluence": 0
+      }
+    },
+    {
+      "Name": "base\\fx\\shaders\\hologram.mt",
+      "EnableMask": true,
+      "Data": {
+        "AdditiveAlphaBlend": 1,
+        "OpaqueScanlineDensity": 400,
+        "Scanline": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+        "Normal": "base\\materials\\placeholder\\normal.xbm",
+        "DotsTexture": "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+        "DotsSize": 100,
+        "DotsColor": {
+          "Red": 73,
+          "Green": 168,
+          "Blue": 246,
+          "Alpha": 255
+        },
+        "Projector1Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1,
+          "W": 0
+        },
+        "SurfaceColor": {
+          "Red": 73,
+          "Green": 168,
+          "Blue": 246,
+          "Alpha": 255
+        },
+        "SurfaceShadows": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "FallofColor": {
+          "Red": 0,
+          "Green": 136,
+          "Blue": 163,
+          "Alpha": 255
+        },
+        "Diffuse": "base\\materials\\placeholder\\black.xbm",
+        "GradientOffset": -100,
+        "GradientLength": 1,
+        "FresnelStrength": 3.07393003,
+        "DotsFresnelStrength": 0.544746995,
+        "GlowStrength": 0.252918005,
+        "DesaturationStrength": 0,
+        "FlickerThreshold": 0,
+        "FlickerChance": 0,
+        "ArtifactsChance": 0,
+        "LightBleed": 0.291498005,
+        "NormalStrength": 1,
+        "ScreenSpaceFlicker": 0,
+        "UseIsobars": 0,
+        "IsobarsOffsets": {
+          "X": 3320,
+          "Y": 120,
+          "Z": 0,
+          "W": 0
+        },
+        "EntropyThreshold": 0,
+        "UseMovingDots": 0,
+        "IsHair": 0,
+        "ScanlineThickness": -0.578947008,
+        "Opacity": 1,
+        "GlobalTint": 0,
+        "SampledOrProceduralDots": 1,
+        "FullColorOrGrayscale": 0
+      }
+    }
+  ],
+  "Appearances": {
+    "default0": [
+      "teeth_MAT",
+      "teeth_MAT"
+    ],
+    "hologram1": [
+      "hologram",
+      "hologram"
+    ]
+  }
+}

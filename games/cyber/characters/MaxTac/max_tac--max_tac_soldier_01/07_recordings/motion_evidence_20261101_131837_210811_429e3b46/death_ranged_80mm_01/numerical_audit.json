@@ -1,0 +1,4103 @@
+{
+  "accepted": false,
+  "game_faithful": false,
+  "status": "three_GPU_frames_complete_requires_visual_review_NOT_ACCEPTED",
+  "catalog_id": "max_tac--max_tac_soldier_01",
+  "catalog_identity_mapping_status": "Inventory alias only; exact29 target mapping requires source appearance match",
+  "source_identity": {
+    "manifest": "C:\\Code\\UeCover\\Blender\\quality_audit\\maxtac_soldier_01_dependency_manifest.json",
+    "entity": "base/characters/entities/corpo/corpo__max_tac_ma.ent",
+    "entity_appearance": "max_tac_max_tac_soldier_01",
+    "app": "base/characters/appearances/corpo/max_tac.app",
+    "app_appearance": "max_tac_soldier_01"
+  },
+  "scope": "Full MaxTac original-material original-skin ARTISTIC death_front_torso_l_idle reconstruction DIAGNOSTIC ONLY",
+  "dq_width_m": 0.08,
+  "dq_scheme": "smooth_endpoints default; ownership variant NOT used",
+  "limitations": [
+    "Auxiliary DQ is artistic nearest-anatomical-segment reconstruction, NOT recovered game graph",
+    "Facial bones static relative to source Head delta; facial animation NOT present",
+    "GARMENT source parameters and binding space unverified; lower-leg DEVELOP source material unresolved",
+    "Only this named source clip tested; no 29-character expansion",
+    "Weapon remains source-slot candidate throughout; no invented drop or independent weapon mechanism animation",
+    "Weapon SOURCE DEFAULT attachment candidate only; mag offset, source loadout appearance and synchronization NOT accepted"
+  ],
+  "rigs": [
+    {
+      "name": "Armature__g1_013_ma_gloves__foil",
+      "bones": 109,
+      "source_common": 49,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__g1_013_ma_gloves__foil",
+        "slot": "OBArmature__g1_013_ma_gloves__foil",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1090,
+        "basis_decomposition_max_error": 2.8014183044433594e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              -0.14066539704799652,
+              -0.28359779715538025,
+              0.9485692381858826,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600926041603088,
+              -0.19486108422279358,
+              -0.20063531398773193,
+              -0.19874101877212524
+            ],
+            [
+              0.24173890054225922,
+              -0.9389349222183228,
+              -0.24487200379371643,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.14066478610038757,
+              -0.2836005985736847,
+              0.948569655418396,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600921869277954,
+              -0.19486239552497864,
+              -0.20063279569149017,
+              -0.19874101877212524
+            ],
+            [
+              0.2417406439781189,
+              -0.938933789730072,
+              -0.244872584939003,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999986290931702,
+            1.000000238418579
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__g1_013_ma_gloves__foil_dec_max_tac",
+      "bones": 21,
+      "source_common": 8,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__g1_013_ma_gloves__foil_dec_max_tac",
+        "slot": "OBArmature__g1_013_ma_gloves__foil_dec_max_tac",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 210,
+        "basis_decomposition_max_error": 8.940696716308594e-07,
+        "worst_decomposition_joint": {
+          "joint": "RightInHandPinky",
+          "matrix": [
+            [
+              0.8916432857513428,
+              -0.3626796007156372,
+              -0.2709893584251404,
+              0.0167141854763031
+            ],
+            [
+              -0.41505974531173706,
+              -0.41576701402664185,
+              -0.809235692024231,
+              0.12240216135978699
+            ],
+            [
+              0.1808251142501831,
+              0.8340277671813965,
+              -0.5212504863739014,
+              -0.018509387969970703
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.8916434049606323,
+              -0.3626801371574402,
+              -0.27098944783210754,
+              0.0167141854763031
+            ],
+            [
+              -0.4150593876838684,
+              -0.4157679080963135,
+              -0.8092363476753235,
+              0.12240216135978699
+            ],
+            [
+              0.18082518875598907,
+              0.8340275287628174,
+              -0.5212501883506775,
+              -0.018509387969970703
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0,
+            1.0000004768371582,
+            0.9999998807907104
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__h0_000_ma_c__basehead",
+      "bones": 254,
+      "source_common": 6,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__h0_000_ma_c__basehead",
+        "slot": "OBArmature__h0_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 2540,
+        "basis_decomposition_max_error": 3.337860107421875e-06,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.5327660441398621,
+              -0.7062788605690002,
+              0.4661824107170105,
+              -0.2918942868709564
+            ],
+            [
+              -0.6819624304771423,
+              -0.03213023766875267,
+              0.7306838035583496,
+              -0.6591848731040955
+            ],
+            [
+              -0.5010885000228882,
+              -0.7072035074234009,
+              -0.49877217411994934,
+              0.9947826862335205
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.5327693819999695,
+              -0.7062783241271973,
+              0.466184139251709,
+              -0.2918942868709564
+            ],
+            [
+              -0.6819618940353394,
+              -0.032133255153894424,
+              0.7306817770004272,
+              -0.6591848731040955
+            ],
+            [
+              -0.5010858774185181,
+              -0.7072040438652039,
+              -0.4987739026546478,
+              0.9947826862335205
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.999999463558197,
+            0.9999992847442627
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__h1_002_ma_hat__headcap",
+      "bones": 137,
+      "source_common": 10,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__h1_002_ma_hat__headcap",
+        "slot": "OBArmature__h1_002_ma_hat__headcap",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1370,
+        "basis_decomposition_max_error": 3.039836883544922e-06,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.5348071455955505,
+              -0.6994155645370483,
+              0.47412586212158203,
+              -0.29017573595046997
+            ],
+            [
+              -0.6792792677879333,
+              -0.022143825888633728,
+              0.7335483431816101,
+              -0.6584470868110657
+            ],
+            [
+              -0.5025565028190613,
+              -0.7143715620040894,
+              -0.48693984746932983,
+              0.99755859375
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.5348101854324341,
+              -0.699414849281311,
+              0.4741274118423462,
+              -0.29017573595046997
+            ],
+            [
+              -0.679278552532196,
+              -0.02214629575610161,
+              0.7335463762283325,
+              -0.6584470868110657
+            ],
+            [
+              -0.5025540590286255,
+              -0.7143720984458923,
+              -0.48694106936454773,
+              0.99755859375
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000009536743164,
+            0.9999995827674866,
+            0.999999463558197
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__h2_016_ma_helmet__max_tac",
+      "bones": 1,
+      "source_common": 1,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__h2_016_ma_helmet__max_tac",
+        "slot": "OBArmature__h2_016_ma_helmet__max_tac",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 10,
+        "basis_decomposition_max_error": 5.662441253662109e-07,
+        "worst_decomposition_joint": {
+          "joint": "Head",
+          "matrix": [
+            [
+              -0.4316598176956177,
+              0.7407410740852356,
+              -0.5147542357444763,
+              -1.5091227293014526
+            ],
+            [
+              -0.24838212132453918,
+              0.45099031925201416,
+              0.8572710156440735,
+              -0.0362011194229126
+            ],
+            [
+              0.8671655058860779,
+              0.49790576100349426,
+              -0.010687654837965965,
+              0.760542094707489
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.43166038393974304,
+              0.7407411336898804,
+              -0.5147545337677002,
+              -1.5091227293014526
+            ],
+            [
+              -0.24838237464427948,
+              0.4509906470775604,
+              0.8572709560394287,
+              -0.0362011194229126
+            ],
+            [
+              0.8671655058860779,
+              0.4979056715965271,
+              -0.010687957517802715,
+              0.760542094707489
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999998807907104,
+            0.9999998211860657
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__he_000_ma_c__basehead",
+      "bones": 56,
+      "source_common": 1,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__he_000_ma_c__basehead",
+        "slot": "OBArmature__he_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 560,
+        "basis_decomposition_max_error": 5.960464477539062e-07,
+        "worst_decomposition_joint": {
+          "joint": "l_J_eye_JNT",
+          "matrix": [
+            [
+              -0.4221957325935364,
+              0.7623984813690186,
+              -0.49040713906288147,
+              -1.649048924446106
+            ],
+            [
+              -0.2812267541885376,
+              0.4041374921798706,
+              0.8703929781913757,
+              0.04509224742650986
+            ],
+            [
+              0.8617786169052124,
+              0.5053921341896057,
+              0.043781694024801254,
+              0.7126922011375427
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.42219632863998413,
+              0.7623983025550842,
+              -0.4904072880744934,
+              -1.649048924446106
+            ],
+            [
+              -0.2812269330024719,
+              0.40413782000541687,
+              0.8703930377960205,
+              0.04509224742650986
+            ],
+            [
+              0.8617784976959229,
+              0.5053922533988953,
+              0.043781258165836334,
+              0.7126922011375427
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0,
+            0.9999998807907104,
+            0.9999999403953552
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__heb_000_ma_c__basehead",
+      "bones": 80,
+      "source_common": 2,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__heb_000_ma_c__basehead",
+        "slot": "OBArmature__heb_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 800,
+        "basis_decomposition_max_error": 5.960464477539062e-07,
+        "worst_decomposition_joint": {
+          "joint": "Head",
+          "matrix": [
+            [
+              -0.4221957325935364,
+              0.7623984813690186,
+              -0.49040713906288147,
+              -1.5120545625686646
+            ],
+            [
+              -0.2812267541885376,
+              0.4041374921798706,
+              0.8703929781913757,
+              -0.03092881478369236
+            ],
+            [
+              0.8617786169052124,
+              0.5053921341896057,
+              0.043781694024801254,
+              0.7632768154144287
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.42219632863998413,
+              0.7623983025550842,
+              -0.4904072880744934,
+              -1.5120545625686646
+            ],
+            [
+              -0.2812269330024719,
+              0.40413782000541687,
+              0.8703930377960205,
+              -0.03092881478369236
+            ],
+            [
+              0.8617784976959229,
+              0.5053922533988953,
+              0.043781258165836334,
+              0.7632768154144287
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0,
+            0.9999998807907104,
+            0.9999999403953552
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__ht_000_ma_c__basehead",
+      "bones": 11,
+      "source_common": 1,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__ht_000_ma_c__basehead",
+        "slot": "OBArmature__ht_000_ma_c__basehead",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 110,
+        "basis_decomposition_max_error": 5.960464477539062e-07,
+        "worst_decomposition_joint": {
+          "joint": "Head",
+          "matrix": [
+            [
+              -0.4221957325935364,
+              0.7623984813690186,
+              -0.49040713906288147,
+              -1.5120545625686646
+            ],
+            [
+              -0.2812267541885376,
+              0.4041374921798706,
+              0.8703929781913757,
+              -0.03092881478369236
+            ],
+            [
+              0.8617786169052124,
+              0.5053921341896057,
+              0.043781694024801254,
+              0.7632768154144287
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.42219632863998413,
+              0.7623983025550842,
+              -0.4904072880744934,
+              -1.5120545625686646
+            ],
+            [
+              -0.2812269330024719,
+              0.40413782000541687,
+              0.8703930377960205,
+              -0.03092881478369236
+            ],
+            [
+              0.8617784976959229,
+              0.5053922533988953,
+              0.043781258165836334,
+              0.7632768154144287
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0,
+            0.9999998807907104,
+            0.9999999403953552
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__hx_000_ma_c__basehead_pimples_01",
+      "bones": 176,
+      "source_common": 6,
+      "mode": "Head world delta; original facial hierarchy remains static",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__hx_000_ma_c__basehead_pimples_01",
+        "slot": "OBArmature__hx_000_ma_c__basehead_pimples_01",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1760,
+        "basis_decomposition_max_error": 7.748603820800781e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_J_neck_rowB_0_JNT",
+          "matrix": [
+            [
+              -0.2795528173446655,
+              0.8620589971542358,
+              -0.42273473739624023,
+              -1.041703701019287
+            ],
+            [
+              0.04259415343403816,
+              0.4509902000427246,
+              0.8915117383003235,
+              -0.08619758486747742
+            ],
+            [
+              0.959185004234314,
+              0.23121920228004456,
+              -0.1627945452928543,
+              1.1798725128173828
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.2795535922050476,
+              0.8620588183403015,
+              -0.4227348566055298,
+              -1.041703701019287
+            ],
+            [
+              0.04259392246603966,
+              0.4509904980659485,
+              0.891511857509613,
+              -0.08619758486747742
+            ],
+            [
+              0.959185004234314,
+              0.23121927678585052,
+              -0.1627945899963379,
+              1.1798725128173828
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0,
+            0.9999999403953552
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__i1_016_ma_belt__police_eq_vest",
+      "bones": 1,
+      "source_common": 1,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__i1_016_ma_belt__police_eq_vest",
+        "slot": "OBArmature__i1_016_ma_belt__police_eq_vest",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 10,
+        "basis_decomposition_max_error": 3.2782554626464844e-07,
+        "worst_decomposition_joint": {
+          "joint": "Hips",
+          "matrix": [
+            [
+              -0.14767026901245117,
+              0.44252753257751465,
+              -0.8845123648643494,
+              -0.6615070104598999
+            ],
+            [
+              -0.3259442150592804,
+              0.8225817084312439,
+              0.4659602642059326,
+              -0.011380690149962902
+            ],
+            [
+              0.9337844848632812,
+              0.35711055994033813,
+              0.022768482565879822,
+              -0.12142540514469147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.1476702243089676,
+              0.4425274729728699,
+              -0.8845124840736389,
+              -0.6615070104598999
+            ],
+            [
+              -0.32594427466392517,
+              0.8225818872451782,
+              0.46595993638038635,
+              -0.011380690149962902
+            ],
+            [
+              0.9337844252586365,
+              0.35711026191711426,
+              0.02276846021413803,
+              -0.12142540514469147
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.9999996423721313,
+            0.9999997019767761
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__i1_038_ma_slot__gun_holster",
+      "bones": 17,
+      "source_common": 7,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__i1_038_ma_slot__gun_holster",
+        "slot": "OBArmature__i1_038_ma_slot__gun_holster",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 170,
+        "basis_decomposition_max_error": 5.364418029785156e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_knee_mscl_JNT",
+          "matrix": [
+            [
+              -0.5455396175384521,
+              0.830805778503418,
+              -0.11021852493286133,
+              -0.17345654964447021
+            ],
+            [
+              0.517180860042572,
+              0.4372127652168274,
+              0.7357780933380127,
+              0.17866890132427216
+            ],
+            [
+              0.6594774723052979,
+              0.34439319372177124,
+              -0.6681935787200928,
+              -0.39664560556411743
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.5455399751663208,
+              0.8308060765266418,
+              -0.11021844297647476,
+              -0.17345654964447021
+            ],
+            [
+              0.517180860042572,
+              0.43721243739128113,
+              0.7357782125473022,
+              0.17866890132427216
+            ],
+            [
+              0.6594777703285217,
+              0.34439322352409363,
+              -0.6681941151618958,
+              -0.39664560556411743
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0,
+            0.9999999403953552,
+            1.0000001192092896
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__i1_095_ma_slot__baton_calf",
+      "bones": 8,
+      "source_common": 2,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__i1_095_ma_slot__baton_calf",
+        "slot": "OBArmature__i1_095_ma_slot__baton_calf",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 80,
+        "basis_decomposition_max_error": 5.364418029785156e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_knee_mscl_JNT",
+          "matrix": [
+            [
+              -0.5455396175384521,
+              0.830805778503418,
+              -0.11021852493286133,
+              -0.17345654964447021
+            ],
+            [
+              0.517180860042572,
+              0.4372127652168274,
+              0.7357780933380127,
+              0.17866890132427216
+            ],
+            [
+              0.6594774723052979,
+              0.34439319372177124,
+              -0.6681935787200928,
+              -0.39664560556411743
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.5455399751663208,
+              0.8308060765266418,
+              -0.11021844297647476,
+              -0.17345654964447021
+            ],
+            [
+              0.517180860042572,
+              0.43721243739128113,
+              0.7357782125473022,
+              0.17866890132427216
+            ],
+            [
+              0.6594777703285217,
+              0.34439322352409363,
+              -0.6681941151618958,
+              -0.39664560556411743
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0,
+            0.9999999403953552,
+            1.0000001192092896
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__l1_077_ma_pants__trauma_small",
+      "bones": 42,
+      "source_common": 18,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__l1_077_ma_pants__trauma_small",
+        "slot": "OBArmature__l1_077_ma_pants__trauma_small",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 420,
+        "basis_decomposition_max_error": 1.7285346984863281e-06,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.9605128169059753,
+              -0.11028055846691132,
+              0.2554454505443573,
+              -0.2701694071292877
+            ],
+            [
+              -0.2655435800552368,
+              -0.08920758217573166,
+              0.959963321685791,
+              -0.6048583984375
+            ],
+            [
+              -0.08307632803916931,
+              -0.9898891448974609,
+              -0.11496895551681519,
+              1.055879831314087
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.9605132937431335,
+              -0.11027884483337402,
+              0.2554459869861603,
+              -0.2701694071292877
+            ],
+            [
+              -0.26554185152053833,
+              -0.0892079547047615,
+              0.9599631428718567,
+              -0.6048583984375
+            ],
+            [
+              -0.08307579904794693,
+              -0.9898892641067505,
+              -0.11496905982494354,
+              1.055879831314087
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.0000001192092896,
+            0.9999998807907104
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__l1_077_ma_pants__trauma_small_dec_logo",
+      "bones": 14,
+      "source_common": 5,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__l1_077_ma_pants__trauma_small_dec_logo",
+        "slot": "OBArmature__l1_077_ma_pants__trauma_small_dec_logo",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 140,
+        "basis_decomposition_max_error": 6.556510925292969e-07,
+        "worst_decomposition_joint": {
+          "joint": "LeftLeg",
+          "matrix": [
+            [
+              -0.5811634659767151,
+              -0.6949794292449951,
+              -0.42338138818740845,
+              0.31771034002304077
+            ],
+            [
+              -0.4609723687171936,
+              0.7098849415779114,
+              -0.5325108170509338,
+              0.2080620527267456
+            ],
+            [
+              0.6706365346908569,
+              -0.1143089234828949,
+              -0.7329258918762207,
+              0.3654079735279083
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.5811641216278076,
+              -0.6949796676635742,
+              -0.4233815670013428,
+              0.31771034002304077
+            ],
+            [
+              -0.4609723687171936,
+              0.709884762763977,
+              -0.5325109362602234,
+              0.2080620527267456
+            ],
+            [
+              0.6706365346908569,
+              -0.11430889368057251,
+              -0.7329261898994446,
+              0.3654079735279083
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            0.9999997615814209,
+            0.9999999403953552
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__s1_053_ma_boot__military",
+      "bones": 82,
+      "source_common": 62,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__s1_053_ma_boot__military",
+        "slot": "OBArmature__s1_053_ma_boot__military",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 820,
+        "basis_decomposition_max_error": 1.2814998626708984e-06,
+        "worst_decomposition_joint": {
+          "joint": "RightHandRing2",
+          "matrix": [
+            [
+              -0.33569061756134033,
+              0.501258373260498,
+              -0.7975291013717651,
+              -0.08276665210723877
+            ],
+            [
+              -0.8637139797210693,
+              0.1740819811820984,
+              0.4729614853858948,
+              0.2018008828163147
+            ],
+            [
+              0.3759121000766754,
+              0.8476060628890991,
+              0.3745068609714508,
+              -0.15483325719833374
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.3356904983520508,
+              0.5012577772140503,
+              -0.7975296378135681,
+              -0.08276665210723877
+            ],
+            [
+              -0.8637144565582275,
+              0.1740824282169342,
+              0.4729619026184082,
+              0.2018008828163147
+            ],
+            [
+              0.37591150403022766,
+              0.8476064205169678,
+              0.37450557947158813,
+              -0.15483325719833374
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.000000238418579,
+            1.0000003576278687
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd",
+      "bones": 59,
+      "source_common": 13,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_073_ma_vest__tactic_collar2_ncpd",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 590,
+        "basis_decomposition_max_error": 2.1457672119140625e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              -0.17400899529457092,
+              -0.32427623867988586,
+              0.929819643497467,
+              -1.0134714841842651
+            ],
+            [
+              -0.9471650123596191,
+              -0.2032446563243866,
+              -0.24813877046108246,
+              -0.18173320591449738
+            ],
+            [
+              0.26944616436958313,
+              -0.9238691926002502,
+              -0.27177825570106506,
+              0.7790939211845398
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.17400844395160675,
+              -0.3242783844470978,
+              0.9298200011253357,
+              -1.0134714841842651
+            ],
+            [
+              -0.9471648335456848,
+              -0.20324544608592987,
+              -0.24813693761825562,
+              -0.18173320591449738
+            ],
+            [
+              0.2694475054740906,
+              -0.9238683581352234,
+              -0.2717788517475128,
+              0.7790939211845398
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.0000009536743164,
+            0.9999988675117493,
+            1.0000003576278687
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge",
+      "bones": 7,
+      "source_common": 4,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_badge",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 70,
+        "basis_decomposition_max_error": 5.364418029785156e-07,
+        "worst_decomposition_joint": {
+          "joint": "l_latissimusDorsi_mscl_JNT",
+          "matrix": [
+            [
+              -0.6165299415588379,
+              0.7672442197799683,
+              -0.17671142518520355,
+              -1.1410760879516602
+            ],
+            [
+              0.44893309473991394,
+              0.5269564390182495,
+              0.721648097038269,
+              -0.12010766565799713
+            ],
+            [
+              0.6467995047569275,
+              0.3655860424041748,
+              -0.6693256497383118,
+              0.7679195404052734
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.6165302991867065,
+              0.7672443389892578,
+              -0.17671151459217072,
+              -1.1410760879516602
+            ],
+            [
+              0.4489331543445587,
+              0.5269562602043152,
+              0.7216482162475586,
+              -0.12010766565799713
+            ],
+            [
+              0.646799623966217,
+              0.36558616161346436,
+              -0.6693261861801147,
+              0.7679195404052734
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999998211860657,
+            0.9999999403953552,
+            0.9999998807907104
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+      "bones": 49,
+      "source_common": 10,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 490,
+        "basis_decomposition_max_error": 1.6689300537109375e-06,
+        "worst_decomposition_joint": {
+          "joint": "r_scapula_A_top_out_JNT",
+          "matrix": [
+            [
+              0.966408908367157,
+              -0.08238552510738373,
+              0.24344488978385925,
+              -0.269670695066452
+            ],
+            [
+              -0.24977141618728638,
+              -0.07784797251224518,
+              0.9651707410812378,
+              -0.6031386256217957
+            ],
+            [
+              -0.060563161969184875,
+              -0.9935553669929504,
+              -0.09581022709608078,
+              1.0577218532562256
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.9664093255996704,
+              -0.08238386362791061,
+              0.24344538152217865,
+              -0.269670695066452
+            ],
+            [
+              -0.24976974725723267,
+              -0.07784833759069443,
+              0.9651706218719482,
+              -0.6031386256217957
+            ],
+            [
+              -0.060562681406736374,
+              -0.99355548620224,
+              -0.09581035375595093,
+              1.0577218532562256
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999998807907104,
+            0.9999999403953552,
+            0.9999997615814209
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+      "bones": 10,
+      "source_common": 2,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 100,
+        "basis_decomposition_max_error": 6.556510925292969e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_chest_front_C_bot_out_JNT",
+          "matrix": [
+            [
+              0.6125211119651794,
+              0.2990337908267975,
+              0.7317074537277222,
+              -0.9109394550323486
+            ],
+            [
+              -0.7831546664237976,
+              0.35509130358695984,
+              0.5104694962501526,
+              0.13670551776885986
+            ],
+            [
+              -0.10717546939849854,
+              -0.885714054107666,
+              0.4516913890838623,
+              1.0458688735961914
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.6125213503837585,
+              0.29903408885002136,
+              0.7317078113555908,
+              -0.9109394550323486
+            ],
+            [
+              -0.7831545472145081,
+              0.35509130358695984,
+              0.5104697942733765,
+              0.13670551776885986
+            ],
+            [
+              -0.1071753278374672,
+              -0.8857141733169556,
+              0.4516907334327698,
+              1.0458688735961914
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.000000238418579,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio",
+      "bones": 12,
+      "source_common": 4,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio",
+        "slot": "OBArmature__t2_073_ma_vest__tactic_collar2_ncpd_radio",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 120,
+        "basis_decomposition_max_error": 6.556510925292969e-07,
+        "worst_decomposition_joint": {
+          "joint": "r_chest_front_C_bot_out_JNT",
+          "matrix": [
+            [
+              0.6125211119651794,
+              0.2990337908267975,
+              0.7317074537277222,
+              -0.9109394550323486
+            ],
+            [
+              -0.7831546664237976,
+              0.35509130358695984,
+              0.5104694962501526,
+              0.13670557737350464
+            ],
+            [
+              -0.10717546939849854,
+              -0.885714054107666,
+              0.4516913890838623,
+              1.0458688735961914
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              0.6125213503837585,
+              0.29903408885002136,
+              0.7317078113555908,
+              -0.9109394550323486
+            ],
+            [
+              -0.7831545472145081,
+              0.35509130358695984,
+              0.5104697942733765,
+              0.13670557737350464
+            ],
+            [
+              -0.1071753278374672,
+              -0.8857141733169556,
+              0.4516907334327698,
+              1.0458688735961914
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            0.9999999403953552,
+            1.000000238418579,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_106_ma_jacket__trauma_small",
+      "bones": 109,
+      "source_common": 34,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_106_ma_jacket__trauma_small",
+        "slot": "OBArmature__t2_106_ma_jacket__trauma_small",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 1090,
+        "basis_decomposition_max_error": 2.8014183044433594e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              -0.14066539704799652,
+              -0.28359779715538025,
+              0.9485692381858826,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600926041603088,
+              -0.19486108422279358,
+              -0.20063531398773193,
+              -0.19874101877212524
+            ],
+            [
+              0.24173890054225922,
+              -0.9389349222183228,
+              -0.24487200379371643,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.14066478610038757,
+              -0.2836005985736847,
+              0.948569655418396,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600921869277954,
+              -0.19486239552497864,
+              -0.20063279569149017,
+              -0.19874101877212524
+            ],
+            [
+              0.2417406439781189,
+              -0.938933789730072,
+              -0.244872584939003,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999986290931702,
+            1.000000238418579
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_106_ma_jacket__trauma_small_dec_cable",
+      "bones": 48,
+      "source_common": 16,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_106_ma_jacket__trauma_small_dec_cable",
+        "slot": "OBArmature__t2_106_ma_jacket__trauma_small_dec_cable",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 480,
+        "basis_decomposition_max_error": 2.8014183044433594e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              -0.14066539704799652,
+              -0.28359779715538025,
+              0.9485692381858826,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600926041603088,
+              -0.19486108422279358,
+              -0.20063531398773193,
+              -0.19874101877212524
+            ],
+            [
+              0.24173890054225922,
+              -0.9389349222183228,
+              -0.24487200379371643,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.14066478610038757,
+              -0.2836005985736847,
+              0.948569655418396,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600921869277954,
+              -0.19486239552497864,
+              -0.20063279569149017,
+              -0.19874101877212524
+            ],
+            [
+              0.2417406439781189,
+              -0.938933789730072,
+              -0.244872584939003,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999986290931702,
+            1.000000238418579
+          ]
+        }
+      }
+    },
+    {
+      "name": "Armature__t2_106_ma_jacket__trauma_small_dec_logo",
+      "bones": 27,
+      "source_common": 6,
+      "mode": "65 exact P A^-1 B; auxiliary artistic DQ width 0.08m",
+      "original_pose_position": "REST",
+      "baked_action": {
+        "action": "RECONSTRUCTION_NOT_ACCEPTED_death_front_torso_l_idle_Armature__t2_106_ma_jacket__trauma_small_dec_logo",
+        "slot": "OBArmature__t2_106_ma_jacket__trauma_small_dec_logo",
+        "slot_handle": 929201142,
+        "slot_target_type": "OBJECT",
+        "curves": 270,
+        "basis_decomposition_max_error": 2.8014183044433594e-06,
+        "worst_decomposition_joint": {
+          "joint": "l_triceps_mscl_JNT",
+          "matrix": [
+            [
+              -0.14066539704799652,
+              -0.28359779715538025,
+              0.9485692381858826,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600926041603088,
+              -0.19486108422279358,
+              -0.20063531398773193,
+              -0.19874101877212524
+            ],
+            [
+              0.24173890054225922,
+              -0.9389349222183228,
+              -0.24487200379371643,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "reconstructed": [
+            [
+              -0.14066478610038757,
+              -0.2836005985736847,
+              0.948569655418396,
+              -1.0425901412963867
+            ],
+            [
+              -0.9600921869277954,
+              -0.19486239552497864,
+              -0.20063279569149017,
+              -0.19874101877212524
+            ],
+            [
+              0.2417406439781189,
+              -0.938933789730072,
+              -0.244872584939003,
+              0.8029496073722839
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": [
+            1.000001072883606,
+            0.9999986290931702,
+            1.000000238418579
+          ]
+        }
+      }
+    }
+  ],
+  "renders": [
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0001.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0030.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0059.png"
+  ],
+  "source_sha256": {
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\gpu_character_check\\20261101_114018_303208\\character_static.blend": "f944c7f99b8a6a4c6ee280edb1839668847f8567b996ed7cd45d20f420fe05d3",
+    "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\animations\\npc\\gameplay\\man_average\\gang\\unarmed\\ma_gang_unarmed_reaction_ranged_death.anims.glb": "f8fa8839e1bc5681dcbc4cfde79fd796e2cdcb406f7f52b8156dda5760e19346",
+    "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\characters\\base_entities\\man_base\\man_base.rig.json": "5fcdedca9c56bebefedb0e8c42b57497f86d48493999daed8097c4c2f1fd9bfb",
+    "C:\\Code\\UeCover\\scripts\\probe_auxiliary_motion_field.py": "ab128c3ba03c649b2998e221cf6a96deb0761b8df5ed95a73d14f85dac6542b4",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\weapon_previews\\20261101_122025_166783\\Achilles_SOURCE_DEFAULT_DIAGNOSTIC.blend": "04f61073a5fa81b9321bdb17c535b97862f14867f3f4f41b310bc368f2cf52a8"
+  },
+  "original_mesh_count": 47,
+  "visible_mesh_count": 46,
+  "part_count": 23,
+  "visible_vertices": 98202,
+  "baseline_bounds": [
+    [
+      -0.533948540687561,
+      -0.23146218061447144,
+      -0.0016146042617037892
+    ],
+    [
+      0.5337706804275513,
+      0.29833829402923584,
+      1.8258192539215088
+    ]
+  ],
+  "source_animation": {
+    "name": "death_front_torso_l_idle",
+    "extras": {
+      "schema": {
+        "type": "wkit.cyber.gltf.anims",
+        "version": 5
+      },
+      "animationType": "Normal",
+      "rootMotionType": "Unknown",
+      "frameClamping": false,
+      "frameClampingStartFrame": -1,
+      "frameClampingEndFrame": -1,
+      "numExtraJoints": 0,
+      "numExtraTracks": 0,
+      "constTrackKeys": [],
+      "trackKeys": [
+        {
+          "trackIndex": 0,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0,
+          "value": -4.2964953e-31
+        },
+        {
+          "trackIndex": 5,
+          "time": 0,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.10175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.10175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.10175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.10175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.10175438,
+          "value": 3.180555e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.10175438,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.10175438,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.10175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.10175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.10175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.10175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.10175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.10175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.20350876,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.20350876,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.20350876,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.20350876,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.20350876,
+          "value": 5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.20350876,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.20350876,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.20350876,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.20350876,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.20350876,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.20350876,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.20350876,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.20350876,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.30526316,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.30526316,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.30526316,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.30526316,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.30526316,
+          "value": -8.2694424e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.30526316,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.30526316,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.30526316,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.30526316,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.30526316,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.30526316,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.30526316,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.30526316,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.40701753,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.40701753,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.40701753,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.40701753,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.40701753,
+          "value": -5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.40701753,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.40701753,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.40701753,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.40701753,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.40701753,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.40701753,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.40701753,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.40701753,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.5087719,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.5087719,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.5087719,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.5087719,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.5087719,
+          "value": -2.5444438e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.5087719,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.5087719,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.5087719,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.5087719,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.5087719,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.5087719,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.5087719,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.5087719,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.6105263,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.6105263,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.6105263,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.6105263,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.6105263,
+          "value": -3.180555e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.6105263,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.6105263,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.6105263,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.6105263,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.6105263,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.6105263,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.6105263,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.6105263,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.7122807,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.7122807,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.7122807,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.7122807,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.7122807,
+          "value": -5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.7122807,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.7122807,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.7122807,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.7122807,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.7122807,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.7122807,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.7122807,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.7122807,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.81403506,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.81403506,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.81403506,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.81403506,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.81403506,
+          "value": -5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.81403506,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.81403506,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.81403506,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.81403506,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.81403506,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.81403506,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.81403506,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.81403506,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 0.9157894,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 0.9157894,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 0.9157894,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 0.9157894,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 0.9157894,
+          "value": -5.0888875e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 0.9157894,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 0.9157894,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 0.9157894,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 0.9157894,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 0.9157894,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 0.9157894,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 0.9157894,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 0.9157894,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.0175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.0175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.0175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.0175438,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.0175438,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.0175438,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.0175438,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.0175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.0175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.0175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.0175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.0175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.0175438,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.1192982,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.1192982,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.1192982,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.1192982,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.1192982,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.1192982,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.1192982,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.1192982,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.1192982,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.1192982,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.1192982,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.1192982,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.1192982,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.2210526,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.2210526,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.2210526,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.2210526,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.2210526,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.2210526,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.2210526,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.2210526,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.2210526,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.2210526,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.2210526,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.2210526,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.2210526,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.322807,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.322807,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.322807,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.322807,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.322807,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.322807,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.322807,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.322807,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.322807,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.322807,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.322807,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.322807,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.322807,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.4245614,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.4245614,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.4245614,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.4245614,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.4245614,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.4245614,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.4245614,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.4245614,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.4245614,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.4245614,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.4245614,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.4245614,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.4245614,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.5263157,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.5263157,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.5263157,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.5263157,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.5263157,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.5263157,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.5263157,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.5263157,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.5263157,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.5263157,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.5263157,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.5263157,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.5263157,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.6280701,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.6280701,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.6280701,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.6280701,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.6280701,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.6280701,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.6280701,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.6280701,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.6280701,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.6280701,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.6280701,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.6280701,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.6280701,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.7298245,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.7298245,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.7298245,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.7298245,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.7298245,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.7298245,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.7298245,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.7298245,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.7298245,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.7298245,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.7298245,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.7298245,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.7298245,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.8315789,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.8315789,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.8315789,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.8315789,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.8315789,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.8315789,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.8315789,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.8315789,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.8315789,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.8315789,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.8315789,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.8315789,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.8315789,
+          "value": 0
+        },
+        {
+          "trackIndex": 0,
+          "time": 1.9333333,
+          "value": 1
+        },
+        {
+          "trackIndex": 1,
+          "time": 1.9333333,
+          "value": 1
+        },
+        {
+          "trackIndex": 2,
+          "time": 1.9333333,
+          "value": 1
+        },
+        {
+          "trackIndex": 3,
+          "time": 1.9333333,
+          "value": 1
+        },
+        {
+          "trackIndex": 4,
+          "time": 1.9333333,
+          "value": -7.6333315e-14
+        },
+        {
+          "trackIndex": 5,
+          "time": 1.9333333,
+          "value": -7.016709e-15
+        },
+        {
+          "trackIndex": 6,
+          "time": 1.9333333,
+          "value": 7.016709e-15
+        },
+        {
+          "trackIndex": 7,
+          "time": 1.9333333,
+          "value": 0
+        },
+        {
+          "trackIndex": 8,
+          "time": 1.9333333,
+          "value": 0
+        },
+        {
+          "trackIndex": 9,
+          "time": 1.9333333,
+          "value": 0
+        },
+        {
+          "trackIndex": 10,
+          "time": 1.9333333,
+          "value": 0
+        },
+        {
+          "trackIndex": 11,
+          "time": 1.9333333,
+          "value": 0
+        },
+        {
+          "trackIndex": 12,
+          "time": 1.9333333,
+          "value": 0
+        }
+      ],
+      "fallbackFrameIndices": [
+        36,
+        37
+      ],
+      "optimizationHints": {
+        "preferSIMD": true,
+        "maxRotationCompression": 1,
+        "simdQuantizationBits": 12
+      },
+      "animEvents": [
+        {
+          "type": "Effect",
+          "eventName": "ground",
+          "startFrame": 24,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": "fallback",
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "FoleyAction",
+          "eventName": "mvs",
+          "startFrame": 1,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": "lcm_mvs_fast_light",
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "FoleyAction",
+          "eventName": "mvs",
+          "startFrame": 23,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": null,
+          "onlyPlayOn": null,
+          "dontPlayOn": null,
+          "playerGenderAlt": null,
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": "lcm_mvs_fast_heavy",
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        },
+        {
+          "type": "Sound",
+          "eventName": "ph_bodyfall_avg_death_front_torso_l_idle",
+          "startFrame": 0,
+          "durationInFrames": 0,
+          "switches": null,
+          "params": null,
+          "paramCurves": null,
+          "dynamicParams": null,
+          "metadataContext": "None",
+          "onlyPlayOn": "None",
+          "dontPlayOn": "None",
+          "playerGenderAlt": "None",
+          "emitterName": null,
+          "effectName": null,
+          "sequenceShift": null,
+          "breakAllLoopsOnStop": null,
+          "eventValue": null,
+          "actionName": null,
+          "boneName": null,
+          "facialAnimName": null,
+          "leg": null,
+          "footPhase": null,
+          "voContext": null,
+          "isQuest": null,
+          "side": null,
+          "customEvent": null,
+          "workspotActions": null
+        }
+      ]
+    },
+    "duration": 1.9333332777023315,
+    "fps": 30,
+    "frames": 59,
+    "source_rest_matrix_error": 6.556510925292969e-07,
+    "root_motion": "Unmodified translations from existing exported GLB; exporter Include Root Motion setting not independently known"
+  },
+  "source_clip_audit": {
+    "joint_count": 71,
+    "channel_count": 213,
+    "targeted_joints": 71,
+    "missing_source_joint_channels": [],
+    "channel_paths_by_joint": {
+      "Root": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Trajectory": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Hips": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "reference_joint": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Spine": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftUpLeg": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightUpLeg": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Spine1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftLeg": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightLeg": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Spine2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftFoot": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightFoot": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Spine3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftShoulder": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightShoulder": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Neck": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftArm": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightArm": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Neck1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftForeArm": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightForeArm": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "Head": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHand": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHand": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "WeaponLeft": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "WeaponRight": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHeel": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHeel": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftEye": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightEye": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftInHandThumb": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftInHandIndex": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftInHandMiddle": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftInHandRing": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftInHandPinky": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightInHandThumb": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightInHandIndex": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightInHandMiddle": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightInHandRing": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightInHandPinky": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftToeBase": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightToeBase": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandThumb1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandIndex1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandMiddle1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandRing1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandPinky1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandThumb1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandIndex1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandMiddle1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandRing1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandPinky1": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandThumb2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandIndex2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandMiddle2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandRing2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandPinky2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandThumb2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandIndex2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandMiddle2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandRing2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandPinky2": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandIndex3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandMiddle3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandRing3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "LeftHandPinky3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandIndex3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandMiddle3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandRing3": [
+        "translation",
+        "rotation",
+        "scale"
+      ],
+      "RightHandPinky3": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    },
+    "tracked_world_motion": {
+      "Root": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_rotation_from_first_deg": 0.0
+      },
+      "Hips": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.0932003716006875,
+          0.16904089972376823,
+          0.8088742345571518
+        ],
+        "max_rotation_from_first_deg": 120.658444133642
+      },
+      "Spine": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.11027494445443153,
+          0.2657666355371475,
+          0.8420886099338531
+        ],
+        "max_rotation_from_first_deg": 111.76799791001532
+      },
+      "Head": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.1421603737398982,
+          0.8961328864097595,
+          1.4514707922935486
+        ],
+        "max_rotation_from_first_deg": 110.63874017642317
+      },
+      "LeftFoot": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.8352172076702118,
+          1.071975201368332,
+          0.5034897327423096
+        ],
+        "max_rotation_from_first_deg": 143.1560877244889
+      },
+      "RightFoot": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.43452873826026917,
+          0.5790852382779121,
+          0.7387606203556061
+        ],
+        "max_rotation_from_first_deg": 162.98180273943532
+      },
+      "LeftHand": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.3684021383523941,
+          0.28068238496780396,
+          1.245846739038825
+        ],
+        "max_rotation_from_first_deg": 134.8153183636015
+      },
+      "RightHand": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.41162943840026855,
+          0.7325503453612328,
+          1.2336601484566927
+        ],
+        "max_rotation_from_first_deg": 103.97673296840583
+      },
+      "WeaponRight": {
+        "paths": [
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "world_position_range_m": [
+          0.4593353122472763,
+          0.8629636038094759,
+          1.1699077188968658
+        ],
+        "max_rotation_from_first_deg": 103.9767225664416
+      }
+    },
+    "source_root_joints": [
+      "Root"
+    ],
+    "fullbody_interpretation": "Normal metadata alone is insufficient; actual upper/lower body motion ranges and three rendered poses reviewed. Missing paths use source GLB rest values, no fabricated additive composition.",
+    "root_motion_policy": "All GLB sampled translations retained unchanged; export Include Root Motion setting unknown; no root removal, motion synthesis or rescaling",
+    "events": [
+      {
+        "type": "Effect",
+        "eventName": "ground",
+        "startFrame": 24,
+        "durationInFrames": 0,
+        "switches": null,
+        "params": null,
+        "paramCurves": null,
+        "dynamicParams": null,
+        "metadataContext": null,
+        "onlyPlayOn": null,
+        "dontPlayOn": null,
+        "playerGenderAlt": null,
+        "emitterName": null,
+        "effectName": "fallback",
+        "sequenceShift": null,
+        "breakAllLoopsOnStop": null,
+        "eventValue": null,
+        "actionName": null,
+        "boneName": null,
+        "facialAnimName": null,
+        "leg": null,
+        "footPhase": null,
+        "voContext": null,
+        "isQuest": null,
+        "side": null,
+        "customEvent": null,
+        "workspotActions": null
+      },
+      {
+        "type": "FoleyAction",
+        "eventName": "mvs",
+        "startFrame": 1,
+        "durationInFrames": 0,
+        "switches": null,
+        "params": null,
+        "paramCurves": null,
+        "dynamicParams": null,
+        "metadataContext": null,
+        "onlyPlayOn": null,
+        "dontPlayOn": null,
+        "playerGenderAlt": null,
+        "emitterName": null,
+        "effectName": null,
+        "sequenceShift": null,
+        "breakAllLoopsOnStop": null,
+        "eventValue": null,
+        "actionName": "lcm_mvs_fast_light",
+        "boneName": null,
+        "facialAnimName": null,
+        "leg": null,
+        "footPhase": null,
+        "voContext": null,
+        "isQuest": null,
+        "side": null,
+        "customEvent": null,
+        "workspotActions": null
+      },
+      {
+        "type": "FoleyAction",
+        "eventName": "mvs",
+        "startFrame": 23,
+        "durationInFrames": 0,
+        "switches": null,
+        "params": null,
+        "paramCurves": null,
+        "dynamicParams": null,
+        "metadataContext": null,
+        "onlyPlayOn": null,
+        "dontPlayOn": null,
+        "playerGenderAlt": null,
+        "emitterName": null,
+        "effectName": null,
+        "sequenceShift": null,
+        "breakAllLoopsOnStop": null,
+        "eventValue": null,
+        "actionName": "lcm_mvs_fast_heavy",
+        "boneName": null,
+        "facialAnimName": null,
+        "leg": null,
+        "footPhase": null,
+        "voContext": null,
+        "isQuest": null,
+        "side": null,
+        "customEvent": null,
+        "workspotActions": null
+      },
+      {
+        "type": "Sound",
+        "eventName": "ph_bodyfall_avg_death_front_torso_l_idle",
+        "startFrame": 0,
+        "durationInFrames": 0,
+        "switches": null,
+        "params": null,
+        "paramCurves": null,
+        "dynamicParams": null,
+        "metadataContext": "None",
+        "onlyPlayOn": "None",
+        "dontPlayOn": "None",
+        "playerGenderAlt": "None",
+        "emitterName": null,
+        "effectName": null,
+        "sequenceShift": null,
+        "breakAllLoopsOnStop": null,
+        "eventValue": null,
+        "actionName": null,
+        "boneName": null,
+        "facialAnimName": null,
+        "leg": null,
+        "footPhase": null,
+        "voContext": null,
+        "isQuest": null,
+        "side": null,
+        "customEvent": null,
+        "workspotActions": null
+      }
+    ]
+  },
+  "common_body_reference_count": 65,
+  "partial_rig_policy": "Per-part rigs contain pruned subsets, not 181 bones each. Exact common pose on each original bone; absent segment endpoints queried from other original part rests only; no bone/rest edits.",
+  "rest_gate": {
+    "tolerance_m": 4e-05,
+    "max_per_mesh_m": {
+      "submesh_00_LOD_1_doubled": 0.0,
+      "submesh_01_LOD_1": 0.0,
+      "submesh_02_LOD_1": 0.0,
+      "submesh_00_LOD_1": 0.0,
+      "submesh_00_LOD_1.001": 0.0,
+      "submesh_00_LOD_1.002": 0.0,
+      "submesh_00_LOD_1.003": 0.0,
+      "submesh_01_LOD_1.001": 0.0,
+      "submesh_00_LOD_1.004": 0.0,
+      "submesh_00_LOD_1.005": 0.0,
+      "submesh_01_LOD_1.002": 0.0,
+      "submesh_00_LOD_1.006": 0.0,
+      "submesh_00_LOD_1.007": 0.0,
+      "submesh_01_LOD_1.003": 0.0,
+      "submesh_02_LOD_1.001": 0.0,
+      "submesh_00_LOD_1.008": 0.0,
+      "submesh_01_LOD_1.004": 0.0,
+      "submesh_02_LOD_1.002": 0.0,
+      "submesh_00_LOD_1.009": 0.0,
+      "submesh_00_LOD_1.010": 0.0,
+      "submesh_00_LOD_1.011": 0.0,
+      "submesh_01_LOD_1.005": 0.0,
+      "submesh_02_LOD_1.003": 0.0,
+      "submesh_00_LOD_1.012": 0.0,
+      "submesh_00_LOD_1.013": 0.0,
+      "submesh_01_LOD_1.006": 0.0,
+      "submesh_02_LOD_1.004": 0.0,
+      "submesh_00_LOD_1.014": 0.0,
+      "submesh_01_LOD_1.007": 0.0,
+      "submesh_00_LOD_1.015": 0.0,
+      "submesh_00_LOD_1.016": 0.0,
+      "submesh_01_LOD_1.008": 0.0,
+      "submesh_02_LOD_1.006": 0.0,
+      "submesh_00_LOD_1.017": 0.0,
+      "submesh_01_LOD_1.009": 0.0,
+      "submesh_02_LOD_1.007": 0.0,
+      "submesh_03_LOD_1": 0.0,
+      "submesh_04_LOD_1": 0.0,
+      "submesh_05_LOD_1": 0.0,
+      "submesh_00_LOD_1.018": 0.0,
+      "submesh_00_LOD_1.019": 0.0,
+      "submesh_01_LOD_1.010": 0.0,
+      "submesh_02_LOD_1.008": 0.0,
+      "submesh_00_LOD_1.020": 0.0,
+      "submesh_00_LOD_1.021": 0.0,
+      "submesh_01_LOD_1.011": 0.0
+    },
+    "max_m": 0.0,
+    "pass": true
+  },
+  "identity_delta_max_matrix_error": 2.384185791015625e-07,
+  "sample_frames": [
+    1,
+    30,
+    59
+  ],
+  "pose_evaluation": [
+    {
+      "frame": 1,
+      "matrix_error_per_rig": {
+        "Armature__g1_013_ma_gloves__foil": 1.4603137969970703e-06,
+        "Armature__g1_013_ma_gloves__foil_dec_max_tac": 2.384185791015625e-07,
+        "Armature__h0_000_ma_c__basehead": 2.384185791015625e-07,
+        "Armature__h1_002_ma_hat__headcap": 2.384185791015625e-07,
+        "Armature__h2_016_ma_helmet__max_tac": 5.960464477539063e-08,
+        "Armature__he_000_ma_c__basehead": 1.1920928955078125e-07,
+        "Armature__heb_000_ma_c__basehead": 1.1920928955078125e-07,
+        "Armature__ht_000_ma_c__basehead": 5.960464477539063e-08,
+        "Armature__hx_000_ma_c__basehead_pimples_01": 2.384185791015625e-07,
+        "Armature__i1_016_ma_belt__police_eq_vest": 5.960464477539063e-08,
+        "Armature__i1_038_ma_slot__gun_holster": 1.7881393432617188e-07,
+        "Armature__i1_095_ma_slot__baton_calf": 1.1920928955078125e-07,
+        "Armature__l1_077_ma_pants__trauma_small": 1.341104507446289e-06,
+        "Armature__l1_077_ma_pants__trauma_small_dec_logo": 1.7881393432617188e-07,
+        "Armature__s1_053_ma_boot__military": 1.3113021850585938e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd": 5.364418029785156e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge": 1.7881393432617188e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo": 2.384185791015625e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge": 2.384185791015625e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio": 2.384185791015625e-07,
+        "Armature__t2_106_ma_jacket__trauma_small": 1.341104507446289e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_cable": 7.450580596923828e-07,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_logo": 7.450580596923828e-07
+      },
+      "bounds": [
+        [
+          -0.28174856305122375,
+          -0.21487246453762054,
+          -0.01049075461924076
+        ],
+        [
+          0.348324716091156,
+          0.5174093842506409,
+          1.7623711824417114
+        ]
+      ],
+      "max_displacement_from_static_m": 0.39500465587761435
+    },
+    {
+      "frame": 30,
+      "matrix_error_per_rig": {
+        "Armature__g1_013_ma_gloves__foil": 2.562999725341797e-06,
+        "Armature__g1_013_ma_gloves__foil_dec_max_tac": 6.556510925292969e-07,
+        "Armature__h0_000_ma_c__basehead": 2.294778823852539e-06,
+        "Armature__h1_002_ma_hat__headcap": 2.0265579223632812e-06,
+        "Armature__h2_016_ma_helmet__max_tac": 2.384185791015625e-07,
+        "Armature__he_000_ma_c__basehead": 2.980232238769531e-07,
+        "Armature__heb_000_ma_c__basehead": 2.682209014892578e-07,
+        "Armature__ht_000_ma_c__basehead": 2.682209014892578e-07,
+        "Armature__hx_000_ma_c__basehead_pimples_01": 4.470348358154297e-07,
+        "Armature__i1_016_ma_belt__police_eq_vest": 2.384185791015625e-07,
+        "Armature__i1_038_ma_slot__gun_holster": 2.980232238769531e-07,
+        "Armature__i1_095_ma_slot__baton_calf": 2.980232238769531e-07,
+        "Armature__l1_077_ma_pants__trauma_small": 9.08970832824707e-07,
+        "Armature__l1_077_ma_pants__trauma_small_dec_logo": 3.8743019104003906e-07,
+        "Armature__s1_053_ma_boot__military": 5.364418029785156e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd": 1.8477439880371094e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge": 2.384185791015625e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo": 9.08970832824707e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge": 4.76837158203125e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio": 4.172325134277344e-07,
+        "Armature__t2_106_ma_jacket__trauma_small": 2.562999725341797e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_cable": 2.562999725341797e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_logo": 2.562999725341797e-06
+      },
+      "bounds": [
+        [
+          -0.35010597109794617,
+          -0.8629446029663086,
+          -0.03984832763671875
+        ],
+        [
+          0.4350760579109192,
+          0.8790609836578369,
+          0.915593147277832
+        ]
+      ],
+      "max_displacement_from_static_m": 1.8903800572602356
+    },
+    {
+      "frame": 59,
+      "matrix_error_per_rig": {
+        "Armature__g1_013_ma_gloves__foil": 2.4139881134033203e-06,
+        "Armature__g1_013_ma_gloves__foil_dec_max_tac": 8.046627044677734e-07,
+        "Armature__h0_000_ma_c__basehead": 3.606081008911133e-06,
+        "Armature__h1_002_ma_hat__headcap": 3.0994415283203125e-06,
+        "Armature__h2_016_ma_helmet__max_tac": 4.76837158203125e-07,
+        "Armature__he_000_ma_c__basehead": 3.5762786865234375e-07,
+        "Armature__heb_000_ma_c__basehead": 5.066394805908203e-07,
+        "Armature__ht_000_ma_c__basehead": 3.5762786865234375e-07,
+        "Armature__hx_000_ma_c__basehead_pimples_01": 6.556510925292969e-07,
+        "Armature__i1_016_ma_belt__police_eq_vest": 2.086162567138672e-07,
+        "Armature__i1_038_ma_slot__gun_holster": 2.980232238769531e-07,
+        "Armature__i1_095_ma_slot__baton_calf": 2.980232238769531e-07,
+        "Armature__l1_077_ma_pants__trauma_small": 1.519918441772461e-06,
+        "Armature__l1_077_ma_pants__trauma_small_dec_logo": 4.470348358154297e-07,
+        "Armature__s1_053_ma_boot__military": 7.152557373046875e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd": 1.7136335372924805e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_badge": 2.644956111907959e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_dec_corpo": 1.4901161193847656e-06,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_id_badge": 4.470348358154297e-07,
+        "Armature__t2_073_ma_vest__tactic_collar2_ncpd_radio": 4.470348358154297e-07,
+        "Armature__t2_106_ma_jacket__trauma_small": 2.4139881134033203e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_cable": 2.4139881134033203e-06,
+        "Armature__t2_106_ma_jacket__trauma_small_dec_logo": 2.4139881134033203e-06
+      },
+      "bounds": [
+        [
+          -0.36925971508026123,
+          -0.9069913625717163,
+          -0.08291685581207275
+        ],
+        [
+          0.5064616203308105,
+          0.9072432518005371,
+          0.4065607786178589
+        ]
+      ],
+      "max_displacement_from_static_m": 2.0195992143606505
+    }
+  ],
+  "visible_progression": [
+    {
+      "from": 1,
+      "to": 30,
+      "max_vertex_displacement_m": 1.7654324927461207
+    },
+    {
+      "from": 1,
+      "to": 59,
+      "max_vertex_displacement_m": 1.8970889169601923
+    }
+  ],
+  "unchanged_geometry_weights_materials_modifier_targets": true,
+  "unchanged_original_rest_hierarchy_rig_world": true,
+  "weapon": {
+    "blend": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\weapon_previews\\20261101_122025_166783\\Achilles_SOURCE_DEFAULT_DIAGNOSTIC.blend",
+    "source_slot": "Item_Attachment_Slot -> WeaponRight; identity slot/receiver Root",
+    "formula": "M_source_WeaponRight_pose; every top root parented once, original child matrices retained",
+    "mesh_count": 16,
+    "visible_meshes": [
+      "submesh_00_LOD_1.023",
+      "submesh_00_LOD_1.031",
+      "submesh_00_LOD_1.026",
+      "submesh_00_LOD_1.034",
+      "submesh_03_LOD_1.001",
+      "submesh_01_LOD_1.012",
+      "submesh_00_LOD_1.029",
+      "submesh_00_LOD_1.032",
+      "submesh_00_LOD_1.033",
+      "submesh_00_LOD_1.027",
+      "submesh_02_LOD_1.009",
+      "submesh_00_LOD_1.028",
+      "submesh_00_LOD_1.022",
+      "submesh_00_LOD_1.030"
+    ],
+    "manual_hand_offsets": false,
+    "gun_internal_animation": "Original static rest only; receiver/magazine animation NOT applied",
+    "magazine_offset": "Unproven source-default candidate retained; NO inferred mag_slot correction",
+    "accepted": false
+  },
+  "missing_images": [],
+  "gpu": {
+    "engine": "CYCLES",
+    "backend": "HIP",
+    "devices": [
+      {
+        "name": "AMD Radeon RX 9070 XT",
+        "id": "HIP_AMD Radeon RX 9070 XT_0000:03:00",
+        "type": "HIP"
+      }
+    ],
+    "cpu_render_enabled": false
+  },
+  "fixed_camera_matrix": [
+    [
+      -0.8715754747390747,
+      0.05746469274163246,
+      -0.48688191175460815,
+      -2.631399154663086
+    ],
+    [
+      -0.49026134610176086,
+      -0.10215950012207031,
+      0.8655675649642944,
+      5.054346561431885
+    ],
+    [
+      -3.66950203556371e-08,
+      0.9931068420410156,
+      0.1172124370932579,
+      1.4897271394729614
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "blend": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_RECONSTRUCTION_NOTACCEPTED.blend",
+  "source_hashes_unchanged": true
+}

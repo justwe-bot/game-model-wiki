@@ -1,0 +1,50 @@
+{
+  "accepted": false,
+  "diagnostic_three_PNG_review": "actual_Read_tools_completed",
+  "actual_frames_read": [
+    1,
+    30,
+    59
+  ],
+  "actual_pngs": [
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0001.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0030.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\FULL_CHARACTER_DIAGNOSTIC_frame_0059.png"
+  ],
+  "finding": "ordinary gunshot front-torso death: standing then falling forward and prone; no catastrophic mesh explosion",
+  "limits": "Death source is unarmed family, source WeaponRight still drives attached candidate with no inferred drop; ground contact and retained gun are not accepted runtime semantics",
+  "decision": "coherent_enough_for_labelled_DIAGNOSTIC_MP4_not_quality_acceptance",
+  "render_engine": {
+    "engine": "CYCLES",
+    "backend": "HIP",
+    "devices": [
+      {
+        "name": "AMD Radeon RX 9070 XT",
+        "id": "HIP_AMD Radeon RX 9070 XT_0000:03:00",
+        "type": "HIP"
+      }
+    ],
+    "cpu_render_enabled": false
+  },
+  "catalog_mapping": "Inventory alias requires exact source identity mapping; see original manifest",
+  "source_identity": {
+    "entity": "base/characters/entities/corpo/corpo__max_tac_ma.ent",
+    "entity_appearance": "max_tac_max_tac_soldier_01",
+    "app": "base/characters/appearances/corpo/max_tac.app",
+    "app_appearance": "max_tac_soldier_01"
+  },
+  "encoded_movie_review": {
+    "actual_decoded_frames_read": [
+      1,
+      30,
+      59
+    ],
+    "accepted": false,
+    "finding": "Original-material whole character and source-slot Achilles visible. Source action progression matches pre-video diagnostic frames. Persistent NOT ACCEPTED stamp present. Approximate DQ, contact and garment limitations remain."
+  },
+  "actual_decoded_pngs_read": [
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\recordings\\20261101_130926_834295\\decoded_frame_0001.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\recordings\\20261101_130926_834295\\decoded_frame_0030.png",
+    "C:\\Code\\UeCover\\Blender\\soldier_catalog\\full_character_motion\\death_ranged_80mm_01\\recordings\\20261101_130926_834295\\decoded_frame_0059.png"
+  ]
+}

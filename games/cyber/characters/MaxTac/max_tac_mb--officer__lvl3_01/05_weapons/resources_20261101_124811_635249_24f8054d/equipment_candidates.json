@@ -1,0 +1,1178 @@
+{
+  "status": "template_pool_candidates_runtime_choice_unproven",
+  "template": "max_tac_mb",
+  "appearance_role_assignment_proven": false,
+  "chosen_own_weapon": null,
+  "items": [
+    {
+      "item_id": "162034820646",
+      "item_name": "Items.Preset_Defender_MaxTac_2nd_wave",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/0",
+          "target": "max_tac_mb",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "224544586475",
+              "flat_name": "Items.Preset_Defender_MaxTac_2nd_wave.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "259097635036",
+              "flat_name": "Items.Preset_Defender_MaxTac_2nd_wave.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_Defender_Default"
+              }
+            },
+            "entityName": {
+              "flat_id": "208812328075",
+              "flat_name": "Items.Preset_Defender_MaxTac_2nd_wave.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "201856030284",
+              "flat_name": "Items.Preset_Defender_MaxTac_2nd_wave.itemType",
+              "value": {
+                "id": "123501197340",
+                "name": "ItemType.Wea_LightMachineGun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "154230795615",
+              "character_name": "Character.maxtac_av_LMG_mb_2nd_wave",
+              "route": {
+                "item_id": "162034820646",
+                "item_name": "Items.Preset_Defender_MaxTac_2nd_wave",
+                "edges": [
+                  {
+                    "record_id": "154230795615",
+                    "record_name": "Character.maxtac_av_LMG_mb_2nd_wave",
+                    "field": "primaryEquipment",
+                    "flat_id": "224112431268",
+                    "target_id": "186741074284"
+                  },
+                  {
+                    "record_id": "186741074284",
+                    "record_name": "Character.maxtac_av_LMG_mb_2nd_wave_inline0",
+                    "field": "equipmentItems",
+                    "flat_id": "251224067550",
+                    "target_id": "184912550394"
+                  },
+                  {
+                    "record_id": "184912550394",
+                    "record_name": "Character.maxtac_av_LMG_mb_2nd_wave_inline1",
+                    "field": "item",
+                    "flat_id": "206936316782",
+                    "target_id": "162034820646"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app.json",
+              "depot_path": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_Defender_Default",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "kurt",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:02.6375083Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/0",
+          "app_depot": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+          "parsed_appearanceName": {
+            "flat_id": "224544586475",
+            "flat_name": "Items.Preset_Defender_MaxTac_2nd_wave.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "military1",
+            "military2",
+            "neon1",
+            "neon2",
+            "pimp1",
+            "pimp2",
+            "kurt"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_Defender_Default",
+              "expected_depot": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/15",
+                  "fields": {
+                    "name": "Preset_Defender_Default",
+                    "path": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    },
+    {
+      "item_id": "130522194754",
+      "item_name": "Items.Preset_Defender_Military",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/1",
+          "target": "max_tac_mb",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "196115070175",
+              "flat_name": "Items.Preset_Defender_Military.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "228980074695",
+              "flat_name": "Items.Preset_Defender_Military.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_Defender_Default"
+              }
+            },
+            "entityName": {
+              "flat_id": "179826010505",
+              "flat_name": "Items.Preset_Defender_Military.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "169941249757",
+              "flat_name": "Items.Preset_Defender_Military.itemType",
+              "value": {
+                "id": "123501197340",
+                "name": "ItemType.Wea_LightMachineGun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "113056794409",
+              "character_name": "Character.maxtac_av_LMG_mb",
+              "route": {
+                "item_id": "130522194754",
+                "item_name": "Items.Preset_Defender_Military",
+                "edges": [
+                  {
+                    "record_id": "113056794409",
+                    "record_name": "Character.maxtac_av_LMG_mb",
+                    "field": "primaryEquipment",
+                    "flat_id": "187418852024",
+                    "target_id": "147175371947"
+                  },
+                  {
+                    "record_id": "147175371947",
+                    "record_name": "Character.maxtac_av_LMG_mb_inline0",
+                    "field": "equipmentItems",
+                    "flat_id": "212255279125",
+                    "target_id": "146889950269"
+                  },
+                  {
+                    "record_id": "146889950269",
+                    "record_name": "Character.maxtac_av_LMG_mb_inline1",
+                    "field": "item",
+                    "flat_id": "170678879986",
+                    "target_id": "130522194754"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app.json",
+              "depot_path": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_Defender_Default",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "kurt",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:02.6375083Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/1",
+          "app_depot": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+          "parsed_appearanceName": {
+            "flat_id": "196115070175",
+            "flat_name": "Items.Preset_Defender_Military.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "military1",
+            "military2",
+            "neon1",
+            "neon2",
+            "pimp1",
+            "pimp2",
+            "kurt"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_Defender_Default",
+              "expected_depot": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/15",
+                  "fields": {
+                    "name": "Preset_Defender_Default",
+                    "path": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    },
+    {
+      "item_id": "103296282677",
+      "item_name": "Items.Preset_HMG_Default",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/2",
+          "target": "max_tac_mb",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "169394789320",
+              "flat_name": "Items.Preset_HMG_Default.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "204439601285",
+              "flat_name": "Items.Preset_HMG_Default.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_HMG_Default"
+              }
+            },
+            "entityName": {
+              "flat_id": "151959987869",
+              "flat_name": "Items.Preset_HMG_Default.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "144910918763",
+              "flat_name": "Items.Preset_HMG_Default.itemType",
+              "value": {
+                "id": "124284559466",
+                "name": "ItemType.Wea_HeavyMachineGun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "108526423415",
+              "character_name": "Character.mq030_max_tac_3",
+              "route": {
+                "item_id": "103296282677",
+                "item_name": "Items.Preset_HMG_Default",
+                "edges": [
+                  {
+                    "record_id": "108526423415",
+                    "record_name": "Character.mq030_max_tac_3",
+                    "field": "primaryEquipment",
+                    "flat_id": "181614616729",
+                    "target_id": "174654633519"
+                  },
+                  {
+                    "record_id": "174654633519",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline0",
+                    "field": "equipmentItems",
+                    "flat_id": "236292284142",
+                    "target_id": "175510455993"
+                  },
+                  {
+                    "record_id": "175510455993",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline1",
+                    "field": "item",
+                    "flat_id": "196059948114",
+                    "target_id": "103296282677"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "140145127876",
+              "character_name": "Character.maxtac_gunner_mb_elite",
+              "route": {
+                "item_id": "103296282677",
+                "item_name": "Items.Preset_HMG_Default",
+                "edges": [
+                  {
+                    "record_id": "140145127876",
+                    "record_name": "Character.maxtac_gunner_mb_elite",
+                    "field": "primaryEquipment",
+                    "flat_id": "214505286991",
+                    "target_id": "174654633519"
+                  },
+                  {
+                    "record_id": "174654633519",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline0",
+                    "field": "equipmentItems",
+                    "flat_id": "236292284142",
+                    "target_id": "175510455993"
+                  },
+                  {
+                    "record_id": "175510455993",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline1",
+                    "field": "item",
+                    "flat_id": "196059948114",
+                    "target_id": "103296282677"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app.json",
+              "depot_path": "base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_HMG_Default",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:03.5047132Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/2",
+          "app_depot": "base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app",
+          "parsed_appearanceName": {
+            "flat_id": "169394789320",
+            "flat_name": "Items.Preset_HMG_Default.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "military1",
+            "military2",
+            "pimp1",
+            "pimp2",
+            "neon1",
+            "neon2"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_HMG_Default",
+              "expected_depot": "base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/12",
+                  "fields": {
+                    "name": "Preset_HMG_Default",
+                    "path": "base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    },
+    {
+      "item_id": "113697797098",
+      "item_name": "Items.Preset_Unity_Default",
+      "occurrences": [
+        {
+          "source_report": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\loadouts\\recovered_20261101_120739_426904\\loadout_report.json",
+          "source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/3",
+          "target": "max_tac_mb",
+          "cache_path": "C:\\Code\\UeCover\\.deps\\game\\r6\\cache\\tweakdb.bin",
+          "parsed_item_fields": {
+            "appearanceName": {
+              "flat_id": "179082574994",
+              "flat_name": "Items.Preset_Unity_Default.appearanceName",
+              "value": {
+                "type": "CName",
+                "text": "None"
+              }
+            },
+            "appearanceResourceName": {
+              "flat_id": "213100589080",
+              "flat_name": "Items.Preset_Unity_Default.appearanceResourceName",
+              "value": {
+                "type": "CName",
+                "text": "Preset_V_Unity"
+              }
+            },
+            "entityName": {
+              "flat_id": "162703646567",
+              "flat_name": "Items.Preset_Unity_Default.entityName",
+              "value": {
+                "type": "CName",
+                "text": "weapon_root"
+              }
+            },
+            "itemType": {
+              "flat_id": "154489496813",
+              "flat_name": "Items.Preset_Unity_Default.itemType",
+              "value": {
+                "id": "87630388496",
+                "name": "ItemType.Wea_Handgun"
+              }
+            }
+          },
+          "evidence_routes": [
+            {
+              "character_id": "108526423415",
+              "character_name": "Character.mq030_max_tac_3",
+              "route": {
+                "item_id": "113697797098",
+                "item_name": "Items.Preset_Unity_Default",
+                "edges": [
+                  {
+                    "record_id": "108526423415",
+                    "record_name": "Character.mq030_max_tac_3",
+                    "field": "secondaryEquipment",
+                    "flat_id": "190088035244",
+                    "target_id": "172942972675"
+                  },
+                  {
+                    "record_id": "172942972675",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "238433483661",
+                    "target_id": "172657698709"
+                  },
+                  {
+                    "record_id": "172657698709",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline3",
+                    "field": "item",
+                    "flat_id": "197230708057",
+                    "target_id": "113697797098"
+                  }
+                ]
+              }
+            },
+            {
+              "character_id": "140145127876",
+              "character_name": "Character.maxtac_gunner_mb_elite",
+              "route": {
+                "item_id": "113697797098",
+                "item_name": "Items.Preset_Unity_Default",
+                "edges": [
+                  {
+                    "record_id": "140145127876",
+                    "record_name": "Character.maxtac_gunner_mb_elite",
+                    "field": "secondaryEquipment",
+                    "flat_id": "220932235177",
+                    "target_id": "172942972675"
+                  },
+                  {
+                    "record_id": "172942972675",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline2",
+                    "field": "equipmentItems",
+                    "flat_id": "238433483661",
+                    "target_id": "172657698709"
+                  },
+                  {
+                    "record_id": "172657698709",
+                    "record_name": "Character.maxtac_gunner_mb_elite_inline3",
+                    "field": "item",
+                    "flat_id": "197230708057",
+                    "target_id": "113697797098"
+                  }
+                ]
+              }
+            }
+          ],
+          "appearance_selection": {
+            "status": "blocked_unproven_runtime_rule",
+            "selected_definition": null,
+            "parsed_appearance_name": {
+              "type": "CName",
+              "text": "None"
+            },
+            "reason": "APP.preset identifies a resource family only, never a selected definition. CName None is NOT proven default; selection rules/overrides not established."
+          },
+          "app_preset_matches": [
+            {
+              "source_json": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app.json",
+              "depot_path": "base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app",
+              "preset_pointer": "/Data/RootChunk/preset",
+              "preset": "Items.Preset_V_Unity",
+              "appearances": [
+                {
+                  "name": "default",
+                  "pointer": "/Data/RootChunk/appearances/0/Data/name"
+                },
+                {
+                  "name": "military1",
+                  "pointer": "/Data/RootChunk/appearances/1/Data/name"
+                },
+                {
+                  "name": "military2",
+                  "pointer": "/Data/RootChunk/appearances/2/Data/name"
+                },
+                {
+                  "name": "neon1",
+                  "pointer": "/Data/RootChunk/appearances/3/Data/name"
+                },
+                {
+                  "name": "neon2",
+                  "pointer": "/Data/RootChunk/appearances/4/Data/name"
+                },
+                {
+                  "name": "pimp1",
+                  "pointer": "/Data/RootChunk/appearances/5/Data/name"
+                },
+                {
+                  "name": "pimp2",
+                  "pointer": "/Data/RootChunk/appearances/6/Data/name"
+                },
+                {
+                  "name": "angelica",
+                  "pointer": "/Data/RootChunk/appearances/7/Data/name"
+                },
+                {
+                  "name": "majesty",
+                  "pointer": "/Data/RootChunk/appearances/8/Data/name"
+                }
+              ],
+              "export_header": {
+                "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                "WKitJsonVersion": "0.0.9",
+                "GameVersion": 2500,
+                "ExportedDateTime": "2026-10-31T17:50:02.4605543Z",
+                "DataType": "CR2W",
+                "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\_conv_stage\\base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app"
+              }
+            }
+          ]
+        }
+      ],
+      "definition_candidates": [
+        {
+          "occurrence_source_pointer": "/factions/1/cache_evidence/0/weapon_candidates/3",
+          "app_depot": "base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app",
+          "parsed_appearanceName": {
+            "flat_id": "179082574994",
+            "flat_name": "Items.Preset_Unity_Default.appearanceName",
+            "value": {
+              "type": "CName",
+              "text": "None"
+            }
+          },
+          "definition_names": [
+            "default",
+            "military1",
+            "military2",
+            "neon1",
+            "neon2",
+            "pimp1",
+            "pimp2",
+            "angelica",
+            "majesty"
+          ],
+          "status": "all_named_definitions_runtime_selection_unresolved",
+          "association": {
+            "root_preset_token_equality": true,
+            "factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "Preset_V_Unity",
+              "expected_depot": "base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv.json",
+                "size_bytes": 34883,
+                "sha256": "368179462b652d5a956c2b7d6891b7ce646fddb2ab0b1c843e94d9413e509de7",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:55.3166151Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons_appearances.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/39",
+                  "fields": {
+                    "name": "Preset_V_Unity",
+                    "path": "base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            },
+            "entity_factory_mapping": {
+              "status": "exact_factory_resource_mapping_proven",
+              "token": "weapon_root",
+              "expected_depot": "base\\weapons\\weapon_root.ent",
+              "source": {
+                "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\raw\\base\\gameplay\\factories\\items\\weapons\\weapons.csv.json",
+                "size_bytes": 5253,
+                "sha256": "a44aaf265af365a5c58bcea9b5341b4526c3557507c96cb4b9ca2f8f297ebfb8",
+                "headers": [
+                  "name",
+                  "path",
+                  "preload"
+                ],
+                "export_header": {
+                  "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+                  "WKitJsonVersion": "0.0.9",
+                  "GameVersion": 2500,
+                  "ExportedDateTime": "2026-11-01T04:08:52.5768772Z",
+                  "DataType": "CR2W",
+                  "ArchiveFileName": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\exports\\20261101_120840_870185\\source\\archive\\base\\gameplay\\factories\\items\\weapons\\weapons.csv"
+                }
+              },
+              "rows": [
+                {
+                  "pointer": "/Data/RootChunk/compiledData/0",
+                  "fields": {
+                    "name": "weapon_root",
+                    "path": "base\\weapons\\weapon_root.ent",
+                    "preload": "false"
+                  }
+                }
+              ],
+              "runtime_definition_selection_proven": false
+            }
+          },
+          "runtime_selected_definition": null
+        }
+      ],
+      "status": "conditional_source_export_candidates_NOT_assembled_gun",
+      "runtime_selected_definition": null
+    }
+  ],
+  "families": [
+    {
+      "family": "w_handgun__constitutional_unity",
+      "app_depot": "base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\handgunboth\\w_handgun__constitutional_liberty\\w_handgun__constitutional_liberty__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\handgunboth\\w_handgun__militech_lexington\\w_handgun_ma__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\handgunboth\\w_handgun_constitutional_liberty\\w_handgun_constitutional_liberty__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\handgunleft\\w_handgun__mag_wounded_right_arm.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\handgunright\\w_handgun__mag_wounded_left_arm.anims",
+        "base\\animations\\weapon\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity__base1.anims",
+        "base\\animations\\weapon\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\handgun\\w_handgun__rcv1.anims",
+        "base\\weapons\\firearms\\handgun\\constitutional_liberty\\entities\\meshes\\w_handgun__constitutional_liberty__base1_01_rail_01.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_liberty\\entities\\meshes\\w_handgun__constitutional_liberty__mag_std_01.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_liberty\\entities\\meshes\\w_handgun__constitutional_liberty__mag_stdr_01.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_liberty\\rig\\w_handgun__constitutional_liberty__mag_std.rig",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\entities\\meshes\\w_handgun__constitutional_unity__base1_01.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\entities\\meshes\\w_handgun__constitutional_unity__base1_01_decal_d01_military1.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\entities\\meshes\\w_handgun__constitutional_unity__base1_01_decal_d01_military2.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\entities\\meshes\\w_handgun__constitutional_unity__base1_01_decal_d01_neon1.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\entities\\meshes\\w_handgun__constitutional_unity__base1_01_decal_d01_neon2.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\entities\\meshes\\w_handgun__constitutional_unity__base1_01_decal_n01.mesh",
+        "base\\weapons\\firearms\\handgun\\constitutional_unity\\rig\\w_handgun__constitutional_unity__base1.rig",
+        "base\\weapons\\firearms\\handgun\\rig\\w_handgun__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "military1",
+        "military2",
+        "neon1",
+        "neon2",
+        "pimp1",
+        "pimp2",
+        "angelica",
+        "majesty"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\handgun\\constitutional_unity\\w_handgun__constitutional_unity.app.json",
+        "size_bytes": 2096918,
+        "sha256": "5dec5a5089cca1e2c0e3a5daeaa482231812e1d2fadf42f9a565157811888575"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    },
+    {
+      "family": "w_lmg__constitutional_defender",
+      "app_depot": "base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_average\\corpo\\lmg\\w_lmg_constitutional_defender\\w_lmg__constitutional_defender__mag_std.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\lmg\\w_lmg_constitutional_defender\\w_lmg__constitutional_defender__base1.anims",
+        "base\\animations\\npc\\gameplay\\man_average\\gang\\lmg\\w_lmg_constitutional_defender\\w_lmg__constitutional_defender__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender__base1.anims",
+        "base\\animations\\weapon\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender__mag_std.anims",
+        "base\\animations\\weapon\\firearms\\lmg\\w_lmg__rcv1.anims",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01_decal_logo.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01_decal_m1.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01_decal_m2.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01_decal_mox.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01_decals_d.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_01_decals_n.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decal_flame.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decal_heat.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decal_logo.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decal_m.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decal_mox.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decals_d.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__base1_02_decals_n.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_01.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_02.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_03.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_04.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_05.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_06.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_01_07.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_02_01.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_02_02.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_02_03.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_02_04.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_02_05.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_std_02_06.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_stdr_01.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_stdr_01_decal_m1.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_stdr_01_decal_m2.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_stdr_01_decal_mox.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__mag_stdr_02_decals_d.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__rcv1_01.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__rcv1_01_decal_logo.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__rcv1_01_decal_m1.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__rcv1_01_decal_m2.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__rcv1_01_decals_d.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\entities\\meshes\\w_lmg__constitutional_defender__rcv1_01_decals_n.mesh",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\rig\\w_lmg__constitutional_defender__base1.rig",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\rig\\w_lmg__constitutional_defender__base1_dangle_skeleton.rig",
+        "base\\weapons\\firearms\\lmg\\constitutional_defender\\rig\\w_lmg__constitutional_defender__mag_std.rig",
+        "base\\weapons\\firearms\\lmg\\rig\\w_lmg__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "military1",
+        "military2",
+        "neon1",
+        "neon2",
+        "pimp1",
+        "pimp2",
+        "kurt"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\lmg\\constitutional_defender\\w_lmg__constitutional_defender.app.json",
+        "size_bytes": 4176185,
+        "sha256": "39a16ffdeb3aa0e0df842a4aaebfa81d9691cc806d53076666ad57f2dd7a7bad"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    },
+    {
+      "family": "w_special__militech_hmg",
+      "app_depot": "base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app",
+      "asset_depots": [
+        "base\\animations\\npc\\gameplay\\man_big\\gang\\hmg\\w_special__militech_hmg\\w_special__militech_hmg__rcv1.anims",
+        "base\\animations\\weapon\\firearms\\special\\militech_hmg\\w_special__militech_hmg__rcv1.anims",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__mag_std_01.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__mag_std_01_decals_01.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_ammo_counter.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_decal_d_code.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_decal_neon1.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_decal_neon2.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_decal_nrm_logo.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_decals_01.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_decals_heat.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\entities\\meshes\\w_special__militech_hmg__rcv1_01_led.mesh",
+        "base\\weapons\\firearms\\special\\militech_hmg\\rig\\w_special__militech_hmg__rcv1.rig"
+      ],
+      "definition_names": [
+        "default",
+        "military1",
+        "military2",
+        "pimp1",
+        "pimp2",
+        "neon1",
+        "neon2"
+      ],
+      "source": {
+        "path": "C:\\Code\\UeCover\\Blender\\cyber\\source\\raw\\base\\weapons\\firearms\\special\\militech_hmg\\w_special__militech_hmg.app.json",
+        "size_bytes": 2181941,
+        "sha256": "930b053840c887951d5258995d59b24bffeab4c6aae6d6bfbb9193feda05f310"
+      },
+      "runtime_selected_definition": null,
+      "status": "family_source_candidates_not_assembled"
+    }
+  ],
+  "source_manifest": {
+    "path": "C:\\Code\\UeCover\\Blender\\soldier_catalog\\weapon_sources\\recovered_20261101_121904_595140\\source_manifest.json",
+    "sha256": "0b22005dde894ce5107fe3f8069bcc42f3ec00b32e56deb78d2f2504dc37f47a",
+    "bytes": 141306255,
+    "snapshot_at": "2026-11-01T04:48:09.269385+00:00"
+  }
+}

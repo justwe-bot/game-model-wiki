@@ -1,0 +1,112 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-01T04:33:41.8601885Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "base\\characters\\common\\hair\\textures\\hair_profiles\\red_merlot.hp"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "CHairProfile",
+      "cookingPlatform": "PLATFORM_PC",
+      "gradientEntriesID": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 108,
+            "Green": 125,
+            "Red": 133
+          },
+          "value": 0
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 96,
+            "Green": 96,
+            "Red": 156
+          },
+          "value": 0.699999988
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 146,
+            "Green": 180,
+            "Red": 191
+          },
+          "value": 0.100000001
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 112,
+            "Green": 112,
+            "Red": 127
+          },
+          "value": 0.400000006
+        }
+      ],
+      "gradientEntriesRootToTip": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 93,
+            "Green": 91,
+            "Red": 97
+          },
+          "value": 0
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 107,
+            "Green": 93,
+            "Red": 116
+          },
+          "value": 0.172793999
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 86,
+            "Green": 74,
+            "Red": 201
+          },
+          "value": 0.610293984
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 54,
+            "Green": 54,
+            "Red": 128
+          },
+          "value": 1
+        }
+      ],
+      "sampleCount": 127
+    },
+    "EmbeddedFiles": []
+  }
+}
