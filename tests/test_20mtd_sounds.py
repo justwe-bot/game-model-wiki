@@ -97,7 +97,7 @@ class TwentyMinutesTillDawnSoundsTests(unittest.TestCase):
         self.assertIn('id="playButton"', self.sounds_html)
         self.assertIn("loadClip(true)", self.sounds_html)
         self.assertIn("searchParams.set('sound'", self.sounds_html)
-        self.assertIn("models-unavailable", self.sounds_html)
+        self.assertIn("models-available", self.sounds_html)
 
 
 if __name__ == "__main__":

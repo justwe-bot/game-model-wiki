@@ -1,4 +1,4 @@
-"""Extract weapon on-hit effects for Zombie Survivors.
+"""Extract weapon on-hit effects from the game.
 
 Each survivor bundle carries particle systems named `<Weapon>_Hit_01` that fire when a
 projectile connects with an enemy. The particle *module* parameters (colour, size, speed)

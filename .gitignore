@@ -21,7 +21,8 @@ generated/**
 !generated/doujie-head-hunyuan-web-v31.glb
 
 # Early local experiments that are not used by the current catalog.
-models.json
+# 只忽略根目录那份遗留清单；游戏目录下的 games/<slug>/models.json 是要提交的合并目录。
+/models.json
 models/beetle.glb
 models/commando.glb
 models/parent-*.glb

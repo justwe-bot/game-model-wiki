@@ -1,4 +1,4 @@
-"""Extract Zombie Survivors environment props (buildings, decor, props) as textured GLB.
+"""Extract environment props (buildings, decor, props) from the game as textured GLB.
 
 Geometry comes from the individual meshes that the scene bundles keep un-batched. Unity only
 leaves static-batched "Combined Mesh (root: scene)" objects for most scenery, but a few thousand

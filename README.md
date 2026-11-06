@@ -10,7 +10,7 @@
 - `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
 - `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
 - `20-minutes-till-dawn`：从本机 Steam 安装提取的 86 组音效事件，覆盖武器射击、换弹、近战、法术和界面
-- `zombie-survivors`：45 把武器（含官方中文名与描述）和 471 组音效事件、884 个音频片段，覆盖 9 位幸存者、12 类敌人、5 个头目与全部地图机关；另有从关卡场景提取的建筑、载具、植被与道具模型
+- `zombie-survivors`：45 把武器（含官方中文名与描述）和 471 组音效事件、884 个音频片段，覆盖 9 位幸存者、12 类敌人、5 个头目与全部地图机关；另有从关卡场景提取的建筑、载具、植被与道具模型。合并页把人物、怪物、武器与道具收进同一棵树，每把武器直接带上自己的射击、换弹与技能音效
 
 《冥界 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
 
@@ -32,6 +32,7 @@
 - 独立武器页按幸存者筛选武器，展示官方中英文名称与游戏内置描述，并可直接试听该武器在游戏内的全部音效
 - 音效页每条采样、武器页每把武器都支持一键复制引用（原始效果名 + 中英文名称 + 文件路径 + 完整地址，制表符分隔），方便粘进表格或移植到其他游戏工程；复制前页面会显示将要复制的完整内容
 - 独立道具页按建筑、载具、街道设施、植被、地形与道路、废墟与杂物、室内道具分类浏览场景资产，显示材质与四路贴图来源，并支持自动旋转和重置视角
+- 合并模型页把原本分开的声音、武器与道具收进一棵树：人物模型 9 位（各带 5 把专属武器与人物音效）、怪物模型 33 类（28 普通敌人 + 5 头目）、武器模型 45 把按 9 种类型分组（每把武器直接列出射击、换弹、技能音效与命中特效贴图，可逐条试听）、场景道具 242 个；带 GLB 的条目直接三维预览，没有三维模型的条目显示说明卡而不是空白画布
 - 武器页可演示每把武器的完整战斗序列：开火闪光 → 子弹飞行 → 命中敌人，三段都用游戏原始贴图（枪口闪光、`GatlingGun_L3_BulletTraser` 弹道拖尾、撞击光点、8×8 逐帧命中球、血效遮罩、苦无投掷物）绘制，并同步播放该武器的射击与命中音效；可一键录制为 WebM 视频当场回放
 
 低模使用误差受限简化。10% 只是期望目标，不会为了达到固定比例强行删除脚、细腿、角、炮口或其他关键轮廓。不同模型会在接近明显变形前停止，因此实际保留比例约为 23%-79%。
@@ -63,7 +64,7 @@ python -m http.server 4173
 追加 `sound=<slug>` 可直接打开具体事件，例如
 `http://127.0.0.1:4173/sounds.html?game=20-minutes-till-dawn&sound=gunfire`。
 
-《又一个僵尸幸存者》武器页地址为
+Zombie Survivors 武器页地址为
 `http://127.0.0.1:4173/weapons.html?game=zombie-survivors`。
 追加 `weapon=<slug>` 可直接打开具体武器，例如
 `http://127.0.0.1:4173/weapons.html?game=zombie-survivors&weapon=tank-minigun`。
@@ -72,18 +73,27 @@ python -m http.server 4173
 追加 `sound=<slug>` 可打开具体事件，例如
 `http://127.0.0.1:4173/sounds.html?game=zombie-survivors&sound=boss01-rocket-single`。
 
-《又一个僵尸幸存者》道具页地址为
+Zombie Survivors 道具页地址为
 `http://127.0.0.1:4173/props.html?game=zombie-survivors`，
 追加 `prop=<slug>` 可直接打开具体场景资产，例如
 `http://127.0.0.1:4173/props.html?game=zombie-survivors&prop=birch-large-1-lod-1`。
+
+Zombie Survivors 合并模型页地址为
+`http://127.0.0.1:4173/models.html?game=zombie-survivors`，
+追加 `cat=<分类>` 可直接打开某个维度（`characters` / `monsters` / `weapons` / `props` / `ambience`），
+再用 `item=<slug>` 打开具体条目，例如
+`http://127.0.0.1:4173/models.html?game=zombie-survivors&cat=weapons&item=tank-shotgun`
+或 `http://127.0.0.1:4173/models.html?game=zombie-survivors&cat=monsters&item=boss-01`。
 
 ## 破晓时分音效构建链
 
 - `scripts/extract_20mtd_audio.py`：读取本机 Steam Unity 安装中的 AudioClip 和 `SoundEffectSO`，转成网页预览用 M4A，并按射击、换弹、近战、法术等分类写入目录。
 
-## 又一个僵尸幸存者武器与音效构建链
+## Zombie Survivors 模型、武器与音效构建链
 
 该游戏是 Unity 2022.3 IL2CPP 构建，type tree 已被剥离，因此 MonoScript 名和 MonoBehaviour 字段都按原始字节解析；玩家数据、9 个角色包和 6 个场景包都要一起扫描，否则会漏掉敌人和头目音效。
+
+- `scripts/build_yazs_models_index.py`：把 `weapons.json`（武器与描述）、`catalog.json`（音效）与 `props.json`（场景道具）合并成 `games/zombie-survivors/models.json`，并按 人物 / 怪物 / 武器 / 场景道具 / 其它音效 建树：45 把武器按 9 种类型分组，每把武器带上它的射击、换弹、技能音效与命中特效贴图；音效只按 `slug` 引用而不复制内容，脚本会校验每个引用与模型路径都存在后才落盘，并把 `modelsCatalog` / `modelsPage` 写回 `games.json`。
 
 - `scripts/extract_yazs_weapons.py`：解析 `resources.assets` 中的 I2 Localization `I2Languages` 资产（4072 条术语，语言顺序为英/波/简中/法/德/日/韩/葡/俄/西），导出 45 把武器的官方英文名、简体中文名与游戏内描述到 `games/zombie-survivors/weapons.json`。
 - `scripts/extract_yazs_audio.py`：扫描玩家数据、角色包与场景包里的全部 AudioClip，按片段名去重后转成网页预览用 M4A，并依据 `GROUP_META` 生成带简体中文说明的音效目录。脚本会在两个地方直接报错退出：有音频片段没有匹配到任何分组；`weapons.json` 引用了本次没有导出的音效条目。

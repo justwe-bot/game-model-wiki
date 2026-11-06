@@ -1,4 +1,4 @@
-"""Extract the Zombie Survivors weapon roster from the game's I2 localization table.
+"""Extract the weapon roster from the game's I2 localization table.
 
 The game ships an IL2CPP build with stripped type trees, so MonoBehaviour payloads are
 parsed from their raw bytes. TermData records are laid out as:

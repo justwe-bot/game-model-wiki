@@ -1,4 +1,4 @@
-"""Extract Zombie Survivors audio clips and build the Wiki sound catalog.
+"""Extract the game's audio clips and build the Wiki sound catalog.
 
 The game ships Unity IL2CPP player data plus streaming asset bundles. AudioClips are
 stored uncompressed, so each clip can be written straight out as PCM WAV and then
@@ -4151,23 +4151,29 @@ def update_games_json(catalog: list[dict]) -> None:
     tiers = [tier for tier in TIER_ORDER if any(e["tier"] == tier for e in catalog)]
     entry = {
         "slug": GAME_SLUG,
-        "name": "又一个僵尸幸存者",
+        "name": "Zombie Survivors",
         "nameEn": "Zombie Survivors",
         "catalog": f"games/{GAME_SLUG}/catalog.json",
         "weaponsCatalog": f"games/{GAME_SLUG}/weapons.json",
+        "modelsCatalog": f"games/{GAME_SLUG}/models.json",
+        "modelsPage": "models.html",
         "soundsPage": "sounds.html",
         "defaultView": "sounds",
         "subtitle": f"45 把武器 / {len(catalog)} 个音效条目 / {total} 个音频片段",
         "tiers": tiers,
         "notice": (
-            "武器与音效来自你本机 Steam 安装的《又一个僵尸幸存者》，仅用于个人研究与 Wiki 原型。"
+            "武器与音效来自你本机 Steam 安装的游戏副本，仅用于个人研究与 Wiki 原型。"
             "公开发布或向他人分发音频文件前请核对游戏素材许可，不要分发原始 Unity 资源包。"
         ),
         "assetRevision": "20261013-4",
     }
     for index, game in enumerate(games):
         if game.get("slug") == GAME_SLUG:
-            games[index] = entry
+            # Keep keys owned by other build steps (propsCatalog, modelsCatalog…) instead
+            # of replacing the whole entry.
+            merged = dict(game)
+            merged.update(entry)
+            games[index] = merged
             break
     else:
         games.append(entry)

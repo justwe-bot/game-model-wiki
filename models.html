@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101513">
+  <title>Zombie Survivors · 模型总览</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101513; --side: #151c19; --surface: #1a231f; --surface-2: #202b26;
+      --line: #34413b; --line-soft: #27322d; --text: #f1f4ec; --muted: #a7b1aa;
+      --faint: #748078; --lime: #bddb6b; --coral: #f08366; --amber: #efbb61;
+      font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
+    body { min-height: 100vh; overflow: hidden; }
+    button, input, select { font: inherit; }
+    button, a { color: inherit; }
+    .app { height: 100vh; min-height: 0; overflow: hidden; display: grid; grid-template-columns: 292px minmax(0, 1fr); }
+    .catalog { min-width: 0; min-height: 0; overflow: hidden; border-right: 1px solid var(--line); background: var(--side); display: flex; flex-direction: column; }
+    .catalog-head { padding: 20px 16px 14px; border-bottom: 1px solid var(--line-soft); }
+    .brand { margin: 0; font-size: 19px; font-weight: 800; }
+    .edition { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+    .game-switcher { position: relative; margin: 14px 0 10px; }
+    .game-switcher select { width: 100%; height: 38px; appearance: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 34px 0 11px; outline: 0; cursor: pointer; }
+    .game-switcher svg { position: absolute; right: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
+    .view-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 10px; }
+    #creaturesLink, #soundsLink, #weaponsLink, #propsLink, #modelsLink { display: none; }
+    .view-tabs.models-available #creaturesLink { display: flex; }
+    .view-tabs.sounds-available #soundsLink { display: flex; }
+    .view-tabs.weapons-available #weaponsLink { display: flex; }
+    .view-tabs.props-available #propsLink { display: flex; }
+    .view-tabs.merged-available #modelsLink { display: flex; }
+    .view-tab { flex: 1 1 62px; height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
+    .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .view-tab svg { width: 15px; height: 15px; }
+    .search { height: 38px; display: flex; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #101613; }
+    .search svg { width: 16px; height: 16px; color: var(--muted); flex: 0 0 auto; }
+    .search input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; }
+    .search input::placeholder { color: var(--faint); }
+    .tier-filters { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; margin-top: 10px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+    #categoryTabs { max-height: 96px; }
+    #groupTabs { max-height: 74px; }
+    .tier-filter { border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); padding: 6px 9px; cursor: pointer; font-size: 12px; }
+    .tier-filter.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .prop-list { min-height: 0; flex: 1; padding: 10px; display: grid; align-content: start; gap: 5px; overflow-y: auto; overscroll-behavior: contain; }
+    .prop-entry { min-height: 58px; width: 100%; border: 1px solid transparent; border-radius: 6px; background: transparent; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; align-items: center; padding: 9px 10px; text-align: left; cursor: pointer; }
+    .prop-entry:hover { background: var(--surface); }
+    .prop-entry.active { background: var(--surface-2); border-color: var(--line); }
+    .prop-entry strong, .prop-entry small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .prop-entry strong { font-size: 14px; }
+    .prop-entry small { grid-column: 1; color: var(--muted); }
+    .prop-entry span { grid-column: 2; grid-row: 1 / span 2; color: var(--lime); font-size: 11px; }
+    .empty { color: var(--muted); padding: 20px 10px; font-size: 13px; }
+    .workspace { min-width: 0; min-height: 0; height: 100vh; overflow-y: auto; overscroll-behavior: contain; display: grid; grid-template-rows: minmax(420px, 58vh) auto; }
+    .stage { min-height: 420px; position: sticky; z-index: 2; top: 0; overflow: hidden; background:
+      radial-gradient(circle at 18% 20%, rgba(189, 219, 107, .08), transparent 28%),
+      radial-gradient(circle at 82% 78%, rgba(240, 131, 102, .08), transparent 26%),
+      #0a100e; }
+    .stage canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+    .stage-head { position: absolute; z-index: 3; top: 18px; left: 20px; right: 20px; display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; pointer-events: none; }
+    .identity h1 { margin: 0; max-width: min(58vw, 640px); font-size: clamp(24px, 3.4vw, 42px); line-height: 1.05; overflow-wrap: anywhere; }
+    .identity p { margin: 7px 0 0; color: var(--muted); font-size: 14px; }
+    .tier-badge { padding: 7px 10px; border: 1px solid var(--line); border-radius: 5px; background: rgba(16, 21, 19, .86); color: var(--lime); font-size: 12px; white-space: nowrap; }
+    .loading { position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--muted); font-size: 13px; }
+    .stage-note { position: absolute; z-index: 3; inset: 92px 24px 70px; display: grid; place-items: center; text-align: center; }
+    .stage-note div { max-width: 560px; }
+    .stage-note b { display: block; color: var(--amber); font-size: 15px; margin-bottom: 10px; }
+    .stage-note p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.9; }
+    .stage-note code { color: var(--lime); font-size: 12px; }
+    .tools { position: absolute; z-index: 4; left: 20px; right: 20px; bottom: 18px; display: flex; justify-content: space-between; gap: 12px; }
+    .icon-tools { padding: 4px; border: 1px solid var(--line); border-radius: 6px; background: rgba(16, 21, 19, .88); display: flex; gap: 3px; }
+    .icon-button { width: 34px; height: 34px; padding: 0; border: 0; border-radius: 4px; background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--muted); }
+    .icon-button:hover, .icon-button.active { background: var(--surface-2); color: var(--text); }
+    .icon-button svg { width: 17px; height: 17px; }
+    .details { border-top: 1px solid var(--line); padding: 24px clamp(20px, 3.5vw, 48px) 38px; display: grid; grid-template-columns: minmax(270px, .8fr) minmax(420px, 1.2fr); gap: 38px 50px; }
+    .details h2 { margin: 0 0 10px; font-size: 18px; }
+    .details h2.section { margin-top: 26px; }
+    .details p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .stats { margin-top: 20px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); display: grid; grid-template-columns: repeat(3, 1fr); }
+    .stat { padding: 14px 10px 14px 0; min-width: 0; }
+    .stat b { display: block; font-size: 19px; overflow: hidden; text-overflow: ellipsis; }
+    .stat span { display: block; margin-top: 3px; color: var(--faint); font-size: 11px; }
+    .used-by, .related { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .chip { padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; color: var(--amber); font-size: 12px; }
+    .chip.dim { color: var(--faint); }
+    .link-button { padding: 6px 9px; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--lime); cursor: pointer; font-size: 12px; text-decoration: none; }
+    .link-button:hover { background: var(--surface); }
+    .audio-tier { margin: 16px 0 8px; color: var(--lime); font-size: 12px; font-weight: 700; }
+    .audio-tier:first-child { margin-top: 0; }
+    .audio-entry { border: 1px solid var(--line-soft); border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; }
+    .audio-entry strong { font-size: 13px; }
+    .audio-entry small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .clip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+    .clip-button { display: flex; align-items: center; gap: 6px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; }
+    .clip-button:hover { background: var(--surface); }
+    .clip-button.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
+    .clip-button svg { width: 12px; height: 12px; }
+    .sprite-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+    .sprite-card { border: 1px solid var(--line-soft); border-radius: 6px; padding: 8px; background: #0d1311; }
+    .sprite-card img { width: 100%; aspect-ratio: 1; object-fit: contain; border-radius: 4px;
+      background: repeating-conic-gradient(#171f1c 0% 25%, #101715 0% 50%) 50% / 12px 12px; }
+    .sprite-card span { display: block; margin-top: 6px; color: var(--faint); font-size: 10px; overflow-wrap: anywhere; }
+    .tex-list { display: grid; gap: 8px; }
+    .tex-row { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 9px 12px; border: 1px solid var(--line-soft); border-radius: 6px; }
+    .tex-row b { font-size: 12px; color: var(--lime); font-weight: 700; }
+    .tex-row span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .tex-row.missing span { color: var(--faint); }
+    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
+    @media (max-width: 900px) {
+      body { overflow: visible; }
+      .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
+      .catalog { overflow: visible; border-right: 0; border-bottom: 1px solid var(--line); }
+      .catalog-head { padding: 13px 12px 10px; }
+      .edition { display: none; }
+      .brand { font-size: 17px; }
+      #categoryTabs, #groupTabs { max-height: none; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+      .prop-list { min-height: auto; flex: none; display: flex; overflow-x: auto; padding: 8px 10px 10px; scrollbar-width: none; }
+      .prop-entry { flex: 0 0 210px; min-width: 210px; grid-template-columns: minmax(0, 1fr); }
+      .prop-entry span { grid-column: 1; grid-row: auto; }
+      .workspace { height: auto; overflow: visible; grid-template-rows: minmax(390px, 54vh) auto; }
+      .stage { min-height: 390px; position: relative; }
+      .details { grid-template-columns: 1fr; gap: 26px; }
+    }
+    @media (max-width: 560px) {
+      .identity h1 { max-width: 70vw; font-size: 26px; }
+      .stage-head, .tools { left: 14px; right: 14px; }
+      .details { padding: 20px 15px 30px; }
+      .stat b { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="catalog">
+      <div class="catalog-head">
+        <h1 class="brand" id="brand">模型总览</h1>
+        <div class="game-switcher">
+          <select id="gameSelect" aria-label="游戏选择"></select>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <nav class="view-tabs" id="viewTabs" aria-label="图鉴类型">
+          <a class="view-tab" id="creaturesLink" href="./index.html"><i data-lucide="users"></i>角色</a>
+          <a class="view-tab" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
+          <a class="view-tab" id="weaponsLink" href="./weapons.html"><i data-lucide="crosshair"></i>武器</a>
+          <a class="view-tab" id="propsLink" href="./props.html"><i data-lucide="package"></i>道具</a>
+          <a class="view-tab active" id="modelsLink" href="./models.html"><i data-lucide="box"></i>模型</a>
+        </nav>
+        <p class="edition" id="edition"></p>
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="搜索人物、怪物、武器或道具" autocomplete="off">
+        </label>
+        <div class="tier-filters" id="categoryTabs"></div>
+        <div class="tier-filters" id="groupTabs"></div>
+      </div>
+      <div class="prop-list" id="itemList"></div>
+    </aside>
+    <main class="workspace">
+      <section class="stage" id="stage">
+        <div class="stage-head">
+          <div class="identity"><h1 id="itemName">加载中</h1><p id="itemSubtitle"></p></div>
+          <div class="tier-badge" id="kindBadge">模型总览</div>
+        </div>
+        <canvas id="stageCanvas"></canvas>
+        <div class="stage-note" id="stageNote" hidden><div>
+          <b id="stageNoteTitle">该条目暂无三维模型</b>
+          <p id="stageNoteBody"></p>
+        </div></div>
+        <div class="loading" id="loading" hidden>正在载入模型…</div>
+        <div class="tools">
+          <div class="icon-tools">
+            <button class="icon-button" id="rotateButton" title="自动旋转"><i data-lucide="rotate-3d"></i></button>
+            <button class="icon-button active" id="resetButton" title="重置视角"><i data-lucide="rotate-ccw"></i></button>
+          </div>
+        </div>
+      </section>
+      <section class="details">
+        <div>
+          <h2 id="infoHeading">条目信息</h2>
+          <p id="summary"></p>
+          <div class="stats">
+            <div class="stat"><b id="statA">—</b><span id="statALabel">音效条目</span></div>
+            <div class="stat"><b id="statB">—</b><span id="statBLabel">音频片段</span></div>
+            <div class="stat"><b id="statC">—</b><span id="statCLabel">总时长</span></div>
+          </div>
+          <div class="used-by" id="badges"></div>
+          <div class="related" id="related"></div>
+          <div class="tex-list" id="texList" style="margin-top:20px"></div>
+        </div>
+        <div>
+          <h2>音效</h2>
+          <div id="audioList"></div>
+          <div id="spriteBlock" hidden>
+            <h2 class="section">命中特效贴图</h2>
+            <p id="spriteNote"></p>
+            <div class="sprite-grid" id="spriteGrid" style="margin-top:12px"></div>
+          </div>
+        </div>
+        <div class="notice" id="rightsNotice"></div>
+      </section>
+    </main>
+  </div>
+  <audio id="player" preload="metadata"></audio>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/","lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { createIcons, Search, Users, Skull, Volume2, Crosshair, Package, Box, ChevronDown, Rotate3d, RotateCcw, Play, Pause } from 'lucide';
+
+    const iconSet = { Search, Users, Skull, Volume2, Crosshair, Package, Box, ChevronDown, Rotate3d, RotateCcw, Play, Pause };
+    const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
+    refreshIcons();
+
+    const formatTime = seconds => {
+      if (!Number.isFinite(seconds)) return '0:00';
+      const total = Math.round(seconds);
+      return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}`;
+    };
+
+    const games = await fetch('./games.json', { cache: 'no-store' }).then(response => response.json());
+    const params = new URLSearchParams(location.search);
+    const mergedGames = games.filter(game => game.modelsCatalog);
+    let activeGame = mergedGames.find(game => game.slug === params.get('game')) ?? mergedGames[0] ?? null;
+    if (!activeGame) {
+      location.replace('./index.html');
+      await new Promise(() => {});
+    }
+
+    const index = await fetch(`./${activeGame.modelsCatalog}?v=${activeGame.assetRevision}`, { cache: 'no-store' })
+      .then(response => response.json());
+    const soundCatalog = await fetch(`./${activeGame.catalog}?v=${activeGame.assetRevision}`, { cache: 'no-store' })
+      .then(response => response.json());
+    const soundBySlug = new Map(soundCatalog.map(entry => [entry.slug, entry]));
+
+    // Flatten the tree into categories -> groups -> items so the sidebar and the URL can
+    // address any entry with one slug.
+    const categories = index.categories.map(category => {
+      const items = [];
+      (category.items ?? []).forEach(item => items.push({ ...item, groupSlug: '', groupName: '' }));
+      (category.groups ?? []).forEach(group => {
+        if (group.kind === 'soundGroup') {
+          items.push({
+            kind: 'soundGroup',
+            slug: `${category.slug}-${group.slug}`,
+            name: group.name,
+            nameEn: group.name,
+            groupSlug: group.slug,
+            groupName: group.name,
+            soundSlugs: group.soundSlugs ?? [],
+            soundCount: group.soundCount ?? (group.soundSlugs ?? []).length,
+            clipCount: group.clipCount ?? 0,
+            durationSec: group.durationSec ?? 0,
+          });
+          return;
+        }
+        (group.items ?? []).forEach(item => items.push({ ...item, groupSlug: group.slug, groupName: group.name }));
+      });
+      return { ...category, items };
+    });
+
+    const kindLabels = {
+      character: '人物', enemy: '普通敌人', boss: '头目', weapon: '武器',
+      prop: '场景道具', soundGroup: '音效分组',
+    };
+    const categoryIcons = { characters: 'users', monsters: 'skull', weapons: 'crosshair', props: 'package', ambience: 'volume-2' };
+
+    let activeCategory = categories.find(category => category.items.length) ?? categories[0];
+    let activeGroup = '全部';
+    const requestedItem = params.get('item');
+    const requestedCategory = params.get('cat');
+    const flatItems = categories.flatMap(category => category.items);
+    let activeItem = requestedItem ? flatItems.find(item => item.slug === requestedItem) ?? null : null;
+    if (activeItem) {
+      activeCategory = categories.find(category => category.items.includes(activeItem)) ?? activeCategory;
+    } else {
+      if (requestedCategory) {
+        activeCategory = categories.find(category => category.slug === requestedCategory) ?? activeCategory;
+      }
+      activeItem = activeCategory.items[0] ?? null;
+    }
+    if (activeItem?.groupSlug) activeGroup = activeItem.groupSlug;
+
+    const stage = document.querySelector('#stage');
+    const canvas = document.querySelector('#stageCanvas');
+    const isCompactViewport = matchMedia('(max-width: 900px)').matches;
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isCompactViewport });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, isCompactViewport ? 1 : 1.5));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x0a100e, 1);
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x0a100e, 9, 20);
+    const camera = new THREE.PerspectiveCamera(32, 1, 0.01, 200);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.minDistance = 2.6;
+    controls.maxDistance = 16;
+
+    scene.add(new THREE.HemisphereLight(0xe6f0cc, 0x23332d, 2.45));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+    const keyLight = new THREE.DirectionalLight(0xffd5b0, 2.8);
+    keyLight.position.set(5, 7, 5);
+    scene.add(keyLight);
+    const fillLight = new THREE.DirectionalLight(0xdde8ff, 1.35);
+    fillLight.position.set(-5, 3, 6);
+    scene.add(fillLight);
+    const rimLight = new THREE.DirectionalLight(0x72b9aa, 2.0);
+    rimLight.position.set(-5, 4, -5);
+    scene.add(rimLight);
+    const floor = new THREE.Mesh(
+      new THREE.CircleGeometry(4.6, 64),
+      new THREE.MeshStandardMaterial({ color: 0x1c2822, roughness: 1, metalness: 0 })
+    );
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -0.02;
+    scene.add(floor);
+
+    let activeRoot = null;
+    let rotating = false;
+    let stageVisible = true;
+    const loader = new GLTFLoader();
+    const clock = new THREE.Clock();
+
+    function resize() {
+      const width = stage.clientWidth;
+      const height = stage.clientHeight;
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
+
+    function disposeRoot() {
+      if (!activeRoot) return;
+      scene.remove(activeRoot);
+      activeRoot.traverse(object => {
+        if (object.geometry) object.geometry.dispose();
+        const material = object.material;
+        if (Array.isArray(material)) material.forEach(item => item.dispose());
+        else if (material) material.dispose();
+      });
+      activeRoot = null;
+    }
+
+    // 道具之间尺度差异极大（街灯 vs 骨头），统一归一到固定取景范围。
+    function frameModel(model) {
+      const box = new THREE.Box3().setFromObject(model);
+      const size = box.getSize(new THREE.Vector3());
+      const horizontal = Math.max(size.x, size.z);
+      const scale = Math.min(1.75 / Math.max(size.y, 0.001), 1.75 / Math.max(horizontal, 0.001));
+      model.scale.setScalar(scale);
+      const scaled = new THREE.Box3().setFromObject(model);
+      const center = scaled.getCenter(new THREE.Vector3());
+      model.position.x -= center.x;
+      model.position.z -= center.z;
+      model.position.y -= scaled.min.y;
+      const radius = Math.max(scaled.getSize(new THREE.Vector3()).length() / 2, 0.6);
+      camera.position.set(radius * 2.1, radius * 1.5, radius * 2.4);
+      controls.target.set(0, radius * 0.45, 0);
+      controls.minDistance = radius * 1.2;
+      controls.maxDistance = radius * 6;
+      controls.update();
+    }
+
+    async function loadModel(item) {
+      const loading = document.querySelector('#loading');
+      loading.hidden = false;
+      disposeRoot();
+      try {
+        const gltf = await loader.loadAsync(`${item.model}?v=${activeGame.assetRevision}`);
+        const root = gltf.scene;
+        root.traverse(object => {
+          if (!object.isMesh) return;
+          object.frustumCulled = false;
+          const materials = Array.isArray(object.material) ? object.material : [object.material];
+          materials.forEach(material => {
+            if (!material) return;
+            material.side = THREE.FrontSide;
+            if (material.map) material.map.colorSpace = THREE.SRGBColorSpace;
+          });
+        });
+        activeRoot = root;
+        scene.add(root);
+        frameModel(root);
+        loading.hidden = true;
+      } catch (error) {
+        loading.textContent = `模型载入失败：${error?.message ?? error}`;
+      }
+    }
+
+    // --- audio -----------------------------------------------------------------
+    const player = document.querySelector('#player');
+    let playingButton = null;
+
+    function setButtonState(button, playing) {
+      if (!button) return;
+      button.classList.toggle('active', playing);
+      button.innerHTML = `<i data-lucide="${playing ? 'pause' : 'play'}"></i><span>${button.dataset.label}</span>`;
+      refreshIcons();
+    }
+
+    function playClip(clip, button) {
+      const source = `${clip.file}?v=${activeGame.assetRevision}`;
+      if (playingButton === button && !player.paused) {
+        player.pause();
+        setButtonState(button, false);
+        playingButton = null;
+        return;
+      }
+      if (playingButton && playingButton !== button) setButtonState(playingButton, false);
+      player.src = source;
+      player.play().catch(() => setButtonState(button, false));
+      playingButton = button;
+      setButtonState(button, true);
+    }
+
+    player.addEventListener('ended', () => {
+      if (playingButton) setButtonState(playingButton, false);
+      playingButton = null;
+    });
+
+    function renderAudio(slugs) {
+      const list = document.querySelector('#audioList');
+      list.innerHTML = '';
+      const byTier = new Map();
+      slugs.forEach(slug => {
+        const entry = soundBySlug.get(slug);
+        if (!entry) return;
+        if (!byTier.has(entry.tier)) byTier.set(entry.tier, []);
+        byTier.get(entry.tier).push(entry);
+      });
+      if (!byTier.size) {
+        list.innerHTML = '<div class="empty">该条目没有关联音效</div>';
+        return;
+      }
+      byTier.forEach((entries, tier) => {
+        const head = document.createElement('div');
+        head.className = 'audio-tier';
+        const clips = entries.reduce((sum, entry) => sum + (entry.clipCount ?? entry.clips?.length ?? 0), 0);
+        head.textContent = `${tier} · ${entries.length} 条 / ${clips} 个片段`;
+        list.appendChild(head);
+        entries.forEach(entry => {
+          const row = document.createElement('div');
+          row.className = 'audio-entry';
+          row.innerHTML = `<strong>${entry.name}</strong><small>${entry.nameEn} · ${formatTime(entry.durationSec)}${entry.loop ? ' · 循环' : ''}</small>`;
+          const clipRow = document.createElement('div');
+          clipRow.className = 'clip-row';
+          (entry.clips ?? []).forEach(clip => {
+            const button = document.createElement('button');
+            button.className = 'clip-button';
+            button.dataset.label = clip.name;
+            button.innerHTML = `<i data-lucide="play"></i><span>${clip.name}</span>`;
+            button.addEventListener('click', () => playClip(clip, button));
+            clipRow.appendChild(button);
+          });
+          row.appendChild(clipRow);
+          list.appendChild(row);
+        });
+      });
+      refreshIcons();
+    }
+
+    // --- details ---------------------------------------------------------------
+    function renderSprites(item) {
+      const block = document.querySelector('#spriteBlock');
+      const grid = document.querySelector('#spriteGrid');
+      const note = document.querySelector('#spriteNote');
+      grid.innerHTML = '';
+      if (!item.sprites?.length) {
+        block.hidden = true;
+        return;
+      }
+      block.hidden = false;
+      const vfx = item.vfx ?? {};
+      note.textContent = [
+        vfx.kind ? `命中类型 ${vfx.kind}` : null,
+        vfx.particle ? `粒子系统 ${vfx.particle}` : null,
+        vfx.color ? `特效颜色 ${vfx.color}` : null,
+        '以下贴图取自游戏原始资源，粒子参数无法从 IL2CPP 构建中读回。',
+      ].filter(Boolean).join(' · ');
+      item.sprites.forEach(path => {
+        const card = document.createElement('div');
+        card.className = 'sprite-card';
+        const name = path.split('/').pop();
+        card.innerHTML = `<img src="${path}" alt="${name}" loading="lazy"><span>${name}</span>`;
+        grid.appendChild(card);
+      });
+    }
+
+    function renderTextureRows(item) {
+      const list = document.querySelector('#texList');
+      list.innerHTML = '';
+      if (item.kind !== 'prop') return;
+      ['baseColor', 'normal', 'metallicGloss', 'occlusion'].forEach(key => {
+        const value = item.textures?.[key];
+        const row = document.createElement('div');
+        row.className = `tex-row${value ? '' : ' missing'}`;
+        row.innerHTML = `<b>${key}</b><span>${value ?? '该材质没有这一路贴图'}</span>`;
+        list.appendChild(row);
+      });
+    }
+
+    function renderRelated(item) {
+      const related = document.querySelector('#related');
+      related.innerHTML = '';
+      const jump = (categorySlug, slug, groupSlug) => {
+        const category = categories.find(entry => entry.slug === categorySlug);
+        const target = category?.items.find(entry => entry.slug === slug);
+        if (!target) return;
+        activeCategory = category;
+        activeItem = target;
+        activeGroup = groupSlug ?? '全部';
+        syncUrl();
+        renderFilters();
+        renderList();
+        renderDetails();
+      };
+
+      if (item.kind === 'weapon') {
+        const owner = categories.find(category => category.slug === 'characters')?.items
+          .find(entry => entry.slug === item.characterSlug);
+        if (owner) {
+          const button = document.createElement('button');
+          button.className = 'link-button';
+          button.textContent = `人物：${owner.name}`;
+          button.addEventListener('click', () => jump('characters', owner.slug));
+          related.appendChild(button);
+        }
+      }
+      if (item.kind === 'character') {
+        (item.weaponSlugs ?? []).forEach(slug => {
+          const weapon = categories.find(category => category.slug === 'weapons')?.items
+            .find(entry => entry.slug === slug);
+          if (!weapon) return;
+          const button = document.createElement('button');
+          button.className = 'link-button';
+          button.textContent = `${weapon.category}：${weapon.name}`;
+          button.addEventListener('click', () => jump('weapons', weapon.slug, weapon.typeSlug));
+          related.appendChild(button);
+        });
+      }
+      if (item.kind === 'prop') {
+        const link = document.createElement('a');
+        link.className = 'link-button';
+        link.href = `./props.html?game=${encodeURIComponent(activeGame.slug)}&prop=${encodeURIComponent(item.slug)}`;
+        link.textContent = '在道具图鉴中打开';
+        related.appendChild(link);
+      }
+    }
+
+    function renderDetails() {
+      const item = activeItem;
+      if (!item) return;
+      const isProp = item.kind === 'prop';
+      document.querySelector('#kindBadge').textContent = kindLabels[item.kind] ?? '条目';
+      document.querySelector('#itemName').textContent = item.name;
+      document.querySelector('#itemSubtitle').textContent = [item.nameEn && item.nameEn !== item.name ? item.nameEn : null,
+        isProp ? item.category : null,
+        item.kind === 'weapon' ? `${item.character} 专用` : null,
+        item.groupName && item.groupName !== item.name ? item.groupName : null].filter(Boolean).join(' · ');
+
+      const summary = {
+        character: `${item.name} 是可选幸存者之一，携带 ${item.weaponSlugs?.length ?? 0} 把专属武器（${(item.weaponTypes ?? []).join('、')}），`
+          + `连同${item.soundCount} 条人物与武器音效一起放在这里。`,
+        enemy: `${item.name} 是本作普通敌人，收录 ${item.soundCount} 条音效，包含出现、攻击、受击与死亡。`,
+        boss: `${item.name} 是关卡头目，收录 ${item.soundCount} 条音效，包含阶段转换、技能与死亡。`,
+        weapon: item.summary || '该武器暂无官方描述文本。',
+        soundGroup: `${item.name} 分组下的音效不隶属于某个人物、怪物或武器，按分类原样保留。`,
+        prop: `场景中的实例名为 ${item.inGameObject}，来自 ${item.sourceScene}。`
+          + 'Unity 的金属度/光滑度贴图已重排为 glTF 的遮蔽-粗糙-金属打包贴图。',
+      }[item.kind] ?? '';
+      document.querySelector('#summary').textContent = summary;
+
+      const statA = document.querySelector('#statA');
+      const statB = document.querySelector('#statB');
+      const statC = document.querySelector('#statC');
+      if (isProp) {
+        document.querySelector('#statALabel').textContent = '三角面';
+        document.querySelector('#statBLabel').textContent = '子网格 / 材质';
+        document.querySelector('#statCLabel').textContent = 'GLB 大小';
+        statA.textContent = item.triangles?.toLocaleString() ?? '—';
+        statB.textContent = `${item.subMeshes ?? 1} / ${(item.materials ?? []).length}`;
+        statC.textContent = `${item.sizeKB} KB`;
+      } else {
+        document.querySelector('#statALabel').textContent = '音效条目';
+        document.querySelector('#statBLabel').textContent = '音频片段';
+        document.querySelector('#statCLabel').textContent = '总时长';
+        statA.textContent = String(item.soundCount ?? item.soundSlugs?.length ?? 0);
+        statB.textContent = String(item.clipCount ?? 0);
+        statC.textContent = formatTime(item.durationSec ?? 0);
+      }
+
+      const badges = [item.nameEn && item.nameEn !== item.name ? item.nameEn : null,
+        item.characterEn ?? null,
+        item.kind === 'weapon' ? item.category : null,
+        item.kind === 'prop' ? item.category : null,
+        ...(item.weaponTypes ?? [])];
+      document.querySelector('#badges').innerHTML = badges.filter(Boolean)
+        .map(value => `<span class="chip">${value}</span>`).join('')
+        || '<span class="chip dim">无额外标记</span>';
+
+      renderRelated(item);
+      renderTextureRows(item);
+      renderAudio(item.soundSlugs ?? []);
+      renderSprites(item);
+
+      // 有 GLB 才显示三维舞台，其余条目显示说明卡，避免空白画布。
+      const note = document.querySelector('#stageNote');
+      const tools = document.querySelector('.tools');
+      if (item.model) {
+        note.hidden = true;
+        canvas.hidden = false;
+        tools.hidden = false;
+        renderer.setClearColor(0x0a100e, 1);
+        loadModel(item);
+      } else {
+        disposeRoot();
+        renderer.setClearColor(0x0a100e, 0);
+        canvas.hidden = true;
+        tools.hidden = true;
+        note.hidden = false;
+        document.querySelector('#stageNoteTitle').textContent = `${kindLabels[item.kind] ?? '该条目'}暂无三维模型`;
+        document.querySelector('#stageNoteBody').textContent = item.modelNote
+          ?? '该条目聚合的是名称、说明、音效与特效贴图；三维模型尚未从游戏中提取。';
+      }
+      document.querySelector('#rightsNotice').textContent = activeGame.notice
+        ?? '资料与音效来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
+    }
+
+    // --- sidebar ---------------------------------------------------------------
+    function filteredItems() {
+      const query = document.querySelector('#searchInput').value.trim().toLowerCase();
+      return activeCategory.items.filter(item => {
+        const groupMatch = activeGroup === '全部' || item.groupSlug === activeGroup;
+        const haystack = [item.name, item.nameEn, item.groupName, item.character, item.characterEn,
+          item.category, item.nameEn].join(' ').toLowerCase();
+        return groupMatch && (!query || haystack.includes(query));
+      });
+    }
+
+    function renderList() {
+      const list = document.querySelector('#itemList');
+      list.innerHTML = '';
+      const items = filteredItems();
+      if (!items.length) {
+        list.innerHTML = '<div class="empty">没有匹配条目</div>';
+        return;
+      }
+      items.forEach(item => {
+        const button = document.createElement('button');
+        button.className = `prop-entry${item === activeItem ? ' active' : ''}`;
+        const meta = item.kind === 'weapon' ? item.character
+          : item.kind === 'prop' ? (item.groupName || item.category)
+            : item.groupName || kindLabels[item.kind] || '';
+        button.innerHTML = `<strong>${item.name}</strong><small>${meta}</small>`
+          + `<span>${item.soundCount ? `${item.soundCount} 音效` : isFinite(item.sizeKB) ? `${item.sizeKB} KB` : ''}</span>`;
+        button.addEventListener('click', () => {
+          activeItem = item;
+          syncUrl();
+          renderList();
+          renderDetails();
+        });
+        list.appendChild(button);
+      });
+    }
+
+    function renderFilters() {
+      const categoryTabs = document.querySelector('#categoryTabs');
+      categoryTabs.innerHTML = '';
+      categories.forEach(category => {
+        const button = document.createElement('button');
+        button.className = `tier-filter${category === activeCategory ? ' active' : ''}`;
+        button.innerHTML = `<i data-lucide="${categoryIcons[category.slug] ?? 'box'}" style="width:12px;height:12px;vertical-align:-2px;margin-right:4px"></i>${category.name} ${category.items.length}`;
+        button.addEventListener('click', () => {
+          activeCategory = category;
+          activeGroup = '全部';
+          activeItem = category.items[0] ?? null;
+          syncUrl();
+          renderFilters();
+          renderList();
+          renderDetails();
+        });
+        categoryTabs.appendChild(button);
+      });
+
+      const groupTabs = document.querySelector('#groupTabs');
+      groupTabs.innerHTML = '';
+      const groups = [];
+      activeCategory.items.forEach(item => {
+        if (item.groupSlug && !groups.some(group => group.slug === item.groupSlug)) {
+          groups.push({ slug: item.groupSlug, name: item.groupName });
+        }
+      });
+      if (!groups.length) {
+        groupTabs.hidden = true;
+        return;
+      }
+      groupTabs.hidden = false;
+      [{ slug: '全部', name: '全部' }, ...groups].forEach(group => {
+        const count = group.slug === '全部'
+          ? activeCategory.items.length
+          : activeCategory.items.filter(item => item.groupSlug === group.slug).length;
+        const button = document.createElement('button');
+        button.className = `tier-filter${activeGroup === group.slug ? ' active' : ''}`;
+        button.textContent = `${group.name} ${count}`;
+        button.addEventListener('click', () => {
+          activeGroup = group.slug;
+          renderFilters();
+          renderList();
+        });
+        groupTabs.appendChild(button);
+      });
+      refreshIcons();
+    }
+
+    function syncUrl() {
+      const next = new URL(location.href);
+      next.searchParams.set('game', activeGame.slug);
+      next.searchParams.set('cat', activeCategory.slug);
+      if (activeItem) next.searchParams.set('item', activeItem.slug);
+      history.replaceState({}, '', next);
+    }
+
+    function bindGameSelect() {
+      const select = document.querySelector('#gameSelect');
+      games.forEach(game => {
+        const option = document.createElement('option');
+        option.value = game.slug;
+        const gameLabel = game.name === game.nameEn ? game.name : `${game.name} / ${game.nameEn}`;
+        option.textContent = gameLabel;
+        select.appendChild(option);
+      });
+      select.value = activeGame.slug;
+      select.addEventListener('change', event => {
+        const nextGame = games.find(game => game.slug === event.target.value);
+        if (!nextGame) return;
+        if (nextGame.modelsCatalog) {
+          location.href = `./${nextGame.modelsPage ?? 'models.html'}?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        if (nextGame.propsCatalog) {
+          location.href = `./props.html?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        if (nextGame.weaponsCatalog) {
+          location.href = `./weapons.html?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        if (nextGame.soundsPage) {
+          location.href = `./${nextGame.soundsPage}?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
+        location.href = `./index.html?game=${encodeURIComponent(nextGame.slug)}`;
+      });
+    }
+
+    document.querySelector('#rotateButton').addEventListener('click', event => {
+      rotating = !rotating;
+      event.currentTarget.classList.toggle('active', rotating);
+    });
+    document.querySelector('#resetButton').addEventListener('click', () => {
+      if (activeRoot) frameModel(activeRoot);
+    });
+    document.querySelector('#searchInput').addEventListener('input', renderList);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!stageVisible || document.hidden || canvas.hidden) {
+        clock.getDelta();
+        return;
+      }
+      if (rotating && activeRoot) activeRoot.rotation.y += clock.getDelta() * 0.32;
+      else clock.getDelta();
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    const tabs = document.querySelector('#viewTabs');
+    tabs.classList.toggle('models-available', Boolean(activeGame.catalog) && activeGame.defaultView !== 'sounds');
+    tabs.classList.toggle('sounds-available', Boolean(activeGame.soundsPage));
+    tabs.classList.toggle('weapons-available', Boolean(activeGame.weaponsCatalog));
+    tabs.classList.toggle('props-available', Boolean(activeGame.propsCatalog));
+    tabs.classList.toggle('merged-available', Boolean(activeGame.modelsCatalog));
+    document.querySelector('#brand').textContent = `${activeGame.name} · 模型总览`;
+    document.querySelector('#edition').textContent = activeGame.modelsSubtitle ?? activeGame.subtitle;
+    document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#soundsLink').href = `./${activeGame.soundsPage ?? 'sounds.html'}?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#weaponsLink').href = `./weapons.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#propsLink').href = `./props.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.title = `${activeGame.name} · 模型总览`;
+
+    new ResizeObserver(resize).observe(stage);
+    new IntersectionObserver(entries => {
+      stageVisible = entries[0]?.isIntersecting ?? true;
+    }, { threshold: 0.05 }).observe(stage);
+
+    bindGameSelect();
+    renderFilters();
+    renderList();
+    renderDetails();
+    resize();
+    animate();
+  </script>
+</body>
+</html>

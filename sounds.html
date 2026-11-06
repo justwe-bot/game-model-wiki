@@ -29,10 +29,11 @@
     .game-switcher select { width: 100%; height: 38px; appearance: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 34px 0 11px; outline: 0; cursor: pointer; }
     .game-switcher svg { position: absolute; right: 10px; top: 11px; width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
     .view-tabs { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 10px; }
-    #creaturesLink, #weaponsLink, #propsLink { display: none; }
+    #creaturesLink, #weaponsLink, #propsLink, #modelsLink { display: none; }
     .view-tabs.models-available #creaturesLink { display: flex; }
     .view-tabs.weapons-available #weaponsLink { display: flex; }
     .view-tabs.props-available #propsLink { display: flex; }
+    .view-tabs.merged-available #modelsLink { display: flex; }
     .view-tab { flex: 1 1 72px; height: 34px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 7px; text-decoration: none; font-size: 12px; }
     .view-tab.active { color: #17200e; background: var(--lime); border-color: var(--lime); font-weight: 800; }
     .view-tab svg { width: 15px; height: 15px; }
@@ -143,6 +144,7 @@
           <a class="view-tab active" id="soundsLink" href="./sounds.html"><i data-lucide="volume-2"></i>音效</a>
           <a class="view-tab" id="weaponsLink" href="./weapons.html"><i data-lucide="crosshair"></i>武器</a>
           <a class="view-tab" id="propsLink" href="./props.html"><i data-lucide="package"></i>道具</a>
+          <a class="view-tab" id="modelsLink" href="./models.html"><i data-lucide="box"></i>模型</a>
         </nav>
         <p class="edition" id="edition"></p>
         <label class="search">
@@ -205,9 +207,9 @@
     {"imports":{"lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
   </script>
   <script type="module">
-    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package } from 'lucide';
+    import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Box } from 'lucide';
 
-    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package };
+    const iconSet = { Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Box };
     const refreshIcons = () => createIcons({ icons: iconSet, attrs: { 'stroke-width': 1.8 } });
     refreshIcons();
 
@@ -448,7 +450,8 @@
       games.forEach(game => {
         const option = document.createElement('option');
         option.value = game.slug;
-        option.textContent = `${game.name} / ${game.nameEn}`;
+        const gameLabel = game.name === game.nameEn ? game.name : `${game.name} / ${game.nameEn}`;
+        option.textContent = gameLabel;
         select.appendChild(option);
       });
       select.value = activeGame.slug;
@@ -525,10 +528,12 @@
     document.querySelector('#viewTabs').classList.toggle('models-available', activeGame.defaultView !== 'sounds');
     document.querySelector('#viewTabs').classList.toggle('weapons-available', Boolean(activeGame.weaponsCatalog));
     document.querySelector('#viewTabs').classList.toggle('props-available', Boolean(activeGame.propsCatalog));
+    document.querySelector('#viewTabs').classList.toggle('merged-available', Boolean(activeGame.modelsCatalog));
     document.querySelector('#creaturesLink').href = `./index.html?game=${encodeURIComponent(activeGame.slug)}`;
     document.querySelector('#soundsLink').href = `./${activeGame.soundsPage}?game=${encodeURIComponent(activeGame.slug)}`;
     document.querySelector('#weaponsLink').href = `./weapons.html?game=${encodeURIComponent(activeGame.slug)}`;
     document.querySelector('#propsLink').href = `./props.html?game=${encodeURIComponent(activeGame.slug)}`;
+    document.querySelector('#modelsLink').href = `./${activeGame.modelsPage ?? 'models.html'}?game=${encodeURIComponent(activeGame.slug)}`;
     document.title = `${activeGame.name} · 音效图鉴`;
     bindGameSelect();
     renderTierFilters();
