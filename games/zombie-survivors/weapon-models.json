@@ -1,0 +1,1222 @@
+[
+ {
+  "slug": "swat-rifle",
+  "model": "models/zombie-survivors/weapons/swat-rifle.glb",
+  "bundle": "gameplayerswat",
+  "sourceObjects": [
+   "Rifle_Decimated"
+  ],
+  "materials": [
+   "19 - Default"
+  ],
+  "triangles": 13344,
+  "subMeshes": 1,
+  "vertices": 15442,
+  "textures": {
+   "baseColor": "Woman_05_Weapon_Albedo_01",
+   "normal": "Woman_05_Weapon_Normals",
+   "metallicGloss": "Woman_05_Weapon_Metallic",
+   "occlusion": "Woman_05_Weapon_Ao"
+  },
+  "sizeKB": 980.8,
+  "name": "突击步枪",
+  "nameEn": "Assault Rifle",
+  "character": "SWAT",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "swat-sniper",
+  "model": "models/zombie-survivors/weapons/swat-sniper.glb",
+  "bundle": "gameplayerswat",
+  "sourceObjects": [
+   "Sniper_Rifle_Decimated"
+  ],
+  "materials": [
+   "Sniper_Rifle"
+  ],
+  "triangles": 14467,
+  "subMeshes": 1,
+  "vertices": 13613,
+  "textures": {
+   "baseColor": "Sniper_Rifle_Albedo",
+   "normal": "Sniper_Rifle_Normals",
+   "metallicGloss": "Sniper_Rifle_Metallic",
+   "occlusion": "Sniper_Rifle_Ao"
+  },
+  "sizeKB": 760.2,
+  "name": "狙击步枪",
+  "nameEn": "Sniper Rifle",
+  "character": "SWAT",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "swat-pistol",
+  "model": "models/zombie-survivors/weapons/swat-pistol.glb",
+  "bundle": "gameplayerswat",
+  "sourceObjects": [
+   "Deagle_Decimated"
+  ],
+  "materials": [
+   "M_DesertEagle_Mag",
+   "M_DesertEagle_Trigger",
+   "M_DesertEagle_Sight",
+   "M_DesertEagle_Suppressor",
+   "M_DesertEagle"
+  ],
+  "triangles": 8425,
+  "subMeshes": 5,
+  "vertices": 11245,
+  "textures": {
+   "baseColor": "Deagle_M_DesertEagle_Mag_AlbedoTransparency",
+   "normal": "Deagle_M_DesertEagle_Mag_Normal",
+   "metallicGloss": "Deagle_M_DesertEagle_Mag_MetallicSmoothness"
+  },
+  "sizeKB": 726.6,
+  "name": "制式手枪",
+  "nameEn": "Pistol",
+  "character": "SWAT",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "swat-uzi",
+  "model": "models/zombie-survivors/weapons/swat-uzi.glb",
+  "bundle": "gameplayerswat",
+  "sourceObjects": [
+   "Uzi_Decimated"
+  ],
+  "materials": [
+   "UziMat"
+  ],
+  "triangles": 1494,
+  "subMeshes": 1,
+  "vertices": 2126,
+  "textures": {
+   "baseColor": "Uzi_D",
+   "normal": "Uzi_N",
+   "metallicGloss": "Uzi_M"
+  },
+  "sizeKB": 186.2,
+  "name": "冲锋枪",
+  "nameEn": "SMG",
+  "character": "SWAT",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "swat-grenadelauncher",
+  "model": "models/zombie-survivors/weapons/swat-grenadelauncher.glb",
+  "bundle": "gameplayerswat",
+  "sourceObjects": [
+   "GL_Decimated"
+  ],
+  "materials": [
+   "GWL_v1"
+  ],
+  "triangles": 10828,
+  "subMeshes": 1,
+  "vertices": 12917,
+  "textures": {
+   "baseColor": "GWL_v1",
+   "normal": "GWL_v1_NM",
+   "metallicGloss": "GWL_v1_SG",
+   "occlusion": "GWL_v1_AO"
+  },
+  "sizeKB": 656.0,
+  "name": "榴弹发射器",
+  "nameEn": "Grenade Launcher",
+  "character": "SWAT",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "tank-shotgun",
+  "model": "models/zombie-survivors/weapons/tank-shotgun.glb",
+  "bundle": "gameplayertank",
+  "sourceObjects": [
+   "Shotgun_Decimated"
+  ],
+  "materials": [
+   "shotgun4_diffuse"
+  ],
+  "triangles": 3137,
+  "subMeshes": 1,
+  "vertices": 6522,
+  "textures": {
+   "baseColor": "shotgun4_diffuse",
+   "normal": "shotgun4_normal",
+   "metallicGloss": "shotgun4_MetallicSmoothness",
+   "occlusion": "shotgun4_AmbientOcclusion"
+  },
+  "sizeKB": 269.5,
+  "name": "霰弹枪",
+  "nameEn": "Shotgun",
+  "character": "坦克",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "tank-doubleshotgun",
+  "model": "models/zombie-survivors/weapons/tank-doubleshotgun.glb",
+  "bundle": "gameplayertank",
+  "sourceObjects": [
+   "Double_Shotgun_Decimated"
+  ],
+  "materials": [
+   "shotgun6_diffuse"
+  ],
+  "triangles": 5762,
+  "subMeshes": 1,
+  "vertices": 12218,
+  "textures": {
+   "baseColor": "shotgun6_diffuse",
+   "normal": "shotgun6_normal",
+   "metallicGloss": "shotgun6_MetallicSmoothness",
+   "occlusion": "shotgun6_AmbientOcclusion"
+  },
+  "sizeKB": 383.2,
+  "name": "泵动式霰弹枪",
+  "nameEn": "Pump-Action Shotgun",
+  "character": "坦克",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "tank-supershotgun",
+  "model": "models/zombie-survivors/weapons/tank-supershotgun.glb",
+  "bundle": "gameplayertank",
+  "sourceObjects": [
+   "Super_Shotgun_Decimated"
+  ],
+  "materials": [
+   "SHG_v1"
+  ],
+  "triangles": 9994,
+  "subMeshes": 1,
+  "vertices": 12241,
+  "textures": {
+   "baseColor": "SHG_v1",
+   "normal": "SHG_v1_NM",
+   "metallicGloss": "SHG_v1_SG",
+   "occlusion": "SHG_v1_AO"
+  },
+  "sizeKB": 672.3,
+  "name": "超级霰弹枪",
+  "nameEn": "Super Shotgun",
+  "character": "坦克",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "tank-rocket",
+  "model": "models/zombie-survivors/weapons/tank-rocket.glb",
+  "bundle": "gameplayertank",
+  "sourceObjects": [
+   "Rocket_Launcher_Decimated"
+  ],
+  "materials": [
+   "ScifiMissileLauncherMSL889Black"
+  ],
+  "triangles": 8913,
+  "subMeshes": 3,
+  "vertices": 9544,
+  "textures": {
+   "baseColor": "ScifiMissileLauncherMSL889BlackAlbedo",
+   "normal": "ScifiMissileLauncherMSL889Normal",
+   "metallicGloss": "ScifiMissileLauncherMSL889_MetallicSmoothness",
+   "occlusion": "ScifiMissileLauncherMSL889_AmbientOcclusion"
+  },
+  "sizeKB": 477.0,
+  "name": "火箭发射器",
+  "nameEn": "Rocket Launcher",
+  "character": "坦克",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "tank-minigun",
+  "model": "models/zombie-survivors/weapons/tank-minigun.glb",
+  "bundle": "gameplayertank",
+  "sourceObjects": [
+   "Gun",
+   "Barrell"
+  ],
+  "materials": [
+   "tx01",
+   "tx02",
+   "tx02"
+  ],
+  "triangles": 918,
+  "subMeshes": 3,
+  "vertices": 1226,
+  "textures": {
+   "baseColor": "tx01",
+   "normal": "tx01_n",
+   "occlusion": "tx01_o"
+  },
+  "sizeKB": 387.0,
+  "name": "转轮机枪",
+  "nameEn": "Minigun",
+  "character": "坦克",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "huntress-bow",
+  "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+  "bundle": "gameplayerhuntress",
+  "sourceObjects": [
+   "BowMain"
+  ],
+  "materials": [
+   "MI_Weapons"
+  ],
+  "triangles": 1796,
+  "subMeshes": 1,
+  "vertices": 1438,
+  "textures": {
+   "baseColor": "T_Weapons_BC",
+   "normal": "T_Weapons_N",
+   "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+   "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+  },
+  "sizeKB": 307.1,
+  "name": "弓",
+  "nameEn": "Bow",
+  "character": "女猎手",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "huntress-bowmulti",
+  "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+  "bundle": "gameplayerhuntress",
+  "sourceObjects": [
+   "BowMain"
+  ],
+  "materials": [
+   "MI_Weapons"
+  ],
+  "triangles": 1796,
+  "subMeshes": 1,
+  "vertices": 1438,
+  "textures": {
+   "baseColor": "T_Weapons_BC",
+   "normal": "T_Weapons_N",
+   "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+   "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+  },
+  "sizeKB": 307.1,
+  "name": "多重发射",
+  "nameEn": "Multishot",
+  "character": "女猎手",
+  "category": "",
+  "from": "shared:huntress-bow",
+  "note": "多重发射与弓共用同一张弓身网格，差别在箭矢数量与弹道。"
+ },
+ {
+  "slug": "huntress-bowexplosive",
+  "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+  "bundle": "gameplayerhuntress",
+  "sourceObjects": [
+   "BowMain"
+  ],
+  "materials": [
+   "MI_Weapons"
+  ],
+  "triangles": 1796,
+  "subMeshes": 1,
+  "vertices": 1438,
+  "textures": {
+   "baseColor": "T_Weapons_BC",
+   "normal": "T_Weapons_N",
+   "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+   "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+  },
+  "sizeKB": 307.1,
+  "name": "爆炸箭",
+  "nameEn": "Explosive Arrows",
+  "character": "女猎手",
+  "category": "",
+  "from": "shared:huntress-bow",
+  "note": "爆炸箭与弓共用弓身网格，差别在箭矢材质与命中特效。"
+ },
+ {
+  "slug": "huntress-bowfreezing",
+  "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+  "bundle": "gameplayerhuntress",
+  "sourceObjects": [
+   "BowMain"
+  ],
+  "materials": [
+   "MI_Weapons"
+  ],
+  "triangles": 1796,
+  "subMeshes": 1,
+  "vertices": 1438,
+  "textures": {
+   "baseColor": "T_Weapons_BC",
+   "normal": "T_Weapons_N",
+   "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+   "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+  },
+  "sizeKB": 307.1,
+  "name": "冰冻箭",
+  "nameEn": "Freezing Arrows",
+  "character": "女猎手",
+  "category": "",
+  "from": "shared:huntress-bow",
+  "note": "冰冻箭与弓共用弓身网格，差别在箭矢材质与命中特效。"
+ },
+ {
+  "slug": "huntress-bowpoison",
+  "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+  "bundle": "gameplayerhuntress",
+  "sourceObjects": [
+   "BowMain"
+  ],
+  "materials": [
+   "MI_Weapons"
+  ],
+  "triangles": 1796,
+  "subMeshes": 1,
+  "vertices": 1438,
+  "textures": {
+   "baseColor": "T_Weapons_BC",
+   "normal": "T_Weapons_N",
+   "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+   "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+  },
+  "sizeKB": 307.1,
+  "name": "毒箭",
+  "nameEn": "Toxic Arrows",
+  "character": "女猎手",
+  "category": "",
+  "from": "shared:huntress-bow",
+  "note": "毒箭与弓共用弓身网格，差别在箭矢材质与命中特效。"
+ },
+ {
+  "slug": "ninja-katana",
+  "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+  "bundle": "gameplayerninja",
+  "sourceObjects": [
+   "Katana_Decimated"
+  ],
+  "materials": [
+   "M_Katana_BC"
+  ],
+  "triangles": 2575,
+  "subMeshes": 1,
+  "vertices": 1721,
+  "textures": {
+   "baseColor": "Katana_BaseMap",
+   "normal": "Katana_Normal",
+   "metallicGloss": "Katana_MaskMap",
+   "occlusion": "Katana_MaskMap"
+  },
+  "sizeKB": 185.8,
+  "name": "武士刀",
+  "nameEn": "Katana",
+  "character": "忍者",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "ninja-katanasplash",
+  "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+  "bundle": "gameplayerninja",
+  "sourceObjects": [
+   "Katana_Decimated"
+  ],
+  "materials": [
+   "M_Katana_BC"
+  ],
+  "triangles": 2575,
+  "subMeshes": 1,
+  "vertices": 1721,
+  "textures": {
+   "baseColor": "Katana_BaseMap",
+   "normal": "Katana_Normal",
+   "metallicGloss": "Katana_MaskMap",
+   "occlusion": "Katana_MaskMap"
+  },
+  "sizeKB": 185.8,
+  "name": "武士刀横扫",
+  "nameEn": "Katana Splash",
+  "character": "忍者",
+  "category": "",
+  "from": "shared:ninja-katana",
+  "note": "横扫与武士刀共用刀身网格，差别在挥砍特效。"
+ },
+ {
+  "slug": "ninja-katanasuperslash",
+  "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+  "bundle": "gameplayerninja",
+  "sourceObjects": [
+   "Katana_Decimated"
+  ],
+  "materials": [
+   "M_Katana_BC"
+  ],
+  "triangles": 2575,
+  "subMeshes": 1,
+  "vertices": 1721,
+  "textures": {
+   "baseColor": "Katana_BaseMap",
+   "normal": "Katana_Normal",
+   "metallicGloss": "Katana_MaskMap",
+   "occlusion": "Katana_MaskMap"
+  },
+  "sizeKB": 185.8,
+  "name": "夺魂",
+  "nameEn": "Soul Reaper",
+  "character": "忍者",
+  "category": "",
+  "from": "shared:ninja-katana",
+  "note": "夺魂与武士刀共用刀身网格，差别在挥砍特效。"
+ },
+ {
+  "slug": "ninja-katanamultislash",
+  "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+  "bundle": "gameplayerninja",
+  "sourceObjects": [
+   "Katana_Decimated"
+  ],
+  "materials": [
+   "M_Katana_BC"
+  ],
+  "triangles": 2575,
+  "subMeshes": 1,
+  "vertices": 1721,
+  "textures": {
+   "baseColor": "Katana_BaseMap",
+   "normal": "Katana_Normal",
+   "metallicGloss": "Katana_MaskMap",
+   "occlusion": "Katana_MaskMap"
+  },
+  "sizeKB": 185.8,
+  "name": "千刃",
+  "nameEn": "Thousand Cuts",
+  "character": "忍者",
+  "category": "",
+  "from": "shared:ninja-katana",
+  "note": "千刃与武士刀共用刀身网格，差别在挥砍特效。"
+ },
+ {
+  "slug": "ninja-katanahurricanewave",
+  "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+  "bundle": "gameplayerninja",
+  "sourceObjects": [
+   "Katana_Decimated"
+  ],
+  "materials": [
+   "M_Katana_BC"
+  ],
+  "triangles": 2575,
+  "subMeshes": 1,
+  "vertices": 1721,
+  "textures": {
+   "baseColor": "Katana_BaseMap",
+   "normal": "Katana_Normal",
+   "metallicGloss": "Katana_MaskMap",
+   "occlusion": "Katana_MaskMap"
+  },
+  "sizeKB": 185.8,
+  "name": "裂风",
+  "nameEn": "Windcutter",
+  "character": "忍者",
+  "category": "",
+  "from": "shared:ninja-katana",
+  "note": "裂风与武士刀共用刀身网格，差别在挥砍特效。"
+ },
+ {
+  "slug": "medic-syringethrow",
+  "model": "models/zombie-survivors/weapons/medic-syringethrow.glb",
+  "bundle": "gameplayermedic",
+  "sourceObjects": [
+   "Syringe_Gun"
+  ],
+  "materials": [
+   "Syringe_v1",
+   "Mat_Injector_001_Colored"
+  ],
+  "triangles": 3524,
+  "subMeshes": 2,
+  "vertices": 3069,
+  "textures": {
+   "baseColor": "Syringe_v1",
+   "normal": "Syringe_v1_NM",
+   "metallicGloss": "Syringe_v1_SG",
+   "occlusion": "Syringe_v1_AO"
+  },
+  "sizeKB": 547.1,
+  "name": "注射手枪",
+  "nameEn": "Syringe Gun",
+  "character": "医生",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "medic-syringerifle",
+  "model": "models/zombie-survivors/weapons/medic-syringerifle.glb",
+  "bundle": "gameplayermedic",
+  "sourceObjects": [
+   "SyringeRifle"
+  ],
+  "materials": [
+   "PP_v1",
+   "Mat_Injector_001_Colored1",
+   "Gun_Silencer_v1",
+   "Vertical_Grip_v1"
+  ],
+  "triangles": 12188,
+  "subMeshes": 4,
+  "vertices": 12202,
+  "textures": {
+   "baseColor": "PP_v1",
+   "normal": "PP_v1_NM",
+   "metallicGloss": "SWA_v1_SG",
+   "occlusion": "PP_v1_AO"
+  },
+  "sizeKB": 939.1,
+  "name": "注射步枪",
+  "nameEn": "Syringer",
+  "character": "医生",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "medic-handgun",
+  "model": "models/zombie-survivors/weapons/medic-handgun.glb",
+  "bundle": "gameplayermedic",
+  "sourceObjects": [
+   "Handgun_Decimated"
+  ],
+  "materials": [
+   "Material.001"
+  ],
+  "triangles": 2452,
+  "subMeshes": 1,
+  "vertices": 2854,
+  "textures": {
+   "baseColor": "makarov_diffuse",
+   "normal": "makarov_normal",
+   "metallicGloss": "makarov_specular",
+   "occlusion": "makarov_ao"
+  },
+  "sizeKB": 330.6,
+  "name": "自卫手枪",
+  "nameEn": "Handgun",
+  "character": "医生",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "medic-dotabottlethrow",
+  "model": "models/zombie-survivors/weapons/medic-dotabottlethrow.glb",
+  "bundle": "gameplayermedic",
+  "sourceObjects": [
+   "Potion"
+  ],
+  "materials": [
+   "Corks",
+   "ActualModelGlassMaterial",
+   "3d Potion B_Fill"
+  ],
+  "triangles": 6494,
+  "subMeshes": 3,
+  "vertices": 3994,
+  "textures": {
+   "baseColor": "cork 1"
+  },
+  "sizeKB": 202.3,
+  "name": "解毒瓶",
+  "nameEn": "Antidote Flasks",
+  "character": "医生",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "medic-freezebottlethrow",
+  "model": "models/zombie-survivors/weapons/medic-dotabottlethrow.glb",
+  "bundle": "gameplayermedic",
+  "sourceObjects": [
+   "Potion"
+  ],
+  "materials": [
+   "Corks",
+   "ActualModelGlassMaterial",
+   "3d Potion B_Fill"
+  ],
+  "triangles": 6494,
+  "subMeshes": 3,
+  "vertices": 3994,
+  "textures": {
+   "baseColor": "cork 1"
+  },
+  "sizeKB": 202.3,
+  "name": "冰冻瓶",
+  "nameEn": "Freezing Flasks",
+  "character": "医生",
+  "category": "",
+  "from": "shared:medic-dotabottlethrow",
+  "note": "冰冻瓶与解毒瓶共用同一个瓶子网格，差别在瓶内液体材质与命中特效。"
+ },
+ {
+  "slug": "ranger-crossbow",
+  "model": "models/zombie-survivors/weapons/ranger-crossbow.glb",
+  "bundle": "gameplayerranger",
+  "sourceObjects": [
+   "Crossbow"
+  ],
+  "materials": [
+   "Crossbow"
+  ],
+  "triangles": 12708,
+  "subMeshes": 1,
+  "vertices": 11257,
+  "textures": {
+   "baseColor": "Low_DefaultMaterial_AlbedoTransparency",
+   "normal": "Low_DefaultMaterial_Normal",
+   "metallicGloss": "Low_DefaultMaterial_MetallicSmoothness",
+   "occlusion": "Low_DefaultMaterial_Occlusion"
+  },
+  "sizeKB": 667.3,
+  "name": "弩",
+  "nameEn": "Crossbow",
+  "character": "游侠",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "ranger-crossbowbarber",
+  "model": "models/zombie-survivors/weapons/ranger-crossbowbarber.glb",
+  "bundle": "gameplayerranger",
+  "sourceObjects": [
+   "Crossbow_Barber"
+  ],
+  "materials": [
+   "DoubleCrossbow"
+  ],
+  "triangles": 9259,
+  "subMeshes": 1,
+  "vertices": 7611,
+  "textures": {
+   "baseColor": "DoubleCrossbow_Color",
+   "normal": "DoubleCrossbow_NormalMap",
+   "metallicGloss": "DoubleCrossbow_Metallic"
+  },
+  "sizeKB": 544.7,
+  "name": "刺网弩",
+  "nameEn": "Barber",
+  "character": "游侠",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "ranger-crossbowfirebrand",
+  "model": "models/zombie-survivors/weapons/ranger-crossbowfirebrand.glb",
+  "bundle": "gameplayerranger",
+  "sourceObjects": [
+   "Crossbow_Firebrand"
+  ],
+  "materials": [
+   "defaultMat"
+  ],
+  "triangles": 10037,
+  "subMeshes": 1,
+  "vertices": 9540,
+  "textures": {
+   "baseColor": "Albedo",
+   "normal": "Normal",
+   "metallicGloss": "Metalness"
+  },
+  "sizeKB": 610.2,
+  "name": "燃烧弩",
+  "nameEn": "Flarebolt",
+  "character": "游侠",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "ranger-crossbowrepeater",
+  "model": "models/zombie-survivors/weapons/ranger-crossbowrepeater.glb",
+  "bundle": "gameplayerranger",
+  "sourceObjects": [
+   "Crossbow_Repeater"
+  ],
+  "materials": [
+   "Crossbow",
+   "Crossbow_RDS"
+  ],
+  "triangles": 11536,
+  "subMeshes": 2,
+  "vertices": 8954,
+  "textures": {
+   "baseColor": "Crossbow_Alb",
+   "normal": "Crossbow_N",
+   "metallicGloss": "Crossbow_Mtl",
+   "occlusion": "Crossbow_AO"
+  },
+  "sizeKB": 918.2,
+  "name": "连弩",
+  "nameEn": "Repeater Crossbow",
+  "character": "游侠",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "ranger-crossbowshockspike",
+  "model": "models/zombie-survivors/weapons/ranger-crossbowshockspike.glb",
+  "bundle": "gameplayerranger",
+  "sourceObjects": [
+   "Crossbow_Shockspike"
+  ],
+  "materials": [
+   "CrossbowMaterial_BlueVar"
+  ],
+  "triangles": 9492,
+  "subMeshes": 1,
+  "vertices": 11938,
+  "textures": {
+   "baseColor": "Crossbow_AlbedoTransparency",
+   "normal": "Crossbow_Normal",
+   "metallicGloss": "Crossbow_MetallicSmoothness"
+  },
+  "sizeKB": 476.0,
+  "name": "电击弩",
+  "nameEn": "Shockspike",
+  "character": "游侠",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "pyro-axethrow",
+  "model": "models/zombie-survivors/weapons/pyro-axethrow.glb",
+  "bundle": "gameplayerpyro",
+  "sourceObjects": [
+   "AxeThrow_Decimated"
+  ],
+  "materials": [
+   "Axe_1"
+  ],
+  "triangles": 303,
+  "subMeshes": 1,
+  "vertices": 293,
+  "textures": {
+   "baseColor": "Axe_1_AlbedoTransparency",
+   "normal": "Axe_1_Normal",
+   "metallicGloss": "Axe_1_MetallicSmoothness",
+   "occlusion": "Axe_1_AO"
+  },
+  "sizeKB": 207.2,
+  "name": "回旋斧",
+  "nameEn": "Axerangs",
+  "character": "纵火者",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "pyro-blowtorch",
+  "model": "models/zombie-survivors/weapons/pyro-blowtorch.glb",
+  "bundle": "gameplayerpyro",
+  "sourceObjects": [
+   "BlowTorch_Decimated"
+  ],
+  "materials": [
+   "Blowtorch_mat"
+  ],
+  "triangles": 2122,
+  "subMeshes": 1,
+  "vertices": 1862,
+  "textures": {
+   "baseColor": "Blowtorch_AlbedoTransparency",
+   "normal": "Blowtorch_Normal",
+   "metallicGloss": "Blowtorch_MetallicSmoothness"
+  },
+  "sizeKB": 303.6,
+  "name": "喷灯",
+  "nameEn": "Blowtorch",
+  "character": "纵火者",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "pyro-fireaxe",
+  "model": "models/zombie-survivors/weapons/pyro-fireaxe.glb",
+  "bundle": "gameplayerpyro",
+  "sourceObjects": [
+   "FireAxe_Splash"
+  ],
+  "materials": [
+   "Specular_Fire_Axe"
+  ],
+  "triangles": 266,
+  "subMeshes": 1,
+  "vertices": 221,
+  "textures": {
+   "baseColor": "Fire_Diffuse",
+   "normal": "Fire_Normal_OpenGL",
+   "metallicGloss": "Fire_Specular_Gloss",
+   "occlusion": "Fire_AO"
+  },
+  "sizeKB": 328.1,
+  "name": "消防斧",
+  "nameEn": "Fireaxe",
+  "character": "纵火者",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "pyro-infernax",
+  "model": "models/zombie-survivors/weapons/pyro-infernax.glb",
+  "bundle": "gameplayerpyro",
+  "sourceObjects": [
+   "FireAxe_Infernax_Skull"
+  ],
+  "materials": [
+   "Star_Axe",
+   "Bones"
+  ],
+  "triangles": 3706,
+  "subMeshes": 2,
+  "vertices": 3571,
+  "textures": {
+   "baseColor": "Star_Axe_Albedo",
+   "normal": "Star_Axe_Normal",
+   "metallicGloss": "Star_Axe_Metallic",
+   "occlusion": "Star_Axe_Ao"
+  },
+  "sizeKB": 745.4,
+  "name": "地狱斧",
+  "nameEn": "Infernax",
+  "character": "纵火者",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "pyro-flamethrower",
+  "model": "models/zombie-survivors/weapons/pyro-flamethrower.glb",
+  "bundle": "gameplayerpyro",
+  "sourceObjects": [
+   "FlameThrower_Decimated"
+  ],
+  "materials": [
+   "flame"
+  ],
+  "triangles": 12474,
+  "subMeshes": 1,
+  "vertices": 12338,
+  "textures": {
+   "baseColor": "flame_lowflamethriwer_Albedo",
+   "normal": "flame_lowflamethriwer_Normal",
+   "metallicGloss": "flame_lowflamethriwer_Metallic",
+   "occlusion": "flame_lowflamethriwer_Ao"
+  },
+  "sizeKB": 604.5,
+  "name": "火焰喷射器",
+  "nameEn": "Flamethrower",
+  "character": "纵火者",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "mechanic-chainsaw",
+  "model": "models/zombie-survivors/weapons/mechanic-chainsaw.glb",
+  "bundle": "gameplayermechanic",
+  "sourceObjects": [
+   "Weapon_Mechanic_Chainsaw"
+  ],
+  "materials": [
+   "Chainsaw"
+  ],
+  "triangles": 9352,
+  "subMeshes": 1,
+  "vertices": 9853,
+  "textures": {
+   "baseColor": "ChainsawLowSubstance_Chainsaw_AlbedoTransparency",
+   "normal": "ChainsawLowSubstance_Chainsaw_Normal",
+   "metallicGloss": "ChainsawLowSubstance_Chainsaw_MetallicSmoothness",
+   "occlusion": "ChainsawLowSubstance_Chainsaw_Occlusion"
+  },
+  "sizeKB": 605.1,
+  "name": "链锯",
+  "nameEn": "Chainsaw",
+  "character": "机械师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "mechanic-lancer",
+  "model": "models/zombie-survivors/weapons/mechanic-lancer.glb",
+  "bundle": "gameplayermechanic",
+  "sourceObjects": [
+   "Lancer"
+  ],
+  "materials": [
+   "Sci-fi Rifle 1 Ammo",
+   "Sci-fi Rifle 1",
+   "chain_col"
+  ],
+  "triangles": 10438,
+  "subMeshes": 3,
+  "vertices": 15461,
+  "textures": {
+   "baseColor": "Sci-fi Rifle Ammo Albedo",
+   "normal": "Sci-fi Rifle Ammo Normal",
+   "metallicGloss": "Sci-fi Rifle Ammo MetallicSmoothness",
+   "occlusion": "Sci-fi Rifle Ammo Occlusion"
+  },
+  "sizeKB": 854.5,
+  "name": "骑兵枪",
+  "nameEn": "Lancer",
+  "character": "机械师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "mechanic-nitrogun",
+  "model": "models/zombie-survivors/weapons/mechanic-nitrogun.glb",
+  "bundle": "gameplayermechanic",
+  "sourceObjects": [
+   "NitroGun"
+  ],
+  "materials": [
+   "Sci_fi_Plasma_Rifle_pt1_MAT",
+   "Sci_fi_Plasma_Rifle_pt2_MAT",
+   "Sci_fi_Plasma_Rifle_pt1_MAT1"
+  ],
+  "triangles": 17235,
+  "subMeshes": 3,
+  "vertices": 15385,
+  "textures": {
+   "baseColor": "Sci-fi Plasma Rifle pt1_Albedo"
+  },
+  "sizeKB": 601.0,
+  "name": "液氮枪",
+  "nameEn": "Nitro-Gun",
+  "character": "机械师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "mechanic-chaosengine",
+  "model": "models/zombie-survivors/weapons/mechanic-chaosengine.glb",
+  "bundle": "gameplayermechanic",
+  "sourceObjects": [
+   "ChaosEngine"
+  ],
+  "materials": [
+   "Sci-fi Rocket Luncher upper",
+   "Sci-fi Rocket Luncher lower"
+  ],
+  "triangles": 11443,
+  "subMeshes": 2,
+  "vertices": 12961,
+  "textures": {
+   "baseColor": "Sci-fi Rocket Launcher Upper_Albedo",
+   "normal": "Sci-fi Rocket Launcher Upper_Normal",
+   "metallicGloss": "Sci-fi Rocket Launcher Upper_MetallicSmoothness",
+   "occlusion": "Sci-fi Rocket Launcher Upper_Occlusion"
+  },
+  "sizeKB": 939.4,
+  "name": "扳手发射器",
+  "nameEn": "Spanner Spammer",
+  "character": "机械师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "mechanic-keyblade",
+  "model": "models/zombie-survivors/weapons/mechanic-keyblade.glb",
+  "bundle": "gameplayermechanic",
+  "sourceObjects": [
+   "Wrench"
+  ],
+  "materials": [
+   "M_Zaw_09"
+  ],
+  "triangles": 1428,
+  "subMeshes": 1,
+  "vertices": 1762,
+  "textures": {
+   "baseColor": "T_Zaw_09_BC",
+   "normal": "T_Zaw_09_N",
+   "metallicGloss": "T_Zaw_09_MT_S",
+   "occlusion": "T_Zaw_09_AO"
+  },
+  "sizeKB": 354.0,
+  "name": "可靠扳手",
+  "nameEn": "Trusty Spanner",
+  "character": "机械师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "eng-blaster",
+  "model": "models/zombie-survivors/weapons/eng-blaster.glb",
+  "bundle": "gameplayerengineer",
+  "sourceObjects": [
+   "Blaster_Decimated"
+  ],
+  "materials": [
+   "hellwailer",
+   "fusion_core"
+  ],
+  "triangles": 2331,
+  "subMeshes": 2,
+  "vertices": 2827,
+  "textures": {
+   "baseColor": "hellwailer",
+   "normal": "hellwailer_Normal",
+   "metallicGloss": "hellwailer_spec"
+  },
+  "sizeKB": 183.2,
+  "name": "爆能枪",
+  "nameEn": "Blaster",
+  "character": "工程师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "eng-plasma",
+  "model": "models/zombie-survivors/weapons/eng-plasma.glb",
+  "bundle": "gameplayerengineer",
+  "sourceObjects": [
+   "PlasmaGun_Decimated"
+  ],
+  "materials": [
+   "M_Rocket Launcher"
+  ],
+  "triangles": 4874,
+  "subMeshes": 1,
+  "vertices": 6314,
+  "textures": {
+   "baseColor": "Space_Gun_RocketLauncher_guns_AlbedoTransparency",
+   "normal": "Space_Gun_RocketLauncher_guns_Normal",
+   "metallicGloss": "Space_Gun_RocketLauncher_guns_MetallicSmoothness"
+  },
+  "sizeKB": 332.0,
+  "name": "等离子枪",
+  "nameEn": "Plasma",
+  "character": "工程师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "eng-taser",
+  "model": "models/zombie-survivors/weapons/eng-taser.glb",
+  "bundle": "gameplayerengineer",
+  "sourceObjects": [
+   "Taser_Decimated"
+  ],
+  "materials": [
+   "TeslaPistol_base",
+   "TeslaPistol_glass"
+  ],
+  "triangles": 9868,
+  "subMeshes": 5,
+  "vertices": 8282,
+  "textures": {
+   "baseColor": "TeslaPistol_base_AlbedoTransparency",
+   "normal": "TeslaPistol_base_Normal",
+   "metallicGloss": "TeslaPistol_base_MetallicSmoothness"
+  },
+  "sizeKB": 517.0,
+  "name": "电击枪",
+  "nameEn": "Taser",
+  "character": "工程师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "eng-tesla",
+  "model": "models/zombie-survivors/weapons/eng-tesla.glb",
+  "bundle": "gameplayerengineer",
+  "sourceObjects": [
+   "Tesla_Decimated"
+  ],
+  "materials": [
+   "tesla_rifle"
+  ],
+  "triangles": 4234,
+  "subMeshes": 1,
+  "vertices": 6120,
+  "textures": {
+   "baseColor": "Tesla_rifle_tesla_rifle_AlbedoTransparency",
+   "normal": "Tesla_rifle_tesla_rifle_Normal",
+   "metallicGloss": "Tesla_rifle_tesla_rifle_SpecularSmoothness",
+   "occlusion": "Tesla_rifle_tesla_rifle_Occlusion"
+  },
+  "sizeKB": 361.2,
+  "name": "特斯拉枪",
+  "nameEn": "Tesla",
+  "character": "工程师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ },
+ {
+  "slug": "eng-laser",
+  "model": "models/zombie-survivors/weapons/eng-laser.glb",
+  "bundle": "gameplayerengineer",
+  "sourceObjects": [
+   "Model"
+  ],
+  "materials": [
+   "Sci-Fi Rifle"
+  ],
+  "triangles": 1046,
+  "subMeshes": 1,
+  "vertices": 990,
+  "textures": {
+   "baseColor": "Sci-Fi Rifle_BaseColor",
+   "normal": "Sci-Fi Rifle_Normal",
+   "metallicGloss": "Sci-Fi Rifle_MetallicSmoothness",
+   "occlusion": "Sci-Fi Rifle_AmbientOcclusion"
+  },
+  "sizeKB": 161.8,
+  "name": "激光枪",
+  "nameEn": "Laser",
+  "character": "工程师",
+  "category": "",
+  "from": "extracted",
+  "note": ""
+ }
+]

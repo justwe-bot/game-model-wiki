@@ -6,12 +6,14 @@
   "generatedBy": "scripts/build_yazs_models_index.py",
   "sources": {
     "weapons": "games/zombie-survivors/weapons.json",
+    "weaponModels": "games/zombie-survivors/weapon-models.json",
     "sounds": "games/zombie-survivors/catalog.json",
     "props": "games/zombie-survivors/props.json"
   },
   "notes": {
-    "structure": "把原先分散的 weapons.json（武器与描述）、catalog.json（音效）与 props.json（场景道具）合并成 人物 / 怪物 / 武器 / 场景道具 四个维度：每个武器条目直接带上它的射击、换弹、技能音效与命中特效。",
-    "threeDimensional": "本分类目前只有场景道具的三维模型（models/zombie-survivors/*.glb）。人物、怪物与武器没有三维模型，条目内聚合的是官方名称、说明、音效与 2D 命中特效贴图。",
+    "structure": "把原先分散的 weapons.json（武器与描述）、catalog.json（音效）与 props.json（场景道具）合并成 人物 / 怪物 / 武器 / 场景道具 四个维度：每个武器条目直接带上它的射击、换弹、技能音效、命中特效与三维模型。",
+    "weaponModels": "武器模型由 scripts/extract_yazs_weapon_models.py 从各幸存者的 AssetBundle 中提取：36 把武器各有独立 GLB，9 把只改弹药或挥砍特效的武器共用同一模型（见条目的 sharedWith）。",
+    "threeDimensional": "武器与场景道具有三维模型；人物与怪物还没有，条目内聚合的是官方名称、说明、音效与 2D 命中特效贴图。",
     "sounds": "音效明细（音频文件、时长、采样率）仍在 games/zombie-survivors/catalog.json，本文件按 slug 引用，避免重复维护。"
   },
   "counts": {
@@ -21,6 +23,8 @@
     "bosses": 5,
     "weapons": 45,
     "weaponTypes": 9,
+    "weaponModels": 45,
+    "weaponModelFiles": 36,
     "props": 242,
     "soundEntries": 471,
     "soundClips": 884,
@@ -40,7 +44,7 @@
           "name": "工程师",
           "nameEn": "Engineer",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "爆能枪",
             "激光枪",
@@ -93,7 +97,7 @@
           "name": "女猎手",
           "nameEn": "Huntress",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "弓",
             "爆炸箭",
@@ -141,7 +145,7 @@
           "name": "机械师",
           "nameEn": "Mechanic",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "链锯",
             "骑兵枪",
@@ -207,7 +211,7 @@
           "name": "医生",
           "nameEn": "Medic",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "解毒瓶",
             "冰冻瓶",
@@ -259,7 +263,7 @@
           "name": "忍者",
           "nameEn": "Ninja",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "武士刀",
             "武士刀横扫",
@@ -308,7 +312,7 @@
           "name": "纵火者",
           "nameEn": "Pyro",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "回旋斧",
             "喷灯",
@@ -364,7 +368,7 @@
           "name": "游侠",
           "nameEn": "Ranger",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "刺网弩",
             "弩",
@@ -429,7 +433,7 @@
           "name": "SWAT",
           "nameEn": "SWAT",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "突击步枪",
             "榴弹发射器",
@@ -477,7 +481,7 @@
           "name": "坦克",
           "nameEn": "Tank",
           "model": null,
-          "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+          "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
           "weapons": [
             "转轮机枪",
             "泵动式霰弹枪",
@@ -535,7 +539,7 @@
               "name": "狂战士",
               "nameEn": "狂战士",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "berserker"
               ],
@@ -552,7 +556,7 @@
               "name": "爆裂怪",
               "nameEn": "爆裂怪",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "blisterploder-bullet-land",
                 "blisterploder-death",
@@ -571,7 +575,7 @@
               "name": "沙虫",
               "nameEn": "沙虫",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "desert-worm-appear",
                 "desert-worm-attack",
@@ -590,7 +594,7 @@
               "name": "胖木乃伊",
               "nameEn": "胖木乃伊",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "fat-mummy-spawn-beetles",
                 "fat-mummy-stomp",
@@ -609,7 +613,7 @@
               "name": "女性僵尸",
               "nameEn": "女性僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "female-scream",
                 "female-zombie-hit"
@@ -627,7 +631,7 @@
               "name": "重装巨兽",
               "nameEn": "重装巨兽",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "juggernaut-bash-hit",
                 "juggernaut-bash-warning",
@@ -650,7 +654,7 @@
               "name": "变异体",
               "nameEn": "变异体",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "mutant-hit"
               ],
@@ -667,7 +671,7 @@
               "name": "灵能者",
               "nameEn": "灵能者",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "psion-line-warning",
                 "psion-line",
@@ -690,7 +694,7 @@
               "name": "亡魂",
               "nameEn": "亡魂",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "revenant-barrage-warning",
                 "revenant-close-attack",
@@ -711,7 +715,7 @@
               "name": "奔跑者",
               "nameEn": "奔跑者",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "runner-run"
               ],
@@ -728,7 +732,7 @@
               "name": "尖啸者",
               "nameEn": "尖啸者",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "screamer-scream"
               ],
@@ -745,7 +749,7 @@
               "name": "蜘蛛",
               "nameEn": "蜘蛛",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "spider-hit"
               ],
@@ -762,7 +766,7 @@
               "name": "喷吐者",
               "nameEn": "喷吐者",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "spitter-vomit"
               ],
@@ -779,7 +783,7 @@
               "name": "虚拟单位",
               "nameEn": "虚拟单位",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "vrer-death",
                 "vrer-objective-block",
@@ -798,7 +802,7 @@
               "name": "虚拟无人机",
               "nameEn": "虚拟无人机",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "vrer-drone-attack",
                 "vrer-drone-attack-start",
@@ -817,7 +821,7 @@
               "name": "全息单位",
               "nameEn": "全息单位",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "vrer-hologram-hit",
                 "vrer-hologram-kill"
@@ -835,7 +839,7 @@
               "name": "狼人",
               "nameEn": "狼人",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "werewulf-walk",
                 "werewulf-death",
@@ -856,7 +860,7 @@
               "name": "城市僵尸",
               "nameEn": "城市僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "urban-zombie-punch",
                 "urban-zombie-charge",
@@ -877,7 +881,7 @@
               "name": "建筑工僵尸",
               "nameEn": "建筑工僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "builder-melee",
                 "builder-throw"
@@ -895,7 +899,7 @@
               "name": "胖僵尸",
               "nameEn": "胖僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "fatman-death",
                 "fatman-explosion",
@@ -915,7 +919,7 @@
               "name": "消防员僵尸",
               "nameEn": "消防员僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "firefighter-explosion",
                 "firefighter-spray",
@@ -935,7 +939,7 @@
               "name": "巨型僵尸",
               "nameEn": "巨型僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "large-zombie-death",
                 "large-zombie-windup",
@@ -954,7 +958,7 @@
               "name": "电锯男",
               "nameEn": "电锯男",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "sawman-dash",
                 "sawman-death",
@@ -976,7 +980,7 @@
               "name": "孵育者",
               "nameEn": "孵育者",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "spawner-melee",
                 "spawner-spawn",
@@ -998,7 +1002,7 @@
               "name": "工人僵尸",
               "nameEn": "工人僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "worker-zombie-death",
                 "worker-zombie-hammer-hit",
@@ -1018,7 +1022,7 @@
               "name": "黏块",
               "nameEn": "黏块",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "blob-hit"
               ],
@@ -1035,7 +1039,7 @@
               "name": "女巫",
               "nameEn": "女巫",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "witch-death"
               ],
@@ -1052,7 +1056,7 @@
               "name": "普通僵尸",
               "nameEn": "普通僵尸",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "zombie-hit"
               ],
@@ -1075,7 +1079,7 @@
               "name": "一号头目",
               "nameEn": "一号头目",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "boss01-angry",
                 "boss01-charge-run",
@@ -1102,7 +1106,7 @@
               "name": "二号头目",
               "nameEn": "二号头目",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "boss02-angry",
                 "boss02-enter-ground",
@@ -1133,7 +1137,7 @@
               "name": "三号头目",
               "nameEn": "三号头目",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "boss03-angry",
                 "boss03-charge-run",
@@ -1170,7 +1174,7 @@
               "name": "四号头目",
               "nameEn": "四号头目",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "boss04-angry-knockdown",
                 "boss04-attack-wave",
@@ -1201,7 +1205,7 @@
               "name": "五号头目",
               "nameEn": "五号头目",
               "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "modelNote": "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。",
               "soundSlugs": [
                 "boss05-bullet-hell-end",
                 "boss05-bullet-hell-loop",
@@ -1238,7 +1242,7 @@
       "slug": "weapons",
       "name": "武器模型",
       "nameEn": "Weapons",
-      "detail": "45 把武器按类型分成 9 组，每组内是武器本体、音效与命中特效",
+      "detail": "45 把武器按类型分成 9 组，每组内是武器本体模型、音效与命中特效",
       "groups": [
         {
           "slug": "shotgun",
@@ -1257,8 +1261,27 @@
               "characterSlug": "tank",
               "summary": "有人说它慢，你却说这叫有条不紊。最适合中近距离作战",
               "summaryEn": "Some call it slow, you call it methodical. Best at close to medium range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/tank-shotgun.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 3137,
+                "vertices": 6522,
+                "materials": [
+                  "shotgun4_diffuse"
+                ],
+                "textures": {
+                  "baseColor": "shotgun4_diffuse",
+                  "normal": "shotgun4_normal",
+                  "metallicGloss": "shotgun4_MetallicSmoothness",
+                  "occlusion": "shotgun4_AmbientOcclusion"
+                },
+                "sizeKB": 269.5,
+                "sourceObjects": [
+                  "Shotgun_Decimated"
+                ],
+                "bundle": "gameplayertank",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1310,8 +1333,27 @@
               "characterSlug": "tank",
               "summary": "发射强力鹿弹，直到枪管通红",
               "summaryEn": "Fire powerful buckshots as the barrel glows hot",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/tank-doubleshotgun.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 5762,
+                "vertices": 12218,
+                "materials": [
+                  "shotgun6_diffuse"
+                ],
+                "textures": {
+                  "baseColor": "shotgun6_diffuse",
+                  "normal": "shotgun6_normal",
+                  "metallicGloss": "shotgun6_MetallicSmoothness",
+                  "occlusion": "shotgun6_AmbientOcclusion"
+                },
+                "sizeKB": 383.2,
+                "sourceObjects": [
+                  "Double_Shotgun_Decimated"
+                ],
+                "bundle": "gameplayertank",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1363,8 +1405,27 @@
               "characterSlug": "tank",
               "summary": "如果射击范围内没有盲点，那么低精度就不是问题",
               "summaryEn": "Low accuracy is not an issue if no blind spots exist in your shooting area",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/tank-supershotgun.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 9994,
+                "vertices": 12241,
+                "materials": [
+                  "SHG_v1"
+                ],
+                "textures": {
+                  "baseColor": "SHG_v1",
+                  "normal": "SHG_v1_NM",
+                  "metallicGloss": "SHG_v1_SG",
+                  "occlusion": "SHG_v1_AO"
+                },
+                "sizeKB": 672.3,
+                "sourceObjects": [
+                  "Super_Shotgun_Decimated"
+                ],
+                "bundle": "gameplayertank",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1423,8 +1484,30 @@
               "characterSlug": "swat",
               "summary": "即使世界终结，它也会始终伴你左右。近距离射击伤害最高",
               "summaryEn": "He was always there for you, even when the world ended. Most effective at close range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/swat-pistol.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 8425,
+                "vertices": 11245,
+                "materials": [
+                  "M_DesertEagle_Mag",
+                  "M_DesertEagle_Trigger",
+                  "M_DesertEagle_Sight",
+                  "M_DesertEagle_Suppressor",
+                  "M_DesertEagle"
+                ],
+                "textures": {
+                  "baseColor": "Deagle_M_DesertEagle_Mag_AlbedoTransparency",
+                  "normal": "Deagle_M_DesertEagle_Mag_Normal",
+                  "metallicGloss": "Deagle_M_DesertEagle_Mag_MetallicSmoothness"
+                },
+                "sizeKB": 726.6,
+                "sourceObjects": [
+                  "Deagle_Decimated"
+                ],
+                "bundle": "gameplayerswat",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1476,8 +1559,27 @@
               "characterSlug": "medic",
               "summary": "随身携带的小型武器，专门用于应对僵尸危机等突发状况",
               "summaryEn": "A small sidearm kept in case of emergencies such as zombie pandemics",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/medic-handgun.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 2452,
+                "vertices": 2854,
+                "materials": [
+                  "Material.001"
+                ],
+                "textures": {
+                  "baseColor": "makarov_diffuse",
+                  "normal": "makarov_normal",
+                  "metallicGloss": "makarov_specular",
+                  "occlusion": "makarov_ao"
+                },
+                "sizeKB": 330.6,
+                "sourceObjects": [
+                  "Handgun_Decimated"
+                ],
+                "bundle": "gameplayermedic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1529,8 +1631,28 @@
               "characterSlug": "medic",
               "summary": "为那些未能及时接种疫苗的家伙注射疫苗。近距离注射会造成额外伤害",
               "summaryEn": "Vaccinate the ones that didn't get the vaccine in time. Bonus damage for direct injection",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/medic-syringethrow.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 3524,
+                "vertices": 3069,
+                "materials": [
+                  "Syringe_v1",
+                  "Mat_Injector_001_Colored"
+                ],
+                "textures": {
+                  "baseColor": "Syringe_v1",
+                  "normal": "Syringe_v1_NM",
+                  "metallicGloss": "Syringe_v1_SG",
+                  "occlusion": "Syringe_v1_AO"
+                },
+                "sizeKB": 547.1,
+                "sourceObjects": [
+                  "Syringe_Gun"
+                ],
+                "bundle": "gameplayermedic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Syringe_Hit_01",
                 "particleTextures": [
@@ -1589,8 +1711,27 @@
               "characterSlug": "swat",
               "summary": "久经沙场的高效利器，助你在尸群中杀出一条血路",
               "summaryEn": "Plow through the horde with this proven and effective tool",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/swat-rifle.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 13344,
+                "vertices": 15442,
+                "materials": [
+                  "19 - Default"
+                ],
+                "textures": {
+                  "baseColor": "Woman_05_Weapon_Albedo_01",
+                  "normal": "Woman_05_Weapon_Normals",
+                  "metallicGloss": "Woman_05_Weapon_Metallic",
+                  "occlusion": "Woman_05_Weapon_Ao"
+                },
+                "sizeKB": 980.8,
+                "sourceObjects": [
+                  "Rifle_Decimated"
+                ],
+                "bundle": "gameplayerswat",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1642,8 +1783,27 @@
               "characterSlug": "swat",
               "summary": "通过可穿透尸群的强力射击消灭关键目标。远距离会造成额外伤害",
               "summaryEn": "Eliminate key targets with powerful, horde-piercing shots. Bonus damage at long distance",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/swat-sniper.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 14467,
+                "vertices": 13613,
+                "materials": [
+                  "Sniper_Rifle"
+                ],
+                "textures": {
+                  "baseColor": "Sniper_Rifle_Albedo",
+                  "normal": "Sniper_Rifle_Normals",
+                  "metallicGloss": "Sniper_Rifle_Metallic",
+                  "occlusion": "Sniper_Rifle_Ao"
+                },
+                "sizeKB": 760.2,
+                "sourceObjects": [
+                  "Sniper_Rifle_Decimated"
+                ],
+                "bundle": "gameplayerswat",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1695,8 +1855,26 @@
               "characterSlug": "swat",
               "summary": "抄起可靠的冲锋枪，向尸群疯狂扫射",
               "summaryEn": "Spray & pray the zombies with your trusty submachine gun",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/swat-uzi.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 1494,
+                "vertices": 2126,
+                "materials": [
+                  "UziMat"
+                ],
+                "textures": {
+                  "baseColor": "Uzi_D",
+                  "normal": "Uzi_N",
+                  "metallicGloss": "Uzi_M"
+                },
+                "sizeKB": 186.2,
+                "sourceObjects": [
+                  "Uzi_Decimated"
+                ],
+                "bundle": "gameplayerswat",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1748,8 +1926,30 @@
               "characterSlug": "medic",
               "summary": "你手头最顶级的工具，专治那些最棘手的患者",
               "summaryEn": "The best tool in your arsenal against the most troublesome patients in your care",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/medic-syringerifle.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 12188,
+                "vertices": 12202,
+                "materials": [
+                  "PP_v1",
+                  "Mat_Injector_001_Colored1",
+                  "Gun_Silencer_v1",
+                  "Vertical_Grip_v1"
+                ],
+                "textures": {
+                  "baseColor": "PP_v1",
+                  "normal": "PP_v1_NM",
+                  "metallicGloss": "SWA_v1_SG",
+                  "occlusion": "PP_v1_AO"
+                },
+                "sizeKB": 939.1,
+                "sourceObjects": [
+                  "SyringeRifle"
+                ],
+                "bundle": "gameplayermedic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Syringe_Hit_01",
                 "particleTextures": [
@@ -1808,8 +2008,29 @@
               "characterSlug": "tank",
               "summary": "对坦克来说算是迷你，对你的敌人来说可一点也不迷你。伤害会随距离衰减。",
               "summaryEn": "Mini by the Tank's standards, but not to your enemies. Damage falls off with distance.",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/tank-minigun.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 918,
+                "vertices": 1226,
+                "materials": [
+                  "tx01",
+                  "tx02",
+                  "tx02"
+                ],
+                "textures": {
+                  "baseColor": "tx01",
+                  "normal": "tx01_n",
+                  "occlusion": "tx01_o"
+                },
+                "sizeKB": 387.0,
+                "sourceObjects": [
+                  "Gun",
+                  "Barrell"
+                ],
+                "bundle": "gameplayertank",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1863,8 +2084,27 @@
               "characterSlug": "tank",
               "summary": "把尸群轰上天，炸个粉碎",
               "summaryEn": "Send the horde to the moon, in pieces",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/tank-rocket.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 8913,
+                "vertices": 9544,
+                "materials": [
+                  "ScifiMissileLauncherMSL889Black"
+                ],
+                "textures": {
+                  "baseColor": "ScifiMissileLauncherMSL889BlackAlbedo",
+                  "normal": "ScifiMissileLauncherMSL889Normal",
+                  "metallicGloss": "ScifiMissileLauncherMSL889_MetallicSmoothness",
+                  "occlusion": "ScifiMissileLauncherMSL889_AmbientOcclusion"
+                },
+                "sizeKB": 477.0,
+                "sourceObjects": [
+                  "Rocket_Launcher_Decimated"
+                ],
+                "bundle": "gameplayertank",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1916,8 +2156,27 @@
               "characterSlug": "swat",
               "summary": "玩腻了小型弹药，于是你换上大型高爆弹药",
               "summaryEn": "Sometimes you get bored firing small projectiles, so you switch to large and exploding ones instead",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/swat-grenadelauncher.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 10828,
+                "vertices": 12917,
+                "materials": [
+                  "GWL_v1"
+                ],
+                "textures": {
+                  "baseColor": "GWL_v1",
+                  "normal": "GWL_v1_NM",
+                  "metallicGloss": "GWL_v1_SG",
+                  "occlusion": "GWL_v1_AO"
+                },
+                "sizeKB": 656.0,
+                "sourceObjects": [
+                  "GL_Decimated"
+                ],
+                "bundle": "gameplayerswat",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -1969,8 +2228,26 @@
               "characterSlug": "mechanic",
               "summary": "发射内部灌满了极速膨胀液氮的轻型榴弹",
               "summaryEn": "Fires a lightweight grenade filled to the brim with rapidly expanding liquid nitrogen",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/mechanic-nitrogun.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 17235,
+                "vertices": 15385,
+                "materials": [
+                  "Sci_fi_Plasma_Rifle_pt1_MAT",
+                  "Sci_fi_Plasma_Rifle_pt2_MAT",
+                  "Sci_fi_Plasma_Rifle_pt1_MAT1"
+                ],
+                "textures": {
+                  "baseColor": "Sci-fi Plasma Rifle pt1_Albedo"
+                },
+                "sizeKB": 601.0,
+                "sourceObjects": [
+                  "NitroGun"
+                ],
+                "bundle": "gameplayermechanic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -2030,8 +2307,27 @@
               "characterSlug": "huntress",
               "summary": "女猎手最青睐的武器。虽然传统，但在行家手中却非常致命",
               "summaryEn": "Huntress's preferred weapon. Classic yet deadly in good hands",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 1796,
+                "vertices": 1438,
+                "materials": [
+                  "MI_Weapons"
+                ],
+                "textures": {
+                  "baseColor": "T_Weapons_BC",
+                  "normal": "T_Weapons_N",
+                  "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+                  "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+                },
+                "sizeKB": 307.1,
+                "sourceObjects": [
+                  "BowMain"
+                ],
+                "bundle": "gameplayerhuntress",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01",
                 "particleTextures": [
@@ -2082,8 +2378,27 @@
               "characterSlug": "huntress",
               "summary": "你的弓会射出加装了感应炸弹的箭",
               "summaryEn": "Your bow shoots arrows equipped with proximity sensor bombs",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+              "modelNote": "爆炸箭与弓共用弓身网格，差别在箭矢材质与命中特效。",
+              "modelStats": {
+                "triangles": 1796,
+                "vertices": 1438,
+                "materials": [
+                  "MI_Weapons"
+                ],
+                "textures": {
+                  "baseColor": "T_Weapons_BC",
+                  "normal": "T_Weapons_N",
+                  "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+                  "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+                },
+                "sizeKB": 307.1,
+                "sourceObjects": [
+                  "BowMain"
+                ],
+                "bundle": "gameplayerhuntress",
+                "sharedWith": "huntress-bow"
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01",
                 "particleTextures": [
@@ -2134,8 +2449,27 @@
               "characterSlug": "huntress",
               "summary": "女猎手在发射前会将箭矢浸入冷冻化学物质中",
               "summaryEn": "Huntress dips arrows in cryogenic chemicals before shooting",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+              "modelNote": "冰冻箭与弓共用弓身网格，差别在箭矢材质与命中特效。",
+              "modelStats": {
+                "triangles": 1796,
+                "vertices": 1438,
+                "materials": [
+                  "MI_Weapons"
+                ],
+                "textures": {
+                  "baseColor": "T_Weapons_BC",
+                  "normal": "T_Weapons_N",
+                  "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+                  "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+                },
+                "sizeKB": 307.1,
+                "sourceObjects": [
+                  "BowMain"
+                ],
+                "bundle": "gameplayerhuntress",
+                "sharedWith": "huntress-bow"
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01_Blue",
                 "particleTextures": [
@@ -2188,8 +2522,27 @@
               "characterSlug": "huntress",
               "summary": "一次只射一支箭怎么够",
               "summaryEn": "In case firing one arrow at a time wasn't enough",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+              "modelNote": "多重发射与弓共用同一张弓身网格，差别在箭矢数量与弹道。",
+              "modelStats": {
+                "triangles": 1796,
+                "vertices": 1438,
+                "materials": [
+                  "MI_Weapons"
+                ],
+                "textures": {
+                  "baseColor": "T_Weapons_BC",
+                  "normal": "T_Weapons_N",
+                  "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+                  "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+                },
+                "sizeKB": 307.1,
+                "sourceObjects": [
+                  "BowMain"
+                ],
+                "bundle": "gameplayerhuntress",
+                "sharedWith": "huntress-bow"
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01",
                 "particleTextures": [
@@ -2239,8 +2592,27 @@
               "characterSlug": "huntress",
               "summary": "女猎手在发射前会将箭矢浸入麻痹毒素中",
               "summaryEn": "Huntress dips arrows in paralysing poison before firing them",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/huntress-bow.glb",
+              "modelNote": "毒箭与弓共用弓身网格，差别在箭矢材质与命中特效。",
+              "modelStats": {
+                "triangles": 1796,
+                "vertices": 1438,
+                "materials": [
+                  "MI_Weapons"
+                ],
+                "textures": {
+                  "baseColor": "T_Weapons_BC",
+                  "normal": "T_Weapons_N",
+                  "metallicGloss": "T_Weapons_ORM_MetallicSmoothness",
+                  "occlusion": "T_Weapons_ORM_AmbientOcclusion"
+                },
+                "sizeKB": 307.1,
+                "sourceObjects": [
+                  "BowMain"
+                ],
+                "bundle": "gameplayerhuntress",
+                "sharedWith": "huntress-bow"
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01_Toxic",
                 "particleTextures": [
@@ -2293,8 +2665,27 @@
               "characterSlug": "ranger",
               "summary": "游侠的首选武器。发射单发强力弩箭，对目标施加“标记”状态。动物攻击被标记的目标时，会在更大范围内造成额外伤害。",
               "summaryEn": "Ranger's preferred weapon. Fires single, powerful bolts that apply Marked status. Animal attacks on Marked targets deal bonus damage in larger area",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ranger-crossbow.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 12708,
+                "vertices": 11257,
+                "materials": [
+                  "Crossbow"
+                ],
+                "textures": {
+                  "baseColor": "Low_DefaultMaterial_AlbedoTransparency",
+                  "normal": "Low_DefaultMaterial_Normal",
+                  "metallicGloss": "Low_DefaultMaterial_MetallicSmoothness",
+                  "occlusion": "Low_DefaultMaterial_Occlusion"
+                },
+                "sizeKB": 667.3,
+                "sourceObjects": [
+                  "Crossbow"
+                ],
+                "bundle": "gameplayerranger",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01",
                 "particleTextures": [
@@ -2347,8 +2738,28 @@
               "characterSlug": "ranger",
               "summary": "快速连续发射多支弩箭，并会自动切换目标。可标记更多目标，但在远距离时会损失部分潜在伤害",
               "summaryEn": "Rapidly fires multiple bolts in succession, switching targets when possible. Marks more targets but loses a bit of damage potential on long range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ranger-crossbowrepeater.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 11536,
+                "vertices": 8954,
+                "materials": [
+                  "Crossbow",
+                  "Crossbow_RDS"
+                ],
+                "textures": {
+                  "baseColor": "Crossbow_Alb",
+                  "normal": "Crossbow_N",
+                  "metallicGloss": "Crossbow_Mtl",
+                  "occlusion": "Crossbow_AO"
+                },
+                "sizeKB": 918.2,
+                "sourceObjects": [
+                  "Crossbow_Repeater"
+                ],
+                "bundle": "gameplayerranger",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01",
                 "particleTextures": [
@@ -2401,8 +2812,26 @@
               "characterSlug": "ranger",
               "summary": "点燃连弩的弩箭，进一步提升其效率。其射弹可穿透、标记并同时灼烧多个目标",
               "summaryEn": "Ignites the Repeater Crossbow bolts, increasing their efficiency even further. Its projectiles penetrate, mark, and can burn multiple targets at a time",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ranger-crossbowfirebrand.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 10037,
+                "vertices": 9540,
+                "materials": [
+                  "defaultMat"
+                ],
+                "textures": {
+                  "baseColor": "Albedo",
+                  "normal": "Normal",
+                  "metallicGloss": "Metalness"
+                },
+                "sizeKB": 610.2,
+                "sourceObjects": [
+                  "Crossbow_Firebrand"
+                ],
+                "bundle": "gameplayerranger",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Arrow_Hit_01",
                 "particleTextures": [
@@ -2456,8 +2885,26 @@
               "characterSlug": "ranger",
               "summary": "发射单发闪电弩箭，钉在敌人身上，引发放电并施加标记。远距离造成额外伤害",
               "summaryEn": "Fires single bolts of lightning that stick to enemies, causing electric discharges and marking their targets. Inflicts bonus damage at long range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ranger-crossbowshockspike.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 9492,
+                "vertices": 11938,
+                "materials": [
+                  "CrossbowMaterial_BlueVar"
+                ],
+                "textures": {
+                  "baseColor": "Crossbow_AlbedoTransparency",
+                  "normal": "Crossbow_Normal",
+                  "metallicGloss": "Crossbow_MetallicSmoothness"
+                },
+                "sizeKB": 476.0,
+                "sourceObjects": [
+                  "Crossbow_Shockspike"
+                ],
+                "bundle": "gameplayerranger",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Shiur_Hit_01",
                 "particleTextures": [
@@ -2511,8 +2958,26 @@
               "characterSlug": "ranger",
               "summary": "呈锥形发射两发弩箭，并在弩箭之间展开一道铁丝网。铁丝网会造成切割伤害并标记命中的目标，并且会在近距离造成额外伤害",
               "summaryEn": "Fires two bolts in a cone with barbed wire stretched between them. The wire slashes and marks hit targets and deals bonus damage at close range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ranger-crossbowbarber.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 9259,
+                "vertices": 7611,
+                "materials": [
+                  "DoubleCrossbow"
+                ],
+                "textures": {
+                  "baseColor": "DoubleCrossbow_Color",
+                  "normal": "DoubleCrossbow_NormalMap",
+                  "metallicGloss": "DoubleCrossbow_Metallic"
+                },
+                "sizeKB": 544.7,
+                "sourceObjects": [
+                  "Crossbow_Barber"
+                ],
+                "bundle": "gameplayerranger",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "CrossbowBarbed_Hit_01",
                 "particleTextures": [
@@ -2572,8 +3037,27 @@
               "characterSlug": "ninja",
               "summary": "致命的近战武器，配上更致命的武士",
               "summaryEn": "A deadly melee weapon in a hands of an even deadlier warrior",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 2575,
+                "vertices": 1721,
+                "materials": [
+                  "M_Katana_BC"
+                ],
+                "textures": {
+                  "baseColor": "Katana_BaseMap",
+                  "normal": "Katana_Normal",
+                  "metallicGloss": "Katana_MaskMap",
+                  "occlusion": "Katana_MaskMap"
+                },
+                "sizeKB": 185.8,
+                "sourceObjects": [
+                  "Katana_Decimated"
+                ],
+                "bundle": "gameplayerninja",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Katana_Hit_01",
                 "particleTextures": [
@@ -2624,8 +3108,27 @@
               "characterSlug": "ninja",
               "summary": "正如大师所言：刀势越大，杀伤越广",
               "summaryEn": "In the words of the wise Sensei: A wide sword cuts wide",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+              "modelNote": "横扫与武士刀共用刀身网格，差别在挥砍特效。",
+              "modelStats": {
+                "triangles": 2575,
+                "vertices": 1721,
+                "materials": [
+                  "M_Katana_BC"
+                ],
+                "textures": {
+                  "baseColor": "Katana_BaseMap",
+                  "normal": "Katana_Normal",
+                  "metallicGloss": "Katana_MaskMap",
+                  "occlusion": "Katana_MaskMap"
+                },
+                "sizeKB": 185.8,
+                "sourceObjects": [
+                  "Katana_Decimated"
+                ],
+                "bundle": "gameplayerninja",
+                "sharedWith": "ninja-katana"
+              },
               "vfx": {
                 "particle": "Katana_Hit_01",
                 "particleTextures": [
@@ -2676,8 +3179,27 @@
               "characterSlug": "ninja",
               "summary": "对单个敌人发动致命攻击，要么冻结其仍能活动的肉身，要么在其灵魂离开躯体时引发剧烈爆炸",
               "summaryEn": "Strike deadly on a single enemy, either freezing their still-living flesh or causing their soul to explode violently as it leaves their body",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+              "modelNote": "夺魂与武士刀共用刀身网格，差别在挥砍特效。",
+              "modelStats": {
+                "triangles": 2575,
+                "vertices": 1721,
+                "materials": [
+                  "M_Katana_BC"
+                ],
+                "textures": {
+                  "baseColor": "Katana_BaseMap",
+                  "normal": "Katana_Normal",
+                  "metallicGloss": "Katana_MaskMap",
+                  "occlusion": "Katana_MaskMap"
+                },
+                "sizeKB": 185.8,
+                "sourceObjects": [
+                  "Katana_Decimated"
+                ],
+                "bundle": "gameplayerninja",
+                "sharedWith": "ninja-katana"
+              },
               "vfx": {
                 "particle": "SuperSlash_Hit_01",
                 "particleTextures": [
@@ -2729,8 +3251,27 @@
               "characterSlug": "ninja",
               "summary": "遁入化境，出刀变幻莫测、快如闪电",
               "summaryEn": "Enter a state in which your cuts are unpredictable but blinding fast",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+              "modelNote": "千刃与武士刀共用刀身网格，差别在挥砍特效。",
+              "modelStats": {
+                "triangles": 2575,
+                "vertices": 1721,
+                "materials": [
+                  "M_Katana_BC"
+                ],
+                "textures": {
+                  "baseColor": "Katana_BaseMap",
+                  "normal": "Katana_Normal",
+                  "metallicGloss": "Katana_MaskMap",
+                  "occlusion": "Katana_MaskMap"
+                },
+                "sizeKB": 185.8,
+                "sourceObjects": [
+                  "Katana_Decimated"
+                ],
+                "bundle": "gameplayerninja",
+                "sharedWith": "ninja-katana"
+              },
               "vfx": {
                 "particle": "Katana_Hit_01",
                 "particleTextures": [
@@ -2782,8 +3323,27 @@
               "characterSlug": "ninja",
               "summary": "压缩周围空气，射出锐利风刃。飞行距离越远，造成的伤害就越高",
               "summaryEn": "Condense the surrounding air to launch razor sharp projectiles that deal higher damage the further it travels",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/ninja-katana.glb",
+              "modelNote": "裂风与武士刀共用刀身网格，差别在挥砍特效。",
+              "modelStats": {
+                "triangles": 2575,
+                "vertices": 1721,
+                "materials": [
+                  "M_Katana_BC"
+                ],
+                "textures": {
+                  "baseColor": "Katana_BaseMap",
+                  "normal": "Katana_Normal",
+                  "metallicGloss": "Katana_MaskMap",
+                  "occlusion": "Katana_MaskMap"
+                },
+                "sizeKB": 185.8,
+                "sourceObjects": [
+                  "Katana_Decimated"
+                ],
+                "bundle": "gameplayerninja",
+                "sharedWith": "ninja-katana"
+              },
               "vfx": {
                 "particle": "SuperSlash_Hit_01",
                 "particleTextures": [
@@ -2834,8 +3394,27 @@
               "characterSlug": "mechanic",
               "summary": "撕碎一切。贴身距离会造成额外伤害",
               "summaryEn": "Rip and tear. Bonus damage at direct range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/mechanic-chainsaw.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 9352,
+                "vertices": 9853,
+                "materials": [
+                  "Chainsaw"
+                ],
+                "textures": {
+                  "baseColor": "ChainsawLowSubstance_Chainsaw_AlbedoTransparency",
+                  "normal": "ChainsawLowSubstance_Chainsaw_Normal",
+                  "metallicGloss": "ChainsawLowSubstance_Chainsaw_MetallicSmoothness",
+                  "occlusion": "ChainsawLowSubstance_Chainsaw_Occlusion"
+                },
+                "sizeKB": 605.1,
+                "sourceObjects": [
+                  "Weapon_Mechanic_Chainsaw"
+                ],
+                "bundle": "gameplayermechanic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -2890,8 +3469,29 @@
               "characterSlug": "mechanic",
               "summary": "致命的发明，既能近距离手刃敌人，也能远距离射杀敌人",
               "summaryEn": "Deadly invention which either cuts enemies up close or shoots them down at a distance",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/mechanic-lancer.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 10438,
+                "vertices": 15461,
+                "materials": [
+                  "Sci-fi Rifle 1 Ammo",
+                  "Sci-fi Rifle 1",
+                  "chain_col"
+                ],
+                "textures": {
+                  "baseColor": "Sci-fi Rifle Ammo Albedo",
+                  "normal": "Sci-fi Rifle Ammo Normal",
+                  "metallicGloss": "Sci-fi Rifle Ammo MetallicSmoothness",
+                  "occlusion": "Sci-fi Rifle Ammo Occlusion"
+                },
+                "sizeKB": 854.5,
+                "sourceObjects": [
+                  "Lancer"
+                ],
+                "bundle": "gameplayermechanic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -2944,8 +3544,27 @@
               "characterSlug": "mechanic",
               "summary": "机械师的最佳搭档。既能近战，也能用作远程武器。命中时机械师与目标的距离越远，造成的伤害就越高",
               "summaryEn": "Mechanic's best friend. Works in close combat and as a long-range weapon. Bonus damage the further the Mechanic is when it hits",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/mechanic-keyblade.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 1428,
+                "vertices": 1762,
+                "materials": [
+                  "M_Zaw_09"
+                ],
+                "textures": {
+                  "baseColor": "T_Zaw_09_BC",
+                  "normal": "T_Zaw_09_N",
+                  "metallicGloss": "T_Zaw_09_MT_S",
+                  "occlusion": "T_Zaw_09_AO"
+                },
+                "sizeKB": 354.0,
+                "sourceObjects": [
+                  "Wrench"
+                ],
+                "bundle": "gameplayermechanic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "KeyBlade_Hit_01",
                 "particleTextures": [
@@ -2997,8 +3616,28 @@
               "characterSlug": "mechanic",
               "summary": "一种以扳手为弹药的武器，诠释了什么叫做疯狂",
               "summaryEn": "The definition of insanity in form of a weapon that uses spanners as ammunition",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/mechanic-chaosengine.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 11443,
+                "vertices": 12961,
+                "materials": [
+                  "Sci-fi Rocket Luncher upper",
+                  "Sci-fi Rocket Luncher lower"
+                ],
+                "textures": {
+                  "baseColor": "Sci-fi Rocket Launcher Upper_Albedo",
+                  "normal": "Sci-fi Rocket Launcher Upper_Normal",
+                  "metallicGloss": "Sci-fi Rocket Launcher Upper_MetallicSmoothness",
+                  "occlusion": "Sci-fi Rocket Launcher Upper_Occlusion"
+                },
+                "sizeKB": 939.4,
+                "sourceObjects": [
+                  "ChaosEngine"
+                ],
+                "bundle": "gameplayermechanic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "KeyBlade_Hit_01",
                 "particleTextures": [
@@ -3049,8 +3688,27 @@
               "characterSlug": "pyro",
               "summary": "连续投掷燃烧手斧，手斧会在一段时间后飞回。飞行距离越远，对僵尸造成的切割和灼烧伤害越高",
               "summaryEn": "Throw one flaming hatchet after another, which will return after a while, slashing and burning zombies the further it travels",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/pyro-axethrow.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 303,
+                "vertices": 293,
+                "materials": [
+                  "Axe_1"
+                ],
+                "textures": {
+                  "baseColor": "Axe_1_AlbedoTransparency",
+                  "normal": "Axe_1_Normal",
+                  "metallicGloss": "Axe_1_MetallicSmoothness",
+                  "occlusion": "Axe_1_AO"
+                },
+                "sizeKB": 207.2,
+                "sourceObjects": [
+                  "AxeThrow_Decimated"
+                ],
+                "bundle": "gameplayerpyro",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "ThrowingAxe_Hit_01",
                 "particleTextures": [
@@ -3101,8 +3759,27 @@
               "characterSlug": "pyro",
               "summary": "挥舞沉重的消防斧，在周身圆形范围内造成高额近战伤害。用斧刃命中时会造成额外伤害",
               "summaryEn": "Swing a heavy firefighter's axe in a circular area around you, dealing heavy melee damage. Bonus damage when hitting with blade",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/pyro-fireaxe.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 266,
+                "vertices": 221,
+                "materials": [
+                  "Specular_Fire_Axe"
+                ],
+                "textures": {
+                  "baseColor": "Fire_Diffuse",
+                  "normal": "Fire_Normal_OpenGL",
+                  "metallicGloss": "Fire_Specular_Gloss",
+                  "occlusion": "Fire_AO"
+                },
+                "sizeKB": 328.1,
+                "sourceObjects": [
+                  "FireAxe_Splash"
+                ],
+                "bundle": "gameplayerpyro",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Axe_Hit_01",
                 "particleTextures": [
@@ -3153,8 +3830,28 @@
               "characterSlug": "pyro",
               "summary": "蕴含地狱烈焰的强力近战武器。每次挥舞都能在巨大的圆形区域内杀伤敌人",
               "summaryEn": "A powerful melee weapon imbued with hellish flames that slashes enemies in a huge, circular area on every swing",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/pyro-infernax.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 3706,
+                "vertices": 3571,
+                "materials": [
+                  "Star_Axe",
+                  "Bones"
+                ],
+                "textures": {
+                  "baseColor": "Star_Axe_Albedo",
+                  "normal": "Star_Axe_Normal",
+                  "metallicGloss": "Star_Axe_Metallic",
+                  "occlusion": "Star_Axe_Ao"
+                },
+                "sizeKB": 745.4,
+                "sourceObjects": [
+                  "FireAxe_Infernax_Skull"
+                ],
+                "bundle": "gameplayerpyro",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Axe_Hit_01",
                 "particleTextures": [
@@ -3214,8 +3911,26 @@
               "characterSlug": "pyro",
               "summary": "实用的小工具，既能熔化金属物体，也能在末日来临时熔化僵尸肉。近距离会造成额外伤害",
               "summaryEn": "A fun little tool for melting metal objects and, in the event of an apocalypse, zombie flesh. Bonus damage at closer distances",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/pyro-blowtorch.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 2122,
+                "vertices": 1862,
+                "materials": [
+                  "Blowtorch_mat"
+                ],
+                "textures": {
+                  "baseColor": "Blowtorch_AlbedoTransparency",
+                  "normal": "Blowtorch_Normal",
+                  "metallicGloss": "Blowtorch_MetallicSmoothness"
+                },
+                "sizeKB": 303.6,
+                "sourceObjects": [
+                  "BlowTorch_Decimated"
+                ],
+                "bundle": "gameplayerpyro",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Nail_Hit_01",
                 "particleTextures": [
@@ -3267,8 +3982,27 @@
               "characterSlug": "pyro",
               "summary": "地狱级大规模杀伤性武器，是火焰兵的最佳搭档。中距离会造成额外伤害",
               "summaryEn": "A weapon of infernal mass destruction, and Pyro's best friend to boot. Bonus damage at medium range",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/pyro-flamethrower.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 12474,
+                "vertices": 12338,
+                "materials": [
+                  "flame"
+                ],
+                "textures": {
+                  "baseColor": "flame_lowflamethriwer_Albedo",
+                  "normal": "flame_lowflamethriwer_Normal",
+                  "metallicGloss": "flame_lowflamethriwer_Metallic",
+                  "occlusion": "flame_lowflamethriwer_Ao"
+                },
+                "sizeKB": 604.5,
+                "sourceObjects": [
+                  "FlameThrower_Decimated"
+                ],
+                "bundle": "gameplayerpyro",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Nail_Hit_01",
                 "particleTextures": [
@@ -3327,8 +4061,27 @@
               "characterSlug": "engineer",
               "summary": "发射蕴含纯粹能量的球体，命中后内爆，飞行距离越远，造成的伤害越高",
               "summaryEn": "Launch spheres of raw energy that implode on impact, dealing more damage the further they travel",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/eng-blaster.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 2331,
+                "vertices": 2827,
+                "materials": [
+                  "hellwailer",
+                  "fusion_core"
+                ],
+                "textures": {
+                  "baseColor": "hellwailer",
+                  "normal": "hellwailer_Normal",
+                  "metallicGloss": "hellwailer_spec"
+                },
+                "sizeKB": 183.2,
+                "sourceObjects": [
+                  "Blaster_Decimated"
+                ],
+                "bundle": "gameplayerengineer",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -3380,8 +4133,27 @@
               "characterSlug": "engineer",
               "summary": "想想激光笔，但是要致命一千倍",
               "summaryEn": "Think of a laser presentation pointer, but a thousand times deadlier",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/eng-laser.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 1046,
+                "vertices": 990,
+                "materials": [
+                  "Sci-Fi Rifle"
+                ],
+                "textures": {
+                  "baseColor": "Sci-Fi Rifle_BaseColor",
+                  "normal": "Sci-Fi Rifle_Normal",
+                  "metallicGloss": "Sci-Fi Rifle_MetallicSmoothness",
+                  "occlusion": "Sci-Fi Rifle_AmbientOcclusion"
+                },
+                "sizeKB": 161.8,
+                "sourceObjects": [
+                  "Model"
+                ],
+                "bundle": "gameplayerengineer",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -3437,8 +4209,26 @@
               "characterSlug": "engineer",
               "summary": "虽然特斯拉是位工程天才，但真正让所有僵尸大脑化为灰烬的，是工程师的等离子枪",
               "summaryEn": "Tesla may have been a genius engineer, but it is the Engineer's Plasma that really makes all the zombie brains fry to ashes",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/eng-plasma.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 4874,
+                "vertices": 6314,
+                "materials": [
+                  "M_Rocket Launcher"
+                ],
+                "textures": {
+                  "baseColor": "Space_Gun_RocketLauncher_guns_AlbedoTransparency",
+                  "normal": "Space_Gun_RocketLauncher_guns_Normal",
+                  "metallicGloss": "Space_Gun_RocketLauncher_guns_MetallicSmoothness"
+                },
+                "sizeKB": 332.0,
+                "sourceObjects": [
+                  "PlasmaGun_Decimated"
+                ],
+                "bundle": "gameplayerengineer",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -3493,8 +4283,27 @@
               "characterSlug": "engineer",
               "summary": "经过改装的自卫工具，专门用来“治疗”僵尸之灾。近距离会造成额外伤害",
               "summaryEn": "Self-defence tool, tweaked to \"cure\" the undead bane. Bonus damage up close",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/eng-taser.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 9868,
+                "vertices": 8282,
+                "materials": [
+                  "TeslaPistol_base",
+                  "TeslaPistol_glass"
+                ],
+                "textures": {
+                  "baseColor": "TeslaPistol_base_AlbedoTransparency",
+                  "normal": "TeslaPistol_base_Normal",
+                  "metallicGloss": "TeslaPistol_base_MetallicSmoothness"
+                },
+                "sizeKB": 517.0,
+                "sourceObjects": [
+                  "Taser_Decimated"
+                ],
+                "bundle": "gameplayerengineer",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -3546,8 +4355,27 @@
               "characterSlug": "engineer",
               "summary": "使用僵尸作为电源继电器，向有需要的地方输送电流",
               "summaryEn": "Supply electricity to the needy by using zombies as power relays",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/eng-tesla.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 4234,
+                "vertices": 6120,
+                "materials": [
+                  "tesla_rifle"
+                ],
+                "textures": {
+                  "baseColor": "Tesla_rifle_tesla_rifle_AlbedoTransparency",
+                  "normal": "Tesla_rifle_tesla_rifle_Normal",
+                  "metallicGloss": "Tesla_rifle_tesla_rifle_SpecularSmoothness",
+                  "occlusion": "Tesla_rifle_tesla_rifle_Occlusion"
+                },
+                "sizeKB": 361.2,
+                "sourceObjects": [
+                  "Tesla_Decimated"
+                ],
+                "bundle": "gameplayerengineer",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -3609,8 +4437,26 @@
               "characterSlug": "medic",
               "summary": "投掷一瓶解毒剂，彻底结束僵尸的痛苦。瓶子碎裂时距离越近，造成的额外伤害就越高",
               "summaryEn": "Throw a bottle of antidotal fluids to put an end to the zombie's suffering. Bonus damage the closer it shatters",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/medic-dotabottlethrow.glb",
+              "modelNote": "",
+              "modelStats": {
+                "triangles": 6494,
+                "vertices": 3994,
+                "materials": [
+                  "Corks",
+                  "ActualModelGlassMaterial",
+                  "3d Potion B_Fill"
+                ],
+                "textures": {
+                  "baseColor": "cork 1"
+                },
+                "sizeKB": 202.3,
+                "sourceObjects": [
+                  "Potion"
+                ],
+                "bundle": "gameplayermedic",
+                "sharedWith": null
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [
@@ -3663,8 +4509,26 @@
               "characterSlug": "medic",
               "summary": "装满液氮的容器，能够帮助僵尸从痛苦中永久解脱。瓶子碎裂时距离越近，造成的额外伤害就越高",
               "summaryEn": "Ease their pain indefinitely with liquid nitrogen filled vessels. Bonus damage the closer it shatters",
-              "model": null,
-              "modelNote": "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。该条目聚合的是官方名称、说明、音效与 2D 命中特效。",
+              "model": "models/zombie-survivors/weapons/medic-dotabottlethrow.glb",
+              "modelNote": "冰冻瓶与解毒瓶共用同一个瓶子网格，差别在瓶内液体材质与命中特效。",
+              "modelStats": {
+                "triangles": 6494,
+                "vertices": 3994,
+                "materials": [
+                  "Corks",
+                  "ActualModelGlassMaterial",
+                  "3d Potion B_Fill"
+                ],
+                "textures": {
+                  "baseColor": "cork 1"
+                },
+                "sizeKB": 202.3,
+                "sourceObjects": [
+                  "Potion"
+                ],
+                "bundle": "gameplayermedic",
+                "sharedWith": "medic-dotabottlethrow"
+              },
               "vfx": {
                 "particle": "Bullet_Hit_01",
                 "particleTextures": [

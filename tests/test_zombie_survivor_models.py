@@ -51,6 +51,8 @@ class ZombieSurvivorModelsIndexTests(unittest.TestCase):
         self.assertEqual(counts["soundEntries"], len(self.sounds))
         self.assertEqual(counts["soundClips"], sum(entry["clipCount"] for entry in self.sounds))
         self.assertEqual(counts["weaponTypes"], len(self.category["weapons"]["groups"]))
+        self.assertEqual(counts["weaponModels"], counts["weapons"])
+        self.assertLessEqual(counts["weaponModelFiles"], counts["weapons"])
 
     def test_dimensions_are_complete(self) -> None:
         self.assertEqual([item["slug"] for item in self.index["categories"]],
@@ -108,6 +110,45 @@ class ZombieSurvivorModelsIndexTests(unittest.TestCase):
 
         # 音效明细留在 catalog.json，所以每个条目都必须能被 models.json 找到。
         self.assertEqual(linked | set(), {entry["slug"] for entry in self.sounds})
+
+    def test_every_weapon_has_a_model_and_shared_ones_point_at_the_owner(self) -> None:
+        catalog_path = GAME_DIR / "weapon-models.json"
+        self.assertTrue(catalog_path.is_file(), "先运行 scripts/extract_yazs_weapon_models.py")
+        catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+        self.assertEqual(len(catalog), len(self.weapons["weapons"]))
+
+        by_slug = {entry["slug"]: entry for entry in catalog}
+        files = {entry["model"] for entry in catalog}
+        self.assertEqual(len(files), self.index["counts"]["weaponModelFiles"])
+        for rel in files:
+            path = ROOT / rel
+            self.assertTrue(path.is_file(), rel)
+            self.assertGreater(path.stat().st_size, 4096, rel)
+            self.assertEqual(path.suffix, ".glb")
+
+        for weapon in self.items_of("weapons"):
+            entry = by_slug[weapon["slug"]]
+            self.assertEqual(weapon["model"], entry["model"])
+            self.assertGreater(weapon["modelStats"]["triangles"], 0)
+            self.assertTrue(weapon["modelStats"]["sourceObjects"])
+            if entry["from"].startswith("shared:"):
+                owner = by_slug[entry["from"].split(":", 1)[1]]
+                self.assertEqual(entry["model"], owner["model"])
+                self.assertEqual(weapon["modelStats"]["sharedWith"], owner["slug"])
+                self.assertTrue(weapon["modelNote"], weapon["slug"])
+            else:
+                self.assertIsNone(weapon["modelStats"]["sharedWith"])
+
+        # 用户要求的样子：每种霰弹枪都有自己的三维模型文件
+        shotguns = [entry for entry in catalog if entry["slug"] in SHOTGUN_SLUGS]
+        self.assertEqual(len(shotguns), 3)
+        self.assertEqual({entry["from"] for entry in shotguns}, {"extracted"})
+
+    def test_characters_and_monsters_explain_why_they_have_no_model(self) -> None:
+        for category_slug in ("characters", "monsters"):
+            for item in self.items_of(category_slug):
+                self.assertIsNone(item["model"])
+                self.assertTrue(item["modelNote"])
 
     def test_sound_payload_is_not_duplicated(self) -> None:
         blob = (GAME_DIR / "models.json").read_text(encoding="utf-8")

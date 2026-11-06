@@ -25,6 +25,7 @@ GAME_DIR = ROOT / "games" / GAME_SLUG
 WEAPONS_PATH = GAME_DIR / "weapons.json"
 SOUNDS_PATH = GAME_DIR / "catalog.json"
 PROPS_PATH = GAME_DIR / "props.json"
+WEAPON_MODELS_PATH = GAME_DIR / "weapon-models.json"
 OUTPUT_PATH = GAME_DIR / "models.json"
 GAMES_PATH = ROOT / "games.json"
 MODELS_PAGE = "models.html"
@@ -66,9 +67,9 @@ GROUP_SLUGS = {
     "角色动作": "character-actions", "敌人": "enemies", "头目": "bosses",
 }
 
-MODEL_NOTE = (
-    "本分类目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了关卡场景道具。"
-    "该条目聚合的是官方名称、说明、音效与 2D 命中特效。"
+NO_MODEL_NOTE = (
+    "该条目目前没有三维模型：游戏是 Unity IL2CPP 构建，现有提取脚本只导出了武器与关卡场景道具。"
+    "人物与怪物条目聚合的是官方名称、说明、音效与 2D 命中特效。"
 )
 
 
@@ -94,6 +95,10 @@ def build() -> dict:
     weapons_doc = load(WEAPONS_PATH)
     sounds = load(SOUNDS_PATH)
     props = load(PROPS_PATH)
+    # 武器模型由 extract_yazs_weapon_models.py 提取；脚本还没跑过时武器条目只带音效与特效
+    weapon_models: dict[str, dict] = {}
+    if WEAPON_MODELS_PATH.exists():
+        weapon_models = {entry["slug"]: entry for entry in load(WEAPON_MODELS_PATH)}
 
     weapons = weapons_doc["weapons"]
     weapon_by_slug = {w["slug"]: w for w in weapons}
@@ -200,7 +205,7 @@ def build() -> dict:
             "name": name,
             "nameEn": name_en,
             "model": None,
-            "modelNote": MODEL_NOTE,
+            "modelNote": NO_MODEL_NOTE,
             "weapons": [weapon_by_slug[s]["name"] for s in weapons_of_character[name]],
             "weaponSlugs": weapons_of_character[name],
             "weaponTypes": list(dict.fromkeys(type_of[s][1] for s in weapons_of_character[name])),
@@ -225,7 +230,7 @@ def build() -> dict:
             "name": name,
             "nameEn": name,
             "model": None,
-            "modelNote": MODEL_NOTE,
+            "modelNote": NO_MODEL_NOTE,
             "soundSlugs": slugs,
             "soundCount": len(slugs),
             "clipCount": clips,
@@ -241,6 +246,10 @@ def build() -> dict:
             weapon = weapon_by_slug[slug]
             weapon_slugs = weapon_sounds[slug]
             clips, seconds, tiers = sound_stats(weapon_slugs)
+            model_info = weapon_models.get(slug)
+            shared_with = None
+            if model_info and model_info.get("from", "").startswith("shared:"):
+                shared_with = model_info["from"].split(":", 1)[1]
             items.append({
                 "kind": "weapon",
                 "slug": slug,
@@ -253,8 +262,18 @@ def build() -> dict:
                 "characterSlug": slugify(weapon.get("characterEn", weapon["character"])),
                 "summary": weapon.get("summary", ""),
                 "summaryEn": weapon.get("summaryEn", ""),
-                "model": None,
-                "modelNote": MODEL_NOTE,
+                "model": model_info.get("model") if model_info else None,
+                "modelNote": (model_info.get("note") or "") if model_info else NO_MODEL_NOTE,
+                "modelStats": {
+                    "triangles": model_info["triangles"],
+                    "vertices": model_info["vertices"],
+                    "materials": model_info["materials"],
+                    "textures": model_info["textures"],
+                    "sizeKB": model_info["sizeKB"],
+                    "sourceObjects": model_info["sourceObjects"],
+                    "bundle": model_info["bundle"],
+                    "sharedWith": shared_with,
+                } if model_info else None,
                 "vfx": weapon.get("hitEffect") or {},
                 "sprites": sorted({
                     value for key, value in (weapon.get("hitEffect") or {}).items()
@@ -338,14 +357,16 @@ def build() -> dict:
         "generatedBy": "scripts/build_yazs_models_index.py",
         "sources": {
             "weapons": f"games/{GAME_SLUG}/weapons.json",
+            "weaponModels": f"games/{GAME_SLUG}/weapon-models.json",
             "sounds": f"games/{GAME_SLUG}/catalog.json",
             "props": f"games/{GAME_SLUG}/props.json",
         },
         "notes": {
             "structure": "把原先分散的 weapons.json（武器与描述）、catalog.json（音效）与 props.json（场景道具）"
-                         "合并成 人物 / 怪物 / 武器 / 场景道具 四个维度：每个武器条目直接带上它的射击、换弹、技能音效与命中特效。",
-            "threeDimensional": "本分类目前只有场景道具的三维模型（models/zombie-survivors/*.glb）。人物、怪物与武器没有三维模型，"
-                                "条目内聚合的是官方名称、说明、音效与 2D 命中特效贴图。",
+                         "合并成 人物 / 怪物 / 武器 / 场景道具 四个维度：每个武器条目直接带上它的射击、换弹、技能音效、命中特效与三维模型。",
+            "weaponModels": "武器模型由 scripts/extract_yazs_weapon_models.py 从各幸存者的 AssetBundle 中提取："
+                            "36 把武器各有独立 GLB，9 把只改弹药或挥砍特效的武器共用同一模型（见条目的 sharedWith）。",
+            "threeDimensional": "武器与场景道具有三维模型；人物与怪物还没有，条目内聚合的是官方名称、说明、音效与 2D 命中特效贴图。",
             "sounds": "音效明细（音频文件、时长、采样率）仍在 games/zombie-survivors/catalog.json，本文件按 slug 引用，避免重复维护。",
         },
         "counts": {
@@ -355,6 +376,8 @@ def build() -> dict:
             "bosses": monster_counts["boss"],
             "weapons": len(weapons),
             "weaponTypes": len(WEAPON_TYPES),
+            "weaponModels": sum(1 for w in weapons if w["slug"] in weapon_models),
+            "weaponModelFiles": len({m["model"] for m in weapon_models.values()}),
             "props": len(props),
             "soundEntries": len(sounds),
             "soundClips": total_clips,
@@ -383,7 +406,7 @@ def build() -> dict:
                 "slug": "weapons",
                 "name": "武器模型",
                 "nameEn": "Weapons",
-                "detail": f"{len(weapons)} 把武器按类型分成 {len(WEAPON_TYPES)} 组，每组内是武器本体、音效与命中特效",
+                "detail": f"{len(weapons)} 把武器按类型分成 {len(WEAPON_TYPES)} 组，每组内是武器本体模型、音效与命中特效",
                 "groups": weapon_groups,
             },
             {
@@ -458,7 +481,8 @@ def main() -> int:
     subtitle = (
         f"{counts['characters']} 位人物 / {counts['monsters']} 类怪物"
         f"（{counts['enemies']} 敌人 + {counts['bosses']} 头目）/ {counts['weapons']} 把武器"
-        f"（{counts['weaponTypes']} 类）/ {counts['props']} 个场景道具，音效与特效按条目合并"
+        f"（{counts['weaponModelFiles']} 个模型 / {counts['weaponTypes']} 类）/ {counts['props']} 个场景道具，"
+        f"音效与特效按条目合并"
     )
     patch_games_json(subtitle)
     print(

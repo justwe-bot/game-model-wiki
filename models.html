@@ -81,6 +81,8 @@
     .details h2 { margin: 0 0 10px; font-size: 18px; }
     .details h2.section { margin-top: 26px; }
     .details p { margin: 0; color: var(--muted); line-height: 1.7; }
+    .details .model-info { margin-top: 12px; color: var(--faint); font-size: 12px; line-height: 1.8; }
+    .details .model-info b { color: var(--lime); font-weight: 700; }
     .stats { margin-top: 20px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); display: grid; grid-template-columns: repeat(3, 1fr); }
     .stat { padding: 14px 10px 14px 0; min-width: 0; }
     .stat b { display: block; font-size: 19px; overflow: hidden; text-overflow: ellipsis; }
@@ -110,7 +112,6 @@
     .tex-row b { font-size: 12px; color: var(--lime); font-weight: 700; }
     .tex-row span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
     .tex-row.missing span { color: var(--faint); }
-    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
       .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
@@ -183,6 +184,7 @@
         <div>
           <h2 id="infoHeading">条目信息</h2>
           <p id="summary"></p>
+          <p class="model-info" id="modelInfo" hidden></p>
           <div class="stats">
             <div class="stat"><b id="statA">—</b><span id="statALabel">音效条目</span></div>
             <div class="stat"><b id="statB">—</b><span id="statBLabel">音频片段</span></div>
@@ -201,7 +203,6 @@
             <div class="sprite-grid" id="spriteGrid" style="margin-top:12px"></div>
           </div>
         </div>
-        <div class="notice" id="rightsNotice"></div>
       </section>
     </main>
   </div>
@@ -350,7 +351,8 @@
       activeRoot = null;
     }
 
-    // 道具之间尺度差异极大（街灯 vs 骨头），统一归一到固定取景范围。
+    // 道具之间尺度差异极大（街灯 vs 骨头），统一归一到固定取景范围；武器里还有弓、武士刀
+    // 这类细长物件，所以相机距离按包围球算，固定取景框会把它们裁掉。
     function frameModel(model) {
       const box = new THREE.Box3().setFromObject(model);
       const size = box.getSize(new THREE.Vector3());
@@ -362,11 +364,15 @@
       model.position.x -= center.x;
       model.position.z -= center.z;
       model.position.y -= scaled.min.y;
-      const radius = Math.max(scaled.getSize(new THREE.Vector3()).length() / 2, 0.6);
-      camera.position.set(radius * 2.1, radius * 1.5, radius * 2.4);
-      controls.target.set(0, radius * 0.45, 0);
-      controls.minDistance = radius * 1.2;
-      controls.maxDistance = radius * 6;
+      const fitted = new THREE.Box3().setFromObject(model);
+      const sphere = fitted.getBoundingSphere(new THREE.Sphere());
+      const radius = Math.max(sphere.radius, 0.25);
+      const distance = (radius / Math.sin(THREE.MathUtils.degToRad(camera.fov) / 2)) * 1.15;
+      const direction = new THREE.Vector3(0.55, 0.42, 0.78).normalize();
+      camera.position.copy(sphere.center).addScaledVector(direction, distance);
+      controls.target.copy(sphere.center);
+      controls.minDistance = radius * 1.05;
+      controls.maxDistance = radius * 8;
       controls.update();
     }
 
@@ -579,6 +585,26 @@
       }[item.kind] ?? '';
       document.querySelector('#summary').textContent = summary;
 
+      // 武器有真实提取出来的网格：把三角面、材质与来源对象写清楚，共用模型也标明谁是谁
+      const modelInfo = document.querySelector('#modelInfo');
+      const modelStats = item.modelStats;
+      if (modelStats) {
+        const parts = [
+          `<b>${modelStats.triangles.toLocaleString()}</b> 三角面`,
+          `${modelStats.materials.length} 个材质`,
+          `来自 ${modelStats.sourceObjects.join(' + ')}（${modelStats.bundle}）`,
+        ];
+        if (modelStats.sharedWith) {
+          const owner = flatItems.find(entry => entry.slug === modelStats.sharedWith);
+          parts.push(`与「${owner ? owner.name : modelStats.sharedWith}」共用同一模型`);
+        }
+        if (item.modelNote) parts.push(item.modelNote);
+        modelInfo.innerHTML = `模型：${parts.join(' · ')}`;
+        modelInfo.hidden = false;
+      } else {
+        modelInfo.hidden = true;
+      }
+
       const statA = document.querySelector('#statA');
       const statB = document.querySelector('#statB');
       const statC = document.querySelector('#statC');
@@ -631,8 +657,6 @@
         document.querySelector('#stageNoteBody').textContent = item.modelNote
           ?? '该条目聚合的是名称、说明、音效与特效贴图；三维模型尚未从游戏中提取。';
       }
-      document.querySelector('#rightsNotice').textContent = activeGame.notice
-        ?? '资料与音效来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
     }
 
     // --- sidebar ---------------------------------------------------------------

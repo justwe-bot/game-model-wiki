@@ -33,6 +33,7 @@
 - 音效页每条采样、武器页每把武器都支持一键复制引用（原始效果名 + 中英文名称 + 文件路径 + 完整地址，制表符分隔），方便粘进表格或移植到其他游戏工程；复制前页面会显示将要复制的完整内容
 - 独立道具页按建筑、载具、街道设施、植被、地形与道路、废墟与杂物、室内道具分类浏览场景资产，显示材质与四路贴图来源，并支持自动旋转和重置视角
 - 合并模型页把原本分开的声音、武器与道具收进一棵树：人物模型 9 位（各带 5 把专属武器与人物音效）、怪物模型 33 类（28 普通敌人 + 5 头目）、武器模型 45 把按 9 种类型分组（每把武器直接列出射击、换弹、技能音效与命中特效贴图，可逐条试听）、场景道具 242 个；带 GLB 的条目直接三维预览，没有三维模型的条目显示说明卡而不是空白画布
+- 45 把武器都有从游戏资源包提取出来的三维模型（36 个 GLB，17.9 MB）：静态武器取 `MeshFilter`、弓与武士刀取绑定姿势的 `SkinnedMeshRenderer`、转轮机枪把 `Gun` + `Barrell` 两个网格拼回一件；只改弹药或挥砍特效的 9 把武器（4 种箭、4 种刀技、冰冻瓶）指向拥有者的模型并注明差别
 - 武器页可演示每把武器的完整战斗序列：开火闪光 → 子弹飞行 → 命中敌人，三段都用游戏原始贴图（枪口闪光、`GatlingGun_L3_BulletTraser` 弹道拖尾、撞击光点、8×8 逐帧命中球、血效遮罩、苦无投掷物）绘制，并同步播放该武器的射击与命中音效；可一键录制为 WebM 视频当场回放
 
 低模使用误差受限简化。10% 只是期望目标，不会为了达到固定比例强行删除脚、细腿、角、炮口或其他关键轮廓。不同模型会在接近明显变形前停止，因此实际保留比例约为 23%-79%。
@@ -93,7 +94,8 @@ Zombie Survivors 合并模型页地址为
 
 该游戏是 Unity 2022.3 IL2CPP 构建，type tree 已被剥离，因此 MonoScript 名和 MonoBehaviour 字段都按原始字节解析；玩家数据、9 个角色包和 6 个场景包都要一起扫描，否则会漏掉敌人和头目音效。
 
-- `scripts/build_yazs_models_index.py`：把 `weapons.json`（武器与描述）、`catalog.json`（音效）与 `props.json`（场景道具）合并成 `games/zombie-survivors/models.json`，并按 人物 / 怪物 / 武器 / 场景道具 / 其它音效 建树：45 把武器按 9 种类型分组，每把武器带上它的射击、换弹、技能音效与命中特效贴图；音效只按 `slug` 引用而不复制内容，脚本会校验每个引用与模型路径都存在后才落盘，并把 `modelsCatalog` / `modelsPage` 写回 `games.json`。
+- `scripts/build_yazs_models_index.py`：把 `weapons.json`（武器与描述）、`catalog.json`（音效）与 `props.json`（场景道具）合并成 `games/zombie-survivors/models.json`，并按 人物 / 怪物 / 武器 / 场景道具 / 其它音效 建树：45 把武器按 9 种类型分组，每把武器带上它的三维模型、射击、换弹、技能音效与命中特效贴图；音效只按 `slug` 引用而不复制内容，脚本会校验每个引用与模型路径都存在后才落盘，并把 `modelsCatalog` / `modelsPage` 写回 `games.json`。
+- `scripts/extract_yazs_weapon_models.py`：从 9 个幸存者 AssetBundle 里提取 45 把武器的网格，按 `MeshFilter` / 绑定姿势 `SkinnedMeshRenderer` 分别处理，烘焙对象自身的本地变换（Unity 里手枪缩放 0.025、爆能枪 1.85，不烘焙就会比例错乱），复用道具脚本的 Unity Standard → glTF 材质转换导出 GLB 到 `models/zombie-survivors/weapons/`，并写出 `games/zombie-survivors/weapon-models.json`。名字重复的对象（例如只叫 `Model` 的激光枪）靠材质与父节点名区分，共用几何的武器指向拥有者的模型。
 
 - `scripts/extract_yazs_weapons.py`：解析 `resources.assets` 中的 I2 Localization `I2Languages` 资产（4072 条术语，语言顺序为英/波/简中/法/德/日/韩/葡/俄/西），导出 45 把武器的官方英文名、简体中文名与游戏内描述到 `games/zombie-survivors/weapons.json`。
 - `scripts/extract_yazs_audio.py`：扫描玩家数据、角色包与场景包里的全部 AudioClip，按片段名去重后转成网页预览用 M4A，并依据 `GROUP_META` 生成带简体中文说明的音效目录。脚本会在两个地方直接报错退出：有音频片段没有匹配到任何分组；`weapons.json` 引用了本次没有导出的音效条目。
