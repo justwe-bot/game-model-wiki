@@ -1,0 +1,100 @@
+{
+  "accepted": false,
+  "schema": "depot-path-overlay-v2",
+  "scope": "Recovery of missing material dependencies into a depot-path overlay using already-serialized WolvenKit JSON. Dependency recovery only; not character, material, visual or motion acceptance.",
+  "base_overlay": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261106_031213\\material_depot",
+  "overlay_repo": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot",
+  "serialized_sources_searched": [
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_01",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_02",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_03",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_04",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_05",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_06",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_07",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_08",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_09",
+    "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_10",
+    "recovered_20261107_v2_stage",
+    "recovered_20261107_v2_animalboss"
+  ],
+  "requested": [
+    "base\\characters\\main_npc\\monster\\textures\\ml_t2_002_mm_vest__monster.mlsetup",
+    "base\\characters\\garment\\corp_ncpd\\torso\\t2_024_jacket__coroner\\textures\\t2_024_ma_jacket__coroner.mlsetup",
+    "base\\characters\\head\\ma\\h0_084_ma_c__maelstrom\\textures\\ml_h0_084_ma_c__maelstrom_cyberware_base_01.mlsetup",
+    "base\\characters\\garment\\citizen_casual\\feet\\s1_050_boot__taxi\\textures\\ml_s1_050_mb_boot__taxi.mlsetup",
+    "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac_blue.mlsetup",
+    "base\\characters\\main_npc\\animal_boss\\textures\\ml_h1_001_wm_cyberware__animal_boss.mlsetup",
+    "base\\characters\\main_npc\\capitan_reyes\\textures\\ml_i1_002_ma_wrist__capitan_reyes.mlsetup",
+    "base\\characters\\garment\\gang_monk\\feet\\s1_083_sandal__monk_sandal\\textures\\ml_s1_083_wa_sandal__monk_sandal.mlsetup"
+  ],
+  "installed": [
+    {
+      "depot": "base\\characters\\main_npc\\monster\\textures\\ml_t2_002_mm_vest__monster.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\main_npc\\monster\\textures\\ml_t2_002_mm_vest__monster.mlsetup.json",
+      "bytes": 38646,
+      "sha256": "1dc63179d747b7427f5fdbaab94095e7856b39359e7ee28f23d82fb44934f7a6",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_09\\serialized\\ml_t2_002_mm_vest__monster.mlsetup.json",
+      "content_verified": true
+    },
+    {
+      "depot": "base\\characters\\garment\\corp_ncpd\\torso\\t2_024_jacket__coroner\\textures\\t2_024_ma_jacket__coroner.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\garment\\corp_ncpd\\torso\\t2_024_jacket__coroner\\textures\\t2_024_ma_jacket__coroner.mlsetup.json",
+      "bytes": 38259,
+      "sha256": "1d87a38329590e36dae487a22d01a6385df11aee37a88377d0034fbf0aab0e92",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_02\\serialized\\t2_024_ma_jacket__coroner.mlsetup.json",
+      "content_verified": true
+    },
+    {
+      "depot": "base\\characters\\head\\ma\\h0_084_ma_c__maelstrom\\textures\\ml_h0_084_ma_c__maelstrom_cyberware_base_01.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\head\\ma\\h0_084_ma_c__maelstrom\\textures\\ml_h0_084_ma_c__maelstrom_cyberware_base_01.mlsetup.json",
+      "bytes": 13984,
+      "sha256": "3579a226949f547bd35ebe7c8bd84ef12243ba5ebbd395f9e11fe442fcb0317e",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_07\\serialized\\ml_h0_084_ma_c__maelstrom_cyberware_base_01.mlsetup.json",
+      "content_verified": true
+    },
+    {
+      "depot": "base\\characters\\garment\\citizen_casual\\feet\\s1_050_boot__taxi\\textures\\ml_s1_050_mb_boot__taxi.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\garment\\citizen_casual\\feet\\s1_050_boot__taxi\\textures\\ml_s1_050_mb_boot__taxi.mlsetup.json",
+      "bytes": 17683,
+      "sha256": "bf97e5ab87c55e7c153e19e44783d854ef1afd7efdc5eb65f4b49a2aae2c40ee",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_01\\serialized\\ml_s1_050_mb_boot__taxi.mlsetup.json",
+      "content_verified": true
+    },
+    {
+      "depot": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac_blue.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac_blue.mlsetup.json",
+      "bytes": 23311,
+      "sha256": "b408a650c2425bf7b7ca81e32e24e283a1227948b5c7fbc2d7b4c3ddf2dde0d7",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_05\\serialized\\ml_h2_016_wa_helmet__max_tac_blue.mlsetup.json",
+      "content_verified": true
+    },
+    {
+      "depot": "base\\characters\\main_npc\\capitan_reyes\\textures\\ml_i1_002_ma_wrist__capitan_reyes.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\main_npc\\capitan_reyes\\textures\\ml_i1_002_ma_wrist__capitan_reyes.mlsetup.json",
+      "bytes": 19520,
+      "sha256": "2601281bd99a08dcb67629561a0179ffdc4c65be4c1919dabaeb19df4339c620",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_08\\serialized\\ml_i1_002_ma_wrist__capitan_reyes.mlsetup.json",
+      "content_verified": true
+    },
+    {
+      "depot": "base\\characters\\garment\\gang_monk\\feet\\s1_083_sandal__monk_sandal\\textures\\ml_s1_083_wa_sandal__monk_sandal.mlsetup",
+      "installed": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_v2_all8\\material_depot\\base\\characters\\garment\\gang_monk\\feet\\s1_083_sandal__monk_sandal\\textures\\ml_s1_083_wa_sandal__monk_sandal.mlsetup.json",
+      "bytes": 21346,
+      "sha256": "1ea783699ad90d418d925b2a5bb2ecbcb2f337a7d7a15c0d779e183593442a09",
+      "copied_from": "C:\\Code\\UeCover\\Blender\\enemy_collection\\depot_recovery\\recovered_20261107_missingdeps_06\\serialized\\ml_s1_083_wa_sandal__monk_sandal.mlsetup.json",
+      "content_verified": true
+    }
+  ],
+  "rejected": [
+    [
+      "base\\characters\\main_npc\\animal_boss\\textures\\ml_h1_001_wm_cyberware__animal_boss.mlsetup",
+      "no serialized source recovered"
+    ]
+  ],
+  "failed": [],
+  "dependency_rows": 115,
+  "missing": [],
+  "all_resolved": true,
+  "bug_fixed": "previous builder copied raw CR2W from isolated/ instead of serialized JSON"
+}

@@ -1,0 +1,123 @@
+{
+  "Header": {
+    "WolvenKitVersion": "10.0.0-beta.2-nightly.2026-10-25",
+    "WKitJsonVersion": "0.0.9",
+    "GameVersion": 2500,
+    "ExportedDateTime": "2026-11-02T03:12:29.6164527Z",
+    "DataType": "CR2W",
+    "ArchiveFileName": "base\\characters\\common\\hair\\textures\\hair_profiles\\custom_purple_force.hp"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "CHairProfile",
+      "cookingPlatform": "PLATFORM_PC",
+      "gradientEntriesID": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 255,
+            "Green": 150,
+            "Red": 143
+          },
+          "value": 0
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 96,
+            "Green": 82,
+            "Red": 94
+          },
+          "value": 1
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 251,
+            "Green": 191,
+            "Red": 255
+          },
+          "value": 0.663636029
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 152,
+            "Green": 16,
+            "Red": 105
+          },
+          "value": 0.800000012
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 255,
+            "Green": 61,
+            "Red": 246
+          },
+          "value": 0.218181998
+        }
+      ],
+      "gradientEntriesRootToTip": [
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 103,
+            "Green": 3,
+            "Red": 64
+          },
+          "value": 0
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 220,
+            "Green": 78,
+            "Red": 166
+          },
+          "value": 0.554544985
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 247,
+            "Green": 113,
+            "Red": 196
+          },
+          "value": 0.800000012
+        },
+        {
+          "$type": "rendGradientEntry",
+          "color": {
+            "$type": "Color",
+            "Alpha": 255,
+            "Blue": 179,
+            "Green": 44,
+            "Red": 76
+          },
+          "value": 1
+        }
+      ],
+      "sampleCount": 64
+    },
+    "EmbeddedFiles": []
+  }
+}

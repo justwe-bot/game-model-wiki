@@ -1,0 +1,6900 @@
+[
+  {
+    "event": "w_gun_shotgun_tech_satara_close_single",
+    "wwise_id": 965933664,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 719364342,
+        "action_type": 1027,
+        "target": 748024113,
+        "raw_hex": "f6a0e02a030431f1952c000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 37966654,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 622130491,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 748024113,
+        "route": [
+          965933664,
+          719364342,
+          748024113,
+          37966654
+        ],
+        "index": 69840,
+        "pack": 1845,
+        "offset": 372468,
+        "opus_offset": 96,
+        "entry_length": 3800,
+        "wav_length": 48548
+      },
+      {
+        "id": 53874834,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 301685768,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 748024113,
+        "route": [
+          965933664,
+          719364342,
+          748024113,
+          53874834
+        ],
+        "index": 69839,
+        "pack": 1845,
+        "offset": 368805,
+        "opus_offset": 96,
+        "entry_length": 3663,
+        "wav_length": 47860
+      },
+      {
+        "id": 546370258,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 622806487,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 748024113,
+        "route": [
+          965933664,
+          719364342,
+          748024113,
+          546370258
+        ],
+        "index": 69841,
+        "pack": 1845,
+        "offset": 376268,
+        "opus_offset": 96,
+        "entry_length": 3324,
+        "wav_length": 38440
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_equip",
+    "wwise_id": 2667704689,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 710823617,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "c14e5e2a02013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 74508496,
+        "action_type": 1027,
+        "target": 526041717,
+        "raw_hex": "d0e87004030475c25a1f000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 209028072,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1047624436,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 526041717,
+        "route": [
+          2667704689,
+          74508496,
+          526041717,
+          209028072
+        ],
+        "index": 69788,
+        "pack": 1844,
+        "offset": 745899,
+        "opus_offset": 96,
+        "entry_length": 17114,
+        "wav_length": 229692
+      },
+      {
+        "id": 511720837,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 853973965,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 526041717,
+        "route": [
+          2667704689,
+          74508496,
+          526041717,
+          511720837
+        ],
+        "index": 69790,
+        "pack": 1844,
+        "offset": 781252,
+        "opus_offset": 96,
+        "entry_length": 15844,
+        "wav_length": 224140
+      },
+      {
+        "id": 516349538,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 792697232,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 526041717,
+        "route": [
+          2667704689,
+          74508496,
+          526041717,
+          516349538
+        ],
+        "index": 69789,
+        "pack": 1844,
+        "offset": 763013,
+        "opus_offset": 96,
+        "entry_length": 18239,
+        "wav_length": 238144
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_charge",
+    "wwise_id": 4256045819,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 639520566,
+        "action_type": 1027,
+        "target": 796811417,
+        "raw_hex": "364f1e26030499607e2f00013a6400000000045e96b01400000000"
+      },
+      {
+        "id": 249979584,
+        "action_type": 1027,
+        "target": 1072075831,
+        "raw_hex": "c062e60e03043794e63f00013a6400000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 181045575,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 587462569,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 796811417,
+        "route": [
+          4256045819,
+          639520566,
+          796811417,
+          181045575
+        ],
+        "index": 69781,
+        "pack": 1844,
+        "offset": 699939,
+        "opus_offset": 96,
+        "entry_length": 25248,
+        "wav_length": 329760
+      },
+      {
+        "id": 472130500,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 904754274,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 796811417,
+        "route": [
+          4256045819,
+          639520566,
+          796811417,
+          472130500
+        ],
+        "index": 69779,
+        "pack": 1844,
+        "offset": 654305,
+        "opus_offset": 96,
+        "entry_length": 22148,
+        "wav_length": 329920
+      },
+      {
+        "id": 547358892,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 824451028,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 796811417,
+        "route": [
+          4256045819,
+          639520566,
+          796811417,
+          547358892
+        ],
+        "index": 69780,
+        "pack": 1844,
+        "offset": 676453,
+        "opus_offset": 96,
+        "entry_length": 23486,
+        "wav_length": 334828
+      },
+      {
+        "id": 1072075831,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 350836466,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 695587298,
+        "route": [
+          4256045819,
+          249979584,
+          1072075831
+        ],
+        "index": 17542,
+        "pack": 853,
+        "offset": 616066,
+        "opus_offset": 96,
+        "entry_length": 18471,
+        "wav_length": 276732
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_equip_first",
+    "wwise_id": 2981316910,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 794284386,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "62d1572f02013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 166118383,
+        "action_type": 1027,
+        "target": 432570793,
+        "raw_hex": "efc3e6090304a981c819000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 3245631,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 728495457,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 432570793,
+        "route": [
+          2981316910,
+          166118383,
+          432570793,
+          3245631
+        ],
+        "index": 69775,
+        "pack": 1844,
+        "offset": 583162,
+        "opus_offset": 96,
+        "entry_length": 62588,
+        "wav_length": 934772
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_move",
+    "wwise_id": 1099447020,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 521728087,
+        "action_type": 1027,
+        "target": 640576461,
+        "raw_hex": "57f0181f0304cd6b2e26000000045e96b01400000000"
+      },
+      {
+        "id": 479972177,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "51cb9b1c0201a981c81900013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 646164383,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 845287691,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 640576461,
+        "route": [
+          1099447020,
+          521728087,
+          640576461,
+          646164383
+        ],
+        "index": 69827,
+        "pack": 1845,
+        "offset": 263328,
+        "opus_offset": 96,
+        "entry_length": 5168,
+        "wav_length": 53672
+      },
+      {
+        "id": 748402378,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 634044864,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 640576461,
+        "route": [
+          1099447020,
+          521728087,
+          640576461,
+          748402378
+        ],
+        "index": 69829,
+        "pack": 1845,
+        "offset": 275045,
+        "opus_offset": 96,
+        "entry_length": 6880,
+        "wav_length": 71232
+      },
+      {
+        "id": 769369865,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 275182561,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 640576461,
+        "route": [
+          1099447020,
+          521728087,
+          640576461,
+          769369865
+        ],
+        "index": 69828,
+        "pack": 1845,
+        "offset": 268496,
+        "opus_offset": 96,
+        "entry_length": 6549,
+        "wav_length": 63484
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_grab",
+    "wwise_id": 3035957173,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 702325459,
+        "action_type": 1027,
+        "target": 340681621,
+        "raw_hex": "d3a2dc29030495634e14000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 345967214,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 278951917,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 340681621,
+        "route": [
+          3035957173,
+          702325459,
+          340681621,
+          345967214
+        ],
+        "index": 65956,
+        "pack": 1809,
+        "offset": 863842,
+        "opus_offset": 96,
+        "entry_length": 2608,
+        "wav_length": 18602
+      },
+      {
+        "id": 606444870,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 397779506,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 340681621,
+        "route": [
+          3035957173,
+          702325459,
+          340681621,
+          606444870
+        ],
+        "index": 69814,
+        "pack": 1845,
+        "offset": 183391,
+        "opus_offset": 96,
+        "entry_length": 3208,
+        "wav_length": 28188
+      },
+      {
+        "id": 954127615,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 471930181,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 340681621,
+        "route": [
+          3035957173,
+          702325459,
+          340681621,
+          954127615
+        ],
+        "index": 65955,
+        "pack": 1809,
+        "offset": 860652,
+        "opus_offset": 96,
+        "entry_length": 3190,
+        "wav_length": 24342
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_open",
+    "wwise_id": 1046133059,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 714221175,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "7726922a02013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 76969322,
+        "action_type": 1027,
+        "target": 509621255,
+        "raw_hex": "6a75960403040734601e000000045e96b01400000000"
+      },
+      {
+        "id": 761338436,
+        "action_type": 259,
+        "target": 814448213,
+        "raw_hex": "441a612d0301557e8b3000013a6400000000040600"
+      },
+      {
+        "id": 614665578,
+        "action_type": 1027,
+        "target": 344278350,
+        "raw_hex": "6a0da32403044e458514000000045e96b01400000000"
+      },
+      {
+        "id": 711728803,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "a31e6c2a0201a981c81900013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 118688518,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 894602433,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 509621255,
+        "route": [
+          1046133059,
+          76969322,
+          509621255,
+          118688518
+        ],
+        "index": 69817,
+        "pack": 1845,
+        "offset": 206647,
+        "opus_offset": 96,
+        "entry_length": 8463,
+        "wav_length": 135852
+      },
+      {
+        "id": 442961296,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 347781044,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 509621255,
+        "route": [
+          1046133059,
+          76969322,
+          509621255,
+          442961296
+        ],
+        "index": 69816,
+        "pack": 1845,
+        "offset": 195204,
+        "opus_offset": 96,
+        "entry_length": 11443,
+        "wav_length": 168208
+      },
+      {
+        "id": 1047357480,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 224070803,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 509621255,
+        "route": [
+          1046133059,
+          76969322,
+          509621255,
+          1047357480
+        ],
+        "index": 69815,
+        "pack": 1845,
+        "offset": 186599,
+        "opus_offset": 96,
+        "entry_length": 8605,
+        "wav_length": 149472
+      },
+      {
+        "id": 15197700,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 593023123,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          1046133059,
+          614665578,
+          344278350,
+          15197700
+        ],
+        "index": 9462,
+        "pack": 519,
+        "offset": 819685,
+        "opus_offset": 96,
+        "entry_length": 4717,
+        "wav_length": 41566
+      },
+      {
+        "id": 449377746,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 519672710,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          1046133059,
+          614665578,
+          344278350,
+          449377746
+        ],
+        "index": 9466,
+        "pack": 519,
+        "offset": 843077,
+        "opus_offset": 96,
+        "entry_length": 6027,
+        "wav_length": 69562
+      },
+      {
+        "id": 644685721,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 509588968,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          1046133059,
+          614665578,
+          344278350,
+          644685721
+        ],
+        "index": 9464,
+        "pack": 519,
+        "offset": 832147,
+        "opus_offset": 96,
+        "entry_length": 5161,
+        "wav_length": 45484
+      },
+      {
+        "id": 928742623,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 759808537,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          1046133059,
+          614665578,
+          344278350,
+          928742623
+        ],
+        "index": 9468,
+        "pack": 519,
+        "offset": 855384,
+        "opus_offset": 96,
+        "entry_length": 9920,
+        "wav_length": 90566
+      },
+      {
+        "id": 954456623,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 606136544,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          1046133059,
+          614665578,
+          344278350,
+          954456623
+        ],
+        "index": 9463,
+        "pack": 519,
+        "offset": 824402,
+        "opus_offset": 96,
+        "entry_length": 7745,
+        "wav_length": 64226
+      }
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_int_wide",
+    "wwise_id": 2310410306,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_charged_voice_02",
+    "wwise_id": 2736715138,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 175492016,
+        "action_type": 2307,
+        "target": 867956634,
+        "raw_hex": "b0cb750a03099af7bb33000000040100000000000000000000000000"
+      },
+      {
+        "id": 265372940,
+        "action_type": 1027,
+        "target": 776569695,
+        "raw_hex": "0c45d10f03045f83492e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 366669849,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          94631262,
+          366669849
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 645705349,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          94631262,
+          645705349
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 768502625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          94631262,
+          768502625
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 844347008,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          94631262,
+          844347008
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 1058247871,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          94631262,
+          1058247871
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 79499402,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          330596075,
+          79499402
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 200667586,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          330596075,
+          200667586
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 266096154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          330596075,
+          266096154
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 285223453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          330596075,
+          285223453
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 472528453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          92628896,
+          330596075,
+          472528453
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 79049991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 307682942,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          474511047,
+          79049991
+        ],
+        "index": 69871,
+        "pack": 1845,
+        "offset": 762364,
+        "opus_offset": 96,
+        "entry_length": 10613,
+        "wav_length": 155606
+      },
+      {
+        "id": 166339454,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 841347844,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          474511047,
+          166339454
+        ],
+        "index": 69867,
+        "pack": 1845,
+        "offset": 710941,
+        "opus_offset": 96,
+        "entry_length": 12442,
+        "wav_length": 191326
+      },
+      {
+        "id": 600361797,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 391389375,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          474511047,
+          600361797
+        ],
+        "index": 69869,
+        "pack": 1845,
+        "offset": 737452,
+        "opus_offset": 96,
+        "entry_length": 11770,
+        "wav_length": 152636
+      },
+      {
+        "id": 670132707,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1050941138,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          474511047,
+          670132707
+        ],
+        "index": 69868,
+        "pack": 1845,
+        "offset": 723383,
+        "opus_offset": 96,
+        "entry_length": 14069,
+        "wav_length": 185072
+      },
+      {
+        "id": 828806888,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 132388328,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          474511047,
+          828806888
+        ],
+        "index": 69870,
+        "pack": 1845,
+        "offset": 749222,
+        "opus_offset": 96,
+        "entry_length": 13142,
+        "wav_length": 187842
+      },
+      {
+        "id": 297007203,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945073152,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          959777131,
+          297007203
+        ],
+        "index": 69876,
+        "pack": 1845,
+        "offset": 869563,
+        "opus_offset": 96,
+        "entry_length": 25542,
+        "wav_length": 554408
+      },
+      {
+        "id": 380164089,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 686070216,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          959777131,
+          380164089
+        ],
+        "index": 69875,
+        "pack": 1845,
+        "offset": 843930,
+        "opus_offset": 96,
+        "entry_length": 25633,
+        "wav_length": 499500
+      },
+      {
+        "id": 848998628,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 420772753,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          959777131,
+          848998628
+        ],
+        "index": 69872,
+        "pack": 1845,
+        "offset": 772977,
+        "opus_offset": 96,
+        "entry_length": 21956,
+        "wav_length": 432556
+      },
+      {
+        "id": 1050448598,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 100717431,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          959777131,
+          1050448598
+        ],
+        "index": 69873,
+        "pack": 1845,
+        "offset": 794933,
+        "opus_offset": 96,
+        "entry_length": 23402,
+        "wav_length": 461444
+      },
+      {
+        "id": 1055756056,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 895587715,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715138,
+          265372940,
+          776569695,
+          959777131,
+          1055756056
+        ],
+        "index": 69874,
+        "pack": 1845,
+        "offset": 818335,
+        "opus_offset": 96,
+        "entry_length": 25595,
+        "wav_length": 514276
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_charged_voice_03",
+    "wwise_id": 2736715139,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 488955767,
+        "action_type": 2051,
+        "target": 867956634,
+        "raw_hex": "77df241d03089af7bb330000000401000016c3000000000000000000"
+      },
+      {
+        "id": 522734504,
+        "action_type": 1027,
+        "target": 776569695,
+        "raw_hex": "a84b281f03045f83492e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 366669849,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          94631262,
+          366669849
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 645705349,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          94631262,
+          645705349
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 768502625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          94631262,
+          768502625
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 844347008,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          94631262,
+          844347008
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 1058247871,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          94631262,
+          1058247871
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 79499402,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          330596075,
+          79499402
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 200667586,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          330596075,
+          200667586
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 266096154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          330596075,
+          266096154
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 285223453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          330596075,
+          285223453
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 472528453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          92628896,
+          330596075,
+          472528453
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 79049991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 307682942,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          474511047,
+          79049991
+        ],
+        "index": 69871,
+        "pack": 1845,
+        "offset": 762364,
+        "opus_offset": 96,
+        "entry_length": 10613,
+        "wav_length": 155606
+      },
+      {
+        "id": 166339454,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 841347844,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          474511047,
+          166339454
+        ],
+        "index": 69867,
+        "pack": 1845,
+        "offset": 710941,
+        "opus_offset": 96,
+        "entry_length": 12442,
+        "wav_length": 191326
+      },
+      {
+        "id": 600361797,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 391389375,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          474511047,
+          600361797
+        ],
+        "index": 69869,
+        "pack": 1845,
+        "offset": 737452,
+        "opus_offset": 96,
+        "entry_length": 11770,
+        "wav_length": 152636
+      },
+      {
+        "id": 670132707,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1050941138,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          474511047,
+          670132707
+        ],
+        "index": 69868,
+        "pack": 1845,
+        "offset": 723383,
+        "opus_offset": 96,
+        "entry_length": 14069,
+        "wav_length": 185072
+      },
+      {
+        "id": 828806888,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 132388328,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          474511047,
+          828806888
+        ],
+        "index": 69870,
+        "pack": 1845,
+        "offset": 749222,
+        "opus_offset": 96,
+        "entry_length": 13142,
+        "wav_length": 187842
+      },
+      {
+        "id": 297007203,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945073152,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          959777131,
+          297007203
+        ],
+        "index": 69876,
+        "pack": 1845,
+        "offset": 869563,
+        "opus_offset": 96,
+        "entry_length": 25542,
+        "wav_length": 554408
+      },
+      {
+        "id": 380164089,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 686070216,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          959777131,
+          380164089
+        ],
+        "index": 69875,
+        "pack": 1845,
+        "offset": 843930,
+        "opus_offset": 96,
+        "entry_length": 25633,
+        "wav_length": 499500
+      },
+      {
+        "id": 848998628,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 420772753,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          959777131,
+          848998628
+        ],
+        "index": 69872,
+        "pack": 1845,
+        "offset": 772977,
+        "opus_offset": 96,
+        "entry_length": 21956,
+        "wav_length": 432556
+      },
+      {
+        "id": 1050448598,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 100717431,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          959777131,
+          1050448598
+        ],
+        "index": 69873,
+        "pack": 1845,
+        "offset": 794933,
+        "opus_offset": 96,
+        "entry_length": 23402,
+        "wav_length": 461444
+      },
+      {
+        "id": 1055756056,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 895587715,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715139,
+          522734504,
+          776569695,
+          959777131,
+          1055756056
+        ],
+        "index": 69874,
+        "pack": 1845,
+        "offset": 818335,
+        "opus_offset": 96,
+        "entry_length": 25595,
+        "wav_length": 514276
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_charged_voice_01",
+    "wwise_id": 2736715137,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 683966510,
+        "action_type": 2051,
+        "target": 867956634,
+        "raw_hex": "2e80c42803089af7bb33000000040100001643000000000000000000"
+      },
+      {
+        "id": 1019934788,
+        "action_type": 1027,
+        "target": 776569695,
+        "raw_hex": "44f8ca3c03045f83492e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 366669849,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          94631262,
+          366669849
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 645705349,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          94631262,
+          645705349
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 768502625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          94631262,
+          768502625
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 844347008,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          94631262,
+          844347008
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 1058247871,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          94631262,
+          1058247871
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 79499402,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          330596075,
+          79499402
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 200667586,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          330596075,
+          200667586
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 266096154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          330596075,
+          266096154
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 285223453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          330596075,
+          285223453
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 472528453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          92628896,
+          330596075,
+          472528453
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 79049991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 307682942,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          474511047,
+          79049991
+        ],
+        "index": 69871,
+        "pack": 1845,
+        "offset": 762364,
+        "opus_offset": 96,
+        "entry_length": 10613,
+        "wav_length": 155606
+      },
+      {
+        "id": 166339454,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 841347844,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          474511047,
+          166339454
+        ],
+        "index": 69867,
+        "pack": 1845,
+        "offset": 710941,
+        "opus_offset": 96,
+        "entry_length": 12442,
+        "wav_length": 191326
+      },
+      {
+        "id": 600361797,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 391389375,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          474511047,
+          600361797
+        ],
+        "index": 69869,
+        "pack": 1845,
+        "offset": 737452,
+        "opus_offset": 96,
+        "entry_length": 11770,
+        "wav_length": 152636
+      },
+      {
+        "id": 670132707,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1050941138,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          474511047,
+          670132707
+        ],
+        "index": 69868,
+        "pack": 1845,
+        "offset": 723383,
+        "opus_offset": 96,
+        "entry_length": 14069,
+        "wav_length": 185072
+      },
+      {
+        "id": 828806888,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 132388328,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          474511047,
+          828806888
+        ],
+        "index": 69870,
+        "pack": 1845,
+        "offset": 749222,
+        "opus_offset": 96,
+        "entry_length": 13142,
+        "wav_length": 187842
+      },
+      {
+        "id": 297007203,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945073152,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          959777131,
+          297007203
+        ],
+        "index": 69876,
+        "pack": 1845,
+        "offset": 869563,
+        "opus_offset": 96,
+        "entry_length": 25542,
+        "wav_length": 554408
+      },
+      {
+        "id": 380164089,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 686070216,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          959777131,
+          380164089
+        ],
+        "index": 69875,
+        "pack": 1845,
+        "offset": 843930,
+        "opus_offset": 96,
+        "entry_length": 25633,
+        "wav_length": 499500
+      },
+      {
+        "id": 848998628,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 420772753,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          959777131,
+          848998628
+        ],
+        "index": 69872,
+        "pack": 1845,
+        "offset": 772977,
+        "opus_offset": 96,
+        "entry_length": 21956,
+        "wav_length": 432556
+      },
+      {
+        "id": 1050448598,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 100717431,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          959777131,
+          1050448598
+        ],
+        "index": 69873,
+        "pack": 1845,
+        "offset": 794933,
+        "opus_offset": 96,
+        "entry_length": 23402,
+        "wav_length": 461444
+      },
+      {
+        "id": 1055756056,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 895587715,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715137,
+          1019934788,
+          776569695,
+          959777131,
+          1055756056
+        ],
+        "index": 69874,
+        "pack": 1845,
+        "offset": 818335,
+        "opus_offset": 96,
+        "entry_length": 25595,
+        "wav_length": 514276
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_charged_voice_04",
+    "wwise_id": 2736715140,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 185207970,
+        "action_type": 2051,
+        "target": 867956634,
+        "raw_hex": "a20c0a0b03089af7bb33000000040100007a43000000000000000000"
+      },
+      {
+        "id": 211733435,
+        "action_type": 1027,
+        "target": 776569695,
+        "raw_hex": "bbcb9e0c03045f83492e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 366669849,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          94631262,
+          366669849
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 645705349,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          94631262,
+          645705349
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 768502625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          94631262,
+          768502625
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 844347008,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          94631262,
+          844347008
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 1058247871,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 94631262,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          94631262,
+          1058247871
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 79499402,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          330596075,
+          79499402
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 200667586,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          330596075,
+          200667586
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 266096154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          330596075,
+          266096154
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 285223453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          330596075,
+          285223453
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 472528453,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 330596075,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          92628896,
+          330596075,
+          472528453
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 79049991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 307682942,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          474511047,
+          79049991
+        ],
+        "index": 69871,
+        "pack": 1845,
+        "offset": 762364,
+        "opus_offset": 96,
+        "entry_length": 10613,
+        "wav_length": 155606
+      },
+      {
+        "id": 166339454,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 841347844,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          474511047,
+          166339454
+        ],
+        "index": 69867,
+        "pack": 1845,
+        "offset": 710941,
+        "opus_offset": 96,
+        "entry_length": 12442,
+        "wav_length": 191326
+      },
+      {
+        "id": 600361797,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 391389375,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          474511047,
+          600361797
+        ],
+        "index": 69869,
+        "pack": 1845,
+        "offset": 737452,
+        "opus_offset": 96,
+        "entry_length": 11770,
+        "wav_length": 152636
+      },
+      {
+        "id": 670132707,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1050941138,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          474511047,
+          670132707
+        ],
+        "index": 69868,
+        "pack": 1845,
+        "offset": 723383,
+        "opus_offset": 96,
+        "entry_length": 14069,
+        "wav_length": 185072
+      },
+      {
+        "id": 828806888,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 132388328,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 474511047,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          474511047,
+          828806888
+        ],
+        "index": 69870,
+        "pack": 1845,
+        "offset": 749222,
+        "opus_offset": 96,
+        "entry_length": 13142,
+        "wav_length": 187842
+      },
+      {
+        "id": 297007203,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945073152,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          959777131,
+          297007203
+        ],
+        "index": 69876,
+        "pack": 1845,
+        "offset": 869563,
+        "opus_offset": 96,
+        "entry_length": 25542,
+        "wav_length": 554408
+      },
+      {
+        "id": 380164089,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 686070216,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          959777131,
+          380164089
+        ],
+        "index": 69875,
+        "pack": 1845,
+        "offset": 843930,
+        "opus_offset": 96,
+        "entry_length": 25633,
+        "wav_length": 499500
+      },
+      {
+        "id": 848998628,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 420772753,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          959777131,
+          848998628
+        ],
+        "index": 69872,
+        "pack": 1845,
+        "offset": 772977,
+        "opus_offset": 96,
+        "entry_length": 21956,
+        "wav_length": 432556
+      },
+      {
+        "id": 1050448598,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 100717431,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          959777131,
+          1050448598
+        ],
+        "index": 69873,
+        "pack": 1845,
+        "offset": 794933,
+        "opus_offset": 96,
+        "entry_length": 23402,
+        "wav_length": 461444
+      },
+      {
+        "id": 1055756056,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 895587715,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 959777131,
+        "route": [
+          2736715140,
+          211733435,
+          776569695,
+          959777131,
+          1055756056
+        ],
+        "index": 69874,
+        "pack": 1845,
+        "offset": 818335,
+        "opus_offset": 96,
+        "entry_length": 25595,
+        "wav_length": 514276
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_shell_tap",
+    "wwise_id": 3389543889,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 228150706,
+        "action_type": 1027,
+        "target": 828418213,
+        "raw_hex": "b24d990d0304a5a86031000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 250436740,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 566221584,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 828418213,
+        "route": [
+          3389543889,
+          228150706,
+          828418213,
+          250436740
+        ],
+        "index": 69822,
+        "pack": 1845,
+        "offset": 230776,
+        "opus_offset": 96,
+        "entry_length": 3299,
+        "wav_length": 23278
+      },
+      {
+        "id": 268540544,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 762467511,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 828418213,
+        "route": [
+          3389543889,
+          228150706,
+          828418213,
+          268540544
+        ],
+        "index": 69821,
+        "pack": 1845,
+        "offset": 227621,
+        "opus_offset": 96,
+        "entry_length": 3155,
+        "wav_length": 23638
+      },
+      {
+        "id": 764492100,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 543099709,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 828418213,
+        "route": [
+          3389543889,
+          228150706,
+          828418213,
+          764492100
+        ],
+        "index": 69823,
+        "pack": 1845,
+        "offset": 234075,
+        "opus_offset": 96,
+        "entry_length": 3007,
+        "wav_length": 20628
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_aim_exit",
+    "wwise_id": 21240617,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 800999925,
+        "action_type": 1027,
+        "target": 194504074,
+        "raw_hex": "f549be2f03048ae5970b000000045e96b01400000000"
+      },
+      {
+        "id": 441043303,
+        "action_type": 259,
+        "target": 796811417,
+        "raw_hex": "67c9491a030199607e2f00013af401000000080600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 471855351,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 630774358,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 194504074,
+        "route": [
+          21240617,
+          800999925,
+          194504074,
+          471855351
+        ],
+        "index": 69777,
+        "pack": 1844,
+        "offset": 647928,
+        "opus_offset": 96,
+        "entry_length": 3418,
+        "wav_length": 26036
+      },
+      {
+        "id": 786908729,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 406221593,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 194504074,
+        "route": [
+          21240617,
+          800999925,
+          194504074,
+          786908729
+        ],
+        "index": 69778,
+        "pack": 1844,
+        "offset": 651346,
+        "opus_offset": 96,
+        "entry_length": 2959,
+        "wav_length": 21976
+      },
+      {
+        "id": 874003111,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 872853787,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 194504074,
+        "route": [
+          21240617,
+          800999925,
+          194504074,
+          874003111
+        ],
+        "index": 69776,
+        "pack": 1844,
+        "offset": 645750,
+        "opus_offset": 96,
+        "entry_length": 2178,
+        "wav_length": 14614
+      }
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_ext_wide",
+    "wwise_id": 3576454644,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_fire",
+    "wwise_id": 483284851,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 377678789,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "c5eb821602013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 90231451,
+        "action_type": 259,
+        "target": 853039806,
+        "raw_hex": "9bd260050301be5ad83200013a2c01000000040600"
+      },
+      {
+        "id": 121092754,
+        "action_type": 259,
+        "target": 768383684,
+        "raw_hex": "92ba37070301c49acc2d00013a2c01000000040600"
+      },
+      {
+        "id": 425461920,
+        "action_type": 1027,
+        "target": 853039806,
+        "raw_hex": "a0085c190304be5ad832000000045e96b01400000000"
+      },
+      {
+        "id": 693816121,
+        "action_type": 1027,
+        "target": 768383684,
+        "raw_hex": "39cb5a290304c49acc2d000000045e96b01400000000"
+      },
+      {
+        "id": 902841890,
+        "action_type": 259,
+        "target": 796811417,
+        "raw_hex": "2246d035030199607e2f00013ac800000000040600"
+      },
+      {
+        "id": 967660005,
+        "action_type": 1027,
+        "target": 814448213,
+        "raw_hex": "e551ad390304557e8b30000000045e96b01400000000"
+      },
+      {
+        "id": 573064017,
+        "action_type": 1027,
+        "target": 895236881,
+        "raw_hex": "514328220304113b5c350001393200000000045e96b01400000000"
+      },
+      {
+        "id": 978299168,
+        "action_type": 1027,
+        "target": 589477714,
+        "raw_hex": "20a94f3a030452b722230001396400000000045e96b01400000000"
+      },
+      {
+        "id": 987795275,
+        "action_type": 259,
+        "target": 724363216,
+        "raw_hex": "4b8fe03a0301d0e72c2b00013a6400000000040600"
+      },
+      {
+        "id": 417829693,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "3d93e7180201a981c81900013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 115007218,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 290438290,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125567611,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          125567611,
+          115007218
+        ],
+        "index": 69794,
+        "pack": 1844,
+        "offset": 911542,
+        "opus_offset": 96,
+        "entry_length": 39925,
+        "wav_length": 853636
+      },
+      {
+        "id": 139689972,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 774312855,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125567611,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          125567611,
+          139689972
+        ],
+        "index": 69791,
+        "pack": 1844,
+        "offset": 797096,
+        "opus_offset": 96,
+        "entry_length": 34504,
+        "wav_length": 775120
+      },
+      {
+        "id": 253063776,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 997960822,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125567611,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          125567611,
+          253063776
+        ],
+        "index": 69795,
+        "pack": 1844,
+        "offset": 951467,
+        "opus_offset": 96,
+        "entry_length": 37617,
+        "wav_length": 863624
+      },
+      {
+        "id": 409343099,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 357329558,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125567611,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          125567611,
+          409343099
+        ],
+        "index": 69792,
+        "pack": 1844,
+        "offset": 831600,
+        "opus_offset": 96,
+        "entry_length": 40486,
+        "wav_length": 887108
+      },
+      {
+        "id": 1024793385,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 596191254,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125567611,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          125567611,
+          1024793385
+        ],
+        "index": 69793,
+        "pack": 1844,
+        "offset": 872086,
+        "opus_offset": 96,
+        "entry_length": 39456,
+        "wav_length": 847168
+      },
+      {
+        "id": 83305040,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 736248043,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 444994881,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          444994881,
+          83305040
+        ],
+        "index": 69799,
+        "pack": 1845,
+        "offset": 25276,
+        "opus_offset": 96,
+        "entry_length": 24486,
+        "wav_length": 534168
+      },
+      {
+        "id": 450669197,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 43199256,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 444994881,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          444994881,
+          450669197
+        ],
+        "index": 69796,
+        "pack": 1844,
+        "offset": 989084,
+        "opus_offset": 96,
+        "entry_length": 21841,
+        "wav_length": 526568
+      },
+      {
+        "id": 658492384,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 569580965,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 444994881,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          444994881,
+          658492384
+        ],
+        "index": 69798,
+        "pack": 1845,
+        "offset": 0,
+        "opus_offset": 96,
+        "entry_length": 25276,
+        "wav_length": 545536
+      },
+      {
+        "id": 739235872,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 888120602,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 444994881,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          444994881,
+          739235872
+        ],
+        "index": 69797,
+        "pack": 1844,
+        "offset": 1010925,
+        "opus_offset": 96,
+        "entry_length": 22180,
+        "wav_length": 516656
+      },
+      {
+        "id": 1047501127,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 971124399,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 444994881,
+        "route": [
+          483284851,
+          425461920,
+          853039806,
+          444994881,
+          1047501127
+        ],
+        "index": 69800,
+        "pack": 1845,
+        "offset": 49762,
+        "opus_offset": 96,
+        "entry_length": 23676,
+        "wav_length": 526884
+      },
+      {
+        "id": 268485704,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 99454899,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 224835404,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          224835404,
+          268485704
+        ],
+        "index": 69805,
+        "pack": 1845,
+        "offset": 106919,
+        "opus_offset": 96,
+        "entry_length": 8457,
+        "wav_length": 179462
+      },
+      {
+        "id": 279127440,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 544876186,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 224835404,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          224835404,
+          279127440
+        ],
+        "index": 69803,
+        "pack": 1845,
+        "offset": 90056,
+        "opus_offset": 96,
+        "entry_length": 8312,
+        "wav_length": 178940
+      },
+      {
+        "id": 316836364,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 245031060,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 224835404,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          224835404,
+          316836364
+        ],
+        "index": 69802,
+        "pack": 1845,
+        "offset": 81448,
+        "opus_offset": 96,
+        "entry_length": 8608,
+        "wav_length": 189356
+      },
+      {
+        "id": 613925562,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 814591,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 224835404,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          224835404,
+          613925562
+        ],
+        "index": 69804,
+        "pack": 1845,
+        "offset": 98368,
+        "opus_offset": 96,
+        "entry_length": 8551,
+        "wav_length": 182288
+      },
+      {
+        "id": 682706338,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 436813619,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 224835404,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          224835404,
+          682706338
+        ],
+        "index": 69801,
+        "pack": 1845,
+        "offset": 73438,
+        "opus_offset": 96,
+        "entry_length": 8010,
+        "wav_length": 186182
+      },
+      {
+        "id": 412993998,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 676563352,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 398061714,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          398061714,
+          412993998
+        ],
+        "index": 69807,
+        "pack": 1845,
+        "offset": 123507,
+        "opus_offset": 96,
+        "entry_length": 8158,
+        "wav_length": 182866
+      },
+      {
+        "id": 647185896,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 513785096,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 398061714,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          398061714,
+          647185896
+        ],
+        "index": 69809,
+        "pack": 1845,
+        "offset": 139776,
+        "opus_offset": 96,
+        "entry_length": 8276,
+        "wav_length": 176848
+      },
+      {
+        "id": 763018283,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187614111,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 398061714,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          398061714,
+          763018283
+        ],
+        "index": 69808,
+        "pack": 1845,
+        "offset": 131665,
+        "opus_offset": 96,
+        "entry_length": 8111,
+        "wav_length": 176134
+      },
+      {
+        "id": 823726137,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 906019382,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 398061714,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          398061714,
+          823726137
+        ],
+        "index": 69806,
+        "pack": 1845,
+        "offset": 115376,
+        "opus_offset": 96,
+        "entry_length": 8131,
+        "wav_length": 174582
+      },
+      {
+        "id": 872448152,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 839089607,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 398061714,
+        "route": [
+          483284851,
+          693816121,
+          768383684,
+          398061714,
+          872448152
+        ],
+        "index": 69810,
+        "pack": 1845,
+        "offset": 148052,
+        "opus_offset": 96,
+        "entry_length": 8472,
+        "wav_length": 187198
+      },
+      {
+        "id": 413377528,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 999684298,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 814448213,
+        "route": [
+          483284851,
+          967660005,
+          814448213,
+          413377528
+        ],
+        "index": 69811,
+        "pack": 1845,
+        "offset": 156524,
+        "opus_offset": 96,
+        "entry_length": 9048,
+        "wav_length": 153740
+      },
+      {
+        "id": 660570470,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 142240121,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 814448213,
+        "route": [
+          483284851,
+          967660005,
+          814448213,
+          660570470
+        ],
+        "index": 69813,
+        "pack": 1845,
+        "offset": 173871,
+        "opus_offset": 96,
+        "entry_length": 9520,
+        "wav_length": 154312
+      },
+      {
+        "id": 875510542,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 757111204,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 814448213,
+        "route": [
+          483284851,
+          967660005,
+          814448213,
+          875510542
+        ],
+        "index": 69812,
+        "pack": 1845,
+        "offset": 165572,
+        "opus_offset": 96,
+        "entry_length": 8299,
+        "wav_length": 123504
+      },
+      {
+        "id": 895236881,
+        "type": 2,
+        "plugin": 26804226,
+        "stream": 0,
+        "media": 968051339,
+        "media_size": 0,
+        "source_bits": 0,
+        "route": [
+          483284851,
+          573064017,
+          895236881
+        ]
+      },
+      {
+        "id": 88834527,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 94171987,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 589477714,
+        "route": [
+          483284851,
+          978299168,
+          589477714,
+          88834527
+        ],
+        "index": 68243,
+        "pack": 1829,
+        "offset": 991083,
+        "opus_offset": 96,
+        "entry_length": 4201,
+        "wav_length": 38496
+      },
+      {
+        "id": 105124605,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 241565406,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 589477714,
+        "route": [
+          483284851,
+          978299168,
+          589477714,
+          105124605
+        ],
+        "index": 68242,
+        "pack": 1829,
+        "offset": 986942,
+        "opus_offset": 96,
+        "entry_length": 4141,
+        "wav_length": 38590
+      },
+      {
+        "id": 503411487,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 954015445,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 589477714,
+        "route": [
+          483284851,
+          978299168,
+          589477714,
+          503411487
+        ],
+        "index": 68240,
+        "pack": 1829,
+        "offset": 978672,
+        "opus_offset": 96,
+        "entry_length": 4064,
+        "wav_length": 38496
+      },
+      {
+        "id": 783791126,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 51902239,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 589477714,
+        "route": [
+          483284851,
+          978299168,
+          589477714,
+          783791126
+        ],
+        "index": 68241,
+        "pack": 1829,
+        "offset": 982736,
+        "opus_offset": 96,
+        "entry_length": 4206,
+        "wav_length": 38496
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_trigger",
+    "wwise_id": 2499776449,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 919768314,
+        "action_type": 1027,
+        "target": 692141506,
+        "raw_hex": "fa8cd2360304c23d4129000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 784922858,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 823345127,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 692141506,
+        "route": [
+          2499776449,
+          919768314,
+          692141506,
+          784922858
+        ],
+        "index": 69785,
+        "pack": 1844,
+        "offset": 739393,
+        "opus_offset": 96,
+        "entry_length": 2131,
+        "wav_length": 15072
+      },
+      {
+        "id": 877205547,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 301056450,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 692141506,
+        "route": [
+          2499776449,
+          919768314,
+          692141506,
+          877205547
+        ],
+        "index": 69786,
+        "pack": 1844,
+        "offset": 741524,
+        "opus_offset": 96,
+        "entry_length": 2118,
+        "wav_length": 15018
+      },
+      {
+        "id": 1044249119,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 518635738,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 692141506,
+        "route": [
+          2499776449,
+          919768314,
+          692141506,
+          1044249119
+        ],
+        "index": 69787,
+        "pack": 1844,
+        "offset": 743642,
+        "opus_offset": 96,
+        "entry_length": 2257,
+        "wav_length": 15392
+      }
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_ext_street_wide",
+    "wwise_id": 656030410,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_charge",
+    "wwise_id": 705251719,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 1011304395,
+        "action_type": 1027,
+        "target": 68095699,
+        "raw_hex": "cb47473c0304d30e0f04000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 266848561,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 460764658,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 68095699,
+        "route": [
+          705251719,
+          1011304395,
+          68095699,
+          266848561
+        ],
+        "index": 69855,
+        "pack": 1845,
+        "offset": 460671,
+        "opus_offset": 96,
+        "entry_length": 16012,
+        "wav_length": 142740
+      },
+      {
+        "id": 415119000,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 427286066,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 68095699,
+        "route": [
+          705251719,
+          1011304395,
+          68095699,
+          415119000
+        ],
+        "index": 69856,
+        "pack": 1845,
+        "offset": 476683,
+        "opus_offset": 96,
+        "entry_length": 14012,
+        "wav_length": 134176
+      },
+      {
+        "id": 479191976,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 684402473,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 68095699,
+        "route": [
+          705251719,
+          1011304395,
+          68095699,
+          479191976
+        ],
+        "index": 69854,
+        "pack": 1845,
+        "offset": 444181,
+        "opus_offset": 96,
+        "entry_length": 16490,
+        "wav_length": 145954
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_close",
+    "wwise_id": 1987338273,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 846176548,
+        "action_type": 1027,
+        "target": 465888363,
+        "raw_hex": "24a16f3203046be4c41b000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 500210814,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 3647368,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 465888363,
+        "route": [
+          1987338273,
+          846176548,
+          465888363,
+          500210814
+        ],
+        "index": 69782,
+        "pack": 1844,
+        "offset": 725187,
+        "opus_offset": 96,
+        "entry_length": 4564,
+        "wav_length": 71464
+      },
+      {
+        "id": 521527784,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 138809100,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 465888363,
+        "route": [
+          1987338273,
+          846176548,
+          465888363,
+          521527784
+        ],
+        "index": 69784,
+        "pack": 1844,
+        "offset": 734086,
+        "opus_offset": 96,
+        "entry_length": 5307,
+        "wav_length": 76444
+      },
+      {
+        "id": 929817278,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 669094152,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 465888363,
+        "route": [
+          1987338273,
+          846176548,
+          465888363,
+          929817278
+        ],
+        "index": 69783,
+        "pack": 1844,
+        "offset": 729751,
+        "opus_offset": 96,
+        "entry_length": 4335,
+        "wav_length": 62760
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_melee",
+    "wwise_id": 2431147529,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 632164150,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "360fae2502013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 221198859,
+        "action_type": 1027,
+        "target": 983863113,
+        "raw_hex": "0b3a2f0d0304498fa43a000000045e96b01400000000"
+      },
+      {
+        "id": 931548927,
+        "action_type": 259,
+        "target": 814448213,
+        "raw_hex": "ff4e86370301557e8b3000013a6400000000040600"
+      },
+      {
+        "id": 178723422,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "5e1aa70a0201a981c81900013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 126118542,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1063416863,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 983863113,
+        "route": [
+          2431147529,
+          221198859,
+          983863113,
+          126118542
+        ],
+        "index": 69832,
+        "pack": 1845,
+        "offset": 301005,
+        "opus_offset": 96,
+        "entry_length": 9620,
+        "wav_length": 293888
+      },
+      {
+        "id": 235760539,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 495590079,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 983863113,
+        "route": [
+          2431147529,
+          221198859,
+          983863113,
+          235760539
+        ],
+        "index": 69830,
+        "pack": 1845,
+        "offset": 281925,
+        "opus_offset": 96,
+        "entry_length": 9888,
+        "wav_length": 303676
+      },
+      {
+        "id": 649771732,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 410493800,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 983863113,
+        "route": [
+          2431147529,
+          221198859,
+          983863113,
+          649771732
+        ],
+        "index": 69831,
+        "pack": 1845,
+        "offset": 291813,
+        "opus_offset": 96,
+        "entry_length": 9192,
+        "wav_length": 304504
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_shutdown",
+    "wwise_id": 2631003289,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 208658339,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "a3df6f0c02013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 625459939,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "e3c247250201a981c81900013ac800000000040600"
+      },
+      {
+        "id": 140958502,
+        "action_type": 258,
+        "target": 796811417,
+        "raw_hex": "26db6608020199607e2f00013a6400000000040600"
+      },
+      {
+        "id": 625318434,
+        "action_type": 258,
+        "target": 814448213,
+        "raw_hex": "229a45250201557e8b3000013a6400000000040600"
+      }
+    ],
+    "sounds": []
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_armed",
+    "wwise_id": 1095340292,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 980692531,
+        "action_type": 1027,
+        "target": 647637627,
+        "raw_hex": "332e743a03047b2a9a26000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 208689674,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 776698865,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 647637627,
+        "route": [
+          1095340292,
+          980692531,
+          647637627,
+          208689674
+        ],
+        "index": 69835,
+        "pack": 1845,
+        "offset": 335700,
+        "opus_offset": 96,
+        "entry_length": 14220,
+        "wav_length": 208952
+      },
+      {
+        "id": 441530315,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 19902852,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 647637627,
+        "route": [
+          1095340292,
+          980692531,
+          647637627,
+          441530315
+        ],
+        "index": 69834,
+        "pack": 1845,
+        "offset": 323797,
+        "opus_offset": 96,
+        "entry_length": 11903,
+        "wav_length": 180700
+      },
+      {
+        "id": 1005899748,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 28296574,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 647637627,
+        "route": [
+          1095340292,
+          980692531,
+          647637627,
+          1005899748
+        ],
+        "index": 69833,
+        "pack": 1845,
+        "offset": 310625,
+        "opus_offset": 96,
+        "entry_length": 13172,
+        "wav_length": 214168
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_aim_enter",
+    "wwise_id": 3706403637,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 799655490,
+        "action_type": 1027,
+        "target": 214542509,
+        "raw_hex": "42c6a92f0304ada8c90c000000045e96b01400000000"
+      },
+      {
+        "id": 114076100,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "c4a9cc060201a981c81900013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 888598,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 506385555,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 214542509,
+        "route": [
+          3706403637,
+          799655490,
+          214542509,
+          888598
+        ],
+        "index": 69773,
+        "pack": 1844,
+        "offset": 576601,
+        "opus_offset": 96,
+        "entry_length": 3636,
+        "wav_length": 22830
+      },
+      {
+        "id": 868583148,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 214120498,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 214542509,
+        "route": [
+          3706403637,
+          799655490,
+          214542509,
+          868583148
+        ],
+        "index": 69772,
+        "pack": 1844,
+        "offset": 573044,
+        "opus_offset": 96,
+        "entry_length": 3557,
+        "wav_length": 26214
+      },
+      {
+        "id": 885990263,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 871345129,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 214542509,
+        "route": [
+          3706403637,
+          799655490,
+          214542509,
+          885990263
+        ],
+        "index": 69774,
+        "pack": 1844,
+        "offset": 580237,
+        "opus_offset": 96,
+        "entry_length": 2925,
+        "wav_length": 16824
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_reload",
+    "wwise_id": 2940892816,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 626541093,
+        "action_type": 1027,
+        "target": 29232166,
+        "raw_hex": "254258250304260cbe01000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 184638473,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 72421111,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 412699057,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          412699057,
+          184638473
+        ],
+        "index": 69853,
+        "pack": 1845,
+        "offset": 438582,
+        "opus_offset": 96,
+        "entry_length": 5599,
+        "wav_length": 76444
+      },
+      {
+        "id": 428544454,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 737768296,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 412699057,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          412699057,
+          428544454
+        ],
+        "index": 69851,
+        "pack": 1845,
+        "offset": 428972,
+        "opus_offset": 96,
+        "entry_length": 4845,
+        "wav_length": 71464
+      },
+      {
+        "id": 862583620,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 64355642,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 412699057,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          412699057,
+          862583620
+        ],
+        "index": 69852,
+        "pack": 1845,
+        "offset": 433817,
+        "opus_offset": 96,
+        "entry_length": 4765,
+        "wav_length": 62760
+      },
+      {
+        "id": 79697126,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 98644067,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 434056113,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          434056113,
+          79697126
+        ],
+        "index": 69850,
+        "pack": 1845,
+        "offset": 416474,
+        "opus_offset": 96,
+        "entry_length": 12498,
+        "wav_length": 168208
+      },
+      {
+        "id": 462551898,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 889141631,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 434056113,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          434056113,
+          462551898
+        ],
+        "index": 69849,
+        "pack": 1845,
+        "offset": 406812,
+        "opus_offset": 96,
+        "entry_length": 9662,
+        "wav_length": 149472
+      },
+      {
+        "id": 1018728309,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 479078506,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 434056113,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          434056113,
+          1018728309
+        ],
+        "index": 69848,
+        "pack": 1845,
+        "offset": 398095,
+        "opus_offset": 96,
+        "entry_length": 8717,
+        "wav_length": 135852
+      },
+      {
+        "id": 70601491,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 98894584,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 1015673167,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          1015673167,
+          70601491
+        ],
+        "index": 69847,
+        "pack": 1845,
+        "offset": 394341,
+        "opus_offset": 96,
+        "entry_length": 3754,
+        "wav_length": 46264
+      },
+      {
+        "id": 176332118,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 964055404,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 1015673167,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          1015673167,
+          176332118
+        ],
+        "index": 69845,
+        "pack": 1845,
+        "offset": 386476,
+        "opus_offset": 96,
+        "entry_length": 4319,
+        "wav_length": 58964
+      },
+      {
+        "id": 998852091,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 27778878,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 1015673167,
+        "route": [
+          2940892816,
+          626541093,
+          29232166,
+          1015673167,
+          998852091
+        ],
+        "index": 69846,
+        "pack": 1845,
+        "offset": 390795,
+        "opus_offset": 96,
+        "entry_length": 3546,
+        "wav_length": 40676
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_open_single",
+    "wwise_id": 257890318,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 637668907,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "2b0e022602013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 1070505042,
+        "action_type": 1027,
+        "target": 934552924,
+        "raw_hex": "529cce3f03045c25b437000000045e96b01400000000"
+      },
+      {
+        "id": 194801094,
+        "action_type": 259,
+        "target": 814448213,
+        "raw_hex": "c66d9c0b0301557e8b3000013a6400000000040600"
+      },
+      {
+        "id": 37175571,
+        "action_type": 1027,
+        "target": 344278350,
+        "raw_hex": "1341370203044e458514000000045e96b01400000000"
+      },
+      {
+        "id": 251297410,
+        "action_type": 258,
+        "target": 432570793,
+        "raw_hex": "827efa0e0201a981c81900013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 467097028,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 520005922,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 934552924,
+        "route": [
+          257890318,
+          1070505042,
+          934552924,
+          467097028
+        ],
+        "index": 69838,
+        "pack": 1845,
+        "offset": 362480,
+        "opus_offset": 96,
+        "entry_length": 6325,
+        "wav_length": 92044
+      },
+      {
+        "id": 503818833,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 862563742,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 934552924,
+        "route": [
+          257890318,
+          1070505042,
+          934552924,
+          503818833
+        ],
+        "index": 69837,
+        "pack": 1845,
+        "offset": 356693,
+        "opus_offset": 96,
+        "entry_length": 5787,
+        "wav_length": 90308
+      },
+      {
+        "id": 863913882,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 289831400,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 934552924,
+        "route": [
+          257890318,
+          1070505042,
+          934552924,
+          863913882
+        ],
+        "index": 69836,
+        "pack": 1845,
+        "offset": 349920,
+        "opus_offset": 96,
+        "entry_length": 6773,
+        "wav_length": 105024
+      },
+      {
+        "id": 15197700,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 593023123,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          257890318,
+          37175571,
+          344278350,
+          15197700
+        ],
+        "index": 9462,
+        "pack": 519,
+        "offset": 819685,
+        "opus_offset": 96,
+        "entry_length": 4717,
+        "wav_length": 41566
+      },
+      {
+        "id": 449377746,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 519672710,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          257890318,
+          37175571,
+          344278350,
+          449377746
+        ],
+        "index": 9466,
+        "pack": 519,
+        "offset": 843077,
+        "opus_offset": 96,
+        "entry_length": 6027,
+        "wav_length": 69562
+      },
+      {
+        "id": 644685721,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 509588968,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          257890318,
+          37175571,
+          344278350,
+          644685721
+        ],
+        "index": 9464,
+        "pack": 519,
+        "offset": 832147,
+        "opus_offset": 96,
+        "entry_length": 5161,
+        "wav_length": 45484
+      },
+      {
+        "id": 928742623,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 759808537,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          257890318,
+          37175571,
+          344278350,
+          928742623
+        ],
+        "index": 9468,
+        "pack": 519,
+        "offset": 855384,
+        "opus_offset": 96,
+        "entry_length": 9920,
+        "wav_length": 90566
+      },
+      {
+        "id": 954456623,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 606136544,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 344278350,
+        "route": [
+          257890318,
+          37175571,
+          344278350,
+          954456623
+        ],
+        "index": 9463,
+        "pack": 519,
+        "offset": 824402,
+        "opus_offset": 96,
+        "entry_length": 7745,
+        "wav_length": 64226
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_shutdown",
+    "wwise_id": 2666706245,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 490080943,
+        "action_type": 259,
+        "target": 68095699,
+        "raw_hex": "af0a361d0301d30e0f0400013a6400000000040600"
+      },
+      {
+        "id": 130127964,
+        "action_type": 6659,
+        "target": 29232166,
+        "raw_hex": "5c98c107031a260cbe01000000"
+      }
+    ],
+    "sounds": []
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_ext_enclosed",
+    "wwise_id": 3540393900,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_int",
+    "wwise_id": 3238119316,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_ext_narrow",
+    "wwise_id": 2310590332,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_ext_street",
+    "wwise_id": 3544400396,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_shotgun_tech_satara_ext_open",
+    "wwise_id": 2301634709,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_shell_in",
+    "wwise_id": 4058411511,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 485481095,
+        "action_type": 1027,
+        "target": 38817781,
+        "raw_hex": "87daef1c0304f54f5002000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 62081874,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 883890160,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 38817781,
+        "route": [
+          4058411511,
+          485481095,
+          38817781,
+          62081874
+        ],
+        "index": 69818,
+        "pack": 1845,
+        "offset": 215110,
+        "opus_offset": 96,
+        "entry_length": 4044,
+        "wav_length": 49816
+      },
+      {
+        "id": 126426595,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 267975745,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 38817781,
+        "route": [
+          4058411511,
+          485481095,
+          38817781,
+          126426595
+        ],
+        "index": 69820,
+        "pack": 1845,
+        "offset": 223591,
+        "opus_offset": 96,
+        "entry_length": 4030,
+        "wav_length": 49004
+      },
+      {
+        "id": 481955175,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 16422345,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 38817781,
+        "route": [
+          4058411511,
+          485481095,
+          38817781,
+          481955175
+        ],
+        "index": 69819,
+        "pack": 1845,
+        "offset": 219154,
+        "opus_offset": 96,
+        "entry_length": 4437,
+        "wav_length": 58964
+      }
+    ]
+  },
+  {
+    "event": "w_gun_shotgun_tech_satara_unequip",
+    "wwise_id": 4043181166,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 947131956,
+        "action_type": 258,
+        "target": 1072075831,
+        "raw_hex": "3416743802013794e63f00013a6400000000040600"
+      },
+      {
+        "id": 853831520,
+        "action_type": 1027,
+        "target": 149469164,
+        "raw_hex": "606fe4320304ecb7e808000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 70153528,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 797354402,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 149469164,
+        "route": [
+          4043181166,
+          853831520,
+          149469164,
+          70153528
+        ],
+        "index": 69824,
+        "pack": 1845,
+        "offset": 237082,
+        "opus_offset": 96,
+        "entry_length": 8957,
+        "wav_length": 151300
+      },
+      {
+        "id": 536330158,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 930626577,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 149469164,
+        "route": [
+          4043181166,
+          853831520,
+          149469164,
+          536330158
+        ],
+        "index": 69825,
+        "pack": 1845,
+        "offset": 246039,
+        "opus_offset": 96,
+        "entry_length": 9182,
+        "wav_length": 167300
+      },
+      {
+        "id": 952572963,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 791661938,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 149469164,
+        "route": [
+          4043181166,
+          853831520,
+          149469164,
+          952572963
+        ],
+        "index": 69826,
+        "pack": 1845,
+        "offset": 255221,
+        "opus_offset": 96,
+        "entry_length": 8107,
+        "wav_length": 141672
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_voice_01",
+    "wwise_id": 3417213486,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 826706563,
+        "action_type": 2307,
+        "target": 867956634,
+        "raw_hex": "838a463103099af7bb33000000040100000000000000000000000000"
+      },
+      {
+        "id": 2067728,
+        "action_type": 1027,
+        "target": 16400898,
+        "raw_hex": "108d1f0003040242fa00000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 110891987,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 19876005,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          350808931,
+          110891987
+        ],
+        "index": 69877,
+        "pack": 1845,
+        "offset": 895105,
+        "opus_offset": 96,
+        "entry_length": 11400,
+        "wav_length": 161100
+      },
+      {
+        "id": 684548373,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 70248058,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          350808931,
+          684548373
+        ],
+        "index": 69878,
+        "pack": 1845,
+        "offset": 906505,
+        "opus_offset": 96,
+        "entry_length": 10801,
+        "wav_length": 146156
+      },
+      {
+        "id": 755230153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 846186287,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          350808931,
+          755230153
+        ],
+        "index": 69881,
+        "pack": 1845,
+        "offset": 943523,
+        "opus_offset": 96,
+        "entry_length": 13424,
+        "wav_length": 162174
+      },
+      {
+        "id": 896532038,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 798721258,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          350808931,
+          896532038
+        ],
+        "index": 69880,
+        "pack": 1845,
+        "offset": 930552,
+        "opus_offset": 96,
+        "entry_length": 12971,
+        "wav_length": 165250
+      },
+      {
+        "id": 1048543424,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 373204355,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          350808931,
+          1048543424
+        ],
+        "index": 69879,
+        "pack": 1845,
+        "offset": 917306,
+        "opus_offset": 96,
+        "entry_length": 13246,
+        "wav_length": 162162
+      },
+      {
+        "id": 153050337,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          223100982,
+          153050337
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 157257691,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          223100982,
+          157257691
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 186217149,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          223100982,
+          186217149
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 681210824,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          223100982,
+          681210824
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 940380046,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          223100982,
+          940380046
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 72904499,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          726462078,
+          72904499
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 362823853,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          726462078,
+          362823853
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 584711837,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          726462078,
+          584711837
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 650264842,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          726462078,
+          650264842
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 756734071,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          455079460,
+          726462078,
+          756734071
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 237374241,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 959891278,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          742376620,
+          237374241
+        ],
+        "index": 69885,
+        "pack": 1845,
+        "offset": 1006026,
+        "opus_offset": 96,
+        "entry_length": 16063,
+        "wav_length": 315392
+      },
+      {
+        "id": 582521114,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 747661734,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          742376620,
+          582521114
+        ],
+        "index": 69884,
+        "pack": 1845,
+        "offset": 988539,
+        "opus_offset": 96,
+        "entry_length": 17487,
+        "wav_length": 354308
+      },
+      {
+        "id": 718244684,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 776319515,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          742376620,
+          718244684
+        ],
+        "index": 69882,
+        "pack": 1845,
+        "offset": 956947,
+        "opus_offset": 96,
+        "entry_length": 15862,
+        "wav_length": 315392
+      },
+      {
+        "id": 803530420,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 782469043,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          742376620,
+          803530420
+        ],
+        "index": 69883,
+        "pack": 1845,
+        "offset": 972809,
+        "opus_offset": 96,
+        "entry_length": 15730,
+        "wav_length": 314344
+      },
+      {
+        "id": 966608752,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 624521669,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213486,
+          2067728,
+          16400898,
+          742376620,
+          966608752
+        ],
+        "index": 69886,
+        "pack": 1845,
+        "offset": 1022089,
+        "opus_offset": 96,
+        "entry_length": 15939,
+        "wav_length": 323576
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_voice_03",
+    "wwise_id": 3417213484,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 106653328,
+        "action_type": 2051,
+        "target": 867956634,
+        "raw_hex": "90665b0603089af7bb330000000401000016c3000000000000000000"
+      },
+      {
+        "id": 416390006,
+        "action_type": 1027,
+        "target": 16400898,
+        "raw_hex": "769bd11803040242fa00000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 110891987,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 19876005,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          350808931,
+          110891987
+        ],
+        "index": 69877,
+        "pack": 1845,
+        "offset": 895105,
+        "opus_offset": 96,
+        "entry_length": 11400,
+        "wav_length": 161100
+      },
+      {
+        "id": 684548373,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 70248058,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          350808931,
+          684548373
+        ],
+        "index": 69878,
+        "pack": 1845,
+        "offset": 906505,
+        "opus_offset": 96,
+        "entry_length": 10801,
+        "wav_length": 146156
+      },
+      {
+        "id": 755230153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 846186287,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          350808931,
+          755230153
+        ],
+        "index": 69881,
+        "pack": 1845,
+        "offset": 943523,
+        "opus_offset": 96,
+        "entry_length": 13424,
+        "wav_length": 162174
+      },
+      {
+        "id": 896532038,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 798721258,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          350808931,
+          896532038
+        ],
+        "index": 69880,
+        "pack": 1845,
+        "offset": 930552,
+        "opus_offset": 96,
+        "entry_length": 12971,
+        "wav_length": 165250
+      },
+      {
+        "id": 1048543424,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 373204355,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          350808931,
+          1048543424
+        ],
+        "index": 69879,
+        "pack": 1845,
+        "offset": 917306,
+        "opus_offset": 96,
+        "entry_length": 13246,
+        "wav_length": 162162
+      },
+      {
+        "id": 153050337,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          223100982,
+          153050337
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 157257691,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          223100982,
+          157257691
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 186217149,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          223100982,
+          186217149
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 681210824,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          223100982,
+          681210824
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 940380046,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          223100982,
+          940380046
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 72904499,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          726462078,
+          72904499
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 362823853,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          726462078,
+          362823853
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 584711837,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          726462078,
+          584711837
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 650264842,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          726462078,
+          650264842
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 756734071,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          455079460,
+          726462078,
+          756734071
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 237374241,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 959891278,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          742376620,
+          237374241
+        ],
+        "index": 69885,
+        "pack": 1845,
+        "offset": 1006026,
+        "opus_offset": 96,
+        "entry_length": 16063,
+        "wav_length": 315392
+      },
+      {
+        "id": 582521114,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 747661734,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          742376620,
+          582521114
+        ],
+        "index": 69884,
+        "pack": 1845,
+        "offset": 988539,
+        "opus_offset": 96,
+        "entry_length": 17487,
+        "wav_length": 354308
+      },
+      {
+        "id": 718244684,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 776319515,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          742376620,
+          718244684
+        ],
+        "index": 69882,
+        "pack": 1845,
+        "offset": 956947,
+        "opus_offset": 96,
+        "entry_length": 15862,
+        "wav_length": 315392
+      },
+      {
+        "id": 803530420,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 782469043,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          742376620,
+          803530420
+        ],
+        "index": 69883,
+        "pack": 1845,
+        "offset": 972809,
+        "opus_offset": 96,
+        "entry_length": 15730,
+        "wav_length": 314344
+      },
+      {
+        "id": 966608752,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 624521669,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213484,
+          416390006,
+          16400898,
+          742376620,
+          966608752
+        ],
+        "index": 69886,
+        "pack": 1845,
+        "offset": 1022089,
+        "opus_offset": 96,
+        "entry_length": 15939,
+        "wav_length": 323576
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_voice_02",
+    "wwise_id": 3417213485,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 965359908,
+        "action_type": 2051,
+        "target": 867956634,
+        "raw_hex": "24398a3903089af7bb33000000040100001643000000000000000000"
+      },
+      {
+        "id": 669849589,
+        "action_type": 1027,
+        "target": 16400898,
+        "raw_hex": "f517ed2703040242fa00000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 110891987,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 19876005,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          350808931,
+          110891987
+        ],
+        "index": 69877,
+        "pack": 1845,
+        "offset": 895105,
+        "opus_offset": 96,
+        "entry_length": 11400,
+        "wav_length": 161100
+      },
+      {
+        "id": 684548373,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 70248058,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          350808931,
+          684548373
+        ],
+        "index": 69878,
+        "pack": 1845,
+        "offset": 906505,
+        "opus_offset": 96,
+        "entry_length": 10801,
+        "wav_length": 146156
+      },
+      {
+        "id": 755230153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 846186287,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          350808931,
+          755230153
+        ],
+        "index": 69881,
+        "pack": 1845,
+        "offset": 943523,
+        "opus_offset": 96,
+        "entry_length": 13424,
+        "wav_length": 162174
+      },
+      {
+        "id": 896532038,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 798721258,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          350808931,
+          896532038
+        ],
+        "index": 69880,
+        "pack": 1845,
+        "offset": 930552,
+        "opus_offset": 96,
+        "entry_length": 12971,
+        "wav_length": 165250
+      },
+      {
+        "id": 1048543424,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 373204355,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          350808931,
+          1048543424
+        ],
+        "index": 69879,
+        "pack": 1845,
+        "offset": 917306,
+        "opus_offset": 96,
+        "entry_length": 13246,
+        "wav_length": 162162
+      },
+      {
+        "id": 153050337,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          223100982,
+          153050337
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 157257691,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          223100982,
+          157257691
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 186217149,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          223100982,
+          186217149
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 681210824,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          223100982,
+          681210824
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 940380046,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          223100982,
+          940380046
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 72904499,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          726462078,
+          72904499
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 362823853,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          726462078,
+          362823853
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 584711837,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          726462078,
+          584711837
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 650264842,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          726462078,
+          650264842
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 756734071,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          455079460,
+          726462078,
+          756734071
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 237374241,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 959891278,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          742376620,
+          237374241
+        ],
+        "index": 69885,
+        "pack": 1845,
+        "offset": 1006026,
+        "opus_offset": 96,
+        "entry_length": 16063,
+        "wav_length": 315392
+      },
+      {
+        "id": 582521114,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 747661734,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          742376620,
+          582521114
+        ],
+        "index": 69884,
+        "pack": 1845,
+        "offset": 988539,
+        "opus_offset": 96,
+        "entry_length": 17487,
+        "wav_length": 354308
+      },
+      {
+        "id": 718244684,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 776319515,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          742376620,
+          718244684
+        ],
+        "index": 69882,
+        "pack": 1845,
+        "offset": 956947,
+        "opus_offset": 96,
+        "entry_length": 15862,
+        "wav_length": 315392
+      },
+      {
+        "id": 803530420,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 782469043,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          742376620,
+          803530420
+        ],
+        "index": 69883,
+        "pack": 1845,
+        "offset": 972809,
+        "opus_offset": 96,
+        "entry_length": 15730,
+        "wav_length": 314344
+      },
+      {
+        "id": 966608752,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 624521669,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213485,
+          669849589,
+          16400898,
+          742376620,
+          966608752
+        ],
+        "index": 69886,
+        "pack": 1845,
+        "offset": 1022089,
+        "opus_offset": 96,
+        "entry_length": 15939,
+        "wav_length": 323576
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_satara_fire_voice_04",
+    "wwise_id": 3417213483,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_shotgun_tech_satara",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 277086908,
+        "action_type": 2051,
+        "target": 867956634,
+        "raw_hex": "bc02841003089af7bb33000000040100007a43000000000000000000"
+      },
+      {
+        "id": 175931332,
+        "action_type": 1027,
+        "target": 16400898,
+        "raw_hex": "c47f7c0a03040242fa00000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 110891987,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 19876005,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          350808931,
+          110891987
+        ],
+        "index": 69877,
+        "pack": 1845,
+        "offset": 895105,
+        "opus_offset": 96,
+        "entry_length": 11400,
+        "wav_length": 161100
+      },
+      {
+        "id": 684548373,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 70248058,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          350808931,
+          684548373
+        ],
+        "index": 69878,
+        "pack": 1845,
+        "offset": 906505,
+        "opus_offset": 96,
+        "entry_length": 10801,
+        "wav_length": 146156
+      },
+      {
+        "id": 755230153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 846186287,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          350808931,
+          755230153
+        ],
+        "index": 69881,
+        "pack": 1845,
+        "offset": 943523,
+        "opus_offset": 96,
+        "entry_length": 13424,
+        "wav_length": 162174
+      },
+      {
+        "id": 896532038,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 798721258,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          350808931,
+          896532038
+        ],
+        "index": 69880,
+        "pack": 1845,
+        "offset": 930552,
+        "opus_offset": 96,
+        "entry_length": 12971,
+        "wav_length": 165250
+      },
+      {
+        "id": 1048543424,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 373204355,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 350808931,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          350808931,
+          1048543424
+        ],
+        "index": 69879,
+        "pack": 1845,
+        "offset": 917306,
+        "opus_offset": 96,
+        "entry_length": 13246,
+        "wav_length": 162162
+      },
+      {
+        "id": 153050337,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 54130286,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          223100982,
+          153050337
+        ],
+        "index": 69861,
+        "pack": 1845,
+        "offset": 561271,
+        "opus_offset": 96,
+        "entry_length": 17130,
+        "wav_length": 334720
+      },
+      {
+        "id": 157257691,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 187615992,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          223100982,
+          157257691
+        ],
+        "index": 69858,
+        "pack": 1845,
+        "offset": 507646,
+        "opus_offset": 96,
+        "entry_length": 17772,
+        "wav_length": 350344
+      },
+      {
+        "id": 186217149,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 456745880,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          223100982,
+          186217149
+        ],
+        "index": 69859,
+        "pack": 1845,
+        "offset": 525418,
+        "opus_offset": 96,
+        "entry_length": 18057,
+        "wav_length": 354308
+      },
+      {
+        "id": 681210824,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 33198926,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          223100982,
+          681210824
+        ],
+        "index": 69860,
+        "pack": 1845,
+        "offset": 543475,
+        "opus_offset": 96,
+        "entry_length": 17796,
+        "wav_length": 339956
+      },
+      {
+        "id": 940380046,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 295029699,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 223100982,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          223100982,
+          940380046
+        ],
+        "index": 69857,
+        "pack": 1845,
+        "offset": 490695,
+        "opus_offset": 96,
+        "entry_length": 16951,
+        "wav_length": 315392
+      },
+      {
+        "id": 72904499,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1046821779,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          726462078,
+          72904499
+        ],
+        "index": 69863,
+        "pack": 1845,
+        "offset": 607114,
+        "opus_offset": 96,
+        "entry_length": 27656,
+        "wav_length": 581484
+      },
+      {
+        "id": 362823853,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993648827,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          726462078,
+          362823853
+        ],
+        "index": 69865,
+        "pack": 1845,
+        "offset": 661126,
+        "opus_offset": 96,
+        "entry_length": 26514,
+        "wav_length": 554376
+      },
+      {
+        "id": 584711837,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 993979791,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          726462078,
+          584711837
+        ],
+        "index": 69862,
+        "pack": 1845,
+        "offset": 578401,
+        "opus_offset": 96,
+        "entry_length": 28713,
+        "wav_length": 596636
+      },
+      {
+        "id": 650264842,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 526458629,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          726462078,
+          650264842
+        ],
+        "index": 69866,
+        "pack": 1845,
+        "offset": 687640,
+        "opus_offset": 96,
+        "entry_length": 23301,
+        "wav_length": 485264
+      },
+      {
+        "id": 756734071,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 753997605,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 726462078,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          455079460,
+          726462078,
+          756734071
+        ],
+        "index": 69864,
+        "pack": 1845,
+        "offset": 634770,
+        "opus_offset": 96,
+        "entry_length": 26356,
+        "wav_length": 547476
+      },
+      {
+        "id": 237374241,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 959891278,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          742376620,
+          237374241
+        ],
+        "index": 69885,
+        "pack": 1845,
+        "offset": 1006026,
+        "opus_offset": 96,
+        "entry_length": 16063,
+        "wav_length": 315392
+      },
+      {
+        "id": 582521114,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 747661734,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          742376620,
+          582521114
+        ],
+        "index": 69884,
+        "pack": 1845,
+        "offset": 988539,
+        "opus_offset": 96,
+        "entry_length": 17487,
+        "wav_length": 354308
+      },
+      {
+        "id": 718244684,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 776319515,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          742376620,
+          718244684
+        ],
+        "index": 69882,
+        "pack": 1845,
+        "offset": 956947,
+        "opus_offset": 96,
+        "entry_length": 15862,
+        "wav_length": 315392
+      },
+      {
+        "id": 803530420,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 782469043,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          742376620,
+          803530420
+        ],
+        "index": 69883,
+        "pack": 1845,
+        "offset": 972809,
+        "opus_offset": 96,
+        "entry_length": 15730,
+        "wav_length": 314344
+      },
+      {
+        "id": 966608752,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 624521669,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 742376620,
+        "route": [
+          3417213483,
+          175931332,
+          16400898,
+          742376620,
+          966608752
+        ],
+        "index": 69886,
+        "pack": 1845,
+        "offset": 1022089,
+        "opus_offset": 96,
+        "entry_length": 15939,
+        "wav_length": 323576
+      }
+    ]
+  }
+]

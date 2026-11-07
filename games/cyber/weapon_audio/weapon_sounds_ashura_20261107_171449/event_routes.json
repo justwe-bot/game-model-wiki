@@ -1,0 +1,3090 @@
+[
+  {
+    "event": "w_gun_sniper_smart_ashura_melee",
+    "wwise_id": 1818006007,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 348830737,
+        "action_type": 1027,
+        "target": 1060300915,
+        "raw_hex": "11bcca14030473e8323f000000045e96b01400000000"
+      },
+      {
+        "id": 488627353,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "99dc1f1d0201a4f9852a00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 497580231,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 455645285,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 1060300915,
+        "route": [
+          1818006007,
+          348830737,
+          1060300915,
+          497580231
+        ],
+        "index": 71472,
+        "pack": 1858,
+        "offset": 486640,
+        "opus_offset": 96,
+        "entry_length": 9948,
+        "wav_length": 314392
+      },
+      {
+        "id": 567253725,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 64345650,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 1060300915,
+        "route": [
+          1818006007,
+          348830737,
+          1060300915,
+          567253725
+        ],
+        "index": 71473,
+        "pack": 1858,
+        "offset": 496588,
+        "opus_offset": 96,
+        "entry_length": 10132,
+        "wav_length": 302352
+      },
+      {
+        "id": 655274722,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 556343371,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 1060300915,
+        "route": [
+          1818006007,
+          348830737,
+          1060300915,
+          655274722
+        ],
+        "index": 71471,
+        "pack": 1858,
+        "offset": 476703,
+        "opus_offset": 96,
+        "entry_length": 9937,
+        "wav_length": 311608
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_handle_pull",
+    "wwise_id": 3026653039,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 813627132,
+        "action_type": 1027,
+        "target": 657379139,
+        "raw_hex": "fcf67e30030443cf2e27000000045e96b01400000000"
+      },
+      {
+        "id": 838697937,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "d183fd310201a4f9852a00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 176475944,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 350449864,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 657379139,
+        "route": [
+          3026653039,
+          813627132,
+          657379139,
+          176475944
+        ],
+        "index": 71462,
+        "pack": 1858,
+        "offset": 427084,
+        "opus_offset": 96,
+        "entry_length": 8545,
+        "wav_length": 123096
+      },
+      {
+        "id": 207761928,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 855843280,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 657379139,
+        "route": [
+          3026653039,
+          813627132,
+          657379139,
+          207761928
+        ],
+        "index": 71463,
+        "pack": 1858,
+        "offset": 435629,
+        "opus_offset": 96,
+        "entry_length": 8378,
+        "wav_length": 123096
+      },
+      {
+        "id": 633964104,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 815452376,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 657379139,
+        "route": [
+          3026653039,
+          813627132,
+          657379139,
+          633964104
+        ],
+        "index": 71464,
+        "pack": 1858,
+        "offset": 444007,
+        "opus_offset": 96,
+        "entry_length": 9798,
+        "wav_length": 123380
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_ashura_reload",
+    "wwise_id": 175816912,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 596589156,
+        "action_type": 1027,
+        "target": 1050364264,
+        "raw_hex": "643a8f23030468499b3e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 303970986,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 904355385,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 956978565,
+        "route": [
+          175816912,
+          596589156,
+          1050364264,
+          956978565,
+          303970986
+        ],
+        "index": 71508,
+        "pack": 1858,
+        "offset": 752851,
+        "opus_offset": 96,
+        "entry_length": 4794,
+        "wav_length": 39136
+      },
+      {
+        "id": 509202813,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 405468828,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 956978565,
+        "route": [
+          175816912,
+          596589156,
+          1050364264,
+          956978565,
+          509202813
+        ],
+        "index": 71507,
+        "pack": 1858,
+        "offset": 747553,
+        "opus_offset": 96,
+        "entry_length": 5298,
+        "wav_length": 49120
+      },
+      {
+        "id": 804077164,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 893444013,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 956978565,
+        "route": [
+          175816912,
+          596589156,
+          1050364264,
+          956978565,
+          804077164
+        ],
+        "index": 71506,
+        "pack": 1858,
+        "offset": 743005,
+        "opus_offset": 96,
+        "entry_length": 4548,
+        "wav_length": 38994
+      },
+      {
+        "id": 196079554,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 711306550,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1058239826,
+        "route": [
+          175816912,
+          596589156,
+          1050364264,
+          1058239826,
+          196079554
+        ],
+        "index": 71509,
+        "pack": 1858,
+        "offset": 757645,
+        "opus_offset": 96,
+        "entry_length": 5034,
+        "wav_length": 46416
+      },
+      {
+        "id": 278318979,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 217901126,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1058239826,
+        "route": [
+          175816912,
+          596589156,
+          1050364264,
+          1058239826,
+          278318979
+        ],
+        "index": 71511,
+        "pack": 1858,
+        "offset": 767778,
+        "opus_offset": 96,
+        "entry_length": 5532,
+        "wav_length": 46558
+      },
+      {
+        "id": 436188001,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 87585124,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1058239826,
+        "route": [
+          175816912,
+          596589156,
+          1050364264,
+          1058239826,
+          436188001
+        ],
+        "index": 71510,
+        "pack": 1858,
+        "offset": 762679,
+        "opus_offset": 96,
+        "entry_length": 5099,
+        "wav_length": 46416
+      }
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_ext_street_wide",
+    "wwise_id": 1728553252,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_equip",
+    "wwise_id": 1944799559,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 910623230,
+        "action_type": 1027,
+        "target": 624107474,
+        "raw_hex": "fe0147360304d21f3325000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 436943599,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 465846927,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 624107474,
+        "route": [
+          1944799559,
+          910623230,
+          624107474,
+          436943599
+        ],
+        "index": 71460,
+        "pack": 1858,
+        "offset": 412462,
+        "opus_offset": 96,
+        "entry_length": 6816,
+        "wav_length": 132700
+      },
+      {
+        "id": 560723406,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 433161679,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 624107474,
+        "route": [
+          1944799559,
+          910623230,
+          624107474,
+          560723406
+        ],
+        "index": 71459,
+        "pack": 1858,
+        "offset": 406168,
+        "opus_offset": 96,
+        "entry_length": 6294,
+        "wav_length": 115732
+      },
+      {
+        "id": 873676334,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 777063503,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 624107474,
+        "route": [
+          1944799559,
+          910623230,
+          624107474,
+          873676334
+        ],
+        "index": 71461,
+        "pack": 1858,
+        "offset": 419278,
+        "opus_offset": 96,
+        "entry_length": 7806,
+        "wav_length": 129816
+      }
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_int_wide",
+    "wwise_id": 926110312,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_fire",
+    "wwise_id": 808666293,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 667100234,
+        "action_type": 1027,
+        "target": 957786842,
+        "raw_hex": "4a24c3270304daaa1639000000045e96b01400000000"
+      },
+      {
+        "id": 972598335,
+        "action_type": 1027,
+        "target": 559659904,
+        "raw_hex": "3facf839030480bb5b21000000045e96b01400000000"
+      },
+      {
+        "id": 918945496,
+        "action_type": 1027,
+        "target": 175501973,
+        "raw_hex": "d8fec536030495f2750a000000045e96b01400000000"
+      },
+      {
+        "id": 144005510,
+        "action_type": 1027,
+        "target": 1058379971,
+        "raw_hex": "865995080304c398153f0001393200000000045e96b01400000000"
+      },
+      {
+        "id": 531576298,
+        "action_type": 1027,
+        "target": 747379786,
+        "raw_hex": "ea35af1f03044a1c8c2c0001396400000000045e96b01400000000"
+      },
+      {
+        "id": 390513645,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "edc346170201a4f9852a00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 633338333,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 629649869,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 957786842,
+        "route": [
+          808666293,
+          667100234,
+          957786842,
+          633338333
+        ],
+        "index": 71488,
+        "pack": 1858,
+        "offset": 600582,
+        "opus_offset": 96,
+        "entry_length": 16632,
+        "wav_length": 356876
+      },
+      {
+        "id": 744016559,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 843785149,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 957786842,
+        "route": [
+          808666293,
+          667100234,
+          957786842,
+          744016559
+        ],
+        "index": 71487,
+        "pack": 1858,
+        "offset": 584156,
+        "opus_offset": 96,
+        "entry_length": 16426,
+        "wav_length": 345980
+      },
+      {
+        "id": 824798159,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 313013771,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 957786842,
+        "route": [
+          808666293,
+          667100234,
+          957786842,
+          824798159
+        ],
+        "index": 71486,
+        "pack": 1858,
+        "offset": 567451,
+        "opus_offset": 96,
+        "entry_length": 16705,
+        "wav_length": 363136
+      },
+      {
+        "id": 144151118,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 866194676,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 559659904,
+        "route": [
+          808666293,
+          972598335,
+          559659904,
+          144151118
+        ],
+        "index": 71490,
+        "pack": 1858,
+        "offset": 634161,
+        "opus_offset": 96,
+        "entry_length": 15899,
+        "wav_length": 191582
+      },
+      {
+        "id": 174451913,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 562081588,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 559659904,
+        "route": [
+          808666293,
+          972598335,
+          559659904,
+          174451913
+        ],
+        "index": 71489,
+        "pack": 1858,
+        "offset": 617214,
+        "opus_offset": 96,
+        "entry_length": 16947,
+        "wav_length": 199132
+      },
+      {
+        "id": 1068111936,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 927927531,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 559659904,
+        "route": [
+          808666293,
+          972598335,
+          559659904,
+          1068111936
+        ],
+        "index": 71491,
+        "pack": 1858,
+        "offset": 650060,
+        "opus_offset": 96,
+        "entry_length": 13441,
+        "wav_length": 163318
+      },
+      {
+        "id": 201375908,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1071190341,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 175501973,
+        "route": [
+          808666293,
+          918945496,
+          175501973,
+          201375908
+        ],
+        "index": 6701,
+        "pack": 460,
+        "offset": 642429,
+        "opus_offset": 96,
+        "entry_length": 22731,
+        "wav_length": 563100
+      },
+      {
+        "id": 468920561,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 506454142,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 175501973,
+        "route": [
+          808666293,
+          918945496,
+          175501973,
+          468920561
+        ],
+        "index": 6702,
+        "pack": 460,
+        "offset": 665160,
+        "opus_offset": 96,
+        "entry_length": 20858,
+        "wav_length": 489584
+      },
+      {
+        "id": 593018806,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 793657144,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 175501973,
+        "route": [
+          808666293,
+          918945496,
+          175501973,
+          593018806
+        ],
+        "index": 6703,
+        "pack": 460,
+        "offset": 686018,
+        "opus_offset": 96,
+        "entry_length": 17813,
+        "wav_length": 397940
+      },
+      {
+        "id": 1058379971,
+        "type": 2,
+        "plugin": 26804226,
+        "stream": 0,
+        "media": 163648631,
+        "media_size": 0,
+        "source_bits": 0,
+        "route": [
+          808666293,
+          144005510,
+          1058379971
+        ]
+      },
+      {
+        "id": 61870583,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 670387696,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 747379786,
+        "route": [
+          808666293,
+          531576298,
+          747379786,
+          61870583
+        ],
+        "index": 68808,
+        "pack": 1834,
+        "offset": 299976,
+        "opus_offset": 96,
+        "entry_length": 7384,
+        "wav_length": 72096
+      },
+      {
+        "id": 77422129,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1036464306,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 747379786,
+        "route": [
+          808666293,
+          531576298,
+          747379786,
+          77422129
+        ],
+        "index": 68809,
+        "pack": 1834,
+        "offset": 307360,
+        "opus_offset": 96,
+        "entry_length": 7090,
+        "wav_length": 72096
+      },
+      {
+        "id": 84666771,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 940157269,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 747379786,
+        "route": [
+          808666293,
+          531576298,
+          747379786,
+          84666771
+        ],
+        "index": 68810,
+        "pack": 1834,
+        "offset": 314450,
+        "opus_offset": 96,
+        "entry_length": 6800,
+        "wav_length": 72096
+      },
+      {
+        "id": 545196608,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 185866217,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 747379786,
+        "route": [
+          808666293,
+          531576298,
+          747379786,
+          545196608
+        ],
+        "index": 56798,
+        "pack": 1434,
+        "offset": 960229,
+        "opus_offset": 96,
+        "entry_length": 7025,
+        "wav_length": 72096
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_equip_first",
+    "wwise_id": 3402603108,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 609039343,
+        "action_type": 1027,
+        "target": 713423268,
+        "raw_hex": "ef334d240304a4f9852a000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 812007054,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 541866424,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 713423268,
+        "route": [
+          3402603108,
+          609039343,
+          713423268,
+          812007054
+        ],
+        "index": 71458,
+        "pack": 1858,
+        "offset": 356820,
+        "opus_offset": 96,
+        "entry_length": 49348,
+        "wav_length": 901252
+      }
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_ext_open",
+    "wwise_id": 1771959283,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_aim_exit",
+    "wwise_id": 1363531823,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 933162223,
+        "action_type": 1027,
+        "target": 941758211,
+        "raw_hex": "efec9e37030403172238000000045e96b01400000000"
+      },
+      {
+        "id": 744754854,
+        "action_type": 1027,
+        "target": 458139128,
+        "raw_hex": "a60e642c0304f8a54e1b000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 109348191,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 12135074,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 941758211,
+        "route": [
+          1363531823,
+          933162223,
+          941758211,
+          109348191
+        ],
+        "index": 71466,
+        "pack": 1858,
+        "offset": 457952,
+        "opus_offset": 96,
+        "entry_length": 4580,
+        "wav_length": 49182
+      },
+      {
+        "id": 250597272,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 975921454,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 941758211,
+        "route": [
+          1363531823,
+          933162223,
+          941758211,
+          250597272
+        ],
+        "index": 71467,
+        "pack": 1858,
+        "offset": 462532,
+        "opus_offset": 96,
+        "entry_length": 3464,
+        "wav_length": 39912
+      },
+      {
+        "id": 853971506,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 428778831,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 941758211,
+        "route": [
+          1363531823,
+          933162223,
+          941758211,
+          853971506
+        ],
+        "index": 71465,
+        "pack": 1858,
+        "offset": 453805,
+        "opus_offset": 96,
+        "entry_length": 4147,
+        "wav_length": 42772
+      },
+      {
+        "id": 499695714,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 452415073,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 458139128,
+        "route": [
+          1363531823,
+          744754854,
+          458139128,
+          499695714
+        ],
+        "index": 71469,
+        "pack": 1858,
+        "offset": 469650,
+        "opus_offset": 96,
+        "entry_length": 3208,
+        "wav_length": 30788
+      },
+      {
+        "id": 613244333,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 815439809,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 458139128,
+        "route": [
+          1363531823,
+          744754854,
+          458139128,
+          613244333
+        ],
+        "index": 71468,
+        "pack": 1858,
+        "offset": 465996,
+        "opus_offset": 96,
+        "entry_length": 3654,
+        "wav_length": 38290
+      },
+      {
+        "id": 906949773,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 65413290,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 458139128,
+        "route": [
+          1363531823,
+          744754854,
+          458139128,
+          906949773
+        ],
+        "index": 71470,
+        "pack": 1858,
+        "offset": 472858,
+        "opus_offset": 96,
+        "entry_length": 3845,
+        "wav_length": 49202
+      }
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_ext_street",
+    "wwise_id": 1594570442,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_ext_wide",
+    "wwise_id": 3446882030,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_ext_enclosed",
+    "wwise_id": 716466866,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_int",
+    "wwise_id": 3338279766,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_move",
+    "wwise_id": 462768590,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 960502140,
+        "action_type": 1027,
+        "target": 647840386,
+        "raw_hex": "7c194039030482429d26000000045e96b01400000000"
+      },
+      {
+        "id": 389519422,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "3e9837170201a4f9852a00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 90192213,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 125597811,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 647840386,
+        "route": [
+          462768590,
+          960502140,
+          647840386,
+          90192213
+        ],
+        "index": 55932,
+        "pack": 1374,
+        "offset": 734179,
+        "opus_offset": 96,
+        "entry_length": 4960,
+        "wav_length": 45534
+      },
+      {
+        "id": 585186808,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 283408628,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 647840386,
+        "route": [
+          462768590,
+          960502140,
+          647840386,
+          585186808
+        ],
+        "index": 71496,
+        "pack": 1858,
+        "offset": 678981,
+        "opus_offset": 96,
+        "entry_length": 4960,
+        "wav_length": 40320
+      },
+      {
+        "id": 1045940178,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 79160924,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 647840386,
+        "route": [
+          462768590,
+          960502140,
+          647840386,
+          1045940178
+        ],
+        "index": 71495,
+        "pack": 1858,
+        "offset": 674243,
+        "opus_offset": 96,
+        "entry_length": 4738,
+        "wav_length": 35898
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_ashura_fire_voice_01",
+    "wwise_id": 1979451246,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 32789518,
+        "action_type": 1027,
+        "target": 788346367,
+        "raw_hex": "0e54f4010304ff35fd2e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 282866054,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 970605323,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          516446577,
+          282866054
+        ],
+        "index": 71517,
+        "pack": 1858,
+        "offset": 839327,
+        "opus_offset": 96,
+        "entry_length": 15528,
+        "wav_length": 332896
+      },
+      {
+        "id": 364914220,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 165917843,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          516446577,
+          364914220
+        ],
+        "index": 71515,
+        "pack": 1858,
+        "offset": 806728,
+        "opus_offset": 96,
+        "entry_length": 16173,
+        "wav_length": 339228
+      },
+      {
+        "id": 600633131,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 612964194,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          516446577,
+          600633131
+        ],
+        "index": 71516,
+        "pack": 1858,
+        "offset": 822901,
+        "opus_offset": 96,
+        "entry_length": 16426,
+        "wav_length": 347040
+      },
+      {
+        "id": 54255163,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945857436,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          708101709,
+          54255163
+        ],
+        "index": 71513,
+        "pack": 1858,
+        "offset": 785206,
+        "opus_offset": 96,
+        "entry_length": 9281,
+        "wav_length": 119076
+      },
+      {
+        "id": 788334864,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 469234308,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          708101709,
+          788334864
+        ],
+        "index": 71514,
+        "pack": 1858,
+        "offset": 794487,
+        "opus_offset": 96,
+        "entry_length": 12241,
+        "wav_length": 154458
+      },
+      {
+        "id": 998011390,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1054126805,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          708101709,
+          998011390
+        ],
+        "index": 71512,
+        "pack": 1858,
+        "offset": 773310,
+        "opus_offset": 96,
+        "entry_length": 11896,
+        "wav_length": 148608
+      },
+      {
+        "id": 214671876,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 500559750,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          1059326941,
+          198308325,
+          214671876
+        ],
+        "index": 71522,
+        "pack": 1858,
+        "offset": 956130,
+        "opus_offset": 96,
+        "entry_length": 20640,
+        "wav_length": 475892
+      },
+      {
+        "id": 232104805,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 168248797,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          1059326941,
+          198308325,
+          232104805
+        ],
+        "index": 71523,
+        "pack": 1858,
+        "offset": 976770,
+        "opus_offset": 96,
+        "entry_length": 19907,
+        "wav_length": 432132
+      },
+      {
+        "id": 387939153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 419679220,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          1059326941,
+          198308325,
+          387939153
+        ],
+        "index": 71521,
+        "pack": 1858,
+        "offset": 936313,
+        "opus_offset": 96,
+        "entry_length": 19817,
+        "wav_length": 428604
+      },
+      {
+        "id": 153448594,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1033763690,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          1059326941,
+          199512825,
+          153448594
+        ],
+        "index": 71518,
+        "pack": 1858,
+        "offset": 854855,
+        "opus_offset": 96,
+        "entry_length": 26576,
+        "wav_length": 622112
+      },
+      {
+        "id": 348774145,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 722254168,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          1059326941,
+          199512825,
+          348774145
+        ],
+        "index": 71519,
+        "pack": 1858,
+        "offset": 881431,
+        "opus_offset": 96,
+        "entry_length": 26624,
+        "wav_length": 619256
+      },
+      {
+        "id": 430844246,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 486039248,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451246,
+          32789518,
+          788346367,
+          1059326941,
+          199512825,
+          430844246
+        ],
+        "index": 71520,
+        "pack": 1858,
+        "offset": 908055,
+        "opus_offset": 96,
+        "entry_length": 28258,
+        "wav_length": 671176
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_ashura_fire_voice_03",
+    "wwise_id": 1979451244,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 285944934,
+        "action_type": 1027,
+        "target": 788346367,
+        "raw_hex": "662c0b110304ff35fd2e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 282866054,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 970605323,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          516446577,
+          282866054
+        ],
+        "index": 71517,
+        "pack": 1858,
+        "offset": 839327,
+        "opus_offset": 96,
+        "entry_length": 15528,
+        "wav_length": 332896
+      },
+      {
+        "id": 364914220,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 165917843,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          516446577,
+          364914220
+        ],
+        "index": 71515,
+        "pack": 1858,
+        "offset": 806728,
+        "opus_offset": 96,
+        "entry_length": 16173,
+        "wav_length": 339228
+      },
+      {
+        "id": 600633131,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 612964194,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          516446577,
+          600633131
+        ],
+        "index": 71516,
+        "pack": 1858,
+        "offset": 822901,
+        "opus_offset": 96,
+        "entry_length": 16426,
+        "wav_length": 347040
+      },
+      {
+        "id": 54255163,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945857436,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          708101709,
+          54255163
+        ],
+        "index": 71513,
+        "pack": 1858,
+        "offset": 785206,
+        "opus_offset": 96,
+        "entry_length": 9281,
+        "wav_length": 119076
+      },
+      {
+        "id": 788334864,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 469234308,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          708101709,
+          788334864
+        ],
+        "index": 71514,
+        "pack": 1858,
+        "offset": 794487,
+        "opus_offset": 96,
+        "entry_length": 12241,
+        "wav_length": 154458
+      },
+      {
+        "id": 998011390,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1054126805,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          708101709,
+          998011390
+        ],
+        "index": 71512,
+        "pack": 1858,
+        "offset": 773310,
+        "opus_offset": 96,
+        "entry_length": 11896,
+        "wav_length": 148608
+      },
+      {
+        "id": 214671876,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 500559750,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          1059326941,
+          198308325,
+          214671876
+        ],
+        "index": 71522,
+        "pack": 1858,
+        "offset": 956130,
+        "opus_offset": 96,
+        "entry_length": 20640,
+        "wav_length": 475892
+      },
+      {
+        "id": 232104805,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 168248797,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          1059326941,
+          198308325,
+          232104805
+        ],
+        "index": 71523,
+        "pack": 1858,
+        "offset": 976770,
+        "opus_offset": 96,
+        "entry_length": 19907,
+        "wav_length": 432132
+      },
+      {
+        "id": 387939153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 419679220,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          1059326941,
+          198308325,
+          387939153
+        ],
+        "index": 71521,
+        "pack": 1858,
+        "offset": 936313,
+        "opus_offset": 96,
+        "entry_length": 19817,
+        "wav_length": 428604
+      },
+      {
+        "id": 153448594,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1033763690,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          1059326941,
+          199512825,
+          153448594
+        ],
+        "index": 71518,
+        "pack": 1858,
+        "offset": 854855,
+        "opus_offset": 96,
+        "entry_length": 26576,
+        "wav_length": 622112
+      },
+      {
+        "id": 348774145,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 722254168,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          1059326941,
+          199512825,
+          348774145
+        ],
+        "index": 71519,
+        "pack": 1858,
+        "offset": 881431,
+        "opus_offset": 96,
+        "entry_length": 26624,
+        "wav_length": 619256
+      },
+      {
+        "id": 430844246,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 486039248,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451244,
+          285944934,
+          788346367,
+          1059326941,
+          199512825,
+          430844246
+        ],
+        "index": 71520,
+        "pack": 1858,
+        "offset": 908055,
+        "opus_offset": 96,
+        "entry_length": 28258,
+        "wav_length": 671176
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_ashura_fire_voice_02",
+    "wwise_id": 1979451245,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 736572159,
+        "action_type": 1027,
+        "target": 788346367,
+        "raw_hex": "ff32e72b0304ff35fd2e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 282866054,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 970605323,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          516446577,
+          282866054
+        ],
+        "index": 71517,
+        "pack": 1858,
+        "offset": 839327,
+        "opus_offset": 96,
+        "entry_length": 15528,
+        "wav_length": 332896
+      },
+      {
+        "id": 364914220,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 165917843,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          516446577,
+          364914220
+        ],
+        "index": 71515,
+        "pack": 1858,
+        "offset": 806728,
+        "opus_offset": 96,
+        "entry_length": 16173,
+        "wav_length": 339228
+      },
+      {
+        "id": 600633131,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 612964194,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          516446577,
+          600633131
+        ],
+        "index": 71516,
+        "pack": 1858,
+        "offset": 822901,
+        "opus_offset": 96,
+        "entry_length": 16426,
+        "wav_length": 347040
+      },
+      {
+        "id": 54255163,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945857436,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          708101709,
+          54255163
+        ],
+        "index": 71513,
+        "pack": 1858,
+        "offset": 785206,
+        "opus_offset": 96,
+        "entry_length": 9281,
+        "wav_length": 119076
+      },
+      {
+        "id": 788334864,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 469234308,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          708101709,
+          788334864
+        ],
+        "index": 71514,
+        "pack": 1858,
+        "offset": 794487,
+        "opus_offset": 96,
+        "entry_length": 12241,
+        "wav_length": 154458
+      },
+      {
+        "id": 998011390,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1054126805,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          708101709,
+          998011390
+        ],
+        "index": 71512,
+        "pack": 1858,
+        "offset": 773310,
+        "opus_offset": 96,
+        "entry_length": 11896,
+        "wav_length": 148608
+      },
+      {
+        "id": 214671876,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 500559750,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          1059326941,
+          198308325,
+          214671876
+        ],
+        "index": 71522,
+        "pack": 1858,
+        "offset": 956130,
+        "opus_offset": 96,
+        "entry_length": 20640,
+        "wav_length": 475892
+      },
+      {
+        "id": 232104805,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 168248797,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          1059326941,
+          198308325,
+          232104805
+        ],
+        "index": 71523,
+        "pack": 1858,
+        "offset": 976770,
+        "opus_offset": 96,
+        "entry_length": 19907,
+        "wav_length": 432132
+      },
+      {
+        "id": 387939153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 419679220,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          1059326941,
+          198308325,
+          387939153
+        ],
+        "index": 71521,
+        "pack": 1858,
+        "offset": 936313,
+        "opus_offset": 96,
+        "entry_length": 19817,
+        "wav_length": 428604
+      },
+      {
+        "id": 153448594,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1033763690,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          1059326941,
+          199512825,
+          153448594
+        ],
+        "index": 71518,
+        "pack": 1858,
+        "offset": 854855,
+        "opus_offset": 96,
+        "entry_length": 26576,
+        "wav_length": 622112
+      },
+      {
+        "id": 348774145,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 722254168,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          1059326941,
+          199512825,
+          348774145
+        ],
+        "index": 71519,
+        "pack": 1858,
+        "offset": 881431,
+        "opus_offset": 96,
+        "entry_length": 26624,
+        "wav_length": 619256
+      },
+      {
+        "id": 430844246,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 486039248,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451245,
+          736572159,
+          788346367,
+          1059326941,
+          199512825,
+          430844246
+        ],
+        "index": 71520,
+        "pack": 1858,
+        "offset": 908055,
+        "opus_offset": 96,
+        "entry_length": 28258,
+        "wav_length": 671176
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_ashura_fire_voice_04",
+    "wwise_id": 1979451243,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 665741952,
+        "action_type": 1027,
+        "target": 788346367,
+        "raw_hex": "806aae270304ff35fd2e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 282866054,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 970605323,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          516446577,
+          282866054
+        ],
+        "index": 71517,
+        "pack": 1858,
+        "offset": 839327,
+        "opus_offset": 96,
+        "entry_length": 15528,
+        "wav_length": 332896
+      },
+      {
+        "id": 364914220,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 165917843,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          516446577,
+          364914220
+        ],
+        "index": 71515,
+        "pack": 1858,
+        "offset": 806728,
+        "opus_offset": 96,
+        "entry_length": 16173,
+        "wav_length": 339228
+      },
+      {
+        "id": 600633131,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 612964194,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516446577,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          516446577,
+          600633131
+        ],
+        "index": 71516,
+        "pack": 1858,
+        "offset": 822901,
+        "opus_offset": 96,
+        "entry_length": 16426,
+        "wav_length": 347040
+      },
+      {
+        "id": 54255163,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 945857436,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          708101709,
+          54255163
+        ],
+        "index": 71513,
+        "pack": 1858,
+        "offset": 785206,
+        "opus_offset": 96,
+        "entry_length": 9281,
+        "wav_length": 119076
+      },
+      {
+        "id": 788334864,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 469234308,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          708101709,
+          788334864
+        ],
+        "index": 71514,
+        "pack": 1858,
+        "offset": 794487,
+        "opus_offset": 96,
+        "entry_length": 12241,
+        "wav_length": 154458
+      },
+      {
+        "id": 998011390,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1054126805,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 708101709,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          708101709,
+          998011390
+        ],
+        "index": 71512,
+        "pack": 1858,
+        "offset": 773310,
+        "opus_offset": 96,
+        "entry_length": 11896,
+        "wav_length": 148608
+      },
+      {
+        "id": 214671876,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 500559750,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          1059326941,
+          198308325,
+          214671876
+        ],
+        "index": 71522,
+        "pack": 1858,
+        "offset": 956130,
+        "opus_offset": 96,
+        "entry_length": 20640,
+        "wav_length": 475892
+      },
+      {
+        "id": 232104805,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 168248797,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          1059326941,
+          198308325,
+          232104805
+        ],
+        "index": 71523,
+        "pack": 1858,
+        "offset": 976770,
+        "opus_offset": 96,
+        "entry_length": 19907,
+        "wav_length": 432132
+      },
+      {
+        "id": 387939153,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 419679220,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 198308325,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          1059326941,
+          198308325,
+          387939153
+        ],
+        "index": 71521,
+        "pack": 1858,
+        "offset": 936313,
+        "opus_offset": 96,
+        "entry_length": 19817,
+        "wav_length": 428604
+      },
+      {
+        "id": 153448594,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1033763690,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          1059326941,
+          199512825,
+          153448594
+        ],
+        "index": 71518,
+        "pack": 1858,
+        "offset": 854855,
+        "opus_offset": 96,
+        "entry_length": 26576,
+        "wav_length": 622112
+      },
+      {
+        "id": 348774145,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 722254168,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          1059326941,
+          199512825,
+          348774145
+        ],
+        "index": 71519,
+        "pack": 1858,
+        "offset": 881431,
+        "opus_offset": 96,
+        "entry_length": 26624,
+        "wav_length": 619256
+      },
+      {
+        "id": 430844246,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 486039248,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 199512825,
+        "route": [
+          1979451243,
+          665741952,
+          788346367,
+          1059326941,
+          199512825,
+          430844246
+        ],
+        "index": 71520,
+        "pack": 1858,
+        "offset": 908055,
+        "opus_offset": 96,
+        "entry_length": 28258,
+        "wav_length": 671176
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_ashura_shutdown",
+    "wwise_id": 3027680901,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 917835318,
+        "action_type": 6659,
+        "target": 1050364264,
+        "raw_hex": "360eb536031a68499b3e000000"
+      },
+      {
+        "id": 939841141,
+        "action_type": 6659,
+        "target": 788346367,
+        "raw_hex": "75d60438031aff35fd2e000000"
+      },
+      {
+        "id": 22403514,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "bad955010201a4f9852a000000040600"
+      }
+    ],
+    "sounds": []
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_load",
+    "wwise_id": 2372747985,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 440377258,
+        "action_type": 1027,
+        "target": 566039823,
+        "raw_hex": "aa9f3f1a03040f15bd21000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 295928117,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 134547640,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 566039823,
+        "route": [
+          2372747985,
+          440377258,
+          566039823,
+          295928117
+        ],
+        "index": 71476,
+        "pack": 1858,
+        "offset": 516913,
+        "opus_offset": 96,
+        "entry_length": 4829,
+        "wav_length": 38140
+      },
+      {
+        "id": 785669627,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 671608323,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 566039823,
+        "route": [
+          2372747985,
+          440377258,
+          566039823,
+          785669627
+        ],
+        "index": 71474,
+        "pack": 1858,
+        "offset": 506720,
+        "opus_offset": 96,
+        "entry_length": 5229,
+        "wav_length": 38944
+      },
+      {
+        "id": 934496655,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 935931458,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 566039823,
+        "route": [
+          2372747985,
+          440377258,
+          566039823,
+          934496655
+        ],
+        "index": 71475,
+        "pack": 1858,
+        "offset": 511949,
+        "opus_offset": 96,
+        "entry_length": 4964,
+        "wav_length": 38818
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_trigger",
+    "wwise_id": 2994951391,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 58177648,
+        "action_type": 1027,
+        "target": 635051914,
+        "raw_hex": "70b8770303048a1fda25000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 131487259,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 899482871,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 635051914,
+        "route": [
+          2994951391,
+          58177648,
+          635051914,
+          131487259
+        ],
+        "index": 69722,
+        "pack": 1844,
+        "offset": 8469,
+        "opus_offset": 96,
+        "entry_length": 1673,
+        "wav_length": 10272
+      },
+      {
+        "id": 144152028,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 351864712,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 635051914,
+        "route": [
+          2994951391,
+          58177648,
+          635051914,
+          144152028
+        ],
+        "index": 69723,
+        "pack": 1844,
+        "offset": 10142,
+        "opus_offset": 96,
+        "entry_length": 1999,
+        "wav_length": 11142
+      },
+      {
+        "id": 843252345,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 761040980,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 635051914,
+        "route": [
+          2994951391,
+          58177648,
+          635051914,
+          843252345
+        ],
+        "index": 69724,
+        "pack": 1844,
+        "offset": 12141,
+        "opus_offset": 96,
+        "entry_length": 1718,
+        "wav_length": 10822
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_move_long",
+    "wwise_id": 633670371,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 49430464,
+        "action_type": 1027,
+        "target": 896803666,
+        "raw_hex": "c03ff202030452237435000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 406756795,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 178438111,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 896803666,
+        "route": [
+          633670371,
+          49430464,
+          896803666,
+          406756795
+        ],
+        "index": 71502,
+        "pack": 1858,
+        "offset": 730478,
+        "opus_offset": 96,
+        "entry_length": 4737,
+        "wav_length": 47642
+      },
+      {
+        "id": 617373160,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 932938321,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 896803666,
+        "route": [
+          633670371,
+          49430464,
+          896803666,
+          617373160
+        ],
+        "index": 71501,
+        "pack": 1858,
+        "offset": 726050,
+        "opus_offset": 96,
+        "entry_length": 4428,
+        "wav_length": 47522
+      },
+      {
+        "id": 893061571,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 375408867,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 896803666,
+        "route": [
+          633670371,
+          49430464,
+          896803666,
+          893061571
+        ],
+        "index": 71500,
+        "pack": 1858,
+        "offset": 721324,
+        "opus_offset": 96,
+        "entry_length": 4726,
+        "wav_length": 47728
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_unequip",
+    "wwise_id": 4074419920,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 283300698,
+        "action_type": 1027,
+        "target": 496586028,
+        "raw_hex": "5ad3e21003042c4d991d000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 150825949,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 190119463,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 496586028,
+        "route": [
+          4074419920,
+          283300698,
+          496586028,
+          150825949
+        ],
+        "index": 71484,
+        "pack": 1858,
+        "offset": 554366,
+        "opus_offset": 96,
+        "entry_length": 7236,
+        "wav_length": 139564
+      },
+      {
+        "id": 780655301,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 819256717,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 496586028,
+        "route": [
+          4074419920,
+          283300698,
+          496586028,
+          780655301
+        ],
+        "index": 71483,
+        "pack": 1858,
+        "offset": 547990,
+        "opus_offset": 96,
+        "entry_length": 6376,
+        "wav_length": 109916
+      },
+      {
+        "id": 991313355,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 714100654,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 496586028,
+        "route": [
+          4074419920,
+          283300698,
+          496586028,
+          991313355
+        ],
+        "index": 71485,
+        "pack": 1858,
+        "offset": 561602,
+        "opus_offset": 96,
+        "entry_length": 5849,
+        "wav_length": 97624
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_grab",
+    "wwise_id": 3868157507,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 548196814,
+        "action_type": 1027,
+        "target": 412362036,
+        "raw_hex": "ced1ac20030434259418000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 471241023,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 508552621,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 412362036,
+        "route": [
+          3868157507,
+          548196814,
+          412362036,
+          471241023
+        ],
+        "index": 71494,
+        "pack": 1858,
+        "offset": 670341,
+        "opus_offset": 96,
+        "entry_length": 3902,
+        "wav_length": 31774
+      },
+      {
+        "id": 547559917,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1029571769,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 412362036,
+        "route": [
+          3868157507,
+          548196814,
+          412362036,
+          547559917
+        ],
+        "index": 71493,
+        "pack": 1858,
+        "offset": 666888,
+        "opus_offset": 96,
+        "entry_length": 3453,
+        "wav_length": 33552
+      },
+      {
+        "id": 734351658,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 217389801,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 412362036,
+        "route": [
+          3868157507,
+          548196814,
+          412362036,
+          734351658
+        ],
+        "index": 71492,
+        "pack": 1858,
+        "offset": 663501,
+        "opus_offset": 96,
+        "entry_length": 3387,
+        "wav_length": 31440
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_aim_enter",
+    "wwise_id": 3740924423,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 179305357,
+        "action_type": 1027,
+        "target": 252231279,
+        "raw_hex": "8dfbaf0a03046fbe080f000000045e96b01400000000"
+      },
+      {
+        "id": 13042847,
+        "action_type": 1027,
+        "target": 320232000,
+        "raw_hex": "9f04c7000304405a16130001396e00000000045e96b01400000000"
+      },
+      {
+        "id": 920977128,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "e8fee4360201a4f9852a00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 351533202,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 835130859,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 252231279,
+        "route": [
+          3740924423,
+          179305357,
+          252231279,
+          351533202
+        ],
+        "index": 71479,
+        "pack": 1858,
+        "offset": 531196,
+        "opus_offset": 96,
+        "entry_length": 4652,
+        "wav_length": 34668
+      },
+      {
+        "id": 594181709,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 628336484,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 252231279,
+        "route": [
+          3740924423,
+          179305357,
+          252231279,
+          594181709
+        ],
+        "index": 71477,
+        "pack": 1858,
+        "offset": 521742,
+        "opus_offset": 96,
+        "entry_length": 4489,
+        "wav_length": 33360
+      },
+      {
+        "id": 843530506,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 462869661,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 252231279,
+        "route": [
+          3740924423,
+          179305357,
+          252231279,
+          843530506
+        ],
+        "index": 71478,
+        "pack": 1858,
+        "offset": 526231,
+        "opus_offset": 96,
+        "entry_length": 4965,
+        "wav_length": 37650
+      },
+      {
+        "id": 7199372,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 242691744,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 320232000,
+        "route": [
+          3740924423,
+          13042847,
+          320232000,
+          7199372
+        ],
+        "index": 71481,
+        "pack": 1858,
+        "offset": 540455,
+        "opus_offset": 96,
+        "entry_length": 3952,
+        "wav_length": 34640
+      },
+      {
+        "id": 900214340,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 149747239,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 320232000,
+        "route": [
+          3740924423,
+          13042847,
+          320232000,
+          900214340
+        ],
+        "index": 71482,
+        "pack": 1858,
+        "offset": 544407,
+        "opus_offset": 96,
+        "entry_length": 3583,
+        "wav_length": 35614
+      },
+      {
+        "id": 947531405,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 943165498,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 320232000,
+        "route": [
+          3740924423,
+          13042847,
+          320232000,
+          947531405
+        ],
+        "index": 71480,
+        "pack": 1858,
+        "offset": 535848,
+        "opus_offset": 96,
+        "entry_length": 4607,
+        "wav_length": 36586
+      }
+    ]
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_shutdown",
+    "wwise_id": 579544931,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 548847633,
+        "action_type": 258,
+        "target": 713423268,
+        "raw_hex": "11c0b6200201a4f9852a00013ac800000000040600"
+      }
+    ],
+    "sounds": []
+  },
+  {
+    "event": "w_gun_sniper_smart_ashura_handle_release",
+    "wwise_id": 3661642765,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 291428621,
+        "action_type": 1027,
+        "target": 872532563,
+        "raw_hex": "0dd95e11030453ca0134000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 163139989,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 200596698,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 872532563,
+        "route": [
+          3661642765,
+          291428621,
+          872532563,
+          163139989
+        ],
+        "index": 71498,
+        "pack": 1858,
+        "offset": 697378,
+        "opus_offset": 96,
+        "entry_length": 11714,
+        "wav_length": 170324
+      },
+      {
+        "id": 757154994,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 50841287,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 872532563,
+        "route": [
+          3661642765,
+          291428621,
+          872532563,
+          757154994
+        ],
+        "index": 71499,
+        "pack": 1858,
+        "offset": 709092,
+        "opus_offset": 96,
+        "entry_length": 12232,
+        "wav_length": 170040
+      },
+      {
+        "id": 818011811,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 424098988,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 872532563,
+        "route": [
+          3661642765,
+          291428621,
+          872532563,
+          818011811
+        ],
+        "index": 71497,
+        "pack": 1858,
+        "offset": 683941,
+        "opus_offset": 96,
+        "entry_length": 13437,
+        "wav_length": 190292
+      }
+    ]
+  },
+  {
+    "event": "w_tail_sniper_smart_ashura_ext_narrow",
+    "wwise_id": 3988352670,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_sniper_smart_ashura",
+      "player"
+    ]
+  }
+]

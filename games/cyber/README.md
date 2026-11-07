@@ -24,8 +24,10 @@ games/cyber/
 │           ├── 05_weapons/               武器
 │           ├── 06_renders/               渲染截图
 │           └── 07_recordings/            动作录像（MP4）
+├── weapon_audio/                  42 把武器的原始 Wwise 音频叶
+│                                  （1,991.7 MB / 21,052 文件，未验收）
 └── shared/
-    ├── soldier_material_depot/   共享材质库（471.8 MB / 6,550 文件）
+    ├── soldier_material_depot/   共享材质库（1,849.8 MB / 30,704 文件）
     └── hq_material_depot/        高精度共享材质库（166.5 MB / 872 文件）
 ```
 
@@ -62,6 +64,30 @@ games/cyber/
 2. 把两个共享库**各复制一份**到 `shared/`；
 3. 因此各角色 `02_textures_materials` 中**不包含贴图本体**，需要贴图时请到 `shared/` 下按 depot 相对路径查找。
 
+`soldier_material_depot` 后来并入了一批**材质依赖恢复 overlay**（来自源工程 `recovered_20261107_v2_all8/material_depot`），新增 24,154 个文件、把该库从 6,550 个文件扩到 30,704 个。这次合并是**纯增量**：仓库里原有的 4,198 个文件一个没有被覆盖；与源库同名的 2,352 个文件中，569 个仅差 WolvenKit 的 `ExportedDateTime` 导出时间戳、其余 1,783 个字节完全相同，因此保留仓库内版本。该 overlay 只补齐缺失的材质依赖，**不构成角色/材质/视觉/动作验收**。
+
+## 武器音频（未验收）
+
+`weapon_audio/` 收录 **42 把武器**的原始 Wwise 音频叶，整批迁自源工程 `Blender/soldier_catalog/weapon_audio`，保留每个武器的原始目录结构：
+
+```text
+weapon_audio/
+├── weapon_sounds_batch_20261107_171449.json     批次汇总（42 条结果）
+├── _migration_manifest.json                     本次迁移清单（来源、逐武器文件数）
+└── weapon_sounds_<code>_20261107_171449/
+    ├── attribution.json      归属与来源证据（归档 sha256、事件数、解析叶片数）
+    ├── event_routes.json     事件 → 叶片路由
+    ├── packs/                该武器需要的 .opuspak 容器
+    └── wav/                  .wav（PCM 原始）+ .opus（压缩副本）
+```
+
+**边界（必须随资产一起读）：**
+
+- 这些是**原始 Wwise 音频叶**。选择器、随机化、增益、RTPC、空间化与分层**均未求值**，因此单个叶子**不是**最终运行时事件混音，也不主张任何单发时序或射速。
+- **从未人工试听**，`accepted` 全为 `false`。
+- 仓库其他游戏的音效统一存 `sounds/<slug>/*.m4a`；本机没有 ffmpeg / afconvert，无法转换，因此这里按原始 `wav` + `opus` 形态入库，**不符合**既有 m4a 约定。
+- 42 个武器目录共 21,050 个音频文件，其中 242 个 `.opuspak` 只有 79 种不同内容（git 按内容去重，实际增量约 77 MB）。
+
 ## 浏览方式
 
 本分类**尚未接入**根目录的 Three.js 查看器（`index.html` + `games.json`）。原因是查看器要求每个条目提供**单个整体装配 GLB**（`models.original` / `models.low`），而源工程目前只有分件 GLB，完整静态装配尚未验收通过。在 `games.json` 中登记本分类会使查看器加载不到 `models` 字段。
@@ -74,7 +100,9 @@ games/cyber/
 - `characters[].partitions` — 各分区文件数与字节数
 - `characters[].summary` — 模型/动画/骨架/武器/截图/录像数量
 - `characters[].renders` / `.recordings` — 可直接打开的媒体相对路径
-- `acceptance` — 验收计数（当前为 0）
+- `shared` — 两个共享材质库的文件数与字节数
+- `weaponAudio` — 武器音频批次的来源、规模、格式分布、`accepted=false` 与边界说明
+- `acceptance` — 验收计数（角色与动作均为 0；武器音频 0/42；材质恢复未通过）
 
 ## 验收状态
 
@@ -86,6 +114,11 @@ games/cyber/
 - 18 套角色缺少完整静态预览。
 - 受击候选持枪手型不兼容，没有合格受击录像。
 - 小腿装备源默认 DEVELOP 材质问题未解决。
+
+本次新增的两批资源同样**未验收**：
+
+- **武器音频 0/42**：原始 Wwise 音频叶，运行时混音未求值，从未人工试听。
+- **材质依赖恢复未通过**：仅补齐缺失依赖，`recovery_report_v2.json` 自报 `accepted=false`，且它服务的 `animal_boss` 等身份仍被 `Unimplemented bound-space` 阻塞，恢复后没有任何新身份通过装配。
 
 请勿把本目录的完整性理解为质量通过。
 

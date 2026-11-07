@@ -9,22 +9,52 @@
                        "charactersTotal":  29,
                        "charactersAccepted":  0,
                        "motionCategoriesAccepted":  0,
-                       "motionCategoriesTotal":  116
+                       "motionCategoriesTotal":  116,
+                       "weaponAudioAccepted":  0,
+                       "weaponAudioTotal":  42,
+                       "materialDepotRecoveryAccepted":  false,
+                       "note":  "本次迁移的材质依赖恢复 overlay 与武器音频均为 accepted=false：材质仅补齐缺失依赖（非角色/材质/视觉/动作验收），音频是未人工试听的原始 Wwise 叶。"
                    },
     "shared":  {
                    "soldier_material_depot":  {
-                                                  "files":  6550,
-                                                  "bytes":  494671728
+                                                  "files":  30704,
+                                                  "bytes":  1849809036
                                               },
                    "hq_material_depot":  {
                                              "files":  872,
                                              "bytes":  174603599
                                          }
                },
+    "weaponAudio":  {
+                       "path":  "weapon_audio",
+                       "source":  "C:\\Code\\UeCover\\Blender\\soldier_catalog\\weapon_audio",
+                       "stamp":  "20261107_171449",
+                       "weapons":  42,
+                       "files":  21052,
+                       "bytes":  1991700390,
+                       "wav":  {"files":  10362, "bytes":  1626832316},
+                       "opus":  {"files":  10362, "bytes":  92432664},
+                       "opuspak":  {"files":  242, "bytes":  248731034},
+                       "metadataJson":  {"files":  86, "bytes":  23704376},
+                       "accepted":  false,
+                       "scope":  "原始 Wwise 音频叶。选择器、随机化、增益、RTPC、空间化与分层均未求值，因此单个叶子不是最终运行时事件混音；不主张任何单发时序或射速。从未人工试听。",
+                       "provenance":  "从 UeCover 的 soldier_catalog/weapon_audio 整批迁移，保留每个武器的 attribution.json / event_routes.json / packs / wav 原始结构；批次汇总见 weapon_audio/weapon_sounds_batch_20261107_171449.json，迁移清单见 weapon_audio/_migration_manifest.json。",
+                       "weaponCodes":  [
+                                           "achilles", "ajax", "ashura", "burya", "carnage",
+                                           "chao", "copperhead", "crusher", "defender", "dian",
+                                           "grad", "guillotine", "hmg", "igla", "kenshin",
+                                           "kolac", "kyubi", "lexington", "liberty", "masamune",
+                                           "nekomata", "nova", "nue", "omaha", "overture",
+                                           "palica", "pozhar", "pulsar", "quasar", "saratoga",
+                                           "satara", "senkoh", "shingen", "sidewinder", "silverhand",
+                                           "slaughtomatic", "sor22", "tactician", "testera", "unity",
+                                           "yukimura", "zhuo"
+                                       ]
+                   },
     "totals":  {
                    "characters":  29,
                    "files":  17550,
-                   "bytes":  16444335928
+                   "bytes":  16444335143
                },
     "characters":  [
                        {
