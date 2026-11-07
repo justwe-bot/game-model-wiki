@@ -106,7 +106,6 @@
     .copy-preview b { color: var(--lime); font-weight: 700; }
     .toast { position: fixed; z-index: 20; left: 50%; bottom: 26px; transform: translate(-50%, 14px); padding: 9px 16px; border: 1px solid var(--lime); border-radius: 6px; background: #1b2417; color: var(--lime); font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
     .toast.show { opacity: 1; transform: translate(-50%, 0); }
-    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
       .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
@@ -197,7 +196,6 @@
           <p class="copy-hint">每条采样右侧的按钮可复制“原始效果名 + 中文名称 + 英文名称 + 文件地址”，直接粘进表格或移植到其他游戏工程。</p>
           <div class="clip-list" id="clipList"></div>
         </div>
-        <div class="notice" id="rightsNotice"></div>
       </section>
     </main>
   </div>
@@ -343,8 +341,6 @@
       document.querySelector('#soundNameEn').textContent = entry.nameEn;
       document.querySelector('#tierBadge').textContent = entry.tier;
       document.querySelector('#summaryText').textContent = entry.summary;
-      document.querySelector('#rightsNotice').textContent = activeGame.notice
-        ?? '音效来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
       const clip = entry.clips[0];
       document.querySelector('#durationStat').textContent = formatTime(entry.durationSec);
       document.querySelector('#clipCountStat').textContent = String(entry.clipCount);

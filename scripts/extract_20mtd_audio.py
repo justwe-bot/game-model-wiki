@@ -994,7 +994,6 @@ def update_games_json(catalog: list[dict]) -> None:
         "defaultView": "sounds",
         "subtitle": f"{event_count} 组音效事件 / {clip_count} 条音频 / 射击换弹分类",
         "tiers": TIER_ORDER,
-        "notice": "音效来自你本机 Steam 安装的《破晓时分》，仅用于个人研究与 Wiki 原型。公开发布或向他人分发音频文件前请核对游戏素材许可，不要分发原始 Unity assets。",
         "assetRevision": "20260818-1",
     }
     existing = next((item for item in games if item["slug"] == entry["slug"]), None)

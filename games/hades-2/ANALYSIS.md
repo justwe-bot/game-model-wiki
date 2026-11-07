@@ -1,10 +1,10 @@
-# 冥界 II model analysis
+# Underworld II model analysis
 
 Local install inspected: Steam app `1145350`, `Content/GR2/_Optimized`.
 
 ## Result
 
-冥界 II ships 3D monster assets rather than only prerendered sprites.
+Underworld II ships 3D monster assets rather than only prerendered sprites.
 Character assets are grouped as matching `.sdb` and `.gpk` files. Animation
 SJSON files identify the Granny model, clips, loops, attachments, masks, and
 gameplay events.

@@ -109,7 +109,6 @@
     .skill-name { font-size: 15px; font-weight: 800; }
     .skill-meta { color: var(--amber); font-size: 11px; align-self: center; }
     .skill-description { grid-column: 1 / -1; color: var(--muted); font-size: 13px; line-height: 1.55; }
-    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
       .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
@@ -217,7 +216,6 @@
           <h2>技能与攻击形式</h2>
           <div class="skill-list" id="skillList"></div>
         </div>
-        <div class="notice" id="rightsNotice">模型和贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle 或 FBX。</div>
       </section>
     </main>
   </div>
@@ -727,8 +725,6 @@
       document.querySelector('#monsterNameEn').textContent = entry.nameEn;
       document.querySelector('#tierBadge').textContent = entry.status || entry.tier;
       document.querySelector('#summaryText').textContent = entry.summary;
-      document.querySelector('#rightsNotice').textContent = activeGame.notice
-        ?? '模型和贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。公开发布前请核对素材许可，不要分发原始 bundle 或 FBX。';
       document.querySelector('#sourceTriangles').textContent = Number.isFinite(entry.sourceTriangles) ? entry.sourceTriangles.toLocaleString() : '待提取';
       document.querySelector('#lowTriangles').textContent = Number.isFinite(entry.lowTriangles) ? entry.lowTriangles.toLocaleString() : '待生成';
       const retained = entry.sourceTriangles

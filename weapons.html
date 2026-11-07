@@ -123,7 +123,6 @@
     @media (max-width: 900px) {
       .hit-layout { grid-template-columns: 1fr; }
     }
-    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
       .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
@@ -241,7 +240,6 @@
             </div>
           </div>
         </div>
-        <div class="notice" id="rightsNotice"></div>
       </section>
     </main>
   </div>
@@ -406,8 +404,6 @@
         weapon.characterEn,
         weapon.key,
       ].filter(Boolean).map(item => `<span class="chip">${item}</span>`).join('');
-      document.querySelector('#rightsNotice').textContent = activeGame.notice
-        ?? '武器资料与音效来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
 
       const list = document.querySelector('#audioList');
       list.innerHTML = '';

@@ -84,7 +84,6 @@
     .tex-row b { font-size: 12px; color: var(--lime); font-weight: 700; }
     .tex-row span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
     .tex-row.missing span { color: var(--faint); }
-    .notice { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line-soft); color: var(--faint); font-size: 11px; }
     @media (max-width: 900px) {
       body { overflow: visible; }
       .app { display: block; height: auto; min-height: 100vh; overflow: visible; }
@@ -163,7 +162,6 @@
           <h2>贴图</h2>
           <div class="tex-list" id="texList"></div>
         </div>
-        <div class="notice" id="rightsNotice"></div>
       </section>
     </main>
   </div>
@@ -333,8 +331,6 @@
       const list = document.querySelector('#texList');
       list.innerHTML = '';
       ['baseColor', 'normal', 'metallicGloss', 'occlusion'].forEach(key => list.appendChild(formatTexture(entry, key)));
-      document.querySelector('#rightsNotice').textContent = activeGame.notice
-        ?? '模型与贴图来自你本机的游戏安装，仅用于个人研究与 Wiki 原型。';
     }
 
     function filteredCatalog() {
