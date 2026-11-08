@@ -181,13 +181,13 @@ def main() -> None:
             rigid_prop_hand=args.rigid_prop_hand,
         )
         register_entry(
-            repo_root / "games" / "risk-of-rain-2" / "survivors.custom.json",
+            repo_root / "games" / "rain-survivors-2" / "survivors.custom.json",
             entry,
             args.replace,
         )
         run([sys.executable, str(repo_root / "scripts" / "merge_ror2_survivors.py")], repo_root)
 
-    print(f"Wiki URL: http://127.0.0.1:8765/?game=risk-of-rain-2&monster={args.slug}")
+    print(f"Wiki URL: http://127.0.0.1:8765/?game=rain-survivors-2&monster={args.slug}")
 
 
 if __name__ == "__main__":

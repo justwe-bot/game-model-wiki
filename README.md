@@ -6,13 +6,14 @@
 
 ## 当前游戏
 
-- `risk-of-rain-2`：20 个怪物和 23 张地图，支持模型对比、骨骼动作与独立地图浏览
-- `hades-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
+- `rain-survivors-2`：20 个怪物和 23 张地图，支持模型对比、骨骼动作与独立地图浏览
+- `underworld-2`：已接入 14 个敌人，新增蹉跎者、拉米亚和蹒跚者，合计 173 组动作
 - `custom-models`：自定义模型资源池，内部按英雄和怪物分类；当前收录 1 位腾讯混元 3D Web V3.1 + Mixamo 动画英雄
-- `20-minutes-till-dawn`：从本机 Steam 安装提取的 86 组音效事件，覆盖武器射击、换弹、近战、法术和界面
+- `dawn-hours`：从本机 Steam 安装提取的 86 组音效事件，覆盖武器射击、换弹、近战、法术和界面
 - `zombie-survivors`：45 把武器（含官方中文名与描述）和 471 组音效事件、884 个音频片段，覆盖 9 位幸存者、12 类敌人、5 个头目与全部地图机关；另有从关卡场景提取的建筑、载具、植被与道具模型。合并页把人物、怪物、武器与道具收进同一棵树，每把武器直接带上自己的射击、换弹与技能音效
+- `neon-mercenaries`：29 套战斗角色外观与 42 把武器的原始音频资产归档，按派系浏览角色档案、预览渲染与动作录像；资产尚未通过验收，详见分类 README
 
-《冥界 II》的详细格式结论和移动低模准入标准见 [`games/hades-2/ANALYSIS.md`](games/hades-2/ANALYSIS.md)。
+《冥界 II》的详细格式结论和移动低模准入标准见 [`games/underworld-2/ANALYSIS.md`](games/underworld-2/ANALYSIS.md)。
 
 游戏机制研究文档位于 `docs/`：[雨中求生 2 永久加成系统](docs/%E9%9B%A8%E4%B8%AD%E6%B1%82%E7%94%9F2%E6%B0%B8%E4%B9%85%E5%8A%A0%E6%88%90%E7%B3%BB%E7%BB%9F.md)、[雨中求生 2 核心构筑与物品大全](docs/%E9%9B%A8%E4%B8%AD%E6%B1%82%E7%94%9F2%E6%A0%B8%E5%BF%83%E6%9E%84%E7%AD%91%E4%B8%8E%E7%89%A9%E5%93%81%E5%A4%A7%E5%85%A8.md)、[破晓时分符文技能系统](docs/%E7%A0%B4%E6%99%93%E6%97%B6%E5%88%86%E7%AC%A6%E6%96%87%E6%8A%80%E8%83%BD%E7%B3%BB%E7%BB%9F.md)。
 
@@ -52,18 +53,21 @@ python -m http.server 4173
 
 雨中求生 2 地图页地址为 `http://127.0.0.1:4173/maps.html`。
 
-可用 `?game=hades-2` 直接打开《冥界 II》资源池，例如
-`http://127.0.0.1:4173/?game=hades-2`。
+可用 `?game=underworld-2` 直接打开《冥界 II》资源池，例如
+`http://127.0.0.1:4173/?game=underworld-2`。
 追加 `monster=<slug>` 可直接打开具体条目，例如
-`http://127.0.0.1:4173/?game=hades-2&monster=jellyfish`。
+`http://127.0.0.1:4173/?game=underworld-2&monster=jellyfish`。
 
 自定义模型资源池可直接打开：
 `http://127.0.0.1:4173/?game=custom-models&monster=nova-jet-sentinel`。
 
 《破晓时分》音效页地址为
-`http://127.0.0.1:4173/sounds.html?game=20-minutes-till-dawn`。
+`http://127.0.0.1:4173/sounds.html?game=dawn-hours`。
 追加 `sound=<slug>` 可直接打开具体事件，例如
-`http://127.0.0.1:4173/sounds.html?game=20-minutes-till-dawn&sound=gunfire`。
+`http://127.0.0.1:4173/sounds.html?game=dawn-hours&sound=gunfire`。
+
+《霓虹佣兵》角色档案页地址为
+`http://127.0.0.1:4173/mercenaries.html`，追加 `char=<slug>` 可直接打开具体角色。
 
 Zombie Survivors 武器页地址为
 `http://127.0.0.1:4173/weapons.html?game=zombie-survivors`。

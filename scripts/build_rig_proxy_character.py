@@ -383,7 +383,7 @@ def promote(
         return
     stats = load_validation_stats(repo_root, manifest)
     register_catalog_entry(repo_root, manifest, stats, replace_entry)
-    print(f"Wiki URL: http://127.0.0.1:8765/?game=risk-of-rain-2&monster={wiki['slug']}")
+    print(f"Wiki URL: http://127.0.0.1:8765/?game=rain-survivors-2&monster={wiki['slug']}")
 
 
 def main() -> None:

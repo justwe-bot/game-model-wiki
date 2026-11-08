@@ -1,6 +1,6 @@
 [
   {
-    "slug": "risk-of-rain-2",
+    "slug": "rain-survivors-2",
     "name": "雨中求生 2",
     "nameEn": "Rain Survivors 2",
     "catalog": "catalog.json",
@@ -10,10 +10,10 @@
     "assetRevision": "20260811-42"
   },
   {
-    "slug": "hades-2",
+    "slug": "underworld-2",
     "name": "冥界 II",
     "nameEn": "Underworld II",
-    "catalog": "games/hades-2/catalog.json",
+    "catalog": "games/underworld-2/catalog.json",
     "modelRotationDeg": [
       0,
       90,
@@ -50,10 +50,10 @@
     "assetRevision": "20260815-5"
   },
   {
-    "slug": "20-minutes-till-dawn",
+    "slug": "dawn-hours",
     "name": "破晓时分",
     "nameEn": "Dawn Hours",
-    "catalog": "games/20-minutes-till-dawn/catalog.json",
+    "catalog": "games/dawn-hours/catalog.json",
     "soundsPage": "sounds.html",
     "defaultView": "sounds",
     "subtitle": "86 组音效事件 / 97 条音频 / 射击换弹分类",
@@ -99,5 +99,19 @@
     "propsCatalog": "games/zombie-survivors/props.json",
     "propsSubtitle": "从关卡场景提取的 242 个场景资产：19 个建筑与结构 / 17 个载具与部件 / 19 个装饰与陈设 / 42 个生活道具 / 86 个植被 / 2 个地形与道路 / 13 个废墟与残骸 / 40 个未命名模型 / 4 个其它",
     "modelsSubtitle": "9 位人物 / 33 类怪物（28 敌人 + 5 头目）/ 45 把武器（36 个模型 / 9 类）/ 242 个场景道具，音效与特效按条目合并"
+  },
+  {
+    "slug": "neon-mercenaries",
+    "name": "霓虹佣兵",
+    "nameEn": "Neon Mercenaries",
+    "catalog": "games/neon-mercenaries/catalog.json",
+    "mercenariesPage": "mercenaries.html",
+    "subtitle": "29 套角色外观 / 42 把武器音频 / 三个派系",
+    "tiers": [
+      "灰熊",
+      "毒蝎",
+      "白鸽"
+    ],
+    "assetRevision": "20261108-1"
   }
 ]

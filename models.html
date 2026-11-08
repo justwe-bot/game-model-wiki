@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101513">
   <title>Zombie Survivors · 模型总览</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <style>
     :root {
       color-scheme: dark;
@@ -208,7 +207,7 @@
   </div>
   <audio id="player" preload="metadata"></audio>
   <script type="importmap">
-    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/","lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+    {"imports":{"three":"/vendor/three/three.module.js","three/addons/":"/vendor/three/addons/","lucide":"/vendor/lucide/lucide.esm.js"}}
   </script>
   <script type="module">
     import * as THREE from 'three';
@@ -766,6 +765,10 @@
       select.addEventListener('change', event => {
         const nextGame = games.find(game => game.slug === event.target.value);
         if (!nextGame) return;
+        if (nextGame.mercenariesPage) {
+          location.href = `./${nextGame.mercenariesPage}?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
         if (nextGame.modelsCatalog) {
           location.href = `./${nextGame.modelsPage ?? 'models.html'}?game=${encodeURIComponent(nextGame.slug)}`;
           return;

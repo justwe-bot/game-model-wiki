@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101513">
   <title>游戏怪物 3D 图鉴</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <style>
     :root {
       color-scheme: dark;
@@ -221,7 +220,7 @@
   </div>
 
   <script type="importmap">
-    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/","lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+    {"imports":{"three":"/vendor/three/three.module.js","three/addons/":"/vendor/three/addons/","lucide":"/vendor/lucide/lucide.esm.js"}}
   </script>
   <script type="module">
     import * as THREE from 'three';
@@ -238,6 +237,10 @@
     const requestedGame = initialParams.get('game');
     const requestedMonster = initialParams.get('monster');
     let activeGame = games.find(game => game.slug === requestedGame) ?? games[0];
+    if (activeGame.mercenariesPage) {
+      location.replace(`./${activeGame.mercenariesPage}?game=${encodeURIComponent(activeGame.slug)}`);
+      await new Promise(() => {});
+    }
     if (activeGame.defaultView === 'sounds' && activeGame.soundsPage) {
       location.replace(`./${activeGame.soundsPage}?game=${encodeURIComponent(activeGame.slug)}`);
       await new Promise(() => {});
@@ -901,6 +904,10 @@
     async function switchGame(slug) {
       const nextGame = games.find(game => game.slug === slug);
       if (!nextGame || nextGame === activeGame) return;
+      if (nextGame.mercenariesPage) {
+        location.href = `./${nextGame.mercenariesPage}?game=${encodeURIComponent(nextGame.slug)}`;
+        return;
+      }
       if (nextGame.defaultView === 'sounds' && nextGame.soundsPage) {
         location.href = `./${nextGame.soundsPage}?game=${encodeURIComponent(nextGame.slug)}`;
         return;

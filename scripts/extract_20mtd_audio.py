@@ -21,8 +21,8 @@ DEFAULT_GAME = Path(
     "/Users/xiongdi/Library/Application Support/Steam/steamapps/common"
     "/20MinuteTillDawn/20MinutesTillDawn.app/Contents/Resources/Data"
 )
-SOUNDS_DIR = ROOT / "sounds" / "20-minutes-till-dawn"
-CATALOG_PATH = ROOT / "games" / "20-minutes-till-dawn" / "catalog.json"
+SOUNDS_DIR = ROOT / "sounds" / "dawn-hours"
+CATALOG_PATH = ROOT / "games" / "dawn-hours" / "catalog.json"
 GAMES_PATH = ROOT / "games.json"
 
 EVENT_META = {
@@ -886,7 +886,7 @@ def build_catalog(events, audio_by_name: dict[str, object], preview_dir: Path) -
             clips.append(
                 {
                     "name": clip.m_Name,
-                    "file": f"sounds/20-minutes-till-dawn/{preview.name}",
+                    "file": f"sounds/dawn-hours/{preview.name}",
                     "durationSec": round(float(clip.m_Length), 3),
                     "sampleRate": int(clip.m_Frequency),
                     "channels": int(clip.m_Channels),
@@ -931,7 +931,7 @@ def build_catalog(events, audio_by_name: dict[str, object], preview_dir: Path) -
                 "clips": [
                     {
                         "name": clip_name,
-                        "file": f"sounds/20-minutes-till-dawn/{preview.name}",
+                        "file": f"sounds/dawn-hours/{preview.name}",
                         "durationSec": round(float(clip.m_Length), 3),
                         "sampleRate": int(clip.m_Frequency),
                         "channels": int(clip.m_Channels),
@@ -962,7 +962,7 @@ def build_catalog(events, audio_by_name: dict[str, object], preview_dir: Path) -
                 "clips": [
                     {
                         "name": clip_name,
-                        "file": f"sounds/20-minutes-till-dawn/{preview.name}",
+                        "file": f"sounds/dawn-hours/{preview.name}",
                         "durationSec": round(float(clip.m_Length), 3),
                         "sampleRate": int(clip.m_Frequency),
                         "channels": int(clip.m_Channels),
@@ -986,10 +986,10 @@ def update_games_json(catalog: list[dict]) -> None:
     event_count = len(catalog)
     clip_count = sum(item["clipCount"] for item in catalog)
     entry = {
-        "slug": "20-minutes-till-dawn",
+        "slug": "dawn-hours",
         "name": "破晓时分",
         "nameEn": "Dawn Hours",
-        "catalog": "games/20-minutes-till-dawn/catalog.json",
+        "catalog": "games/dawn-hours/catalog.json",
         "soundsPage": "sounds.html",
         "defaultView": "sounds",
         "subtitle": f"{event_count} 组音效事件 / {clip_count} 条音频 / 射击换弹分类",
@@ -1017,7 +1017,7 @@ def main() -> int:
     if len(events) != 84:
         raise SystemExit(f"Expected 84 SoundEffectSO events, got {len(events)}")
 
-    wav_dir = ROOT / "generated" / "20-minutes-till-dawn" / "wav"
+    wav_dir = ROOT / "generated" / "dawn-hours" / "wav"
     preview_dir = SOUNDS_DIR
     audio_by_name = {clip.m_Name: clip for clip in audio.values()}
     extracted = []

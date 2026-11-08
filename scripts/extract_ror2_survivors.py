@@ -734,7 +734,7 @@ def save_mobile_texture(source: Path, destination: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--game-root", type=Path, default=Path(r"C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2"))
+    parser.add_argument("--game-root", type=Path, default=Path(os.environ.get("WIKI_SOURCE_GAME_ROOT", "")))
     parser.add_argument("--repo-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--blender", type=Path, default=Path(os.environ.get("BLENDER_PATH", Path(os.environ["TEMP"]) / "codex-hades2-model-pipeline" / "blender-4.2.9-windows-x64" / "blender.exe")))
     parser.add_argument("--only", nargs="*", default=[])
@@ -749,7 +749,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    bundle_root = args.game_root / "Risk of Rain 2_Data" / "StreamingAssets" / "aa" / "StandaloneWindows64"
+    if not args.game_root or not args.game_root.is_dir():
+        raise FileNotFoundError("请通过 --game-root 或环境变量 WIKI_SOURCE_GAME_ROOT 指定源游戏安装目录")
+    bundle_root = args.game_root / f"{args.game_root.name}_Data" / "StreamingAssets" / "aa" / "StandaloneWindows64"
     if not bundle_root.is_dir():
         raise FileNotFoundError(bundle_root)
     if not args.blender.is_file():
@@ -854,7 +856,7 @@ def main() -> None:
                 stats = json.loads(stats_path.read_text(encoding="utf-8"))
             results.append({**item, **prefab_stats, **stats})
 
-    result_path = args.repo_root / "games" / "risk-of-rain-2" / "survivors.generated.json"
+    result_path = args.repo_root / "games" / "rain-survivors-2" / "survivors.generated.json"
     result_path.parent.mkdir(parents=True, exist_ok=True)
     if args.only and result_path.is_file():
         existing_results = json.loads(result_path.read_text(encoding="utf-8"))

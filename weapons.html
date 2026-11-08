@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101513">
   <title>Zombie Survivors · 武器图鉴</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <style>
     :root {
       color-scheme: dark;
@@ -246,7 +245,7 @@
   <audio id="player" preload="metadata"></audio>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script type="importmap">
-    {"imports":{"lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+    {"imports":{"lucide":"/vendor/lucide/lucide.esm.js"}}
   </script>
   <script type="module">
     import { createIcons, Search, Play, Pause, Repeat, Square, Volume2, Users, ChevronDown, Crosshair, Copy, ClipboardCopy, Package, Box, Video, Map as MapIcon } from 'lucide';
@@ -506,6 +505,10 @@
       select.addEventListener('change', event => {
         const nextGame = games.find(game => game.slug === event.target.value);
         if (!nextGame) return;
+        if (nextGame.mercenariesPage) {
+          location.href = `./${nextGame.mercenariesPage}?game=${encodeURIComponent(nextGame.slug)}`;
+          return;
+        }
         if (nextGame.weaponsCatalog) {
           location.href = `./weapons.html?game=${encodeURIComponent(nextGame.slug)}`;
           return;

@@ -31,8 +31,8 @@ def inherited_survivors(generated: list[dict], custom: list[dict]) -> list[dict]
 def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     catalog_path = repo_root / "catalog.json"
-    generated_path = repo_root / "games" / "risk-of-rain-2" / "survivors.generated.json"
-    custom_path = repo_root / "games" / "risk-of-rain-2" / "survivors.custom.json"
+    generated_path = repo_root / "games" / "rain-survivors-2" / "survivors.generated.json"
+    custom_path = repo_root / "games" / "rain-survivors-2" / "survivors.custom.json"
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     generated = json.loads(generated_path.read_text(encoding="utf-8"))
     custom = json.loads(custom_path.read_text(encoding="utf-8")) if custom_path.exists() else []

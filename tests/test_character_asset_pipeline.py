@@ -67,7 +67,7 @@ class CharacterAssetPipelineTests(unittest.TestCase):
             slug="new-character",
             name="新角色",
             name_en="New Character",
-            game="risk-of-rain-2",
+            game="rain-survivors-2",
             kind="hero",
             tier="英雄",
         )
@@ -228,7 +228,7 @@ class CharacterAssetPipelineTests(unittest.TestCase):
             slug="new-enemy",
             name="新敌人",
             name_en="New Enemy",
-            game="risk-of-rain-2",
+            game="rain-survivors-2",
             kind="enemy",
             tier="普通敌人",
         )
@@ -342,7 +342,7 @@ class CharacterAssetPipelineTests(unittest.TestCase):
                 slug="guard-test",
                 name="守卫测试",
                 name_en="Guard Test",
-                game="risk-of-rain-2",
+                game="rain-survivors-2",
                 kind="hero",
                 tier="英雄",
             )

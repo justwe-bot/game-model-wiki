@@ -1,0 +1,4414 @@
+[
+  {
+    "event": "w_gun_revol_tech_burya_melee_out",
+    "wwise_id": 3233204063,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 953377181,
+        "action_type": 1027,
+        "target": 516581855,
+        "raw_hex": "9d61d3380304df69ca1e000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 121764579,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 454626754,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516581855,
+        "route": [
+          3233204063,
+          953377181,
+          516581855,
+          121764579
+        ],
+        "index": 66573,
+        "pack": 1813,
+        "offset": 789512,
+        "opus_offset": 96,
+        "entry_length": 6503,
+        "wav_length": 81168
+      },
+      {
+        "id": 616296819,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 906149310,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516581855,
+        "route": [
+          3233204063,
+          953377181,
+          516581855,
+          616296819
+        ],
+        "index": 66572,
+        "pack": 1813,
+        "offset": 784380,
+        "opus_offset": 96,
+        "entry_length": 5132,
+        "wav_length": 71328
+      },
+      {
+        "id": 824852625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 47094240,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 516581855,
+        "route": [
+          3233204063,
+          953377181,
+          516581855,
+          824852625
+        ],
+        "index": 68281,
+        "pack": 1830,
+        "offset": 259655,
+        "opus_offset": 96,
+        "entry_length": 6104,
+        "wav_length": 84616
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_burya_reload",
+    "wwise_id": 3264495909,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 748411178,
+        "action_type": 1027,
+        "target": 644144124,
+        "raw_hex": "2ad99b2c0304fcdb6426000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 161016434,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 279304108,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 574433589,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          574433589,
+          161016434
+        ],
+        "index": 68280,
+        "pack": 1830,
+        "offset": 253163,
+        "opus_offset": 96,
+        "entry_length": 6492,
+        "wav_length": 96004
+      },
+      {
+        "id": 704497720,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 847719850,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 574433589,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          574433589,
+          704497720
+        ],
+        "index": 68278,
+        "pack": 1830,
+        "offset": 238305,
+        "opus_offset": 96,
+        "entry_length": 6833,
+        "wav_length": 117252
+      },
+      {
+        "id": 708289351,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 139236866,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 574433589,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          574433589,
+          708289351
+        ],
+        "index": 68279,
+        "pack": 1830,
+        "offset": 245138,
+        "opus_offset": 96,
+        "entry_length": 8025,
+        "wav_length": 111588
+      },
+      {
+        "id": 38369374,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 670985169,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 739468859,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          739468859,
+          38369374
+        ],
+        "index": 68276,
+        "pack": 1830,
+        "offset": 220625,
+        "opus_offset": 96,
+        "entry_length": 8465,
+        "wav_length": 121728
+      },
+      {
+        "id": 923283342,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 383430102,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 739468859,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          739468859,
+          923283342
+        ],
+        "index": 68277,
+        "pack": 1830,
+        "offset": 229090,
+        "opus_offset": 96,
+        "entry_length": 9215,
+        "wav_length": 138480
+      },
+      {
+        "id": 1065487025,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 718426868,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 739468859,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          739468859,
+          1065487025
+        ],
+        "index": 68275,
+        "pack": 1830,
+        "offset": 211162,
+        "opus_offset": 96,
+        "entry_length": 9463,
+        "wav_length": 138060
+      },
+      {
+        "id": 86674746,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1028051998,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 930076981,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          930076981,
+          86674746
+        ],
+        "index": 68269,
+        "pack": 1830,
+        "offset": 156448,
+        "opus_offset": 96,
+        "entry_length": 11572,
+        "wav_length": 206620
+      },
+      {
+        "id": 215940090,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 277994175,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 930076981,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          930076981,
+          215940090
+        ],
+        "index": 68271,
+        "pack": 1830,
+        "offset": 181259,
+        "opus_offset": 96,
+        "entry_length": 13034,
+        "wav_length": 222120
+      },
+      {
+        "id": 381523825,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 607368706,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 930076981,
+        "route": [
+          3264495909,
+          748411178,
+          644144124,
+          930076981,
+          381523825
+        ],
+        "index": 68270,
+        "pack": 1830,
+        "offset": 168020,
+        "opus_offset": 96,
+        "entry_length": 13239,
+        "wav_length": 224096
+      }
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_ext_narrow",
+    "wwise_id": 450115845,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_npc_revol_tech_burya_shutdown",
+    "wwise_id": 3843308740,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 928885063,
+        "action_type": 6659,
+        "target": 416846858,
+        "raw_hex": "47a95d37031a0a94d818000000"
+      }
+    ],
+    "sounds": []
+  },
+  {
+    "event": "w_tail_revol_tech_burya_ext_street_wide",
+    "wwise_id": 1003837421,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_shutdown",
+    "wwise_id": 2275903968,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 990205835,
+        "action_type": 258,
+        "target": 762772142,
+        "raw_hex": "8b57053b0201aefa762d00013ac800000000040600"
+      },
+      {
+        "id": 185867136,
+        "action_type": 259,
+        "target": 176166221,
+        "raw_hex": "801b140b03014d15800a00013a2c01000000040600"
+      }
+    ],
+    "sounds": []
+  },
+  {
+    "event": "w_gun_revol_tech_burya_aim_exit",
+    "wwise_id": 1473535324,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 509030363,
+        "action_type": 1027,
+        "target": 439122794,
+        "raw_hex": "db2f571e03046a7b2c1a000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 290121538,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 410259926,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 439122794,
+        "route": [
+          1473535324,
+          509030363,
+          439122794,
+          290121538
+        ],
+        "index": 68265,
+        "pack": 1830,
+        "offset": 125817,
+        "opus_offset": 96,
+        "entry_length": 3007,
+        "wav_length": 30016
+      },
+      {
+        "id": 407758715,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 975490586,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 439122794,
+        "route": [
+          1473535324,
+          509030363,
+          439122794,
+          407758715
+        ],
+        "index": 68264,
+        "pack": 1830,
+        "offset": 121795,
+        "opus_offset": 96,
+        "entry_length": 4022,
+        "wav_length": 34984
+      },
+      {
+        "id": 751310383,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 467430065,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 439122794,
+        "route": [
+          1473535324,
+          509030363,
+          439122794,
+          751310383
+        ],
+        "index": 68263,
+        "pack": 1830,
+        "offset": 118383,
+        "opus_offset": 96,
+        "entry_length": 3412,
+        "wav_length": 34988
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_move",
+    "wwise_id": 2010201609,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 776850520,
+        "action_type": 1027,
+        "target": 579326507,
+        "raw_hex": "58cc4d2e03042bd28722000000045e96b01400000000"
+      },
+      {
+        "id": 1014955356,
+        "action_type": 258,
+        "target": 762772142,
+        "raw_hex": "5cfd7e3c0201aefa762d00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 638248908,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 765876495,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 579326507,
+        "route": [
+          2010201609,
+          776850520,
+          579326507,
+          638248908
+        ],
+        "index": 68248,
+        "pack": 1830,
+        "offset": 0,
+        "opus_offset": 96,
+        "entry_length": 9214,
+        "wav_length": 99526
+      },
+      {
+        "id": 754515950,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 582719407,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 579326507,
+        "route": [
+          2010201609,
+          776850520,
+          579326507,
+          754515950
+        ],
+        "index": 68249,
+        "pack": 1830,
+        "offset": 9214,
+        "opus_offset": 96,
+        "entry_length": 8613,
+        "wav_length": 96258
+      },
+      {
+        "id": 808213666,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 617271661,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 579326507,
+        "route": [
+          2010201609,
+          776850520,
+          579326507,
+          808213666
+        ],
+        "index": 68250,
+        "pack": 1830,
+        "offset": 17827,
+        "opus_offset": 96,
+        "entry_length": 8919,
+        "wav_length": 106732
+      }
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_ext_street",
+    "wwise_id": 485205933,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_fire",
+    "wwise_id": 2490171478,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 299116351,
+        "action_type": 259,
+        "target": 176166221,
+        "raw_hex": "3f27d41103014d15800a00013a6400000000040600"
+      },
+      {
+        "id": 509596252,
+        "action_type": 259,
+        "target": 23699876,
+        "raw_hex": "5cd25f1e0301a4a1690100013ae803000000040600"
+      },
+      {
+        "id": 840591976,
+        "action_type": 1027,
+        "target": 23699876,
+        "raw_hex": "686a1a320304a4a16901000000045e96b01400000000"
+      },
+      {
+        "id": 486377396,
+        "action_type": 1027,
+        "target": 1029405269,
+        "raw_hex": "b487fd1c0304557a5b3d000000045e96b01400000000"
+      },
+      {
+        "id": 523797272,
+        "action_type": 8451,
+        "target": 339116362,
+        "raw_hex": "1883381f03214a813614000000"
+      },
+      {
+        "id": 55621790,
+        "action_type": 1027,
+        "target": 605415420,
+        "raw_hex": "9eb850030304fce715240001393200000000045e96b01400000000"
+      },
+      {
+        "id": 874592025,
+        "action_type": 1027,
+        "target": 1032252977,
+        "raw_hex": "19372134030431ee863d0001393200000000045e96b01400000000"
+      },
+      {
+        "id": 859102541,
+        "action_type": 259,
+        "target": 388165086,
+        "raw_hex": "4ddd34330301deed221700013ac800000000070600"
+      },
+      {
+        "id": 414427116,
+        "action_type": 258,
+        "target": 762772142,
+        "raw_hex": "eca7b3180201aefa762d00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 209036131,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1055637428,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 23699876,
+        "route": [
+          2490171478,
+          840591976,
+          23699876,
+          209036131
+        ],
+        "index": 68224,
+        "pack": 1829,
+        "offset": 867101,
+        "opus_offset": 96,
+        "entry_length": 21140,
+        "wav_length": 423896
+      },
+      {
+        "id": 466261178,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 146370109,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 23699876,
+        "route": [
+          2490171478,
+          840591976,
+          23699876,
+          466261178
+        ],
+        "index": 68225,
+        "pack": 1829,
+        "offset": 888241,
+        "opus_offset": 96,
+        "entry_length": 21701,
+        "wav_length": 432596
+      },
+      {
+        "id": 667183187,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 104728548,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 23699876,
+        "route": [
+          2490171478,
+          840591976,
+          23699876,
+          667183187
+        ],
+        "index": 68226,
+        "pack": 1829,
+        "offset": 909942,
+        "opus_offset": 96,
+        "entry_length": 21137,
+        "wav_length": 410444
+      },
+      {
+        "id": 806496556,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 528232433,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 23699876,
+        "route": [
+          2490171478,
+          840591976,
+          23699876,
+          806496556
+        ],
+        "index": 68222,
+        "pack": 1829,
+        "offset": 824165,
+        "opus_offset": 96,
+        "entry_length": 21985,
+        "wav_length": 447788
+      },
+      {
+        "id": 941517791,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 581575109,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 23699876,
+        "route": [
+          2490171478,
+          840591976,
+          23699876,
+          941517791
+        ],
+        "index": 68223,
+        "pack": 1829,
+        "offset": 846150,
+        "opus_offset": 96,
+        "entry_length": 20951,
+        "wav_length": 412360
+      },
+      {
+        "id": 28297430,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 470141571,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 821561706,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          821561706,
+          28297430
+        ],
+        "index": 68231,
+        "pack": 1829,
+        "offset": 957848,
+        "opus_offset": 96,
+        "entry_length": 6400,
+        "wav_length": 69242
+      },
+      {
+        "id": 154439303,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 426401625,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 821561706,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          821561706,
+          154439303
+        ],
+        "index": 68227,
+        "pack": 1829,
+        "offset": 931079,
+        "opus_offset": 96,
+        "entry_length": 7013,
+        "wav_length": 67732
+      },
+      {
+        "id": 180088855,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 628808051,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 821561706,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          821561706,
+          180088855
+        ],
+        "index": 68229,
+        "pack": 1829,
+        "offset": 944456,
+        "opus_offset": 96,
+        "entry_length": 6725,
+        "wav_length": 68256
+      },
+      {
+        "id": 464459466,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 685202230,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 821561706,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          821561706,
+          464459466
+        ],
+        "index": 68230,
+        "pack": 1829,
+        "offset": 951181,
+        "opus_offset": 96,
+        "entry_length": 6667,
+        "wav_length": 67794
+      },
+      {
+        "id": 530363275,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 192547449,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 821561706,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          821561706,
+          530363275
+        ],
+        "index": 68228,
+        "pack": 1829,
+        "offset": 938092,
+        "opus_offset": 96,
+        "entry_length": 6364,
+        "wav_length": 69820
+      },
+      {
+        "id": 172732519,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 349060299,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 900100823,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          900100823,
+          172732519
+        ],
+        "index": 68238,
+        "pack": 1829,
+        "offset": 973755,
+        "opus_offset": 96,
+        "entry_length": 2353,
+        "wav_length": 20342
+      },
+      {
+        "id": 932351767,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 980182898,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 900100823,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          900100823,
+          932351767
+        ],
+        "index": 68237,
+        "pack": 1829,
+        "offset": 971450,
+        "opus_offset": 96,
+        "entry_length": 2305,
+        "wav_length": 20254
+      },
+      {
+        "id": 1004688479,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 793476334,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 900100823,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          900100823,
+          1004688479
+        ],
+        "index": 68239,
+        "pack": 1829,
+        "offset": 976108,
+        "opus_offset": 96,
+        "entry_length": 2564,
+        "wav_length": 24310
+      },
+      {
+        "id": 227074277,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 304167155,
+        "media_size": 8410,
+        "source_bits": 0,
+        "parent": 1033379072,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          1033379072,
+          227074277
+        ],
+        "index": 68233,
+        "pack": 1829,
+        "offset": 965605,
+        "opus_offset": 96,
+        "entry_length": 1531,
+        "wav_length": 8410
+      },
+      {
+        "id": 251053500,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 310924935,
+        "media_size": 7046,
+        "source_bits": 0,
+        "parent": 1033379072,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          1033379072,
+          251053500
+        ],
+        "index": 68235,
+        "pack": 1829,
+        "offset": 968493,
+        "opus_offset": 96,
+        "entry_length": 1338,
+        "wav_length": 7046
+      },
+      {
+        "id": 653883424,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 153886829,
+        "media_size": 6904,
+        "source_bits": 0,
+        "parent": 1033379072,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          1033379072,
+          653883424
+        ],
+        "index": 68232,
+        "pack": 1829,
+        "offset": 964248,
+        "opus_offset": 96,
+        "entry_length": 1357,
+        "wav_length": 6904
+      },
+      {
+        "id": 685032064,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 52076364,
+        "media_size": 7162,
+        "source_bits": 0,
+        "parent": 1033379072,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          1033379072,
+          685032064
+        ],
+        "index": 68236,
+        "pack": 1829,
+        "offset": 969831,
+        "opus_offset": 96,
+        "entry_length": 1619,
+        "wav_length": 7162
+      },
+      {
+        "id": 1020921258,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 730555837,
+        "media_size": 6660,
+        "source_bits": 0,
+        "parent": 1033379072,
+        "route": [
+          2490171478,
+          486377396,
+          1029405269,
+          393725497,
+          1033379072,
+          1020921258
+        ],
+        "index": 68234,
+        "pack": 1829,
+        "offset": 967136,
+        "opus_offset": 96,
+        "entry_length": 1357,
+        "wav_length": 6660
+      },
+      {
+        "id": 605415420,
+        "type": 2,
+        "plugin": 26804226,
+        "stream": 0,
+        "media": 380521579,
+        "media_size": 0,
+        "source_bits": 0,
+        "route": [
+          2490171478,
+          55621790,
+          605415420
+        ]
+      },
+      {
+        "id": 285435858,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 51902239,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1032252977,
+        "route": [
+          2490171478,
+          874592025,
+          1032252977,
+          285435858
+        ],
+        "index": 68241,
+        "pack": 1829,
+        "offset": 982736,
+        "opus_offset": 96,
+        "entry_length": 4206,
+        "wav_length": 38496
+      },
+      {
+        "id": 334599217,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 954015445,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1032252977,
+        "route": [
+          2490171478,
+          874592025,
+          1032252977,
+          334599217
+        ],
+        "index": 68240,
+        "pack": 1829,
+        "offset": 978672,
+        "opus_offset": 96,
+        "entry_length": 4064,
+        "wav_length": 38496
+      },
+      {
+        "id": 1026724571,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 241565406,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1032252977,
+        "route": [
+          2490171478,
+          874592025,
+          1032252977,
+          1026724571
+        ],
+        "index": 68242,
+        "pack": 1829,
+        "offset": 986942,
+        "opus_offset": 96,
+        "entry_length": 4141,
+        "wav_length": 38590
+      },
+      {
+        "id": 1072919432,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 94171987,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 1032252977,
+        "route": [
+          2490171478,
+          874592025,
+          1032252977,
+          1072919432
+        ],
+        "index": 68243,
+        "pack": 1829,
+        "offset": 991083,
+        "opus_offset": 96,
+        "entry_length": 4201,
+        "wav_length": 38496
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_aim_enter",
+    "wwise_id": 959608534,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 360113854,
+        "action_type": 1027,
+        "target": 863319595,
+        "raw_hex": "bee6761503042b367533000000045e96b01400000000"
+      },
+      {
+        "id": 93492981,
+        "action_type": 258,
+        "target": 762772142,
+        "raw_hex": "f59692050201aefa762d00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 109209082,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 901347078,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 863319595,
+        "route": [
+          959608534,
+          360113854,
+          863319595,
+          109209082
+        ],
+        "index": 68260,
+        "pack": 1830,
+        "offset": 107377,
+        "opus_offset": 96,
+        "entry_length": 3676,
+        "wav_length": 39778
+      },
+      {
+        "id": 559319719,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89300935,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 863319595,
+        "route": [
+          959608534,
+          360113854,
+          863319595,
+          559319719
+        ],
+        "index": 68261,
+        "pack": 1830,
+        "offset": 111053,
+        "opus_offset": 96,
+        "entry_length": 3569,
+        "wav_length": 34984
+      },
+      {
+        "id": 664509552,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 115058733,
+        "media_size": 9696,
+        "source_bits": 0,
+        "parent": 863319595,
+        "route": [
+          959608534,
+          360113854,
+          863319595,
+          664509552
+        ],
+        "index": 68262,
+        "pack": 1830,
+        "offset": 114622,
+        "opus_offset": 96,
+        "entry_length": 3761,
+        "wav_length": 40402
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_mag_out",
+    "wwise_id": 4127048702,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 706184021,
+        "action_type": 1027,
+        "target": 996873138,
+        "raw_hex": "5583172a0304b2136b3b000000045e96b01400000000"
+      },
+      {
+        "id": 591506951,
+        "action_type": 258,
+        "target": 762772142,
+        "raw_hex": "07ae41230201aefa762d00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 50734690,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 279304108,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 996873138,
+        "route": [
+          4127048702,
+          706184021,
+          996873138,
+          50734690
+        ],
+        "index": 68280,
+        "pack": 1830,
+        "offset": 253163,
+        "opus_offset": 96,
+        "entry_length": 6492,
+        "wav_length": 96004
+      },
+      {
+        "id": 807109895,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 139236866,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 996873138,
+        "route": [
+          4127048702,
+          706184021,
+          996873138,
+          807109895
+        ],
+        "index": 68279,
+        "pack": 1830,
+        "offset": 245138,
+        "opus_offset": 96,
+        "entry_length": 8025,
+        "wav_length": 111588
+      },
+      {
+        "id": 1050655026,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 847719850,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 996873138,
+        "route": [
+          4127048702,
+          706184021,
+          996873138,
+          1050655026
+        ],
+        "index": 68278,
+        "pack": 1830,
+        "offset": 238305,
+        "opus_offset": 96,
+        "entry_length": 6833,
+        "wav_length": 117252
+      }
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_ext_open",
+    "wwise_id": 3964845616,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_int",
+    "wwise_id": 967259895,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_open",
+    "wwise_id": 2606107402,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 637256126,
+        "action_type": 1027,
+        "target": 48314577,
+        "raw_hex": "bec1fb250304d138e102000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 15869766,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 352859219,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 48314577,
+        "route": [
+          2606107402,
+          637256126,
+          48314577,
+          15869766
+        ],
+        "index": 68257,
+        "pack": 1830,
+        "offset": 90130,
+        "opus_offset": 96,
+        "entry_length": 5416,
+        "wav_length": 103792
+      },
+      {
+        "id": 331571144,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1065002052,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 48314577,
+        "route": [
+          2606107402,
+          637256126,
+          48314577,
+          331571144
+        ],
+        "index": 68259,
+        "pack": 1830,
+        "offset": 101209,
+        "opus_offset": 96,
+        "entry_length": 6168,
+        "wav_length": 119208
+      },
+      {
+        "id": 568293813,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 902783190,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 48314577,
+        "route": [
+          2606107402,
+          637256126,
+          48314577,
+          568293813
+        ],
+        "index": 68258,
+        "pack": 1830,
+        "offset": 95546,
+        "opus_offset": 96,
+        "entry_length": 5663,
+        "wav_length": 102532
+      }
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_ext_wide",
+    "wwise_id": 502452061,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_equip",
+    "wwise_id": 92169586,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 901356255,
+        "action_type": 1027,
+        "target": 14161796,
+        "raw_hex": "df9ab93503048417d800000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 147405082,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 46206580,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 14161796,
+        "route": [
+          92169586,
+          901356255,
+          14161796,
+          147405082
+        ],
+        "index": 68267,
+        "pack": 1830,
+        "offset": 139983,
+        "opus_offset": 96,
+        "entry_length": 7396,
+        "wav_length": 131608
+      },
+      {
+        "id": 379280490,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 109551436,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 14161796,
+        "route": [
+          92169586,
+          901356255,
+          14161796,
+          379280490
+        ],
+        "index": 68268,
+        "pack": 1830,
+        "offset": 147379,
+        "opus_offset": 96,
+        "entry_length": 9069,
+        "wav_length": 179692
+      },
+      {
+        "id": 596411367,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 934934518,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 14161796,
+        "route": [
+          92169586,
+          901356255,
+          14161796,
+          596411367
+        ],
+        "index": 68266,
+        "pack": 1830,
+        "offset": 128824,
+        "opus_offset": 96,
+        "entry_length": 11159,
+        "wav_length": 208172
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_mag_in",
+    "wwise_id": 414062083,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 842193157,
+        "action_type": 1027,
+        "target": 879443853,
+        "raw_hex": "05d9323203048d3f6b34000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 143399429,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 670985169,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 879443853,
+        "route": [
+          414062083,
+          842193157,
+          879443853,
+          143399429
+        ],
+        "index": 68276,
+        "pack": 1830,
+        "offset": 220625,
+        "opus_offset": 96,
+        "entry_length": 8465,
+        "wav_length": 121728
+      },
+      {
+        "id": 399828949,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 718426868,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 879443853,
+        "route": [
+          414062083,
+          842193157,
+          879443853,
+          399828949
+        ],
+        "index": 68275,
+        "pack": 1830,
+        "offset": 211162,
+        "opus_offset": 96,
+        "entry_length": 9463,
+        "wav_length": 138060
+      },
+      {
+        "id": 706573131,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 383430102,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 879443853,
+        "route": [
+          414062083,
+          842193157,
+          879443853,
+          706573131
+        ],
+        "index": 68277,
+        "pack": 1830,
+        "offset": 229090,
+        "opus_offset": 96,
+        "entry_length": 9215,
+        "wav_length": 138480
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_unequip",
+    "wwise_id": 399880601,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 12881044,
+        "action_type": 1027,
+        "target": 609060759,
+        "raw_hex": "948cc400030497874d24000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 335015308,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 83639745,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 609060759,
+        "route": [
+          399880601,
+          12881044,
+          609060759,
+          335015308
+        ],
+        "index": 68256,
+        "pack": 1830,
+        "offset": 80515,
+        "opus_offset": 96,
+        "entry_length": 9615,
+        "wav_length": 181600
+      },
+      {
+        "id": 340320684,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 632455134,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 609060759,
+        "route": [
+          399880601,
+          12881044,
+          609060759,
+          340320684
+        ],
+        "index": 68254,
+        "pack": 1830,
+        "offset": 59151,
+        "opus_offset": 96,
+        "entry_length": 11236,
+        "wav_length": 192612
+      },
+      {
+        "id": 421324168,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 912956719,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 609060759,
+        "route": [
+          399880601,
+          12881044,
+          609060759,
+          421324168
+        ],
+        "index": 68255,
+        "pack": 1830,
+        "offset": 70387,
+        "opus_offset": 96,
+        "entry_length": 10128,
+        "wav_length": 195280
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_close",
+    "wwise_id": 2176358734,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 414190627,
+        "action_type": 1027,
+        "target": 675377361,
+        "raw_hex": "230cb0180304d1704128000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 76933644,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 607368706,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 675377361,
+        "route": [
+          2176358734,
+          414190627,
+          675377361,
+          76933644
+        ],
+        "index": 68270,
+        "pack": 1830,
+        "offset": 168020,
+        "opus_offset": 96,
+        "entry_length": 13239,
+        "wav_length": 224096
+      },
+      {
+        "id": 632534912,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1028051998,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 675377361,
+        "route": [
+          2176358734,
+          414190627,
+          675377361,
+          632534912
+        ],
+        "index": 68269,
+        "pack": 1830,
+        "offset": 156448,
+        "opus_offset": 96,
+        "entry_length": 11572,
+        "wav_length": 206620
+      },
+      {
+        "id": 859873662,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 277994175,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 675377361,
+        "route": [
+          2176358734,
+          414190627,
+          675377361,
+          859873662
+        ],
+        "index": 68271,
+        "pack": 1830,
+        "offset": 181259,
+        "opus_offset": 96,
+        "entry_length": 13034,
+        "wav_length": 222120
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_mag_in_tap",
+    "wwise_id": 467434233,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 379257113,
+        "action_type": 1027,
+        "target": 446825483,
+        "raw_hex": "19019b1603040b04a21a000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 412497441,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 767363679,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 446825483,
+        "route": [
+          467434233,
+          379257113,
+          446825483,
+          412497441
+        ],
+        "index": 68272,
+        "pack": 1830,
+        "offset": 194293,
+        "opus_offset": 96,
+        "entry_length": 6358,
+        "wav_length": 89860
+      },
+      {
+        "id": 556160266,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 15388178,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 446825483,
+        "route": [
+          467434233,
+          379257113,
+          446825483,
+          556160266
+        ],
+        "index": 68273,
+        "pack": 1830,
+        "offset": 200651,
+        "opus_offset": 96,
+        "entry_length": 5056,
+        "wav_length": 78044
+      },
+      {
+        "id": 665426292,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 835248995,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 446825483,
+        "route": [
+          467434233,
+          379257113,
+          446825483,
+          665426292
+        ],
+        "index": 68274,
+        "pack": 1830,
+        "offset": 205707,
+        "opus_offset": 96,
+        "entry_length": 5455,
+        "wav_length": 76984
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_charge",
+    "wwise_id": 339116362,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 631688811,
+        "action_type": 1027,
+        "target": 176166221,
+        "raw_hex": "6bcea62503044d15800a000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 100783763,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 836962813,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 176166221,
+        "route": [
+          339116362,
+          631688811,
+          176166221,
+          100783763
+        ],
+        "index": 68217,
+        "pack": 1829,
+        "offset": 738991,
+        "opus_offset": 96,
+        "entry_length": 14894,
+        "wav_length": 217828
+      },
+      {
+        "id": 318986055,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 518815354,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 176166221,
+        "route": [
+          339116362,
+          631688811,
+          176166221,
+          318986055
+        ],
+        "index": 68218,
+        "pack": 1829,
+        "offset": 753885,
+        "opus_offset": 96,
+        "entry_length": 15545,
+        "wav_length": 219152
+      },
+      {
+        "id": 507182316,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 299162698,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 176166221,
+        "route": [
+          339116362,
+          631688811,
+          176166221,
+          507182316
+        ],
+        "index": 68220,
+        "pack": 1829,
+        "offset": 787613,
+        "opus_offset": 96,
+        "entry_length": 17807,
+        "wav_length": 310972
+      },
+      {
+        "id": 981836423,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 248258119,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 176166221,
+        "route": [
+          339116362,
+          631688811,
+          176166221,
+          981836423
+        ],
+        "index": 68221,
+        "pack": 1829,
+        "offset": 805420,
+        "opus_offset": 96,
+        "entry_length": 18745,
+        "wav_length": 257432
+      },
+      {
+        "id": 984853725,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 761811267,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 176166221,
+        "route": [
+          339116362,
+          631688811,
+          176166221,
+          984853725
+        ],
+        "index": 68219,
+        "pack": 1829,
+        "offset": 769430,
+        "opus_offset": 96,
+        "entry_length": 18183,
+        "wav_length": 279748
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_equip_first",
+    "wwise_id": 413190053,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 461853580,
+        "action_type": 1027,
+        "target": 762772142,
+        "raw_hex": "8c53871b0304aefa762d000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 762772142,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 902876304,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 722991570,
+        "route": [
+          413190053,
+          461853580,
+          762772142
+        ],
+        "index": 68244,
+        "pack": 1829,
+        "offset": 995284,
+        "opus_offset": 96,
+        "entry_length": 33574,
+        "wav_length": 784108
+      }
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_ext_enclosed",
+    "wwise_id": 3006768997,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_melee",
+    "wwise_id": 1425689858,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 502241213,
+        "action_type": 1027,
+        "target": 410641517,
+        "raw_hex": "bd97ef1d03046de47918000000045e96b01400000000"
+      },
+      {
+        "id": 840771290,
+        "action_type": 258,
+        "target": 762772142,
+        "raw_hex": "da261d320201aefa762d00013ac800000000040600"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 11822854,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 312650986,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 410641517,
+        "route": [
+          1425689858,
+          502241213,
+          410641517,
+          11822854
+        ],
+        "index": 68251,
+        "pack": 1830,
+        "offset": 26746,
+        "opus_offset": 96,
+        "entry_length": 11146,
+        "wav_length": 349344
+      },
+      {
+        "id": 283791330,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 516837446,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 410641517,
+        "route": [
+          1425689858,
+          502241213,
+          410641517,
+          283791330
+        ],
+        "index": 68253,
+        "pack": 1830,
+        "offset": 48572,
+        "opus_offset": 96,
+        "entry_length": 10579,
+        "wav_length": 341000
+      },
+      {
+        "id": 945172473,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 458201526,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 410641517,
+        "route": [
+          1425689858,
+          502241213,
+          410641517,
+          945172473
+        ],
+        "index": 68252,
+        "pack": 1830,
+        "offset": 37892,
+        "opus_offset": 96,
+        "entry_length": 10680,
+        "wav_length": 354172
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_trigger",
+    "wwise_id": 4265072610,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 523733914,
+        "action_type": 1027,
+        "target": 125342387,
+        "raw_hex": "9a8b371f0304b3927807000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 144703340,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 911095950,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125342387,
+        "route": [
+          4265072610,
+          523733914,
+          125342387,
+          144703340
+        ],
+        "index": 68246,
+        "pack": 1829,
+        "offset": 1033140,
+        "opus_offset": 96,
+        "entry_length": 4821,
+        "wav_length": 75244
+      },
+      {
+        "id": 285637784,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1041470394,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125342387,
+        "route": [
+          4265072610,
+          523733914,
+          125342387,
+          285637784
+        ],
+        "index": 68247,
+        "pack": 1829,
+        "offset": 1037961,
+        "opus_offset": 96,
+        "entry_length": 5141,
+        "wav_length": 88512
+      },
+      {
+        "id": 473842780,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 171623185,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 125342387,
+        "route": [
+          4265072610,
+          523733914,
+          125342387,
+          473842780
+        ],
+        "index": 68245,
+        "pack": 1829,
+        "offset": 1028858,
+        "opus_offset": 96,
+        "entry_length": 4282,
+        "wav_length": 69468
+      }
+    ]
+  },
+  {
+    "event": "w_tail_revol_tech_burya_int_wide",
+    "wwise_id": 1806536707,
+    "found": false,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ]
+  },
+  {
+    "event": "w_gun_npc_revol_tech_burya_fire_voice_02",
+    "wwise_id": 1031084122,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 786825698,
+        "action_type": 2563,
+        "target": 416846858,
+        "raw_hex": "e201e62e030a0a94d81800000004010000c0bf000000000000000000"
+      },
+      {
+        "id": 120830924,
+        "action_type": 2051,
+        "target": 416846858,
+        "raw_hex": "ccbb330703080a94d818000000040100004843000000000000000000"
+      },
+      {
+        "id": 106133899,
+        "action_type": 1027,
+        "target": 794508892,
+        "raw_hex": "8b79530603045c3e5b2f000000045e96b01400000000"
+      },
+      {
+        "id": 187069441,
+        "action_type": 1027,
+        "target": 996966158,
+        "raw_hex": "0174260b03040e7f6c3b000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 82747205,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 997856817,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          13634454,
+          82747205
+        ],
+        "index": 61693,
+        "pack": 1652,
+        "offset": 751286,
+        "opus_offset": 96,
+        "entry_length": 14749,
+        "wav_length": 290204
+      },
+      {
+        "id": 452749154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 392903408,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          13634454,
+          452749154
+        ],
+        "index": 61695,
+        "pack": 1652,
+        "offset": 781586,
+        "opus_offset": 96,
+        "entry_length": 14549,
+        "wav_length": 264864
+      },
+      {
+        "id": 870412608,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1009404086,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          13634454,
+          870412608
+        ],
+        "index": 61692,
+        "pack": 1652,
+        "offset": 738308,
+        "opus_offset": 96,
+        "entry_length": 12978,
+        "wav_length": 255324
+      },
+      {
+        "id": 945532676,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89178925,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          13634454,
+          945532676
+        ],
+        "index": 68288,
+        "pack": 1830,
+        "offset": 287929,
+        "opus_offset": 96,
+        "entry_length": 16770,
+        "wav_length": 322592
+      },
+      {
+        "id": 1012292757,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 789939315,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          13634454,
+          1012292757
+        ],
+        "index": 61694,
+        "pack": 1652,
+        "offset": 766035,
+        "opus_offset": 96,
+        "entry_length": 15551,
+        "wav_length": 290836
+      },
+      {
+        "id": 226670919,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 367148723,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          980093712,
+          226670919
+        ],
+        "index": 68289,
+        "pack": 1830,
+        "offset": 304699,
+        "opus_offset": 96,
+        "entry_length": 24753,
+        "wav_length": 494660
+      },
+      {
+        "id": 264492914,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 332555177,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          980093712,
+          264492914
+        ],
+        "index": 68292,
+        "pack": 1830,
+        "offset": 376129,
+        "opus_offset": 96,
+        "entry_length": 22418,
+        "wav_length": 456768
+      },
+      {
+        "id": 430410991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 255008954,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          980093712,
+          430410991
+        ],
+        "index": 68291,
+        "pack": 1830,
+        "offset": 353546,
+        "opus_offset": 96,
+        "entry_length": 22583,
+        "wav_length": 459848
+      },
+      {
+        "id": 853861229,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89338742,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          980093712,
+          853861229
+        ],
+        "index": 68290,
+        "pack": 1830,
+        "offset": 329452,
+        "opus_offset": 96,
+        "entry_length": 24094,
+        "wav_length": 503192
+      },
+      {
+        "id": 961366039,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 649774739,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084122,
+          106133899,
+          794508892,
+          980093712,
+          961366039
+        ],
+        "index": 68293,
+        "pack": 1830,
+        "offset": 398547,
+        "opus_offset": 96,
+        "entry_length": 24837,
+        "wav_length": 511240
+      },
+      {
+        "id": 514739466,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 474592269,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          191878228,
+          514739466
+        ],
+        "index": 68298,
+        "pack": 1830,
+        "offset": 531038,
+        "opus_offset": 96,
+        "entry_length": 24779,
+        "wav_length": 470024
+      },
+      {
+        "id": 558687805,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1067000528,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          191878228,
+          558687805
+        ],
+        "index": 68297,
+        "pack": 1830,
+        "offset": 504161,
+        "opus_offset": 96,
+        "entry_length": 26877,
+        "wav_length": 545536
+      },
+      {
+        "id": 724837605,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1044453378,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          191878228,
+          724837605
+        ],
+        "index": 68295,
+        "pack": 1830,
+        "offset": 451962,
+        "opus_offset": 96,
+        "entry_length": 26022,
+        "wav_length": 521488
+      },
+      {
+        "id": 944646265,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 870406463,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          191878228,
+          944646265
+        ],
+        "index": 68296,
+        "pack": 1830,
+        "offset": 477984,
+        "opus_offset": 96,
+        "entry_length": 26177,
+        "wav_length": 527428
+      },
+      {
+        "id": 1023046095,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 882470041,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          191878228,
+          1023046095
+        ],
+        "index": 68294,
+        "pack": 1830,
+        "offset": 423384,
+        "opus_offset": 96,
+        "entry_length": 28578,
+        "wav_length": 575156
+      },
+      {
+        "id": 515308063,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 854022346,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          356052541,
+          515308063
+        ],
+        "index": 68299,
+        "pack": 1830,
+        "offset": 555817,
+        "opus_offset": 96,
+        "entry_length": 18073,
+        "wav_length": 368684
+      },
+      {
+        "id": 521760625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 283374259,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          356052541,
+          521760625
+        ],
+        "index": 68302,
+        "pack": 1830,
+        "offset": 606331,
+        "opus_offset": 96,
+        "entry_length": 16056,
+        "wav_length": 320376
+      },
+      {
+        "id": 574403635,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 750894451,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          356052541,
+          574403635
+        ],
+        "index": 68303,
+        "pack": 1830,
+        "offset": 622387,
+        "opus_offset": 96,
+        "entry_length": 17778,
+        "wav_length": 334308
+      },
+      {
+        "id": 616274861,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 569024713,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          356052541,
+          616274861
+        ],
+        "index": 68300,
+        "pack": 1830,
+        "offset": 573890,
+        "opus_offset": 96,
+        "entry_length": 15968,
+        "wav_length": 317844
+      },
+      {
+        "id": 878990673,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 841458651,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084122,
+          187069441,
+          996966158,
+          356052541,
+          878990673
+        ],
+        "index": 68301,
+        "pack": 1830,
+        "offset": 589858,
+        "opus_offset": 96,
+        "entry_length": 16473,
+        "wav_length": 328216
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_revol_tech_burya_fire_voice_03",
+    "wwise_id": 1031084123,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 931571719,
+        "action_type": 2563,
+        "target": 416846858,
+        "raw_hex": "07a88637030a0a94d8180000000401000040c0000000000000000000"
+      },
+      {
+        "id": 443628321,
+        "action_type": 2051,
+        "target": 416846858,
+        "raw_hex": "213b711a03080a94d8180000000401000048c3000000000000000000"
+      },
+      {
+        "id": 998121698,
+        "action_type": 1027,
+        "target": 794508892,
+        "raw_hex": "e2207e3b03045c3e5b2f000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 82747205,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 997856817,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          13634454,
+          82747205
+        ],
+        "index": 61693,
+        "pack": 1652,
+        "offset": 751286,
+        "opus_offset": 96,
+        "entry_length": 14749,
+        "wav_length": 290204
+      },
+      {
+        "id": 452749154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 392903408,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          13634454,
+          452749154
+        ],
+        "index": 61695,
+        "pack": 1652,
+        "offset": 781586,
+        "opus_offset": 96,
+        "entry_length": 14549,
+        "wav_length": 264864
+      },
+      {
+        "id": 870412608,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1009404086,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          13634454,
+          870412608
+        ],
+        "index": 61692,
+        "pack": 1652,
+        "offset": 738308,
+        "opus_offset": 96,
+        "entry_length": 12978,
+        "wav_length": 255324
+      },
+      {
+        "id": 945532676,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89178925,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          13634454,
+          945532676
+        ],
+        "index": 68288,
+        "pack": 1830,
+        "offset": 287929,
+        "opus_offset": 96,
+        "entry_length": 16770,
+        "wav_length": 322592
+      },
+      {
+        "id": 1012292757,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 789939315,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          13634454,
+          1012292757
+        ],
+        "index": 61694,
+        "pack": 1652,
+        "offset": 766035,
+        "opus_offset": 96,
+        "entry_length": 15551,
+        "wav_length": 290836
+      },
+      {
+        "id": 226670919,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 367148723,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          980093712,
+          226670919
+        ],
+        "index": 68289,
+        "pack": 1830,
+        "offset": 304699,
+        "opus_offset": 96,
+        "entry_length": 24753,
+        "wav_length": 494660
+      },
+      {
+        "id": 264492914,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 332555177,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          980093712,
+          264492914
+        ],
+        "index": 68292,
+        "pack": 1830,
+        "offset": 376129,
+        "opus_offset": 96,
+        "entry_length": 22418,
+        "wav_length": 456768
+      },
+      {
+        "id": 430410991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 255008954,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          980093712,
+          430410991
+        ],
+        "index": 68291,
+        "pack": 1830,
+        "offset": 353546,
+        "opus_offset": 96,
+        "entry_length": 22583,
+        "wav_length": 459848
+      },
+      {
+        "id": 853861229,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89338742,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          980093712,
+          853861229
+        ],
+        "index": 68290,
+        "pack": 1830,
+        "offset": 329452,
+        "opus_offset": 96,
+        "entry_length": 24094,
+        "wav_length": 503192
+      },
+      {
+        "id": 961366039,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 649774739,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084123,
+          998121698,
+          794508892,
+          980093712,
+          961366039
+        ],
+        "index": 68293,
+        "pack": 1830,
+        "offset": 398547,
+        "opus_offset": 96,
+        "entry_length": 24837,
+        "wav_length": 511240
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_revol_tech_burya_fire_voice_01",
+    "wwise_id": 1031084121,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 674173465,
+        "action_type": 2307,
+        "target": 416846858,
+        "raw_hex": "19122f2803090a94d818000000040100000000000000000000000000"
+      },
+      {
+        "id": 242077915,
+        "action_type": 2819,
+        "target": 416846858,
+        "raw_hex": "dbd06d0e030b0a94d818000000040100000000000000000000000000"
+      },
+      {
+        "id": 92642773,
+        "action_type": 1027,
+        "target": 794508892,
+        "raw_hex": "d59d850503045c3e5b2f000000045e96b01400000000"
+      },
+      {
+        "id": 505053129,
+        "action_type": 1027,
+        "target": 996966158,
+        "raw_hex": "c97f1a1e03040e7f6c3b000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 82747205,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 997856817,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          13634454,
+          82747205
+        ],
+        "index": 61693,
+        "pack": 1652,
+        "offset": 751286,
+        "opus_offset": 96,
+        "entry_length": 14749,
+        "wav_length": 290204
+      },
+      {
+        "id": 452749154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 392903408,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          13634454,
+          452749154
+        ],
+        "index": 61695,
+        "pack": 1652,
+        "offset": 781586,
+        "opus_offset": 96,
+        "entry_length": 14549,
+        "wav_length": 264864
+      },
+      {
+        "id": 870412608,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1009404086,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          13634454,
+          870412608
+        ],
+        "index": 61692,
+        "pack": 1652,
+        "offset": 738308,
+        "opus_offset": 96,
+        "entry_length": 12978,
+        "wav_length": 255324
+      },
+      {
+        "id": 945532676,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89178925,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          13634454,
+          945532676
+        ],
+        "index": 68288,
+        "pack": 1830,
+        "offset": 287929,
+        "opus_offset": 96,
+        "entry_length": 16770,
+        "wav_length": 322592
+      },
+      {
+        "id": 1012292757,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 789939315,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          13634454,
+          1012292757
+        ],
+        "index": 61694,
+        "pack": 1652,
+        "offset": 766035,
+        "opus_offset": 96,
+        "entry_length": 15551,
+        "wav_length": 290836
+      },
+      {
+        "id": 226670919,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 367148723,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          980093712,
+          226670919
+        ],
+        "index": 68289,
+        "pack": 1830,
+        "offset": 304699,
+        "opus_offset": 96,
+        "entry_length": 24753,
+        "wav_length": 494660
+      },
+      {
+        "id": 264492914,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 332555177,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          980093712,
+          264492914
+        ],
+        "index": 68292,
+        "pack": 1830,
+        "offset": 376129,
+        "opus_offset": 96,
+        "entry_length": 22418,
+        "wav_length": 456768
+      },
+      {
+        "id": 430410991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 255008954,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          980093712,
+          430410991
+        ],
+        "index": 68291,
+        "pack": 1830,
+        "offset": 353546,
+        "opus_offset": 96,
+        "entry_length": 22583,
+        "wav_length": 459848
+      },
+      {
+        "id": 853861229,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89338742,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          980093712,
+          853861229
+        ],
+        "index": 68290,
+        "pack": 1830,
+        "offset": 329452,
+        "opus_offset": 96,
+        "entry_length": 24094,
+        "wav_length": 503192
+      },
+      {
+        "id": 961366039,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 649774739,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084121,
+          92642773,
+          794508892,
+          980093712,
+          961366039
+        ],
+        "index": 68293,
+        "pack": 1830,
+        "offset": 398547,
+        "opus_offset": 96,
+        "entry_length": 24837,
+        "wav_length": 511240
+      },
+      {
+        "id": 514739466,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 474592269,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          191878228,
+          514739466
+        ],
+        "index": 68298,
+        "pack": 1830,
+        "offset": 531038,
+        "opus_offset": 96,
+        "entry_length": 24779,
+        "wav_length": 470024
+      },
+      {
+        "id": 558687805,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1067000528,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          191878228,
+          558687805
+        ],
+        "index": 68297,
+        "pack": 1830,
+        "offset": 504161,
+        "opus_offset": 96,
+        "entry_length": 26877,
+        "wav_length": 545536
+      },
+      {
+        "id": 724837605,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1044453378,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          191878228,
+          724837605
+        ],
+        "index": 68295,
+        "pack": 1830,
+        "offset": 451962,
+        "opus_offset": 96,
+        "entry_length": 26022,
+        "wav_length": 521488
+      },
+      {
+        "id": 944646265,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 870406463,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          191878228,
+          944646265
+        ],
+        "index": 68296,
+        "pack": 1830,
+        "offset": 477984,
+        "opus_offset": 96,
+        "entry_length": 26177,
+        "wav_length": 527428
+      },
+      {
+        "id": 1023046095,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 882470041,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 191878228,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          191878228,
+          1023046095
+        ],
+        "index": 68294,
+        "pack": 1830,
+        "offset": 423384,
+        "opus_offset": 96,
+        "entry_length": 28578,
+        "wav_length": 575156
+      },
+      {
+        "id": 515308063,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 854022346,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          356052541,
+          515308063
+        ],
+        "index": 68299,
+        "pack": 1830,
+        "offset": 555817,
+        "opus_offset": 96,
+        "entry_length": 18073,
+        "wav_length": 368684
+      },
+      {
+        "id": 521760625,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 283374259,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          356052541,
+          521760625
+        ],
+        "index": 68302,
+        "pack": 1830,
+        "offset": 606331,
+        "opus_offset": 96,
+        "entry_length": 16056,
+        "wav_length": 320376
+      },
+      {
+        "id": 574403635,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 750894451,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          356052541,
+          574403635
+        ],
+        "index": 68303,
+        "pack": 1830,
+        "offset": 622387,
+        "opus_offset": 96,
+        "entry_length": 17778,
+        "wav_length": 334308
+      },
+      {
+        "id": 616274861,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 569024713,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          356052541,
+          616274861
+        ],
+        "index": 68300,
+        "pack": 1830,
+        "offset": 573890,
+        "opus_offset": 96,
+        "entry_length": 15968,
+        "wav_length": 317844
+      },
+      {
+        "id": 878990673,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 841458651,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 356052541,
+        "route": [
+          1031084121,
+          505053129,
+          996966158,
+          356052541,
+          878990673
+        ],
+        "index": 68301,
+        "pack": 1830,
+        "offset": 589858,
+        "opus_offset": 96,
+        "entry_length": 16473,
+        "wav_length": 328216
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_revol_tech_burya_fire_voice_04",
+    "wwise_id": 1031084124,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 1024835513,
+        "action_type": 2563,
+        "target": 416846858,
+        "raw_hex": "b9bf153d030a0a94d8180000000401000090c0000000000000000000"
+      },
+      {
+        "id": 173141611,
+        "action_type": 2051,
+        "target": 416846858,
+        "raw_hex": "6bee510a03080a94d81800000004010000c843000000000000000000"
+      },
+      {
+        "id": 13399582,
+        "action_type": 1027,
+        "target": 794508892,
+        "raw_hex": "1e76cc0003045c3e5b2f000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 82747205,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 997856817,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          13634454,
+          82747205
+        ],
+        "index": 61693,
+        "pack": 1652,
+        "offset": 751286,
+        "opus_offset": 96,
+        "entry_length": 14749,
+        "wav_length": 290204
+      },
+      {
+        "id": 452749154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 392903408,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          13634454,
+          452749154
+        ],
+        "index": 61695,
+        "pack": 1652,
+        "offset": 781586,
+        "opus_offset": 96,
+        "entry_length": 14549,
+        "wav_length": 264864
+      },
+      {
+        "id": 870412608,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1009404086,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          13634454,
+          870412608
+        ],
+        "index": 61692,
+        "pack": 1652,
+        "offset": 738308,
+        "opus_offset": 96,
+        "entry_length": 12978,
+        "wav_length": 255324
+      },
+      {
+        "id": 945532676,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89178925,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          13634454,
+          945532676
+        ],
+        "index": 68288,
+        "pack": 1830,
+        "offset": 287929,
+        "opus_offset": 96,
+        "entry_length": 16770,
+        "wav_length": 322592
+      },
+      {
+        "id": 1012292757,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 789939315,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          13634454,
+          1012292757
+        ],
+        "index": 61694,
+        "pack": 1652,
+        "offset": 766035,
+        "opus_offset": 96,
+        "entry_length": 15551,
+        "wav_length": 290836
+      },
+      {
+        "id": 226670919,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 367148723,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          980093712,
+          226670919
+        ],
+        "index": 68289,
+        "pack": 1830,
+        "offset": 304699,
+        "opus_offset": 96,
+        "entry_length": 24753,
+        "wav_length": 494660
+      },
+      {
+        "id": 264492914,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 332555177,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          980093712,
+          264492914
+        ],
+        "index": 68292,
+        "pack": 1830,
+        "offset": 376129,
+        "opus_offset": 96,
+        "entry_length": 22418,
+        "wav_length": 456768
+      },
+      {
+        "id": 430410991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 255008954,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          980093712,
+          430410991
+        ],
+        "index": 68291,
+        "pack": 1830,
+        "offset": 353546,
+        "opus_offset": 96,
+        "entry_length": 22583,
+        "wav_length": 459848
+      },
+      {
+        "id": 853861229,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89338742,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          980093712,
+          853861229
+        ],
+        "index": 68290,
+        "pack": 1830,
+        "offset": 329452,
+        "opus_offset": 96,
+        "entry_length": 24094,
+        "wav_length": 503192
+      },
+      {
+        "id": 961366039,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 649774739,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084124,
+          13399582,
+          794508892,
+          980093712,
+          961366039
+        ],
+        "index": 68293,
+        "pack": 1830,
+        "offset": 398547,
+        "opus_offset": 96,
+        "entry_length": 24837,
+        "wav_length": 511240
+      }
+    ]
+  },
+  {
+    "event": "w_gun_npc_revol_tech_burya_fire_voice_05",
+    "wwise_id": 1031084125,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "npc"
+    ],
+    "actions": [
+      {
+        "id": 1069596912,
+        "action_type": 2563,
+        "target": 416846858,
+        "raw_hex": "f0c0c03f030a0a94d81800000004010000c0c0000000000000000000"
+      },
+      {
+        "id": 639487164,
+        "action_type": 2051,
+        "target": 416846858,
+        "raw_hex": "bccc1d2603080a94d818000000040100006144000000000000000000"
+      },
+      {
+        "id": 971696342,
+        "action_type": 1027,
+        "target": 794508892,
+        "raw_hex": "d6e8ea3903045c3e5b2f000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 82747205,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 997856817,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          13634454,
+          82747205
+        ],
+        "index": 61693,
+        "pack": 1652,
+        "offset": 751286,
+        "opus_offset": 96,
+        "entry_length": 14749,
+        "wav_length": 290204
+      },
+      {
+        "id": 452749154,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 392903408,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          13634454,
+          452749154
+        ],
+        "index": 61695,
+        "pack": 1652,
+        "offset": 781586,
+        "opus_offset": 96,
+        "entry_length": 14549,
+        "wav_length": 264864
+      },
+      {
+        "id": 870412608,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1009404086,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          13634454,
+          870412608
+        ],
+        "index": 61692,
+        "pack": 1652,
+        "offset": 738308,
+        "opus_offset": 96,
+        "entry_length": 12978,
+        "wav_length": 255324
+      },
+      {
+        "id": 945532676,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89178925,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          13634454,
+          945532676
+        ],
+        "index": 68288,
+        "pack": 1830,
+        "offset": 287929,
+        "opus_offset": 96,
+        "entry_length": 16770,
+        "wav_length": 322592
+      },
+      {
+        "id": 1012292757,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 789939315,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 13634454,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          13634454,
+          1012292757
+        ],
+        "index": 61694,
+        "pack": 1652,
+        "offset": 766035,
+        "opus_offset": 96,
+        "entry_length": 15551,
+        "wav_length": 290836
+      },
+      {
+        "id": 226670919,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 367148723,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          980093712,
+          226670919
+        ],
+        "index": 68289,
+        "pack": 1830,
+        "offset": 304699,
+        "opus_offset": 96,
+        "entry_length": 24753,
+        "wav_length": 494660
+      },
+      {
+        "id": 264492914,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 332555177,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          980093712,
+          264492914
+        ],
+        "index": 68292,
+        "pack": 1830,
+        "offset": 376129,
+        "opus_offset": 96,
+        "entry_length": 22418,
+        "wav_length": 456768
+      },
+      {
+        "id": 430410991,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 255008954,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          980093712,
+          430410991
+        ],
+        "index": 68291,
+        "pack": 1830,
+        "offset": 353546,
+        "opus_offset": 96,
+        "entry_length": 22583,
+        "wav_length": 459848
+      },
+      {
+        "id": 853861229,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 89338742,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          980093712,
+          853861229
+        ],
+        "index": 68290,
+        "pack": 1830,
+        "offset": 329452,
+        "opus_offset": 96,
+        "entry_length": 24094,
+        "wav_length": 503192
+      },
+      {
+        "id": 961366039,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 649774739,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 980093712,
+        "route": [
+          1031084125,
+          971696342,
+          794508892,
+          980093712,
+          961366039
+        ],
+        "index": 68293,
+        "pack": 1830,
+        "offset": 398547,
+        "opus_offset": 96,
+        "entry_length": 24837,
+        "wav_length": 511240
+      }
+    ]
+  },
+  {
+    "event": "w_gun_revol_tech_burya_reload",
+    "wwise_id": 2624254593,
+    "found": true,
+    "tags": [
+      "Guns",
+      "w_gun_revol_tech_burya",
+      "player"
+    ],
+    "actions": [
+      {
+        "id": 229238799,
+        "action_type": 1027,
+        "target": 609060759,
+        "raw_hex": "0fe8a90d030497874d24000000045e96b01400000000"
+      },
+      {
+        "id": 396894317,
+        "action_type": 1027,
+        "target": 48314577,
+        "raw_hex": "6d20a8170304d138e1020001399001000000045e96b01400000000"
+      },
+      {
+        "id": 224303047,
+        "action_type": 1027,
+        "target": 446825483,
+        "raw_hex": "c7975e0d03040b04a21a000139e803000000045e96b01400000000"
+      },
+      {
+        "id": 197211446,
+        "action_type": 1027,
+        "target": 675377361,
+        "raw_hex": "3635c10b0304d1704128000139a406000000045e96b01400000000"
+      },
+      {
+        "id": 985938408,
+        "action_type": 1027,
+        "target": 14161796,
+        "raw_hex": "e839c43a03048417d800000139280a000000045e96b01400000000"
+      }
+    ],
+    "sounds": [
+      {
+        "id": 335015308,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 83639745,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 609060759,
+        "route": [
+          2624254593,
+          229238799,
+          609060759,
+          335015308
+        ],
+        "index": 68256,
+        "pack": 1830,
+        "offset": 80515,
+        "opus_offset": 96,
+        "entry_length": 9615,
+        "wav_length": 181600
+      },
+      {
+        "id": 340320684,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 632455134,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 609060759,
+        "route": [
+          2624254593,
+          229238799,
+          609060759,
+          340320684
+        ],
+        "index": 68254,
+        "pack": 1830,
+        "offset": 59151,
+        "opus_offset": 96,
+        "entry_length": 11236,
+        "wav_length": 192612
+      },
+      {
+        "id": 421324168,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 912956719,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 609060759,
+        "route": [
+          2624254593,
+          229238799,
+          609060759,
+          421324168
+        ],
+        "index": 68255,
+        "pack": 1830,
+        "offset": 70387,
+        "opus_offset": 96,
+        "entry_length": 10128,
+        "wav_length": 195280
+      },
+      {
+        "id": 15869766,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 352859219,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 48314577,
+        "route": [
+          2624254593,
+          396894317,
+          48314577,
+          15869766
+        ],
+        "index": 68257,
+        "pack": 1830,
+        "offset": 90130,
+        "opus_offset": 96,
+        "entry_length": 5416,
+        "wav_length": 103792
+      },
+      {
+        "id": 331571144,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1065002052,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 48314577,
+        "route": [
+          2624254593,
+          396894317,
+          48314577,
+          331571144
+        ],
+        "index": 68259,
+        "pack": 1830,
+        "offset": 101209,
+        "opus_offset": 96,
+        "entry_length": 6168,
+        "wav_length": 119208
+      },
+      {
+        "id": 568293813,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 902783190,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 48314577,
+        "route": [
+          2624254593,
+          396894317,
+          48314577,
+          568293813
+        ],
+        "index": 68258,
+        "pack": 1830,
+        "offset": 95546,
+        "opus_offset": 96,
+        "entry_length": 5663,
+        "wav_length": 102532
+      },
+      {
+        "id": 412497441,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 767363679,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 446825483,
+        "route": [
+          2624254593,
+          224303047,
+          446825483,
+          412497441
+        ],
+        "index": 68272,
+        "pack": 1830,
+        "offset": 194293,
+        "opus_offset": 96,
+        "entry_length": 6358,
+        "wav_length": 89860
+      },
+      {
+        "id": 556160266,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 15388178,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 446825483,
+        "route": [
+          2624254593,
+          224303047,
+          446825483,
+          556160266
+        ],
+        "index": 68273,
+        "pack": 1830,
+        "offset": 200651,
+        "opus_offset": 96,
+        "entry_length": 5056,
+        "wav_length": 78044
+      },
+      {
+        "id": 665426292,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 835248995,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 446825483,
+        "route": [
+          2624254593,
+          224303047,
+          446825483,
+          665426292
+        ],
+        "index": 68274,
+        "pack": 1830,
+        "offset": 205707,
+        "opus_offset": 96,
+        "entry_length": 5455,
+        "wav_length": 76984
+      },
+      {
+        "id": 76933644,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 607368706,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 675377361,
+        "route": [
+          2624254593,
+          197211446,
+          675377361,
+          76933644
+        ],
+        "index": 68270,
+        "pack": 1830,
+        "offset": 168020,
+        "opus_offset": 96,
+        "entry_length": 13239,
+        "wav_length": 224096
+      },
+      {
+        "id": 632534912,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 1028051998,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 675377361,
+        "route": [
+          2624254593,
+          197211446,
+          675377361,
+          632534912
+        ],
+        "index": 68269,
+        "pack": 1830,
+        "offset": 156448,
+        "opus_offset": 96,
+        "entry_length": 11572,
+        "wav_length": 206620
+      },
+      {
+        "id": 859873662,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 277994175,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 675377361,
+        "route": [
+          2624254593,
+          197211446,
+          675377361,
+          859873662
+        ],
+        "index": 68271,
+        "pack": 1830,
+        "offset": 181259,
+        "opus_offset": 96,
+        "entry_length": 13034,
+        "wav_length": 222120
+      },
+      {
+        "id": 147405082,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 46206580,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 14161796,
+        "route": [
+          2624254593,
+          985938408,
+          14161796,
+          147405082
+        ],
+        "index": 68267,
+        "pack": 1830,
+        "offset": 139983,
+        "opus_offset": 96,
+        "entry_length": 7396,
+        "wav_length": 131608
+      },
+      {
+        "id": 379280490,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 109551436,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 14161796,
+        "route": [
+          2624254593,
+          985938408,
+          14161796,
+          379280490
+        ],
+        "index": 68268,
+        "pack": 1830,
+        "offset": 147379,
+        "opus_offset": 96,
+        "entry_length": 9069,
+        "wav_length": 179692
+      },
+      {
+        "id": 596411367,
+        "type": 2,
+        "plugin": 65537,
+        "stream": 2,
+        "media": 934934518,
+        "media_size": 19296,
+        "source_bits": 0,
+        "parent": 14161796,
+        "route": [
+          2624254593,
+          985938408,
+          14161796,
+          596411367
+        ],
+        "index": 68266,
+        "pack": 1830,
+        "offset": 128824,
+        "opus_offset": 96,
+        "entry_length": 11159,
+        "wav_length": 208172
+      }
+    ]
+  }
+]

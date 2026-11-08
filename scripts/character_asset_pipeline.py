@@ -1378,9 +1378,9 @@ def initialize_manifest(
         "__TIER__": tier,
     }
     manifest = replace_placeholders(deepcopy(template), replacements)
-    if game != "risk-of-rain-2" or kind != "hero":
-        catalog_path = "catalog.json" if game == "risk-of-rain-2" else f"games/{game}/catalog.json"
-        models_dir = "models/generated" if game == "risk-of-rain-2" else f"models/{game}/characters"
+    if game != "rain-survivors-2" or kind != "hero":
+        catalog_path = "catalog.json" if game == "rain-survivors-2" else f"games/{game}/catalog.json"
+        models_dir = "models/generated" if game == "rain-survivors-2" else f"models/{game}/characters"
         manifest["publish"]["modelsDir"] = models_dir
         manifest["publish"]["catalog"] = {
             "mode": "direct",
@@ -1404,7 +1404,7 @@ def build_parser(repo_root: Path) -> argparse.ArgumentParser:
     init_parser.add_argument("--slug", required=True)
     init_parser.add_argument("--name", required=True)
     init_parser.add_argument("--name-en", required=True)
-    init_parser.add_argument("--game", default="risk-of-rain-2")
+    init_parser.add_argument("--game", default="rain-survivors-2")
     init_parser.add_argument("--kind", default="hero")
     init_parser.add_argument("--tier", default="英雄")
     init_parser.add_argument(

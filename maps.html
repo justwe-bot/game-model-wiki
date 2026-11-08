@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101513">
   <title>雨中求生 2 · 3D 地图图鉴</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <style>
     :root {
       color-scheme: dark;
@@ -93,7 +92,7 @@
       <div class="catalog-head">
         <h1 class="brand">雨中求生 2 · 3D 图鉴</h1>
         <nav class="view-tabs" aria-label="图鉴类型">
-          <a class="view-tab" href="./index.html?game=risk-of-rain-2"><i data-lucide="skull"></i>生物</a>
+          <a class="view-tab" href="./index.html?game=rain-survivors-2"><i data-lucide="skull"></i>生物</a>
           <a class="view-tab active" href="./maps.html"><i data-lucide="map"></i>地图</a>
         </nav>
         <label class="search"><i data-lucide="search"></i><input id="searchInput" type="search" placeholder="搜索地图" autocomplete="off"></label>
@@ -133,7 +132,7 @@
     </main>
   </div>
   <script type="importmap">
-    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/","lucide":"https://cdn.jsdelivr.net/npm/lucide@0.468.0/+esm"}}
+    {"imports":{"three":"/vendor/three/three.module.js","three/addons/":"/vendor/three/addons/","lucide":"/vendor/lucide/lucide.esm.js"}}
   </script>
   <script type="module">
     import * as THREE from 'three';

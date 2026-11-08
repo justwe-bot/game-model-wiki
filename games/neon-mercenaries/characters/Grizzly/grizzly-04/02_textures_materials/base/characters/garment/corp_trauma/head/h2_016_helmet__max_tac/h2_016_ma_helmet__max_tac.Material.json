@@ -1,0 +1,861 @@
+{
+  "Header": {
+    "MaterialJsonVersion": "1.0.0"
+  },
+  "MaterialRepo": "\\\\?\\C:\\Code\\UeCover\\Blender\\hq_sample\\material_depot",
+  "Materials": [
+    {
+      "Name": "lambert1",
+      "BaseMaterial": "engine\\materials\\multilayered.mt",
+      "MaterialTemplate": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\h2_016_wa_helmet__max_tac_n01.xbm",
+        "MultilayerMask": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac.mlmask",
+        "MultilayerSetup": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    },
+    {
+      "Name": "eyescreen",
+      "BaseMaterial": "base\\materials\\screen\\screen_fluff_green.mi",
+      "MaterialTemplate": "base\\fx\\shaders\\parallaxscreen.mt",
+      "EnableMask": false,
+      "Data": {
+        "ParalaxTexture": "base\\surfaces\\textures\\screens\\generic\\colorless\\16_civil_gold.xbm",
+        "ScanlineTexture": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_02_d.xbm",
+        "Metalness": 0.5,
+        "Roughness": 0.100000001,
+        "Emissive": 10,
+        "EmissiveEVRaytracingBias": 0,
+        "EmissiveDirectionality": 0,
+        "EnableRaytracedEmissive": 1,
+        "ImageScale": 1.04999995,
+        "LayersSeparation": 0.0250000004,
+        "IntensityPerLayer": {
+          "X": 1,
+          "Y": 0.25,
+          "Z": 0.06,
+          "W": 0
+        },
+        "ScanlinesDensity": 125,
+        "ScanlinesIntensity": 0.25,
+        "BlinkingSpeed": 0,
+        "BlinkingMaskTexture": "base\\surfaces\\textures\\screens\\generic\\colorless\\16_civil_gold.xbm",
+        "ScrollMaskTexture": "base\\surfaces\\textures\\screens\\generic\\masks\\05_hackerseq_4_3_01_scroll_mask.xbm",
+        "ScrollVerticalOrHorizontal": 0,
+        "ScrollMaskStartPoint1": 0.219999999,
+        "ScrollMaskHeight1": 0.850000024,
+        "ScrollSpeed1": 0.200000003,
+        "ScrollStepFactor1": 30,
+        "ScrollMaskStartPoint2": 0.460000008,
+        "ScrollMaskHeight2": 0.330000013,
+        "ScrollSpeed2": 0.800000012,
+        "ScrollStepFactor2": 10,
+        "EmissiveColor": {
+          "Red": 255,
+          "Green": 255,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "HSV_Mod": {
+          "X": 0.36,
+          "Y": 0.9,
+          "Z": 0,
+          "W": -1
+        },
+        "IsBroken": 0,
+        "FixForBlack": 1
+      }
+    },
+    {
+      "Name": "dec_logos",
+      "BaseMaterial": "base\\materials\\mesh_decal.mt",
+      "MaterialTemplate": "base\\materials\\mesh_decal.mt",
+      "EnableMask": false,
+      "Data": {
+        "DiffuseTexture": "base\\characters\\common\\textures\\decals\\decals_max_tac_d01.xbm",
+        "DiffuseColor": {
+          "Red": 255,
+          "Green": 255,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "DiffuseAlpha": 0.899999976,
+        "UVOffsetX": 0,
+        "UVOffsetY": 0,
+        "UVRotation": 0,
+        "UVScaleX": 1,
+        "UVScaleY": 1,
+        "SecondaryMask": "engine\\textures\\editor\\white.xbm",
+        "SecondaryMaskUVScale": 1,
+        "SecondaryMaskInfluence": 0,
+        "NormalTexture": "engine\\textures\\editor\\normal.xbm",
+        "NormalAlpha": 0,
+        "NormalAlphaTex": "engine\\textures\\editor\\white.xbm",
+        "UseNormalAlphaTex": 0,
+        "NormalsBlendingMode": 0,
+        "NormalsBlendingModeAlpha": "engine\\textures\\editor\\white.xbm",
+        "RoughnessTexture": "engine\\textures\\editor\\white.xbm",
+        "RoughnessScale": 1,
+        "RoughnessBias": 0,
+        "MetalnessTexture": "engine\\textures\\editor\\black.xbm",
+        "MetalnessScale": 1,
+        "MetalnessBias": 0,
+        "AlphaMaskContrast": 0,
+        "RoughnessMetalnessAlpha": 0,
+        "AnimationSpeed": 1,
+        "AnimationFramesWidth": 1,
+        "AnimationFramesHeight": 1,
+        "DepthThreshold": 0.997530997
+      }
+    },
+    {
+      "Name": "nomad_01",
+      "BaseMaterial": "engine\\materials\\multilayered.mt",
+      "MaterialTemplate": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\h2_016_wa_helmet__max_tac_n01.xbm",
+        "MultilayerMask": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac.mlmask",
+        "MultilayerSetup": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac_nomad_01.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    },
+    {
+      "Name": "hologram",
+      "BaseMaterial": "base\\fx\\materials\\holograms\\crime_scene\\holo_crime_scene.mi",
+      "MaterialTemplate": "base\\fx\\shaders\\hologram.mt",
+      "EnableMask": false,
+      "Data": {
+        "AdditiveAlphaBlend": 1,
+        "OpaqueScanlineDensity": 200,
+        "Scanline": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+        "Normal": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\h2_016_wa_helmet__max_tac_n01.xbm",
+        "DotsTexture": "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+        "DotsSize": 200,
+        "DotsColor": {
+          "Red": 82,
+          "Green": 155,
+          "Blue": 216,
+          "Alpha": 255
+        },
+        "Projector1Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1,
+          "W": 0
+        },
+        "SurfaceColor": {
+          "Red": 240,
+          "Green": 251,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "SurfaceShadows": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "FallofColor": {
+          "Red": 204,
+          "Green": 246,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "Diffuse": "base\\materials\\placeholder\\black.xbm",
+        "GradientOffset": -2.5999999,
+        "GradientLength": 0.899999976,
+        "FresnelStrength": 0.121950999,
+        "DotsFresnelStrength": 0.746268988,
+        "GlowStrength": 0.100000001,
+        "DesaturationStrength": 0,
+        "FlickerThreshold": 0.375609994,
+        "FlickerChance": 0.112195,
+        "ArtifactsChance": 0,
+        "LightBleed": 0.291498005,
+        "NormalStrength": 1,
+        "ScreenSpaceFlicker": 1.09000003,
+        "UseIsobars": 0,
+        "IsobarsOffsets": {
+          "X": 3320,
+          "Y": 120,
+          "Z": 0,
+          "W": 0
+        },
+        "EntropyThreshold": 0.195122004,
+        "UseMovingDots": 0,
+        "IsHair": 0,
+        "ScanlineThickness": -0.578947008,
+        "Opacity": 1,
+        "GlobalTint": 0,
+        "SampledOrProceduralDots": 1,
+        "FullColorOrGrayscale": 0,
+        "GlitchChance": 0.419512004
+      }
+    },
+    {
+      "Name": "blue",
+      "BaseMaterial": "engine\\materials\\multilayered.mt",
+      "MaterialTemplate": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\h2_016_wa_helmet__max_tac_n01.xbm",
+        "MultilayerMask": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac.mlmask",
+        "MultilayerSetup": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac_blue.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    },
+    {
+      "Name": "burned",
+      "BaseMaterial": "engine\\materials\\multilayered.mt",
+      "MaterialTemplate": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\h2_016_wa_helmet__max_tac_n01.xbm",
+        "MultilayerMask": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac.mlmask",
+        "MultilayerSetup": "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\burned.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    }
+  ],
+  "TexturesList": [
+    "engine\\textures\\editor\\normal.xbm",
+    "engine\\materials\\defaults\\multilayer_default.mlmask",
+    "engine\\materials\\defaults\\ml_default_microblend.xbm",
+    "engine\\materials\\defaults\\ml_default_d.xbm",
+    "engine\\materials\\defaults\\ml_default_n.xbm",
+    "engine\\materials\\defaults\\ml_default_rm.xbm",
+    "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\h2_016_wa_helmet__max_tac_n01.xbm",
+    "base\\characters\\garment\\corp_trauma\\head\\h2_016_helmet__max_tac\\textures\\ml_h2_016_wa_helmet__max_tac.mlmask",
+    "base\\surfaces\\microblends\\default.xbm",
+    "base\\surfaces\\materials\\default\\default_d.xbm",
+    "base\\surfaces\\materials\\plastic\\plastic_pattern\\plastic_pattern_squiggle_01_30_n.xbm",
+    "base\\surfaces\\materials\\plastic\\plastic_pattern\\plastic_pattern_squiggle_01_30_r.xbm",
+    "base\\surfaces\\materials\\default\\black.xbm",
+    "base\\surfaces\\materials\\fabric\\nylon\\nylon_gloss_01_30_d.xbm",
+    "base\\surfaces\\materials\\fabric\\nylon\\nylon_gloss_01_30_n.xbm",
+    "base\\surfaces\\materials\\fabric\\nylon\\nylon_gloss_01_30_r.xbm",
+    "base\\surfaces\\materials\\default\\white.xbm",
+    "base\\surfaces\\materials\\plastic\\rubber_bumper\\rubber_bumper_01_300_d.xbm",
+    "base\\surfaces\\materials\\plastic\\rubber_bumper\\rubber_bumper_01_300_n.xbm",
+    "base\\surfaces\\materials\\plastic\\rubber_bumper\\rubber_bumper_01_300_r.xbm",
+    "base\\surfaces\\materials\\fabric\\leather\\leather_standard_clean_01_30_d.xbm",
+    "base\\surfaces\\materials\\fabric\\leather\\leather_holes_01_30_n.xbm",
+    "base\\surfaces\\materials\\fabric\\leather\\leather_standard_clean_01_30_r.xbm",
+    "base\\surfaces\\microblends\\pattern_camo7.xbm",
+    "base\\surfaces\\microblends\\dirt_stains.xbm",
+    "base\\surfaces\\microblends\\dust_fine.xbm",
+    "base\\surfaces\\textures\\screens\\generic\\display_block_02.xbm",
+    "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_02_d.xbm",
+    "base\\surfaces\\textures\\screens\\generic\\colorless\\22_civil_generic_4_3_golden.xbm",
+    "base\\surfaces\\textures\\screens\\generic\\colorless\\16_civil_gold.xbm",
+    "base\\surfaces\\textures\\screens\\generic\\masks\\05_hackerseq_4_3_01_scroll_mask.xbm",
+    "engine\\textures\\editor\\grey.xbm",
+    "engine\\textures\\editor\\white.xbm",
+    "engine\\textures\\editor\\black.xbm",
+    "base\\characters\\common\\textures\\decals\\decals_max_tac_d01.xbm",
+    "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+    "base\\materials\\placeholder\\normal.xbm",
+    "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+    "base\\materials\\placeholder\\black.xbm",
+    "base\\surfaces\\materials\\common\\plastic_common_01_300_d.xbm",
+    "base\\surfaces\\materials\\plastic\\plastic_hq\\plastic_tech_hq_01_30_n.xbm",
+    "base\\surfaces\\materials\\plastic\\plastic_tech\\plastic_tech_01_300_r.xbm",
+    "base\\surfaces\\microblends\\edgewear_01.xbm",
+    "base\\surfaces\\materials\\plastic\\plastic_scraped\\plastic_scraped_textured_01_300_n.xbm",
+    "base\\surfaces\\materials\\plastic\\plastic_scraped\\plastic_scraped_01_300_r.xbm",
+    "base\\surfaces\\materials\\metal\\iron_old\\iron_old_rusted_01_100_d.xbm",
+    "base\\surfaces\\materials\\metal\\metal_generic\\metal_generic_hard_01_300_n.xbm",
+    "base\\surfaces\\materials\\metal\\iron_old\\iron_old_rusted_01_100_r.xbm",
+    "base\\surfaces\\microblends\\dye_swirls.xbm",
+    "base\\surfaces\\microblends\\fine_filth.xbm"
+  ],
+  "MaterialTemplates": [
+    {
+      "Name": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "engine\\textures\\editor\\normal.xbm",
+        "MultilayerMask": "engine\\materials\\defaults\\multilayer_default.mlmask",
+        "MultilayerSetup": "engine\\materials\\defaults\\multilayer_default.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    },
+    {
+      "Name": "base\\fx\\shaders\\parallaxscreen.mt",
+      "EnableMask": true,
+      "Data": {
+        "ParalaxTexture": "base\\surfaces\\textures\\screens\\generic\\display_block_02.xbm",
+        "ScanlineTexture": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_02_d.xbm",
+        "Metalness": 0.899999976,
+        "Roughness": 0.100000001,
+        "Emissive": 7,
+        "EmissiveEVRaytracingBias": 0,
+        "EmissiveDirectionality": 0,
+        "EnableRaytracedEmissive": 1,
+        "ImageScale": 1.04999995,
+        "LayersSeparation": 0.100000001,
+        "IntensityPerLayer": {
+          "X": 1,
+          "Y": 0.25,
+          "Z": 0.06,
+          "W": 0
+        },
+        "ScanlinesDensity": 125,
+        "ScanlinesIntensity": 0.25,
+        "BlinkingSpeed": 0,
+        "BlinkingMaskTexture": "base\\surfaces\\materials\\default\\black.xbm",
+        "ScrollMaskTexture": "base\\surfaces\\materials\\default\\black.xbm",
+        "ScrollVerticalOrHorizontal": 0,
+        "ScrollMaskStartPoint1": 0.0199999996,
+        "ScrollMaskHeight1": 0.5,
+        "ScrollSpeed1": 0.25,
+        "ScrollStepFactor1": 30,
+        "ScrollMaskStartPoint2": 0.400000006,
+        "ScrollMaskHeight2": 0.200000003,
+        "ScrollSpeed2": 1.5,
+        "ScrollStepFactor2": 10,
+        "EmissiveColor": {
+          "Red": 255,
+          "Green": 255,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "HSV_Mod": {
+          "X": 0,
+          "Y": 1,
+          "Z": 0,
+          "W": -1
+        },
+        "IsBroken": 0,
+        "FixForBlack": 1
+      }
+    },
+    {
+      "Name": "base\\materials\\mesh_decal.mt",
+      "EnableMask": true,
+      "Data": {
+        "DiffuseTexture": "engine\\textures\\editor\\grey.xbm",
+        "DiffuseColor": {
+          "Red": 255,
+          "Green": 255,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "DiffuseAlpha": 0,
+        "UVOffsetX": 0,
+        "UVOffsetY": 0,
+        "UVRotation": 0,
+        "UVScaleX": 1,
+        "UVScaleY": 1,
+        "SecondaryMask": "engine\\textures\\editor\\white.xbm",
+        "SecondaryMaskUVScale": 1,
+        "SecondaryMaskInfluence": 0,
+        "NormalTexture": "engine\\textures\\editor\\normal.xbm",
+        "NormalAlpha": 0,
+        "NormalAlphaTex": "engine\\textures\\editor\\white.xbm",
+        "UseNormalAlphaTex": 0,
+        "NormalsBlendingMode": 0,
+        "NormalsBlendingModeAlpha": "engine\\textures\\editor\\white.xbm",
+        "RoughnessTexture": "engine\\textures\\editor\\white.xbm",
+        "RoughnessScale": 1,
+        "RoughnessBias": 0,
+        "MetalnessTexture": "engine\\textures\\editor\\black.xbm",
+        "MetalnessScale": 1,
+        "MetalnessBias": 0,
+        "AlphaMaskContrast": 0,
+        "RoughnessMetalnessAlpha": 0,
+        "AnimationSpeed": 1,
+        "AnimationFramesWidth": 1,
+        "AnimationFramesHeight": 1,
+        "DepthThreshold": 0.5
+      }
+    },
+    {
+      "Name": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "engine\\textures\\editor\\normal.xbm",
+        "MultilayerMask": "engine\\materials\\defaults\\multilayer_default.mlmask",
+        "MultilayerSetup": "engine\\materials\\defaults\\multilayer_default.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    },
+    {
+      "Name": "base\\fx\\shaders\\hologram.mt",
+      "EnableMask": true,
+      "Data": {
+        "AdditiveAlphaBlend": 1,
+        "OpaqueScanlineDensity": 400,
+        "Scanline": "base\\fx\\_textures\\masks\\gradients\\fx_reflected_vertical_gradient_03_alpha_d.xbm",
+        "Normal": "base\\materials\\placeholder\\normal.xbm",
+        "DotsTexture": "base\\fx\\characters\\hologram\\hologram_pointcloud_dot.xbm",
+        "DotsSize": 100,
+        "DotsColor": {
+          "Red": 73,
+          "Green": 168,
+          "Blue": 246,
+          "Alpha": 255
+        },
+        "Projector1Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 1,
+          "W": 0
+        },
+        "SurfaceColor": {
+          "Red": 73,
+          "Green": 168,
+          "Blue": 246,
+          "Alpha": 255
+        },
+        "SurfaceShadows": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "FallofColor": {
+          "Red": 0,
+          "Green": 136,
+          "Blue": 163,
+          "Alpha": 255
+        },
+        "Diffuse": "base\\materials\\placeholder\\black.xbm",
+        "GradientOffset": -100,
+        "GradientLength": 1,
+        "FresnelStrength": 3.07393003,
+        "DotsFresnelStrength": 0.544746995,
+        "GlowStrength": 0.252918005,
+        "DesaturationStrength": 0,
+        "FlickerThreshold": 0,
+        "FlickerChance": 0,
+        "ArtifactsChance": 0,
+        "LightBleed": 0.291498005,
+        "NormalStrength": 1,
+        "ScreenSpaceFlicker": 0,
+        "UseIsobars": 0,
+        "IsobarsOffsets": {
+          "X": 3320,
+          "Y": 120,
+          "Z": 0,
+          "W": 0
+        },
+        "EntropyThreshold": 0,
+        "UseMovingDots": 0,
+        "IsHair": 0,
+        "ScanlineThickness": -0.578947008,
+        "Opacity": 1,
+        "GlobalTint": 0,
+        "SampledOrProceduralDots": 1,
+        "FullColorOrGrayscale": 0
+      }
+    },
+    {
+      "Name": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "engine\\textures\\editor\\normal.xbm",
+        "MultilayerMask": "engine\\materials\\defaults\\multilayer_default.mlmask",
+        "MultilayerSetup": "engine\\materials\\defaults\\multilayer_default.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    },
+    {
+      "Name": "engine\\materials\\multilayered.mt",
+      "EnableMask": false,
+      "Data": {
+        "GlobalNormal": "engine\\textures\\editor\\normal.xbm",
+        "MultilayerMask": "engine\\materials\\defaults\\multilayer_default.mlmask",
+        "MultilayerSetup": "engine\\materials\\defaults\\multilayer_default.mlsetup",
+        "GlobalNormalIntensity": 1,
+        "GlobalNormalUVScale": {
+          "X": 1,
+          "Y": 1,
+          "Z": 0,
+          "W": 0
+        },
+        "GlobalNormalUVBias": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskAtlas": "",
+        "MaskTiles": null,
+        "Layers": null,
+        "LayersStartIndex": 0,
+        "SurfaceTexAspectRatio": 0,
+        "MaskToTileScale": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskTileSize": 0,
+        "MaskAtlasDims": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "MaskBaseResolution": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0,
+          "W": 0
+        },
+        "SetupLayerMask": 0,
+        "NormalsTextureDDXYMultiplier": 1,
+        "MicroblendsTextureDDXYMultiplier": 1
+      }
+    }
+  ],
+  "Appearances": {
+    "default0": [
+      "lambert1",
+      "eyescreen",
+      "dec_logos",
+      "lambert1",
+      "eyescreen",
+      "dec_logos",
+      "lambert1",
+      "eyescreen",
+      "dec_logos",
+      "lambert1",
+      "eyescreen",
+      "dec_logos"
+    ],
+    "nomad_011": [
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01",
+      "nomad_01"
+    ],
+    "hologram2": [
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram",
+      "hologram"
+    ],
+    "max_tac_blue3": [
+      "blue",
+      "eyescreen",
+      "dec_logos",
+      "blue",
+      "eyescreen",
+      "dec_logos",
+      "blue",
+      "eyescreen",
+      "dec_logos",
+      "blue",
+      "eyescreen",
+      "dec_logos"
+    ],
+    "burned4": [
+      "burned",
+      "eyescreen",
+      "dec_logos",
+      "burned",
+      "eyescreen",
+      "dec_logos",
+      "burned",
+      "eyescreen",
+      "dec_logos",
+      "burned",
+      "eyescreen",
+      "dec_logos"
+    ]
+  }
+}

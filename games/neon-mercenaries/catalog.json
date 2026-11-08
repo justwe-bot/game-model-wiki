@@ -1,0 +1,2792 @@
+{
+    "schemaVersion":  "mercenaries-category-1.0",
+    "slug":  "neon-mercenaries",
+    "name":  "霓虹佣兵",
+    "nameEn":  "Neon Mercenaries",
+    "source":  "从一款商业 3A 动作游戏的工程资产导出，经 Blender 导入插件整理归档",
+    "structure":  "每套角色保留九分区结构（本分类仅收录 01-07 分区，见 README.md）",
+    "acceptance":  {
+                       "charactersTotal":  29,
+                       "charactersAccepted":  0,
+                       "motionCategoriesAccepted":  0,
+                       "motionCategoriesTotal":  116,
+                       "weaponAudioAccepted":  0,
+                       "weaponAudioTotal":  42,
+                       "materialDepotRecoveryAccepted":  false,
+                       "note":  "本次迁移的材质依赖恢复 overlay 与武器音频均为 accepted=false：材质仅补齐缺失依赖（非角色/材质/视觉/动作验收），音频是未人工试听的原始 Wwise 叶。"
+                   },
+    "shared":  {
+                   "soldier_material_depot":  {
+                                                  "files":  30704,
+                                                  "bytes":  1849809036
+                                              },
+                   "hq_material_depot":  {
+                                             "files":  872,
+                                             "bytes":  174603599
+                                         }
+               },
+    "weaponAudio":  {
+                       "path":  "weapon_audio",
+                       "source":  "weapon_audio",
+                       "stamp":  "20261107_171449",
+                       "weapons":  42,
+                       "files":  21052,
+                       "bytes":  1991700390,
+                       "wav":  {"files":  10362, "bytes":  1626832316},
+                       "opus":  {"files":  10362, "bytes":  92432664},
+                       "opuspak":  {"files":  242, "bytes":  248731034},
+                       "metadataJson":  {"files":  86, "bytes":  23704376},
+                       "accepted":  false,
+                       "scope":  "原始 Wwise 音频叶。选择器、随机化、增益、RTPC、空间化与分层均未求值，因此单个叶子不是最终运行时事件混音；不主张任何单发时序或射速。从未人工试听。",
+                       "provenance":  "整批迁移入库，保留每个武器的 attribution.json / event_routes.json / packs / wav 原始结构；批次汇总见 weapon_audio/weapon_sounds_batch_20261107_171449.json，迁移清单见 weapon_audio/_migration_manifest.json",
+                       "weaponCodes":  [
+                                           "achilles", "ajax", "ashura", "burya", "carnage",
+                                           "chao", "copperhead", "crusher", "defender", "dian",
+                                           "grad", "guillotine", "hmg", "igla", "kenshin",
+                                           "kolac", "kyubi", "lexington", "liberty", "masamune",
+                                           "nekomata", "nova", "nue", "omaha", "overture",
+                                           "palica", "pozhar", "pulsar", "quasar", "saratoga",
+                                           "satara", "senkoh", "shingen", "sidewinder", "silverline",
+                                           "slaughtomatic", "sor22", "tactician", "testera", "unity",
+                                           "yukimura", "zhuo"
+                                       ]
+                   },
+    "totals":  {
+                   "characters":  29,
+                   "files":  17550,
+                   "bytes":  16444335143
+               },
+    "characters":  [
+                       {
+                           "slug":  "grizzly-01",
+                           "faction":  "Grizzly",
+                           "path":  "characters/Grizzly/grizzly-01",
+                           "identity":  {
+                                            "catalogId":  "grizzly-01",
+                                            "faction":  "Grizzly",
+                                            "bodyCode":  "mb",
+                                            "appearance":  "officer_lvl3_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\grizzly_mb.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__grizzly_mb.ent",
+                                            "entityAppearanceName":  "grizzly_mb_officer__lvl3_01",
+                                            "defaultEntityAppearance":  "grizzly_mb_officer__lvl3_01"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  106,
+                                                             "bytes":  59012353
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  49,
+                                                               "bytes":  5305023
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  715661
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  104,
+                                                                 "bytes":  405652979
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  364,
+                                                              "bytes":  59762651
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  3455318
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19583
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  636,
+                                          "bytes":  533923568
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  55,
+                                           "modelBlendFiles":  2,
+                                           "animationGlbFiles":  103,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_big/deformations_rigs/man_big_deformations.rig",
+                                            "base/characters/base_entities/man_big/deformations_rigs/man_big_deformations.rig.json",
+                                            "base/characters/base_entities/man_big/man_big.rig",
+                                            "base/characters/base_entities/man_big/man_big.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "maxtac_wamb_agent5675_20261101_163834_657662/back_STATIC_NOTACCEPTED.png",
+                                           "maxtac_wamb_agent5675_20261101_163834_657662/chest_STATIC_NOTACCEPTED.png",
+                                           "maxtac_wamb_agent5675_20261101_163834_657662/front_STATIC_NOTACCEPTED.png"
+                                       ],
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "grizzly-02",
+                           "faction":  "Grizzly",
+                           "path":  "characters/Grizzly/grizzly-02",
+                           "identity":  {
+                                            "catalogId":  "grizzly-02",
+                                            "faction":  "Grizzly",
+                                            "bodyCode":  "wa",
+                                            "appearance":  "soldier_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\grizzly_wa.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__grizzly_wa.ent",
+                                            "entityAppearanceName":  "grizzly_wa_grizzly_soldier_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  87,
+                                                             "bytes":  42230788
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  41,
+                                                               "bytes":  4717841
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712520
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  113,
+                                                                 "bytes":  426136287
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  645,
+                                                              "bytes":  128206756
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19715
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  896,
+                                          "bytes":  602024068
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  47,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  112,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/woman_base/deformations_rigs/woman_base_deformations.rig",
+                                            "base/characters/base_entities/woman_base/deformations_rigs/woman_base_deformations.rig.json",
+                                            "base/characters/base_entities/woman_base/woman_base.rig",
+                                            "base/characters/base_entities/woman_base/woman_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "grizzly-03",
+                           "faction":  "Grizzly",
+                           "path":  "characters/Grizzly/grizzly-03",
+                           "identity":  {
+                                            "catalogId":  "grizzly-03",
+                                            "faction":  "Grizzly",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\grizzly.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__grizzly_ma.ent",
+                                            "entityAppearanceName":  "grizzly_grizzly_soldier_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  116,
+                                                             "bytes":  51599353
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  70,
+                                                               "bytes":  4041966
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  5,
+                                                           "bytes":  1021912
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  115,
+                                                                 "bytes":  435731700
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  680,
+                                                              "bytes":  131663521
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  30,
+                                                              "bytes":  25151206
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  131,
+                                                                 "bytes":  101106986
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  1147,
+                                          "bytes":  750316644
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  69,
+                                           "modelBlendFiles":  1,
+                                           "animationGlbFiles":  114,
+                                           "rigFiles":  5,
+                                           "weaponDirs":  5,
+                                           "renderImages":  29,
+                                           "recordingVideos":  15
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json",
+                                            "base/characters/head/ma/h0_000_ma_c__basehead/h0_000_ma_c__basehead_skeleton.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "audio_compat_20261101_143914_319566",
+                                           "audio_editorial_20261101_135321_006190",
+                                           "recoil_voiced_editorial_20261101_195134_634750",
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "back.png",
+                                           "chest.png",
+                                           "front.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_frame0007_hand_side.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0001.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0007.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0051.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/decoded_0001.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/decoded_0014.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/decoded_0105.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/fullbody_0013.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/fullbody_0014.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/fullbody_0031.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/guncloseup_0013.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/guncloseup_0014.png",
+                                           "recoil_voiced_editorial_20261101_195134_634750/guncloseup_0031.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/decoded_0001.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/decoded_0013.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/decoded_0014.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/decoded_0015.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/decoded_0105.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/fullbody_0012.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/fullbody_0013.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/fullbody_0014.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/fullbody_0015.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/guncloseup_0012.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/guncloseup_0013.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/guncloseup_0014.png",
+                                           "reconstructed_flash_editorial_20261101_204702_549555/guncloseup_0015.png"
+                                       ],
+                           "recordings":  [
+                                              "audio_compat_20261101_143914_319566/Achilles_NOTACCEPTED_EDITORIAL_LONG_LEAF_STANDARD_MP4.mp4",
+                                              "audio_editorial_20261101_135321_006190/Achilles_SOURCE_SLOT_shoot_RECONSTRUCTION_NOTACCEPTED_EDITORIAL_AUDIO_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131442_393962_947b5201/full_shoot_diagnostic_01/recordings/20261101_125428_517405/UNARMED_SOURCE_POSE_shoot_RECONSTRUCTION_NOTACCEPTED_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131442_393962_947b5201/precision_achilles_diagnostic_01/recordings/20261101_125809_998149/Achilles_SOURCE_SLOT_shoot_RECONSTRUCTION_NOTACCEPTED_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131837_210811_429e3b46/attack_precision_80mm_01/recordings/20261101_131222_337001/Achilles_SOURCE_precision_melee_80mm_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131837_210811_429e3b46/death_ranged_80mm_01/recordings/20261101_130926_834295/Achilles_SOURCE_ranged_death_80mm_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131837_210811_429e3b46/full_shoot_diagnostic_01/recordings/20261101_125428_517405/UNARMED_SOURCE_POSE_shoot_RECONSTRUCTION_NOTACCEPTED_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131837_210811_429e3b46/precision_achilles_diagnostic_01/recordings/20261101_125809_998149/Achilles_SOURCE_SLOT_shoot_RECONSTRUCTION_NOTACCEPTED_DIAGNOSTIC.mp4",
+                                              "motion_evidence_20261101_131837_210811_429e3b46/walk_precision_80mm_01/recordings/20261101_130857_431867/Achilles_SOURCE_precision_aim_walk_80mm_DIAGNOSTIC.mp4",
+                                              "recoil_voiced_editorial_20261101_195134_634750/MAXTAC01_SINGLE_EDITORIAL_RECOIL_F13_NOT_RUNTIME_NOT_ACCEPTED.mp4",
+                                              "recoil_voiced_editorial_20261101_195134_634750/MaxTac01_SINGLE_RECOIL_F13_NOTACCEPTED_EDITORIAL_AUDIO.mp4",
+                                              "reconstructed_flash_editorial_20261101_204702_549555/MAXTAC01_RECONSTRUCTED_FLASH_EDITORIAL_SILENT_NOTACCEPTED.mp4",
+                                              "reconstructed_flash_editorial_20261101_204702_549555/MAXTAC01_RECONSTRUCTED_FLASH_NOTACCEPTED_EDITORIAL_AUDIO.mp4",
+                                              "resources_20261101_123504_152656_bf701a45/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4",
+                                              "resources_20261101_124811_635249_24f8054d/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4"
+                                          ]
+                       },
+                       {
+                           "slug":  "grizzly-04",
+                           "faction":  "Grizzly",
+                           "path":  "characters/Grizzly/grizzly-04",
+                           "identity":  {
+                                            "catalogId":  "grizzly-04",
+                                            "faction":  "Grizzly",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_02",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\grizzly.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__grizzly_ma.ent",
+                                            "entityAppearanceName":  "grizzly_grizzly_soldier_02",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  105,
+                                                             "bytes":  63100324
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  59,
+                                                               "bytes":  4467453
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  115,
+                                                                 "bytes":  435731700
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  641,
+                                                              "bytes":  120554909
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  3362762
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  15,
+                                                                 "bytes":  13249733
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  943,
+                                          "bytes":  641179683
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  58,
+                                           "modelBlendFiles":  2,
+                                           "animationGlbFiles":  114,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  2
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "maxtac234_agent5675_20261101_161210_479658/back_STATIC_NOTACCEPTED.png",
+                                           "maxtac234_agent5675_20261101_161210_479658/chest_STATIC_NOTACCEPTED.png",
+                                           "maxtac234_agent5675_20261101_161210_479658/front_STATIC_NOTACCEPTED.png"
+                                       ],
+                           "recordings":  [
+                                              "resources_20261101_123504_152656_bf701a45/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4",
+                                              "resources_20261101_124811_635249_24f8054d/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4"
+                                          ]
+                       },
+                       {
+                           "slug":  "grizzly-05",
+                           "faction":  "Grizzly",
+                           "path":  "characters/Grizzly/grizzly-05",
+                           "identity":  {
+                                            "catalogId":  "grizzly-05",
+                                            "faction":  "Grizzly",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_03",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\grizzly.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__grizzly_ma.ent",
+                                            "entityAppearanceName":  "grizzly_grizzly_soldier_03",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  102,
+                                                             "bytes":  63197517
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  58,
+                                                               "bytes":  4321436
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  115,
+                                                                 "bytes":  435731700
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  641,
+                                                              "bytes":  120554909
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  3369789
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  15,
+                                                                 "bytes":  13249733
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  939,
+                                          "bytes":  641137886
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  57,
+                                           "modelBlendFiles":  2,
+                                           "animationGlbFiles":  114,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  2
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "maxtac234_agent5675_20261101_161210_479658/back_STATIC_NOTACCEPTED.png",
+                                           "maxtac234_agent5675_20261101_161210_479658/chest_STATIC_NOTACCEPTED.png",
+                                           "maxtac234_agent5675_20261101_161210_479658/front_STATIC_NOTACCEPTED.png"
+                                       ],
+                           "recordings":  [
+                                              "resources_20261101_123504_152656_bf701a45/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4",
+                                              "resources_20261101_124811_635249_24f8054d/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4"
+                                          ]
+                       },
+                       {
+                           "slug":  "grizzly-06",
+                           "faction":  "Grizzly",
+                           "path":  "characters/Grizzly/grizzly-06",
+                           "identity":  {
+                                            "catalogId":  "grizzly-06",
+                                            "faction":  "Grizzly",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_04",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\grizzly.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__grizzly_ma.ent",
+                                            "entityAppearanceName":  "grizzly_grizzly_soldier_04",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  110,
+                                                             "bytes":  56192292
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  64,
+                                                               "bytes":  3818066
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  5,
+                                                           "bytes":  1021912
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  115,
+                                                                 "bytes":  435731700
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  641,
+                                                              "bytes":  120554909
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  3430284
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  15,
+                                                                 "bytes":  13249733
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  954,
+                                          "bytes":  633998896
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  63,
+                                           "modelBlendFiles":  2,
+                                           "animationGlbFiles":  114,
+                                           "rigFiles":  5,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  2
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json",
+                                            "base/characters/head/ma/h0_000_ma_c__basehead/h0_000_ma_c__basehead_skeleton.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "maxtac234_agent5675_20261101_161210_479658/back_STATIC_NOTACCEPTED.png",
+                                           "maxtac234_agent5675_20261101_161210_479658/chest_STATIC_NOTACCEPTED.png",
+                                           "maxtac234_agent5675_20261101_161210_479658/front_STATIC_NOTACCEPTED.png"
+                                       ],
+                           "recordings":  [
+                                              "resources_20261101_123504_152656_bf701a45/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4",
+                                              "resources_20261101_124811_635249_24f8054d/weapon_turntable_diagnostic/Achilles_SOURCE_DEFAULT_DIAGNOSTIC_turntable.mp4"
+                                          ]
+                       },
+                       {
+                           "slug":  "scorpion-01",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-01",
+                           "identity":  {
+                                            "catalogId":  "scorpion-01",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "leader_ranger_lvl1",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma__leader__ranger_lvl1",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  56,
+                                                             "bytes":  34900664
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  30,
+                                                               "bytes":  2910131
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19853
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  525,
+                                          "bytes":  547580726
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  30,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-02",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-02",
+                           "identity":  {
+                                            "catalogId":  "scorpion-02",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "leader_soldier_lvl1",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah__leader__soldier_lvl1",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  79,
+                                                             "bytes":  32965596
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  36,
+                                                               "bytes":  2709386
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19889
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  401,
+                                          "bytes":  507438843
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  45,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-03",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-03",
+                           "identity":  {
+                                            "catalogId":  "scorpion-03",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "leader_tank_lvl1",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah__leader__tank_lvl1",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  75,
+                                                             "bytes":  29681542
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  35,
+                                                               "bytes":  1361933
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19835
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  396,
+                                          "bytes":  502807282
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  43,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-04",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-04",
+                           "identity":  {
+                                            "catalogId":  "scorpion-04",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "soldier_lvl2_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_soldier__lvl2_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  75,
+                                                             "bytes":  31902852
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  35,
+                                                               "bytes":  2596927
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19799
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  396,
+                                          "bytes":  506263550
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  43,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-05",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-05",
+                           "identity":  {
+                                            "catalogId":  "scorpion-05",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "soldier_lvl2_02",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_soldier__lvl2_02",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  100,
+                                                             "bytes":  33577974
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  45,
+                                                               "bytes":  2717013
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19799
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  431,
+                                          "bytes":  508058758
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  58,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-06",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-06",
+                           "identity":  {
+                                            "catalogId":  "scorpion-06",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "soldier_lvl2_03",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_soldier__lvl2_03",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  80,
+                                                             "bytes":  32436216
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  37,
+                                                               "bytes":  2622259
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19799
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  403,
+                                          "bytes":  506822246
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  46,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-07",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-07",
+                           "identity":  {
+                                            "catalogId":  "scorpion-07",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "soldier_lvl2_04",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_soldier__lvl2_04",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  121,
+                                                             "bytes":  86705785
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  36,
+                                                               "bytes":  2607036
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  166,
+                                                              "bytes":  35935028
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  19,
+                                                              "bytes":  18164030
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  33,
+                                                                 "bytes":  10403648
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  493,
+                                          "bytes":  589833221
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  62,
+                                           "modelBlendFiles":  3,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  3,
+                                           "renderImages":  18,
+                                           "recordingVideos":  8
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d",
+                                           "weapon_audio_sources_20261101_160556_216584"
+                                       ],
+                           "renders":  [
+                                           "hit_failed_grip_20261101_1805_01/hit_frame0007_hand_side.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0001.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0007.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0051.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0012.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0013.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0014.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0015.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0012.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0013.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0014.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0015.png",
+                                           "static_ready_20261101_124106_072207/back.png",
+                                           "static_ready_20261101_124106_072207/chest.png",
+                                           "static_ready_20261101_124106_072207/front.png",
+                                           "static_ready_20261101_124106_072207_relative_shared/back.png",
+                                           "static_ready_20261101_124106_072207_relative_shared/chest.png",
+                                           "static_ready_20261101_124106_072207_relative_shared/front.png"
+                                       ],
+                           "recordings":  [
+                                              "additional_walk_20261101_1440/KT_mah_soldier04_UNARMED_walk_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_attack_20261101_1626/kt_Chao_armed_attack_01_SOURCE_CANDIDATE_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_death_20261101_1631/kt_Chao_armed_death_01_SOURCE_CANDIDATE_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_shoot_20261101_1615/KT_mah04_Chao_military1_ARMED_shoot_POSE_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_walk_20261101_1550/KT_mah_soldier04_Chao_military1_ARMED_walk_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "gun_only_reload_20261101_170327_504009/CHAO_BARREL_NORMAL_RELOAD_SOURCE_CANDIDATE_NOT_ACCEPTED.mp4",
+                                              "voiced_shoot_editorial_20261101_161924_627268/Chao_armed_shoot_NOTACCEPTED_EDITORIAL_AUDIO.mp4",
+                                              "voiced_shoot_editorial_20261101_162645_183702/Chao_armed_shoot_NOTACCEPTED_EDITORIAL_AUDIO.mp4"
+                                          ]
+                       },
+                       {
+                           "slug":  "scorpion-08",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-08",
+                           "identity":  {
+                                            "catalogId":  "scorpion-08",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "soldier_lvl2_05",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_soldier__lvl2_05",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  158,
+                                                             "bytes":  98967735
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  36,
+                                                               "bytes":  2607036
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  4154232
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19799
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  483,
+                                          "bytes":  577492613
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  79,
+                                           "modelBlendFiles":  1,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "static_ready_20261101_124813_273191/back.png",
+                                           "static_ready_20261101_124813_273191/chest.png",
+                                           "static_ready_20261101_124813_273191/front.png"
+                                       ],
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-09",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-09",
+                           "identity":  {
+                                            "catalogId":  "scorpion-09",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "soldier_lvl2_06",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_soldier__lvl2_06",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  158,
+                                                             "bytes":  98967694
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  36,
+                                                               "bytes":  2607036
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  4150408
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19799
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  483,
+                                          "bytes":  577488748
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  79,
+                                           "modelBlendFiles":  1,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "static_ready_20261101_124813_273191/back.png",
+                                           "static_ready_20261101_124813_273191/chest.png",
+                                           "static_ready_20261101_124813_273191/front.png"
+                                       ],
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-10",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-10",
+                           "identity":  {
+                                            "catalogId":  "scorpion-10",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "tank_lvl2_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_tank__lvl2_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  74,
+                                                             "bytes":  32269174
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  34,
+                                                               "bytes":  2377100
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19745
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  394,
+                                          "bytes":  506409991
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  42,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-11",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-11",
+                           "identity":  {
+                                            "catalogId":  "scorpion-11",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "tank_lvl2_02",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_tank__lvl2_02",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  60,
+                                                             "bytes":  30883644
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  28,
+                                                               "bytes":  2092318
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19745
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  374,
+                                          "bytes":  504739679
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  34,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-12",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-12",
+                           "identity":  {
+                                            "catalogId":  "scorpion-12",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "tank_lvl3_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_tank__lvl3_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  75,
+                                                             "bytes":  33505008
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  34,
+                                                               "bytes":  2293594
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19745
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  395,
+                                          "bytes":  507562319
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  43,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-13",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-13",
+                           "identity":  {
+                                            "catalogId":  "scorpion-13",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "mah",
+                                            "appearance":  "tank_lvl3_02",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_mah.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_mah.ent",
+                                            "entityAppearanceName":  "corp__scorpion_mah_tank__lvl3_02",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  80,
+                                                             "bytes":  33356712
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  36,
+                                                               "bytes":  2181090
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  162,
+                                                              "bytes":  35726117
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19745
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  402,
+                                          "bytes":  507301519
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  46,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-14",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-14",
+                           "identity":  {
+                                            "catalogId":  "scorpion-14",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "ranger_lvl1_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma_ranger__lvl1_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  60,
+                                                             "bytes":  34584878
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  32,
+                                                               "bytes":  3932761
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435305326
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19763
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  531,
+                                          "bytes":  548287914
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  32,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-15",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-15",
+                           "identity":  {
+                                            "catalogId":  "scorpion-15",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "ranger_lvl1_02",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma_ranger__lvl1_02",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  60,
+                                                             "bytes":  35862782
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  32,
+                                                               "bytes":  3888145
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19763
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  531,
+                                          "bytes":  549520768
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  32,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-16",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-16",
+                           "identity":  {
+                                            "catalogId":  "scorpion-16",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "ranger_lvl1_03",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma_ranger__lvl1_03",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  68,
+                                                             "bytes":  36162760
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  36,
+                                                               "bytes":  3987571
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19763
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  543,
+                                          "bytes":  549920172
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  36,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-17",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-17",
+                           "identity":  {
+                                            "catalogId":  "scorpion-17",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "ranger_lvl1_04",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma_ranger__lvl1_04",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  52,
+                                                             "bytes":  34299696
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  28,
+                                                               "bytes":  2645635
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19763
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  519,
+                                          "bytes":  546715172
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  28,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-18",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-18",
+                           "identity":  {
+                                            "catalogId":  "scorpion-18",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "ranger_lvl1_05",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma_ranger__lvl1_05",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  61,
+                                                             "bytes":  36881076
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  32,
+                                                               "bytes":  3779063
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19763
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  532,
+                                          "bytes":  550429980
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  33,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "scorpion-19",
+                           "faction":  "Scorpion",
+                           "path":  "characters/Scorpion/scorpion-19",
+                           "identity":  {
+                                            "catalogId":  "scorpion-19",
+                                            "faction":  "Scorpion",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "ranger_lvl1_06",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__scorpion_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__scorpion_ma.ent",
+                                            "entityAppearanceName":  "corp__scorpion_ma_ranger__lvl1_06",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  65,
+                                                             "bytes":  40453368
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  34,
+                                                               "bytes":  4055483
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  315,
+                                                              "bytes":  73732223
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19763
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  538,
+                                          "bytes":  554278692
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  35,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "dove-01",
+                           "faction":  "Dove",
+                           "path":  "characters/Dove/dove-01",
+                           "identity":  {
+                                            "catalogId":  "dove-01",
+                                            "faction":  "Dove",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "leader_soldier_lvl1",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__dove_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__dove_ma.ent",
+                                            "entityAppearanceName":  "corp__dove_ma__leader__soldier_lvl1",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  253,
+                                                             "bytes":  106926632
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  46,
+                                                               "bytes":  2440854
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  358,
+                                                              "bytes":  78525106
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  4205366
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19949
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  784,
+                                          "bytes":  628135601
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  128,
+                                           "modelBlendFiles":  1,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "static_ready_20261101_125224_956031/back.png",
+                                           "static_ready_20261101_125224_956031/chest.png",
+                                           "static_ready_20261101_125224_956031/front.png"
+                                       ],
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "dove-02",
+                           "faction":  "Dove",
+                           "path":  "characters/Dove/dove-02",
+                           "identity":  {
+                                            "catalogId":  "dove-02",
+                                            "faction":  "Dove",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_lvl1_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__dove_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__dove_ma.ent",
+                                            "entityAppearanceName":  "corp__dove_ma_soldier__lvl1_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  253,
+                                                             "bytes":  104877959
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  46,
+                                                               "bytes":  2458370
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  362,
+                                                              "bytes":  78816749
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  21,
+                                                              "bytes":  17855170
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  39,
+                                                                 "bytes":  14276150
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  839,
+                                          "bytes":  654302092
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  128,
+                                           "modelBlendFiles":  1,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  3,
+                                           "renderImages":  20,
+                                           "recordingVideos":  11
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d",
+                                           "weapon_audio_sources_20261101_160556_216584"
+                                       ],
+                           "renders":  [
+                                           "hit_failed_grip_20261101_1805_01/hit_frame0007_hand_side.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0001.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0007.png",
+                                           "hit_failed_grip_20261101_1805_01/hit_fullbody_0051.png",
+                                           "split_flash_editorial_20261101_213757_057303/decoded_0001.png",
+                                           "split_flash_editorial_20261101_213757_057303/decoded_0013.png",
+                                           "split_flash_editorial_20261101_213757_057303/decoded_0014.png",
+                                           "split_flash_editorial_20261101_213757_057303/decoded_0015.png",
+                                           "split_flash_editorial_20261101_213757_057303/decoded_0105.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0012.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0013.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0014.png",
+                                           "split_flash_editorial_20261101_213757_057303/fullbody_0015.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0012.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0013.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0014.png",
+                                           "split_flash_editorial_20261101_213757_057303/guncloseup_0015.png",
+                                           "static_ready_20261101_125224_956031/back.png",
+                                           "static_ready_20261101_125224_956031/chest.png",
+                                           "static_ready_20261101_125224_956031/front.png"
+                                       ],
+                           "recordings":  [
+                                              "additional_walk_20261101_1440/TT_lvl1_UNARMED_walk_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_attack_20261101_1626/tt_Dian_armed_attack_01_SOURCE_CANDIDATE_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_death_20261101_1631/tt_Dian_armed_death_01_SOURCE_CANDIDATE_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_shoot_20261101_1615/TT_lvl1_Dian_trauma_ARMED_shoot_POSE_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "armed_walk_20261101_1550/TT_lvl1_Dian_trauma_ARMED_walk_DQ80_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "body_gun_reload_20261101_1720/TT_Dian_BODY_GUN_reload_EDITORIAL_SHARED_SOURCE_SECONDS_NOT_ACCEPTED_DIAGNOSTIC.mp4",
+                                              "gun_only_reload_20261101_170327_504009/DIAN_BARREL_NORMAL_RELOAD_SOURCE_CANDIDATE_NOT_ACCEPTED.mp4",
+                                              "split_flash_editorial_20261101_213757_057303/DIAN_RECONSTRUCTED_FLASH_STATIC_GUN_NO_RECOIL_SILENT.mp4",
+                                              "split_flash_editorial_20261101_213757_057303/TT_DIAN_RECONSTRUCTED_FLASH_STATIC_GUN_NOTACCEPTED_EDITORIAL_AUDIO.mp4",
+                                              "voiced_shoot_editorial_20261101_161924_627268/Dian_armed_shoot_NOTACCEPTED_EDITORIAL_AUDIO.mp4",
+                                              "voiced_shoot_editorial_20261101_162645_183702/Dian_armed_shoot_NOTACCEPTED_EDITORIAL_AUDIO.mp4"
+                                          ]
+                       },
+                       {
+                           "slug":  "dove-03",
+                           "faction":  "Dove",
+                           "path":  "characters/Dove/dove-03",
+                           "identity":  {
+                                            "catalogId":  "dove-03",
+                                            "faction":  "Dove",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_lvl2_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__dove_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__dove_ma.ent",
+                                            "entityAppearanceName":  "corp__dove_ma_soldier__lvl2_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  341,
+                                                             "bytes":  112739346
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  62,
+                                                               "bytes":  2598238
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  358,
+                                                              "bytes":  78525106
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  4,
+                                                              "bytes":  4186412
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19859
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  888,
+                                          "bytes":  634086655
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  176,
+                                           "modelBlendFiles":  1,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  3,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  [
+                                           "static_ready_20261101_125224_956031/back.png",
+                                           "static_ready_20261101_125224_956031/chest.png",
+                                           "static_ready_20261101_125224_956031/front.png"
+                                       ],
+                           "recordings":  {
+
+                                          }
+                       },
+                       {
+                           "slug":  "dove-04",
+                           "faction":  "Dove",
+                           "path":  "characters/Dove/dove-04",
+                           "identity":  {
+                                            "catalogId":  "dove-04",
+                                            "faction":  "Dove",
+                                            "bodyCode":  "ma",
+                                            "appearance":  "soldier_lvl3_01",
+                                            "appDepotPath":  "base\\characters\\appearances\\corp\\corp__dove_ma.app",
+                                            "entityDepotPath":  "base\\characters\\entities\\corp\\corp__dove_ma.ent",
+                                            "entityAppearanceName":  "corp__dove_ma_soldier__lvl3_01",
+                                            "defaultEntityAppearance":  "random"
+                                        },
+                           "partitions":  {
+                                              "models":  {
+                                                             "path":  "01_models",
+                                                             "files":  210,
+                                                             "bytes":  59117584
+                                                         },
+                                              "textures":  {
+                                                               "path":  "02_textures_materials",
+                                                               "files":  62,
+                                                               "bytes":  2598238
+                                                           },
+                                              "rigs":  {
+                                                           "path":  "03_rigs",
+                                                           "files":  4,
+                                                           "bytes":  712802
+                                                       },
+                                              "animations":  {
+                                                                 "path":  "04_animations",
+                                                                 "files":  114,
+                                                                 "bytes":  435304892
+                                                             },
+                                              "weapons":  {
+                                                              "path":  "05_weapons",
+                                                              "files":  358,
+                                                              "bytes":  78525106
+                                                          },
+                                              "renders":  {
+                                                              "path":  "06_renders",
+                                                              "files":  1,
+                                                              "bytes":  161
+                                                          },
+                                              "recordings":  {
+                                                                 "path":  "07_recordings",
+                                                                 "files":  5,
+                                                                 "bytes":  19859
+                                                             }
+                                          },
+                           "totals":  {
+                                          "files":  754,
+                                          "bytes":  576278642
+                                      },
+                           "present":  [
+                                           "models",
+                                           "textures",
+                                           "rigs",
+                                           "animations",
+                                           "weapons",
+                                           "renders",
+                                           "recordings"
+                                       ],
+                           "summary":  {
+                                           "modelGlbFiles":  116,
+                                           "modelBlendFiles":  0,
+                                           "animationGlbFiles":  113,
+                                           "rigFiles":  4,
+                                           "weaponDirs":  2,
+                                           "renderImages":  0,
+                                           "recordingVideos":  0
+                                       },
+                           "rigFiles":  [
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig",
+                                            "base/characters/base_entities/man_base/deformations_rigs/man_base_deformations.rig.json",
+                                            "base/characters/base_entities/man_base/man_base.rig",
+                                            "base/characters/base_entities/man_base/man_base.rig.json"
+                                        ],
+                           "weapons":  [
+                                           "resources_20261101_123504_152656_bf701a45",
+                                           "resources_20261101_124811_635249_24f8054d"
+                                       ],
+                           "renders":  {
+
+                                       },
+                           "recordings":  {
+
+                                          }
+                       }
+                   ]
+}
